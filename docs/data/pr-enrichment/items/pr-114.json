@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T21:38:58.324Z",
+  "generatedAt": "2026-03-20T02:50:31.232Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 114,
     "title": "#1 on leaderboard: val_bpb=1.1574 — Int6 + MLP 3x + selective precision + optimized long-context training",
     "state": "open",
-    "updatedAt": "2026-03-19T21:36:46Z",
+    "updatedAt": "2026-03-20T02:33:57Z",
     "headSha": "7f0584926ce698662712e3ce420a57878f34ba05",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/114",
     "authorLogin": "saml212"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Int6 post-training quant frees space to triple the MLP width while preserving fp16 embeddings/late keys and validating with stride-256 sliding window after train@2048.",
+    "summary": "Int6 post-training quantization with fp16 selective precision and a tripled MLP width powers 2048-window training and stride-256 sliding-window eval within 16MB.",
     "tags": [
       "quantization",
       "architecture",
-      "evaluation"
+      "sliding-window-eval"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Int6 quant + selective fp16 tensors",
-      "MLP hidden dim 1536 within 16MB budget",
-      "Sliding-window stride=256 eval with train@2048"
+      "Int6 per-row quantization with fp16 tied embedding and late-layer key passthrough",
+      "Tripled MLP hidden dimension using freed artifact budget",
+      "Train@2048 plus stride-256 sliding-window evaluation"
     ]
   },
   "compatibility": {

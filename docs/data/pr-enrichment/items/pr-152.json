@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T02:20:18.078Z",
+  "generatedAt": "2026-03-20T02:50:25.859Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 152,
     "title": "Add TTT (Test-Time Training) submission: 1.1767 BPB",
     "state": "open",
-    "updatedAt": "2026-03-20T02:19:48Z",
-    "headSha": "1a3e397280bdf9db2a30a590234ea99203943b29",
+    "updatedAt": "2026-03-20T02:46:51Z",
+    "headSha": "8c054fb433abc7bd24d314f0043dd96189d4a2b5",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/152",
     "authorLogin": "timowhite88"
   },
@@ -19,16 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Baseline 9x512 model reuses the 10-minute eval budget for 2-epoch full-model SGD adaptation before sliding-window scoring.",
+    "summary": "TTT uses the eval budget for two epochs of full-model SGD adaptation on validation before sliding-window scoring with the 9x512 KV4 baseline.",
     "tags": [
       "val-only",
-      "sliding-window-eval"
+      "sliding-window-eval",
+      "optimizer",
+      "evaluation"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "Full-model SGD adaptation on validation data during evaluation (test-time training) precedes sliding-window scoring.",
+    "valOnlyReasoning": "Full-model SGD adaptation runs directly on validation data during the eval phase before scoring.",
     "techniques": [
-      "test-time full-model SGD on val shard",
-      "sliding-window scoring post-adaptation"
+      "Full-model SGD test-time adaptation on validation",
+      "Aggressive 2-epoch schedule with lr=0.002, momentum=0.9",
+      "Sliding-window scoring after adaptation"
     ]
   },
   "compatibility": {

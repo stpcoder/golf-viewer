@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T02:20:27.312Z",
+  "generatedAt": "2026-03-20T02:50:37.865Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 69,
-    "title": "[WIP] SubSixteen: Ternary QAT + Depth Recurrence + TTT (val_bpb pending)",
+    "title": "SubSixteen: Sliding Window + FP16 Embed + 10L Flat + Muon WD + Overtone Init (val_bpb 1.1764)",
     "state": "open",
-    "updatedAt": "2026-03-20T02:10:05Z",
-    "headSha": "b6890e11551de6a09dcdd982b9c7198048cb5cf3",
+    "updatedAt": "2026-03-20T02:47:07Z",
+    "headSha": "7977ed06ebfbb32ec478ef95d0e73e2c9618de5a",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/69",
     "authorLogin": "TevBenji"
   },
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines int6 per-row quantization with depth recurrence loops plus CastedLinear to pack 32 effective layers into a 16MB artifact.",
+    "summary": "Flat 10-layer GPT with U-Net skips, FP16 tied embeddings, and Muon-optimized int8+zlib pipeline plus sliding-window eval for <16MB artifacts.",
     "tags": [
-      "quantization",
       "architecture",
-      "training-schedule"
+      "sliding-window-eval",
+      "quantization",
+      "optimizer"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "int6 per-row quantization with fp16 scales and zstd22 compression",
-      "depth recurrence via shared blocks with loop-specific LayerNorm/signals",
-      "CastedLinear bf16 matmuls to avoid QAT overhead"
+      "10-layer flat GPT with U-Net skips replacing depth recurrence",
+      "Stride-64 sliding-window eval scoring every token",
+      "Per-row int8+zlib quant with FP16 tied embeddings and Muon-decoupled weight decay"
     ]
   },
   "compatibility": {

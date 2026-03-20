@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-03-20T02:20:27.320Z",
+  "generatedAt": "2026-03-20T02:50:43.868Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 159,
+      "title": "Record:Add TTT-LoRA 512d submission (val_bpb=1.1957)",
+      "status": "open",
+      "updatedAt": "2026-03-20T02:49:32Z",
+      "headSha": "2f556296e47d76022b9594ecf1072637ca1c5a5b",
+      "generatedAt": "2026-03-20T02:50:16.896Z",
+      "summary": "9-layer 512d transformer run uses int8+zlib compression and TTT-LoRA adaptation within a 10-minute limit for leaderboard eval.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-159.json"
+    },
     {
       "prNumber": 156,
       "title": "feat(record): Int6 STE + NorMuon + SWA + Sliding Window (val_bpb=1.16019)",
@@ -78,13 +101,15 @@
       "prNumber": 152,
       "title": "Add TTT (Test-Time Training) submission: 1.1767 BPB",
       "status": "open",
-      "updatedAt": "2026-03-20T02:19:48Z",
-      "headSha": "1a3e397280bdf9db2a30a590234ea99203943b29",
-      "generatedAt": "2026-03-20T02:20:18.078Z",
-      "summary": "Baseline 9x512 model reuses the 10-minute eval budget for 2-epoch full-model SGD adaptation before sliding-window scoring.",
+      "updatedAt": "2026-03-20T02:46:51Z",
+      "headSha": "8c054fb433abc7bd24d314f0043dd96189d4a2b5",
+      "generatedAt": "2026-03-20T02:50:25.859Z",
+      "summary": "TTT uses the eval budget for two epochs of full-model SGD adaptation on validation before sliding-window scoring with the 9x512 KV4 baseline.",
       "tags": [
         "val-only",
-        "sliding-window-eval"
+        "sliding-window-eval",
+        "optimizer",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": true,
@@ -708,14 +733,14 @@
       "prNumber": 114,
       "title": "#1 on leaderboard: val_bpb=1.1574 — Int6 + MLP 3x + selective precision + optimized long-context training",
       "status": "open",
-      "updatedAt": "2026-03-19T21:36:46Z",
+      "updatedAt": "2026-03-20T02:33:57Z",
       "headSha": "7f0584926ce698662712e3ce420a57878f34ba05",
-      "generatedAt": "2026-03-19T21:38:58.324Z",
-      "summary": "Int6 post-training quant frees space to triple the MLP width while preserving fp16 embeddings/late keys and validating with stride-256 sliding window after train@2048.",
+      "generatedAt": "2026-03-20T02:50:31.232Z",
+      "summary": "Int6 post-training quantization with fp16 selective precision and a tripled MLP width powers 2048-window training and stride-256 sliding-window eval within 16MB.",
       "tags": [
         "quantization",
         "architecture",
-        "evaluation"
+        "sliding-window-eval"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1499,16 +1524,17 @@
     },
     {
       "prNumber": 69,
-      "title": "[WIP] SubSixteen: Ternary QAT + Depth Recurrence + TTT (val_bpb pending)",
+      "title": "SubSixteen: Sliding Window + FP16 Embed + 10L Flat + Muon WD + Overtone Init (val_bpb 1.1764)",
       "status": "open",
-      "updatedAt": "2026-03-20T02:10:05Z",
-      "headSha": "b6890e11551de6a09dcdd982b9c7198048cb5cf3",
-      "generatedAt": "2026-03-20T02:20:27.312Z",
-      "summary": "Combines int6 per-row quantization with depth recurrence loops plus CastedLinear to pack 32 effective layers into a 16MB artifact.",
+      "updatedAt": "2026-03-20T02:47:07Z",
+      "headSha": "7977ed06ebfbb32ec478ef95d0e73e2c9618de5a",
+      "generatedAt": "2026-03-20T02:50:37.865Z",
+      "summary": "Flat 10-layer GPT with U-Net skips, FP16 tied embeddings, and Muon-optimized int8+zlib pipeline plus sliding-window eval for <16MB artifacts.",
       "tags": [
-        "quantization",
         "architecture",
-        "training-schedule"
+        "sliding-window-eval",
+        "quantization",
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1641,15 +1667,15 @@
       "prNumber": 60,
       "title": "Record: Sliding Window + FP16 Embed + 10L + Muon WD + Overtone Init (val_bpb=1.1748)",
       "status": "closed",
-      "updatedAt": "2026-03-19T21:13:10Z",
+      "updatedAt": "2026-03-20T02:43:06Z",
       "headSha": "56dc745ac25ad6702864dfb4e5b65b632af565e0",
-      "generatedAt": "2026-03-19T21:39:07.510Z",
-      "summary": "Combines sliding-window scoring, fp16 tied embeddings, 10-layer Muon optimizer with decoupled WD, overtone spectral init, and sigmoid residual mixing.",
+      "generatedAt": "2026-03-20T02:50:43.863Z",
+      "summary": "Sliding-window eval plus FP16 tied embeddings and Muon WD let a spectral-initialized 10-layer transformer stay compact while scoring every token.",
       "tags": [
         "sliding-window-eval",
-        "mixed-precision",
         "optimizer",
-        "architecture"
+        "architecture",
+        "regularization"
       ],
       "flags": {
         "usesValOnly": false,
