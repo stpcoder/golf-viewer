@@ -1,8 +1,80 @@
 {
-  "generatedAt": "2026-03-20T03:51:34.971Z",
+  "generatedAt": "2026-03-20T04:21:46.506Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 167,
+      "title": "Depth Recurrence via Layer Sharing (3 shared blocks → 1/3 params, matched BPB)",
+      "status": "open",
+      "updatedAt": "2026-03-20T04:15:43Z",
+      "headSha": "4e760acb67091d65aa637dc2cfbe84fbf0002c31",
+      "generatedAt": "2026-03-20T04:21:19.275Z",
+      "summary": "ALBERT-style weight sharing cycles 3 unique transformer blocks over 9 virtual layers, trimming unique params, freeing artifact budget, and enabling extra eval recurrence.",
+      "tags": [
+        "architecture",
+        "compression",
+        "evaluation",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-167.json"
+    },
+    {
+      "prNumber": 166,
+      "title": "Record: Long Context + All Optimizations submission",
+      "status": "open",
+      "updatedAt": "2026-03-20T04:13:42Z",
+      "headSha": "3aa2b2f9091bf42b4c3ce1e9ce8dd13b877e52a6",
+      "generatedAt": "2026-03-20T04:21:23.652Z",
+      "summary": "Combines long-context training (2048) with conservative Muon/LR scheduling plus sliding-window eval and FP16 tied embeddings.",
+      "tags": [
+        "sliding-window-eval",
+        "optimizer",
+        "quantization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-166.json"
+    },
+    {
+      "prNumber": 164,
+      "title": "Submission: OrthoInit + Int6 MLP3x + SmearGate + BigramHash (val_bpb: 1.1524)",
+      "status": "open",
+      "updatedAt": "2026-03-20T03:58:45Z",
+      "headSha": "7c44af135b0b314f78758460c3132cadcd480ddd",
+      "generatedAt": "2026-03-20T04:21:29.128Z",
+      "summary": "Combines orthogonal muP init, tuned Muon, longer context, and SmearGate+Bigram hashing with Int6 quant to boost a 3x MLP Transformer within 16MB.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "optimizer",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-164.json"
+    },
     {
       "prNumber": 163,
       "title": "SwiGLU dim=576 + Sliding Window + Muon WD (1.2091 BPB)",
@@ -126,15 +198,15 @@
       "prNumber": 155,
       "title": "Record: sliding eval, FP16 tied embeddings, 10 layers, Muon WD 0.02, overtone init, and phase-transition residual mixing. (val_bpb 1.1876)",
       "status": "open",
-      "updatedAt": "2026-03-20T02:06:35Z",
-      "headSha": "4079b8c9a44d0f1582144f47ed257851855c2ef4",
-      "generatedAt": "2026-03-20T02:20:09.271Z",
-      "summary": "Stacked sliding-window evaluation with FP16 tied embeddings, Muon WD, overtone init, and phase-transition residual mixing on a 10-layer transformer.",
+      "updatedAt": "2026-03-20T04:00:22Z",
+      "headSha": "79c32fdc16f0b76e8b4fe32b1a35811838e51781",
+      "generatedAt": "2026-03-20T04:21:35.347Z",
+      "summary": "10-layer Muon WD model using FP16 tied embeddings, overtone spectral init, residual-mix start, and sliding-window final evaluation.",
       "tags": [
-        "sliding-window-eval",
+        "architecture",
+        "muon",
         "mixed-precision",
-        "regularization",
-        "architecture"
+        "sliding-window-eval"
       ],
       "flags": {
         "usesValOnly": false,
@@ -173,10 +245,10 @@
       "prNumber": 152,
       "title": "Add TTT (Test-Time Training) submission: 1.1767 BPB",
       "status": "open",
-      "updatedAt": "2026-03-20T03:45:19Z",
-      "headSha": "b33510917831cb01f07927129405748cec05edf8",
-      "generatedAt": "2026-03-20T03:51:11.183Z",
-      "summary": "Full-model SGD adaptation reuses the remaining eval budget for two epochs of TTT before sliding-window scoring to align weights with the validation distribution.",
+      "updatedAt": "2026-03-20T04:04:17Z",
+      "headSha": "43ad64ab535993df4a74d2362035c99a99b32500",
+      "generatedAt": "2026-03-20T04:21:40.965Z",
+      "summary": "Reclaim eval budget by running full-model SGD on the validation shard before sliding-window scoring, turning evaluation into adaptive compression.",
       "tags": [
         "val-only",
         "sliding-window-eval",
@@ -361,13 +433,13 @@
       "prNumber": 144,
       "title": "Add MPK 8x384 10-minute submission record",
       "status": "open",
-      "updatedAt": "2026-03-20T03:48:27Z",
-      "headSha": "daec523e6e0fa1d4cd95c823d89acbbffcf03d26",
-      "generatedAt": "2026-03-20T03:51:19.039Z",
-      "summary": "MPK-style multi-path 8-layer, 384-width causal model with GQA KV4 and MPK strides k=2,m=4 tuned on FineWeb shards within the 10-min cap.",
+      "updatedAt": "2026-03-20T03:58:56Z",
+      "headSha": "ef4b211742a95e3bc8ed7eae5d67f475a4ea1220",
+      "generatedAt": "2026-03-20T04:21:46.487Z",
+      "summary": "MPK multi-path causal LM with 8 layers/384 width, KV4 GQA, MPK strides k=2 m=4, tied embeddings, tuned low LRs, and a fixed SentencePiece marker for valid scoring.",
       "tags": [
         "architecture",
-        "training-schedule",
+        "quantization",
         "compression"
       ],
       "flags": {
@@ -1568,29 +1640,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-71.json"
-    },
-    {
-      "prNumber": 70,
-      "title": "Submission: Wider MLP 3x + int6 quant + sliding window eval, val_bpb=1.1659",
-      "status": "open",
-      "updatedAt": "2026-03-19T17:03:07Z",
-      "headSha": "2790ac088cd3da716664fb6047990745f24e6c4f",
-      "generatedAt": "2026-03-19T17:27:22.075Z",
-      "summary": "Widened MLP (3x) plus per-row int6 quantized weights and sliding-window scoring keep artifacts small while boosting contextual evaluation.",
-      "tags": [
-        "architecture",
-        "quantization",
-        "evaluation"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-70.json"
     },
     {
       "prNumber": 69,

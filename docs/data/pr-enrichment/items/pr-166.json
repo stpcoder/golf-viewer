@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-20T04:21:23.652Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 166,
+    "title": "Record: Long Context + All Optimizations submission",
+    "state": "open",
+    "updatedAt": "2026-03-20T04:13:42Z",
+    "headSha": "3aa2b2f9091bf42b4c3ce1e9ce8dd13b877e52a6",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/166",
+    "authorLogin": "chinesepowered"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_LongCtx_SlidingWindow_FP16Emb_10L_AllOpts/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Combines long-context training (2048) with conservative Muon/LR scheduling plus sliding-window eval and FP16 tied embeddings.",
+    "tags": [
+      "sliding-window-eval",
+      "optimizer",
+      "quantization",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Long-context (2048) training with Muon momentum 0.99",
+      "Sliding-window eval plus FP16 tied embeddings for quant-friendly scoring",
+      "Lower LRs and longer warmdown to smooth weights before quantization"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

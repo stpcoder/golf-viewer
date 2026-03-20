@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-03-20T04:21:29.128Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 164,
+    "title": "Submission: OrthoInit + Int6 MLP3x + SmearGate + BigramHash (val_bpb: 1.1524)",
+    "state": "open",
+    "updatedAt": "2026-03-20T03:58:45Z",
+    "headSha": "7c44af135b0b314f78758460c3132cadcd480ddd",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/164",
+    "authorLogin": "jfprincz"
+  },
+  "inputs": {
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_OrthoInit_Muon_Int6_MLP3x_SmearBigram_1.1524/README.md",
+      "records/track_10min_16mb/2026-03-19_WiderMLP_Int6_SlidingWindow_1.1666/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "Combines orthogonal muP init, tuned Muon, longer context, and SmearGate+Bigram hashing with Int6 quant to boost a 3x MLP Transformer within 16MB.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "optimizer",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Orthogonal muP init with tuned Muon schedule",
+      "Int6/int8 mixed quant plus SmearGate and Bigram hash embeddings",
+      "Sliding-window eval at 2048 tokens"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
