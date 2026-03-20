@@ -1,8 +1,101 @@
 {
-  "generatedAt": "2026-03-20T01:50:43.552Z",
+  "generatedAt": "2026-03-20T02:20:27.320Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 156,
+      "title": "feat(record): Int6 STE + NorMuon + SWA + Sliding Window (val_bpb=1.16019)",
+      "status": "open",
+      "updatedAt": "2026-03-20T02:07:58Z",
+      "headSha": "effbd870163a0c5f02bc13f16cf875b698bb81ce",
+      "generatedAt": "2026-03-20T02:20:04.102Z",
+      "summary": "Int6 STE quant + NorMuon optimizer + SWA lets a wider MLP with U-Net skips stay within 16MB, aided by sliding-window eval and zstd compression.",
+      "tags": [
+        "quantization",
+        "optimizer",
+        "architecture",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-156.json"
+    },
+    {
+      "prNumber": 155,
+      "title": "Record: sliding eval, FP16 tied embeddings, 10 layers, Muon WD 0.02, overtone init, and phase-transition residual mixing. (val_bpb 1.1876)",
+      "status": "open",
+      "updatedAt": "2026-03-20T02:06:35Z",
+      "headSha": "4079b8c9a44d0f1582144f47ed257851855c2ef4",
+      "generatedAt": "2026-03-20T02:20:09.271Z",
+      "summary": "Stacked sliding-window evaluation with FP16 tied embeddings, Muon WD, overtone init, and phase-transition residual mixing on a 10-layer transformer.",
+      "tags": [
+        "sliding-window-eval",
+        "mixed-precision",
+        "regularization",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-155.json"
+    },
+    {
+      "prNumber": 154,
+      "title": "Non-record: Cross-layer parameter sharing + 4-bit QAT (RecurrentGPT)",
+      "status": "open",
+      "updatedAt": "2026-03-20T02:00:02Z",
+      "headSha": "a58305d38030b8a678b53ff2f4c2f4a721b9add9",
+      "generatedAt": "2026-03-20T02:20:13.888Z",
+      "summary": "Prelude-recurrent-coda depth recurrence with per-iteration gating plus 4-bit quantization-aware training tightens 16MB artifacts in RecurrentGPT.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-154.json"
+    },
+    {
+      "prNumber": 152,
+      "title": "Add TTT (Test-Time Training) submission: 1.1767 BPB",
+      "status": "open",
+      "updatedAt": "2026-03-20T02:19:48Z",
+      "headSha": "1a3e397280bdf9db2a30a590234ea99203943b29",
+      "generatedAt": "2026-03-20T02:20:18.078Z",
+      "summary": "Baseline 9x512 model reuses the 10-minute eval budget for 2-epoch full-model SGD adaptation before sliding-window scoring.",
+      "tags": [
+        "val-only",
+        "sliding-window-eval"
+      ],
+      "flags": {
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": false
+      },
+      "file": "items/pr-152.json"
+    },
     {
       "prNumber": 151,
       "title": "Non-record: FP16 embed + WD20k + seq2048 + doc-isolated sliding window (val_bpb=1.2045)",
@@ -1246,14 +1339,14 @@
       "prNumber": 77,
       "title": "[record bpb=1.195] sliding window + LoRA TTT",
       "status": "closed",
-      "updatedAt": "2026-03-19T22:30:27Z",
+      "updatedAt": "2026-03-20T01:57:32Z",
       "headSha": "9fed66c01eb86e9089b68580a2295cbffaef25de",
-      "generatedAt": "2026-03-19T22:39:19.568Z",
-      "summary": "Eval isolates docs with sliding 256-token chunks and per-doc LoRA TTT on q/v/lm_head adapters while keeping training on the naive baseline.",
+      "generatedAt": "2026-03-20T02:20:23.598Z",
+      "summary": "Baseline training with document-isolated sliding-window eval adds per-document LoRA TTT (rank-8 on lm_head/q/v) to adapt each chunk.",
       "tags": [
         "sliding-window-eval",
-        "evaluation",
-        "attention"
+        "attention",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1408,14 +1501,14 @@
       "prNumber": 69,
       "title": "[WIP] SubSixteen: Ternary QAT + Depth Recurrence + TTT (val_bpb pending)",
       "status": "open",
-      "updatedAt": "2026-03-19T16:57:40Z",
-      "headSha": "4a685e4fdbeaec90f474bd75299500888c311757",
-      "generatedAt": "2026-03-19T17:27:27.606Z",
-      "summary": "Stack ternary QAT, depth recurrence, and test-time training to deliver 32 effective transformer layers within a ~3.7MB artifact.",
+      "updatedAt": "2026-03-20T02:10:05Z",
+      "headSha": "b6890e11551de6a09dcdd982b9c7198048cb5cf3",
+      "generatedAt": "2026-03-20T02:20:27.312Z",
+      "summary": "Combines int6 per-row quantization with depth recurrence loops plus CastedLinear to pack 32 effective layers into a 16MB artifact.",
       "tags": [
         "quantization",
         "architecture",
-        "evaluation"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,

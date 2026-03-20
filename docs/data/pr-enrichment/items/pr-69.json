@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-19T17:27:27.606Z",
+  "generatedAt": "2026-03-20T02:20:27.312Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 69,
     "title": "[WIP] SubSixteen: Ternary QAT + Depth Recurrence + TTT (val_bpb pending)",
     "state": "open",
-    "updatedAt": "2026-03-19T16:57:40Z",
-    "headSha": "4a685e4fdbeaec90f474bd75299500888c311757",
+    "updatedAt": "2026-03-20T02:10:05Z",
+    "headSha": "b6890e11551de6a09dcdd982b9c7198048cb5cf3",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/69",
     "authorLogin": "TevBenji"
   },
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Stack ternary QAT, depth recurrence, and test-time training to deliver 32 effective transformer layers within a ~3.7MB artifact.",
+    "summary": "Combines int6 per-row quantization with depth recurrence loops plus CastedLinear to pack 32 effective layers into a 16MB artifact.",
     "tags": [
       "quantization",
       "architecture",
-      "evaluation"
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Ternary QAT (BitLinear {-1,0,+1}) with STE gradients and L1-regularized sparsity",
-      "Depth recurrence via 3 shared blocks ×10 loops plus per-loop norms/signals",
-      "Per-document 1-step SGD test-time training on final layers with 30% prefix adaptation"
+      "int6 per-row quantization with fp16 scales and zstd22 compression",
+      "depth recurrence via shared blocks with loop-specific LayerNorm/signals",
+      "CastedLinear bf16 matmuls to avoid QAT overhead"
     ]
   },
   "compatibility": {

@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-20T02:20:04.102Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 156,
+    "title": "feat(record): Int6 STE + NorMuon + SWA + Sliding Window (val_bpb=1.16019)",
+    "state": "open",
+    "updatedAt": "2026-03-20T02:07:58Z",
+    "headSha": "effbd870163a0c5f02bc13f16cf875b698bb81ce",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/156",
+    "authorLogin": "dexhunter"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_Int6STE_NorMuon_SWA_SlidingWindow/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Int6 STE quant + NorMuon optimizer + SWA lets a wider MLP with U-Net skips stay within 16MB, aided by sliding-window eval and zstd compression.",
+    "tags": [
+      "quantization",
+      "optimizer",
+      "architecture",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Per-row Int6 STE quantization with fp16 embeddings",
+      "NorMuon optimizer enhanced by SWA warmdown",
+      "Sliding-window eval with zstd keeping larger MLP under 16MB"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

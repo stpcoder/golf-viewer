@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-20T02:20:09.271Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 155,
+    "title": "Record: sliding eval, FP16 tied embeddings, 10 layers, Muon WD 0.02, overtone init, and phase-transition residual mixing. (val_bpb 1.1876)",
+    "state": "open",
+    "updatedAt": "2026-03-20T02:06:35Z",
+    "headSha": "4079b8c9a44d0f1582144f47ed257851855c2ef4",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/155",
+    "authorLogin": "peytontolbert"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_TopRecipe10L_MuonWD_OvertoneInit_PeytonTolbert/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Stacked sliding-window evaluation with FP16 tied embeddings, Muon WD, overtone init, and phase-transition residual mixing on a 10-layer transformer.",
+    "tags": [
+      "sliding-window-eval",
+      "mixed-precision",
+      "regularization",
+      "architecture"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "sliding-window final evaluation (stride=64)",
+      "FP16 tied embedding export on a 10-layer model with Muon weight decay 0.02",
+      "Overtone spectral init plus phase-transition residual mixing"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

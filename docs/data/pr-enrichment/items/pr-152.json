@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-03-20T02:20:18.078Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 152,
+    "title": "Add TTT (Test-Time Training) submission: 1.1767 BPB",
+    "state": "open",
+    "updatedAt": "2026-03-20T02:19:48Z",
+    "headSha": "1a3e397280bdf9db2a30a590234ea99203943b29",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/152",
+    "authorLogin": "timowhite88"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_TTT_FarnsworthTech/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Baseline 9x512 model reuses the 10-minute eval budget for 2-epoch full-model SGD adaptation before sliding-window scoring.",
+    "tags": [
+      "val-only",
+      "sliding-window-eval"
+    ],
+    "usesValOnly": true,
+    "valOnlyReasoning": "Full-model SGD adaptation on validation data during evaluation (test-time training) precedes sliding-window scoring.",
+    "techniques": [
+      "test-time full-model SGD on val shard",
+      "sliding-window scoring post-adaptation"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
+  }
+}
