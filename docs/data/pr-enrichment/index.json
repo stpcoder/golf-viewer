@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-03-20T12:23:35.252Z",
+  "generatedAt": "2026-03-20T13:23:32.739Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 212,
+      "title": "Record: Int6 + 3x MLP + sliding window (val_bpb=1.1708) + 9 ablations",
+      "status": "open",
+      "updatedAt": "2026-03-20T13:06:35Z",
+      "headSha": "41c503f7c7c37bc77815a3a07e5a639597971a4a",
+      "generatedAt": "2026-03-20T13:23:21.372Z",
+      "summary": "Combines int6 per-row quantization with zstd compression and a 3×MLP expansion plus sliding-window eval, backed by ablations on shared hardware.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-212.json"
+    },
     {
       "prNumber": 209,
       "title": "Add non-record 11L int6 challenger 8xH100 attempt",
@@ -1019,15 +1042,15 @@
     {
       "prNumber": 151,
       "title": "Non-record: FP16 embed + WD20k + seq2048 + doc-isolated sliding window (val_bpb=1.2045)",
-      "status": "open",
-      "updatedAt": "2026-03-20T01:47:08Z",
+      "status": "closed",
+      "updatedAt": "2026-03-20T13:07:41Z",
       "headSha": "5910a6aeb70bb4c03983d8ca188601779564f2cc",
-      "generatedAt": "2026-03-20T01:50:03.970Z",
-      "summary": "Combines FP16 tied embed export, aggressive warmdown tuning, seq2048 training, and doc-isolated sliding-window evaluation on the 9L baseline.",
+      "generatedAt": "2026-03-20T13:23:28.044Z",
+      "summary": "Stacked FP16 tied embedding export, aggressive warmdown, seq2048 training, tuned optimizer settings, and doc-isolated sliding-window eval on the 9L baseline.",
       "tags": [
-        "quantization",
+        "mixed-precision",
         "training-schedule",
-        "sliding-window-eval"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2213,15 +2236,15 @@
       "prNumber": 79,
       "title": "Depth Recurrence: 3x3x1024 (non-record, pending H100)",
       "status": "open",
-      "updatedAt": "2026-03-19T21:48:14Z",
-      "headSha": "24d7be1b02a56c58a54a58d0204c30df7a9618c9",
-      "generatedAt": "2026-03-19T22:09:12.225Z",
-      "summary": "Reuses three unique transformer blocks via depth recurrence (3 repeats) and scales dim to fit 16MB with Int6 QAT plus NorMuon tuning.",
+      "updatedAt": "2026-03-20T13:20:57Z",
+      "headSha": "578fc581be3c10732a85af2cb7281845ebd52f1e",
+      "generatedAt": "2026-03-20T13:23:32.730Z",
+      "summary": "Depth recurrence reuses three unique transformer blocks repeated thrice to boost width (dim1536) while combining Int6 QAT with sliding-window eval.",
       "tags": [
         "architecture",
         "quantization",
-        "optimizer",
-        "evaluation"
+        "sliding-window-eval",
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,
