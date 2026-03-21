@@ -1,8 +1,79 @@
 {
-  "generatedAt": "2026-03-21T08:30:01.283Z",
+  "generatedAt": "2026-03-21T09:00:26.130Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 329,
+      "title": "Add lzma6 submission (1.172 bpb, 10min_16mb)",
+      "status": "open",
+      "updatedAt": "2026-03-21T08:59:32Z",
+      "headSha": "be1edf065b031620497ea1a38dbc947042caa2c3",
+      "generatedAt": "2026-03-21T09:00:00.318Z",
+      "summary": "INT8 quantized model packaged with an LZMA6-compressed artifact for the 10min_16mb track on Stdlib hardware.",
+      "tags": [
+        "quantization",
+        "compression",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-329.json"
+    },
+    {
+      "prNumber": 328,
+      "title": "Non-record: MLX prototyping harness with validated technique stack (val_bpb=1.9588, Mac)",
+      "status": "open",
+      "updatedAt": "2026-03-21T08:59:43Z",
+      "headSha": "ad08ee69bb7d1ac0026af0cfcc2be145f9511451",
+      "generatedAt": "2026-03-21T09:00:05.335Z",
+      "summary": "Mac MLX harness validates KV2/MLP3x stacks with int6 quant, FP16 tied embeddings, Muon WD, and compiled sliding-window multi-eval to shrink quant gaps.",
+      "tags": [
+        "quantization",
+        "optimizer",
+        "evaluation",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-328.json"
+    },
+    {
+      "prNumber": 327,
+      "title": "Submission TrigramHash + PartialRoPE + HeadTemp + stride32 (val_bpb: 1.1450)and ",
+      "status": "open",
+      "updatedAt": "2026-03-21T08:59:41Z",
+      "headSha": "656a6f3a661b1313bf2a58a6fd15e74df21ebc39",
+      "generatedAt": "2026-03-21T09:00:09.718Z",
+      "summary": "Builds on Int5-MLP with trigram-hash embeddings, partial RoPE+per-head temperatures, and stride-32 evaluation for richer context modeling.",
+      "tags": [
+        "architecture",
+        "tokenization",
+        "positional-encoding",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-327.json"
+    },
     {
       "prNumber": 326,
       "title": "[Non-Record] QAT + NTK-4096 Eval + Cosine Warmdown + Aggressive SWA",
@@ -1128,15 +1199,15 @@
       "prNumber": 267,
       "title": "Record: val_bpb: 1.14020 [tested 3x on 8xh100]",
       "status": "open",
-      "updatedAt": "2026-03-21T07:09:01Z",
-      "headSha": "b084d052be82b47b32146b4ee523e3214ab8de14",
-      "generatedAt": "2026-03-21T07:29:54.487Z",
-      "summary": "Chunked causal eval-then-train TTT on validation with Int5 quantization, EMA, XSA, and Muon-tuned 11-layer architecture.",
+      "updatedAt": "2026-03-21T08:31:51Z",
+      "headSha": "3b5763e7e0cbd63a75803a0f087bce078ac42634",
+      "generatedAt": "2026-03-21T09:00:19.016Z",
+      "summary": "11-layer Int5 model uses EMA, XSA, and causal chunk-wise test-time training to adapt after scoring each validation chunk.",
       "tags": [
         "val-only",
         "quantization",
-        "muon",
-        "attention"
+        "architecture",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": true,
@@ -2113,15 +2184,15 @@
       "prNumber": 205,
       "title": "MetaStack v3: 1.1792 sliding bpb, 10L BigramHash SmearGate OrthoInit SWA",
       "status": "open",
-      "updatedAt": "2026-03-20T11:47:34Z",
-      "headSha": "ed1654a7b9a1c73086abd90e7db953343d7fbfc9",
-      "generatedAt": "2026-03-20T11:52:50.935Z",
-      "summary": "10-layer GPT blends BigramHash embeddings, SmearGate gating, OrthoInit, SWA, and mixed int5/int6 quantization under sliding-window eval.",
+      "updatedAt": "2026-03-21T08:31:39Z",
+      "headSha": "dcec6ed088896a40ceb4fa90399389de9462edfd",
+      "generatedAt": "2026-03-21T09:00:26.100Z",
+      "summary": "10-layer GPT uses BigramHash+SmearGate embedding fusion, Muon/AdamW mix with SWA, and mixed int5/int6 quant+2% pruning before sliding-window eval.",
       "tags": [
         "architecture",
+        "optimizer",
         "quantization",
-        "training-schedule",
-        "evaluation"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,

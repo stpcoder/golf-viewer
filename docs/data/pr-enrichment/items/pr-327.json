@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-21T09:00:09.718Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 327,
+    "title": "Submission TrigramHash + PartialRoPE + HeadTemp + stride32 (val_bpb: 1.1450)and ",
+    "state": "open",
+    "updatedAt": "2026-03-21T08:59:41Z",
+    "headSha": "656a6f3a661b1313bf2a58a6fd15e74df21ebc39",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/327",
+    "authorLogin": "Ananddna"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-21_TrigramHash_PartialRoPE_HeadTemp/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Builds on Int5-MLP with trigram-hash embeddings, partial RoPE+per-head temperatures, and stride-32 evaluation for richer context modeling.",
+    "tags": [
+      "architecture",
+      "tokenization",
+      "positional-encoding",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Trigram hash embeddings for token triplets",
+      "Partial RoPE with positional-free dims and head temperatures",
+      "Stride-32 sliding-window evaluation"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

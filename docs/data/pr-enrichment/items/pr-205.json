@@ -1,37 +1,38 @@
 {
-  "generatedAt": "2026-03-20T11:52:50.935Z",
+  "generatedAt": "2026-03-21T09:00:26.100Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 205,
     "title": "MetaStack v3: 1.1792 sliding bpb, 10L BigramHash SmearGate OrthoInit SWA",
     "state": "open",
-    "updatedAt": "2026-03-20T11:47:34Z",
-    "headSha": "ed1654a7b9a1c73086abd90e7db953343d7fbfc9",
+    "updatedAt": "2026-03-21T08:31:39Z",
+    "headSha": "dcec6ed088896a40ceb4fa90399389de9462edfd",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/205",
     "authorLogin": "xinpw8"
   },
   "inputs": {
-    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
     "readmePaths": [
+      "records/track_non_record_16mb/2026-03-20_MetaStack_v3_near_sota_h100/README.md",
       "records/track_10min_16mb/2026-03-20_MetaStack_v3_competitive/README.md"
     ],
-    "submissionCount": 1
+    "submissionCount": 2
   },
   "output": {
-    "summary": "10-layer GPT blends BigramHash embeddings, SmearGate gating, OrthoInit, SWA, and mixed int5/int6 quantization under sliding-window eval.",
+    "summary": "10-layer GPT uses BigramHash+SmearGate embedding fusion, Muon/AdamW mix with SWA, and mixed int5/int6 quant+2% pruning before sliding-window eval.",
     "tags": [
       "architecture",
+      "optimizer",
       "quantization",
-      "training-schedule",
-      "evaluation"
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "BigramHash+SmearGate token blending before projection",
-      "SWA-averaged Muon/AdamW regime with warmdown",
-      "Mixed int5 MLP and int6 attention quantization plus pruning"
+      "BigramHash+SmearGate embedding blend",
+      "Muon+AdamW with SWA checkpoint averaging",
+      "Mixed int5/int6 quantization with 2% magnitude pruning"
     ]
   },
   "compatibility": {

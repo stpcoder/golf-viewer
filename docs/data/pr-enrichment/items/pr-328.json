@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-21T09:00:05.335Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 328,
+    "title": "Non-record: MLX prototyping harness with validated technique stack (val_bpb=1.9588, Mac)",
+    "state": "open",
+    "updatedAt": "2026-03-21T08:59:43Z",
+    "headSha": "ad08ee69bb7d1ac0026af0cfcc2be145f9511451",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/328",
+    "authorLogin": "kingjulio8238"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-21_MLX_TechniqueStack_MacPrototyping/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Mac MLX harness validates KV2/MLP3x stacks with int6 quant, FP16 tied embeddings, Muon WD, and compiled sliding-window multi-eval to shrink quant gaps.",
+    "tags": [
+      "quantization",
+      "optimizer",
+      "evaluation",
+      "architecture"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "KV2 + 10-14L MLP3x stacks with phase-transition init",
+      "Int6 per-row quant + FP16 tied embeddings under Muon decoupled WD",
+      "Compiled sliding-window multi-eval harness for MLX experiments"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
