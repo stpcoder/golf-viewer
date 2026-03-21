@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T23:56:02.643Z",
+  "generatedAt": "2026-03-21T00:27:19.762Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 277,
     "title": "Non-record: 11L Int6 + XSA + TTT + SmearGate + BigramHash (pending compute)",
     "state": "open",
-    "updatedAt": "2026-03-20T23:53:55Z",
-    "headSha": "0600b2205d96c77a95d80c9e9a1c6d403f18c493",
+    "updatedAt": "2026-03-20T23:59:20Z",
+    "headSha": "a3817a1759d9bac43fcbb546cf83f454d64a82a3",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/277",
     "authorLogin": "mohosy"
   },
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines XSA on the final layers with TTT adaptation on top of an 11L muP stack featuring SmearGate/BigramHash and int6 quantization.",
+    "summary": "Combines XSA on final layers, Test-Time Training SGD, and a meta-stack with SmearGate/BigramHash plus int6 quant to squeeze eval-time gains.",
     "tags": [
       "attention",
       "quantization",
-      "architecture"
+      "optimizer",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Exclusive Self Attention on last 3 layers",
-      "Test-Time Training SGD on validation",
-      "Per-row int6 quant plus SmearGate/BigramHash"
+      "Exclusive Self Attention on last layers",
+      "Test-Time Training SGD adaptation on val data",
+      "Int6 quant plus SmearGate/BigramHash meta-stack"
     ]
   },
   "compatibility": {

@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-21T00:27:00.290Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 290,
+    "title": "Record: 11L + Partial XSA + TTT + BatchOpt (val_bpb=1.1354)",
+    "state": "open",
+    "updatedAt": "2026-03-21T00:01:11Z",
+    "headSha": "84e656ec981fa41b6d17c1cc13b245c3af2026b1",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/290",
+    "authorLogin": "ibarrajo"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_XSA_TTT_BatchOpt_AlexIbarra/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Stacks partial XSA on the last layers with val-time SGD adaptation plus RoPE50K and batch tuning atop the PR #198 recipe.",
+    "tags": [
+      "val-only",
+      "attention",
+      "training-schedule",
+      "evaluation"
+    ],
+    "usesValOnly": true,
+    "valOnlyReasoning": "TTT performs 3-epoch full-model SGD on validation data before evaluation.",
+    "techniques": [
+      "Partial XSA debiasing on final layers",
+      "TTT frozen-block SGD adaptation at eval time",
+      "RoPE base 50K with smaller 524K-token batches"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
+  }
+}

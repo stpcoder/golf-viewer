@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-21T00:26:45.614Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 294,
+    "title": "[Non-record] Meta-Learned TTT + Error-Guided Adaptation Analysis (val_bpb=1.1645)",
+    "state": "open",
+    "updatedAt": "2026-03-21T00:21:08Z",
+    "headSha": "2d4c4229cc5df0bac17200c7bd7f864c97eef51a",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/294",
+    "authorLogin": "sseanliu"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_MetaTTT_v2/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Applies Reptile meta-learning to the late MLPs of SmearGate-compressed models while probing targeted LoRA-based high-loss test-time adaptation.",
+    "tags": [
+      "architecture",
+      "training-schedule",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Reptile meta-learning over final MLP layers",
+      "LoRA-based test-time training on top 2% loss windows",
+      "Depth frontier tests on compressed SmearGate stack"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

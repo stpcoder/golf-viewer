@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-03-20T23:55:47.024Z",
+  "generatedAt": "2026-03-21T00:26:34.694Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "counts": {
-    "submissions": 211,
+    "submissions": 217,
     "official": 1,
-    "openPr": 169,
+    "openPr": 175,
     "mergedPr": 12,
     "closedPr": 29,
-    "prBacked": 210,
+    "prBacked": 216,
     "readmeListed": 15,
     "collectorErrors": 0
   },
@@ -78,7 +78,7 @@
       }
     },
     "openPrMainTrack": {
-      "id": "record-records-track_10min_16mb-2026-03-19_CombinedOptimal",
+      "id": "record-records-track_10min_16mb-2026-03-19_PaidPrefix_8xH100",
       "source": "pull_request",
       "status": "open",
       "category": "main-track",
@@ -90,67 +90,62 @@
         "category": "main-track"
       },
       "record": {
-        "folderName": "2026-03-19_CombinedOptimal",
-        "folderPath": "records/track_10min_16mb/2026-03-19_CombinedOptimal",
-        "submissionPath": "records/track_10min_16mb/2026-03-19_CombinedOptimal/submission.json",
-        "readmePath": "records/track_10min_16mb/2026-03-19_CombinedOptimal/README.md",
-        "trainLogPath": "records/track_10min_16mb/2026-03-19_CombinedOptimal/train.log",
-        "scriptPath": "records/track_10min_16mb/2026-03-19_CombinedOptimal/train_gpt.py"
+        "folderName": "2026-03-19_PaidPrefix_8xH100",
+        "folderPath": "records/track_10min_16mb/2026-03-19_PaidPrefix_8xH100",
+        "submissionPath": "records/track_10min_16mb/2026-03-19_PaidPrefix_8xH100/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-19_PaidPrefix_8xH100/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-19_PaidPrefix_8xH100/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-19_PaidPrefix_8xH100/train_gpt.py"
       },
       "submission": {
-        "author": "yesbhautik",
-        "githubId": "yesbhautik",
-        "name": "Combined Optimal V2: MLP 3x + STE int6 QAT + Sliding Window + Tuned Muon",
-        "blurb": "Val-only training with 9-layer MLP-3x (h=1536), STE fake-int6 quantization-aware training, mixed post-training quantization (int6 per-row blocks, int8 per-row embedding), sliding window eval stride=64, tuned Muon (momentum 0.99, LR 0.02, seq4096).",
-        "date": "2026-03-19T16:00:00Z"
+        "author": "Spokane Way",
+        "githubId": "spokane-way",
+        "name": "Paid Prefix + Train-Only 7L 384d",
+        "blurb": "Two-part artifact: 8.75 MB lzma-compressed val target tokens (20.8% coverage, exact predictions) + 7.12 MB int8+zlib 7-layer 384d transformer trained exclusively on fineweb train data. Model never sees validation tokens before evaluation.",
+        "date": "2026-03-20T00:00:00Z"
       },
       "metrics": {
-        "valBpb": 0.9695319,
-        "valLoss": 1.6370052,
-        "preQuantValBpb": 0.9892,
-        "preQuantValLoss": 1.6703,
-        "stepStop": 10438,
-        "wallclockSeconds": 600.014,
-        "evalTimeSeconds": 306.883
+        "valBpb": 1.02174288,
+        "valLoss": 1.72517006,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
       },
       "artifact": {
-        "bytesTotal": 15370160,
-        "bytesCode": 50872,
-        "bytesModelInt8Zlib": 15319288
+        "bytesTotal": 15930371,
+        "bytesCode": 60315,
+        "bytesModelInt8Zlib": null
       },
       "flags": {
-        "usesValOnly": true
+        "usesValOnly": false
       },
       "detection": {
-        "valOnlyConfidence": "high",
-        "valOnlyMatches": [
-          "title:val-only",
-          "body:val-only",
-          "readme:Val-Only",
-          "readme:Val-only training"
-        ]
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
       },
       "pr": {
-        "number": 64,
-        "title": "Record Update: val_bpb=0.9271 (val-only) + 1.1465 (standard)",
+        "number": 168,
+        "title": "SOTA Attempt: Paid prefix (val_bpb=1.0238)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/64",
-        "authorLogin": "yesbhautik",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/168",
+        "authorLogin": "spokane-way",
         "authorName": null,
-        "createdAt": "2026-03-19T07:32:20Z",
-        "updatedAt": "2026-03-20T18:32:01Z",
-        "headSha": "92d4a9122d506f2e87a19a33b493742c4ef015e4",
-        "headRepo": "yesbhautik/parameter-golf"
+        "createdAt": "2026-03-20T04:29:35Z",
+        "updatedAt": "2026-03-21T00:13:53Z",
+        "headSha": "83aee2852eb3375309580957f7d3ae6934488428",
+        "headRepo": "spokane-way/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/92d4a9122d506f2e87a19a33b493742c4ef015e4/records/track_10min_16mb/2026-03-19_CombinedOptimal/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/92d4a9122d506f2e87a19a33b493742c4ef015e4/records/track_10min_16mb/2026-03-19_CombinedOptimal/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/92d4a9122d506f2e87a19a33b493742c4ef015e4/records/track_10min_16mb/2026-03-19_CombinedOptimal/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/92d4a9122d506f2e87a19a33b493742c4ef015e4/records/track_10min_16mb/2026-03-19_CombinedOptimal/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/92d4a9122d506f2e87a19a33b493742c4ef015e4/records/track_10min_16mb/2026-03-19_CombinedOptimal",
-        "pr": "https://github.com/openai/parameter-golf/pull/64",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/83aee2852eb3375309580957f7d3ae6934488428/records/track_10min_16mb/2026-03-19_PaidPrefix_8xH100/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/83aee2852eb3375309580957f7d3ae6934488428/records/track_10min_16mb/2026-03-19_PaidPrefix_8xH100/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/83aee2852eb3375309580957f7d3ae6934488428/records/track_10min_16mb/2026-03-19_PaidPrefix_8xH100/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/83aee2852eb3375309580957f7d3ae6934488428/records/track_10min_16mb/2026-03-19_PaidPrefix_8xH100/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/83aee2852eb3375309580957f7d3ae6934488428/records/track_10min_16mb/2026-03-19_PaidPrefix_8xH100",
+        "pr": "https://github.com/openai/parameter-golf/pull/168",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

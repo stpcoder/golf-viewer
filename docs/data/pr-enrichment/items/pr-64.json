@@ -1,44 +1,43 @@
 {
-  "generatedAt": "2026-03-20T18:56:09.850Z",
+  "generatedAt": "2026-03-21T00:28:44.537Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 64,
-    "title": "Record Update: val_bpb=0.9271 (val-only) + 1.1465 (standard)",
+    "title": "Record: 11L Int6 + Per-dim SmearGate + RoPE50K (mean val_bpb=1.1391)",
     "state": "open",
-    "updatedAt": "2026-03-20T18:32:01Z",
-    "headSha": "92d4a9122d506f2e87a19a33b493742c4ef015e4",
+    "updatedAt": "2026-03-21T00:25:17Z",
+    "headSha": "20eff8994ca6475e0b8d323bc32dd3339600c3b1",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/64",
     "authorLogin": "yesbhautik"
   },
   "inputs": {
-    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
     "readmePaths": [
-      "records/track_10min_16mb/2026-03-19_CombinedOptimal/README.md",
-      "records/track_10min_16mb/2026-03-19_StandardOptimal/README.md"
+      "records/track_10min_16mb/2026-03-20_DominationV1/README.md"
     ],
-    "submissionCount": 2
+    "submissionCount": 1
   },
   "output": {
-    "summary": "SmearGate+BigramHash core with sliding-window eval; val-only run adds STE fake-int6 QAT + zstd while the standard mix uses int6/int8 with fp16 passthrough, Muon + SWA.",
+    "summary": "11-layer 512-dim MLP-3x with BigramHash/U-Net skips, RoPE50K, per-dim SmearGate, and int6 quantization plus Muon+SWA training.",
     "tags": [
-      "val-only",
-      "architecture",
       "quantization",
-      "evaluation"
+      "optimizer",
+      "architecture",
+      "sliding-window-eval"
     ],
-    "usesValOnly": true,
-    "valOnlyReasoning": "Includes an explicit val-only submission trained on only validation shards with specialized STE fake-int6 QAT and compressed artifact setup.",
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
     "techniques": [
-      "STE fake-int6 QAT plus zstd compression for val-only",
-      "Mixed int6/int8 export with fp16 passthrough, Muon weight decay, and SWA",
-      "Sliding-window evaluation (stride 64) on SmearGate+BigramHash core"
+      "Per-dim SmearGate blending with RoPE base 50K",
+      "11-layer MLP-3x w/ BigramHash context and U-Net skips",
+      "Int6/8 quant + Muon SGD with SWA averaging"
     ]
   },
   "compatibility": {
-    "collectorUsesValOnly": true,
-    "aiUsesValOnly": true,
-    "finalUsesValOnly": true,
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
     "valOnlyMatchesCollector": true
   }
 }

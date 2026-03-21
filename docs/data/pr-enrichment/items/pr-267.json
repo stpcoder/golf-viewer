@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-20T21:25:11.029Z",
+  "generatedAt": "2026-03-21T00:27:32.323Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 267,
     "title": "Record: val_bpb: 1.14020 [tested 3x on 8xh100]",
     "state": "open",
-    "updatedAt": "2026-03-20T21:20:08Z",
+    "updatedAt": "2026-03-21T00:05:59Z",
     "headSha": "78a2c049df1789577a8644a5e07a67044de6ccdd",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/267",
     "authorLogin": "andrewgcodes"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Causal chunk-wise test-time training evaluates each validation chunk before updating a 10-layer GPT with int5/int6 quantization, BigramHash embeddings, and SWA.",
+    "summary": "10-layer BigramHash model uses mixed int5/int6 quantization, SWA, and chunked causal test-time training (eval-before-train per chunk) on validation data.",
     "tags": [
       "val-only",
       "quantization",
       "architecture",
-      "evaluation"
+      "training-schedule"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "TTT explicitly trains on each validation chunk after scoring it, so the run performs validation-shard training during evaluation.",
+    "valOnlyReasoning": "Runs per-chunk SGD updates on validation tokens immediately after scoring them, so training happens solely on validation data during TTT.",
     "techniques": [
-      "Causal chunk-wise TTT: evaluate chunk, then train on it (no re-eval)",
-      "Mixed int5/int6 quantization with FP16 embeddings and BigramHash(16384)",
-      "SWA averaging late checkpoints for inference stability"
+      "mixed int5/int6 quantization for MLP and attention",
+      "chunked causal test-time training with eval-before-train per chunk",
+      "SWA with frequent checkpoint averaging"
     ]
   },
   "compatibility": {

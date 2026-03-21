@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-21T00:26:49.088Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 293,
+    "title": "Non-record: Custom sp4096 BPE Tokenizer (1.2827 BPB on 1×H100)",
+    "state": "open",
+    "updatedAt": "2026-03-21T00:19:46Z",
+    "headSha": "c509e6aaece047d980686a0e31a2c9f62b3b1bfc",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/293",
+    "authorLogin": "Nishu2000-hub"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-20_sp4096_custom_tokenizer/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Introduces custom sp4096 BPE tokenizer trained on FineWeb docs to boost bytes/token efficiency while reusing baseline training scripts.",
+    "tags": [
+      "tokenization",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "4096-vocab BPE tokenizer trained on FineWeb",
+      "Preprocessing pipeline mirroring official shard format",
+      "Reduced layers to keep 16MB budget with larger embeddings"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

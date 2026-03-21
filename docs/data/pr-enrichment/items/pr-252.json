@@ -1,36 +1,36 @@
 {
-  "generatedAt": "2026-03-20T19:24:25.123Z",
+  "generatedAt": "2026-03-21T00:27:54.017Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 252,
-    "title": "Add qscale int6 bigram128 cross-provider record draft",
+    "title": "Add PR114 RunPod H100 SXM non-record submission",
     "state": "open",
-    "updatedAt": "2026-03-20T19:02:49Z",
-    "headSha": "555a124302eb6f12b2006100af0316369996ec44",
+    "updatedAt": "2026-03-21T00:16:06Z",
+    "headSha": "013954d4c19b8c483c1db239010ff850993cbced",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/252",
     "authorLogin": "greqone"
   },
   "inputs": {
     "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
     "readmePaths": [
-      "records/track_10min_16mb/2026-03-20_QScaleInt6_Bigram128_CrossProviderSig/README.md"
+      "records/track_non_record_16mb/2026-03-21_PR114_RunPod_H100SXM_TripleRerun/README.md"
     ],
     "submissionCount": 1
   },
   "output": {
-    "summary": "PR135 derivative uses qscale int6 export with MLP_HIDDEN=1376 and full bigram128, removes fp16 passthrough, and evals via stride-16 sliding window.",
+    "summary": "Verifies the PR114 long-context SP-1024 selective-precision recipe on RunPod H100 SXM with mixed precision tied embeddings and a 16MB-compressed GQA package.",
     "tags": [
+      "architecture",
       "quantization",
-      "sliding-window-eval",
-      "architecture"
+      "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "qscale int6 export replacing per-row scales",
-      "MLP_HIDDEN=1376 with full bigram128 embedding",
-      "stride-16 sliding-window evaluation"
+      "Selective-precision mixed FP16 tied embeddings",
+      "RunPod same-provider rerun verification",
+      "16MB-compressed GQA model"
     ]
   },
   "compatibility": {

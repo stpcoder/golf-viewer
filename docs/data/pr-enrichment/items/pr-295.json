@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-21T00:26:40.407Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 295,
+    "title": "[Record Submission] QAT Int5/Int6 + Backout + U-Net Skips + BigramHash(10240) + SWA50 — val_bpb=1.1477",
+    "state": "open",
+    "updatedAt": "2026-03-21T00:25:33Z",
+    "headSha": "580031b34e75638a8d9b5a9f3ec5b47be3ea8e29",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/295",
+    "authorLogin": "gowtham0992"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_QAT_Int5Int6_BigramHash_Backout_SWA50/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Mixed int5/int6 STE QAT with backout, learned U-Net skips, and SWA on a BigramHash/SmearGate muon stack for quantization-ready outputs.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "muon",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Mixed int5/int6 STE quantization-aware training",
+      "Backout plus learned U-Net skip connections",
+      "Muon optimizer with SWA schedule and SmearGate BigramHash hashing"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

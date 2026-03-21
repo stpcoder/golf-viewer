@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-21T00:27:06.535Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 289,
+    "title": "SmearGate + BigramHash + Int6 + SWA + U-Net Skips (1.1518 BPB)",
+    "state": "open",
+    "updatedAt": "2026-03-21T00:00:38Z",
+    "headSha": "a84d7fd2bb93803fefe2a11d7f5fad208ecb00b3",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/289",
+    "authorLogin": "integrate-your-mind"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_SmearGate_SwiGLU_Int6_SlidingWindow/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11-layer GPT mixes per-row int6 quantization, SmearGate+BigramHash context, learned U-Net skips, and SWA-tuned Muon training evaluated via sliding windows.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "optimizer",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Per-row int6 quantization + zstd-22 compression for transformer weights",
+      "SmearGate/BigramHash context signals with U-Net style skip connections across 11 layers",
+      "Muon optimizer with momentum warmup and infrequent SWA paired with sliding-window eval"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

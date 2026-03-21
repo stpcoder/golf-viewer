@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-20T20:24:37.706Z",
+  "generatedAt": "2026-03-21T00:27:42.527Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 264,
     "title": "11L Int5-MLP + TTT-SGD + SmearGate + SWA (1.1455 BPB)",
     "state": "open",
-    "updatedAt": "2026-03-20T20:09:28Z",
+    "updatedAt": "2026-03-21T00:01:01Z",
     "headSha": "ab0777880a9b931afc62d7fcc332936ccaaf90fd",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/264",
     "authorLogin": "stukenov"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Int5-MLP/int6-attn quantization funds an 11-layer Relu^2 Transformer with SmearGate/Bigram context, SWA, and TTT-SGD prep for sliding-window eval.",
+    "summary": "Int5/int6 quantization funds an 11-layer GQA model enhanced with SmearGate/BigramHash context and SWA plus full-model SGD TTT before eval.",
     "tags": [
       "val-only",
       "quantization",
-      "architecture",
-      "evaluation"
+      "training-schedule",
+      "optimizer"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "TTT-SGD fine-tunes the entire model on validation data before sliding-window scoring.",
+    "valOnlyReasoning": "Performs full-model SGD test-time training for two epochs on validation data before sliding-window evaluation.",
     "techniques": [
-      "Mixed int5-MLP and int6-attention quantization to fit an 11-layer Transformer",
-      "SmearGate plus BigramHash injects learned bigram context prior to the stack",
-      "SWA checkpoint averaging plus TTT-SGD adaptation paired with sliding-window evaluation"
+      "Mixed int5 MLP/int6 attention quantization",
+      "SmearGate+BigramHash bigram context injection",
+      "SWA plus full-model SGD TTT before eval"
     ]
   },
   "compatibility": {
