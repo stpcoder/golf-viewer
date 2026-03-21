@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T07:22:01.540Z",
+  "generatedAt": "2026-03-21T10:31:07.205Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 186,
-    "title": "Combined SOTA: INT6 + SmearGate + BigramHash + SWA (val_bpb=1.1754)",
+    "title": "11L XSA + SmearGate + BigramHash + SWA (mean val_bpb=1.1565, 3 seeds)",
     "state": "open",
-    "updatedAt": "2026-03-20T07:19:55Z",
-    "headSha": "5dbb11815d3cef230c847ca2b81d5ca2ad7867a8",
+    "updatedAt": "2026-03-21T10:13:28Z",
+    "headSha": "871fd864e7b303196e395db4d28e325953d5506b",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/186",
     "authorLogin": "mahsumaktas"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "INT6 quantization, SmearGate+BigramHash context, wider MLP, and muon+SWA tuning under sliding-window eval to stay within 16MB.",
+    "summary": "11-layer transformer stacks XSA on last 4 layers with SmearGate BigramHash, INT6+SWA, 2.75x MLP, RoPE50K and muon WD0.04 to enable quantization.",
     "tags": [
-      "quantization",
       "architecture",
-      "optimizer",
-      "evaluation"
+      "attention",
+      "quantization",
+      "muon"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "Not an explicit val-only training run; standard training with sliding-window evaluation.",
+    "valOnlyReasoning": "",
     "techniques": [
-      "INT6+zstd compression enabling wider MLP",
-      "SmearGate gating and BigramHash embeddings for local context",
-      "Muon WD with SWA warmdown alongside sliding-window evaluation"
+      "XSA on final layers with SmearGate BigramHash embedding stack",
+      "INT6 per-row quantization with RoPE50K plus muon WD0.04",
+      "SWA every 50 steps on 2.75x MLP expansion"
     ]
   },
   "compatibility": {

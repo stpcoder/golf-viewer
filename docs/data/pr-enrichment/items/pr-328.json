@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-21T09:00:05.335Z",
+  "generatedAt": "2026-03-21T10:30:50.186Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 328,
     "title": "Non-record: MLX prototyping harness with validated technique stack (val_bpb=1.9588, Mac)",
     "state": "open",
-    "updatedAt": "2026-03-21T08:59:43Z",
-    "headSha": "ad08ee69bb7d1ac0026af0cfcc2be145f9511451",
+    "updatedAt": "2026-03-21T10:21:16Z",
+    "headSha": "aa611b48c58de9cedb8cdbedf8bdf25b336b20a7",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/328",
     "authorLogin": "kingjulio8238"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Mac MLX harness validates KV2/MLP3x stacks with int6 quant, FP16 tied embeddings, Muon WD, and compiled sliding-window multi-eval to shrink quant gaps.",
+    "summary": "Mac MLX prototype validates KV2/GQA blocks with Int6 quant, FP16 embeddings, Muon WD, and sliding eval for compact 16MB leaderboard targets.",
     "tags": [
+      "architecture",
       "quantization",
-      "optimizer",
       "evaluation",
-      "architecture"
+      "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "KV2 + 10-14L MLP3x stacks with phase-transition init",
-      "Int6 per-row quant + FP16 tied embeddings under Muon decoupled WD",
-      "Compiled sliding-window multi-eval harness for MLX experiments"
+      "KV2/GQA architecture plus sliding-window eval harness",
+      "Int6 per-row quantization with FP16 tied embeddings and Muon weight decay",
+      "Multi-eval validation harness for 25+ MLX technique sweeps"
     ]
   },
   "compatibility": {

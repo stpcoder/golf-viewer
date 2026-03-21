@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T22:55:39.494Z",
+  "generatedAt": "2026-03-21T10:30:55.906Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 279,
     "title": "Title: AtomLogic v3.2 Universal SOTA - 1.15 BPB Target",
     "state": "open",
-    "updatedAt": "2026-03-20T22:27:27Z",
-    "headSha": "311e5c0540802a1282197b858df44ddbb878f7c8",
+    "updatedAt": "2026-03-21T10:16:53Z",
+    "headSha": "eb6edf4c6d14d28d50e28daa25c22db07948088b",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/279",
     "authorLogin": "Evreu1pro"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "Shares one Universal Transformer block over 20 iterations with value-only MoE binary-mask experts, VeRA zero-leakage TTT, and Muon optimizer.",
+    "summary": "Universal Transformer stacks 20 iterations of a shared block with Value-Only MoE, VeRA TTT adaptation, Muon optimizer, and NF4 tied embeddings.",
     "tags": [
       "architecture",
+      "attention",
       "optimizer",
-      "regularization",
-      "non-record"
+      "quantization"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "Standard training regimen; no validation-shard-only training is described.",
+    "valOnlyReasoning": "",
     "techniques": [
       "Shared Universal Transformer block iterated 20 times",
-      "Value-only MoE with binary masks on shared weights",
-      "VeRA zero-leakage TTT plus Muon optimizer for NF4 tied embeddings"
+      "Value-Only MoE with 32 sparse experts using binary-masked shared weights",
+      "VeRA TTT test-time tuning with Muon optimizer and NF4 tied embeddings"
     ]
   },
   "compatibility": {

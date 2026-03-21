@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-21T10:00:25.766Z",
+  "generatedAt": "2026-03-21T10:31:14.174Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -99,15 +99,15 @@
       "prNumber": 328,
       "title": "Non-record: MLX prototyping harness with validated technique stack (val_bpb=1.9588, Mac)",
       "status": "open",
-      "updatedAt": "2026-03-21T08:59:43Z",
-      "headSha": "ad08ee69bb7d1ac0026af0cfcc2be145f9511451",
-      "generatedAt": "2026-03-21T09:00:05.335Z",
-      "summary": "Mac MLX harness validates KV2/MLP3x stacks with int6 quant, FP16 tied embeddings, Muon WD, and compiled sliding-window multi-eval to shrink quant gaps.",
+      "updatedAt": "2026-03-21T10:21:16Z",
+      "headSha": "aa611b48c58de9cedb8cdbedf8bdf25b336b20a7",
+      "generatedAt": "2026-03-21T10:30:50.186Z",
+      "summary": "Mac MLX prototype validates KV2/GQA blocks with Int6 quant, FP16 embeddings, Muon WD, and sliding eval for compact 16MB leaderboard targets.",
       "tags": [
+        "architecture",
         "quantization",
-        "optimizer",
         "evaluation",
-        "architecture"
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1036,15 +1036,15 @@
       "prNumber": 279,
       "title": "Title: AtomLogic v3.2 Universal SOTA - 1.15 BPB Target",
       "status": "open",
-      "updatedAt": "2026-03-20T22:27:27Z",
-      "headSha": "311e5c0540802a1282197b858df44ddbb878f7c8",
-      "generatedAt": "2026-03-20T22:55:39.494Z",
-      "summary": "Shares one Universal Transformer block over 20 iterations with value-only MoE binary-mask experts, VeRA zero-leakage TTT, and Muon optimizer.",
+      "updatedAt": "2026-03-21T10:16:53Z",
+      "headSha": "eb6edf4c6d14d28d50e28daa25c22db07948088b",
+      "generatedAt": "2026-03-21T10:30:55.906Z",
+      "summary": "Universal Transformer stacks 20 iterations of a shared block with Value-Only MoE, VeRA TTT adaptation, Muon optimizer, and NF4 tied embeddings.",
       "tags": [
         "architecture",
+        "attention",
         "optimizer",
-        "regularization",
-        "non-record"
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1547,14 +1547,15 @@
       "prNumber": 250,
       "title": "Complexity MoE v4: Token-Routed I64 + PID + CUDA Scatter + Int6 (26.5M params)",
       "status": "open",
-      "updatedAt": "2026-03-21T09:53:24Z",
-      "headSha": "67604ef0dd24dc65cb2a6dc567d5529b977fad60",
-      "generatedAt": "2026-03-21T10:00:25.731Z",
-      "summary": "Token-routed MoE with PID dynamics, CUDA scatter dispatch, int6+zstd compression, and SGDR cosine restarts for compact efficiency.",
+      "updatedAt": "2026-03-21T10:30:32Z",
+      "headSha": "dc6824bb687c4011e9219612e8e3983481a7fe0c",
+      "generatedAt": "2026-03-21T10:31:00.733Z",
+      "summary": "Token-routed 4-expert SwiGLU MoE with PID-layer dynamics, CUDA scatter dispatch, int6 quantization, and SGDR schedule for the compact leaderboard target.",
       "tags": [
         "architecture",
+        "training-schedule",
         "quantization",
-        "training-schedule"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2577,17 +2578,17 @@
     },
     {
       "prNumber": 186,
-      "title": "Combined SOTA: INT6 + SmearGate + BigramHash + SWA (val_bpb=1.1754)",
+      "title": "11L XSA + SmearGate + BigramHash + SWA (mean val_bpb=1.1565, 3 seeds)",
       "status": "open",
-      "updatedAt": "2026-03-20T07:19:55Z",
-      "headSha": "5dbb11815d3cef230c847ca2b81d5ca2ad7867a8",
-      "generatedAt": "2026-03-20T07:22:01.540Z",
-      "summary": "INT6 quantization, SmearGate+BigramHash context, wider MLP, and muon+SWA tuning under sliding-window eval to stay within 16MB.",
+      "updatedAt": "2026-03-21T10:13:28Z",
+      "headSha": "871fd864e7b303196e395db4d28e325953d5506b",
+      "generatedAt": "2026-03-21T10:31:07.205Z",
+      "summary": "11-layer transformer stacks XSA on last 4 layers with SmearGate BigramHash, INT6+SWA, 2.75x MLP, RoPE50K and muon WD0.04 to enable quantization.",
       "tags": [
-        "quantization",
         "architecture",
-        "optimizer",
-        "evaluation"
+        "attention",
+        "quantization",
+        "muon"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2672,14 +2673,14 @@
       "prNumber": 181,
       "title": "Aweb Optimized Baseline — 1.2194 BPB",
       "status": "open",
-      "updatedAt": "2026-03-20T06:55:29Z",
-      "headSha": "68a361890813785f0f76d1b626ae072ea60177bd",
-      "generatedAt": "2026-03-20T07:22:34.775Z",
-      "summary": "NaiveBaseline kept intact while env-vars crank Muon momentum, halve LRs, 3× MLP, 2048-token training, grad clip, and train-on-val for better quantized convergence.",
+      "updatedAt": "2026-03-21T10:03:30Z",
+      "headSha": "cd224f1591ac2878ef08f39f5b64df7046b6705c",
+      "generatedAt": "2026-03-21T10:31:14.151Z",
+      "summary": "Baseline GPT (9L, 512d) kept intact while Muon momentum/learning-rate tuning, 3× MLP, seq2048, grad clipping, and train-on-val squeezing extra data improve BPB.",
       "tags": [
-        "val-only",
         "optimizer",
-        "training-schedule"
+        "architecture",
+        "val-only"
       ],
       "flags": {
         "usesValOnly": true,
