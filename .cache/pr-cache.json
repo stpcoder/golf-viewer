@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-21T13:32:04.064Z",
-  "lastSeenUpdatedAt": "2026-03-21T13:02:06Z",
+  "generatedAt": "2026-03-21T14:02:13.658Z",
+  "lastSeenUpdatedAt": "2026-03-21T13:46:37Z",
   "prs": {
     "1": {
       "number": 1,
@@ -26122,20 +26122,20 @@
     },
     "337": {
       "number": 337,
-      "updatedAt": "2026-03-21T11:02:45Z",
+      "updatedAt": "2026-03-21T13:46:37Z",
       "pr": {
         "number": 337,
         "title": "Codex/fix high priority bugs in tokenizer backend",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/337",
         "authorLogin": "Vibes-me",
         "authorName": null,
         "createdAt": "2026-03-21T11:02:40Z",
-        "updatedAt": "2026-03-21T11:02:45Z",
+        "updatedAt": "2026-03-21T13:46:37Z",
         "headSha": "3a22f1eea1ce7710e9996fb2c88b5c7b2bab521f",
-        "headRepo": "Vibes-me/parameter-golf"
+        "headRepo": null
       },
       "submissions": []
     },
