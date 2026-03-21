@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-21T20:35:10.423Z",
+  "generatedAt": "2026-03-21T21:35:18.977Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 366,
-    "title": "Non-record: 10L Int5-MLP + TTT + Backout Connection",
+    "title": "Non-record: 10L Int5-MLP + TTT + Backout Connection  (val_bpb=1.1574 on 8xH100 SXM)",
     "state": "open",
-    "updatedAt": "2026-03-21T20:14:21Z",
-    "headSha": "c4c3bfeeed5285e5298a5ff8daf0cfecb8f6fd7a",
+    "updatedAt": "2026-03-21T21:31:24Z",
+    "headSha": "f9c74fbff55e6ab5ad64ba0e47ac20c30ba2b317",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/366",
     "authorLogin": "shivnarainms22"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Adds a learned U-Net mid-layer residual subtraction plus val-token test-time SGD after quantization on thwu1 10L Int5 base.",
+    "summary": "Adds EMA smoothing, a learned mid-layer backout connection, and post-quantization test-time SGD on val tokens to the quantized 10-layer Int5-MLP.",
     "tags": [
       "val-only",
+      "quantization",
       "architecture",
-      "training-schedule",
-      "evaluation"
+      "training-schedule"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "Performs 3 epochs of SGD fine-tuning on validation tokens after quantization to adapt the model.",
+    "valOnlyReasoning": "Performs 3 epochs of SGD on validation tokens after quantization to recover from quantization degradation.",
     "techniques": [
-      "Learned backout subtraction at the U-Net midpoint",
-      "Post-quantization test-time SGD on validation tokens",
-      "Mixed int5/int6 quantization with SWA"
+      "EMA replacing SWA for smoother weights",
+      "Backout connection subtracting layer‑5 state before RMSNorm",
+      "Test-time SGD on validation tokens post-quantization"
     ]
   },
   "compatibility": {

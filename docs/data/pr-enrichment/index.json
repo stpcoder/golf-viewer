@@ -1,20 +1,45 @@
 {
-  "generatedAt": "2026-03-21T21:05:33.384Z",
+  "generatedAt": "2026-03-21T21:35:19.032Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
+      "prNumber": 373,
+      "title": "Record: SwiGLU + BigramHash + SWA, val_bpb=1.1634 (8xH100 verified)",
+      "status": "open",
+      "updatedAt": "2026-03-21T21:34:45Z",
+      "headSha": "d6b4606bf390c97d23e458d9be0a41f14dfaa3fb",
+      "generatedAt": "2026-03-21T21:35:08.006Z",
+      "summary": "Combines SwiGLU FFNs with BigramHash embeddings, Muon optimizer+SWA, and int6+zstd compression for efficient 10min/16MB performance.",
+      "tags": [
+        "architecture",
+        "optimizer",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-373.json"
+    },
+    {
       "prNumber": 372,
       "title": "11L + XSA4 + EMA(0.997) + seq2048 + Int5-MLP + MuonWD=0.04 + LateK-FP16 | val_bpb=1.1361",
-      "status": "open",
-      "updatedAt": "2026-03-21T21:02:55Z",
+      "status": "closed",
+      "updatedAt": "2026-03-21T21:10:05Z",
       "headSha": "b45297b658958af70a5635110551d1b2f2ec6903",
-      "generatedAt": "2026-03-21T21:04:58.997Z",
-      "summary": "Muon+EMA training at seq2048 paired with Int5/Int6 QAT and Late-K FP16 lets an 11-layer U-Net transformer stay within 16MB while compressing with zstd22.",
+      "generatedAt": "2026-03-21T21:35:12.863Z",
+      "summary": "11-layer U-Net transformer adds Int5/Int6 quantization plus Late-K FP16 and XSA on deepest layers, seq2048 training with EMA and tuned Muon decay.",
       "tags": [
-        "quantization",
         "architecture",
-        "optimizer"
+        "quantization",
+        "optimizer",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -123,17 +148,17 @@
     },
     {
       "prNumber": 366,
-      "title": "Non-record: 10L Int5-MLP + TTT + Backout Connection",
+      "title": "Non-record: 10L Int5-MLP + TTT + Backout Connection  (val_bpb=1.1574 on 8xH100 SXM)",
       "status": "open",
-      "updatedAt": "2026-03-21T20:14:21Z",
-      "headSha": "c4c3bfeeed5285e5298a5ff8daf0cfecb8f6fd7a",
-      "generatedAt": "2026-03-21T20:35:10.423Z",
-      "summary": "Adds a learned U-Net mid-layer residual subtraction plus val-token test-time SGD after quantization on thwu1 10L Int5 base.",
+      "updatedAt": "2026-03-21T21:31:24Z",
+      "headSha": "f9c74fbff55e6ab5ad64ba0e47ac20c30ba2b317",
+      "generatedAt": "2026-03-21T21:35:18.977Z",
+      "summary": "Adds EMA smoothing, a learned mid-layer backout connection, and post-quantization test-time SGD on val tokens to the quantized 10-layer Int5-MLP.",
       "tags": [
         "val-only",
+        "quantization",
         "architecture",
-        "training-schedule",
-        "evaluation"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": true,
@@ -4405,29 +4430,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-114.json"
-    },
-    {
-      "prNumber": 113,
-      "title": "Record: FP16 Embed + Sliding Window Eval + Warmdown Tuning (pending eval)",
-      "status": "open",
-      "updatedAt": "2026-03-19T18:26:13Z",
-      "headSha": "87a6137f5287d78c38b4c9a4dbde490b0a3c9044",
-      "generatedAt": "2026-03-19T18:36:58.202Z",
-      "summary": "Quantizes with FP16 tied embeddings, stride-64 sliding-window eval, and a tuned warmdown/LR schedule for better convergence under the 10-min cap.",
-      "tags": [
-        "quantization",
-        "evaluation",
-        "training-schedule"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-113.json"
     },
     {
       "prNumber": 112,

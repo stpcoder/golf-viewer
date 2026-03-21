@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-21T21:04:58.997Z",
+  "generatedAt": "2026-03-21T21:35:12.863Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 372,
     "title": "11L + XSA4 + EMA(0.997) + seq2048 + Int5-MLP + MuonWD=0.04 + LateK-FP16 | val_bpb=1.1361",
-    "state": "open",
-    "updatedAt": "2026-03-21T21:02:55Z",
+    "state": "closed",
+    "updatedAt": "2026-03-21T21:10:05Z",
     "headSha": "b45297b658958af70a5635110551d1b2f2ec6903",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/372",
     "authorLogin": "HyperPotatoNeo"
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Muon+EMA training at seq2048 paired with Int5/Int6 QAT and Late-K FP16 lets an 11-layer U-Net transformer stay within 16MB while compressing with zstd22.",
+    "summary": "11-layer U-Net transformer adds Int5/Int6 quantization plus Late-K FP16 and XSA on deepest layers, seq2048 training with EMA and tuned Muon decay.",
     "tags": [
-      "quantization",
       "architecture",
-      "optimizer"
+      "quantization",
+      "optimizer",
+      "training-schedule"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "not val-only training",
+    "valOnlyReasoning": "",
     "techniques": [
-      "Seq2048 Muon training with WD=0.04 plus EMA (0.997)",
-      "Int5 MLP + Int6 attention quantization with Late-K FP16 and zstd22",
-      "11-layer U-Net stack with SmearGate/BigramHash embeddings"
+      "Per-row Int6 attention + Int5 MLP quantization with Late-K FP16 key",
+      "Exclusive Self-Attention on the last four layers",
+      "Seq2048 updates with EMA(0.997) and tuned Muon weight decay"
     ]
   },
   "compatibility": {

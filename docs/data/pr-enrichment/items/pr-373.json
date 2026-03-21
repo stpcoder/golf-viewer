@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-21T21:35:08.006Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 373,
+    "title": "Record: SwiGLU + BigramHash + SWA, val_bpb=1.1634 (8xH100 verified)",
+    "state": "open",
+    "updatedAt": "2026-03-21T21:34:45Z",
+    "headSha": "d6b4606bf390c97d23e458d9be0a41f14dfaa3fb",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/373",
+    "authorLogin": "JoeProAI"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_JoeProAI_FP16Embed_SlidingWindow/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Combines SwiGLU FFNs with BigramHash embeddings, Muon optimizer+SWA, and int6+zstd compression for efficient 10min/16MB performance.",
+    "tags": [
+      "architecture",
+      "optimizer",
+      "quantization",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "Not val-only training; standard training with validation evaluation.",
+    "techniques": [
+      "SwiGLU feedforward with BigramHash embedding buckets",
+      "SWA checkpoints tuned with Muon optimizer",
+      "int6 quantization plus zstd-22 compression"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
