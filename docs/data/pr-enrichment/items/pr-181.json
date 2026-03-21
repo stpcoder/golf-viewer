@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-21T10:31:14.151Z",
+  "generatedAt": "2026-03-21T13:32:31.392Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 181,
     "title": "Aweb Optimized Baseline — 1.2194 BPB",
     "state": "open",
-    "updatedAt": "2026-03-21T10:03:30Z",
-    "headSha": "cd224f1591ac2878ef08f39f5b64df7046b6705c",
+    "updatedAt": "2026-03-21T12:52:49Z",
+    "headSha": "72c826b3bc9f819be76698d9a0e307dac4f955ae",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/181",
     "authorLogin": "manfromnowhere143"
   },
@@ -22,18 +22,18 @@
     "submissionCount": 4
   },
   "output": {
-    "summary": "Baseline GPT (9L, 512d) kept intact while Muon momentum/learning-rate tuning, 3× MLP, seq2048, grad clipping, and train-on-val squeezing extra data improve BPB.",
+    "summary": "Baseline GPT trained via env-var optimizer tuning (Muon 0.99, halved LRs, grad clip 0.3) plus wider MLP/2048 seq and organizer-approved train-on-val.",
     "tags": [
+      "val-only",
       "optimizer",
-      "architecture",
-      "val-only"
+      "training-schedule"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "TRAIN_ON_VAL=1 adds the validation shard into training, so the submission explicitly trains on validation data.",
+    "valOnlyReasoning": "Organizer-approved TRAIN_ON_VAL=1 enabled validation-shard data to be included during training.",
     "techniques": [
-      "Muon optimizer warmup/momentum plus halved matrix/scalar LRs",
-      "3× wider MLP with 2048 sequence length and grad clipping",
-      "Training includes the validation shard via TRAIN_ON_VAL=1"
+      "Muon momentum 0.99 with extended warmup/warmdown",
+      "Halved matrix/scalar LRs to smooth quantization gap",
+      "MLP×3, seq_len=2048, grad_clip 0.3 within baseline architecture"
     ]
   },
   "compatibility": {

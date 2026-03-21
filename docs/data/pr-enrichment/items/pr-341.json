@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-21T13:32:11.349Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 341,
+    "title": "Add Hybrid Depth-Recurrent Transformer submission",
+    "state": "open",
+    "updatedAt": "2026-03-21T12:59:20Z",
+    "headSha": "c821a8c4d174b0ae69ef75a42c7d1a4a40c12f18",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/341",
+    "authorLogin": "tobiascanavesi"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-21_HybridDepthRecurrent/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Hybrid depth-recurrent design keeps input/output layers unique while looping shared middle blocks and U-Net skips to tame int8 error compounding.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Hybrid depth-recurrence with entry/exit weight isolation",
+      "U-Net skips plus per-virtual-layer scalars across loops",
+      "Sliding-window eval with fp16 tied embeddings for quantized runs"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

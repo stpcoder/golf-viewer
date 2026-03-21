@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-21T12:01:20.399Z",
+  "generatedAt": "2026-03-21T13:32:24.312Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 328,
     "title": "Non-record: MLX prototyping harness with validated technique stack (val_bpb=1.9588, Mac)",
     "state": "open",
-    "updatedAt": "2026-03-21T11:37:06Z",
-    "headSha": "4d1ee25a4d2f23472553c730b514996095e00615",
+    "updatedAt": "2026-03-21T13:02:06Z",
+    "headSha": "109cda3b3e3b87a30776396d9602efdb034bb4d2",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/328",
     "authorLogin": "kingjulio8238"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Mac MLX prototype validates KV2 widths, int6 quant with FP16 embeddings plus Muon WD, and sliding/multi eval modes across 25+ experiments.",
+    "summary": "Mac MLX prototyping stack validates KV2 layers with int6 quant, FP16 tied embeddings, Muon WD, and sliding-window eval to document leaderboard techniques.",
     "tags": [
-      "architecture",
       "quantization",
-      "optimizer",
-      "evaluation"
+      "architecture",
+      "evaluation",
+      "regularization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "KV2 10–14L GQA stacking",
-      "Int6 quant + FP16 embedding passthrough with Muon WD",
-      "Sliding-window and multi-eval configs"
+      "FP16 tied embeddings + Muon decoupled weight decay to shrink quant gap",
+      "Int6 per-row quantization on KV2/GQA 10-14L transformers",
+      "Sliding-window compiled eval with multi-config passes"
     ]
   },
   "compatibility": {

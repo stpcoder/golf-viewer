@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-21T13:32:18.318Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 339,
+    "title": "Record: 11L Backout + Int6 + SWA (val_bpb: 1.1364)",
+    "state": "open",
+    "updatedAt": "2026-03-21T12:32:15Z",
+    "headSha": "5761d2f296d76d6bf325ef6469bfd94db59a000b",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/339",
+    "authorLogin": "sheeki03"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-21_11L_Backout_Int6_SWA/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11-layer model keeps PR#198 stack and adds a scalar «Backout Connection» that subtracts a mid-layer hidden state to sharpen the final representation before the head.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "learned scalar backout subtracting mid-network hidden state",
+      "int6 mixed quantization with SWA averaging",
+      "sliding-window eval stride=64"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,8 +1,77 @@
 {
-  "generatedAt": "2026-03-21T12:31:27.137Z",
+  "generatedAt": "2026-03-21T13:32:31.418Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 341,
+      "title": "Add Hybrid Depth-Recurrent Transformer submission",
+      "status": "open",
+      "updatedAt": "2026-03-21T12:59:20Z",
+      "headSha": "c821a8c4d174b0ae69ef75a42c7d1a4a40c12f18",
+      "generatedAt": "2026-03-21T13:32:11.349Z",
+      "summary": "Hybrid depth-recurrent design keeps input/output layers unique while looping shared middle blocks and U-Net skips to tame int8 error compounding.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-341.json"
+    },
+    {
+      "prNumber": 340,
+      "title": "V2 Prototype: SwiGLU + Dropout + MuonWD + MidLayerLoop",
+      "status": "open",
+      "updatedAt": "2026-03-21T12:44:14Z",
+      "headSha": "783d4b638f3e5acf0613320f5ee9f0fca770650f",
+      "generatedAt": "2026-03-21T13:32:14.822Z",
+      "summary": "Prototype combines SwiGLU MLPs with intense MuonWD/dropout regularization and a middle-layer recurrence loop to boost depth efficiency for constrained compute.",
+      "tags": [
+        "architecture",
+        "regularization",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-340.json"
+    },
+    {
+      "prNumber": 339,
+      "title": "Record: 11L Backout + Int6 + SWA (val_bpb: 1.1364)",
+      "status": "open",
+      "updatedAt": "2026-03-21T12:32:15Z",
+      "headSha": "5761d2f296d76d6bf325ef6469bfd94db59a000b",
+      "generatedAt": "2026-03-21T13:32:18.318Z",
+      "summary": "11-layer model keeps PR#198 stack and adds a scalar «Backout Connection» that subtracts a mid-layer hidden state to sharpen the final representation before the head.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-339.json"
+    },
     {
       "prNumber": 338,
       "title": "Record: 11L XSA+EMA+TTT, sliding val_bpb=1.1254 (3-seed mean 1.1256)",
@@ -171,15 +240,15 @@
       "prNumber": 328,
       "title": "Non-record: MLX prototyping harness with validated technique stack (val_bpb=1.9588, Mac)",
       "status": "open",
-      "updatedAt": "2026-03-21T11:37:06Z",
-      "headSha": "4d1ee25a4d2f23472553c730b514996095e00615",
-      "generatedAt": "2026-03-21T12:01:20.399Z",
-      "summary": "Mac MLX prototype validates KV2 widths, int6 quant with FP16 embeddings plus Muon WD, and sliding/multi eval modes across 25+ experiments.",
+      "updatedAt": "2026-03-21T13:02:06Z",
+      "headSha": "109cda3b3e3b87a30776396d9602efdb034bb4d2",
+      "generatedAt": "2026-03-21T13:32:24.312Z",
+      "summary": "Mac MLX prototyping stack validates KV2 layers with int6 quant, FP16 tied embeddings, Muon WD, and sliding-window eval to document leaderboard techniques.",
       "tags": [
-        "architecture",
         "quantization",
-        "optimizer",
-        "evaluation"
+        "architecture",
+        "evaluation",
+        "regularization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2698,14 +2767,14 @@
       "prNumber": 181,
       "title": "Aweb Optimized Baseline — 1.2194 BPB",
       "status": "open",
-      "updatedAt": "2026-03-21T10:03:30Z",
-      "headSha": "cd224f1591ac2878ef08f39f5b64df7046b6705c",
-      "generatedAt": "2026-03-21T10:31:14.151Z",
-      "summary": "Baseline GPT (9L, 512d) kept intact while Muon momentum/learning-rate tuning, 3× MLP, seq2048, grad clipping, and train-on-val squeezing extra data improve BPB.",
+      "updatedAt": "2026-03-21T12:52:49Z",
+      "headSha": "72c826b3bc9f819be76698d9a0e307dac4f955ae",
+      "generatedAt": "2026-03-21T13:32:31.392Z",
+      "summary": "Baseline GPT trained via env-var optimizer tuning (Muon 0.99, halved LRs, grad clip 0.3) plus wider MLP/2048 seq and organizer-approved train-on-val.",
       "tags": [
+        "val-only",
         "optimizer",
-        "architecture",
-        "val-only"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": true,
