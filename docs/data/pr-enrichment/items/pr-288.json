@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-21T20:35:15.148Z",
+  "generatedAt": "2026-03-21T22:35:21.331Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 288,
     "title": "Non-record: Content-Dependent SmearGate (1.6795 BPB, RTX 4070)",
     "state": "open",
-    "updatedAt": "2026-03-21T20:14:21Z",
-    "headSha": "52940f6c96737f25006a1dd5e5ee65446549817f",
+    "updatedAt": "2026-03-21T22:16:21Z",
+    "headSha": "d668ceedd32da955afc65c69655e60fa1a588686",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/288",
     "authorLogin": "trasnake87"
   },
@@ -19,17 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Content SmearGate modulates the blend gate with adjacent-token dot-product similarity so similar words mix more by adding just one scalar and a dot product.",
+    "summary": "SmearGate now modulates its blend between tokens by their embedding similarity so compound-like neighbors mix more while boundaries stay independent.",
     "tags": [
       "architecture",
+      "regularization",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "content-dependent gate scaling via dot-product",
-      "single scalar content_scale parameter",
-      "adjacent-token blending modulation"
+      "content-aware SmearGate gating",
+      "token similarity dot-product modulation",
+      "minimal extra parameter"
     ]
   },
   "compatibility": {

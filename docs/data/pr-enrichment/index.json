@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-21T22:05:27.398Z",
+  "generatedAt": "2026-03-21T22:35:31.798Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -1597,12 +1597,13 @@
       "prNumber": 288,
       "title": "Non-record: Content-Dependent SmearGate (1.6795 BPB, RTX 4070)",
       "status": "open",
-      "updatedAt": "2026-03-21T20:14:21Z",
-      "headSha": "52940f6c96737f25006a1dd5e5ee65446549817f",
-      "generatedAt": "2026-03-21T20:35:15.148Z",
-      "summary": "Content SmearGate modulates the blend gate with adjacent-token dot-product similarity so similar words mix more by adding just one scalar and a dot product.",
+      "updatedAt": "2026-03-21T22:16:21Z",
+      "headSha": "d668ceedd32da955afc65c69655e60fa1a588686",
+      "generatedAt": "2026-03-21T22:35:21.331Z",
+      "summary": "SmearGate now modulates its blend between tokens by their embedding similarity so compound-like neighbors mix more while boundaries stay independent.",
       "tags": [
         "architecture",
+        "regularization",
         "non-record"
       ],
       "flags": {
@@ -2250,15 +2251,15 @@
       "prNumber": 250,
       "title": "Complexity MoE v4: Token-Routed I64 + PID + CUDA Scatter + Int6 (26.5M params)",
       "status": "open",
-      "updatedAt": "2026-03-21T12:16:56Z",
-      "headSha": "ea5e740c6c9c82be541815b423856814fb2da810",
-      "generatedAt": "2026-03-21T12:31:27.101Z",
-      "summary": "Token-routed 4-expert MoE with PID mu dynamics, CUDA scatter dispatch, int6+zstd compression, and SGDR scheduling to pack 26.5M params within the challenge budget.",
+      "updatedAt": "2026-03-21T22:34:16Z",
+      "headSha": "ad18c65502a85c12c1bac2260bebf5a10bdffbde",
+      "generatedAt": "2026-03-21T22:35:27.043Z",
+      "summary": "Token-routed 4-expert MoE with PID dynamics, CUDA scatter dispatch, and cosine warm restarts plus int6 compression.",
       "tags": [
         "architecture",
-        "quantization",
         "training-schedule",
-        "compression"
+        "quantization",
+        "sliding-window-eval"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2837,15 +2838,15 @@
       "prNumber": 212,
       "title": "Record: 11L XSA + EMA + TTT + Partial RoPE + LN Scale — val_bpb=1.1401",
       "status": "open",
-      "updatedAt": "2026-03-21T21:58:40Z",
-      "headSha": "b47ae4ec869aae91ba844159c90e6a179112a529",
-      "generatedAt": "2026-03-21T22:05:27.370Z",
-      "summary": "11-layer transformer combines XSA, EMA, test-time training, U-Net skips, Partial RoPE/LN scale, SmearGate/BigramHash, and late int6 quantization.",
+      "updatedAt": "2026-03-21T22:22:35Z",
+      "headSha": "86ef7a4e0abef2e72786b13a504ba7cf44b066d0",
+      "generatedAt": "2026-03-21T22:35:31.770Z",
+      "summary": "Stacked transformer uses last-layer Exclusive Self Attention, EMA smoothing, U-Net skips, TTT refinement, Partial RoPE/LN scale, SmearGate/BigramHash, and late int6 QAT.",
       "tags": [
-        "architecture",
         "attention",
-        "quantization",
-        "training-schedule"
+        "optimizer",
+        "training-schedule",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
