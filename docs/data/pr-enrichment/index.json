@@ -1,20 +1,89 @@
 {
-  "generatedAt": "2026-03-21T06:59:53.959Z",
+  "generatedAt": "2026-03-21T07:30:09.037Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
-      "prNumber": 320,
+      "prNumber": 323,
       "title": "Minimal recurrent motif (sb1 rs2 g0.18) – non-record submission",
       "status": "open",
-      "updatedAt": "2026-03-21T06:56:11Z",
-      "headSha": "e7c49265b7ea00aadfccebf768484d88fbfc2e34",
-      "generatedAt": "2026-03-21T06:59:26.482Z",
-      "summary": "Minimal recurrent motif reuses a single shared block with soft gating and sparse recurrence to build a compact effective structure for compression.",
+      "updatedAt": "2026-03-21T07:23:54Z",
+      "headSha": "b4f2e913e35f9e138394a2d40870f0924c66689c",
+      "generatedAt": "2026-03-21T07:29:26.785Z",
+      "summary": "Compact recurrent motif reuses a single shared block with soft-gated recurrence to extend capacity within the 16MB limit.",
       "tags": [
         "architecture",
         "compression",
         "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-323.json"
+    },
+    {
+      "prNumber": 322,
+      "title": "11L SmearGate + BigramHash(10240) + Causal TTT + Mixed Int5/Int6 + SWA",
+      "status": "open",
+      "updatedAt": "2026-03-21T07:15:27Z",
+      "headSha": "478ac809ec841f7738276e51e5f69d109f62cc5c",
+      "generatedAt": "2026-03-21T07:29:31.780Z",
+      "summary": "Unifies an 11-layer GPT with U-Net skips, SmearGate/BigramHash inputs, causal test-time training, and mixed int5/int6 quantization with pruning/SWA.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "training-schedule",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-322.json"
+    },
+    {
+      "prNumber": 321,
+      "title": "Add record: Optimizer Tuning + Sliding Window Eval (val_bpb=1.1864)",
+      "status": "open",
+      "updatedAt": "2026-03-21T07:04:44Z",
+      "headSha": "1060c3692b3ae2fa8c6d36538194c803a4beab88",
+      "generatedAt": "2026-03-21T07:29:36.487Z",
+      "summary": "Baseline ReLU² model trained at seq2048 with tuned Muon optimizer hyperparameters and sliding-window stride-64 evaluation.",
+      "tags": [
+        "optimizer",
+        "training-schedule",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-321.json"
+    },
+    {
+      "prNumber": 320,
+      "title": "Minimal recurrent motif (sb1 rs2 g0.18) – non-record submission",
+      "status": "open",
+      "updatedAt": "2026-03-21T07:06:56Z",
+      "headSha": "e7c49265b7ea00aadfccebf768484d88fbfc2e34",
+      "generatedAt": "2026-03-21T07:29:41.501Z",
+      "summary": "A minimal recurrent motif reuses a single shared block with soft gating over two steps to build structural depth while keeping parameters tiny.",
+      "tags": [
+        "architecture",
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
@@ -76,15 +145,15 @@
       "prNumber": 317,
       "title": "Record: 11L XSA4 + EMA + TTT + Int6 MLP3x (val_bpb=1.1419)",
       "status": "open",
-      "updatedAt": "2026-03-21T06:47:28Z",
-      "headSha": "b028e011d4f27df6c7428d2188bd845f1559d422",
-      "generatedAt": "2026-03-21T06:59:42.389Z",
-      "summary": "11-layer MLP3x stack uses EMA, XSA on last four layers, and int6+zstd compression, then runs SGD test-time training with frozen early blocks.",
+      "updatedAt": "2026-03-21T07:04:30Z",
+      "headSha": "72fb6c9cff99c6b7792b3267e630af307a86ccd9",
+      "generatedAt": "2026-03-21T07:29:47.111Z",
+      "summary": "11-layer MLP3x keeps SmearGate/BigramHash base with XSA on final layers, EMA training, int6 quantization, and full-model SGD test-time training.",
       "tags": [
         "architecture",
         "attention",
-        "quantization",
-        "evaluation"
+        "optimizer",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1010,15 +1079,15 @@
       "prNumber": 267,
       "title": "Record: val_bpb: 1.14020 [tested 3x on 8xh100]",
       "status": "open",
-      "updatedAt": "2026-03-21T06:22:05Z",
-      "headSha": "88adc4405cb555831d74642ea54a6b8b2cfa37e4",
-      "generatedAt": "2026-03-21T06:29:48.461Z",
-      "summary": "Int5-quantized 11-layer model with EMA/XSA uses chunked causal TTT that evaluates each validation chunk before training to keep scores one-pass.",
+      "updatedAt": "2026-03-21T07:09:01Z",
+      "headSha": "b084d052be82b47b32146b4ee523e3214ab8de14",
+      "generatedAt": "2026-03-21T07:29:54.487Z",
+      "summary": "Chunked causal eval-then-train TTT on validation with Int5 quantization, EMA, XSA, and Muon-tuned 11-layer architecture.",
       "tags": [
-        "quantization",
         "val-only",
-        "evaluation",
-        "architecture"
+        "quantization",
+        "muon",
+        "attention"
       ],
       "flags": {
         "usesValOnly": true,
@@ -1524,13 +1593,13 @@
       "prNumber": 236,
       "title": "4 the Leaderboard: 11L Int6 + SmearGate + Batch Optimization (val_bpb=1.1400)",
       "status": "open",
-      "updatedAt": "2026-03-21T04:24:41Z",
-      "headSha": "52d0ac3f2d590b104e201afeb8e26bc60839b010",
-      "generatedAt": "2026-03-21T04:29:03.945Z",
-      "summary": "Fixed-time runs favor 524K-token batches paired with int6 quant, SmearGate+BigramHash, SWA, and batched stride-64 sliding evaluation.",
+      "updatedAt": "2026-03-21T07:10:46Z",
+      "headSha": "2f9bda48b7dbeb0c5a0abe8278589088a7bc7c22",
+      "generatedAt": "2026-03-21T07:30:00.577Z",
+      "summary": "11-layer int6-quantized GPT with SmearGate + BigramHash, batched sliding eval, and smaller 524K-token batches to raise step count in 600s training.",
       "tags": [
         "quantization",
-        "optimizer",
+        "architecture",
         "training-schedule",
         "evaluation"
       ],
@@ -2300,14 +2369,14 @@
       "prNumber": 187,
       "title": "Record: Pre-Enrichment + Encoder Recurrence + XSA + SmearGate + BigramHash (val_bpb=1.1629)",
       "status": "open",
-      "updatedAt": "2026-03-21T06:58:13Z",
+      "updatedAt": "2026-03-21T07:05:01Z",
       "headSha": "309411420609d9aa1aa9e7a3ffdf37abaf8c8522",
-      "generatedAt": "2026-03-21T06:59:53.932Z",
-      "summary": "Applies BigramHash+SmearGate-powered GELU pre-enrichment and encoder-only depth recurrence before the decoder with XSA on the final layers.",
+      "generatedAt": "2026-03-21T07:30:09.010Z",
+      "summary": "Uses GELU pre-enrichment with SmearGate/BigramHash, encoder-only recurrence between U-Net encoders, and XSA on later layers to sharpen contextual signals before decoding.",
       "tags": [
         "architecture",
         "attention",
-        "tokenization"
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,

@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-21T07:29:31.780Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 322,
+    "title": "11L SmearGate + BigramHash(10240) + Causal TTT + Mixed Int5/Int6 + SWA",
+    "state": "open",
+    "updatedAt": "2026-03-21T07:15:27Z",
+    "headSha": "478ac809ec841f7738276e51e5f69d109f62cc5c",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/322",
+    "authorLogin": "romainsantoli-web"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-21_11L_SmearGate_BigramHash_TTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Unifies an 11-layer GPT with U-Net skips, SmearGate/BigramHash inputs, causal test-time training, and mixed int5/int6 quantization with pruning/SWA.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "training-schedule",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "11-layer GPT with U-Net skip connections plus SmearGate and BigramHash features",
+      "Causal test-time training that scores tokens before in-context fine-tuning",
+      "Mixed int5/int6 quantization with 3% pruning and SWA"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

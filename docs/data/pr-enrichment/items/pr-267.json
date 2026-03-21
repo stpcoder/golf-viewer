@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-21T06:29:48.461Z",
+  "generatedAt": "2026-03-21T07:29:54.487Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 267,
     "title": "Record: val_bpb: 1.14020 [tested 3x on 8xh100]",
     "state": "open",
-    "updatedAt": "2026-03-21T06:22:05Z",
-    "headSha": "88adc4405cb555831d74642ea54a6b8b2cfa37e4",
+    "updatedAt": "2026-03-21T07:09:01Z",
+    "headSha": "b084d052be82b47b32146b4ee523e3214ab8de14",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/267",
     "authorLogin": "andrewgcodes"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Int5-quantized 11-layer model with EMA/XSA uses chunked causal TTT that evaluates each validation chunk before training to keep scores one-pass.",
+    "summary": "Chunked causal eval-then-train TTT on validation with Int5 quantization, EMA, XSA, and Muon-tuned 11-layer architecture.",
     "tags": [
-      "quantization",
       "val-only",
-      "evaluation",
-      "architecture"
+      "quantization",
+      "muon",
+      "attention"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "Per-chunk causal test-time training adapts the model using only validation data after each chunk is scored.",
+    "valOnlyReasoning": "Causal test-time training sequentially evaluates then trains each validation chunk, never revisiting scored tokens.",
     "techniques": [
-      "Int5 quantization for all weight categories",
-      "Chunked causal test-time training with evaluate-then-train policy",
-      "EMA plus exclusive self-attention on final layers"
+      "Chunked causal eval-then-train TTT on validation data",
+      "Int5-all quantization with FP16 for tied embeddings and key projections",
+      "EMA plus XSA in later layers over a Muon-optimized 11-layer GPT"
     ]
   },
   "compatibility": {
