@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-21T19:34:58.603Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 359,
+    "title": "11L MLP3x + Int6 QAT + XSA + EMA + BigramHash + FA3 (val_bpb 1.1345)",
+    "state": "closed",
+    "updatedAt": "2026-03-21T19:10:11Z",
+    "headSha": "f41b94da173acaa22d9c652da94125eb230645e3",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/359",
+    "authorLogin": "tmustier"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-21_PR287_FA3_AllocatorDynamo/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11-layer GQA model with 3× SwiGLU MLPs, Int6 STE QAT + BigramHash, final-layer XSA, EMA & Muon+Adam, using FlashAttention 3.",
+    "tags": [
+      "quantization",
+      "attention",
+      "optimizer",
+      "architecture"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Int6 STE quantization with zstd-22 compression",
+      "BigramHash embeddings paired with EMA averaging",
+      "FlashAttention 3 plus sliding-window eval (stride 64)"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

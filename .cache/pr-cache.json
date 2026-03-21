@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-21T19:04:53.243Z",
-  "lastSeenUpdatedAt": "2026-03-21T18:53:24Z",
+  "generatedAt": "2026-03-21T19:34:44.539Z",
+  "lastSeenUpdatedAt": "2026-03-21T19:24:42Z",
   "prs": {
     "1": {
       "number": 1,
@@ -7626,7 +7626,7 @@
     },
     "112": {
       "number": 112,
-      "updatedAt": "2026-03-20T23:32:16Z",
+      "updatedAt": "2026-03-21T19:08:58Z",
       "pr": {
         "number": 112,
         "title": "Depth Recurrence 5x3 d672 SwiGLU",
@@ -7637,8 +7637,8 @@
         "authorLogin": "eb1386",
         "authorName": null,
         "createdAt": "2026-03-19T18:25:26Z",
-        "updatedAt": "2026-03-20T23:32:16Z",
-        "headSha": "032ec80f07c70182d384577cc6f53131ba3a8432",
+        "updatedAt": "2026-03-21T19:08:58Z",
+        "headSha": "34c73d8c0a847fa9a661f6b167d7406d547c4814",
         "headRepo": "eb1386/parameter-golf"
       },
       "submissions": [
@@ -7665,8 +7665,8 @@
           "submission": {
             "author": "Evan Borodow",
             "githubId": "eb1386",
-            "name": "8x2 Depth Recurrence + Full Stack",
-            "blurb": "8 unique blocks x2 recurrence = 16 effective layers at d=512 with SwiGLU 3x MLP, SmearGate, BigramHash, int6 QAT, SWA, Muon WD=0.04, sliding window eval stride=64. 20M params, int6+zstd under 16MB.",
+            "name": "11L Gated XSA + Cosine LN + BigramHash4K",
+            "blurb": "11-layer int6 model with gated exclusive self-attention (learned per-layer strength), cosine LN scale decay, 4096-bucket BigramHash, SmearGate, EMA, late QAT, partial RoPE (16 dims), and stride-64 sliding window eval. 27M params, zstd-22 compressed under 16MB.",
             "date": "pending"
           },
           "metrics": {
@@ -7700,16 +7700,16 @@
             "authorLogin": "eb1386",
             "authorName": null,
             "createdAt": "2026-03-19T18:25:26Z",
-            "updatedAt": "2026-03-20T23:32:16Z",
-            "headSha": "032ec80f07c70182d384577cc6f53131ba3a8432",
+            "updatedAt": "2026-03-21T19:08:58Z",
+            "headSha": "34c73d8c0a847fa9a661f6b167d7406d547c4814",
             "headRepo": "eb1386/parameter-golf"
           },
           "links": {
-            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/032ec80f07c70182d384577cc6f53131ba3a8432/records/track_10min_16mb/2026-03-XX_DepthRecurrence_eb1386/submission.json",
-            "readme": "https://github.com/openai/parameter-golf/blob/032ec80f07c70182d384577cc6f53131ba3a8432/records/track_10min_16mb/2026-03-XX_DepthRecurrence_eb1386/README.md",
-            "trainLog": "https://github.com/openai/parameter-golf/blob/032ec80f07c70182d384577cc6f53131ba3a8432/records/track_10min_16mb/2026-03-XX_DepthRecurrence_eb1386/train.log",
-            "script": "https://github.com/openai/parameter-golf/blob/032ec80f07c70182d384577cc6f53131ba3a8432/records/track_10min_16mb/2026-03-XX_DepthRecurrence_eb1386/train_gpt.py",
-            "folder": "https://github.com/openai/parameter-golf/tree/032ec80f07c70182d384577cc6f53131ba3a8432/records/track_10min_16mb/2026-03-XX_DepthRecurrence_eb1386",
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/34c73d8c0a847fa9a661f6b167d7406d547c4814/records/track_10min_16mb/2026-03-XX_DepthRecurrence_eb1386/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/34c73d8c0a847fa9a661f6b167d7406d547c4814/records/track_10min_16mb/2026-03-XX_DepthRecurrence_eb1386/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/34c73d8c0a847fa9a661f6b167d7406d547c4814/records/track_10min_16mb/2026-03-XX_DepthRecurrence_eb1386/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/34c73d8c0a847fa9a661f6b167d7406d547c4814/records/track_10min_16mb/2026-03-XX_DepthRecurrence_eb1386/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/34c73d8c0a847fa9a661f6b167d7406d547c4814/records/track_10min_16mb/2026-03-XX_DepthRecurrence_eb1386",
             "pr": "https://github.com/openai/parameter-golf/pull/112"
           }
         }
@@ -29016,6 +29016,207 @@
             "script": "https://github.com/openai/parameter-golf/blob/4202ac96cf7fb3305b0296050a392181de2588dd/records/track_non_record_16mb/2026-03-19_SwiGLU_WarmdownFix_QuarterBatch_1x5090/train_gpt.py",
             "folder": "https://github.com/openai/parameter-golf/tree/4202ac96cf7fb3305b0296050a392181de2588dd/records/track_non_record_16mb/2026-03-19_SwiGLU_WarmdownFix_QuarterBatch_1x5090",
             "pr": "https://github.com/openai/parameter-golf/pull/357"
+          }
+        }
+      ]
+    },
+    "358": {
+      "number": 358,
+      "updatedAt": "2026-03-21T19:24:42Z",
+      "pr": {
+        "number": 358,
+        "title": "Feature/sota optimizations",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/358",
+        "authorLogin": "adityagupta26",
+        "authorName": null,
+        "createdAt": "2026-03-21T19:06:38Z",
+        "updatedAt": "2026-03-21T19:24:42Z",
+        "headSha": "a24d23ef0f3e83a678b233e874659b58001f3ba8",
+        "headRepo": "adityagupta26/parameter-golf"
+      },
+      "submissions": []
+    },
+    "359": {
+      "number": 359,
+      "updatedAt": "2026-03-21T19:10:11Z",
+      "pr": {
+        "number": 359,
+        "title": "11L MLP3x + Int6 QAT + XSA + EMA + BigramHash + FA3 (val_bpb 1.1345)",
+        "state": "closed",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/359",
+        "authorLogin": "tmustier",
+        "authorName": null,
+        "createdAt": "2026-03-21T19:07:05Z",
+        "updatedAt": "2026-03-21T19:10:11Z",
+        "headSha": "f41b94da173acaa22d9c652da94125eb230645e3",
+        "headRepo": "tmustier/parameter-golf-1"
+      },
+      "submissions": [
+        {
+          "id": "pr-359-records-track_10min_16mb-2026-03-21_PR287_FA3_AllocatorDynamo-submission-json",
+          "source": "pull_request",
+          "status": "closed",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-21_PR287_FA3_AllocatorDynamo",
+            "folderPath": "records/track_10min_16mb/2026-03-21_PR287_FA3_AllocatorDynamo",
+            "submissionPath": "records/track_10min_16mb/2026-03-21_PR287_FA3_AllocatorDynamo/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-21_PR287_FA3_AllocatorDynamo/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-21_PR287_FA3_AllocatorDynamo/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-21_PR287_FA3_AllocatorDynamo/train_gpt.py"
+          },
+          "submission": {
+            "author": "Thomas Mustier",
+            "githubId": "tmustier",
+            "name": "11L MLP3x + Int6 QAT + XSA + EMA + BigramHash + FA3",
+            "blurb": null,
+            "date": "2026-03-21"
+          },
+          "metrics": {
+            "valBpb": null,
+            "valLoss": null,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": null,
+            "bytesCode": null,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 359,
+            "title": "11L MLP3x + Int6 QAT + XSA + EMA + BigramHash + FA3 (val_bpb 1.1345)",
+            "state": "closed",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/359",
+            "authorLogin": "tmustier",
+            "authorName": null,
+            "createdAt": "2026-03-21T19:07:05Z",
+            "updatedAt": "2026-03-21T19:10:11Z",
+            "headSha": "f41b94da173acaa22d9c652da94125eb230645e3",
+            "headRepo": "tmustier/parameter-golf-1"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/f41b94da173acaa22d9c652da94125eb230645e3/records/track_10min_16mb/2026-03-21_PR287_FA3_AllocatorDynamo/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/f41b94da173acaa22d9c652da94125eb230645e3/records/track_10min_16mb/2026-03-21_PR287_FA3_AllocatorDynamo/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/f41b94da173acaa22d9c652da94125eb230645e3/records/track_10min_16mb/2026-03-21_PR287_FA3_AllocatorDynamo/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/f41b94da173acaa22d9c652da94125eb230645e3/records/track_10min_16mb/2026-03-21_PR287_FA3_AllocatorDynamo/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/f41b94da173acaa22d9c652da94125eb230645e3/records/track_10min_16mb/2026-03-21_PR287_FA3_AllocatorDynamo",
+            "pr": "https://github.com/openai/parameter-golf/pull/359"
+          }
+        }
+      ]
+    },
+    "360": {
+      "number": 360,
+      "updatedAt": "2026-03-21T19:13:47Z",
+      "pr": {
+        "number": 360,
+        "title": "Non-record: QAT & EMA negative results on SOTA stack (val_bpb=1.1426)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/360",
+        "authorLogin": "MultiFe22",
+        "authorName": null,
+        "createdAt": "2026-03-21T19:13:47Z",
+        "updatedAt": "2026-03-21T19:13:47Z",
+        "headSha": "79ccfff3f59db390595de8179548ad9d27d6606d",
+        "headRepo": "MultiFe22/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-360-records-track_10min_16mb-ours-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "ours",
+            "folderPath": "records/track_10min_16mb/ours",
+            "submissionPath": "records/track_10min_16mb/ours/submission.json",
+            "readmePath": "records/track_10min_16mb/ours/README.md",
+            "trainLogPath": "records/track_10min_16mb/ours/train.log",
+            "scriptPath": "records/track_10min_16mb/ours/train_gpt.py"
+          },
+          "submission": {
+            "author": "Felipe Vidal",
+            "githubId": "MultiFe22",
+            "name": "QAT & EMA Negative Results on SOTA Stack",
+            "blurb": "Non-record: Documents that adding QAT (STE) and EMA to PR #180 SOTA stack hurts performance. QAT costs 8% throughput, EMA costs 32%. Smaller artifact from QAT (15.69 vs 15.99 MB) but net negative BPB. Baseline reproduction: 1.1426.",
+            "date": "2026-03-21"
+          },
+          "metrics": {
+            "valBpb": null,
+            "valLoss": 1.1426,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": 15989023,
+            "bytesCode": null,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 360,
+            "title": "Non-record: QAT & EMA negative results on SOTA stack (val_bpb=1.1426)",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/360",
+            "authorLogin": "MultiFe22",
+            "authorName": null,
+            "createdAt": "2026-03-21T19:13:47Z",
+            "updatedAt": "2026-03-21T19:13:47Z",
+            "headSha": "79ccfff3f59db390595de8179548ad9d27d6606d",
+            "headRepo": "MultiFe22/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/79ccfff3f59db390595de8179548ad9d27d6606d/records/track_10min_16mb/ours/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/79ccfff3f59db390595de8179548ad9d27d6606d/records/track_10min_16mb/ours/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/79ccfff3f59db390595de8179548ad9d27d6606d/records/track_10min_16mb/ours/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/79ccfff3f59db390595de8179548ad9d27d6606d/records/track_10min_16mb/ours/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/79ccfff3f59db390595de8179548ad9d27d6606d/records/track_10min_16mb/ours",
+            "pr": "https://github.com/openai/parameter-golf/pull/360"
           }
         }
       ]

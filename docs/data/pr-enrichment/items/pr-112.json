@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T23:56:47.799Z",
+  "generatedAt": "2026-03-21T19:35:04.039Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 112,
     "title": "Depth Recurrence 5x3 d672 SwiGLU",
     "state": "open",
-    "updatedAt": "2026-03-20T23:32:16Z",
-    "headSha": "032ec80f07c70182d384577cc6f53131ba3a8432",
+    "updatedAt": "2026-03-21T19:08:58Z",
+    "headSha": "34c73d8c0a847fa9a661f6b167d7406d547c4814",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/112",
     "authorLogin": "eb1386"
   },
@@ -19,19 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Repeat eight SwiGLU blocks three times for 15-layer depth with SmearGate+BigramHash context and int6+zstd compression, training at seqlen 2048.",
+    "summary": "Parameter-sharing depth recurrence reuses five transformer blocks thrice at width 672 with SwiGLU MLPs to stretch a 16.5M budget for longer context.",
     "tags": [
       "architecture",
-      "quantization",
-      "optimizer",
       "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Repeated SwiGLU blocks via depth recurrence",
-      "SmearGate and BigramHash for local context",
-      "int6 quantization with Muon optimizer and SWA"
+      "- Depth recurrence block reuse",
+      "- Wider SwiGLU MLPs on shared layers",
+      "- Warmdown and momentum tuning for short budget"
     ]
   },
   "compatibility": {

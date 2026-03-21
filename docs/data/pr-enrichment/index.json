@@ -1,8 +1,55 @@
 {
-  "generatedAt": "2026-03-21T19:05:26.691Z",
+  "generatedAt": "2026-03-21T19:35:04.054Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 360,
+      "title": "Non-record: QAT & EMA negative results on SOTA stack (val_bpb=1.1426)",
+      "status": "open",
+      "updatedAt": "2026-03-21T19:13:47Z",
+      "headSha": "79ccfff3f59db390595de8179548ad9d27d6606d",
+      "generatedAt": "2026-03-21T19:34:53.735Z",
+      "summary": "STE-based QAT and EMA on the PR #180 stack reveal that the fake-quantization/averaging overhead drains steps within the 10-min budget.",
+      "tags": [
+        "quantization",
+        "optimizer",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-360.json"
+    },
+    {
+      "prNumber": 359,
+      "title": "11L MLP3x + Int6 QAT + XSA + EMA + BigramHash + FA3 (val_bpb 1.1345)",
+      "status": "closed",
+      "updatedAt": "2026-03-21T19:10:11Z",
+      "headSha": "f41b94da173acaa22d9c652da94125eb230645e3",
+      "generatedAt": "2026-03-21T19:34:58.603Z",
+      "summary": "11-layer GQA model with 3× SwiGLU MLPs, Int6 STE QAT + BigramHash, final-layer XSA, EMA & Muon+Adam, using FlashAttention 3.",
+      "tags": [
+        "quantization",
+        "attention",
+        "optimizer",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-359.json"
+    },
     {
       "prNumber": 357,
       "title": "docs: add TIPS.md and resolve environment dependency issues (#280, #82, #43)",
@@ -4176,14 +4223,12 @@
       "prNumber": 112,
       "title": "Depth Recurrence 5x3 d672 SwiGLU",
       "status": "open",
-      "updatedAt": "2026-03-20T23:32:16Z",
-      "headSha": "032ec80f07c70182d384577cc6f53131ba3a8432",
-      "generatedAt": "2026-03-20T23:56:47.799Z",
-      "summary": "Repeat eight SwiGLU blocks three times for 15-layer depth with SmearGate+BigramHash context and int6+zstd compression, training at seqlen 2048.",
+      "updatedAt": "2026-03-21T19:08:58Z",
+      "headSha": "34c73d8c0a847fa9a661f6b167d7406d547c4814",
+      "generatedAt": "2026-03-21T19:35:04.039Z",
+      "summary": "Parameter-sharing depth recurrence reuses five transformer blocks thrice at width 672 with SwiGLU MLPs to stretch a 16.5M budget for longer context.",
       "tags": [
         "architecture",
-        "quantization",
-        "optimizer",
         "training-schedule"
       ],
       "flags": {

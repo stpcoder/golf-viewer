@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-21T19:34:53.735Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 360,
+    "title": "Non-record: QAT & EMA negative results on SOTA stack (val_bpb=1.1426)",
+    "state": "open",
+    "updatedAt": "2026-03-21T19:13:47Z",
+    "headSha": "79ccfff3f59db390595de8179548ad9d27d6606d",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/360",
+    "authorLogin": "MultiFe22"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/ours/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "STE-based QAT and EMA on the PR #180 stack reveal that the fake-quantization/averaging overhead drains steps within the 10-min budget.",
+    "tags": [
+      "quantization",
+      "optimizer",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "STE fake quantization in CastedLinear forward pass",
+      "EMA shadow weights updated every step with decay 0.9999",
+      "Throughput impact analysis under 600s budget"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
