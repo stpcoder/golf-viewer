@@ -1,8 +1,30 @@
 {
-  "generatedAt": "2026-03-22T20:42:29.981Z",
+  "generatedAt": "2026-03-22T21:12:47.627Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 459,
+      "title": "Weight Entropy Regularization: Improved SWA Averaging (+0.028 BPB)",
+      "status": "open",
+      "updatedAt": "2026-03-22T21:03:38Z",
+      "headSha": "17c37b828d3c78d1bda0d50aba9e655a8841a751",
+      "generatedAt": "2026-03-22T21:12:28.650Z",
+      "summary": "Add weight entropy regularization to concentrate checkpoint weights so SWA warmdown averages lower-variance models more effectively.",
+      "tags": [
+        "regularization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-459.json"
+    },
     {
       "prNumber": 458,
       "title": "10L XSA + EMA + Partial RoPE + LN Scale (val_bpb: 1.1365)",
@@ -289,16 +311,16 @@
     },
     {
       "prNumber": 445,
-      "title": "Tiny bump: 11L TTT Burst + EMA + GPTQ-lite (val_bpb=1.1232)",
+      "title": "Tiny bump electric boogaloo: 11L TTT Burst + EMA + GPTQ-lite (val_bpb=1.1236, 3-seed)",
       "status": "open",
-      "updatedAt": "2026-03-22T17:48:45Z",
-      "headSha": "ad9f7bea3407282ad482d7329dae1b88833658bc",
-      "generatedAt": "2026-03-22T18:11:42.576Z",
-      "summary": "Augments the late-stage schedule with a TTT burst replay of recent batches before EMA to sharpen weights for the GPTQ-lite quantized run.",
+      "updatedAt": "2026-03-22T20:57:12Z",
+      "headSha": "cbcd7f71848a4c01d00df96d1d2a51fe395cdc2d",
+      "generatedAt": "2026-03-22T21:12:34.062Z",
+      "summary": "Replays last 100 batches twice at 10% LR before EMA to sharpen weights, then applies GPTQ-lite/QAT quantization.",
       "tags": [
         "training-schedule",
         "quantization",
-        "evaluation"
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1064,10 +1086,10 @@
       "prNumber": 401,
       "title": "Record: 11L + EMA + Tight SWA + QAT0.15 + VE128 + Partial RoPE + LN Scale (val_bpb: 1.1243)",
       "status": "open",
-      "updatedAt": "2026-03-22T20:24:22Z",
-      "headSha": "74eebb6aeaf35777b2db9cd8010f91024d0431d5",
-      "generatedAt": "2026-03-22T20:42:24.777Z",
-      "summary": "Stack EMA averages into Tight SWA, lengthen warmdown, and initiate late int6 QAT sooner on the 11-layer GQA transformer with partial RoPE.",
+      "updatedAt": "2026-03-22T21:03:26Z",
+      "headSha": "bd37700e65e63636ebdbbb7367543608ebd72654",
+      "generatedAt": "2026-03-22T21:12:39.825Z",
+      "summary": "Stack EMA-fed weights into Tight SWA, extend late int6 QAT warmdown, and run the 11-layer partial RoPE U-Net with LN scaling for record codex.",
       "tags": [
         "quantization",
         "optimizer",
@@ -1486,15 +1508,15 @@
       "prNumber": 376,
       "title": "Record: 11L Next-Gen Stack + Custom Kernels, val_bpb=1.1399",
       "status": "open",
-      "updatedAt": "2026-03-22T18:50:17Z",
-      "headSha": "70fa63f870731e206893878435bfdbfac35cb095",
-      "generatedAt": "2026-03-22T19:12:17.577Z",
-      "summary": "11-layer GQA transformer with XSA, NTK-RoPE, SmearGate+BigramHash, int5+zstd compression, Muon optimizer, SWA, and custom Triton kernel stack.",
+      "updatedAt": "2026-03-22T20:51:03Z",
+      "headSha": "c0b1fb91507bbfdd670a73c84b3172ef56784ca1",
+      "generatedAt": "2026-03-22T21:12:47.572Z",
+      "summary": "11-layer stack adds XSA, partial NTK-RoPE, SmearGate/BigramHash, tight SWA, and int5+zstd compression under the Muon optimizer.",
       "tags": [
         "architecture",
         "quantization",
-        "compression",
-        "optimizer"
+        "optimizer",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,

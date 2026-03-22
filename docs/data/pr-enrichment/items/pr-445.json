@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-22T18:11:42.576Z",
+  "generatedAt": "2026-03-22T21:12:34.062Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 445,
-    "title": "Tiny bump: 11L TTT Burst + EMA + GPTQ-lite (val_bpb=1.1232)",
+    "title": "Tiny bump electric boogaloo: 11L TTT Burst + EMA + GPTQ-lite (val_bpb=1.1236, 3-seed)",
     "state": "open",
-    "updatedAt": "2026-03-22T17:48:45Z",
-    "headSha": "ad9f7bea3407282ad482d7329dae1b88833658bc",
+    "updatedAt": "2026-03-22T20:57:12Z",
+    "headSha": "cbcd7f71848a4c01d00df96d1d2a51fe395cdc2d",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/445",
     "authorLogin": "newjordan"
   },
@@ -19,18 +19,18 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "Augments the late-stage schedule with a TTT burst replay of recent batches before EMA to sharpen weights for the GPTQ-lite quantized run.",
+    "summary": "Replays last 100 batches twice at 10% LR before EMA to sharpen weights, then applies GPTQ-lite/QAT quantization.",
     "tags": [
       "training-schedule",
       "quantization",
-      "evaluation"
+      "optimizer"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "TTT burst replay of last 100 batches for 2 epochs at 10% LR before EMA",
-      "GPTQ-lite + late QAT at 0.15 with int6+zstd-22 compression",
-      "Sliding-window eval (stride 64) confirms sharpened EMA model"
+      "TTT Burst: 2-epoch low-LR replay of final batches before EMA",
+      "EMA + Late QAT + GPTQ-lite quantization pipeline",
+      "Sliding-window (stride 64) evaluation"
     ]
   },
   "compatibility": {
