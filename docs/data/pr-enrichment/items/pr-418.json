@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-22T12:09:14.266Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 418,
+    "title": "Non-record: PrismLM v3 — DiffTransformer V2 + NorMuon + TrigramHash (val_bpb=1.1715)",
+    "state": "open",
+    "updatedAt": "2026-03-22T11:57:48Z",
+    "headSha": "4c5725de83af1974657c74f1cf22be99706c5f49",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/418",
+    "authorLogin": "yashverms"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-22_PrismLM_v3_DiffAttn_NorMuon_TrigramHash/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "DiffTransformer V2 attention, NorMuon optimizer, and gated trigram hashing augment PrismLM v3's 11-layer GQA stack to test new attention/optimizer/tokenization combos.",
+    "tags": [
+      "attention",
+      "optimizer",
+      "tokenization",
+      "architecture"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "Training was standard, with validation evaluation only for reporting; no val-only training or shard-only training was performed.",
+    "techniques": [
+      "DiffTransformer V2 noise-cancelling attention in final layers",
+      "NorMuon optimizer with per-neuron row-normalized Newton-Schulz updates",
+      "Context-aware gating of BigramHash+TrigramHash signals"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

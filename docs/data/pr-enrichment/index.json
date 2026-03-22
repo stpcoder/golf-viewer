@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-22T11:09:05.779Z",
+  "generatedAt": "2026-03-22T12:09:18.864Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 418,
+      "title": "Non-record: PrismLM v3 — DiffTransformer V2 + NorMuon + TrigramHash (val_bpb=1.1715)",
+      "status": "open",
+      "updatedAt": "2026-03-22T11:57:48Z",
+      "headSha": "4c5725de83af1974657c74f1cf22be99706c5f49",
+      "generatedAt": "2026-03-22T12:09:14.266Z",
+      "summary": "DiffTransformer V2 attention, NorMuon optimizer, and gated trigram hashing augment PrismLM v3's 11-layer GQA stack to test new attention/optimizer/tokenization combos.",
+      "tags": [
+        "attention",
+        "optimizer",
+        "tokenization",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-418.json"
+    },
     {
       "prNumber": 417,
       "title": "Record: 11L XSA4 + Tight SWA + FA3 + Two-Phase TTT (3-seed mean val_bpb=1.1227)",
@@ -263,14 +287,14 @@
       "prNumber": 399,
       "title": "Record: Parallel Muon + Parameter Banking — 82.14ms/step (3.1% faster than PR #315)",
       "status": "open",
-      "updatedAt": "2026-03-22T05:59:17Z",
+      "updatedAt": "2026-03-22T11:40:08Z",
       "headSha": "4db00576f082f77a8e36104e354952d8702c7a8e",
-      "generatedAt": "2026-03-22T06:07:06.765Z",
-      "summary": "Consolidates weights into parameter banks and pairs Polar Express orthogonalization with Parallel Muon’s async reduce-scatter/all-gather to speed optimizer steps.",
+      "generatedAt": "2026-03-22T12:09:18.803Z",
+      "summary": "Parameter banking plus Parallel Muon’s async comms and Polar Express polynomials redefine the optimizer step to speed training without changing the base model.",
       "tags": [
         "optimizer",
-        "architecture",
-        "muon"
+        "muon",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,

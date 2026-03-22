@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-22T11:39:01.118Z",
+  "generatedAt": "2026-03-22T12:09:04.485Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -8091,6 +8091,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/2462e105a97a2be9e5a04111e0ce7d1d6228d001/records/track_10min_16mb/2026-03-19_SubSixteen/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/2462e105a97a2be9e5a04111e0ce7d1d6228d001/records/track_10min_16mb/2026-03-19_SubSixteen",
         "pr": "https://github.com/openai/parameter-golf/pull/69",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-03-22_PrismLM_v3_DiffAttn_NorMuon_TrigramHash",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-22_PrismLM_v3_DiffAttn_NorMuon_TrigramHash",
+        "folderPath": "records/track_non_record_16mb/2026-03-22_PrismLM_v3_DiffAttn_NorMuon_TrigramHash",
+        "submissionPath": "records/track_non_record_16mb/2026-03-22_PrismLM_v3_DiffAttn_NorMuon_TrigramHash/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-22_PrismLM_v3_DiffAttn_NorMuon_TrigramHash/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-22_PrismLM_v3_DiffAttn_NorMuon_TrigramHash/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-22_PrismLM_v3_DiffAttn_NorMuon_TrigramHash/train_gpt.py"
+      },
+      "submission": {
+        "author": "Yash Verma",
+        "githubId": "yasboop",
+        "name": "PrismLM v3 — DiffTransformer V2 + NorMuon + TrigramHash",
+        "blurb": "Non-record 8xH100 submission exploring 3 novel techniques on top of PR #315's technique stack: (1) DiffTransformer V2 attention on last 2 layers for noise-cancelled attention maps, (2) NorMuon optimizer with per-neuron row normalization for 11% better convergence, (3) TrigramHash + context-aware n-gram gating. 11 layers, 512 dim, XSA on 6 layers, Partial RoPE (16 dims), LN depth scaling, SmearGate, BigramHash(2048), int6+zstd-22 quantization, SWA, late QAT. Post-quant val_bpb 1.1715 (without sliding window eval).",
+        "date": "2026-03-22T00:00:00Z"
+      },
+      "metrics": {
+        "valBpb": 1.17146796,
+        "valLoss": 1.97797457,
+        "preQuantValBpb": 1.1607,
+        "preQuantValLoss": 1.9598,
+        "stepStop": 4600,
+        "wallclockSeconds": 599.974,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15586651,
+        "bytesCode": 64739,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 418,
+        "title": "Non-record: PrismLM v3 — DiffTransformer V2 + NorMuon + TrigramHash (val_bpb=1.1715)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/418",
+        "authorLogin": "yashverms",
+        "authorName": null,
+        "createdAt": "2026-03-22T11:57:48Z",
+        "updatedAt": "2026-03-22T11:57:48Z",
+        "headSha": "4c5725de83af1974657c74f1cf22be99706c5f49",
+        "headRepo": "yashverms/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/4c5725de83af1974657c74f1cf22be99706c5f49/records/track_non_record_16mb/2026-03-22_PrismLM_v3_DiffAttn_NorMuon_TrigramHash/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/4c5725de83af1974657c74f1cf22be99706c5f49/records/track_non_record_16mb/2026-03-22_PrismLM_v3_DiffAttn_NorMuon_TrigramHash/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/4c5725de83af1974657c74f1cf22be99706c5f49/records/track_non_record_16mb/2026-03-22_PrismLM_v3_DiffAttn_NorMuon_TrigramHash/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/4c5725de83af1974657c74f1cf22be99706c5f49/records/track_non_record_16mb/2026-03-22_PrismLM_v3_DiffAttn_NorMuon_TrigramHash/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/4c5725de83af1974657c74f1cf22be99706c5f49/records/track_non_record_16mb/2026-03-22_PrismLM_v3_DiffAttn_NorMuon_TrigramHash",
+        "pr": "https://github.com/openai/parameter-golf/pull/418",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -18711,7 +18788,7 @@
         "authorLogin": "abaybektursun",
         "authorName": null,
         "createdAt": "2026-03-22T04:52:11Z",
-        "updatedAt": "2026-03-22T05:59:17Z",
+        "updatedAt": "2026-03-22T11:40:08Z",
         "headSha": "4db00576f082f77a8e36104e354952d8702c7a8e",
         "headRepo": "abaybektursun/parameter-golf"
       },
