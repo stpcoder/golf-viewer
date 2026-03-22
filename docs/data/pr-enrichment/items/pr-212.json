@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-22T02:06:35.324Z",
+  "generatedAt": "2026-03-22T08:07:34.031Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 212,
-    "title": "Record: 11L XSA + EMA + TTT + Partial RoPE + LN Scale — val_bpb=1.1375",
+    "title": "Record: 11L EMA + TTT + Partial RoPE + LN Scale + XSA4 — mean val_bpb=1.1329 (3 seeds)",
     "state": "open",
-    "updatedAt": "2026-03-22T01:48:26Z",
+    "updatedAt": "2026-03-22T07:55:42Z",
     "headSha": "a5fd524607960ce2db2e07c43002e5e6c922a7de",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/212",
     "authorLogin": "mrdavtan"
@@ -20,25 +20,24 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "11-layer transformer pairs XSA in final layers with EMA, validation TTT, U-Net skips, partial RoPE/LN scaling, SmearGate+BigramHash, and late int6 QAT.",
+    "summary": "11-layer transformer pairs U-Net skip decoder, XSA-limited layers, SmearGate/BigramHash, and partial RoPE with EMA+TTT before int6+zstd compression.",
     "tags": [
-      "val-only",
       "architecture",
-      "attention",
-      "training-schedule"
+      "training-schedule",
+      "quantization"
     ],
-    "usesValOnly": true,
-    "valOnlyReasoning": "Test-Time Training runs 3 epochs of SGD on the validation shard before final evaluation.",
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
     "techniques": [
-      "Exclusive self-attention in last layers with EMA and late int6 QAT",
-      "U-Net skip connections plus partial RoPE and LN scaling for stabilized depth",
-      "SmearGate/BigramHash context tweaks plus validation TTT"
+      "U-Net skip decoder with learned weights",
+      "XSA on final layers plus partial RoPE/LN scaling",
+      "EMA weight averaging then TTT before quantized export"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": true,
-    "finalUsesValOnly": true,
-    "valOnlyMatchesCollector": false
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
   }
 }

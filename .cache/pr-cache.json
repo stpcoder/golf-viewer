@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-22T07:37:18.656Z",
-  "lastSeenUpdatedAt": "2026-03-22T07:21:12Z",
+  "generatedAt": "2026-03-22T08:07:20.566Z",
+  "lastSeenUpdatedAt": "2026-03-22T07:55:42Z",
   "prs": {
     "1": {
       "number": 1,
@@ -16107,10 +16107,10 @@
     },
     "212": {
       "number": 212,
-      "updatedAt": "2026-03-22T01:48:26Z",
+      "updatedAt": "2026-03-22T07:55:42Z",
       "pr": {
         "number": 212,
-        "title": "Record: 11L XSA + EMA + TTT + Partial RoPE + LN Scale — val_bpb=1.1375",
+        "title": "Record: 11L EMA + TTT + Partial RoPE + LN Scale + XSA4 — mean val_bpb=1.1329 (3 seeds)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -16118,7 +16118,7 @@
         "authorLogin": "mrdavtan",
         "authorName": null,
         "createdAt": "2026-03-20T13:06:35Z",
-        "updatedAt": "2026-03-22T01:48:26Z",
+        "updatedAt": "2026-03-22T07:55:42Z",
         "headSha": "a5fd524607960ce2db2e07c43002e5e6c922a7de",
         "headRepo": "mrdavtan/parameter-golf"
       },
@@ -16173,7 +16173,7 @@
           },
           "pr": {
             "number": 212,
-            "title": "Record: 11L XSA + EMA + TTT + Partial RoPE + LN Scale — val_bpb=1.1375",
+            "title": "Record: 11L EMA + TTT + Partial RoPE + LN Scale + XSA4 — mean val_bpb=1.1329 (3 seeds)",
             "state": "open",
             "draft": false,
             "mergedAt": null,
@@ -16181,7 +16181,7 @@
             "authorLogin": "mrdavtan",
             "authorName": null,
             "createdAt": "2026-03-20T13:06:35Z",
-            "updatedAt": "2026-03-22T01:48:26Z",
+            "updatedAt": "2026-03-22T07:55:42Z",
             "headSha": "a5fd524607960ce2db2e07c43002e5e6c922a7de",
             "headRepo": "mrdavtan/parameter-golf"
           },
@@ -16244,7 +16244,7 @@
           },
           "pr": {
             "number": 212,
-            "title": "Record: 11L XSA + EMA + TTT + Partial RoPE + LN Scale — val_bpb=1.1375",
+            "title": "Record: 11L EMA + TTT + Partial RoPE + LN Scale + XSA4 — mean val_bpb=1.1329 (3 seeds)",
             "state": "open",
             "draft": false,
             "mergedAt": null,
@@ -16252,7 +16252,7 @@
             "authorLogin": "mrdavtan",
             "authorName": null,
             "createdAt": "2026-03-20T13:06:35Z",
-            "updatedAt": "2026-03-22T01:48:26Z",
+            "updatedAt": "2026-03-22T07:55:42Z",
             "headSha": "a5fd524607960ce2db2e07c43002e5e6c922a7de",
             "headRepo": "mrdavtan/parameter-golf"
           },
@@ -34296,6 +34296,97 @@
             "script": "https://github.com/openai/parameter-golf/blob/c0a2939233e4fd8dc56c924f33a41e390d0fee2e/records/track_non_record_16mb/2026-03-22_ValueResidual_GatedAttention_anantdgoel/train_gpt.py",
             "folder": "https://github.com/openai/parameter-golf/tree/c0a2939233e4fd8dc56c924f33a41e390d0fee2e/records/track_non_record_16mb/2026-03-22_ValueResidual_GatedAttention_anantdgoel",
             "pr": "https://github.com/openai/parameter-golf/pull/413"
+          }
+        }
+      ]
+    },
+    "414": {
+      "number": 414,
+      "updatedAt": "2026-03-22T07:48:40Z",
+      "pr": {
+        "number": 414,
+        "title": "Record: 11L EMA + GPTQ-lite + warmdown3500 + QAT@0.15 (val_bpb=1.1233)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/414",
+        "authorLogin": "signalrush",
+        "authorName": null,
+        "createdAt": "2026-03-22T07:48:40Z",
+        "updatedAt": "2026-03-22T07:48:40Z",
+        "headSha": "15776db61ed3450a37bb5727628ae0f7bdd77f1b",
+        "headRepo": "signalrush/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-414-records-track_10min_16mb-2026-03-22_11L_EMA_GPTQ-lite_warmdown3500_QAT015_1-1233-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-22_11L_EMA_GPTQ-lite_warmdown3500_QAT015_1.1233",
+            "folderPath": "records/track_10min_16mb/2026-03-22_11L_EMA_GPTQ-lite_warmdown3500_QAT015_1.1233",
+            "submissionPath": "records/track_10min_16mb/2026-03-22_11L_EMA_GPTQ-lite_warmdown3500_QAT015_1.1233/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-22_11L_EMA_GPTQ-lite_warmdown3500_QAT015_1.1233/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-22_11L_EMA_GPTQ-lite_warmdown3500_QAT015_1.1233/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-22_11L_EMA_GPTQ-lite_warmdown3500_QAT015_1.1233/train_gpt.py"
+          },
+          "submission": {
+            "author": "Tianhao Wu",
+            "githubId": "signalrush",
+            "name": "Record: 11L EMA + GPTQ-lite + warmdown3500 + QAT@0.15",
+            "blurb": "EMA(0.997) weight averaging + GPTQ-lite optimal clip percentile search + warmdown=3500 + Late QAT threshold=0.15, built on PR#374 stack (11L, XSA4, Partial RoPE 16/64, LN Scale, VE128, Tight SWA, SmearGate, BigramHash, int6+zstd-22).",
+            "date": "2026-03-22T00:00:00Z"
+          },
+          "metrics": {
+            "valBpb": 1.12278022,
+            "valLoss": 1.89576235,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": 15555017,
+            "bytesCode": null,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 414,
+            "title": "Record: 11L EMA + GPTQ-lite + warmdown3500 + QAT@0.15 (val_bpb=1.1233)",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/414",
+            "authorLogin": "signalrush",
+            "authorName": null,
+            "createdAt": "2026-03-22T07:48:40Z",
+            "updatedAt": "2026-03-22T07:48:40Z",
+            "headSha": "15776db61ed3450a37bb5727628ae0f7bdd77f1b",
+            "headRepo": "signalrush/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/15776db61ed3450a37bb5727628ae0f7bdd77f1b/records/track_10min_16mb/2026-03-22_11L_EMA_GPTQ-lite_warmdown3500_QAT015_1.1233/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/15776db61ed3450a37bb5727628ae0f7bdd77f1b/records/track_10min_16mb/2026-03-22_11L_EMA_GPTQ-lite_warmdown3500_QAT015_1.1233/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/15776db61ed3450a37bb5727628ae0f7bdd77f1b/records/track_10min_16mb/2026-03-22_11L_EMA_GPTQ-lite_warmdown3500_QAT015_1.1233/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/15776db61ed3450a37bb5727628ae0f7bdd77f1b/records/track_10min_16mb/2026-03-22_11L_EMA_GPTQ-lite_warmdown3500_QAT015_1.1233/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/15776db61ed3450a37bb5727628ae0f7bdd77f1b/records/track_10min_16mb/2026-03-22_11L_EMA_GPTQ-lite_warmdown3500_QAT015_1.1233",
+            "pr": "https://github.com/openai/parameter-golf/pull/414"
           }
         }
       ]

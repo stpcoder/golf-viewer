@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-22T07:37:37.748Z",
+  "generatedAt": "2026-03-22T08:07:34.058Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 414,
+      "title": "Record: 11L EMA + GPTQ-lite + warmdown3500 + QAT@0.15 (val_bpb=1.1233)",
+      "status": "open",
+      "updatedAt": "2026-03-22T07:48:40Z",
+      "headSha": "15776db61ed3450a37bb5727628ae0f7bdd77f1b",
+      "generatedAt": "2026-03-22T08:07:27.822Z",
+      "summary": "Stacks EMA+Tight SWA warmdown with late QAT and per-row GPTQ-lite clip search on the 11L Muon-based stack before int6 quantization.",
+      "tags": [
+        "quantization",
+        "mixed-precision",
+        "training-schedule",
+        "optimizer"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-414.json"
+    },
     {
       "prNumber": 413,
       "title": "Non-record: Value Residual (-0.015 BPB) + Gated Attention (-0.003 BPB) with ablations",
@@ -3445,25 +3469,24 @@
     },
     {
       "prNumber": 212,
-      "title": "Record: 11L XSA + EMA + TTT + Partial RoPE + LN Scale — val_bpb=1.1375",
+      "title": "Record: 11L EMA + TTT + Partial RoPE + LN Scale + XSA4 — mean val_bpb=1.1329 (3 seeds)",
       "status": "open",
-      "updatedAt": "2026-03-22T01:48:26Z",
+      "updatedAt": "2026-03-22T07:55:42Z",
       "headSha": "a5fd524607960ce2db2e07c43002e5e6c922a7de",
-      "generatedAt": "2026-03-22T02:06:35.324Z",
-      "summary": "11-layer transformer pairs XSA in final layers with EMA, validation TTT, U-Net skips, partial RoPE/LN scaling, SmearGate+BigramHash, and late int6 QAT.",
+      "generatedAt": "2026-03-22T08:07:34.031Z",
+      "summary": "11-layer transformer pairs U-Net skip decoder, XSA-limited layers, SmearGate/BigramHash, and partial RoPE with EMA+TTT before int6+zstd compression.",
       "tags": [
-        "val-only",
         "architecture",
-        "attention",
-        "training-schedule"
+        "training-schedule",
+        "quantization"
       ],
       "flags": {
-        "usesValOnly": true,
-        "usesValOnlyAi": true,
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": false
+        "valOnlyMatchesCollector": true
       },
       "file": "items/pr-212.json"
     },
