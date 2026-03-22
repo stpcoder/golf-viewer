@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-03-22T14:40:15.548Z",
+  "generatedAt": "2026-03-22T15:10:09.447Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 429,
+      "title": "Non-record: 11L EMA + GPTQ-lite + warmdown3500 + QAT@0.15 control (val_bpb=1.1231, 8xH100 verified)",
+      "status": "open",
+      "updatedAt": "2026-03-22T14:54:12Z",
+      "headSha": "cde2dc35af2d4c508308c1a41b40ec5f0c87991c",
+      "generatedAt": "2026-03-22T15:10:03.411Z",
+      "summary": "Validated 11L control run pairs per-step EMA with GPTQ-lite post-training quantization, warmdown=3500, and late QAT=0.15 before sliding-window eval.",
+      "tags": [
+        "quantization",
+        "training-schedule",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-429.json"
+    },
     {
       "prNumber": 427,
       "title": "AnAI: BigramHash(12288) + TrigramHash + int5/int6 QAT",
@@ -55,10 +78,10 @@
       "prNumber": 425,
       "title": "Codex/runpod 2026 03 20 checkpoint",
       "status": "open",
-      "updatedAt": "2026-03-22T14:39:47Z",
-      "headSha": "d9eb32443c53cc7279c7c47eb9c2c3bb6cb45dbb",
-      "generatedAt": "2026-03-22T14:40:02.613Z",
-      "summary": "1xH100 ablation tuned ATTN_TWICE=0.05 with split EVAL/TTT lengths and LoRA-TTT to balance roundtrip and TTT profiles under the 16MB cap.",
+      "updatedAt": "2026-03-22T14:52:17Z",
+      "headSha": "0bb6be5e3804a6f31c0a485c2de76c14531a194a",
+      "generatedAt": "2026-03-22T15:10:09.378Z",
+      "summary": "1xH100 ablations paired ATTN_TWICE_ALPHA=0.05 with split eval lengths to balance roundtrip versus TTT scoring in a 10-minute cap.",
       "tags": [
         "attention",
         "evaluation",

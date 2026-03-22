@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-22T15:10:03.411Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 429,
+    "title": "Non-record: 11L EMA + GPTQ-lite + warmdown3500 + QAT@0.15 control (val_bpb=1.1231, 8xH100 verified)",
+    "state": "open",
+    "updatedAt": "2026-03-22T14:54:12Z",
+    "headSha": "cde2dc35af2d4c508308c1a41b40ec5f0c87991c",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/429",
+    "authorLogin": "AbhisekBasu1"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-22_11L_EMA_GPTQ-lite_warmdown3500_QAT015_1.1231/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Validated 11L control run pairs per-step EMA with GPTQ-lite post-training quantization, warmdown=3500, and late QAT=0.15 before sliding-window eval.",
+    "tags": [
+      "quantization",
+      "training-schedule",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "Not a validation-only training submission.",
+    "techniques": [
+      "per-step EMA + GPTQ-lite + late-QAT (0.15) stack",
+      "extended warmdown to 3500 iterations",
+      "sliding-window eval with stride 64"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
