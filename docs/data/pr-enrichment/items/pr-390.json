@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-22T02:36:22.144Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 390,
+    "title": "Record: Sponge Bath — TTT 8ep eval-only improvement (val_bpb: 1.1295)",
+    "state": "open",
+    "updatedAt": "2026-03-22T02:35:08Z",
+    "headSha": "169e4a35bbb950cc30858e776b8236f13b92b505",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/390",
+    "authorLogin": "newjordan"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-22_SpongeBath_TTT8_Stride32/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Eval-only tweak on SOTA254 ups TTT epochs to 8 and halves eval stride for tighter adaptation and sliding-window coverage.",
+    "tags": [
+      "val-only",
+      "sliding-window-eval",
+      "evaluation"
+    ],
+    "usesValOnly": true,
+    "valOnlyReasoning": "TTT adaptation runs additional epochs on the validation shard at eval time without retraining on training data.",
+    "techniques": [
+      "longer TTT adaptation epochs",
+      "finer sliding-window stride"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
+  }
+}

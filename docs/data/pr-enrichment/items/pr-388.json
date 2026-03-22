@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-22T02:06:16.285Z",
+  "generatedAt": "2026-03-22T02:36:38.631Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 388,
     "title": "Record: 11L + Tight SWA + VE128 + Partial RoPE + LN Scale + TTT (val_bpb: 1.1231)",
-    "state": "open",
-    "updatedAt": "2026-03-22T01:58:34Z",
+    "state": "closed",
+    "updatedAt": "2026-03-22T02:21:26Z",
     "headSha": "e776ef0c11b33b2aabaeb5253a65025ecae53da7",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/388",
     "authorLogin": "ElliotSlusky"
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer transformer pairs Tight SWA, shared value embeddings, partial RoPE, and LN scaling with post-quantization Test-Time Training on the validation shard.",
+    "summary": "11-layer GQA transformer relies on tight SWA, shared value embeddings with LN scaling, and quantized model adaptation via post-quant test-time training.",
     "tags": [
       "val-only",
-      "architecture",
-      "quantization"
+      "quantization",
+      "optimizer",
+      "training-schedule"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "Performs Test-Time Training fine-tuning on the validation shard for 25 epochs to recover quantization loss.",
+    "valOnlyReasoning": "Applies full-weight test-time training (SGD) on validation data to adapt the quantized model before final scoring.",
     "techniques": [
-      "Tight SWA averaging of recent low-scale checkpoints",
-      "Shared 128-d value embeddings plus partial RoPE & LN scaling in upper layers",
-      "Quantized model adapted via 25-epoch Test-Time Training on validation data"
+      "Tight SWA averaging recent checkpoints under scale<0.2",
+      "Shared value embeddings plus LN-scaled partial RoPE in late layers",
+      "Post-quantization test-time training on validation data"
     ]
   },
   "compatibility": {
