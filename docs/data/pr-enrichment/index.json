@@ -1,8 +1,56 @@
 {
-  "generatedAt": "2026-03-22T19:42:05.954Z",
+  "generatedAt": "2026-03-22T20:12:17.259Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 456,
+      "title": "Non-record submission: Depth Recurrence + Legal Score-First TTT (10L, 1.1532 BPB)",
+      "status": "open",
+      "updatedAt": "2026-03-22T20:02:06Z",
+      "headSha": "9da659ec652e5e5b0b4f9a4e6dd30b82dc6a342f",
+      "generatedAt": "2026-03-22T20:12:01.850Z",
+      "summary": "10-layer GPT with depth-recurrence-ready blocks, BigramHash embeddings, U-Net skips, mixed int5/int6 quantization, and competition-legal score-first TTT adaptation.",
+      "tags": [
+        "val-only",
+        "architecture",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": false
+      },
+      "file": "items/pr-456.json"
+    },
+    {
+      "prNumber": 455,
+      "title": "Record: 11L Tight SWA + VE128 + XSA4 + TTT (3-seed mean val_bpb=1.1299)",
+      "status": "open",
+      "updatedAt": "2026-03-22T19:44:12Z",
+      "headSha": "6b36249645c1ee070b7a9ee2d7c3cb59a996bd9a",
+      "generatedAt": "2026-03-22T20:12:06.875Z",
+      "summary": "11L VE128 GQA model extends Tight SWA with late int6 quant and adds test-time SGD on val tokens before sliding-window evaluation.",
+      "tags": [
+        "architecture",
+        "attention",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-455.json"
+    },
     {
       "prNumber": 454,
       "title": "Non-record: Competitive Stack + Phonetic Tokenization Exploration (val_bpb=1.2055, 4xH100)",
@@ -53,17 +101,16 @@
     },
     {
       "prNumber": 452,
-      "title": "10L XSA + EMA + Partial RoPE + LN Scale + TTT — val_bpb 1.1365",
+      "title": "10L XSA + EMA + Partial RoPE + LN Scale (val_bpb: 1.1366)",
       "status": "open",
-      "updatedAt": "2026-03-22T19:28:36Z",
+      "updatedAt": "2026-03-22T19:54:12Z",
       "headSha": "31652365a8e6b7b353cb92537266e5e4fb3e5a3b",
-      "generatedAt": "2026-03-22T19:41:57.248Z",
-      "summary": "10-layer GPT uses XSA on top layers, EMA, partial RoPE with scaled LN, and TTT SGD after mixed Int5/Int6 quantization.",
+      "generatedAt": "2026-03-22T20:12:12.893Z",
+      "summary": "10L GPT mixes XSA on last layers, EMA, Partial RoPE, LN scale, int5/int6 quant, and Muon optimizer with sliding-window eval.",
       "tags": [
         "architecture",
         "quantization",
-        "sliding-window-eval",
-        "training-schedule"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -993,15 +1040,15 @@
       "prNumber": 401,
       "title": "Record: 11L + EMA + Tight SWA + QAT0.15 + VE128 + Partial RoPE + LN Scale (val_bpb: 1.1243)",
       "status": "open",
-      "updatedAt": "2026-03-22T19:35:16Z",
-      "headSha": "5f9b9e9b58cb4125362705067909d17837212df1",
-      "generatedAt": "2026-03-22T19:42:05.892Z",
-      "summary": "Stack EMA+Tight SWA with earlier late QAT and longer warmdown on an 11-layer VE-enhanced transformer to shrink the int6 quant gap.",
+      "updatedAt": "2026-03-22T20:04:29Z",
+      "headSha": "5f4eb5f45278f2748ed6ec6311e21fdbf1593b2a",
+      "generatedAt": "2026-03-22T20:12:17.198Z",
+      "summary": "Stacks EMA with tight SWA checkpoints, extends warmdown, and starts late int6 QAT earlier on the 11-layer GQA model with VE128 and partial RoPE.",
       "tags": [
-        "architecture",
-        "optimizer",
         "quantization",
-        "training-schedule"
+        "architecture",
+        "training-schedule",
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,

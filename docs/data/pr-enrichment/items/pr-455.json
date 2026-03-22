@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-22T20:12:06.875Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 455,
+    "title": "Record: 11L Tight SWA + VE128 + XSA4 + TTT (3-seed mean val_bpb=1.1299)",
+    "state": "open",
+    "updatedAt": "2026-03-22T19:44:12Z",
+    "headSha": "6b36249645c1ee070b7a9ee2d7c3cb59a996bd9a",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/455",
+    "authorLogin": "kasimte"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-22_TightSWA_VE128_TTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11L VE128 GQA model extends Tight SWA with late int6 quant and adds test-time SGD on val tokens before sliding-window evaluation.",
+    "tags": [
+      "architecture",
+      "attention",
+      "quantization",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Tight SWA plus late int6 QAT during warmdown",
+      "Shared VE128 value embeddings with partial XSA layers",
+      "Test-time SGD on val tokens prior to sliding-window eval"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

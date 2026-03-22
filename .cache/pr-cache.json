@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-22T19:41:46.231Z",
-  "lastSeenUpdatedAt": "2026-03-22T19:35:16Z",
+  "generatedAt": "2026-03-22T20:11:50.180Z",
+  "lastSeenUpdatedAt": "2026-03-22T20:04:29Z",
   "prs": {
     "1": {
       "number": 1,
@@ -33426,7 +33426,7 @@
     },
     "401": {
       "number": 401,
-      "updatedAt": "2026-03-22T19:35:16Z",
+      "updatedAt": "2026-03-22T20:04:29Z",
       "pr": {
         "number": 401,
         "title": "Record: 11L + EMA + Tight SWA + QAT0.15 + VE128 + Partial RoPE + LN Scale (val_bpb: 1.1243)",
@@ -33437,8 +33437,8 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-03-22T05:15:58Z",
-        "updatedAt": "2026-03-22T19:35:16Z",
-        "headSha": "5f9b9e9b58cb4125362705067909d17837212df1",
+        "updatedAt": "2026-03-22T20:04:29Z",
+        "headSha": "5f4eb5f45278f2748ed6ec6311e21fdbf1593b2a",
         "headRepo": "newjordan/parameter-golf"
       },
       "submissions": [
@@ -33500,16 +33500,16 @@
             "authorLogin": "newjordan",
             "authorName": null,
             "createdAt": "2026-03-22T05:15:58Z",
-            "updatedAt": "2026-03-22T19:35:16Z",
-            "headSha": "5f9b9e9b58cb4125362705067909d17837212df1",
+            "updatedAt": "2026-03-22T20:04:29Z",
+            "headSha": "5f4eb5f45278f2748ed6ec6311e21fdbf1593b2a",
             "headRepo": "newjordan/parameter-golf"
           },
           "links": {
-            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/5f9b9e9b58cb4125362705067909d17837212df1/records/track_10min_16mb/2026-03-22_SpongeBath_TTT8_Stride32/submission.json",
-            "readme": "https://github.com/openai/parameter-golf/blob/5f9b9e9b58cb4125362705067909d17837212df1/records/track_10min_16mb/2026-03-22_SpongeBath_TTT8_Stride32/README.md",
-            "trainLog": "https://github.com/openai/parameter-golf/blob/5f9b9e9b58cb4125362705067909d17837212df1/records/track_10min_16mb/2026-03-22_SpongeBath_TTT8_Stride32/train.log",
-            "script": "https://github.com/openai/parameter-golf/blob/5f9b9e9b58cb4125362705067909d17837212df1/records/track_10min_16mb/2026-03-22_SpongeBath_TTT8_Stride32/train_gpt.py",
-            "folder": "https://github.com/openai/parameter-golf/tree/5f9b9e9b58cb4125362705067909d17837212df1/records/track_10min_16mb/2026-03-22_SpongeBath_TTT8_Stride32",
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/5f4eb5f45278f2748ed6ec6311e21fdbf1593b2a/records/track_10min_16mb/2026-03-22_SpongeBath_TTT8_Stride32/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/5f4eb5f45278f2748ed6ec6311e21fdbf1593b2a/records/track_10min_16mb/2026-03-22_SpongeBath_TTT8_Stride32/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/5f4eb5f45278f2748ed6ec6311e21fdbf1593b2a/records/track_10min_16mb/2026-03-22_SpongeBath_TTT8_Stride32/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/5f4eb5f45278f2748ed6ec6311e21fdbf1593b2a/records/track_10min_16mb/2026-03-22_SpongeBath_TTT8_Stride32/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/5f4eb5f45278f2748ed6ec6311e21fdbf1593b2a/records/track_10min_16mb/2026-03-22_SpongeBath_TTT8_Stride32",
             "pr": "https://github.com/openai/parameter-golf/pull/401"
           }
         }
@@ -37969,10 +37969,10 @@
     },
     "452": {
       "number": 452,
-      "updatedAt": "2026-03-22T19:28:36Z",
+      "updatedAt": "2026-03-22T19:54:12Z",
       "pr": {
         "number": 452,
-        "title": "10L XSA + EMA + Partial RoPE + LN Scale + TTT — val_bpb 1.1365",
+        "title": "10L XSA + EMA + Partial RoPE + LN Scale (val_bpb: 1.1366)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -37980,7 +37980,7 @@
         "authorLogin": "ofirkris",
         "authorName": null,
         "createdAt": "2026-03-22T18:53:42Z",
-        "updatedAt": "2026-03-22T19:28:36Z",
+        "updatedAt": "2026-03-22T19:54:12Z",
         "headSha": "31652365a8e6b7b353cb92537266e5e4fb3e5a3b",
         "headRepo": "ofirkris/parameter-golf-1"
       },
@@ -38035,7 +38035,7 @@
           },
           "pr": {
             "number": 452,
-            "title": "10L XSA + EMA + Partial RoPE + LN Scale + TTT — val_bpb 1.1365",
+            "title": "10L XSA + EMA + Partial RoPE + LN Scale (val_bpb: 1.1366)",
             "state": "open",
             "draft": false,
             "mergedAt": null,
@@ -38043,7 +38043,7 @@
             "authorLogin": "ofirkris",
             "authorName": null,
             "createdAt": "2026-03-22T18:53:42Z",
-            "updatedAt": "2026-03-22T19:28:36Z",
+            "updatedAt": "2026-03-22T19:54:12Z",
             "headSha": "31652365a8e6b7b353cb92537266e5e4fb3e5a3b",
             "headRepo": "ofirkris/parameter-golf-1"
           },
@@ -38378,6 +38378,188 @@
             "script": "https://github.com/openai/parameter-golf/blob/8ebd3185ece20ac0a732bc23a26af5dd8550ae80/records/track_non_record_16mb/2026-03-20_CompetitiveStack/train_gpt.py",
             "folder": "https://github.com/openai/parameter-golf/tree/8ebd3185ece20ac0a732bc23a26af5dd8550ae80/records/track_non_record_16mb/2026-03-20_CompetitiveStack",
             "pr": "https://github.com/openai/parameter-golf/pull/454"
+          }
+        }
+      ]
+    },
+    "455": {
+      "number": 455,
+      "updatedAt": "2026-03-22T19:44:12Z",
+      "pr": {
+        "number": 455,
+        "title": "Record: 11L Tight SWA + VE128 + XSA4 + TTT (3-seed mean val_bpb=1.1299)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/455",
+        "authorLogin": "kasimte",
+        "authorName": null,
+        "createdAt": "2026-03-22T19:44:12Z",
+        "updatedAt": "2026-03-22T19:44:12Z",
+        "headSha": "6b36249645c1ee070b7a9ee2d7c3cb59a996bd9a",
+        "headRepo": "kasimte/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-455-records-track_10min_16mb-2026-03-22_TightSWA_VE128_TTT-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-22_TightSWA_VE128_TTT",
+            "folderPath": "records/track_10min_16mb/2026-03-22_TightSWA_VE128_TTT",
+            "submissionPath": "records/track_10min_16mb/2026-03-22_TightSWA_VE128_TTT/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-22_TightSWA_VE128_TTT/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-22_TightSWA_VE128_TTT/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-22_TightSWA_VE128_TTT/train_gpt.py"
+          },
+          "submission": {
+            "author": "kasimte",
+            "githubId": "kasimte",
+            "name": null,
+            "blurb": null,
+            "date": "2026-03-22T19:44:12Z"
+          },
+          "metrics": {
+            "valBpb": 1.12913905,
+            "valLoss": 1.90649894,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": 15787610,
+            "bytesCode": null,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 455,
+            "title": "Record: 11L Tight SWA + VE128 + XSA4 + TTT (3-seed mean val_bpb=1.1299)",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/455",
+            "authorLogin": "kasimte",
+            "authorName": null,
+            "createdAt": "2026-03-22T19:44:12Z",
+            "updatedAt": "2026-03-22T19:44:12Z",
+            "headSha": "6b36249645c1ee070b7a9ee2d7c3cb59a996bd9a",
+            "headRepo": "kasimte/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/6b36249645c1ee070b7a9ee2d7c3cb59a996bd9a/records/track_10min_16mb/2026-03-22_TightSWA_VE128_TTT/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/6b36249645c1ee070b7a9ee2d7c3cb59a996bd9a/records/track_10min_16mb/2026-03-22_TightSWA_VE128_TTT/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/6b36249645c1ee070b7a9ee2d7c3cb59a996bd9a/records/track_10min_16mb/2026-03-22_TightSWA_VE128_TTT/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/6b36249645c1ee070b7a9ee2d7c3cb59a996bd9a/records/track_10min_16mb/2026-03-22_TightSWA_VE128_TTT/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/6b36249645c1ee070b7a9ee2d7c3cb59a996bd9a/records/track_10min_16mb/2026-03-22_TightSWA_VE128_TTT",
+            "pr": "https://github.com/openai/parameter-golf/pull/455"
+          }
+        }
+      ]
+    },
+    "456": {
+      "number": 456,
+      "updatedAt": "2026-03-22T20:02:06Z",
+      "pr": {
+        "number": 456,
+        "title": "Non-record submission: Depth Recurrence + Legal Score-First TTT (10L, 1.1532 BPB)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/456",
+        "authorLogin": "Christopher-Lee-McClendon",
+        "authorName": null,
+        "createdAt": "2026-03-22T20:02:06Z",
+        "updatedAt": "2026-03-22T20:02:06Z",
+        "headSha": "9da659ec652e5e5b0b4f9a4e6dd30b82dc6a342f",
+        "headRepo": "Christopher-Lee-McClendon/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-456-records-track_non_record_16mb-2026-03-22_DepthRecurrence_AggressiveTTT_10L-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "non-record",
+          "track": {
+            "path": "records/track_non_record_16mb",
+            "slug": "track_non_record_16mb",
+            "label": "Non-record / 16MB",
+            "official": false,
+            "category": "non-record"
+          },
+          "record": {
+            "folderName": "2026-03-22_DepthRecurrence_AggressiveTTT_10L",
+            "folderPath": "records/track_non_record_16mb/2026-03-22_DepthRecurrence_AggressiveTTT_10L",
+            "submissionPath": "records/track_non_record_16mb/2026-03-22_DepthRecurrence_AggressiveTTT_10L/submission.json",
+            "readmePath": "records/track_non_record_16mb/2026-03-22_DepthRecurrence_AggressiveTTT_10L/README.md",
+            "trainLogPath": "records/track_non_record_16mb/2026-03-22_DepthRecurrence_AggressiveTTT_10L/train.log",
+            "scriptPath": "records/track_non_record_16mb/2026-03-22_DepthRecurrence_AggressiveTTT_10L/train_gpt.py"
+          },
+          "submission": {
+            "author": "Chris McClendon",
+            "githubId": "Christopher-Lee-McClendon",
+            "name": "Depth Recurrence + Legal Score-First TTT (10L int5/int6)",
+            "blurb": "10-layer GPT with depth-recurrence infrastructure, BigramHash(10240), SmearGate, XSA, U-Net skips, mixed int5/int6 quantization, SWA, Late QAT, and competition-legal score-first TTT (AdamW, chunked score-then-train). Trained on 4xA100.",
+            "date": "2026-03-22"
+          },
+          "metrics": {
+            "valBpb": 1.15321496,
+            "valLoss": 1.94715268,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": 5200,
+            "wallclockSeconds": 2283,
+            "evalTimeSeconds": 458
+          },
+          "artifact": {
+            "bytesTotal": 15980085,
+            "bytesCode": 66874,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 456,
+            "title": "Non-record submission: Depth Recurrence + Legal Score-First TTT (10L, 1.1532 BPB)",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/456",
+            "authorLogin": "Christopher-Lee-McClendon",
+            "authorName": null,
+            "createdAt": "2026-03-22T20:02:06Z",
+            "updatedAt": "2026-03-22T20:02:06Z",
+            "headSha": "9da659ec652e5e5b0b4f9a4e6dd30b82dc6a342f",
+            "headRepo": "Christopher-Lee-McClendon/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/9da659ec652e5e5b0b4f9a4e6dd30b82dc6a342f/records/track_non_record_16mb/2026-03-22_DepthRecurrence_AggressiveTTT_10L/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/9da659ec652e5e5b0b4f9a4e6dd30b82dc6a342f/records/track_non_record_16mb/2026-03-22_DepthRecurrence_AggressiveTTT_10L/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/9da659ec652e5e5b0b4f9a4e6dd30b82dc6a342f/records/track_non_record_16mb/2026-03-22_DepthRecurrence_AggressiveTTT_10L/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/9da659ec652e5e5b0b4f9a4e6dd30b82dc6a342f/records/track_non_record_16mb/2026-03-22_DepthRecurrence_AggressiveTTT_10L/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/9da659ec652e5e5b0b4f9a4e6dd30b82dc6a342f/records/track_non_record_16mb/2026-03-22_DepthRecurrence_AggressiveTTT_10L",
+            "pr": "https://github.com/openai/parameter-golf/pull/456"
           }
         }
       ]

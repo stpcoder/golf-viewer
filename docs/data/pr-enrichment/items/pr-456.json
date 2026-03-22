@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-22T20:12:01.850Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 456,
+    "title": "Non-record submission: Depth Recurrence + Legal Score-First TTT (10L, 1.1532 BPB)",
+    "state": "open",
+    "updatedAt": "2026-03-22T20:02:06Z",
+    "headSha": "9da659ec652e5e5b0b4f9a4e6dd30b82dc6a342f",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/456",
+    "authorLogin": "Christopher-Lee-McClendon"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-22_DepthRecurrence_AggressiveTTT_10L/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "10-layer GPT with depth-recurrence-ready blocks, BigramHash embeddings, U-Net skips, mixed int5/int6 quantization, and competition-legal score-first TTT adaptation.",
+    "tags": [
+      "val-only",
+      "architecture",
+      "quantization",
+      "evaluation"
+    ],
+    "usesValOnly": true,
+    "valOnlyReasoning": "Competition-legal score-first TTT re-trains on validation chunks after scoring, so additional validation-shard training occurs during evaluation.",
+    "techniques": [
+      "Depth recurrence-ready GPT with U-Net skips and XSA layers",
+      "BigramHash embeddings with SmearGate gating for compact context",
+      "Mixed int5/int6 quantization with SWA and score-first legal TTT"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
+  }
+}

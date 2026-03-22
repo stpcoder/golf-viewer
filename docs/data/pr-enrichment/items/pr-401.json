@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-22T19:42:05.892Z",
+  "generatedAt": "2026-03-22T20:12:17.198Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 401,
     "title": "Record: 11L + EMA + Tight SWA + QAT0.15 + VE128 + Partial RoPE + LN Scale (val_bpb: 1.1243)",
     "state": "open",
-    "updatedAt": "2026-03-22T19:35:16Z",
-    "headSha": "5f9b9e9b58cb4125362705067909d17837212df1",
+    "updatedAt": "2026-03-22T20:04:29Z",
+    "headSha": "5f4eb5f45278f2748ed6ec6311e21fdbf1593b2a",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/401",
     "authorLogin": "newjordan"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Stack EMA+Tight SWA with earlier late QAT and longer warmdown on an 11-layer VE-enhanced transformer to shrink the int6 quant gap.",
+    "summary": "Stacks EMA with tight SWA checkpoints, extends warmdown, and starts late int6 QAT earlier on the 11-layer GQA model with VE128 and partial RoPE.",
     "tags": [
-      "architecture",
-      "optimizer",
       "quantization",
-      "training-schedule"
+      "architecture",
+      "training-schedule",
+      "optimizer"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "EMA stacked with Tight SWA checkpoints",
-      "Late-stage int6 QAT triggered when LR scale<0.15",
-      "Extended warmdown plus VE128 and partial RoPE"
+      "EMA + Tight SWA stacking for dual averaging",
+      "Earlier late int6 QAT with longer warmdown",
+      "Partial RoPE + VE128 on 11-layer GQA setup"
     ]
   },
   "compatibility": {

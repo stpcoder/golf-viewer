@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-22T19:41:57.248Z",
+  "generatedAt": "2026-03-22T20:12:12.893Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 452,
-    "title": "10L XSA + EMA + Partial RoPE + LN Scale + TTT — val_bpb 1.1365",
+    "title": "10L XSA + EMA + Partial RoPE + LN Scale (val_bpb: 1.1366)",
     "state": "open",
-    "updatedAt": "2026-03-22T19:28:36Z",
+    "updatedAt": "2026-03-22T19:54:12Z",
     "headSha": "31652365a8e6b7b353cb92537266e5e4fb3e5a3b",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/452",
     "authorLogin": "ofirkris"
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "10-layer GPT uses XSA on top layers, EMA, partial RoPE with scaled LN, and TTT SGD after mixed Int5/Int6 quantization.",
+    "summary": "10L GPT mixes XSA on last layers, EMA, Partial RoPE, LN scale, int5/int6 quant, and Muon optimizer with sliding-window eval.",
     "tags": [
       "architecture",
       "quantization",
-      "sliding-window-eval",
-      "training-schedule"
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "XSA+PartialRoPE with LN scale",
-      "EMA regularization with skip connections",
-      "Post-quant TTT SGD on mixed Int5/Int6"
+      "XSA on final layers with Partial RoPE & LN scale",
+      "EMA plus Muon optimizer with warmdown",
+      "int5/int6 quantization with sliding-window eval"
     ]
   },
   "compatibility": {
