@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-23T08:45:03.677Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 514,
+    "title": "[Non-record] ParGolf-Zero v2 — 6-layer joint optimization + BigramHash + SWA + zstd",
+    "state": "open",
+    "updatedAt": "2026-03-23T08:35:04Z",
+    "headSha": "21708e2367032dd5a2e0751feef0e9f2b3356b62",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/514",
+    "authorLogin": "sanjith3057"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-23_ParGolfZero_v2/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Six-layer joint optimization pairs per-row weight-range regularization with QAT, SWA, and BigramHash+zstd compression for sub-16MB models.",
+    "tags": [
+      "quantization",
+      "mixed-precision",
+      "training-schedule",
+      "tokenization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Per-row weight-range penalty integrated into QAT steps",
+      "FP16 embeddings with Muon weight decay, warmdown, and SWA",
+      "BigramHash(10240) table plus zstd-22 compression"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

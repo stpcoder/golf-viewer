@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-23T08:14:47.171Z",
+  "generatedAt": "2026-03-23T08:44:56.277Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -61,7 +61,7 @@
         "authorLogin": "MatoTeziTanka",
         "authorName": null,
         "createdAt": "2026-03-23T07:58:41Z",
-        "updatedAt": "2026-03-23T07:58:41Z",
+        "updatedAt": "2026-03-23T08:21:38Z",
         "headSha": "6d5a32a51f6f9f13a0fcd9b478c902750f11e3a6",
         "headRepo": "MatoTeziTanka/parameter-golf"
       },
@@ -22658,6 +22658,83 @@
       }
     },
     {
+      "id": "record-records-track_non_record_16mb-2026-03-23_ParGolfZero_v2",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-23_ParGolfZero_v2",
+        "folderPath": "records/track_non_record_16mb/2026-03-23_ParGolfZero_v2",
+        "submissionPath": "records/track_non_record_16mb/2026-03-23_ParGolfZero_v2/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-23_ParGolfZero_v2/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-23_ParGolfZero_v2/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-23_ParGolfZero_v2/train_gpt.py"
+      },
+      "submission": {
+        "author": "sanjith3057",
+        "githubId": "sanjith3057",
+        "name": "Sanjith G",
+        "blurb": null,
+        "date": "2026-03-23T08:35:04Z"
+      },
+      "metrics": {
+        "valBpb": null,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 514,
+        "title": "[Non-record] ParGolf-Zero v2 — 6-layer joint optimization + BigramHash + SWA + zstd",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/514",
+        "authorLogin": "sanjith3057",
+        "authorName": null,
+        "createdAt": "2026-03-23T08:35:04Z",
+        "updatedAt": "2026-03-23T08:35:04Z",
+        "headSha": "21708e2367032dd5a2e0751feef0e9f2b3356b62",
+        "headRepo": "sanjith3057/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/21708e2367032dd5a2e0751feef0e9f2b3356b62/records/track_non_record_16mb/2026-03-23_ParGolfZero_v2/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/21708e2367032dd5a2e0751feef0e9f2b3356b62/records/track_non_record_16mb/2026-03-23_ParGolfZero_v2/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/21708e2367032dd5a2e0751feef0e9f2b3356b62/records/track_non_record_16mb/2026-03-23_ParGolfZero_v2/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/21708e2367032dd5a2e0751feef0e9f2b3356b62/records/track_non_record_16mb/2026-03-23_ParGolfZero_v2/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/21708e2367032dd5a2e0751feef0e9f2b3356b62/records/track_non_record_16mb/2026-03-23_ParGolfZero_v2",
+        "pr": "https://github.com/openai/parameter-golf/pull/514",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_non_record_16mb-gteifel_phase1_meta_ttt",
       "source": "pull_request",
       "status": "open",
@@ -23023,16 +23100,16 @@
         "authorLogin": "sahiee-dev",
         "authorName": null,
         "createdAt": "2026-03-22T15:12:45Z",
-        "updatedAt": "2026-03-23T08:07:41Z",
-        "headSha": "599f989096d9fea9df7f132a431e488b353c45d3",
+        "updatedAt": "2026-03-23T08:32:46Z",
+        "headSha": "929062066d0a6ad0f07e7892a9ae7ff206797d92",
         "headRepo": "sahiee-dev/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/599f989096d9fea9df7f132a431e488b353c45d3/records/track_10min_16mb/2026-03-22_XSA_EMA_TTT_sahiee-dev/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/599f989096d9fea9df7f132a431e488b353c45d3/records/track_10min_16mb/2026-03-22_XSA_EMA_TTT_sahiee-dev/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/599f989096d9fea9df7f132a431e488b353c45d3/records/track_10min_16mb/2026-03-22_XSA_EMA_TTT_sahiee-dev/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/599f989096d9fea9df7f132a431e488b353c45d3/records/track_10min_16mb/2026-03-22_XSA_EMA_TTT_sahiee-dev/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/599f989096d9fea9df7f132a431e488b353c45d3/records/track_10min_16mb/2026-03-22_XSA_EMA_TTT_sahiee-dev",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/929062066d0a6ad0f07e7892a9ae7ff206797d92/records/track_10min_16mb/2026-03-22_XSA_EMA_TTT_sahiee-dev/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/929062066d0a6ad0f07e7892a9ae7ff206797d92/records/track_10min_16mb/2026-03-22_XSA_EMA_TTT_sahiee-dev/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/929062066d0a6ad0f07e7892a9ae7ff206797d92/records/track_10min_16mb/2026-03-22_XSA_EMA_TTT_sahiee-dev/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/929062066d0a6ad0f07e7892a9ae7ff206797d92/records/track_10min_16mb/2026-03-22_XSA_EMA_TTT_sahiee-dev/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/929062066d0a6ad0f07e7892a9ae7ff206797d92/records/track_10min_16mb/2026-03-22_XSA_EMA_TTT_sahiee-dev",
         "pr": "https://github.com/openai/parameter-golf/pull/430",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
