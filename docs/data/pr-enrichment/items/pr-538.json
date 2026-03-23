@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-23T15:16:41.803Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 538,
+    "title": "FP8 + Arithmetic Coding + SWA (1.1511 BPB)",
+    "state": "open",
+    "updatedAt": "2026-03-23T15:05:19Z",
+    "headSha": "e9786bda8debed21ae0ffd6a73136278a48af9e5",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/538",
+    "authorLogin": "cruz-andr"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_FP8_ArithCoding_TTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "FP8 TransformerEngine training pairs with custom per-tensor arithmetic coding and early SWA averaging on a 10L/512 BigramHash model.",
+    "tags": [
+      "quantization",
+      "compression",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "FP8 fwd/back via TransformerEngine for higher throughput",
+      "Per-tensor empirical histogram arithmetic coding replaces zstd",
+      "Early-step SWA checkpoint averaging during warmdown"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

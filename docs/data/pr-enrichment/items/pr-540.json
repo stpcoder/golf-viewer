@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-23T15:16:33.117Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 540,
+    "title": "[DRAFT] BitNet b1.58 ternary QAT + depth recurrence submission",
+    "state": "open",
+    "updatedAt": "2026-03-23T15:08:17Z",
+    "headSha": "c2350014b0e887f4b164b30bac832d22a7682a44",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/540",
+    "authorLogin": "devferrazZz"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-23_BitNetRecurrent_4x6_1024d/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Combines ternary QAT with LSQ scaling and depth recurrence with eval-time loop scaling to pack more unique params within the 16MB budget.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Ternary QAT with STE and learnable LSQ scale",
+      "Depth recurrence (K=4, N=6) with eval-time loop scaling (M=12)"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

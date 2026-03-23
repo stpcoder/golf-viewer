@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-23T15:16:57.996Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 536,
+    "title": "Non-record: Family 1A tied blocks (1xH100 dev snapshot)",
+    "state": "open",
+    "updatedAt": "2026-03-23T14:56:05Z",
+    "headSha": "e4b3c0528823b3bc958ec639cb6d6f14e9a321b5",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/536",
+    "authorLogin": "Jaksenc"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-23_Family1A_TiedBlocks_1xH100_NonRecord/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Non-record Family 1A snapshot ties transformer block weights with Muon+AdamW, grad clip 1.0 plus 30-step warmup on 1×H100 600s run.",
+    "tags": [
+      "architecture",
+      "training-schedule",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "Not val-only training.",
+    "techniques": [
+      "Tied transformer block weights across layers",
+      "Muon+AdamW with grad clip 1.0 and 30-step warmup",
+      "1×H100 600s autoresearch non-record run"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

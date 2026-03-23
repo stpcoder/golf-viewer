@@ -1,8 +1,145 @@
 {
-  "generatedAt": "2026-03-23T14:46:55.633Z",
+  "generatedAt": "2026-03-23T15:17:10.084Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 540,
+      "title": "[DRAFT] BitNet b1.58 ternary QAT + depth recurrence submission",
+      "status": "open",
+      "updatedAt": "2026-03-23T15:08:17Z",
+      "headSha": "c2350014b0e887f4b164b30bac832d22a7682a44",
+      "generatedAt": "2026-03-23T15:16:33.117Z",
+      "summary": "Combines ternary QAT with LSQ scaling and depth recurrence with eval-time loop scaling to pack more unique params within the 16MB budget.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-540.json"
+    },
+    {
+      "prNumber": 539,
+      "title": "Add test submission: 2026-03-23_naive_solution",
+      "status": "open",
+      "updatedAt": "2026-03-23T15:07:59Z",
+      "headSha": "c54484207301787b83bb6e43ffb7a1816cd3f479",
+      "generatedAt": "2026-03-23T15:16:37.867Z",
+      "summary": "Submits the unmodified GPT baseline for a 100-step single-GPU run to confirm leaderboard submission formatting.",
+      "tags": [
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-539.json"
+    },
+    {
+      "prNumber": 538,
+      "title": "FP8 + Arithmetic Coding + SWA (1.1511 BPB)",
+      "status": "open",
+      "updatedAt": "2026-03-23T15:05:19Z",
+      "headSha": "e9786bda8debed21ae0ffd6a73136278a48af9e5",
+      "generatedAt": "2026-03-23T15:16:41.803Z",
+      "summary": "FP8 TransformerEngine training pairs with custom per-tensor arithmetic coding and early SWA averaging on a 10L/512 BigramHash model.",
+      "tags": [
+        "quantization",
+        "compression",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-538.json"
+    },
+    {
+      "prNumber": 537,
+      "title": "BPB 1.13872 — LeakyReLU(0.5)² + Per-Layer LR Legal TTT (3 seeds)",
+      "status": "open",
+      "updatedAt": "2026-03-23T15:02:29Z",
+      "headSha": "e15a4477663a86e2f3f8a3feea91ac76e4c405be",
+      "generatedAt": "2026-03-23T15:16:49.758Z",
+      "summary": "Depth-recurrent 11-layer GPT pairs LeakyReLU(0.5)² SmearGate MLPs with Partial RoPE/VE and legal score-first TTT using per-layer/intra-chunk cosine LR.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "optimizer",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-537.json"
+    },
+    {
+      "prNumber": 536,
+      "title": "Non-record: Family 1A tied blocks (1xH100 dev snapshot)",
+      "status": "open",
+      "updatedAt": "2026-03-23T14:56:05Z",
+      "headSha": "e4b3c0528823b3bc958ec639cb6d6f14e9a321b5",
+      "generatedAt": "2026-03-23T15:16:57.996Z",
+      "summary": "Non-record Family 1A snapshot ties transformer block weights with Muon+AdamW, grad clip 1.0 plus 30-step warmup on 1×H100 600s run.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-536.json"
+    },
+    {
+      "prNumber": 535,
+      "title": "Record: 11L LeakyReLU² + Full GPTQ + QAT Alignment (val_bpb: 1.1204)",
+      "status": "open",
+      "updatedAt": "2026-03-23T14:53:58Z",
+      "headSha": "501566fb62a66b48ad06b9140686170150adc1f0",
+      "generatedAt": "2026-03-23T15:17:05.158Z",
+      "summary": "Record uses LeakyReLU(0.5)² MLPs, Hessian-aware full GPTQ int6 quantization, and aligned STE/export quantile clipping in the 11L stack.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-535.json"
+    },
     {
       "prNumber": 534,
       "title": "Non-record: 11L Partial RoPE + XSA4 + VE128 + Tight SWA + GPTQ-lite (val_bpb=1.1804)",
@@ -167,17 +304,16 @@
     },
     {
       "prNumber": 525,
-      "title": "Non-record: 10L Optimized (val_bpb=1.1477)",
+      "title": "Non-record: 10L + LoRA TTT (val_bpb=1.1039, base=1.1485)",
       "status": "open",
-      "updatedAt": "2026-03-23T12:28:56Z",
-      "headSha": "da7f4fb01c31912943047d287c5fefcb46a148bd",
-      "generatedAt": "2026-03-23T12:45:59.471Z",
-      "summary": "10-layer 512d transformer with GQA, hash embeddings, U-Net skips, improved activations, and mixed int5/int6 quantization trained via EMA Muon+AdamW.",
+      "updatedAt": "2026-03-23T15:02:16Z",
+      "headSha": "c16b51f78276015e5ee481cd203c59b1c381e9ad",
+      "generatedAt": "2026-03-23T15:17:10.003Z",
+      "summary": "10-layer transformer uses mixed int5/int6 quantization and Muon+AdamW training, augmented by per-document LoRA TTT on Q/V/LM projections.",
       "tags": [
-        "architecture",
         "quantization",
-        "muon",
-        "optimizer"
+        "attention",
+        "regularization"
       ],
       "flags": {
         "usesValOnly": false,

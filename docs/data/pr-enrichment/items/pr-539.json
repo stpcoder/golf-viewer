@@ -1,0 +1,39 @@
+{
+  "generatedAt": "2026-03-23T15:16:37.867Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 539,
+    "title": "Add test submission: 2026-03-23_naive_solution",
+    "state": "open",
+    "updatedAt": "2026-03-23T15:07:59Z",
+    "headSha": "c54484207301787b83bb6e43ffb7a1816cd3f479",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/539",
+    "authorLogin": "PavelPaha"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-23_naive_solution/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Submits the unmodified GPT baseline for a 100-step single-GPU run to confirm leaderboard submission formatting.",
+    "tags": [
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Baseline GPT-512/9 config",
+      "100-step single-GPU run"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
