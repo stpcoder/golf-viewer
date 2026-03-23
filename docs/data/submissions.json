@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-23T17:47:30.338Z",
+  "generatedAt": "2026-03-23T18:16:46.381Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -13624,16 +13624,16 @@
         "authorLogin": "ddavidgao",
         "authorName": null,
         "createdAt": "2026-03-23T15:25:22Z",
-        "updatedAt": "2026-03-23T16:03:40Z",
-        "headSha": "605f965a5e526d6aa0a461f8624369e68a584934",
+        "updatedAt": "2026-03-23T18:00:20Z",
+        "headSha": "c7311ad286bcd470dda608990e1112abbdb7f439",
         "headRepo": "ddavidgao/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/605f965a5e526d6aa0a461f8624369e68a584934/records/track_non_record_16mb/2026-03-23_DGAttention_DavidGao/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/605f965a5e526d6aa0a461f8624369e68a584934/records/track_non_record_16mb/2026-03-23_DGAttention_DavidGao/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/605f965a5e526d6aa0a461f8624369e68a584934/records/track_non_record_16mb/2026-03-23_DGAttention_DavidGao/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/605f965a5e526d6aa0a461f8624369e68a584934/records/track_non_record_16mb/2026-03-23_DGAttention_DavidGao/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/605f965a5e526d6aa0a461f8624369e68a584934/records/track_non_record_16mb/2026-03-23_DGAttention_DavidGao",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/c7311ad286bcd470dda608990e1112abbdb7f439/records/track_non_record_16mb/2026-03-23_DGAttention_DavidGao/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/c7311ad286bcd470dda608990e1112abbdb7f439/records/track_non_record_16mb/2026-03-23_DGAttention_DavidGao/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/c7311ad286bcd470dda608990e1112abbdb7f439/records/track_non_record_16mb/2026-03-23_DGAttention_DavidGao/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/c7311ad286bcd470dda608990e1112abbdb7f439/records/track_non_record_16mb/2026-03-23_DGAttention_DavidGao/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/c7311ad286bcd470dda608990e1112abbdb7f439/records/track_non_record_16mb/2026-03-23_DGAttention_DavidGao",
         "pr": "https://github.com/openai/parameter-golf/pull/542",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
@@ -24737,6 +24737,160 @@
       }
     },
     {
+      "id": "record-records-track_10min_16mb-2026-03-24_10L_TTT22_LeakyReLU_TrigramHash",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-24_10L_TTT22_LeakyReLU_TrigramHash",
+        "folderPath": "records/track_10min_16mb/2026-03-24_10L_TTT22_LeakyReLU_TrigramHash",
+        "submissionPath": "records/track_10min_16mb/2026-03-24_10L_TTT22_LeakyReLU_TrigramHash/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-24_10L_TTT22_LeakyReLU_TrigramHash/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-24_10L_TTT22_LeakyReLU_TrigramHash/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-24_10L_TTT22_LeakyReLU_TrigramHash/train_gpt.py"
+      },
+      "submission": {
+        "author": "bigbag",
+        "githubId": "bigbag",
+        "name": "10L TTT 22ep AdamW Cosine + LeakyReLU(0.5)² + TrigramHash",
+        "blurb": "10L 512d GQA 8/4 with Value Residual, Gated Attention, XSA last 4, LN Scale, SWA (27 ckpts), Late QAT (threshold 0.5), LeakyReLU(0.5)² activation, TrigramHash + BigramHash (shared 2048-bucket table), SmearGate, int5-MLP/int6-attn + zstd-22, MATRIX_LR=0.03. TTT: 22-epoch AdamW with per-step cosine LR decay to 0, per-layer LR groups (3x output proj, 0.5x input proj), batched 32 seqs/GPU, gradient sync via all_reduce, grad clip 1.0. Sliding window eval stride=64.",
+        "date": "2026-03-24"
+      },
+      "metrics": {
+        "valBpb": null,
+        "valLoss": 1.1354,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15351489,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 562,
+        "title": "Non-record: 1.1354 BPB — 10L TTT 22ep AdamW Cosine + LeakyReLU(0.5)² + TrigramHash",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/562",
+        "authorLogin": "bigbag",
+        "authorName": null,
+        "createdAt": "2026-03-23T18:05:01Z",
+        "updatedAt": "2026-03-23T18:13:58Z",
+        "headSha": "c7a96b3a375dec39f649192e45af47cb63ff662b",
+        "headRepo": "bigbag/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/c7a96b3a375dec39f649192e45af47cb63ff662b/records/track_10min_16mb/2026-03-24_10L_TTT22_LeakyReLU_TrigramHash/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/c7a96b3a375dec39f649192e45af47cb63ff662b/records/track_10min_16mb/2026-03-24_10L_TTT22_LeakyReLU_TrigramHash/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/c7a96b3a375dec39f649192e45af47cb63ff662b/records/track_10min_16mb/2026-03-24_10L_TTT22_LeakyReLU_TrigramHash/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/c7a96b3a375dec39f649192e45af47cb63ff662b/records/track_10min_16mb/2026-03-24_10L_TTT22_LeakyReLU_TrigramHash/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/c7a96b3a375dec39f649192e45af47cb63ff662b/records/track_10min_16mb/2026-03-24_10L_TTT22_LeakyReLU_TrigramHash",
+        "pr": "https://github.com/openai/parameter-golf/pull/562",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-03-24_11L_GPTQ_TrigramHash_TTT30_LeakyReLU",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-24_11L_GPTQ_TrigramHash_TTT30_LeakyReLU",
+        "folderPath": "records/track_non_record_16mb/2026-03-24_11L_GPTQ_TrigramHash_TTT30_LeakyReLU",
+        "submissionPath": "records/track_non_record_16mb/2026-03-24_11L_GPTQ_TrigramHash_TTT30_LeakyReLU/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-24_11L_GPTQ_TrigramHash_TTT30_LeakyReLU/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-24_11L_GPTQ_TrigramHash_TTT30_LeakyReLU/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-24_11L_GPTQ_TrigramHash_TTT30_LeakyReLU/train_gpt.py"
+      },
+      "submission": {
+        "author": "bigbag",
+        "githubId": "bigbag",
+        "name": "Non-record: 11L GPTQ + TrigramHash + TTT 30ep AdamW Cosine + LeakyReLU(0.5)²",
+        "blurb": "11L 512d GQA 8/4, Value Residual, Gated Attention, XSA4, LN Scale, SWA 28ckpts, Late QAT 0.5, LeakyReLU(0.5)², TrigramHash + BigramHash (shared 2048-bucket table), GPTQ Hessian calibration (78 layers), MATRIX_LR=0.03, int5-MLP/int6-attn + zstd-22. TTT: 30-epoch AdamW with per-step cosine LR decay, per-layer LR (3x proj, 0.5x fc), batch 64 seqs/GPU, grad sync + clip 1.0. Artifact 17.08MB — OVER 16MB limit by 1.08MB. Needs int5-all or better compression to fit.",
+        "date": "2026-03-24"
+      },
+      "metrics": {
+        "valBpb": null,
+        "valLoss": 1.1261,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 17146523,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 562,
+        "title": "Non-record: 1.1354 BPB — 10L TTT 22ep AdamW Cosine + LeakyReLU(0.5)² + TrigramHash",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/562",
+        "authorLogin": "bigbag",
+        "authorName": null,
+        "createdAt": "2026-03-23T18:05:01Z",
+        "updatedAt": "2026-03-23T18:13:58Z",
+        "headSha": "c7a96b3a375dec39f649192e45af47cb63ff662b",
+        "headRepo": "bigbag/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/c7a96b3a375dec39f649192e45af47cb63ff662b/records/track_non_record_16mb/2026-03-24_11L_GPTQ_TrigramHash_TTT30_LeakyReLU/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/c7a96b3a375dec39f649192e45af47cb63ff662b/records/track_non_record_16mb/2026-03-24_11L_GPTQ_TrigramHash_TTT30_LeakyReLU/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/c7a96b3a375dec39f649192e45af47cb63ff662b/records/track_non_record_16mb/2026-03-24_11L_GPTQ_TrigramHash_TTT30_LeakyReLU/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/c7a96b3a375dec39f649192e45af47cb63ff662b/records/track_non_record_16mb/2026-03-24_11L_GPTQ_TrigramHash_TTT30_LeakyReLU/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/c7a96b3a375dec39f649192e45af47cb63ff662b/records/track_non_record_16mb/2026-03-24_11L_GPTQ_TrigramHash_TTT30_LeakyReLU",
+        "pr": "https://github.com/openai/parameter-golf/pull/562",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_10min_16mb-2026-03-19_pcloadloveletter_v1",
       "source": "pull_request",
       "status": "closed",
@@ -26191,6 +26345,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/a1b0a6dc136d98b0c02c6bc8c1c4a0a83fb5ed23/records/track_10min_16mb/2026-03-23_Int5Int6_Zstd_MLP3x/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/a1b0a6dc136d98b0c02c6bc8c1c4a0a83fb5ed23/records/track_10min_16mb/2026-03-23_Int5Int6_Zstd_MLP3x",
         "pr": "https://github.com/openai/parameter-golf/pull/547",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-23_10L_VR_GA_XSA4_SWA_LateQAT_TTT20_LeakyReLU",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-23_10L_VR_GA_XSA4_SWA_LateQAT_TTT20_LeakyReLU",
+        "folderPath": "records/track_10min_16mb/2026-03-23_10L_VR_GA_XSA4_SWA_LateQAT_TTT20_LeakyReLU",
+        "submissionPath": "records/track_10min_16mb/2026-03-23_10L_VR_GA_XSA4_SWA_LateQAT_TTT20_LeakyReLU/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-23_10L_VR_GA_XSA4_SWA_LateQAT_TTT20_LeakyReLU/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-23_10L_VR_GA_XSA4_SWA_LateQAT_TTT20_LeakyReLU/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-23_10L_VR_GA_XSA4_SWA_LateQAT_TTT20_LeakyReLU/train_gpt.py"
+      },
+      "submission": {
+        "author": "bigbag",
+        "githubId": "bigbag",
+        "name": "10L VR+GA+XSA4+SWA+LateQAT + AdamW Cosine TTT 22ep + LeakyReLU(0.5)²",
+        "blurb": "10L 512d GQA 8/4 with Value Residual, Gated Attention, XSA last 4, LN Scale, SWA (27 ckpts), Late QAT (threshold 0.5), LeakyReLU(0.5)² activation, BigramHash(2048), SmearGate, int5-MLP/int6-attn + zstd-22. Test-time training: 22-epoch AdamW with per-step cosine LR decay to 0, per-layer LR groups (3x output proj, 0.5x input proj), batched 32 seqs/GPU, gradient sync via all_reduce, grad clip 1.0. Sliding window eval stride=64.",
+        "date": "2026-03-23"
+      },
+      "metrics": {
+        "valBpb": null,
+        "valLoss": 1.1354,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15351489,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 562,
+        "title": "Non-record: 1.1354 BPB — 10L TTT 22ep AdamW Cosine + LeakyReLU(0.5)² + TrigramHash",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/562",
+        "authorLogin": "bigbag",
+        "authorName": null,
+        "createdAt": "2026-03-23T18:05:01Z",
+        "updatedAt": "2026-03-23T18:13:58Z",
+        "headSha": "c7a96b3a375dec39f649192e45af47cb63ff662b",
+        "headRepo": "bigbag/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/c7a96b3a375dec39f649192e45af47cb63ff662b/records/track_10min_16mb/2026-03-23_10L_VR_GA_XSA4_SWA_LateQAT_TTT20_LeakyReLU/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/c7a96b3a375dec39f649192e45af47cb63ff662b/records/track_10min_16mb/2026-03-23_10L_VR_GA_XSA4_SWA_LateQAT_TTT20_LeakyReLU/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/c7a96b3a375dec39f649192e45af47cb63ff662b/records/track_10min_16mb/2026-03-23_10L_VR_GA_XSA4_SWA_LateQAT_TTT20_LeakyReLU/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/c7a96b3a375dec39f649192e45af47cb63ff662b/records/track_10min_16mb/2026-03-23_10L_VR_GA_XSA4_SWA_LateQAT_TTT20_LeakyReLU/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/c7a96b3a375dec39f649192e45af47cb63ff662b/records/track_10min_16mb/2026-03-23_10L_VR_GA_XSA4_SWA_LateQAT_TTT20_LeakyReLU",
+        "pr": "https://github.com/openai/parameter-golf/pull/562",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -27962,6 +28193,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/27f8be3ba8a052f595f79fcc8dd574b6fe043e0b/records/track_10min_16mb/2026-03-22_10L_XSA4_EMA_TrigramHash/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/27f8be3ba8a052f595f79fcc8dd574b6fe043e0b/records/track_10min_16mb/2026-03-22_10L_XSA4_EMA_TrigramHash",
         "pr": "https://github.com/openai/parameter-golf/pull/553",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-22_10L_VR_GA_XSA4_SWA_LateQAT",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-22_10L_VR_GA_XSA4_SWA_LateQAT",
+        "folderPath": "records/track_10min_16mb/2026-03-22_10L_VR_GA_XSA4_SWA_LateQAT",
+        "submissionPath": "records/track_10min_16mb/2026-03-22_10L_VR_GA_XSA4_SWA_LateQAT/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-22_10L_VR_GA_XSA4_SWA_LateQAT/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-22_10L_VR_GA_XSA4_SWA_LateQAT/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-22_10L_VR_GA_XSA4_SWA_LateQAT/train_gpt.py"
+      },
+      "submission": {
+        "author": "bigbag",
+        "githubId": "bigbag",
+        "name": "10L Value Residual + Gated Attention + XSA4 + SWA + Late QAT",
+        "blurb": "10 layers with Value Residual (ResFormer, -0.015 BPB), Gated Attention (-0.003 BPB), XSA last 4 layers, Partial RoPE 16/64, LN Scale, GPTQ-lite quantization, SWA (28 checkpoints), Late QAT, SmearGate, BigramHash(2048), OrthoInit, int5-MLP/int6-attn + zstd-22, sliding window eval stride=64.",
+        "date": "2026-03-22"
+      },
+      "metrics": {
+        "valBpb": null,
+        "valLoss": 1.1492,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15382567,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 562,
+        "title": "Non-record: 1.1354 BPB — 10L TTT 22ep AdamW Cosine + LeakyReLU(0.5)² + TrigramHash",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/562",
+        "authorLogin": "bigbag",
+        "authorName": null,
+        "createdAt": "2026-03-23T18:05:01Z",
+        "updatedAt": "2026-03-23T18:13:58Z",
+        "headSha": "c7a96b3a375dec39f649192e45af47cb63ff662b",
+        "headRepo": "bigbag/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/c7a96b3a375dec39f649192e45af47cb63ff662b/records/track_10min_16mb/2026-03-22_10L_VR_GA_XSA4_SWA_LateQAT/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/c7a96b3a375dec39f649192e45af47cb63ff662b/records/track_10min_16mb/2026-03-22_10L_VR_GA_XSA4_SWA_LateQAT/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/c7a96b3a375dec39f649192e45af47cb63ff662b/records/track_10min_16mb/2026-03-22_10L_VR_GA_XSA4_SWA_LateQAT/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/c7a96b3a375dec39f649192e45af47cb63ff662b/records/track_10min_16mb/2026-03-22_10L_VR_GA_XSA4_SWA_LateQAT/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/c7a96b3a375dec39f649192e45af47cb63ff662b/records/track_10min_16mb/2026-03-22_10L_VR_GA_XSA4_SWA_LateQAT",
+        "pr": "https://github.com/openai/parameter-golf/pull/562",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-23T16:16:59.562Z",
+  "generatedAt": "2026-03-23T18:17:02.007Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 542,
     "title": "Non-Record: DG Attention, Differential-Gated Attention with Depth-Scheduled Novelty Encoding: (val_bpb=1.1898)",
     "state": "open",
-    "updatedAt": "2026-03-23T16:03:40Z",
-    "headSha": "605f965a5e526d6aa0a461f8624369e68a584934",
+    "updatedAt": "2026-03-23T18:00:20Z",
+    "headSha": "c7311ad286bcd470dda608990e1112abbdb7f439",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/542",
     "authorLogin": "ddavidgao"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "DG Attention uses gradient-based novelty payloads in deep layers plus Flash-optimized designator matching, with a depth-scheduled gate replacing raw values.",
+    "summary": "Differential-Gated attention sends novelty deltas instead of raw values in deep layers, with a depth-scheduled β mix learned from β trajectories and Flash attention-aware projections.",
     "tags": [
       "attention",
-      "architecture",
       "training-schedule",
+      "architecture",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Novelty-conditioned value stream with causal baseline differences",
-      "Asymmetric designator matching via Flash Attention",
-      "Depth-scheduled β gating instead of learned collapse"
+      "Novelty-conditioned payload vs causal baseline",
+      "Depth-scheduled β gating across layers",
+      "FlashAttention-ready asymmetric designator matching"
     ]
   },
   "compatibility": {

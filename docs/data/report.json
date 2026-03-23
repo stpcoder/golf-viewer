@@ -1,37 +1,39 @@
 {
-  "generatedAt": "2026-03-23T17:46:20.763Z",
+  "generatedAt": "2026-03-23T18:16:25.808Z",
   "sourceRepo": "openai/parameter-golf",
   "siteRoot": null,
   "tokenConfigured": true,
   "skipped": [
     {
-      "pr": 561,
-      "reason": "no-record-submission-json"
+      "stage": "pull-request-readme",
+      "pr": 562,
+      "submissionPath": "records/track_10min_16mb/2026-03-22_10L_VR_GA_XSA4_SWA_LateQAT/submission.json",
+      "reason": "missing-or-unreadable-readme"
     },
     {
-      "pr": 545,
-      "reason": "no-record-submission-json"
+      "stage": "pull-request-readme",
+      "pr": 562,
+      "submissionPath": "records/track_10min_16mb/2026-03-23_10L_VR_GA_XSA4_SWA_LateQAT_TTT20_LeakyReLU/submission.json",
+      "reason": "missing-or-unreadable-readme"
     },
     {
-      "pr": 505,
-      "reason": "no-record-submission-json"
-    },
-    {
-      "pr": 558,
-      "reason": "no-record-submission-json"
+      "stage": "pull-request-readme",
+      "pr": 562,
+      "submissionPath": "records/track_non_record_16mb/2026-03-24_11L_GPTQ_TrigramHash_TTT30_LeakyReLU/submission.json",
+      "reason": "missing-or-unreadable-readme"
     }
   ],
   "errors": [],
   "incremental": {
     "mode": "incremental",
-    "cutoffUpdatedAt": "2026-03-23T17:13:05Z",
+    "cutoffUpdatedAt": "2026-03-23T17:42:37Z",
     "pagesScanned": 2,
     "prsScanned": 200,
-    "prsRefreshed": 20,
-    "prsReused": 180,
+    "prsRefreshed": 2,
+    "prsReused": 198,
     "stoppedEarly": true,
     "refreshFailures": 0,
-    "cacheEntries": 536,
+    "cacheEntries": 537,
     "retryWindowRetained": false
   }
 }

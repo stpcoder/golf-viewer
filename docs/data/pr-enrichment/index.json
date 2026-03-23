@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-23T17:49:27.954Z",
+  "generatedAt": "2026-03-23T18:17:02.090Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 562,
+      "title": "Non-record: 1.1354 BPB — 10L TTT 22ep AdamW Cosine + LeakyReLU(0.5)² + TrigramHash",
+      "status": "open",
+      "updatedAt": "2026-03-23T18:13:58Z",
+      "headSha": "c7a96b3a375dec39f649192e45af47cb63ff662b",
+      "generatedAt": "2026-03-23T18:16:57.206Z",
+      "summary": "10L GQA net pairs Value Residual/U-Net skips, gated attention/XSA, LeakyReLU²+TrigramHash with Muon+AdamW+SWA, late QAT int5/int6 quant, per-step cosine TTT.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "optimizer",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-562.json"
+    },
     {
       "prNumber": 560,
       "title": "Non-record: 1x RTX PRO 6000 Blackwell 10L Int5-MLP (1.1935 BPB)",
@@ -287,14 +311,14 @@
       "prNumber": 542,
       "title": "Non-Record: DG Attention, Differential-Gated Attention with Depth-Scheduled Novelty Encoding: (val_bpb=1.1898)",
       "status": "open",
-      "updatedAt": "2026-03-23T16:03:40Z",
-      "headSha": "605f965a5e526d6aa0a461f8624369e68a584934",
-      "generatedAt": "2026-03-23T16:16:59.562Z",
-      "summary": "DG Attention uses gradient-based novelty payloads in deep layers plus Flash-optimized designator matching, with a depth-scheduled gate replacing raw values.",
+      "updatedAt": "2026-03-23T18:00:20Z",
+      "headSha": "c7311ad286bcd470dda608990e1112abbdb7f439",
+      "generatedAt": "2026-03-23T18:17:02.007Z",
+      "summary": "Differential-Gated attention sends novelty deltas instead of raw values in deep layers, with a depth-scheduled β mix learned from β trajectories and Flash attention-aware projections.",
       "tags": [
         "attention",
-        "architecture",
         "training-schedule",
+        "architecture",
         "non-record"
       ],
       "flags": {
