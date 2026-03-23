@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-03-23T10:15:17.725Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 521,
+    "title": "Add RIOM v1 shared-depth recurrence non-record submission",
+    "state": "open",
+    "updatedAt": "2026-03-23T09:59:59Z",
+    "headSha": "4886f248020f2e8dbf6ec70c2db8c9b113f9fe2e",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/521",
+    "authorLogin": "hesong0222-dev"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-23_RIOM_v1_recur/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Shares three transformer blocks across three recurrence loops with learned gates to keep the 9-layer depth while reducing parameters.",
+    "tags": [
+      "architecture",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "shared-depth recurrence",
+      "learned per-loop gates"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

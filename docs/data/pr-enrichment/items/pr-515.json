@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-23T09:45:15.667Z",
+  "generatedAt": "2026-03-23T10:15:31.334Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 515,
     "title": "Record: Atris Labs — val_bpb=1.2015, 10L MLP3x Int5/Int6 BigramHash SmearGate SWA",
     "state": "open",
-    "updatedAt": "2026-03-23T09:34:10Z",
-    "headSha": "a7510192396394343457189a8fb380cc7016df47",
+    "updatedAt": "2026-03-23T10:07:30Z",
+    "headSha": "a8ef14623d6faf9c8ae11e6ffd61de91718af387",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/515",
     "authorLogin": "keshav55"
   },
@@ -20,18 +20,19 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "10-layer MLP3x transformer adds BigramHash/SmearGate, SWA warmdown, and Int5/Int6 quantization with pruning for a compact 16MB artifact.",
+    "summary": "10-layer MLP3x transformer adds BigramHash embeddings, SmearGate gating, SWA warmdown, and dual optimizers before Int5/Int6 quantization.",
     "tags": [
       "architecture",
       "quantization",
+      "optimizer",
       "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "SWA checkpoint averaging during warmdown",
-      "BigramHash embeddings with SmearGate gating",
-      "Int5/Int6 quantization plus 3% pruning"
+      "BigramHash embedding for adjacent token pairs",
+      "SmearGate blends current and previous embeddings per dimension",
+      "Int5/Int6 quantization with pruning and SWA warmdown"
     ]
   },
   "compatibility": {

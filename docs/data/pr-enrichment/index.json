@@ -1,8 +1,30 @@
 {
-  "generatedAt": "2026-03-23T09:45:19.918Z",
+  "generatedAt": "2026-03-23T10:15:38.965Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 521,
+      "title": "Add RIOM v1 shared-depth recurrence non-record submission",
+      "status": "open",
+      "updatedAt": "2026-03-23T09:59:59Z",
+      "headSha": "4886f248020f2e8dbf6ec70c2db8c9b113f9fe2e",
+      "generatedAt": "2026-03-23T10:15:17.725Z",
+      "summary": "Shares three transformer blocks across three recurrence loops with learned gates to keep the 9-layer depth while reducing parameters.",
+      "tags": [
+        "architecture",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-521.json"
+    },
     {
       "prNumber": 518,
       "title": "Record: 11L XSA4 + LeakyReLU(0.5)² + Cosine  TTT 50ep (val_bpb=1.0622)",
@@ -30,10 +52,10 @@
       "prNumber": 517,
       "title": "Record: 0.978 BPB — Goldfish ML Autonomous Research (100ep Cosine TTT)",
       "status": "open",
-      "updatedAt": "2026-03-23T09:15:20Z",
+      "updatedAt": "2026-03-23T09:46:19Z",
       "headSha": "5c2901a63a73adceae10f2a6f492d86427a6e4a8",
-      "generatedAt": "2026-03-23T09:45:09.724Z",
-      "summary": "Autonomous Goldfish ML agent added CosineAnnealingLR to AdamW TTT across 100 epochs with documented experiment lineage.",
+      "generatedAt": "2026-03-23T10:15:25.332Z",
+      "summary": "Goldfish ML agents iterated cosine Annealing LR on AdamW test-time training for 100 epochs to curb position overfit and enable the 0.978 BPB record.",
       "tags": [
         "training-schedule",
         "evaluation"
@@ -76,13 +98,14 @@
       "prNumber": 515,
       "title": "Record: Atris Labs — val_bpb=1.2015, 10L MLP3x Int5/Int6 BigramHash SmearGate SWA",
       "status": "open",
-      "updatedAt": "2026-03-23T09:34:10Z",
-      "headSha": "a7510192396394343457189a8fb380cc7016df47",
-      "generatedAt": "2026-03-23T09:45:15.667Z",
-      "summary": "10-layer MLP3x transformer adds BigramHash/SmearGate, SWA warmdown, and Int5/Int6 quantization with pruning for a compact 16MB artifact.",
+      "updatedAt": "2026-03-23T10:07:30Z",
+      "headSha": "a8ef14623d6faf9c8ae11e6ffd61de91718af387",
+      "generatedAt": "2026-03-23T10:15:31.334Z",
+      "summary": "10-layer MLP3x transformer adds BigramHash embeddings, SmearGate gating, SWA warmdown, and dual optimizers before Int5/Int6 quantization.",
       "tags": [
         "architecture",
         "quantization",
+        "optimizer",
         "training-schedule"
       ],
       "flags": {
@@ -961,24 +984,25 @@
     },
     {
       "prNumber": 467,
-      "title": "[track_10min_16mb] LoRA TTT + SOTA Int5/Int6 (10L, BigramHash, SWA) — Atharva Date (ADIITJ)",
+      "title": "[track_10min_16mb] 50-Epoch Cosine LoRA TTT + SOTA (10L Int5/Int6 BigramHash SWA) — Atharva Date (ADIITJ)",
       "status": "open",
-      "updatedAt": "2026-03-22T22:13:23Z",
-      "headSha": "b8d53d4917af449fd6892d3ddcb7922724a7063c",
-      "generatedAt": "2026-03-22T22:42:58.679Z",
-      "summary": "SOTA 10-layer Int5/Int6 stack adds document-isolated LoRA TTT at eval, resetting rank-8 Q/V adapters per doc while keeping the artifact unchanged.",
+      "updatedAt": "2026-03-23T10:00:38Z",
+      "headSha": "148aa6bef69342763ba425b4061dda0ef2f41034",
+      "generatedAt": "2026-03-23T10:15:38.894Z",
+      "summary": "Pairs the 10-layer Int5/Int6 SOTA base with document-isolated 50-epoch cosine LoRA TTT on Q/V adapters, scoring only after adapter resets per document.",
       "tags": [
-        "evaluation",
-        "non-record",
-        "val-only"
+        "architecture",
+        "quantization",
+        "training-schedule",
+        "evaluation"
       ],
       "flags": {
-        "usesValOnly": true,
-        "usesValOnlyAi": true,
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": false
+        "valOnlyMatchesCollector": true
       },
       "file": "items/pr-467.json"
     },

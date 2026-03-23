@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-22T22:42:58.679Z",
+  "generatedAt": "2026-03-23T10:15:38.894Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 467,
-    "title": "[track_10min_16mb] LoRA TTT + SOTA Int5/Int6 (10L, BigramHash, SWA) — Atharva Date (ADIITJ)",
+    "title": "[track_10min_16mb] 50-Epoch Cosine LoRA TTT + SOTA (10L Int5/Int6 BigramHash SWA) — Atharva Date (ADIITJ)",
     "state": "open",
-    "updatedAt": "2026-03-22T22:13:23Z",
-    "headSha": "b8d53d4917af449fd6892d3ddcb7922724a7063c",
+    "updatedAt": "2026-03-23T10:00:38Z",
+    "headSha": "148aa6bef69342763ba425b4061dda0ef2f41034",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/467",
     "authorLogin": "ADIITJ"
   },
@@ -19,24 +19,25 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "SOTA 10-layer Int5/Int6 stack adds document-isolated LoRA TTT at eval, resetting rank-8 Q/V adapters per doc while keeping the artifact unchanged.",
+    "summary": "Pairs the 10-layer Int5/Int6 SOTA base with document-isolated 50-epoch cosine LoRA TTT on Q/V adapters, scoring only after adapter resets per document.",
     "tags": [
-      "evaluation",
-      "non-record",
-      "val-only"
+      "architecture",
+      "quantization",
+      "training-schedule",
+      "evaluation"
     ],
-    "usesValOnly": true,
-    "valOnlyReasoning": "Adapters are trained only during evaluation on validation documents using already-scored tokens, with no new training data stored.",
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
     "techniques": [
-      "Document-isolated LoRA test-time training on validation chunks",
-      "Chunk-level score-before-train flow with rank-8 Q/V adapters",
-      "Int5-MLP + Int6-Attn quantization and SWA tuning"
+      "Multi-epoch cosine LR LoRA TTT on Q/V projections",
+      "Document-isolated LoRA reset with score-first per chunk",
+      "SOTA 10L Int5-MLP + Int6-Attn quantized base"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": true,
-    "finalUsesValOnly": true,
-    "valOnlyMatchesCollector": false
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
   }
 }

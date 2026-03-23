@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-23T09:45:09.724Z",
+  "generatedAt": "2026-03-23T10:15:25.332Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 517,
     "title": "Record: 0.978 BPB — Goldfish ML Autonomous Research (100ep Cosine TTT)",
     "state": "open",
-    "updatedAt": "2026-03-23T09:15:20Z",
+    "updatedAt": "2026-03-23T09:46:19Z",
     "headSha": "5c2901a63a73adceae10f2a6f492d86427a6e4a8",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/517",
     "authorLogin": "lukacf"
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Autonomous Goldfish ML agent added CosineAnnealingLR to AdamW TTT across 100 epochs with documented experiment lineage.",
+    "summary": "Goldfish ML agents iterated cosine Annealing LR on AdamW test-time training for 100 epochs to curb position overfit and enable the 0.978 BPB record.",
     "tags": [
       "training-schedule",
       "evaluation"
@@ -27,9 +27,8 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Goldfish ML orchestrated agent-led research loop",
-      "CosineAnnealingLR on AdamW TTT for extended epochs",
-      "Immutable provenance tracking of experiments"
+      "CosineAnnealingLR over 100-epoch AdamW TTT",
+      "Autonomous Goldfish ML experiment orchestration"
     ]
   },
   "compatibility": {
