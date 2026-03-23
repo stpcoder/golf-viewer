@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-23T03:44:06.638Z",
+  "generatedAt": "2026-03-23T06:14:52.000Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 484,
     "title": "Non-record: SwiGLU + EMA + AdamW TTT + EBLS Findings (val_bpb=1.1746 on H100 NVL)",
     "state": "open",
-    "updatedAt": "2026-03-23T03:26:38Z",
-    "headSha": "8d0d21aefe7becc62421b9bad3466a9de740666c",
+    "updatedAt": "2026-03-23T06:01:25Z",
+    "headSha": "911252edd8e2d2a01f63048e2469ef90a2261d1f",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/484",
     "authorLogin": "Robby955"
   },
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines SwiGLU gating, EMA warmdown, eval-time AdamW TTT on MLPs, and EBLS layer-sharing insights to refine the shared-layer, quantized model.",
+    "summary": "Uses SwiGLU+EMA GPT with int5 quantization while probing EBLS sharing and eval-time AdamW TTT behavior to highlight depth-recurrent specialization limits.",
     "tags": [
       "architecture",
-      "evaluation",
-      "quantization"
+      "quantization",
+      "optimizer",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "SwiGLU MLP with EMA warmdown replacing ReLU²/SWA",
-      "Eval-time AdamW TTT adapts MLP weights per sliding window",
-      "EBLS depth-recurrent sharing exposes MLP invariance and quantization-noise amplification"
+      "SwiGLU MLP + EMA warmdown",
+      "Int5 quantization with 5% magnitude pruning",
+      "EBLS probing of shared-depth gamma specialization"
     ]
   },
   "compatibility": {

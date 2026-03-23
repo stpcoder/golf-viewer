@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-23T06:14:44.371Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 507,
+    "title": "Record: 1.1558 BPB — 11L U-Net + Catalytic + SwiGLU + SW64",
+    "state": "open",
+    "updatedAt": "2026-03-23T05:46:52Z",
+    "headSha": "da436e03f2fe637a8a0d07f4ec4464907d4e901c",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/507",
+    "authorLogin": "skarakulak"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-23_11L_UNet_Catalytic_SwiGLU_SW64/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11-layer U-Net transformer mixes gated encoder–decoder skips, Catalytic residuals, and SwiGLU MLPs with sliding-window eval for richer context.",
+    "tags": [
+      "architecture",
+      "attention",
+      "optimizer",
+      "compression"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "11-layer U-Net skips with SwiGLU and Catalytic residual gating",
+      "Value residual blending plus LN dampening and decoder LR multiplier tuning",
+      "Int5/6 mixed quantization with sliding-window evaluation"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
