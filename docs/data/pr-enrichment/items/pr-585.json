@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-23T23:19:15.951Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 585,
+    "title": "Record: int5 GPTQ + 33.6M model (3-seed mean val_bpb=1.1179)",
+    "state": "open",
+    "updatedAt": "2026-03-23T23:14:19Z",
+    "headSha": "e1595978f7da5e674ea976d4b832e7f81b4a94ed",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/585",
+    "authorLogin": "EthanYangTW"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-24_Int5GPTQ_33M_LegalTTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Legal score-first TTT trains a 33.6M MLP/BigramHash model compressed via int5 GPTQ to squeeze under 16MB.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "training-schedule",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "int5 GPTQ with Hessian-aware compensation",
+      "legal score-first TTT chunk scoring",
+      "33.6M MLP/BigramHash architecture with XSA"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

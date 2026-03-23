@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-23T22:49:03.053Z",
-  "lastSeenUpdatedAt": "2026-03-23T22:39:56Z",
+  "generatedAt": "2026-03-23T23:19:04.205Z",
+  "lastSeenUpdatedAt": "2026-03-23T23:18:22Z",
   "prs": {
     "1": {
       "number": 1,
@@ -36566,7 +36566,7 @@
     },
     "435": {
       "number": 435,
-      "updatedAt": "2026-03-23T12:18:07Z",
+      "updatedAt": "2026-03-23T23:16:14Z",
       "pr": {
         "number": 435,
         "title": "Radial bitnet submission",
@@ -36577,8 +36577,8 @@
         "authorLogin": "rthgit",
         "authorName": null,
         "createdAt": "2026-03-22T16:31:21Z",
-        "updatedAt": "2026-03-23T12:18:07Z",
-        "headSha": "fab7c61166a9a65649aec869722d6714149bd10a",
+        "updatedAt": "2026-03-23T23:16:14Z",
+        "headSha": "796aa499f701b05296e49da6cf5040a2589943a8",
         "headRepo": "rthgit/parameter-golf"
       },
       "submissions": [
@@ -36640,16 +36640,16 @@
             "authorLogin": "rthgit",
             "authorName": null,
             "createdAt": "2026-03-22T16:31:21Z",
-            "updatedAt": "2026-03-23T12:18:07Z",
-            "headSha": "fab7c61166a9a65649aec869722d6714149bd10a",
+            "updatedAt": "2026-03-23T23:16:14Z",
+            "headSha": "796aa499f701b05296e49da6cf5040a2589943a8",
             "headRepo": "rthgit/parameter-golf"
           },
           "links": {
-            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/fab7c61166a9a65649aec869722d6714149bd10a/records/track_10min_16mb/2026-03-22_RadialBitNet/submission.json",
-            "readme": "https://github.com/openai/parameter-golf/blob/fab7c61166a9a65649aec869722d6714149bd10a/records/track_10min_16mb/2026-03-22_RadialBitNet/README.md",
-            "trainLog": "https://github.com/openai/parameter-golf/blob/fab7c61166a9a65649aec869722d6714149bd10a/records/track_10min_16mb/2026-03-22_RadialBitNet/train.log",
-            "script": "https://github.com/openai/parameter-golf/blob/fab7c61166a9a65649aec869722d6714149bd10a/records/track_10min_16mb/2026-03-22_RadialBitNet/train_gpt.py",
-            "folder": "https://github.com/openai/parameter-golf/tree/fab7c61166a9a65649aec869722d6714149bd10a/records/track_10min_16mb/2026-03-22_RadialBitNet",
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/796aa499f701b05296e49da6cf5040a2589943a8/records/track_10min_16mb/2026-03-22_RadialBitNet/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/796aa499f701b05296e49da6cf5040a2589943a8/records/track_10min_16mb/2026-03-22_RadialBitNet/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/796aa499f701b05296e49da6cf5040a2589943a8/records/track_10min_16mb/2026-03-22_RadialBitNet/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/796aa499f701b05296e49da6cf5040a2589943a8/records/track_10min_16mb/2026-03-22_RadialBitNet/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/796aa499f701b05296e49da6cf5040a2589943a8/records/track_10min_16mb/2026-03-22_RadialBitNet",
             "pr": "https://github.com/openai/parameter-golf/pull/435"
           }
         }
@@ -46310,22 +46310,94 @@
     },
     "545": {
       "number": 545,
-      "updatedAt": "2026-03-23T17:35:19Z",
+      "updatedAt": "2026-03-23T23:07:58Z",
       "pr": {
         "number": 545,
         "title": "Record: int5 GPTQ + 33.6M model (3-seed mean val_bpb=1.1179)",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/545",
         "authorLogin": "EthanYangTW",
         "authorName": null,
         "createdAt": "2026-03-23T15:58:50Z",
-        "updatedAt": "2026-03-23T17:35:19Z",
-        "headSha": "bdc6da96bcc83225b0b87f19173cbc7a7c338eb6",
+        "updatedAt": "2026-03-23T23:07:58Z",
+        "headSha": "e1595978f7da5e674ea976d4b832e7f81b4a94ed",
         "headRepo": "EthanYangTW/parameter-golf"
       },
-      "submissions": []
+      "submissions": [
+        {
+          "id": "pr-545-records-track_10min_16mb-2026-03-24_Int5GPTQ_33M_LegalTTT-submission-json",
+          "source": "pull_request",
+          "status": "closed",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-24_Int5GPTQ_33M_LegalTTT",
+            "folderPath": "records/track_10min_16mb/2026-03-24_Int5GPTQ_33M_LegalTTT",
+            "submissionPath": "records/track_10min_16mb/2026-03-24_Int5GPTQ_33M_LegalTTT/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-24_Int5GPTQ_33M_LegalTTT/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-24_Int5GPTQ_33M_LegalTTT/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-24_Int5GPTQ_33M_LegalTTT/train_gpt.py"
+          },
+          "submission": {
+            "author": "Ethan Yang",
+            "githubId": "EthanYangTW",
+            "name": "Record: int5 GPTQ + 33.6M model (3-seed mean val_bpb=1.1179)",
+            "blurb": "Breakthrough: int5 quantization ([-15,15]) with GPTQ error compensation enables 33.6M params in 16MB. MHA 8/8, BigramHash 8192, MLP 3.5x, XSA all 11 layers. GPTQ makes int5 nearly lossless (0.001 BPB quant tax). Combined with early QAT 0.5, EMA 0.997, and legal score-first AdamW TTT.",
+            "date": "2026-03-24T00:00:00Z"
+          },
+          "metrics": {
+            "valBpb": 1.1179,
+            "valLoss": null,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": null,
+            "bytesCode": null,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 545,
+            "title": "Record: int5 GPTQ + 33.6M model (3-seed mean val_bpb=1.1179)",
+            "state": "closed",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/545",
+            "authorLogin": "EthanYangTW",
+            "authorName": null,
+            "createdAt": "2026-03-23T15:58:50Z",
+            "updatedAt": "2026-03-23T23:07:58Z",
+            "headSha": "e1595978f7da5e674ea976d4b832e7f81b4a94ed",
+            "headRepo": "EthanYangTW/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/e1595978f7da5e674ea976d4b832e7f81b4a94ed/records/track_10min_16mb/2026-03-24_Int5GPTQ_33M_LegalTTT/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/e1595978f7da5e674ea976d4b832e7f81b4a94ed/records/track_10min_16mb/2026-03-24_Int5GPTQ_33M_LegalTTT/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/e1595978f7da5e674ea976d4b832e7f81b4a94ed/records/track_10min_16mb/2026-03-24_Int5GPTQ_33M_LegalTTT/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/e1595978f7da5e674ea976d4b832e7f81b4a94ed/records/track_10min_16mb/2026-03-24_Int5GPTQ_33M_LegalTTT/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/e1595978f7da5e674ea976d4b832e7f81b4a94ed/records/track_10min_16mb/2026-03-24_Int5GPTQ_33M_LegalTTT",
+            "pr": "https://github.com/openai/parameter-golf/pull/545"
+          }
+        }
+      ]
     },
     "546": {
       "number": 546,
@@ -49845,6 +49917,207 @@
             "script": "https://github.com/openai/parameter-golf/blob/edcc5e449787d3483403e06597271821abd46141/records/track_10min_16mb/2026-03-23_10L_Int5MLP3x_BigramHash4096_SlidingEval/train_gpt.py",
             "folder": "https://github.com/openai/parameter-golf/tree/edcc5e449787d3483403e06597271821abd46141/records/track_10min_16mb/2026-03-23_10L_Int5MLP3x_BigramHash4096_SlidingEval",
             "pr": "https://github.com/openai/parameter-golf/pull/583"
+          }
+        }
+      ]
+    },
+    "584": {
+      "number": 584,
+      "updatedAt": "2026-03-23T22:51:21Z",
+      "pr": {
+        "number": 584,
+        "title": "5 novel architecture ablations on SOTA baseline",
+        "state": "closed",
+        "draft": true,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/584",
+        "authorLogin": "ssatia",
+        "authorName": null,
+        "createdAt": "2026-03-23T22:50:39Z",
+        "updatedAt": "2026-03-23T22:51:21Z",
+        "headSha": "7d6afdc3b8cd36a4faa6225820366883d819ea57",
+        "headRepo": null
+      },
+      "submissions": []
+    },
+    "585": {
+      "number": 585,
+      "updatedAt": "2026-03-23T23:14:19Z",
+      "pr": {
+        "number": 585,
+        "title": "Record: int5 GPTQ + 33.6M model (3-seed mean val_bpb=1.1179)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/585",
+        "authorLogin": "EthanYangTW",
+        "authorName": null,
+        "createdAt": "2026-03-23T23:07:57Z",
+        "updatedAt": "2026-03-23T23:14:19Z",
+        "headSha": "e1595978f7da5e674ea976d4b832e7f81b4a94ed",
+        "headRepo": "EthanYangTW/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-585-records-track_10min_16mb-2026-03-24_Int5GPTQ_33M_LegalTTT-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-24_Int5GPTQ_33M_LegalTTT",
+            "folderPath": "records/track_10min_16mb/2026-03-24_Int5GPTQ_33M_LegalTTT",
+            "submissionPath": "records/track_10min_16mb/2026-03-24_Int5GPTQ_33M_LegalTTT/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-24_Int5GPTQ_33M_LegalTTT/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-24_Int5GPTQ_33M_LegalTTT/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-24_Int5GPTQ_33M_LegalTTT/train_gpt.py"
+          },
+          "submission": {
+            "author": "Ethan Yang",
+            "githubId": "EthanYangTW",
+            "name": "Record: int5 GPTQ + 33.6M model (3-seed mean val_bpb=1.1179)",
+            "blurb": "Breakthrough: int5 quantization ([-15,15]) with GPTQ error compensation enables 33.6M params in 16MB. MHA 8/8, BigramHash 8192, MLP 3.5x, XSA all 11 layers. GPTQ makes int5 nearly lossless (0.001 BPB quant tax). Combined with early QAT 0.5, EMA 0.997, and legal score-first AdamW TTT.",
+            "date": "2026-03-24T00:00:00Z"
+          },
+          "metrics": {
+            "valBpb": 1.1179,
+            "valLoss": null,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": null,
+            "bytesCode": null,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 585,
+            "title": "Record: int5 GPTQ + 33.6M model (3-seed mean val_bpb=1.1179)",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/585",
+            "authorLogin": "EthanYangTW",
+            "authorName": null,
+            "createdAt": "2026-03-23T23:07:57Z",
+            "updatedAt": "2026-03-23T23:14:19Z",
+            "headSha": "e1595978f7da5e674ea976d4b832e7f81b4a94ed",
+            "headRepo": "EthanYangTW/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/e1595978f7da5e674ea976d4b832e7f81b4a94ed/records/track_10min_16mb/2026-03-24_Int5GPTQ_33M_LegalTTT/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/e1595978f7da5e674ea976d4b832e7f81b4a94ed/records/track_10min_16mb/2026-03-24_Int5GPTQ_33M_LegalTTT/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/e1595978f7da5e674ea976d4b832e7f81b4a94ed/records/track_10min_16mb/2026-03-24_Int5GPTQ_33M_LegalTTT/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/e1595978f7da5e674ea976d4b832e7f81b4a94ed/records/track_10min_16mb/2026-03-24_Int5GPTQ_33M_LegalTTT/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/e1595978f7da5e674ea976d4b832e7f81b4a94ed/records/track_10min_16mb/2026-03-24_Int5GPTQ_33M_LegalTTT",
+            "pr": "https://github.com/openai/parameter-golf/pull/585"
+          }
+        }
+      ]
+    },
+    "586": {
+      "number": 586,
+      "updatedAt": "2026-03-23T23:18:22Z",
+      "pr": {
+        "number": 586,
+        "title": "Record: 11L + Hadamard Rotation + VE128 + cuDNN SDPA (val_bpb: 1.1365)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/586",
+        "authorLogin": "EaCognitive",
+        "authorName": null,
+        "createdAt": "2026-03-23T23:18:22Z",
+        "updatedAt": "2026-03-23T23:18:22Z",
+        "headSha": "d06ff895821719c9e979e9c6097ff71e53c829e0",
+        "headRepo": "EaCognitive/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-586-records-track_non_record_16mb-2026-03-24_Hadamard_VE128_QuIP-lite-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "non-record",
+          "track": {
+            "path": "records/track_non_record_16mb",
+            "slug": "track_non_record_16mb",
+            "label": "Non-record / 16MB",
+            "official": false,
+            "category": "non-record"
+          },
+          "record": {
+            "folderName": "2026-03-24_Hadamard_VE128_QuIP-lite",
+            "folderPath": "records/track_non_record_16mb/2026-03-24_Hadamard_VE128_QuIP-lite",
+            "submissionPath": "records/track_non_record_16mb/2026-03-24_Hadamard_VE128_QuIP-lite/submission.json",
+            "readmePath": "records/track_non_record_16mb/2026-03-24_Hadamard_VE128_QuIP-lite/README.md",
+            "trainLogPath": "records/track_non_record_16mb/2026-03-24_Hadamard_VE128_QuIP-lite/train.log",
+            "scriptPath": "records/track_non_record_16mb/2026-03-24_Hadamard_VE128_QuIP-lite/train_gpt.py"
+          },
+          "submission": {
+            "author": "Erick Aleman",
+            "githubId": "eacognitive",
+            "name": "11L + Hadamard Rotation + VE128 + cuDNN SDPA",
+            "blurb": "First application of Walsh-Hadamard rotation for int6 quantization in parameter-constrained LLMs. Improves zstd compression from 1.70x to 1.76x, recovering 530KB of artifact headroom that enables Shared Value Embeddings (VE128). Demonstrates that Hadamard rotation and GPTQ are substitutes at int6 precision.",
+            "date": "2026-03-24"
+          },
+          "metrics": {
+            "valBpb": 1.1365,
+            "valLoss": null,
+            "preQuantValBpb": 1.1515,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": 15629540,
+            "bytesCode": 52010,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 586,
+            "title": "Record: 11L + Hadamard Rotation + VE128 + cuDNN SDPA (val_bpb: 1.1365)",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/586",
+            "authorLogin": "EaCognitive",
+            "authorName": null,
+            "createdAt": "2026-03-23T23:18:22Z",
+            "updatedAt": "2026-03-23T23:18:22Z",
+            "headSha": "d06ff895821719c9e979e9c6097ff71e53c829e0",
+            "headRepo": "EaCognitive/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/d06ff895821719c9e979e9c6097ff71e53c829e0/records/track_non_record_16mb/2026-03-24_Hadamard_VE128_QuIP-lite/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/d06ff895821719c9e979e9c6097ff71e53c829e0/records/track_non_record_16mb/2026-03-24_Hadamard_VE128_QuIP-lite/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/d06ff895821719c9e979e9c6097ff71e53c829e0/records/track_non_record_16mb/2026-03-24_Hadamard_VE128_QuIP-lite/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/d06ff895821719c9e979e9c6097ff71e53c829e0/records/track_non_record_16mb/2026-03-24_Hadamard_VE128_QuIP-lite/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/d06ff895821719c9e979e9c6097ff71e53c829e0/records/track_non_record_16mb/2026-03-24_Hadamard_VE128_QuIP-lite",
+            "pr": "https://github.com/openai/parameter-golf/pull/586"
           }
         }
       ]
