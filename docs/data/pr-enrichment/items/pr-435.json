@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-23T12:16:07.872Z",
+  "generatedAt": "2026-03-23T12:46:03.435Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 435,
     "title": "Radial bitnet submission",
     "state": "open",
-    "updatedAt": "2026-03-23T12:15:50Z",
+    "updatedAt": "2026-03-23T12:18:07Z",
     "headSha": "fab7c61166a9a65649aec869722d6714149bd10a",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/435",
     "authorLogin": "rthgit"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Radial-BitNet packs 15.6M ternary params into 16MB by combining BitNet quantization with radial positional injection and the FRO optimizer for 10-minute convergence.",
+    "summary": "Radial-BitNet packs BitNet-style ternary projections, RadialEncoding positional features, and the FRO optimizer into a 16MB-efficient language-model design.",
     "tags": [
       "quantization",
-      "architecture",
       "positional-encoding",
-      "optimizer"
+      "optimizer",
+      "architecture"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Ternary BitLinear expansions across attention and MLP layers",
-      "RadialEncoding injects Euler-based geometry instead of learned positions",
-      "FRO optimizer aligns multi-scale resonance for fast, constrained convergence"
+      "BitNet-style ternary linear projections",
+      "RadialEncoding analytic positional features",
+      "FRO optimizer tuned for quantized dynamics"
     ]
   },
   "compatibility": {

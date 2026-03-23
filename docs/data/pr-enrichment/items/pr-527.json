@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-23T12:45:47.190Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 527,
+    "title": "Submit 1x A100 QAT Fix - 1.4078 BPB (Non-Record)",
+    "state": "open",
+    "updatedAt": "2026-03-23T12:44:12Z",
+    "headSha": "9e0f7b95c4019f498403d3bbbe8964d5d6a1a035",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/527",
+    "authorLogin": "Shuvam-Banerji-Seal"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-23_Single_A100_QAT_FastFix/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Single-A100 QAT refines CastedLinear clip estimator via w.abs().amax+clamp_min and rescales accumulation/LR scheduling to fit the 10-minute run.",
+    "tags": [
+      "quantization",
+      "training-schedule",
+      "optimizer",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "CastedLinear clip estimator using w.abs().amax(dim=1) clamp_min",
+      "Adjusted grad accumulation and LR schedule for single-device limits",
+      "Removed torch.quantile to dodge Triton compiler penalty"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

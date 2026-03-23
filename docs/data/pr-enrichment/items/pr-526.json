@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-03-23T12:45:53.174Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 526,
+    "title": "Non-record: 11L + 30-Epoch Legal TTT (BPB 1.14252)",
+    "state": "open",
+    "updatedAt": "2026-03-23T12:36:14Z",
+    "headSha": "dbf99ceb9a6560bd808de65cf82a3f66dca8145a",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/526",
+    "authorLogin": "Christopher-Lee-McClendon"
+  },
+  "inputs": {
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-23_11L_VE128_PartialRoPE_LegalTTT_30ep/README.md",
+      "records/track_non_record_16mb/2026-03-22_11L_VE128_PartialRoPE_LegalTTT/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "11-layer depth-recurrence GPT freezes early blocks and runs 30-epoch SGD momentum per 32K chunk for legal score-first TTT adaptation.",
+    "tags": [
+      "val-only",
+      "architecture",
+      "training-schedule",
+      "optimizer"
+    ],
+    "usesValOnly": true,
+    "valOnlyReasoning": "Legal score-first test-time training repeatedly adapts on validation chunks with SGD while scoring each token beforehand.",
+    "techniques": [
+      "Depth recurrence with shared BlockCores, partial RoPE, and VE on deep layers",
+      "Legal score-first TTT: 30-epoch SGD momentum per chunk with frozen early layers",
+      "Int6+zstd quantization plus SWA and Late QAT"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-23T12:45:59.471Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 525,
+    "title": "Non-record: 10L Optimized (val_bpb=1.1477)",
+    "state": "open",
+    "updatedAt": "2026-03-23T12:28:56Z",
+    "headSha": "da7f4fb01c31912943047d287c5fefcb46a148bd",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/525",
+    "authorLogin": "hypery11"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-23_10L_Optimized/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "10-layer 512d transformer with GQA, hash embeddings, U-Net skips, improved activations, and mixed int5/int6 quantization trained via EMA Muon+AdamW.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "muon",
+      "optimizer"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Mixed int5/int6 quantization across attention and MLP",
+      "GQA heads with hash embeddings and U-Net skip ties",
+      "Muon+AdamW training with EMA weight averaging"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
