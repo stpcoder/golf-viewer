@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-23T14:46:51.308Z",
+  "generatedAt": "2026-03-23T16:17:09.247Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 532,
     "title": "Record: pcloadloveletter v6 — Novel Codebook+Huffman Compression + AdamW TTT (val_bpb=1.0487)",
-    "state": "open",
-    "updatedAt": "2026-03-23T14:44:17Z",
+    "state": "closed",
+    "updatedAt": "2026-03-23T15:50:27Z",
     "headSha": "6379f921c22a322c322463e5768433f33bde488f",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/532",
     "authorLogin": "NotADevIAmaMeatPopsicle"
@@ -22,18 +22,18 @@
     "submissionCount": 4
   },
   "output": {
-    "summary": "Codebook-quantized transformer weights pass through per-tensor Huffman coding in a custom PCLL pipeline so the GQA model stays under 16MB.",
+    "summary": "Combines per-tensor k-means codebooks with Huffman entropy coding and AdamW test-time tuning to keep the transformer artifact under 16MB.",
     "tags": [
-      "quantization",
       "compression",
+      "quantization",
       "optimizer"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "Standard training with AdamW test-time tuning; no validation-only training regime is used.",
+    "valOnlyReasoning": "",
     "techniques": [
-      "Per-tensor k-means codebook quantization with Huffman coding in a custom PCLL pipeline",
-      "AdamW test-time training with per-layer lr groups on top of NorMuon base",
-      "Value Residual + Gated Attention + partial RoPE + LeakyReLU(0.5)^2 stack"
+      "Per-tensor k-means codebooks for weights",
+      "Huffman entropy coding of quantized indices",
+      "Layered AdamW test-time tuning schedule"
     ]
   },
   "compatibility": {

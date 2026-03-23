@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-23T13:16:09.697Z",
+  "generatedAt": "2026-03-23T16:17:13.834Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 527,
     "title": "Submit 1x A100 QAT Fix - 1.4078 BPB (Non-Record)",
     "state": "open",
-    "updatedAt": "2026-03-23T12:48:41Z",
-    "headSha": "9e0f7b95c4019f498403d3bbbe8964d5d6a1a035",
+    "updatedAt": "2026-03-23T15:57:15Z",
+    "headSha": "93808f61ff4aea06d8aaf8b917bf699231bed13e",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/527",
     "authorLogin": "Shuvam-Banerji-Seal"
   },
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Downscaled QAT run on single A100, retuned LR schedule and replaced torch.quantile with w.abs().amax to dodge Triton penalty.",
+    "summary": "Tweaked modded-NanoGPT QAT to fit single A100 by shrinking accumulations and swapping torch.quantile for w.abs().amax to dodge Triton slowdowns.",
     "tags": [
       "quantization",
       "training-schedule",
@@ -28,9 +28,8 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "CastedLinear QAT with straight-through estimators",
-      "Clip scaling via w.abs().amax(dim=1) to avoid torch.quantile/Triton slowdown",
-      "Reduced grad accumulation to fit single-A100 LR schedule"
+      "Adapted gradient accumulation/LR schedule for single-device runs",
+      "Replaced torch.quantile with w.abs().amax to avoid compiler penalties"
     ]
   },
   "compatibility": {

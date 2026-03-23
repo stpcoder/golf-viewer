@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-23T16:16:48.730Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 548,
+    "title": "Record: Loqui Auris — 10L + LoRA TTT (mean val_bpb=1.0865, 2 seeds)",
+    "state": "open",
+    "updatedAt": "2026-03-23T16:11:26Z",
+    "headSha": "849c02e8f7b633a7f7a20d7d31e660f1aae22891",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/548",
+    "authorLogin": "LoquiAuris"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-23_LoquiAuris_10L_LoRA_TTT_1.0865/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "10L GQA model trains with EMA and INT6 quantization, then runs batched per-document LoRA TTT on a fresh uncompiled copy to fit 16MB.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "evaluation",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "10-layer GQA with ReLU² MLP and U-Net skips",
+      "Per-document LoRA TTT on fresh uncompiled copy",
+      "INT6 quantized weights with EMA-trained checkpoint"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

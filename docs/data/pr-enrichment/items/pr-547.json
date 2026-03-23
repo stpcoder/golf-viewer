@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-23T16:16:53.652Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 547,
+    "title": "Record: Int5/Int6+Zstd+MLP3x — mean val_bpb=1.1752 (10L, seq4096, sliding window)",
+    "state": "open",
+    "updatedAt": "2026-03-23T16:09:10Z",
+    "headSha": "ca6a9b503d3e7324f474b8ec5c537b21f2d2ce2f",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/547",
+    "authorLogin": "shajalahamedcse"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-23_Int5Int6_Zstd_MLP3x/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Int5 quantized MLPs plus int6 attention and Zstd shrink weights, funding a 3x wider MLP in a 10-layer, seq4096 sliding-window model.",
+    "tags": [
+      "quantization",
+      "compression",
+      "architecture",
+      "sliding-window-eval"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Int5 MLP / Int6 attention quantization",
+      "Zstd compresses quantized weights",
+      "3x MLP expansion funded by budget savings"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

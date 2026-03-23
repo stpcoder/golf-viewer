@@ -1,8 +1,79 @@
 {
-  "generatedAt": "2026-03-23T15:47:27.617Z",
+  "generatedAt": "2026-03-23T16:17:13.914Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 549,
+      "title": "Record: LeakyReLU² + Legal Score-First TTT + Parallel Muon — val_bpb 1.1195 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-03-23T16:08:26Z",
+      "headSha": "f6a0b0dca3ccf1ef60305b8eb31a091c016fcf7e",
+      "generatedAt": "2026-03-23T16:16:43.069Z",
+      "summary": "Combines LeakyReLU(0.5)² MLPs with legal score-first TTT and Parallel Muon/Parameter Banking on the PR #414 stack for enhanced adaptation.",
+      "tags": [
+        "architecture",
+        "optimizer",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-549.json"
+    },
+    {
+      "prNumber": 548,
+      "title": "Record: Loqui Auris — 10L + LoRA TTT (mean val_bpb=1.0865, 2 seeds)",
+      "status": "open",
+      "updatedAt": "2026-03-23T16:11:26Z",
+      "headSha": "849c02e8f7b633a7f7a20d7d31e660f1aae22891",
+      "generatedAt": "2026-03-23T16:16:48.730Z",
+      "summary": "10L GQA model trains with EMA and INT6 quantization, then runs batched per-document LoRA TTT on a fresh uncompiled copy to fit 16MB.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "evaluation",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-548.json"
+    },
+    {
+      "prNumber": 547,
+      "title": "Record: Int5/Int6+Zstd+MLP3x — mean val_bpb=1.1752 (10L, seq4096, sliding window)",
+      "status": "open",
+      "updatedAt": "2026-03-23T16:09:10Z",
+      "headSha": "ca6a9b503d3e7324f474b8ec5c537b21f2d2ce2f",
+      "generatedAt": "2026-03-23T16:16:53.652Z",
+      "summary": "Int5 quantized MLPs plus int6 attention and Zstd shrink weights, funding a 3x wider MLP in a 10-layer, seq4096 sliding-window model.",
+      "tags": [
+        "quantization",
+        "compression",
+        "architecture",
+        "sliding-window-eval"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-547.json"
+    },
     {
       "prNumber": 543,
       "title": "Non-record: 11L Partial RoPE + XSA4 + VE128 + Tight SWA + GPTQ-lite (val_bpb=1.1804)",
@@ -31,10 +102,10 @@
       "prNumber": 542,
       "title": "Non-Record: DG Attention, Differential-Gated Attention with Depth-Scheduled Novelty Encoding: (val_bpb=1.1898)",
       "status": "open",
-      "updatedAt": "2026-03-23T15:34:59Z",
-      "headSha": "b3c24d97fdd00372707ec1d79ac84fcda2adb259",
-      "generatedAt": "2026-03-23T15:46:51.699Z",
-      "summary": "DG Attention transmits novelty-weighted value deltas in deep layers via an empirical depth schedule instead of raw content.",
+      "updatedAt": "2026-03-23T16:03:40Z",
+      "headSha": "605f965a5e526d6aa0a461f8624369e68a584934",
+      "generatedAt": "2026-03-23T16:16:59.562Z",
+      "summary": "DG Attention uses gradient-based novelty payloads in deep layers plus Flash-optimized designator matching, with a depth-scheduled gate replacing raw values.",
       "tags": [
         "attention",
         "architecture",
@@ -212,14 +283,14 @@
     {
       "prNumber": 532,
       "title": "Record: pcloadloveletter v6 — Novel Codebook+Huffman Compression + AdamW TTT (val_bpb=1.0487)",
-      "status": "open",
-      "updatedAt": "2026-03-23T14:44:17Z",
+      "status": "closed",
+      "updatedAt": "2026-03-23T15:50:27Z",
       "headSha": "6379f921c22a322c322463e5768433f33bde488f",
-      "generatedAt": "2026-03-23T14:46:51.308Z",
-      "summary": "Codebook-quantized transformer weights pass through per-tensor Huffman coding in a custom PCLL pipeline so the GQA model stays under 16MB.",
+      "generatedAt": "2026-03-23T16:17:09.247Z",
+      "summary": "Combines per-tensor k-means codebooks with Huffman entropy coding and AdamW test-time tuning to keep the transformer artifact under 16MB.",
       "tags": [
-        "quantization",
         "compression",
+        "quantization",
         "optimizer"
       ],
       "flags": {
@@ -283,10 +354,10 @@
       "prNumber": 527,
       "title": "Submit 1x A100 QAT Fix - 1.4078 BPB (Non-Record)",
       "status": "open",
-      "updatedAt": "2026-03-23T12:48:41Z",
-      "headSha": "9e0f7b95c4019f498403d3bbbe8964d5d6a1a035",
-      "generatedAt": "2026-03-23T13:16:09.697Z",
-      "summary": "Downscaled QAT run on single A100, retuned LR schedule and replaced torch.quantile with w.abs().amax to dodge Triton penalty.",
+      "updatedAt": "2026-03-23T15:57:15Z",
+      "headSha": "93808f61ff4aea06d8aaf8b917bf699231bed13e",
+      "generatedAt": "2026-03-23T16:17:13.834Z",
+      "summary": "Tweaked modded-NanoGPT QAT to fit single A100 by shrinking accumulations and swapping torch.quantile for w.abs().amax to dodge Triton slowdowns.",
       "tags": [
         "quantization",
         "training-schedule",
