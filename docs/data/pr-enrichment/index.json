@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-23T06:14:58.062Z",
+  "generatedAt": "2026-03-23T06:44:43.818Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 509,
+      "title": "Non-record: Cosine TTT 30ep on SwiGLU + U-Net (1xH100, val_bpb=1.1175)",
+      "status": "open",
+      "updatedAt": "2026-03-23T06:19:00Z",
+      "headSha": "fb12909efab66df9a3bcaff33cb4dfac5142a28a",
+      "generatedAt": "2026-03-23T06:44:43.740Z",
+      "summary": "Extends the SwiGLU+U-Net stack with 30-epoch cosine test-time training to deepen validation adaptation.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "val-only",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": false
+      },
+      "file": "items/pr-509.json"
+    },
     {
       "prNumber": 508,
       "title": "GPTQ + Early QAT + Legal TTT — 3-seed mean val_bpb 1.1215",
