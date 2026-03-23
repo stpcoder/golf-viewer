@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-23T17:16:54.159Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 554,
+    "title": "Non-record: 11L + XSA4 H100 frontier (1.4612 BPB legal)",
+    "state": "open",
+    "updatedAt": "2026-03-23T17:06:29Z",
+    "headSha": "6e3082f950c431fc142e6f085a9be8cb2f3a061c",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/554",
+    "authorLogin": "chrisnkuno"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-23_11L_XSA4_H100_LegalFrontier/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Single-H100 recipe uses an 11-layer decoder with XSA in the final four layers, ReLU² MLPs, 256 seq len, and packed_zstd artifacts to hit the 16MB non-record frontier.",
+    "tags": [
+      "non-record",
+      "architecture",
+      "compression"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "XSA limited to final four layers",
+      "packed_zstd artifact storage",
+      "25-step checkpoint frontier"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

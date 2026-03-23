@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-23T13:16:39.598Z",
+  "generatedAt": "2026-03-23T17:17:20.004Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 473,
     "title": "Record: Legal Score-First TTT + Parallel Muon — val_bpb 1.1214 (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-03-23T12:59:57Z",
-    "headSha": "93e90ed15eff1c472773b7f9d7ee99ec2f61c89e",
+    "updatedAt": "2026-03-23T17:05:14Z",
+    "headSha": "7e29b788357d95ac8a8f2e2a0076e78c740144ed",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/473",
     "authorLogin": "abaybektursun"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Legal score-first TTT scores chunks before SGD adaptation on a PR#414-derived Parameter Banking + Parallel Muon stack with BigramHash/VE/XSA tweaks.",
+    "summary": "Chunked score-first TTT adapts the Parameter Banking/Parallel Muon stack so each 32K validation chunk is scored before SGD-based updates.",
     "tags": [
       "val-only",
-      "sliding-window-eval",
       "optimizer",
-      "quantization"
+      "muon",
+      "architecture"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "TTT adaptation trains SGD on each scored validation chunk before scoring the next, so the eval phase performs validation-shard training.",
+    "valOnlyReasoning": "TTT adaptation trains solely on validation chunks during the evaluation phase.",
     "techniques": [
-      "score-first sliding-window TTT",
-      "Parameter Banking + Parallel Muon optimizer stack",
-      "BigramHash(3072)/VE/XSA enhancements"
+      "Chunked score-first TTT with inference_mode scoring",
+      "Parameter Banking + Parallel Muon SGD per chunk",
+      "BigramHash(3072) + GPTQ-lite quantization"
     ]
   },
   "compatibility": {

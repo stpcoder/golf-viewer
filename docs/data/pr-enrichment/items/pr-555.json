@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-03-23T17:16:49.278Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 555,
+    "title": "Add 11L Shared Sparse Sidecar + EMA + AdamW TTT (1.0916 mean)",
+    "state": "open",
+    "updatedAt": "2026-03-23T17:11:43Z",
+    "headSha": "6eba72038ad4ea2b091ef2cdfd69cf360f7b7558",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/555",
+    "authorLogin": "ymrohit"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-22_11L_Sidecar48_Bigram96_EMA_AdamWTTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Adds a shared gated sparse sidecar reused at late layers for local refinement conditioned per site atop the AdamW-TTT 11-layer trunk.",
+    "tags": [
+      "architecture"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Shared sparse refinement module reused across multiple late insertion sites",
+      "Site-specific embeddings and residual scales modulate the shared pathway",
+      "Gate→value→depthwise conv→proj path keeps overhead low under 16MB cap"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

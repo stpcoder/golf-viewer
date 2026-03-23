@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-23T17:16:58.684Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 553,
+    "title": "10L + GatedXSA + EMA + TrigramHash + QuadgramHash + SwiGLU (val_bpb=TBD)",
+    "state": "open",
+    "updatedAt": "2026-03-23T17:01:09Z",
+    "headSha": "27f8be3ba8a052f595f79fcc8dd574b6fe043e0b",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/553",
+    "authorLogin": "Vighaneshs"
+  },
+  "inputs": {
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-22_10L_XSA4_EMA_TrigramHash/README.md",
+      "records/track_10min_16mb/2026-03-21_11L_XSA4_EMA_TrigramHash/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "10-layer Muon model layers use gated XSA on the last 4 layers, EMA warmdown, SwiGLU MLP, and trigram+quadgram hash inputs to enrich context before quantization.",
+    "tags": [
+      "attention",
+      "architecture",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "gated Exclusive Self-Attention on final layers",
+      "EMA shadow averaging over warmdown",
+      "trigram+quadgram hash embeddings with SwiGLU MLP"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

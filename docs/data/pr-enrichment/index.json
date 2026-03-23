@@ -1,8 +1,75 @@
 {
-  "generatedAt": "2026-03-23T16:47:00.949Z",
+  "generatedAt": "2026-03-23T17:17:25.576Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 555,
+      "title": "Add 11L Shared Sparse Sidecar + EMA + AdamW TTT (1.0916 mean)",
+      "status": "open",
+      "updatedAt": "2026-03-23T17:11:43Z",
+      "headSha": "6eba72038ad4ea2b091ef2cdfd69cf360f7b7558",
+      "generatedAt": "2026-03-23T17:16:49.278Z",
+      "summary": "Adds a shared gated sparse sidecar reused at late layers for local refinement conditioned per site atop the AdamW-TTT 11-layer trunk.",
+      "tags": [
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-555.json"
+    },
+    {
+      "prNumber": 554,
+      "title": "Non-record: 11L + XSA4 H100 frontier (1.4612 BPB legal)",
+      "status": "open",
+      "updatedAt": "2026-03-23T17:06:29Z",
+      "headSha": "6e3082f950c431fc142e6f085a9be8cb2f3a061c",
+      "generatedAt": "2026-03-23T17:16:54.159Z",
+      "summary": "Single-H100 recipe uses an 11-layer decoder with XSA in the final four layers, ReLU² MLPs, 256 seq len, and packed_zstd artifacts to hit the 16MB non-record frontier.",
+      "tags": [
+        "non-record",
+        "architecture",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-554.json"
+    },
+    {
+      "prNumber": 553,
+      "title": "10L + GatedXSA + EMA + TrigramHash + QuadgramHash + SwiGLU (val_bpb=TBD)",
+      "status": "open",
+      "updatedAt": "2026-03-23T17:01:09Z",
+      "headSha": "27f8be3ba8a052f595f79fcc8dd574b6fe043e0b",
+      "generatedAt": "2026-03-23T17:16:58.684Z",
+      "summary": "10-layer Muon model layers use gated XSA on the last 4 layers, EMA warmdown, SwiGLU MLP, and trigram+quadgram hash inputs to enrich context before quantization.",
+      "tags": [
+        "attention",
+        "architecture",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-553.json"
+    },
     {
       "prNumber": 552,
       "title": "Non-record subimission: RecurrentTiedDepth_8x2_FiLM records",
@@ -31,15 +98,15 @@
       "prNumber": 549,
       "title": "Record: LeakyReLU² + Legal Score-First TTT + Parallel Muon — val_bpb 1.1194 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-23T16:28:08Z",
-      "headSha": "8ff3e0ef479635bb9e59462ee1513c0088ad3aad",
-      "generatedAt": "2026-03-23T16:46:54.009Z",
-      "summary": "Adapts the PR#414 stack with LeakyReLU(0.5)² MLPs, legal score-first TTT, and Parameter Banking + Parallel Muon optimizer.",
+      "updatedAt": "2026-03-23T17:13:05Z",
+      "headSha": "139d573eeefc2e981d32ab9b2c5085a4c3ec94c7",
+      "generatedAt": "2026-03-23T17:17:06.263Z",
+      "summary": "LeakyReLU(0.5)² MLPs, legal score-first chunked TTT, and Parameter Banking/Parallel Muon keep the architecture compliant while adapting validation chunks efficiently.",
       "tags": [
         "val-only",
-        "architecture",
         "optimizer",
-        "evaluation"
+        "architecture",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": true,
@@ -195,12 +262,12 @@
       "prNumber": 538,
       "title": "FP8 + Arithmetic Coding + SWA (1.1511 BPB)",
       "status": "open",
-      "updatedAt": "2026-03-23T15:05:19Z",
-      "headSha": "e9786bda8debed21ae0ffd6a73136278a48af9e5",
-      "generatedAt": "2026-03-23T15:16:41.803Z",
-      "summary": "FP8 TransformerEngine training pairs with custom per-tensor arithmetic coding and early SWA averaging on a 10L/512 BigramHash model.",
+      "updatedAt": "2026-03-23T17:06:36Z",
+      "headSha": "a0b54785208c0037622dd800678525febcce19dd",
+      "generatedAt": "2026-03-23T17:17:13.053Z",
+      "summary": "FP8 via TransformerEngine, tensor-wise arithmetic coding, and early SWA warmdown enrich the 10L/512 architecture for compression-aware training.",
       "tags": [
-        "quantization",
+        "mixed-precision",
         "compression",
         "training-schedule"
       ],
@@ -1334,15 +1401,15 @@
       "prNumber": 473,
       "title": "Record: Legal Score-First TTT + Parallel Muon — val_bpb 1.1214 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-23T12:59:57Z",
-      "headSha": "93e90ed15eff1c472773b7f9d7ee99ec2f61c89e",
-      "generatedAt": "2026-03-23T13:16:39.598Z",
-      "summary": "Legal score-first TTT scores chunks before SGD adaptation on a PR#414-derived Parameter Banking + Parallel Muon stack with BigramHash/VE/XSA tweaks.",
+      "updatedAt": "2026-03-23T17:05:14Z",
+      "headSha": "7e29b788357d95ac8a8f2e2a0076e78c740144ed",
+      "generatedAt": "2026-03-23T17:17:20.004Z",
+      "summary": "Chunked score-first TTT adapts the Parameter Banking/Parallel Muon stack so each 32K validation chunk is scored before SGD-based updates.",
       "tags": [
         "val-only",
-        "sliding-window-eval",
         "optimizer",
-        "quantization"
+        "muon",
+        "architecture"
       ],
       "flags": {
         "usesValOnly": true,
@@ -2642,6 +2709,29 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-403.json"
+    },
+    {
+      "prNumber": 401,
+      "title": "Record: 11L + EMA + Tight SWA + QAT0.15 + VE128 + Partial RoPE + LN Scale (val_bpb: 1.1243)",
+      "status": "open",
+      "updatedAt": "2026-03-23T17:00:05Z",
+      "headSha": "16db94f0fe1eecd86a4085858a7e02b7b7fee17d",
+      "generatedAt": "2026-03-23T17:17:25.516Z",
+      "summary": "Stacked EMA and Tight SWA averaging with longer warmdown and earlier late QAT on an 11-layer U-Net-style transformer with partial RoPE and VE128.",
+      "tags": [
+        "quantization",
+        "training-schedule",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-401.json"
     },
     {
       "prNumber": 399,
