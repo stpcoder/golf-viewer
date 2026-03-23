@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-23T06:14:57.998Z",
+  "generatedAt": "2026-03-23T07:14:53.087Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 430,
     "title": "Value Residual + Gated Attention + XSA + EMA + AdamW TTT — val_bpb pending H100",
     "state": "open",
-    "updatedAt": "2026-03-23T05:55:32Z",
-    "headSha": "e470e02da2ca7333c1775b042f1bb85222851761",
+    "updatedAt": "2026-03-23T06:55:39Z",
+    "headSha": "abec99ef1c6c2347801dfe63d59ae97e1d3709d2",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/430",
     "authorLogin": "sahiee-dev"
   },
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Stack thwu1 base with XSA, EMA, gated/value residual routing, and AdamW test-time training on val tokens for richer context adaptation.",
+    "summary": "Restores large BigramHash and layers EMA, value residual, gated attention, XSA, plus AdamW-based test-time tuning atop the thwu1 stack.",
     "tags": [
       "val-only",
       "attention",
+      "optimizer",
       "architecture"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "TTT runs AdamW on validation tokens (bottom layers frozen) before each eval, so the run involves explicit val-shard training.",
+    "valOnlyReasoning": "Runs deterministic AdamW/SGD test-time training on validation tokens before each evaluation.",
     "techniques": [
-      "EMA plus value residual and gated attention to blend raw inputs with per-layer context",
-      "Recent-layer Exclusive Self Attention to strip self-value bias despite transposed layout",
-      "AdamW-powered test-time training on validation shards with frozen lower layers"
+      "BigramHash + EMA + Value Residual & Gated Attention stack",
+      "XSA in final layers to remove self-value bias",
+      "AdamW-powered test-time training on validation shard"
     ]
   },
   "compatibility": {

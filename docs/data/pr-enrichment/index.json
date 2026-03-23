@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-23T06:44:43.818Z",
+  "generatedAt": "2026-03-23T07:14:53.155Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -1529,13 +1529,14 @@
       "prNumber": 430,
       "title": "Value Residual + Gated Attention + XSA + EMA + AdamW TTT — val_bpb pending H100",
       "status": "open",
-      "updatedAt": "2026-03-23T05:55:32Z",
-      "headSha": "e470e02da2ca7333c1775b042f1bb85222851761",
-      "generatedAt": "2026-03-23T06:14:57.998Z",
-      "summary": "Stack thwu1 base with XSA, EMA, gated/value residual routing, and AdamW test-time training on val tokens for richer context adaptation.",
+      "updatedAt": "2026-03-23T06:55:39Z",
+      "headSha": "abec99ef1c6c2347801dfe63d59ae97e1d3709d2",
+      "generatedAt": "2026-03-23T07:14:53.087Z",
+      "summary": "Restores large BigramHash and layers EMA, value residual, gated attention, XSA, plus AdamW-based test-time tuning atop the thwu1 stack.",
       "tags": [
         "val-only",
         "attention",
+        "optimizer",
         "architecture"
       ],
       "flags": {
