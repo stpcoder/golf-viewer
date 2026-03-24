@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-24T05:51:49.881Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 599,
+    "title": "[Non-Record] Hymba: Hybrid Attention + Mamba SSM (val_bpb 1.1828)",
+    "state": "open",
+    "updatedAt": "2026-03-24T05:35:02Z",
+    "headSha": "2e632b1ea48d11fd1bfc44a23d477341d86a5b85",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/599",
+    "authorLogin": "mkenney2"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/hymba/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Hymba fuses attention and Mamba SSM in each shallow block with learned gating and fused KV/Mamba projection, enabling cosine warmdown for quantization stability.",
+    "tags": [
+      "architecture",
+      "attention",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Parallel attention and Mamba SSM branches",
+      "Fused KV+SSM projection matmul",
+      "Cosine warmdown for quant-friendly weights"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

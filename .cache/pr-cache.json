@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-24T05:21:25.012Z",
-  "lastSeenUpdatedAt": "2026-03-24T05:11:46Z",
+  "generatedAt": "2026-03-24T05:51:21.597Z",
+  "lastSeenUpdatedAt": "2026-03-24T05:35:02Z",
   "prs": {
     "1": {
       "number": 1,
@@ -46978,7 +46978,7 @@
     },
     "550": {
       "number": 550,
-      "updatedAt": "2026-03-24T04:58:55Z",
+      "updatedAt": "2026-03-24T05:23:09Z",
       "pr": {
         "number": 550,
         "title": "11L INT6 + Backward-Looking Per-Document LoRA TTT",
@@ -46989,8 +46989,8 @@
         "authorLogin": "haimianbaobao007",
         "authorName": null,
         "createdAt": "2026-03-23T16:16:55Z",
-        "updatedAt": "2026-03-24T04:58:55Z",
-        "headSha": "23d6b7cdb89b0219f9f031cd972eacf6f3539b6a",
+        "updatedAt": "2026-03-24T05:23:09Z",
+        "headSha": "80f83da661629aaa3cda0ad6c146aae41f06a962",
         "headRepo": "haimianbaobao007/parameter-golf"
       },
       "submissions": []
@@ -51045,6 +51045,97 @@
             "script": "https://github.com/openai/parameter-golf/blob/f94b154a740fcb0b8fa0304174c108f77a9f8d1c/records/track_non_record_16mb/2026-03-24_11L_GEPA_MixedQuant_7kSteps_LegalTTT/train_gpt.py",
             "folder": "https://github.com/openai/parameter-golf/tree/f94b154a740fcb0b8fa0304174c108f77a9f8d1c/records/track_non_record_16mb/2026-03-24_11L_GEPA_MixedQuant_7kSteps_LegalTTT",
             "pr": "https://github.com/openai/parameter-golf/pull/598"
+          }
+        }
+      ]
+    },
+    "599": {
+      "number": 599,
+      "updatedAt": "2026-03-24T05:35:02Z",
+      "pr": {
+        "number": 599,
+        "title": "[Non-Record] Hymba: Hybrid Attention + Mamba SSM (val_bpb 1.1828)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/599",
+        "authorLogin": "mkenney2",
+        "authorName": null,
+        "createdAt": "2026-03-24T05:31:33Z",
+        "updatedAt": "2026-03-24T05:35:02Z",
+        "headSha": "2e632b1ea48d11fd1bfc44a23d477341d86a5b85",
+        "headRepo": "mkenney2/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-599-records-track_10min_16mb-hymba-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "hymba",
+            "folderPath": "records/track_10min_16mb/hymba",
+            "submissionPath": "records/track_10min_16mb/hymba/submission.json",
+            "readmePath": "records/track_10min_16mb/hymba/README.md",
+            "trainLogPath": "records/track_10min_16mb/hymba/train.log",
+            "scriptPath": "records/track_10min_16mb/hymba/train_gpt.py"
+          },
+          "submission": {
+            "author": "mkenney2",
+            "githubId": "mkenney2",
+            "name": "Hymba: Hybrid Attention + Mamba SSM",
+            "blurb": null,
+            "date": "2026-03-24T05:31:33Z"
+          },
+          "metrics": {
+            "valBpb": 1.1828,
+            "valLoss": null,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": 172
+          },
+          "artifact": {
+            "bytesTotal": null,
+            "bytesCode": null,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 599,
+            "title": "[Non-Record] Hymba: Hybrid Attention + Mamba SSM (val_bpb 1.1828)",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/599",
+            "authorLogin": "mkenney2",
+            "authorName": null,
+            "createdAt": "2026-03-24T05:31:33Z",
+            "updatedAt": "2026-03-24T05:35:02Z",
+            "headSha": "2e632b1ea48d11fd1bfc44a23d477341d86a5b85",
+            "headRepo": "mkenney2/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/2e632b1ea48d11fd1bfc44a23d477341d86a5b85/records/track_10min_16mb/hymba/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/2e632b1ea48d11fd1bfc44a23d477341d86a5b85/records/track_10min_16mb/hymba/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/2e632b1ea48d11fd1bfc44a23d477341d86a5b85/records/track_10min_16mb/hymba/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/2e632b1ea48d11fd1bfc44a23d477341d86a5b85/records/track_10min_16mb/hymba/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/2e632b1ea48d11fd1bfc44a23d477341d86a5b85/records/track_10min_16mb/hymba",
+            "pr": "https://github.com/openai/parameter-golf/pull/599"
           }
         }
       ]
