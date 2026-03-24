@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-23T17:47:37.115Z",
+  "generatedAt": "2026-03-24T04:51:27.907Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 560,
     "title": "Non-record: 1x RTX PRO 6000 Blackwell 10L Int5-MLP (1.1935 BPB)",
     "state": "open",
-    "updatedAt": "2026-03-23T17:32:56Z",
-    "headSha": "2d6182bfc33af85f6ae5ac60a76f5658a9d93cbb",
+    "updatedAt": "2026-03-24T04:50:20Z",
+    "headSha": "d4be2f7bf7dba8bec5c684111a37d66799bb787b",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/560",
     "authorLogin": "Rohan5commit"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Ports the merged 10L Int5-MLP + BigramHash(10240) recipe to a single RTX PRO 6000 Blackwell with AMP/SDPA auto-selection and GQA fallback.",
+    "summary": "Ports the 10L Int5-MLP+BigramHash recipe to one RTX PRO 6000 Blackwell GPU using mixed int5/int6 export plus AMP/SDPA auto-selection and SWA tuning.",
     "tags": [
-      "architecture",
       "quantization",
       "mixed-precision",
+      "architecture",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Single-GPU RTX PRO 6000 Blackwell runtime port",
-      "AMP dtype and SDPA/GQA backend probing",
-      "Maintains SmearGate/BigramHash(10240) late-SWA recipe"
+      "Single-GPU mixed int5/int6 BigramHash port",
+      "AMP dtype and SDPA backend auto-selection",
+      "SWA-friendly runtime and sliding-window eval tuning"
     ]
   },
   "compatibility": {

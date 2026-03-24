@@ -1,19 +1,20 @@
 {
-  "generatedAt": "2026-03-24T04:21:15.847Z",
+  "generatedAt": "2026-03-24T04:51:27.993Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
       "prNumber": 597,
-      "title": "Non-record: M4 Air autoresearch bandit — mirrored recurrence + SwiGLU (val_bpb=1.9263)",
+      "title": "Autoresearch over a Collective + Distributed Candidate Pool — M4 Air, val_bpb=1.9263 (non-record)",
       "status": "open",
-      "updatedAt": "2026-03-24T04:20:17Z",
-      "headSha": "be6dd131c52dad5da56b2f95e65ad8869d412950",
-      "generatedAt": "2026-03-24T04:20:51.155Z",
-      "summary": "Runs an evolutionary bandit over Mac-suitable candidates, iteratively training mirrored-recurrence + SwiGLU configs within 10-min M4 Air slices for rapid tuning.",
+      "updatedAt": "2026-03-24T04:38:15Z",
+      "headSha": "de78d7c382e53365f6a3b8f14a32a101f9f7325c",
+      "generatedAt": "2026-03-24T04:51:18.039Z",
+      "summary": "Distributed bandit-driven candidate pool on M4 Air pairs mirrored recurrence + SwiGLU with Mac-tuned schedule to squeeze more steps into 10min runs.",
       "tags": [
         "architecture",
         "training-schedule",
+        "evaluation",
         "non-record"
       ],
       "flags": {
@@ -25,6 +26,29 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-597.json"
+    },
+    {
+      "prNumber": 596,
+      "title": "Record: DeepQuant V10b — 11L INT6 + 8ep LoRA TTT (val_bpb=0.6430)",
+      "status": "open",
+      "updatedAt": "2026-03-24T04:31:00Z",
+      "headSha": "c2b3e67894d3bd25fff496e75178930c62bd0900",
+      "generatedAt": "2026-03-24T04:51:22.059Z",
+      "summary": "DeepQuant V10b pairs the 11-layer INT6 PROTEUS base with 8-epoch cosine LR LoRA TTT, bias tuning, and a post-TTT temperature rescale.",
+      "tags": [
+        "quantization",
+        "training-schedule",
+        "regularization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-596.json"
     },
     {
       "prNumber": 595,
@@ -612,14 +636,14 @@
       "prNumber": 560,
       "title": "Non-record: 1x RTX PRO 6000 Blackwell 10L Int5-MLP (1.1935 BPB)",
       "status": "open",
-      "updatedAt": "2026-03-23T17:32:56Z",
-      "headSha": "2d6182bfc33af85f6ae5ac60a76f5658a9d93cbb",
-      "generatedAt": "2026-03-23T17:47:37.115Z",
-      "summary": "Ports the merged 10L Int5-MLP + BigramHash(10240) recipe to a single RTX PRO 6000 Blackwell with AMP/SDPA auto-selection and GQA fallback.",
+      "updatedAt": "2026-03-24T04:50:20Z",
+      "headSha": "d4be2f7bf7dba8bec5c684111a37d66799bb787b",
+      "generatedAt": "2026-03-24T04:51:27.907Z",
+      "summary": "Ports the 10L Int5-MLP+BigramHash recipe to one RTX PRO 6000 Blackwell GPU using mixed int5/int6 export plus AMP/SDPA auto-selection and SWA tuning.",
       "tags": [
-        "architecture",
         "quantization",
         "mixed-precision",
+        "architecture",
         "non-record"
       ],
       "flags": {

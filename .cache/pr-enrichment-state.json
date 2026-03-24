@@ -2,7 +2,7 @@
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
-  "generatedAt": "2026-03-24T04:21:15.847Z",
+  "generatedAt": "2026-03-24T04:51:27.993Z",
   "prs": {
     "6": {
       "signature": "2026-03-20-pr-enrichment-v2-approach-first:11373420c1f50e6a83599fb25bb73f38a6555cb7:closed:2026-03-18T18:34:32Z",
@@ -2339,10 +2339,10 @@
       "headSha": "b83fd123a77ec4433df05082900b55e5581f45d0"
     },
     "560": {
-      "signature": "2026-03-20-pr-enrichment-v2-approach-first:2d6182bfc33af85f6ae5ac60a76f5658a9d93cbb:open:2026-03-23T17:32:56Z",
+      "signature": "2026-03-20-pr-enrichment-v2-approach-first:d4be2f7bf7dba8bec5c684111a37d66799bb787b:open:2026-03-24T04:50:20Z",
       "file": "items/pr-560.json",
-      "updatedAt": "2026-03-23T17:32:56Z",
-      "headSha": "2d6182bfc33af85f6ae5ac60a76f5658a9d93cbb"
+      "updatedAt": "2026-03-24T04:50:20Z",
+      "headSha": "d4be2f7bf7dba8bec5c684111a37d66799bb787b"
     },
     "562": {
       "signature": "2026-03-20-pr-enrichment-v2-approach-first:c7a96b3a375dec39f649192e45af47cb63ff662b:open:2026-03-23T18:13:58Z",
@@ -2494,11 +2494,17 @@
       "updatedAt": "2026-03-24T03:02:11Z",
       "headSha": "7868f1244e333c7b7af2af2a51c67ea00a427f86"
     },
+    "596": {
+      "signature": "2026-03-20-pr-enrichment-v2-approach-first:c2b3e67894d3bd25fff496e75178930c62bd0900:open:2026-03-24T04:31:00Z",
+      "file": "items/pr-596.json",
+      "updatedAt": "2026-03-24T04:31:00Z",
+      "headSha": "c2b3e67894d3bd25fff496e75178930c62bd0900"
+    },
     "597": {
-      "signature": "2026-03-20-pr-enrichment-v2-approach-first:be6dd131c52dad5da56b2f95e65ad8869d412950:open:2026-03-24T04:20:17Z",
+      "signature": "2026-03-20-pr-enrichment-v2-approach-first:de78d7c382e53365f6a3b8f14a32a101f9f7325c:open:2026-03-24T04:38:15Z",
       "file": "items/pr-597.json",
-      "updatedAt": "2026-03-24T04:20:17Z",
-      "headSha": "be6dd131c52dad5da56b2f95e65ad8869d412950"
+      "updatedAt": "2026-03-24T04:38:15Z",
+      "headSha": "de78d7c382e53365f6a3b8f14a32a101f9f7325c"
     }
   }
 }
