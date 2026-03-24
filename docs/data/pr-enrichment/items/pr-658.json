@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-24T23:57:49.897Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 658,
+    "title": "Non-record: LoRA TTT exploration on SOTA base (negative result)",
+    "state": "open",
+    "updatedAt": "2026-03-24T23:40:57Z",
+    "headSha": "0d205f89284277b49898fabdc623d0a1672c4d26",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/658",
+    "authorLogin": "hmlizama"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-24_TTT_LoRA_Exploration/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Adds LoRA TTT on Q/V projections during eval of the Int5-MLP+BigramHash SOTA base, finding chunked context loses the long-range signals it already learns.",
+    "tags": [
+      "evaluation",
+      "architecture",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "LoRA adapters applied to attention Q/V during eval",
+      "Per-document chunked adaptation with reset between docs",
+      "Minimal GPT attention hooks for eval-only LoRA state"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

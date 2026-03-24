@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-24T23:27:42.562Z",
+  "generatedAt": "2026-03-24T23:58:00.417Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 650,
-    "title": "-0.0041 BPB by Reordering Training Data (Curriculum Learning)",
+    "title": "draft",
     "state": "closed",
-    "updatedAt": "2026-03-24T23:26:47Z",
+    "updatedAt": "2026-03-24T23:28:56Z",
     "headSha": "f4b346853a58e13c122390fdc4140c13ff3810bf",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/650",
     "authorLogin": "abaybektursun"
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Rank shards by partial-model perplexity and train hardest-first to capture modeling signal missed by token stats.",
+    "summary": "Ranked shards by short-model cross-entropy and trained hardest-first to reorder data without touching architecture or hyperparameters.",
     "tags": [
       "training-schedule",
       "evaluation",
@@ -28,9 +28,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Model-scored shard hardness ranking",
-      "Hardest-first curriculum via env-order override",
-      "Small proxy model for quick shard scoring"
+      "model-scored shard ordering",
+      "hardest-first curriculum",
+      "env-var driven shard shuffle"
     ]
   },
   "compatibility": {

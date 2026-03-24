@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-21T20:04:59.329Z",
+  "generatedAt": "2026-03-24T23:58:08.435Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 363,
-    "title": "Non-record: Depth Recurrence + Quantization Error Amplification Finding",
+    "title": "Non-record: Depth Recurrence in Parameter-Constrained Transformers — What Works, What Doesn't, and Why",
     "state": "open",
-    "updatedAt": "2026-03-21T20:02:36Z",
-    "headSha": "baece73db755b2c7e9ff2927d35d02b3e401d830",
+    "updatedAt": "2026-03-24T23:54:13Z",
+    "headSha": "bce292e4062d8ebdc7f290a7c5e692e3c292b73b",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/363",
     "authorLogin": "evangelinehelsinki"
   },
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Shares four transformer blocks over three recurrence cycles with LoRA/XSA plus BigramHash and mixed-precision quantization to tame amplified errors.",
+    "summary": "Looped-depth recurrence shares core blocks and uses int8-aware noise to tame quantization compounding in parameter-constrained training.",
     "tags": [
       "architecture",
       "quantization",
-      "attention",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Shared-depth recurrence with LoRA/XSA adaptations",
-      "BigramHash context plus int8 for recycled weights"
+      "looped depth recurrence with per-repeat adapters",
+      "int8-matching noisy quantization for shared weights",
+      "BigramHash+XSA compact enhancements"
     ]
   },
   "compatibility": {
