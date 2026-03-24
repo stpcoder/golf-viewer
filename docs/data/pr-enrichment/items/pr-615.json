@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-24T13:25:03.908Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 615,
+    "title": "Record: Residual Input Mixing + mixed int6 GPTQ + grouped TTT + MLP 3.5x",
+    "state": "open",
+    "updatedAt": "2026-03-24T13:21:47Z",
+    "headSha": "1d2995e88e9217c099513dd5ad75ba3e52035b4e",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/615",
+    "authorLogin": "danialht"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-23_MixResiduals_Int6_GPTQ_BigramHash8192/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Denser residual mixing lets each block blend current, earlier, and original inputs, paired with mixed int6 GPTQ and grouped AdamW TTT.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "optimizer"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "denser residual input mixing blending block outputs with x0",
+      "mixed int6 per-row GPTQ with early QAT and EMA",
+      "grouped AdamW TTT adapting last blocks and control params"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

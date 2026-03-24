@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-23T17:48:22.081Z",
+  "generatedAt": "2026-03-24T13:25:19.439Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 549,
     "title": "Record: LeakyReLU² + Legal Score-First TTT + Parallel Muon — val_bpb 1.1194 (3-seed mean)",
-    "state": "open",
-    "updatedAt": "2026-03-23T17:22:27Z",
+    "state": "closed",
+    "updatedAt": "2026-03-24T13:23:42Z",
     "headSha": "b08d72a96e98cac8add0543982fccd35bc8f4f4d",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/549",
     "authorLogin": "abaybektursun"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "LeakyReLU(0.5)² MLP stack with Parameter Banking + Parallel Muon optimizer, followed by score-first Legal TTT per 32K validation chunk.",
+    "summary": "Combines LeakyReLU² MLPs, legal score-first TTT, and parameter banking with Parallel Muon in the 10min/16MB stack.",
     "tags": [
       "val-only",
-      "optimizer",
       "architecture",
-      "training-schedule"
+      "training-schedule",
+      "optimizer"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "Legal TTT trains on validation chunks after scoring each chunk with torch.inference_mode(), so the adaptation only touches validation data.",
+    "valOnlyReasoning": "TTT trains only on scored validation chunks (score-first sliding eval then SGD per chunk) before final scoring.",
     "techniques": [
-      "LeakyReLU(0.5)² MLP within 11L/512d base stack",
-      "Score-first Legal TTT doing 3-epoch SGD per 32K-token validation chunk",
-      "Parameter Banking + Parallel Muon optimizer pipeline"
+      "- LeakyReLU(0.5)² MLPs preserve gradient flow through the dense blocks",
+      "- Legal score-first TTT: sliding-window scoring then 3-epoch SGD per validation chunk",
+      "- Parameter Banking plus Parallel Muon optimizer for efficient steps"
     ]
   },
   "compatibility": {

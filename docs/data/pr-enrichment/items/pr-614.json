@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-24T13:25:07.158Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 614,
+    "title": "Record: 0.6864 BPB — K-LoRA + Min-NLL + FlashAttention-3",
+    "state": "open",
+    "updatedAt": "2026-03-24T13:23:20Z",
+    "headSha": "3ada155b7c9d84e66b80bd088d282197858c16f6",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/614",
+    "authorLogin": "bigbag"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-24_KLoRA_MinNLL_FA3/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "K-LoRA extends Chimera TTT by tuning K projections and per-layer LRs, using min-NLL epoch selection plus FlashAttention-3 causal fusion for faster eval.",
+    "tags": [
+      "architecture",
+      "attention",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "K-projection LoRA with biased LR multipliers",
+      "Min-NLL epoch selection to avoid overfit",
+      "FlashAttention-3 causal attention compatibility fix"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

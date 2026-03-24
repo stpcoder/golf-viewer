@@ -1,8 +1,54 @@
 {
-  "generatedAt": "2026-03-24T12:55:15.496Z",
+  "generatedAt": "2026-03-24T13:25:24.551Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 615,
+      "title": "Record: Residual Input Mixing + mixed int6 GPTQ + grouped TTT + MLP 3.5x",
+      "status": "open",
+      "updatedAt": "2026-03-24T13:21:47Z",
+      "headSha": "1d2995e88e9217c099513dd5ad75ba3e52035b4e",
+      "generatedAt": "2026-03-24T13:25:03.908Z",
+      "summary": "Denser residual mixing lets each block blend current, earlier, and original inputs, paired with mixed int6 GPTQ and grouped AdamW TTT.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "optimizer"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-615.json"
+    },
+    {
+      "prNumber": 614,
+      "title": "Record: 0.6864 BPB — K-LoRA + Min-NLL + FlashAttention-3",
+      "status": "open",
+      "updatedAt": "2026-03-24T13:23:20Z",
+      "headSha": "3ada155b7c9d84e66b80bd088d282197858c16f6",
+      "generatedAt": "2026-03-24T13:25:07.158Z",
+      "summary": "K-LoRA extends Chimera TTT by tuning K projections and per-layer LRs, using min-NLL epoch selection plus FlashAttention-3 causal fusion for faster eval.",
+      "tags": [
+        "architecture",
+        "attention",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-614.json"
+    },
     {
       "prNumber": 612,
       "title": "Non-record: 11L GEPA + 12k Steps + Pure Int6 + Legal TTT (val_bpb=1.1079)",
@@ -482,12 +528,13 @@
       "prNumber": 586,
       "title": "Record: 11L + Hadamard Rotation + VE128 + cuDNN SDPA (val_bpb: 1.1365)",
       "status": "open",
-      "updatedAt": "2026-03-23T23:18:22Z",
-      "headSha": "d06ff895821719c9e979e9c6097ff71e53c829e0",
-      "generatedAt": "2026-03-23T23:19:10.794Z",
-      "summary": "Applies Walsh-Hadamard rotation before int6 quantization to shrink artifacts, freeing headroom for VE128 while guided by a CPU parameter probe.",
+      "updatedAt": "2026-03-24T13:09:30Z",
+      "headSha": "75ef6f9a2399ea11c7b586d3efe98a50772306c5",
+      "generatedAt": "2026-03-24T13:25:10.955Z",
+      "summary": "Walsh-Hadamard rotation before int6 quant shrinks gaps and frees headroom to add VE128, with CPU probe steering parameter choices under cuDNN SDPA.",
       "tags": [
         "quantization",
+        "compression",
         "architecture",
         "non-record"
       ],
@@ -1104,16 +1151,16 @@
     {
       "prNumber": 549,
       "title": "Record: LeakyReLU² + Legal Score-First TTT + Parallel Muon — val_bpb 1.1194 (3-seed mean)",
-      "status": "open",
-      "updatedAt": "2026-03-23T17:22:27Z",
+      "status": "closed",
+      "updatedAt": "2026-03-24T13:23:42Z",
       "headSha": "b08d72a96e98cac8add0543982fccd35bc8f4f4d",
-      "generatedAt": "2026-03-23T17:48:22.081Z",
-      "summary": "LeakyReLU(0.5)² MLP stack with Parameter Banking + Parallel Muon optimizer, followed by score-first Legal TTT per 32K validation chunk.",
+      "generatedAt": "2026-03-24T13:25:19.439Z",
+      "summary": "Combines LeakyReLU² MLPs, legal score-first TTT, and parameter banking with Parallel Muon in the 10min/16MB stack.",
       "tags": [
         "val-only",
-        "optimizer",
         "architecture",
-        "training-schedule"
+        "training-schedule",
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": true,
@@ -4707,13 +4754,14 @@
       "prNumber": 340,
       "title": "V2 Prototype: SwiGLU + Dropout + MuonWD + MidLayerLoop",
       "status": "open",
-      "updatedAt": "2026-03-24T12:52:17Z",
+      "updatedAt": "2026-03-24T13:16:42Z",
       "headSha": "4bd9884524c6ca3e963dbf6be47a7dbedf522aaf",
-      "generatedAt": "2026-03-24T12:55:15.447Z",
-      "summary": "Prototype pairs Muon weight decay with dropout, SwiGLU MLPs, mid-layer recurrence, and EMA to deepen the architecture under tight compute.",
+      "generatedAt": "2026-03-24T13:25:24.501Z",
+      "summary": "SwiGLU MLP with Muon decay, dropout, targeted middle-layer recurrence, and EMA aims for depth-efficient training within tight compute and quantization constraints.",
       "tags": [
-        "regularization",
         "architecture",
+        "regularization",
+        "quantization",
         "non-record"
       ],
       "flags": {

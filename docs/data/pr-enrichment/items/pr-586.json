@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-23T23:19:10.794Z",
+  "generatedAt": "2026-03-24T13:25:10.955Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 586,
     "title": "Record: 11L + Hadamard Rotation + VE128 + cuDNN SDPA (val_bpb: 1.1365)",
     "state": "open",
-    "updatedAt": "2026-03-23T23:18:22Z",
-    "headSha": "d06ff895821719c9e979e9c6097ff71e53c829e0",
+    "updatedAt": "2026-03-24T13:09:30Z",
+    "headSha": "75ef6f9a2399ea11c7b586d3efe98a50772306c5",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/586",
     "authorLogin": "EaCognitive"
   },
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Applies Walsh-Hadamard rotation before int6 quantization to shrink artifacts, freeing headroom for VE128 while guided by a CPU parameter probe.",
+    "summary": "Walsh-Hadamard rotation before int6 quant shrinks gaps and frees headroom to add VE128, with CPU probe steering parameter choices under cuDNN SDPA.",
     "tags": [
       "quantization",
+      "compression",
       "architecture",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Hadamard rotation ahead of int6 per-row quantization",
-      "Shared VE128 enabled by reclaimed artifact headroom",
-      "CPU probe predicts architecture viability before GPU runs"
+      "Hadamard rotation ahead of per-row int6 quantization",
+      "CPU parameter-probe hyperparameter pre-screening",
+      "Shared Value Embeddings enabled by recovered artifact headroom"
     ]
   },
   "compatibility": {

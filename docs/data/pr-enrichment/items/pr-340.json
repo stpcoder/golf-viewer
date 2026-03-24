@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-24T12:55:15.447Z",
+  "generatedAt": "2026-03-24T13:25:24.501Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 340,
     "title": "V2 Prototype: SwiGLU + Dropout + MuonWD + MidLayerLoop",
     "state": "open",
-    "updatedAt": "2026-03-24T12:52:17Z",
+    "updatedAt": "2026-03-24T13:16:42Z",
     "headSha": "4bd9884524c6ca3e963dbf6be47a7dbedf522aaf",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/340",
     "authorLogin": "starfly-web"
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Prototype pairs Muon weight decay with dropout, SwiGLU MLPs, mid-layer recurrence, and EMA to deepen the architecture under tight compute.",
+    "summary": "SwiGLU MLP with Muon decay, dropout, targeted middle-layer recurrence, and EMA aims for depth-efficient training within tight compute and quantization constraints.",
     "tags": [
-      "regularization",
       "architecture",
+      "regularization",
+      "quantization",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "- Muon weight decay and dropout regularization",
-      "- SwiGLU MLPs coupled with mid-layer recurrence",
-      "- EMA stabilization"
+      "SwiGLU MLP with targeted middle-layer recurrence",
+      "MuonWD and 10% dropout across attention/MLP blocks",
+      "EMA-enhanced stability with INT8+zlib compression"
     ]
   },
   "compatibility": {
