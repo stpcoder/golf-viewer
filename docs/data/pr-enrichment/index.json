@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-23T23:50:01.323Z",
+  "generatedAt": "2026-03-24T00:19:45.167Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -78,14 +78,14 @@
       "prNumber": 585,
       "title": "Record: int5 GPTQ + 33.6M model (3-seed mean val_bpb=1.1179)",
       "status": "closed",
-      "updatedAt": "2026-03-23T23:28:17Z",
+      "updatedAt": "2026-03-23T23:51:17Z",
       "headSha": "e1595978f7da5e674ea976d4b832e7f81b4a94ed",
-      "generatedAt": "2026-03-23T23:49:43.284Z",
-      "summary": "Int5 GPTQ compression enables a 33.6M MHA8/MLP3.5x BigramHash+XSA model to fit under 16MB while training with legal score-first TTT.",
+      "generatedAt": "2026-03-24T00:19:41.585Z",
+      "summary": "int5 GPTQ compression with Hessian-aware compensation lets a 33.6M BigramHash+MLP 3.5× LM fit under 16MB while using legal score-first TTT.",
       "tags": [
         "quantization",
         "architecture",
-        "training-schedule"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2683,10 +2683,10 @@
       "prNumber": 435,
       "title": "Radial bitnet submission",
       "status": "open",
-      "updatedAt": "2026-03-23T23:16:14Z",
-      "headSha": "796aa499f701b05296e49da6cf5040a2589943a8",
-      "generatedAt": "2026-03-23T23:19:19.790Z",
-      "summary": "BitNet-style ternary projections, radial analytic positional features, and FRO optimizer compress the 16MB model while maximizing depth/width under tight budget.",
+      "updatedAt": "2026-03-23T23:58:30Z",
+      "headSha": "be658a9aed2b7134f28e495a7fb5bb1fdb8f7c92",
+      "generatedAt": "2026-03-24T00:19:45.103Z",
+      "summary": "Aggressively compressed 15.6M LM using BitNet-style ternary projections, RadialEncoding, and the FRO optimizer to maximize capacity under the 16MB budget.",
       "tags": [
         "quantization",
         "positional-encoding",

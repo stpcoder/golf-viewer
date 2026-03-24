@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-23T23:49:21.681Z",
-  "lastSeenUpdatedAt": "2026-03-23T23:45:03Z",
+  "generatedAt": "2026-03-24T00:19:33.551Z",
+  "lastSeenUpdatedAt": "2026-03-24T00:03:08Z",
   "prs": {
     "1": {
       "number": 1,
@@ -36566,7 +36566,7 @@
     },
     "435": {
       "number": 435,
-      "updatedAt": "2026-03-23T23:16:14Z",
+      "updatedAt": "2026-03-23T23:58:30Z",
       "pr": {
         "number": 435,
         "title": "Radial bitnet submission",
@@ -36577,8 +36577,8 @@
         "authorLogin": "rthgit",
         "authorName": null,
         "createdAt": "2026-03-22T16:31:21Z",
-        "updatedAt": "2026-03-23T23:16:14Z",
-        "headSha": "796aa499f701b05296e49da6cf5040a2589943a8",
+        "updatedAt": "2026-03-23T23:58:30Z",
+        "headSha": "be658a9aed2b7134f28e495a7fb5bb1fdb8f7c92",
         "headRepo": "rthgit/parameter-golf"
       },
       "submissions": [
@@ -36640,16 +36640,16 @@
             "authorLogin": "rthgit",
             "authorName": null,
             "createdAt": "2026-03-22T16:31:21Z",
-            "updatedAt": "2026-03-23T23:16:14Z",
-            "headSha": "796aa499f701b05296e49da6cf5040a2589943a8",
+            "updatedAt": "2026-03-23T23:58:30Z",
+            "headSha": "be658a9aed2b7134f28e495a7fb5bb1fdb8f7c92",
             "headRepo": "rthgit/parameter-golf"
           },
           "links": {
-            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/796aa499f701b05296e49da6cf5040a2589943a8/records/track_10min_16mb/2026-03-22_RadialBitNet/submission.json",
-            "readme": "https://github.com/openai/parameter-golf/blob/796aa499f701b05296e49da6cf5040a2589943a8/records/track_10min_16mb/2026-03-22_RadialBitNet/README.md",
-            "trainLog": "https://github.com/openai/parameter-golf/blob/796aa499f701b05296e49da6cf5040a2589943a8/records/track_10min_16mb/2026-03-22_RadialBitNet/train.log",
-            "script": "https://github.com/openai/parameter-golf/blob/796aa499f701b05296e49da6cf5040a2589943a8/records/track_10min_16mb/2026-03-22_RadialBitNet/train_gpt.py",
-            "folder": "https://github.com/openai/parameter-golf/tree/796aa499f701b05296e49da6cf5040a2589943a8/records/track_10min_16mb/2026-03-22_RadialBitNet",
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/be658a9aed2b7134f28e495a7fb5bb1fdb8f7c92/records/track_10min_16mb/2026-03-22_RadialBitNet/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/be658a9aed2b7134f28e495a7fb5bb1fdb8f7c92/records/track_10min_16mb/2026-03-22_RadialBitNet/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/be658a9aed2b7134f28e495a7fb5bb1fdb8f7c92/records/track_10min_16mb/2026-03-22_RadialBitNet/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/be658a9aed2b7134f28e495a7fb5bb1fdb8f7c92/records/track_10min_16mb/2026-03-22_RadialBitNet/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/be658a9aed2b7134f28e495a7fb5bb1fdb8f7c92/records/track_10min_16mb/2026-03-22_RadialBitNet",
             "pr": "https://github.com/openai/parameter-golf/pull/435"
           }
         }
@@ -49942,7 +49942,7 @@
     },
     "585": {
       "number": 585,
-      "updatedAt": "2026-03-23T23:28:17Z",
+      "updatedAt": "2026-03-23T23:51:17Z",
       "pr": {
         "number": 585,
         "title": "Record: int5 GPTQ + 33.6M model (3-seed mean val_bpb=1.1179)",
@@ -49953,7 +49953,7 @@
         "authorLogin": "EthanYangTW",
         "authorName": null,
         "createdAt": "2026-03-23T23:07:57Z",
-        "updatedAt": "2026-03-23T23:28:17Z",
+        "updatedAt": "2026-03-23T23:51:17Z",
         "headSha": "e1595978f7da5e674ea976d4b832e7f81b4a94ed",
         "headRepo": "EthanYangTW/parameter-golf"
       },
@@ -50016,7 +50016,7 @@
             "authorLogin": "EthanYangTW",
             "authorName": null,
             "createdAt": "2026-03-23T23:07:57Z",
-            "updatedAt": "2026-03-23T23:28:17Z",
+            "updatedAt": "2026-03-23T23:51:17Z",
             "headSha": "e1595978f7da5e674ea976d4b832e7f81b4a94ed",
             "headRepo": "EthanYangTW/parameter-golf"
           },
@@ -50322,6 +50322,25 @@
           }
         }
       ]
+    },
+    "590": {
+      "number": 590,
+      "updatedAt": "2026-03-24T00:03:08Z",
+      "pr": {
+        "number": 590,
+        "title": "Modified",
+        "state": "closed",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/590",
+        "authorLogin": "KalleNikula-Gill",
+        "authorName": null,
+        "createdAt": "2026-03-24T00:02:40Z",
+        "updatedAt": "2026-03-24T00:03:08Z",
+        "headSha": "cd9e2e63dc7badfc494ea913e658a0d00750de74",
+        "headRepo": null
+      },
+      "submissions": []
     }
   }
 }
