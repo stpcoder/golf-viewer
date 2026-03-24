@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-24T09:53:36.915Z",
+  "generatedAt": "2026-03-24T10:23:44.768Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -26,13 +26,13 @@
       "submission": {
         "author": "UrukHan",
         "githubId": "UrukHan",
-        "name": "DeepQuant V10b — 11L INT6 + 8-epoch LoRA TTT",
-        "blurb": "8ep cosine TTT + LM rank-16 + bias tuning + temp rescale on PROTEUS base",
+        "name": "DeepQuant — 11L INT6 + 8-epoch Cosine LoRA TTT",
+        "blurb": "8ep cosine TTT + LM rank-16 + bias tuning + zigzag GPU balancing",
         "date": "2026-03-24T00:00:00Z"
       },
       "metrics": {
-        "valBpb": 0.643,
-        "valLoss": 1.0824,
+        "valBpb": 0.6235,
+        "valLoss": 1.0528,
         "preQuantValBpb": null,
         "preQuantValLoss": null,
         "stepStop": null,
@@ -40,7 +40,7 @@
         "evalTimeSeconds": null
       },
       "artifact": {
-        "bytesTotal": 15497939,
+        "bytesTotal": 15413092,
         "bytesCode": null,
         "bytesModelInt8Zlib": null
       },
@@ -61,16 +61,16 @@
         "authorLogin": "AriaAnima",
         "authorName": null,
         "createdAt": "2026-03-24T03:09:15Z",
-        "updatedAt": "2026-03-24T05:11:46Z",
-        "headSha": "b7b45e791cd4b807fcab56af2d0cc6fe3fe0c2ec",
+        "updatedAt": "2026-03-24T10:13:33Z",
+        "headSha": "e7df1101d1f13eada6885a9dd44197ceef33f337",
         "headRepo": "AriaAnima/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/b7b45e791cd4b807fcab56af2d0cc6fe3fe0c2ec/records/track_10min_16mb/2026-03-24_DeepQuant_V10b/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/b7b45e791cd4b807fcab56af2d0cc6fe3fe0c2ec/records/track_10min_16mb/2026-03-24_DeepQuant_V10b/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/b7b45e791cd4b807fcab56af2d0cc6fe3fe0c2ec/records/track_10min_16mb/2026-03-24_DeepQuant_V10b/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/b7b45e791cd4b807fcab56af2d0cc6fe3fe0c2ec/records/track_10min_16mb/2026-03-24_DeepQuant_V10b/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/b7b45e791cd4b807fcab56af2d0cc6fe3fe0c2ec/records/track_10min_16mb/2026-03-24_DeepQuant_V10b",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/e7df1101d1f13eada6885a9dd44197ceef33f337/records/track_10min_16mb/2026-03-24_DeepQuant_V10b/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/e7df1101d1f13eada6885a9dd44197ceef33f337/records/track_10min_16mb/2026-03-24_DeepQuant_V10b/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/e7df1101d1f13eada6885a9dd44197ceef33f337/records/track_10min_16mb/2026-03-24_DeepQuant_V10b/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/e7df1101d1f13eada6885a9dd44197ceef33f337/records/track_10min_16mb/2026-03-24_DeepQuant_V10b/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/e7df1101d1f13eada6885a9dd44197ceef33f337/records/track_10min_16mb/2026-03-24_DeepQuant_V10b",
         "pr": "https://github.com/openai/parameter-golf/pull/596",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
@@ -1623,6 +1623,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/a17ff66702d50731c5d6833145875687a2791016/records/track_10min_16mb/2026-03-19_ValOnly_10min/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/a17ff66702d50731c5d6833145875687a2791016/records/track_10min_16mb/2026-03-19_ValOnly_10min",
         "pr": "https://github.com/openai/parameter-golf/pull/44",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-24_XSA-all_FullGPTQ_ParallelMuon_1-1155",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-24_XSA-all_FullGPTQ_ParallelMuon_1.1155",
+        "folderPath": "records/track_10min_16mb/2026-03-24_XSA-all_FullGPTQ_ParallelMuon_1.1155",
+        "submissionPath": "records/track_10min_16mb/2026-03-24_XSA-all_FullGPTQ_ParallelMuon_1.1155/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-24_XSA-all_FullGPTQ_ParallelMuon_1.1155/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-24_XSA-all_FullGPTQ_ParallelMuon_1.1155/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-24_XSA-all_FullGPTQ_ParallelMuon_1.1155/train_gpt.py"
+      },
+      "submission": {
+        "author": "Sam Larson",
+        "githubId": "saml212",
+        "name": "Record: 11L XSA-all + Full GPTQ + Selective Pruning + Parallel Muon",
+        "blurb": "XSA on all 11 layers (vs standard last-4), Full Hessian GPTQ int6, selective ±1 magnitude pruning, Parameter Banking + Parallel Muon. Built on PR #593 stack with LeakyReLU(0.5)², BigramHash(2048), Partial RoPE 16/64, LN Scale, VE128, SmearGate, U-Net skips, EMA(0.997), Tight SWA, lzma compression.",
+        "date": "2026-03-24"
+      },
+      "metrics": {
+        "valBpb": 1.1154,
+        "valLoss": 1.88254,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15937739,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 609,
+        "title": "Record: 11L XSA-all + Full GPTQ + Selective Pruning (val_bpb=1.1154, 3-seed)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/609",
+        "authorLogin": "saml212",
+        "authorName": null,
+        "createdAt": "2026-03-24T10:01:14Z",
+        "updatedAt": "2026-03-24T10:01:14Z",
+        "headSha": "e2868b319e4e1d2db4bf03703d686ccec4f6e94a",
+        "headRepo": "saml212/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/e2868b319e4e1d2db4bf03703d686ccec4f6e94a/records/track_10min_16mb/2026-03-24_XSA-all_FullGPTQ_ParallelMuon_1.1155/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/e2868b319e4e1d2db4bf03703d686ccec4f6e94a/records/track_10min_16mb/2026-03-24_XSA-all_FullGPTQ_ParallelMuon_1.1155/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/e2868b319e4e1d2db4bf03703d686ccec4f6e94a/records/track_10min_16mb/2026-03-24_XSA-all_FullGPTQ_ParallelMuon_1.1155/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/e2868b319e4e1d2db4bf03703d686ccec4f6e94a/records/track_10min_16mb/2026-03-24_XSA-all_FullGPTQ_ParallelMuon_1.1155/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/e2868b319e4e1d2db4bf03703d686ccec4f6e94a/records/track_10min_16mb/2026-03-24_XSA-all_FullGPTQ_ParallelMuon_1.1155",
+        "pr": "https://github.com/openai/parameter-golf/pull/609",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -26576,6 +26653,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/233f7601a0e08febe8d63148667198beb60a059c/records/alan_samaha_golf/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/233f7601a0e08febe8d63148667198beb60a059c/records/alan_samaha_golf",
         "pr": "https://github.com/openai/parameter-golf/pull/604",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-24-11L_AttnRes_GatedAttn_Loops_EMA_Cos_QAT",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-24-11L_AttnRes_GatedAttn_Loops_EMA_Cos_QAT",
+        "folderPath": "records/track_10min_16mb/2026-03-24-11L_AttnRes_GatedAttn_Loops_EMA_Cos_QAT",
+        "submissionPath": "records/track_10min_16mb/2026-03-24-11L_AttnRes_GatedAttn_Loops_EMA_Cos_QAT/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-24-11L_AttnRes_GatedAttn_Loops_EMA_Cos_QAT/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-24-11L_AttnRes_GatedAttn_Loops_EMA_Cos_QAT/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-24-11L_AttnRes_GatedAttn_Loops_EMA_Cos_QAT/train_gpt.py"
+      },
+      "submission": {
+        "author": "Neopolita",
+        "githubId": "Neopolita",
+        "name": "11L AttnRes + Gated Attention + Looped Blocks + EMA + Cosine + QAT",
+        "blurb": "Block Attention Residuals (arXiv 2603.15031) replacing fixed skip_weights with learned depth routing, per-head sigmoid gated attention, looped middle blocks (layers 4-7 x2) for zero-param compute depth, EMA(0.995), cosine LR decay, QAT@0.15. 11L 3xMLP relu² baseline with 26.5M params.",
+        "date": "2026-03-24T00:00:00Z"
+      },
+      "metrics": {
+        "valBpb": null,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 607,
+        "title": "11L AttnRes + Gated Attention + Looped Blocks + EMA + Cosine + QAT",
+        "state": "open",
+        "draft": true,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/607",
+        "authorLogin": "Neopolita",
+        "authorName": null,
+        "createdAt": "2026-03-24T09:55:53Z",
+        "updatedAt": "2026-03-24T09:55:53Z",
+        "headSha": "c1d5cb45c9afbd4d421b8e882c83acf0e2d1d2be",
+        "headRepo": "Neopolita/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/c1d5cb45c9afbd4d421b8e882c83acf0e2d1d2be/records/track_10min_16mb/2026-03-24-11L_AttnRes_GatedAttn_Loops_EMA_Cos_QAT/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/c1d5cb45c9afbd4d421b8e882c83acf0e2d1d2be/records/track_10min_16mb/2026-03-24-11L_AttnRes_GatedAttn_Loops_EMA_Cos_QAT/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/c1d5cb45c9afbd4d421b8e882c83acf0e2d1d2be/records/track_10min_16mb/2026-03-24-11L_AttnRes_GatedAttn_Loops_EMA_Cos_QAT/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/c1d5cb45c9afbd4d421b8e882c83acf0e2d1d2be/records/track_10min_16mb/2026-03-24-11L_AttnRes_GatedAttn_Loops_EMA_Cos_QAT/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/c1d5cb45c9afbd4d421b8e882c83acf0e2d1d2be/records/track_10min_16mb/2026-03-24-11L_AttnRes_GatedAttn_Loops_EMA_Cos_QAT",
+        "pr": "https://github.com/openai/parameter-golf/pull/607",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

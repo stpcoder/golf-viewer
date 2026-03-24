@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-03-24T09:53:36.915Z",
+  "generatedAt": "2026-03-24T10:23:44.768Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "counts": {
-    "submissions": 472,
+    "submissions": 474,
     "official": 1,
-    "openPr": 394,
+    "openPr": 396,
     "mergedPr": 20,
     "closedPr": 57,
-    "prBacked": 472,
+    "prBacked": 474,
     "readmeListed": 19,
     "collectorErrors": 0
   },
@@ -113,13 +113,13 @@
       "submission": {
         "author": "UrukHan",
         "githubId": "UrukHan",
-        "name": "DeepQuant V10b — 11L INT6 + 8-epoch LoRA TTT",
-        "blurb": "8ep cosine TTT + LM rank-16 + bias tuning + temp rescale on PROTEUS base",
+        "name": "DeepQuant — 11L INT6 + 8-epoch Cosine LoRA TTT",
+        "blurb": "8ep cosine TTT + LM rank-16 + bias tuning + zigzag GPU balancing",
         "date": "2026-03-24T00:00:00Z"
       },
       "metrics": {
-        "valBpb": 0.643,
-        "valLoss": 1.0824,
+        "valBpb": 0.6235,
+        "valLoss": 1.0528,
         "preQuantValBpb": null,
         "preQuantValLoss": null,
         "stepStop": null,
@@ -127,7 +127,7 @@
         "evalTimeSeconds": null
       },
       "artifact": {
-        "bytesTotal": 15497939,
+        "bytesTotal": 15413092,
         "bytesCode": null,
         "bytesModelInt8Zlib": null
       },
@@ -148,16 +148,16 @@
         "authorLogin": "AriaAnima",
         "authorName": null,
         "createdAt": "2026-03-24T03:09:15Z",
-        "updatedAt": "2026-03-24T05:11:46Z",
-        "headSha": "b7b45e791cd4b807fcab56af2d0cc6fe3fe0c2ec",
+        "updatedAt": "2026-03-24T10:13:33Z",
+        "headSha": "e7df1101d1f13eada6885a9dd44197ceef33f337",
         "headRepo": "AriaAnima/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/b7b45e791cd4b807fcab56af2d0cc6fe3fe0c2ec/records/track_10min_16mb/2026-03-24_DeepQuant_V10b/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/b7b45e791cd4b807fcab56af2d0cc6fe3fe0c2ec/records/track_10min_16mb/2026-03-24_DeepQuant_V10b/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/b7b45e791cd4b807fcab56af2d0cc6fe3fe0c2ec/records/track_10min_16mb/2026-03-24_DeepQuant_V10b/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/b7b45e791cd4b807fcab56af2d0cc6fe3fe0c2ec/records/track_10min_16mb/2026-03-24_DeepQuant_V10b/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/b7b45e791cd4b807fcab56af2d0cc6fe3fe0c2ec/records/track_10min_16mb/2026-03-24_DeepQuant_V10b",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/e7df1101d1f13eada6885a9dd44197ceef33f337/records/track_10min_16mb/2026-03-24_DeepQuant_V10b/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/e7df1101d1f13eada6885a9dd44197ceef33f337/records/track_10min_16mb/2026-03-24_DeepQuant_V10b/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/e7df1101d1f13eada6885a9dd44197ceef33f337/records/track_10min_16mb/2026-03-24_DeepQuant_V10b/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/e7df1101d1f13eada6885a9dd44197ceef33f337/records/track_10min_16mb/2026-03-24_DeepQuant_V10b/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/e7df1101d1f13eada6885a9dd44197ceef33f337/records/track_10min_16mb/2026-03-24_DeepQuant_V10b",
         "pr": "https://github.com/openai/parameter-golf/pull/596",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },

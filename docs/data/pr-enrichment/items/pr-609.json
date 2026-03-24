@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-24T10:23:51.239Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 609,
+    "title": "Record: 11L XSA-all + Full GPTQ + Selective Pruning (val_bpb=1.1154, 3-seed)",
+    "state": "open",
+    "updatedAt": "2026-03-24T10:01:14Z",
+    "headSha": "e2868b319e4e1d2db4bf03703d686ccec4f6e94a",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/609",
+    "authorLogin": "saml212"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-24_XSA-all_FullGPTQ_ParallelMuon_1.1155/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Builds on the Parallel Muon/GPTQ stack by applying XSA to every layer and selectively pruning ±1 quant values by reconstruction error before artifact packing.",
+    "tags": [
+      "attention",
+      "quantization",
+      "regularization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "XSA across all 11 layers to mix positions from layer 0 onward",
+      "Selective post-GPTQ ±1 magnitude pruning guided by reconstruction-error scale²",
+      "Full Hessian GPTQ int6 + Parallel Muon/Parameter Banking stack"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

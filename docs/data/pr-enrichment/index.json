@@ -1,8 +1,55 @@
 {
-  "generatedAt": "2026-03-24T09:53:47.827Z",
+  "generatedAt": "2026-03-24T10:24:02.442Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 609,
+      "title": "Record: 11L XSA-all + Full GPTQ + Selective Pruning (val_bpb=1.1154, 3-seed)",
+      "status": "open",
+      "updatedAt": "2026-03-24T10:01:14Z",
+      "headSha": "e2868b319e4e1d2db4bf03703d686ccec4f6e94a",
+      "generatedAt": "2026-03-24T10:23:51.239Z",
+      "summary": "Builds on the Parallel Muon/GPTQ stack by applying XSA to every layer and selectively pruning ±1 quant values by reconstruction error before artifact packing.",
+      "tags": [
+        "attention",
+        "quantization",
+        "regularization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-609.json"
+    },
+    {
+      "prNumber": 607,
+      "title": "11L AttnRes + Gated Attention + Looped Blocks + EMA + Cosine + QAT",
+      "status": "open",
+      "updatedAt": "2026-03-24T09:55:53Z",
+      "headSha": "c1d5cb45c9afbd4d421b8e882c83acf0e2d1d2be",
+      "generatedAt": "2026-03-24T10:23:56.505Z",
+      "summary": "Combines Block Attention Residuals, per-head gated attention, and looped middle blocks with EMA/cosine/QAT to add compute depth without extra params.",
+      "tags": [
+        "attention",
+        "architecture",
+        "training-schedule",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-607.json"
+    },
     {
       "prNumber": 606,
       "title": "Record: int5 GPTQ + Soft-Round QAT (3-seed mean 1.1162)",
@@ -221,15 +268,15 @@
       "prNumber": 596,
       "title": "Record: DeepQuant V10b — 11L INT6 + 8ep LoRA TTT (val_bpb=0.6430)",
       "status": "open",
-      "updatedAt": "2026-03-24T05:11:46Z",
-      "headSha": "b7b45e791cd4b807fcab56af2d0cc6fe3fe0c2ec",
-      "generatedAt": "2026-03-24T05:21:44.117Z",
-      "summary": "11-layer INT6 model pairs 8-epoch cosine LR LoRA TTT with bias tunes, temp rescale, and timed fallback to refine PROTEUS base adaptively.",
+      "updatedAt": "2026-03-24T10:13:33Z",
+      "headSha": "e7df1101d1f13eada6885a9dd44197ceef33f337",
+      "generatedAt": "2026-03-24T10:24:02.349Z",
+      "summary": "11-layer INT6 model uses extensive per-document 8-epoch LoRA TTT with bias tuning, temp rescale, and timeout fallback to specialize evaluations.",
       "tags": [
-        "architecture",
         "quantization",
         "training-schedule",
-        "evaluation"
+        "evaluation",
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,

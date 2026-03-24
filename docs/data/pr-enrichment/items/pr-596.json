@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-24T05:21:44.117Z",
+  "generatedAt": "2026-03-24T10:24:02.349Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 596,
     "title": "Record: DeepQuant V10b — 11L INT6 + 8ep LoRA TTT (val_bpb=0.6430)",
     "state": "open",
-    "updatedAt": "2026-03-24T05:11:46Z",
-    "headSha": "b7b45e791cd4b807fcab56af2d0cc6fe3fe0c2ec",
+    "updatedAt": "2026-03-24T10:13:33Z",
+    "headSha": "e7df1101d1f13eada6885a9dd44197ceef33f337",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/596",
     "authorLogin": "AriaAnima"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer INT6 model pairs 8-epoch cosine LR LoRA TTT with bias tunes, temp rescale, and timed fallback to refine PROTEUS base adaptively.",
+    "summary": "11-layer INT6 model uses extensive per-document 8-epoch LoRA TTT with bias tuning, temp rescale, and timeout fallback to specialize evaluations.",
     "tags": [
-      "architecture",
       "quantization",
       "training-schedule",
-      "evaluation"
+      "evaluation",
+      "optimizer"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "INT6 quantized 11-layer with LoRA and per-block bias tuning",
-      "8-epoch cosine LR TTT with post-TTT temperature rescale",
-      "Wall-clock-limited eval fallback to base model for long documents"
+      "8-epoch LoRA TTT with cosine LR decay",
+      "LM-head rank-16 plus per-block bias tuning",
+      "Post-TTT temp rescale and wall-clock fallback"
     ]
   },
   "compatibility": {
