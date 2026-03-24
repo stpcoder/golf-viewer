@@ -1,8 +1,53 @@
 {
-  "generatedAt": "2026-03-24T15:56:44.924Z",
+  "generatedAt": "2026-03-24T16:27:35.474Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 631,
+      "title": "submission: XSA-all + Soft-Round QAT + Full GPTQ + MLP 3.5x + AdamW TTT",
+      "status": "open",
+      "updatedAt": "2026-03-24T16:22:45Z",
+      "headSha": "e7783d4eb514009dfa8b20de5b8b32720cdd0933",
+      "generatedAt": "2026-03-24T16:25:46.980Z",
+      "summary": "Adds XSA on every layer, Soft-Round QAT with Hessian-aware GPTQ, a larger MLP/vocab, and AdamW TTT to the SOTA base.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "optimizer"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-631.json"
+    },
+    {
+      "prNumber": 630,
+      "title": "Non-record: LapushBaby stock baseline 1xGPU RunPod",
+      "status": "open",
+      "updatedAt": "2026-03-24T16:04:03Z",
+      "headSha": "071d2200d176cd7f5db02779a2d2a4dac27c8e04",
+      "generatedAt": "2026-03-24T16:26:02.859Z",
+      "summary": "Reproducibly runs stock train_gpt.py on a single-GPU 600s RunPod job over FineWeb sp1024, producing int8+zlib artifacts below 16MB.",
+      "tags": [
+        "non-record",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-630.json"
+    },
     {
       "prNumber": 628,
       "title": "Non-record: 11L GEPA + 20k Steps + Pure Int6 + Legal TTT (val_bpb=1.0983): unlimited compute: 4×A100-40GB, ~2.8 hours",
@@ -147,16 +192,16 @@
     {
       "prNumber": 620,
       "title": "Record: LeakyReLU(0.5)² + Per-Document LoRA TTT (mean val_bpb=0.9443, 3 seeds)",
-      "status": "open",
-      "updatedAt": "2026-03-24T13:42:28Z",
+      "status": "closed",
+      "updatedAt": "2026-03-24T15:58:33Z",
       "headSha": "e323a65682be6692b48855edd50d3b2b7742ac22",
-      "generatedAt": "2026-03-24T13:55:05.387Z",
-      "summary": "11-layer U-Net uses LeakyReLU(0.5)² and per-document LoRA test-time training with Muon+SWA before int8+zstd-22 compression.",
+      "generatedAt": "2026-03-24T16:26:16.555Z",
+      "summary": "U-Net swaps in LeakyReLU(0.5)² while applying per-document LoRA TTT with Muon/SWA and int8+zstd compression for adaptive inference.",
       "tags": [
         "architecture",
-        "muon",
-        "quantization",
-        "optimizer"
+        "optimizer",
+        "evaluation",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -335,14 +380,14 @@
       "prNumber": 609,
       "title": "Record: 11L XSA-all + Full GPTQ + Selective Pruning (val_bpb=1.1154, 3-seed)",
       "status": "open",
-      "updatedAt": "2026-03-24T15:31:01Z",
+      "updatedAt": "2026-03-24T16:12:32Z",
       "headSha": "e2868b319e4e1d2db4bf03703d686ccec4f6e94a",
-      "generatedAt": "2026-03-24T15:55:58.562Z",
-      "summary": "Extends Parallel Muon stack by applying XSA on every layer and combining Full Hessian GPTQ with selective ±1 pruning for tighter quantized compression.",
+      "generatedAt": "2026-03-24T16:26:22.536Z",
+      "summary": "Builds on Parallel Muon by applying XSA across all 11 layers plus full Hessian GPTQ int6 and selective ±1 pruning to squeeze artifacts under 16MB.",
       "tags": [
+        "architecture",
         "attention",
-        "quantization",
-        "compression"
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -621,21 +666,21 @@
       "status": "closed",
       "updatedAt": "2026-03-24T15:55:46Z",
       "headSha": "7868f1244e333c7b7af2af2a51c67ea00a427f86",
-      "generatedAt": "2026-03-24T15:56:11.398Z",
-      "summary": "10-layer RoPE transformer with GQA, SWA checkpoint averaging, and Int5/6 quantization, followed by standard AdamW TTT on validation data.",
+      "generatedAt": "2026-03-24T16:26:30.342Z",
+      "summary": "10-layer GQA transformer with SmearGate/BigramHash, SWA averaging, and standard AdamW TTT applied after quantization.",
       "tags": [
+        "val-only",
         "architecture",
-        "quantization",
-        "training-schedule",
-        "evaluation"
+        "optimizer",
+        "quantization"
       ],
       "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": true
+        "valOnlyMatchesCollector": false
       },
       "file": "items/pr-595.json"
     },
@@ -738,14 +783,14 @@
       "prNumber": 586,
       "title": "Record: 11L + Hadamard Rotation + VE128 + cuDNN SDPA (val_bpb: 1.1365)",
       "status": "open",
-      "updatedAt": "2026-03-24T13:09:30Z",
-      "headSha": "75ef6f9a2399ea11c7b586d3efe98a50772306c5",
-      "generatedAt": "2026-03-24T13:25:10.955Z",
-      "summary": "Walsh-Hadamard rotation before int6 quant shrinks gaps and frees headroom to add VE128, with CPU probe steering parameter choices under cuDNN SDPA.",
+      "updatedAt": "2026-03-24T16:23:55Z",
+      "headSha": "e32e92a51a30e20a04ca3b8ac5e0b5cf00a5040e",
+      "generatedAt": "2026-03-24T16:26:47.564Z",
+      "summary": "Hadamard rotation before int6 quantization spreads weights to boost zstd compression and free headroom so VE128 fits with cuDNN SDPA on the 11L model.",
       "tags": [
         "quantization",
-        "compression",
         "architecture",
+        "compression",
         "non-record"
       ],
       "flags": {
@@ -1012,15 +1057,14 @@
     {
       "prNumber": 569,
       "title": "Record: 11L VRL + LeakyReLU² + Full GPTQ (3-seed mean val_bpb=1.1175)",
-      "status": "open",
-      "updatedAt": "2026-03-24T15:31:31Z",
+      "status": "closed",
+      "updatedAt": "2026-03-24T16:13:39Z",
       "headSha": "1a4f3aaf4c125882705386d26e2bb271b4907243",
-      "generatedAt": "2026-03-24T15:56:19.813Z",
-      "summary": "Combines sigmoid-gated Value Residual Learning, LeakyReLU(0.5)² MLPs, and Full GPTQ-aware quantization within an 11-layer model with EMA/SWA.",
+      "generatedAt": "2026-03-24T16:26:59.883Z",
+      "summary": "Adds Value Residual Learning gating from layer0 and LeakyReLU(0.5)^2 MLPs, then Full GPTQ + aligned QAT/pruning for the 11-layer frontier model.",
       "tags": [
-        "architecture",
         "quantization",
-        "training-schedule"
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1915,24 +1959,23 @@
     {
       "prNumber": 512,
       "title": "Record: PROTEUS v7 — 11L INT6 + LoRA TTT (mean val_bpb=0.9512, 3 seeds)",
-      "status": "open",
-      "updatedAt": "2026-03-23T23:45:03Z",
+      "status": "closed",
+      "updatedAt": "2026-03-24T15:59:49Z",
       "headSha": "502a29f01510b50a872a8b3737dfe874a3478e2d",
-      "generatedAt": "2026-03-23T23:49:56.179Z",
-      "summary": "11-layer INT6 transformer using depth-scaled residuals and backward-looking per-document LoRA TTT adaptation during evaluation.",
+      "generatedAt": "2026-03-24T16:27:08.823Z",
+      "summary": "11-layer PROTEUS pairs INT6 uniform quantization and depth-scaled residuals with backward-looking multi-epoch LoRA TTT per document.",
       "tags": [
-        "val-only",
         "quantization",
         "architecture",
         "evaluation"
       ],
       "flags": {
-        "usesValOnly": true,
-        "usesValOnlyAi": true,
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": false
+        "valOnlyMatchesCollector": true
       },
       "file": "items/pr-512.json"
     },
@@ -3950,13 +3993,13 @@
       "prNumber": 399,
       "title": "Record: Parallel Muon + Parameter Banking — 81.87ms/step, val_bpb 1.1247 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-24T15:53:50Z",
+      "updatedAt": "2026-03-24T16:22:32Z",
       "headSha": "d5340951f214b08d53cf8fa582e04dc43c2548cb",
-      "generatedAt": "2026-03-24T15:56:44.864Z",
-      "summary": "Parameter Banking reorganizes weights into a few 3D tensors, while Parallel Muon schedules DDP-free async comms for batched optimizer steps.",
+      "generatedAt": "2026-03-24T16:27:28.311Z",
+      "summary": "Parameter Banking groups weights into banks and combines with Parallel Muon scheduling to batch Newton-Schulz optimizer ops instead of DDP per layer.",
       "tags": [
-        "muon",
         "optimizer",
+        "muon",
         "architecture"
       ],
       "flags": {
@@ -4347,16 +4390,16 @@
     {
       "prNumber": 376,
       "title": "Record: 11L Next-Gen Stack + Custom Kernels, val_bpb=1.1399",
-      "status": "open",
-      "updatedAt": "2026-03-23T19:37:16Z",
+      "status": "closed",
+      "updatedAt": "2026-03-24T16:17:34Z",
       "headSha": "962419301eac2eeb5f9f90b324f4be6029b39029",
-      "generatedAt": "2026-03-23T19:48:00.564Z",
-      "summary": "11-layer transformer bundles XSA, partial NTK-RoPE, Muon+SWA training, int5+zstd compression, and custom Triton kernels for a compact Next-Gen Stack.",
+      "generatedAt": "2026-03-24T16:27:35.416Z",
+      "summary": "11-layer transformer blends GQA/XSA/NTK-RoPE with Muon tuning, int5+zstd compression, and fused kernels for sliding-window evaluation.",
       "tags": [
         "architecture",
         "quantization",
         "optimizer",
-        "compression"
+        "sliding-window-eval"
       ],
       "flags": {
         "usesValOnly": false,

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-24T15:56:19.813Z",
+  "generatedAt": "2026-03-24T16:26:59.883Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 569,
     "title": "Record: 11L VRL + LeakyReLU² + Full GPTQ (3-seed mean val_bpb=1.1175)",
-    "state": "open",
-    "updatedAt": "2026-03-24T15:31:31Z",
+    "state": "closed",
+    "updatedAt": "2026-03-24T16:13:39Z",
     "headSha": "1a4f3aaf4c125882705386d26e2bb271b4907243",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/569",
     "authorLogin": "gowtham0992"
@@ -19,18 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines sigmoid-gated Value Residual Learning, LeakyReLU(0.5)² MLPs, and Full GPTQ-aware quantization within an 11-layer model with EMA/SWA.",
+    "summary": "Adds Value Residual Learning gating from layer0 and LeakyReLU(0.5)^2 MLPs, then Full GPTQ + aligned QAT/pruning for the 11-layer frontier model.",
     "tags": [
-      "architecture",
       "quantization",
-      "training-schedule"
+      "architecture"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "VRL adds layer0 value outputs to later layers via learned sigmoid gates",
-      "LeakyReLU(0.5)² keeps MLP gradients flowing in both directions",
-      "Full GPTQ int6 with EMA/SWA-aligned late QAT and compression pruning"
+      "VRL gating of layer0 value outputs",
+      "LeakyReLU(0.5)^2 in MLP block",
+      "Full GPTQ int6 + aligned QAT and pruning"
     ]
   },
   "compatibility": {

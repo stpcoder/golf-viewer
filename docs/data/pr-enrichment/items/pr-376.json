@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-23T19:48:00.564Z",
+  "generatedAt": "2026-03-24T16:27:35.416Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 376,
     "title": "Record: 11L Next-Gen Stack + Custom Kernels, val_bpb=1.1399",
-    "state": "open",
-    "updatedAt": "2026-03-23T19:37:16Z",
+    "state": "closed",
+    "updatedAt": "2026-03-24T16:17:34Z",
     "headSha": "962419301eac2eeb5f9f90b324f4be6029b39029",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/376",
     "authorLogin": "anthony-maio"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer transformer bundles XSA, partial NTK-RoPE, Muon+SWA training, int5+zstd compression, and custom Triton kernels for a compact Next-Gen Stack.",
+    "summary": "11-layer transformer blends GQA/XSA/NTK-RoPE with Muon tuning, int5+zstd compression, and fused kernels for sliding-window evaluation.",
     "tags": [
       "architecture",
       "quantization",
       "optimizer",
-      "compression"
+      "sliding-window-eval"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "XSA with partial NTK-aware RoPE and depth-aware LN scaling",
-      "Int5 quantization plus GPTQ-lite search layered with zstd-22 compression",
-      "Muon optimizer with μP scaling and SWA tail averaging"
+      "Custom Triton kernels fusing RMSNorm+QKV, ReLU² MLP, and softcap+CE",
+      "Int5 quantization with Late QAT STE plus zstd-22 compression",
+      "Muon optimizer with orthogonal init, muP scaling, NTK-aware RoPE, and XSA on final layers"
     ]
   },
   "compatibility": {

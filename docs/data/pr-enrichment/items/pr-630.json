@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-24T16:26:02.859Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 630,
+    "title": "Non-record: LapushBaby stock baseline 1xGPU RunPod",
+    "state": "open",
+    "updatedAt": "2026-03-24T16:04:03Z",
+    "headSha": "071d2200d176cd7f5db02779a2d2a4dac27c8e04",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/630",
+    "authorLogin": "LapushBaby"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-24_LapushBaby_StockBaseline_10min_1GPU_RunPod/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Reproducibly runs stock train_gpt.py on a single-GPU 600s RunPod job over FineWeb sp1024, producing int8+zlib artifacts below 16MB.",
+    "tags": [
+      "non-record",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Stock train_gpt.py run on 1×GPU RunPod",
+      "600s wallclock cap for non-record documentation",
+      "FineWeb sp1024 data with post-run int8+zlib payload"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-24T13:55:05.387Z",
+  "generatedAt": "2026-03-24T16:26:16.555Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 620,
     "title": "Record: LeakyReLU(0.5)² + Per-Document LoRA TTT (mean val_bpb=0.9443, 3 seeds)",
-    "state": "open",
-    "updatedAt": "2026-03-24T13:42:28Z",
+    "state": "closed",
+    "updatedAt": "2026-03-24T15:58:33Z",
     "headSha": "e323a65682be6692b48855edd50d3b2b7742ac22",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/620",
     "authorLogin": "robinojw"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer U-Net uses LeakyReLU(0.5)² and per-document LoRA test-time training with Muon+SWA before int8+zstd-22 compression.",
+    "summary": "U-Net swaps in LeakyReLU(0.5)² while applying per-document LoRA TTT with Muon/SWA and int8+zstd compression for adaptive inference.",
     "tags": [
       "architecture",
-      "muon",
-      "quantization",
-      "optimizer"
+      "optimizer",
+      "evaluation",
+      "quantization"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "valOnlyReasoning": "Standard training plus test-time LoRA adaptation; no val-only training regime reported.",
     "techniques": [
-      "LeakyReLU(0.5)² U-Net with SmearGate/BigramHash depth-scaled residuals",
-      "Per-document LoRA TTT over three epochs (chunk=256, docs ≥512 tokens)",
-      "int8+zstd-22 quantization layered on Muon+WD with SWA"
+      "LeakyReLU(0.5)² activation across MLP layers",
+      "Per-document LoRA test-time training",
+      "Muon optimizer with SWA and int8+zstd compression"
     ]
   },
   "compatibility": {

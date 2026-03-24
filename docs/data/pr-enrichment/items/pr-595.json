@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-24T15:56:11.398Z",
+  "generatedAt": "2026-03-24T16:26:30.342Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
@@ -19,25 +19,25 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "10-layer RoPE transformer with GQA, SWA checkpoint averaging, and Int5/6 quantization, followed by standard AdamW TTT on validation data.",
+    "summary": "10-layer GQA transformer with SmearGate/BigramHash, SWA averaging, and standard AdamW TTT applied after quantization.",
     "tags": [
+      "val-only",
       "architecture",
-      "quantization",
-      "training-schedule",
-      "evaluation"
+      "optimizer",
+      "quantization"
     ],
-    "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "usesValOnly": true,
+    "valOnlyReasoning": "Standard AdamW TTT fine-tunes the quantized weights directly on the validation data before evaluation.",
     "techniques": [
-      "SWA over 29 checkpoints",
-      "Int5/Int6 per-row quantization",
-      "Standard AdamW TTT on validation set"
+      "10-layer GQA stack with SmearGate, BigramHash, and U-Net skips",
+      "SWA over 29 checkpoints before artifact compression",
+      "Standard AdamW test-time training on validation data"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": false,
-    "finalUsesValOnly": false,
-    "valOnlyMatchesCollector": true
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
   }
 }
