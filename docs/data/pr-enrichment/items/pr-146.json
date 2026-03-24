@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-20T01:50:43.531Z",
+  "generatedAt": "2026-03-24T21:57:00.665Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 146,
     "title": "Non-record: Warmdown-Tuned Training (val_bpb=1.2987) on 1xRTX 5090",
-    "state": "open",
-    "updatedAt": "2026-03-20T01:23:46Z",
+    "state": "closed",
+    "updatedAt": "2026-03-24T21:50:25Z",
     "headSha": "d3cbde1b2a004334d657dfa6d9b705a1474afc3e",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/146",
     "authorLogin": "swapp1990"
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Warmdown-tuning a 9-layer GPT (3000 warmdown iters) shows cosine LR warmdown produces 2.6× efficiency gains while probing register tokens and layer looping.",
+    "summary": "Warmdown-length tuning (optimal 3k steps) drives per-step BPB gains while layer and register-token analysis guides upcoming looping/wider architecture work.",
     "tags": [
       "training-schedule",
       "architecture",
@@ -28,9 +28,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Extended cosine LR warmdown to 3000 steps",
-      "Analysis of register tokens and layer looping impact",
-      "Int8+zlib validation pipeline"
+      "Warmdown_iters=3000 LR decay tuning",
+      "Layer activation and looping analysis",
+      "Register-token ablation to rule out overheads"
     ]
   },
   "compatibility": {
