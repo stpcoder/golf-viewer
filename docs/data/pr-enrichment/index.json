@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-24T11:24:11.496Z",
+  "generatedAt": "2026-03-24T12:24:48.379Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 612,
+      "title": "Non-record: 11L GEPA + 12k Steps + Pure Int6 + Legal TTT (val_bpb=1.1079)",
+      "status": "open",
+      "updatedAt": "2026-03-24T12:10:03Z",
+      "headSha": "3bf3fefe03bf8681f8a8c6c5f69aa561b967d411",
+      "generatedAt": "2026-03-24T12:24:29.188Z",
+      "summary": "12k-step GEPA training with pure int6 GPTQ-lite quant plus legal score-first TTT keeps the artifact <16MB while improving the float base.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "training-schedule",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-612.json"
+    },
     {
       "prNumber": 611,
       "title": "Record: Chimera TTT — K-Projection LoRA + Min-NLL (0.5601 BPB, 3-seed mean)",
@@ -77,13 +101,13 @@
       "prNumber": 607,
       "title": "11L AttnRes + Gated Attention + Looped Blocks + EMA + Cosine + QAT",
       "status": "open",
-      "updatedAt": "2026-03-24T09:55:53Z",
+      "updatedAt": "2026-03-24T12:18:00Z",
       "headSha": "c1d5cb45c9afbd4d421b8e882c83acf0e2d1d2be",
-      "generatedAt": "2026-03-24T10:23:56.505Z",
-      "summary": "Combines Block Attention Residuals, per-head gated attention, and looped middle blocks with EMA/cosine/QAT to add compute depth without extra params.",
+      "generatedAt": "2026-03-24T12:24:34.315Z",
+      "summary": "Combines Block Attention Residual routing, per-head gated attention, looped middle layers, EMA+cosine scheduling, and late QAT for an 11-layer transformer.",
       "tags": [
-        "attention",
         "architecture",
+        "attention",
         "training-schedule",
         "quantization"
       ],
@@ -315,15 +339,14 @@
       "prNumber": 596,
       "title": "Record: DeepQuant V10b — 11L INT6 + 8ep LoRA TTT (val_bpb=0.6430)",
       "status": "open",
-      "updatedAt": "2026-03-24T10:13:33Z",
-      "headSha": "e7df1101d1f13eada6885a9dd44197ceef33f337",
-      "generatedAt": "2026-03-24T10:24:02.349Z",
-      "summary": "11-layer INT6 model uses extensive per-document 8-epoch LoRA TTT with bias tuning, temp rescale, and timeout fallback to specialize evaluations.",
+      "updatedAt": "2026-03-24T12:05:46Z",
+      "headSha": "9e4f467b3647c584b53282e3eb1b0ae4ec771927",
+      "generatedAt": "2026-03-24T12:24:42.110Z",
+      "summary": "Applies 8-epoch per-document LoRA TTT with cosine decay, bias tuning, and temperature rescaling atop an INT6 11-layer model.",
       "tags": [
-        "quantization",
         "training-schedule",
-        "evaluation",
-        "optimizer"
+        "quantization",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -361,12 +384,12 @@
     },
     {
       "prNumber": 593,
-      "title": "Record: Full GPTQ + LeakyReLU² + Parallel Muon — val_bpb 1.1171 (3-seed mean, no TTT)",
+      "title": "Record: Full GPTQ + LeakyReLU² + Parallel Muon + BigramHash 3072 (val_bpb 1.1163, 3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-24T01:55:41Z",
-      "headSha": "63056a4624ca2cce278c746aa7ea9a2b70899c5d",
-      "generatedAt": "2026-03-24T02:20:31.300Z",
-      "summary": "LeakyReLU² stack with Parameter Banking and Parallel Muon feeds Full Hessian GPTQ quantization via banked-unbanked Hessian hooks.",
+      "updatedAt": "2026-03-24T12:23:37Z",
+      "headSha": "ce4c4a2018c12fb19e7e784d881b91d4137bf4ed",
+      "generatedAt": "2026-03-24T12:24:48.288Z",
+      "summary": "Uses Full Hessian GPTQ, Parallel Muon optimizer, and a coverage-focused BigramHash 3072×80 to squeeze an 11-layer model into the 16MB budget.",
       "tags": [
         "quantization",
         "optimizer",

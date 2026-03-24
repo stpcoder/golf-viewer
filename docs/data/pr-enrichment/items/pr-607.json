@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-24T10:23:56.505Z",
+  "generatedAt": "2026-03-24T12:24:34.315Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 607,
     "title": "11L AttnRes + Gated Attention + Looped Blocks + EMA + Cosine + QAT",
     "state": "open",
-    "updatedAt": "2026-03-24T09:55:53Z",
+    "updatedAt": "2026-03-24T12:18:00Z",
     "headSha": "c1d5cb45c9afbd4d421b8e882c83acf0e2d1d2be",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/607",
     "authorLogin": "Neopolita"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines Block Attention Residuals, per-head gated attention, and looped middle blocks with EMA/cosine/QAT to add compute depth without extra params.",
+    "summary": "Combines Block Attention Residual routing, per-head gated attention, looped middle layers, EMA+cosine scheduling, and late QAT for an 11-layer transformer.",
     "tags": [
-      "attention",
       "architecture",
+      "attention",
       "training-schedule",
       "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Block Attention Residuals with learned depth routing",
-      "Per-head gated attention plus looped middle blocks for added compute depth",
+      "Block Attention Residuals with learned routing",
+      "Per-head gated attention plus looped middle blocks",
       "Cosine LR decay with EMA and late-stage QAT"
     ]
   },
