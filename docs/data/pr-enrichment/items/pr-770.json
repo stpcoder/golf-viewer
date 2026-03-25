@@ -1,0 +1,39 @@
+{
+  "generatedAt": "2026-03-25T21:34:12.189Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 770,
+    "title": "Record: 11L + Multi-Order N-gram Backoff + Entropy-Adaptive Alpha (val_bpb=0.6672)",
+    "state": "open",
+    "updatedAt": "2026-03-25T21:30:28Z",
+    "headSha": "2ff44a66f62759b9a75db642e35a1623f998e304",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/770",
+    "authorLogin": "minh-stakc"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_NgramCache_EntropyAdaptive_0.6672/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Multi-order n-gram cache backoff (orders 2-7) blends with the 11L LM via entropy-adaptive alpha during sliding eval.",
+    "tags": [
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Multi-order n-gram cache backoff (orders 2-7)",
+      "Entropy-adaptive interpolation driven by model entropy"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-25T21:34:24.543Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 768,
+    "title": "Non-record: 1.1201 BPB - Shared ValueEmbedding (tok_emb reuse, layers 5-10) + Legal TTT",
+    "state": "open",
+    "updatedAt": "2026-03-25T21:19:48Z",
+    "headSha": "45f5e7b2faf3de85632ebd8ebc1a8468bd98df3d",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/768",
+    "authorLogin": "mradassaad"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-25_SharedVE_LegalTTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Reuses token embeddings for ValueEmbedding with learned projection/scales so layers 5-10 share rich gradients atop the Legal TTT stack.",
+    "tags": [
+      "architecture",
+      "training-schedule",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Shared VE via tok_emb projection",
+      "Expanded VE depth to layers 5-10",
+      "Legal TTT SGD tuning"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

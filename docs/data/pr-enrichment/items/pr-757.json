@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-25T19:03:22.319Z",
+  "generatedAt": "2026-03-25T21:34:45.410Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 757,
     "title": "Record: Aggressive SGD TTT (3-seed mean val_bpb=1.1124)",
     "state": "open",
-    "updatedAt": "2026-03-25T19:01:53Z",
+    "updatedAt": "2026-03-25T21:27:41Z",
     "headSha": "777ed6762dd2ecc442170772776727eca9f74391",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/757",
     "authorLogin": "fielding"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "After base training, they run 30-epoch, high-LR SGD TTT with every block unfrozen to amplify validation adaptation gains.",
+    "summary": "Base 11L model uses score-first SGD TTT on validation with aggressive LR and epochs plus full unfreeze to amplify adaptation gains.",
     "tags": [
       "val-only",
       "training-schedule",
-      "optimizer",
-      "evaluation"
+      "optimizer"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "TTT adapts all weights via SGD solely on validation data during evaluation.",
+    "valOnlyReasoning": "TTT explicitly fine-tunes on the validation shard via SGD after base training, so the submission trains on validation-only data.",
     "techniques": [
-      "High-LR (≈1.0) 30-epoch SGD TTT on fully unfrozen model",
-      "Score-first validation adaptation within eval budget"
+      "Score-first SGD TTT with LR ≈1.0 and 30 epochs",
+      "Unfreeze every block during TTT so high LR converges",
+      "Int6+zstd quantization followed by sliding-window evaluation"
     ]
   },
   "compatibility": {

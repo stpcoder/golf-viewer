@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-25T21:34:31.533Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 767,
+    "title": "Non-record 1xH100 backoff7gram zlib-fallback sign-of-life (val_bpb 0.9209)",
+    "state": "open",
+    "updatedAt": "2026-03-25T21:15:43Z",
+    "headSha": "2d77f87c7e25290a945fe7952080f3b4b9d94260",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/767",
+    "authorLogin": "RichiiiTV"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-25_PodracingII_backoff7gram_1xH100/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "1xH100 sign-of-life run reuses #753-style adaptive legal score-first 2..7-gram backoff with flash-attn and int6+zlib export fallback to show the eval stays strong.",
+    "tags": [
+      "non-record",
+      "evaluation",
+      "quantization",
+      "attention"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Adaptive legal score-first 2..7-gram backoff evaluation",
+      "Flash-attn training with int6+zlib export fallback",
+      "Single-H100 compact #753-style root lane sign-of-life run"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

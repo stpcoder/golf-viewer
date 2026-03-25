@@ -1,37 +1,38 @@
 {
-  "generatedAt": "2026-03-20T04:21:35.347Z",
+  "generatedAt": "2026-03-25T21:34:49.716Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 155,
     "title": "Record: sliding eval, FP16 tied embeddings, 10 layers, Muon WD 0.02, overtone init, and phase-transition residual mixing. (val_bpb 1.1876)",
     "state": "open",
-    "updatedAt": "2026-03-20T04:00:22Z",
-    "headSha": "79c32fdc16f0b76e8b4fe32b1a35811838e51781",
+    "updatedAt": "2026-03-25T21:30:53Z",
+    "headSha": "55c94d55c2bd01edde82eff411b324d5d00400ae",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/155",
     "authorLogin": "peytontolbert"
   },
   "inputs": {
-    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
     "readmePaths": [
-      "records/track_10min_16mb/2026-03-20_TopRecipe10L_MuonWD_OvertoneInit_PeytonTolbert/README.md"
+      "records/track_10min_16mb/2026-03-20_TopRecipe10L_MuonWD_OvertoneInit_PeytonTolbert/README.md",
+      "records/track_10min_16mb/2026-03-24_LocalObjective_SharedTail_SoftLexicalGate/README.md"
     ],
-    "submissionCount": 1
+    "submissionCount": 2
   },
   "output": {
-    "summary": "10-layer Muon WD model using FP16 tied embeddings, overtone spectral init, residual-mix start, and sliding-window final evaluation.",
+    "summary": "Combines sliding-window eval, FP16 tied embeddings, and Muon weight decay with overtone init and phase-transition residual mixing over a 10-layer transformer.",
     "tags": [
-      "architecture",
-      "muon",
+      "sliding-window-eval",
       "mixed-precision",
-      "sliding-window-eval"
+      "muon",
+      "architecture"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
+      "sliding-window final evaluation",
       "FP16 tied embedding export",
-      "Overtone spectral + phase-transition residual init",
-      "Sliding-window final evaluation (stride 64)"
+      "Muon WD with overtone spectral init"
     ]
   },
   "compatibility": {

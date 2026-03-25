@@ -1,8 +1,123 @@
 {
-  "generatedAt": "2026-03-25T21:04:50.870Z",
+  "generatedAt": "2026-03-25T21:34:49.738Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 771,
+      "title": "Record: AdamW TTT 30ep Cosine + Per-Layer LR (val_bpb: 1.0705)",
+      "status": "open",
+      "updatedAt": "2026-03-25T21:31:38Z",
+      "headSha": "e326535058b9a0ca5744dc37fde91404a2066abc",
+      "generatedAt": "2026-03-25T21:34:06.461Z",
+      "summary": "Adopts AdamW TTT with 30-epoch cosine decay and per-layer LR scaling to replace SGD-based adaptation on validation tokens.",
+      "tags": [
+        "val-only",
+        "optimizer",
+        "training-schedule",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": false
+      },
+      "file": "items/pr-771.json"
+    },
+    {
+      "prNumber": 770,
+      "title": "Record: 11L + Multi-Order N-gram Backoff + Entropy-Adaptive Alpha (val_bpb=0.6672)",
+      "status": "open",
+      "updatedAt": "2026-03-25T21:30:28Z",
+      "headSha": "2ff44a66f62759b9a75db642e35a1623f998e304",
+      "generatedAt": "2026-03-25T21:34:12.189Z",
+      "summary": "Multi-order n-gram cache backoff (orders 2-7) blends with the 11L LM via entropy-adaptive alpha during sliding eval.",
+      "tags": [
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-770.json"
+    },
+    {
+      "prNumber": 769,
+      "title": "PROTEUS+STYX — val_bpb 0.8508 (3-seed mean) — LeakyReLU(0.9)² + 5-gram Eval Cache",
+      "status": "open",
+      "updatedAt": "2026-03-25T21:30:27Z",
+      "headSha": "93f6a6aa4e5748e726dcec5c80c5678dd7d823c0",
+      "generatedAt": "2026-03-25T21:34:17.635Z",
+      "summary": "PROTEUS+STYX stack pairs LeakyReLU(0.9)² with a backward-looking 5-gram eval cache blending 0.8 model/0.2 cache to capture FineWeb n-gram reuse.",
+      "tags": [
+        "architecture",
+        "evaluation",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-769.json"
+    },
+    {
+      "prNumber": 768,
+      "title": "Non-record: 1.1201 BPB - Shared ValueEmbedding (tok_emb reuse, layers 5-10) + Legal TTT",
+      "status": "open",
+      "updatedAt": "2026-03-25T21:19:48Z",
+      "headSha": "45f5e7b2faf3de85632ebd8ebc1a8468bd98df3d",
+      "generatedAt": "2026-03-25T21:34:24.543Z",
+      "summary": "Reuses token embeddings for ValueEmbedding with learned projection/scales so layers 5-10 share rich gradients atop the Legal TTT stack.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-768.json"
+    },
+    {
+      "prNumber": 767,
+      "title": "Non-record 1xH100 backoff7gram zlib-fallback sign-of-life (val_bpb 0.9209)",
+      "status": "open",
+      "updatedAt": "2026-03-25T21:15:43Z",
+      "headSha": "2d77f87c7e25290a945fe7952080f3b4b9d94260",
+      "generatedAt": "2026-03-25T21:34:31.533Z",
+      "summary": "1xH100 sign-of-life run reuses #753-style adaptive legal score-first 2..7-gram backoff with flash-attn and int6+zlib export fallback to show the eval stays strong.",
+      "tags": [
+        "non-record",
+        "evaluation",
+        "quantization",
+        "attention"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-767.json"
+    },
     {
       "prNumber": 766,
       "title": "[Non-Record] Depth Recurrence + SwiGLU + Mixed Quantization",
@@ -77,14 +192,15 @@
     {
       "prNumber": 762,
       "title": "Record: LeakyReLU(0.5)² + Legal Per-Document LoRA TTT + GPTQ-lite (mean val_bpb=0.7139, 3 seeds)",
-      "status": "open",
-      "updatedAt": "2026-03-25T21:02:52Z",
-      "headSha": "5cc7c74e9d5fccecba70924d170509a2cb359cfc",
-      "generatedAt": "2026-03-25T21:04:07.372Z",
-      "summary": "Per-document accumulators force loss scoring before LoRA updates while GPTQ-lite multi-percentile int6 quant and a larger LoRA budget keep validation legal and tight.",
+      "status": "closed",
+      "updatedAt": "2026-03-25T21:11:50Z",
+      "headSha": "cfe0b2c5cb9b99fe83809c6b2a6a458fdb02549b",
+      "generatedAt": "2026-03-25T21:34:38.771Z",
+      "summary": "Per-document LoRA TTT scores before training each epoch and uses GPTQ-lite multi-percentile quant on the LeakyReLU base.",
       "tags": [
-        "training-schedule",
-        "quantization"
+        "architecture",
+        "quantization",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -195,15 +311,14 @@
       "prNumber": 757,
       "title": "Record: Aggressive SGD TTT (3-seed mean val_bpb=1.1124)",
       "status": "open",
-      "updatedAt": "2026-03-25T19:01:53Z",
+      "updatedAt": "2026-03-25T21:27:41Z",
       "headSha": "777ed6762dd2ecc442170772776727eca9f74391",
-      "generatedAt": "2026-03-25T19:03:22.319Z",
-      "summary": "After base training, they run 30-epoch, high-LR SGD TTT with every block unfrozen to amplify validation adaptation gains.",
+      "generatedAt": "2026-03-25T21:34:45.410Z",
+      "summary": "Base 11L model uses score-first SGD TTT on validation with aggressive LR and epochs plus full unfreeze to amplify adaptation gains.",
       "tags": [
         "val-only",
         "training-schedule",
-        "optimizer",
-        "evaluation"
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": true,
@@ -10153,15 +10268,15 @@
       "prNumber": 155,
       "title": "Record: sliding eval, FP16 tied embeddings, 10 layers, Muon WD 0.02, overtone init, and phase-transition residual mixing. (val_bpb 1.1876)",
       "status": "open",
-      "updatedAt": "2026-03-20T04:00:22Z",
-      "headSha": "79c32fdc16f0b76e8b4fe32b1a35811838e51781",
-      "generatedAt": "2026-03-20T04:21:35.347Z",
-      "summary": "10-layer Muon WD model using FP16 tied embeddings, overtone spectral init, residual-mix start, and sliding-window final evaluation.",
+      "updatedAt": "2026-03-25T21:30:53Z",
+      "headSha": "55c94d55c2bd01edde82eff411b324d5d00400ae",
+      "generatedAt": "2026-03-25T21:34:49.716Z",
+      "summary": "Combines sliding-window eval, FP16 tied embeddings, and Muon weight decay with overtone init and phase-transition residual mixing over a 10-layer transformer.",
       "tags": [
-        "architecture",
-        "muon",
+        "sliding-window-eval",
         "mixed-precision",
-        "sliding-window-eval"
+        "muon",
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,

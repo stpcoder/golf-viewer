@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-25T21:34:06.461Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 771,
+    "title": "Record: AdamW TTT 30ep Cosine + Per-Layer LR (val_bpb: 1.0705)",
+    "state": "open",
+    "updatedAt": "2026-03-25T21:31:38Z",
+    "headSha": "e326535058b9a0ca5744dc37fde91404a2066abc",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/771",
+    "authorLogin": "sunnypatneedi"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-24_sunnypatneedi_submission/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Adopts AdamW TTT with 30-epoch cosine decay and per-layer LR scaling to replace SGD-based adaptation on validation tokens.",
+    "tags": [
+      "val-only",
+      "optimizer",
+      "training-schedule",
+      "evaluation"
+    ],
+    "usesValOnly": true,
+    "valOnlyReasoning": "TTT fine-tunes exclusively on validation tokens (legal adaptation) before sliding-window evaluation, so the training phase only sees val data.",
+    "techniques": [
+      "AdamW TTT with per-layer LR multipliers",
+      "30-epoch cosine schedule over validation stream",
+      "Sliding-window stride-64 evaluation"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
+  }
+}

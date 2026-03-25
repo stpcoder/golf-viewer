@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-25T21:34:17.635Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 769,
+    "title": "PROTEUS+STYX — val_bpb 0.8508 (3-seed mean) — LeakyReLU(0.9)² + 5-gram Eval Cache",
+    "state": "open",
+    "updatedAt": "2026-03-25T21:30:27Z",
+    "headSha": "93f6a6aa4e5748e726dcec5c80c5678dd7d823c0",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/769",
+    "authorLogin": "MatoTeziTanka"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_PROTEUS_STYX_Ngram_0.8508/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "PROTEUS+STYX stack pairs LeakyReLU(0.9)² with a backward-looking 5-gram eval cache blending 0.8 model/0.2 cache to capture FineWeb n-gram reuse.",
+    "tags": [
+      "architecture",
+      "evaluation",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "LeakyReLU(0.9)² activation",
+      "Backward-looking 5-gram eval cache",
+      "Fixed 0.8/0.2 blend during sliding-window eval"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

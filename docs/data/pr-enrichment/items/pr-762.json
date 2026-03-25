@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-25T21:04:07.372Z",
+  "generatedAt": "2026-03-25T21:34:38.771Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 762,
     "title": "Record: LeakyReLU(0.5)² + Legal Per-Document LoRA TTT + GPTQ-lite (mean val_bpb=0.7139, 3 seeds)",
-    "state": "open",
-    "updatedAt": "2026-03-25T21:02:52Z",
-    "headSha": "5cc7c74e9d5fccecba70924d170509a2cb359cfc",
+    "state": "closed",
+    "updatedAt": "2026-03-25T21:11:50Z",
+    "headSha": "cfe0b2c5cb9b99fe83809c6b2a6a458fdb02549b",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/762",
     "authorLogin": "robinojw"
   },
@@ -19,17 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Per-document accumulators force loss scoring before LoRA updates while GPTQ-lite multi-percentile int6 quant and a larger LoRA budget keep validation legal and tight.",
+    "summary": "Per-document LoRA TTT scores before training each epoch and uses GPTQ-lite multi-percentile quant on the LeakyReLU base.",
     "tags": [
-      "training-schedule",
-      "quantization"
+      "architecture",
+      "quantization",
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Per-document accumulators ensure each token is scored before its LoRA update",
-      "GPTQ-lite multi-percentile int6 quant minimizes per-row clipping errors",
-      "Extended LoRA budget (rank16, multi-epoch with shorter docs)"
+      "Legal per-document accumulators for score-before-train LoRA TTT",
+      "GPTQ-lite multi-percentile int6 quant with per-row min-MSE"
     ]
   },
   "compatibility": {
