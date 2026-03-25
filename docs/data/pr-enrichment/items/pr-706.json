@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-25T13:01:46.667Z",
+  "generatedAt": "2026-03-25T16:33:11.899Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 706,
     "title": "Podracing: 1.0461 BPB (3-seed mean) — 5-gram eval + LeakyReLU²",
     "state": "open",
-    "updatedAt": "2026-03-25T12:42:00Z",
+    "updatedAt": "2026-03-25T16:29:22Z",
     "headSha": "d36bdec226d57aaf38df9d9f20ff4e71d977df1f",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/706",
     "authorLogin": "newjordan"
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11L/512d U-Net with LeakyReLU² activations and GPTQ int6 quant plus hashed score-first 5-gram interpolation during sliding eval.",
+    "summary": "LeakyReLU² 11L/512d U-Net with partial RoPE and BigramHash pairs GPTQ int6 with score-first hashed 5-gram interpolation.",
     "tags": [
       "architecture",
       "evaluation",
@@ -28,9 +28,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "LeakyReLU² MLP activations",
-      "score-first hashed 5-gram interpolation",
-      "GPTQ int6+zstd quantization"
+      "LeakyReLU² U-Net with BigramHash and partial RoPE",
+      "Score-first hashed 5-gram interpolation eval",
+      "GPTQ int6 with late QAT"
     ]
   },
   "compatibility": {

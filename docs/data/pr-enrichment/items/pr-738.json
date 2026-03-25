@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-25T16:32:51.148Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 738,
+    "title": "Record: VRL + Full GPTQ + 5-gram Cache + Hidden-State kNN-LM (3-seed mean val_bpb=1.0970)",
+    "state": "open",
+    "updatedAt": "2026-03-25T16:31:34Z",
+    "headSha": "e2b0749fc90382056d3090e626d17cb81973da31",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/738",
+    "authorLogin": "gowtham0992"
+  },
+  "inputs": {
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_VRL_FullGPTQ_NgramKNN_1.0970/README.md",
+      "records/track_10min_16mb/2026-03-23_11L_VRL_FullGPTQ_LeakyReLU2_1.1175/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "Combines VRL-inspired 11-layer stack with Full GPTQ quantization, sliding-window eval with adaptive 5-gram cache, and hidden-state kNN-LM reranking.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Hidden-state kNN-LM using GPU ring buffer + RBF mix",
+      "Adaptive confidence-gated 5-gram cache mixing",
+      "VRL + Full GPTQ stack with LeakyReLU², EMA/SWA"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

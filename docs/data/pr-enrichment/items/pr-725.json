@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-25T15:02:16.087Z",
+  "generatedAt": "2026-03-25T16:33:03.034Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 725,
     "title": "Submit 1x A100 QAT Fix - 1.5252 BPB (Non-Record) [v5]",
     "state": "open",
-    "updatedAt": "2026-03-25T14:47:48Z",
-    "headSha": "9bf5a5136f37eadb3d4c2c610840f356a151670f",
+    "updatedAt": "2026-03-25T16:04:00Z",
+    "headSha": "acd7497b7d27e6731b3f677c32e7665e883b86eb",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/725",
     "authorLogin": "Shuvam-Banerji-Seal"
   },
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Fits CastedLinear QAT with STE on single A100 by downsizing grad accum steps and replacing torch.quantile with w.abs().amax for efficient clipping.",
+    "summary": "Refines modded-nanogpt QAT to fit a 1x A100 10-minute cap by replacing quantile clipping with w.abs().amax and shrinking accum/LR pacing.",
     "tags": [
       "quantization",
-      "architecture",
       "training-schedule",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "QAT via CastedLinear straight-through estimators",
-      "Clip factor estimated with w.abs().amax(dim=1)",
-      "Gradient accumulation scaled for 10-minute single-A100 runs"
+      "CastedLinear QAT with w.abs().amax clipping estimator",
+      "Shrunk gradient accumulation and LR pacing for single-A100 runtime",
+      "Sliding-window roundtrip for final reported metric"
     ]
   },
   "compatibility": {
