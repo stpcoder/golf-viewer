@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-25T06:59:42.579Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 688,
+    "title": "Record: 5-expert Hedge Mixer + TTT (3-seed mean val_bpb=1.0745)",
+    "state": "open",
+    "updatedAt": "2026-03-25T06:44:22Z",
+    "headSha": "9a1d2fdd71b32dc3c2fe8654a76c4398f1f0f8c0",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/688",
+    "authorLogin": "RoyiRa"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-24_HedgeMixer_TTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "GPU Hedge logistic mixer blends neural, n-gram, and entropy experts during sliding-window TTT chunks before GPTQ quantization to refine predictions.",
+    "tags": [
+      "sliding-window-eval",
+      "training-schedule",
+      "evaluation",
+      "regularization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "GPU-vectorized Hedge logistic mixer over neural, unigram, bigram, trigram, and entropy experts",
+      "Score-first TTT with sliding-window eval chunks and AdamW adaptation of final blocks",
+      "GPTQ int5 quantization plus EMA calibration within the 600s budget"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

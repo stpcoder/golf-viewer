@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-24T07:52:46.605Z",
+  "generatedAt": "2026-03-25T07:00:08.638Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 484,
     "title": "Non-record: Empirical Bayes Adaptive TTT (val_bpb=1.1185)",
-    "state": "open",
-    "updatedAt": "2026-03-24T07:39:40Z",
+    "state": "closed",
+    "updatedAt": "2026-03-25T06:38:34Z",
     "headSha": "e98266da86fa3302fa7b44ec1e2232333e76d12f",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/484",
     "authorLogin": "Robby955"
@@ -19,22 +19,25 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Extends frontier arch with per-layer Empirical Bayes gradient scaling, embedding freeze, and EMA burst to stabilize single-pass TTT.",
+    "summary": "EB-TTT adaptively scales per-layer gradients by SNR during single-pass TTT with embedding freeze and EMA burst on the GEPA/XSA backbone.",
     "tags": [
+      "val-only",
+      "training-schedule",
       "architecture",
-      "training-schedule"
+      "evaluation"
     ],
-    "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "usesValOnly": true,
+    "valOnlyReasoning": "The EB-TTT protocol performs test-time adaptation solely on validation/test chunks, so training happens only on those validation tokens.",
     "techniques": [
-      "Empirical Bayes per-layer gradient SNR scaling for TTT",
-      "Embedding/bigram freeze with EMA burst before sliding-window evaluation"
+      "Per-layer gradient SNR scaling during single-pass TTT",
+      "Embedding freeze plus EMA burst before sliding-window evaluation",
+      "GEPA+XSA architecture with VE128, bigram hashing, and late QAT"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": false,
-    "finalUsesValOnly": false,
-    "valOnlyMatchesCollector": true
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
   }
 }

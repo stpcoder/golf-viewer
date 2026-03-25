@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-25T06:29:43.954Z",
+  "generatedAt": "2026-03-25T07:00:13.558Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 688,
+      "title": "Record: 5-expert Hedge Mixer + TTT (3-seed mean val_bpb=1.0745)",
+      "status": "open",
+      "updatedAt": "2026-03-25T06:44:22Z",
+      "headSha": "9a1d2fdd71b32dc3c2fe8654a76c4398f1f0f8c0",
+      "generatedAt": "2026-03-25T06:59:42.579Z",
+      "summary": "GPU Hedge logistic mixer blends neural, n-gram, and entropy experts during sliding-window TTT chunks before GPTQ quantization to refine predictions.",
+      "tags": [
+        "sliding-window-eval",
+        "training-schedule",
+        "evaluation",
+        "regularization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-688.json"
+    },
     {
       "prNumber": 686,
       "title": "Record:  Depth Recurrence (layers 4 and 5 repeated): val_bpb 1.1182",
@@ -28,11 +52,11 @@
     {
       "prNumber": 685,
       "title": "Record: Chained TTT — Cosine Recovery + Multi-Pass Scoring (3-seed mean val_bpb=1.0366)",
-      "status": "open",
-      "updatedAt": "2026-03-25T05:44:18Z",
+      "status": "closed",
+      "updatedAt": "2026-03-25T06:34:23Z",
       "headSha": "c6f2728a9a9d6608148bc18a6d577a2241353b66",
-      "generatedAt": "2026-03-25T05:59:33.904Z",
-      "summary": "Chains cosine LR AdamW recovery with multi-pass score-first scoring to rehabilitate int6 quantized weights before ensembled evaluation.",
+      "generatedAt": "2026-03-25T06:59:45.958Z",
+      "summary": "Two-phase TTT: cosine LR recovery on int6 weights followed by multi-pass score-first scoring to ensemble across adaptation trajectories.",
       "tags": [
         "training-schedule",
         "evaluation",
@@ -51,11 +75,11 @@
     {
       "prNumber": 684,
       "title": "Record: 11L Sidecar48 + Enhanced Attention + Async Data Pipeline + AdamW TTT (20 epochs, cosine LR, 3-seed mean val_bpb=1.0573)",
-      "status": "open",
-      "updatedAt": "2026-03-25T05:41:15Z",
+      "status": "closed",
+      "updatedAt": "2026-03-25T06:37:26Z",
       "headSha": "4c77535a8b19beb61058dbfb7a5b00ccc95981cc",
-      "generatedAt": "2026-03-25T05:59:39.509Z",
-      "summary": "11L transformer augments attention with learned shift/gain mixes and local residuals while using async mmap coprime-shard sampling plus denser stride-32 eval for TTT.",
+      "generatedAt": "2026-03-25T06:59:53.575Z",
+      "summary": "Adds learned KV shift/gain/local value residuals and an async coprime-stride mmap pipeline to the 11L Sidecar48 base while retaining the cosine TTT regime.",
       "tags": [
         "attention",
         "architecture",
@@ -867,15 +891,15 @@
       "prNumber": 635,
       "title": "Non-record: 11L MLP3.5x LeakyReLU(0.5)^2 + Full SOTA Stack (mean val_bpb=1.1330, 8xH100 SXM)",
       "status": "open",
-      "updatedAt": "2026-03-25T06:24:45Z",
-      "headSha": "a0581d9df0047a20cb9118910d01f9d14ffee07c",
-      "generatedAt": "2026-03-25T06:29:35.714Z",
-      "summary": "11-layer 512d transformer stacks MLP3.5x LeakyReLU^2, partial RoPE, SmearGate+hash cascading, gated attention, Value Residual and U-Net skips.",
+      "updatedAt": "2026-03-25T06:46:16Z",
+      "headSha": "b58dba85e2b2892bd85542b4827ef914ba6e1eff",
+      "generatedAt": "2026-03-25T06:59:59.415Z",
+      "summary": "11-layer 512d transformer pairs MLP3.5x LeakyReLU^2 with SmearGate, Bigram/Trigram hashing, Value Residual, gated/XSA attention, partial RoPE, and late QAT/int6 stack.",
       "tags": [
         "architecture",
         "attention",
-        "optimizer",
-        "quantization"
+        "quantization",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -3378,22 +3402,24 @@
     {
       "prNumber": 484,
       "title": "Non-record: Empirical Bayes Adaptive TTT (val_bpb=1.1185)",
-      "status": "open",
-      "updatedAt": "2026-03-24T07:39:40Z",
+      "status": "closed",
+      "updatedAt": "2026-03-25T06:38:34Z",
       "headSha": "e98266da86fa3302fa7b44ec1e2232333e76d12f",
-      "generatedAt": "2026-03-24T07:52:46.605Z",
-      "summary": "Extends frontier arch with per-layer Empirical Bayes gradient scaling, embedding freeze, and EMA burst to stabilize single-pass TTT.",
+      "generatedAt": "2026-03-25T07:00:08.638Z",
+      "summary": "EB-TTT adaptively scales per-layer gradients by SNR during single-pass TTT with embedding freeze and EMA burst on the GEPA/XSA backbone.",
       "tags": [
+        "val-only",
+        "training-schedule",
         "architecture",
-        "training-schedule"
+        "evaluation"
       ],
       "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": true
+        "valOnlyMatchesCollector": false
       },
       "file": "items/pr-484.json"
     },
@@ -4313,15 +4339,14 @@
     {
       "prNumber": 433,
       "title": "EBLS Learned Sharing (10min/16MB)",
-      "status": "open",
-      "updatedAt": "2026-03-22T15:59:58Z",
+      "status": "closed",
+      "updatedAt": "2026-03-25T06:38:32Z",
       "headSha": "1c4a491273b0256562f82b7bcd72615fac8cb723",
-      "generatedAt": "2026-03-22T16:10:53.492Z",
-      "summary": "EBLS reuses 3 transformer blocks across 9 virtual layers with per-layer LoRA shrinkage that lets data pick MLP sharing while allowing sparse attention deviations.",
+      "generatedAt": "2026-03-25T07:00:13.492Z",
+      "summary": "EBLS reuses 3 shared transformer blocks with per-virtual-layer LoRA shrinkage so the model learns the right sharing pattern for MLP vs attention.",
       "tags": [
         "architecture",
         "quantization",
-        "optimizer",
         "regularization"
       ],
       "flags": {

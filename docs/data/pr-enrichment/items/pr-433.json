@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-22T16:10:53.492Z",
+  "generatedAt": "2026-03-25T07:00:13.492Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 433,
     "title": "EBLS Learned Sharing (10min/16MB)",
-    "state": "open",
-    "updatedAt": "2026-03-22T15:59:58Z",
+    "state": "closed",
+    "updatedAt": "2026-03-25T06:38:32Z",
     "headSha": "1c4a491273b0256562f82b7bcd72615fac8cb723",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/433",
     "authorLogin": "Robby955"
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "EBLS reuses 3 transformer blocks across 9 virtual layers with per-layer LoRA shrinkage that lets data pick MLP sharing while allowing sparse attention deviations.",
+    "summary": "EBLS reuses 3 shared transformer blocks with per-virtual-layer LoRA shrinkage so the model learns the right sharing pattern for MLP vs attention.",
     "tags": [
       "architecture",
       "quantization",
-      "optimizer",
       "regularization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Empirical Bayes shrinkage gating low-rank LoRA deviations",
-      "Shared 3-block backbone replayed for 9 virtual layers",
-      "Int6 STE quantization with Muon+Adam and zstd-22 compression"
+      "Empirical Bayes shrinkage gating for LoRA deviations",
+      "3 shared blocks × 3 virtual layers with rank-8 LoRA residuals",
+      "Int6 STE quantization plus zstd-22 for artifact compression"
     ]
   },
   "compatibility": {
