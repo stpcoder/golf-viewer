@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-25T01:58:18.730Z",
+  "generatedAt": "2026-03-25T02:28:28.396Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -515,7 +515,7 @@
       },
       "pr": {
         "number": 642,
-        "title": "Record: 11L + Score-Every-Epoch LoRA TTT 5ep (val_bpb=0.8186)",
+        "title": "Record: 11L + Score-Every-Epoch LoRA TTT 5ep (3-seed mean val_bpb=0.8173)",
         "state": "closed",
         "draft": false,
         "mergedAt": null,
@@ -523,7 +523,7 @@
         "authorLogin": "minh-stakc",
         "authorName": null,
         "createdAt": "2026-03-24T20:21:24Z",
-        "updatedAt": "2026-03-24T22:11:34Z",
+        "updatedAt": "2026-03-25T02:26:55Z",
         "headSha": "f7e12fdf338681a4d028eb98f08a3613ee0e0c00",
         "headRepo": "minh-stakc/parameter-golf"
       },
@@ -25262,6 +25262,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/b7b02fc3624f132c1c2848fd3650672e40e37a4f/records/track_non_record_16mb/2026-03-19_LoopedTransformer_LoRA_Int6/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/b7b02fc3624f132c1c2848fd3650672e40e37a4f/records/track_non_record_16mb/2026-03-19_LoopedTransformer_LoRA_Int6",
         "pr": "https://github.com/openai/parameter-golf/pull/103",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-03-25_TRN_Hybrid_Int5_1x5090",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-25_TRN_Hybrid_Int5_1x5090",
+        "folderPath": "records/track_non_record_16mb/2026-03-25_TRN_Hybrid_Int5_1x5090",
+        "submissionPath": "records/track_non_record_16mb/2026-03-25_TRN_Hybrid_Int5_1x5090/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-25_TRN_Hybrid_Int5_1x5090/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-25_TRN_Hybrid_Int5_1x5090/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-25_TRN_Hybrid_Int5_1x5090/train_gpt.py"
+      },
+      "submission": {
+        "author": "amabito",
+        "githubId": "amabito",
+        "name": "TRN Hybrid Int5 1x5090",
+        "blurb": "TRN+Attention hybrid (7 TRN + 3 Attn layers), int5 QAT zstd-22, Kogge-Stone parallel scan. 636 steps / 600s wallclock on 1x RTX 5090. Int5 collapses at 20K steps due to oscillator projection sensitivity.",
+        "date": "2026-03-25"
+      },
+      "metrics": {
+        "valBpb": 1.4942,
+        "valLoss": 2.52288708,
+        "preQuantValBpb": 1.4715,
+        "preQuantValLoss": 2.4846,
+        "stepStop": 636,
+        "wallclockSeconds": 600.674,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15359752,
+        "bytesCode": 82498,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 669,
+        "title": "Add TRN hybrid non-record submission (1.4942 bpb, 1x RTX 5090)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/669",
+        "authorLogin": "amabito",
+        "authorName": null,
+        "createdAt": "2026-03-25T02:15:44Z",
+        "updatedAt": "2026-03-25T02:15:44Z",
+        "headSha": "133b0c1cffc637ceabed04138257f909e1b0e1fc",
+        "headRepo": "amabito/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/133b0c1cffc637ceabed04138257f909e1b0e1fc/records/track_non_record_16mb/2026-03-25_TRN_Hybrid_Int5_1x5090/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/133b0c1cffc637ceabed04138257f909e1b0e1fc/records/track_non_record_16mb/2026-03-25_TRN_Hybrid_Int5_1x5090/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/133b0c1cffc637ceabed04138257f909e1b0e1fc/records/track_non_record_16mb/2026-03-25_TRN_Hybrid_Int5_1x5090/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/133b0c1cffc637ceabed04138257f909e1b0e1fc/records/track_non_record_16mb/2026-03-25_TRN_Hybrid_Int5_1x5090/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/133b0c1cffc637ceabed04138257f909e1b0e1fc/records/track_non_record_16mb/2026-03-25_TRN_Hybrid_Int5_1x5090",
+        "pr": "https://github.com/openai/parameter-golf/pull/669",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

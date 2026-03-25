@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-25T01:58:33.182Z",
+  "generatedAt": "2026-03-25T02:28:41.718Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 669,
+      "title": "Add TRN hybrid non-record submission (1.4942 bpb, 1x RTX 5090)",
+      "status": "open",
+      "updatedAt": "2026-03-25T02:15:44Z",
+      "headSha": "133b0c1cffc637ceabed04138257f909e1b0e1fc",
+      "generatedAt": "2026-03-25T02:28:35.842Z",
+      "summary": "Combines log-warped oscillatory TRN recurrence with interleaved attention layers, int5 QAT, and compression to fit a 10-layer hybrid into 16 MB.",
+      "tags": [
+        "architecture",
+        "attention",
+        "quantization",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-669.json"
+    },
     {
       "prNumber": 668,
       "title": "Non-record: 11L GEPA + 30k Steps + Pure Int6 + Legal TTT (val_bpb=1.0920)",
@@ -471,16 +495,16 @@
     },
     {
       "prNumber": 642,
-      "title": "Record: 11L + Score-Every-Epoch LoRA TTT 5ep (val_bpb=0.8186)",
+      "title": "Record: 11L + Score-Every-Epoch LoRA TTT 5ep (3-seed mean val_bpb=0.8173)",
       "status": "closed",
-      "updatedAt": "2026-03-24T22:11:34Z",
+      "updatedAt": "2026-03-25T02:26:55Z",
       "headSha": "f7e12fdf338681a4d028eb98f08a3613ee0e0c00",
-      "generatedAt": "2026-03-24T22:27:06.594Z",
-      "summary": "Score-every-epoch multi-scale LoRA TTT adapts per-document chunks on PR#414 base with differentiated ranks, bias tuning, and cosine decay.",
+      "generatedAt": "2026-03-25T02:28:41.618Z",
+      "summary": "Per-document score-every-epoch multi-scale LoRA TTT adapts PR #414's 11L stack with targeted ranks/LR, cosine decay, and temperature rescale.",
       "tags": [
+        "architecture",
         "training-schedule",
-        "optimizer",
-        "architecture"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
