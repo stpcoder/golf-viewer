@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-25T19:03:22.319Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 757,
+    "title": "Record: Aggressive SGD TTT (3-seed mean val_bpb=1.1124)",
+    "state": "open",
+    "updatedAt": "2026-03-25T19:01:53Z",
+    "headSha": "777ed6762dd2ecc442170772776727eca9f74391",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/757",
+    "authorLogin": "fielding"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_TTT_Aggressive_SGD/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "After base training, they run 30-epoch, high-LR SGD TTT with every block unfrozen to amplify validation adaptation gains.",
+    "tags": [
+      "val-only",
+      "training-schedule",
+      "optimizer",
+      "evaluation"
+    ],
+    "usesValOnly": true,
+    "valOnlyReasoning": "TTT adapts all weights via SGD solely on validation data during evaluation.",
+    "techniques": [
+      "High-LR (≈1.0) 30-epoch SGD TTT on fully unfrozen model",
+      "Score-first validation adaptation within eval budget"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
+  }
+}

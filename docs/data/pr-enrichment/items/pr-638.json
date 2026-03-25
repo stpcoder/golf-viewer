@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-25T18:33:23.973Z",
+  "generatedAt": "2026-03-25T19:03:34.025Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 638,
     "title": "Record: 11L XSA-all + LeakyReLU(0.5)² + VR + GA (val_bpb=1.1164, pending 3-seed)",
     "state": "open",
-    "updatedAt": "2026-03-25T18:31:11Z",
-    "headSha": "a96341a9eabb5406cc7908c357e8ad13f9994688",
+    "updatedAt": "2026-03-25T18:57:34Z",
+    "headSha": "b92b5bf0a0146457708ebb849c8d5d71a02e6048",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/638",
     "authorLogin": "Asukabot0"
   },
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer GQA stack applies XSA in every layer with LeakyReLU(0.5)^2 plus Value Residual and Gated Attention before int6 compression.",
+    "summary": "11-layer model runs Exclusive Self-Attention everywhere with LeakyReLU(0.5)² plus Value Residual/Gated Attention stack before int6 compression.",
     "tags": [
       "architecture",
       "attention",
-      "quantization",
-      "training-schedule"
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "XSA on all layers with GA/VR gating",
-      "LeakyReLU(0.5)^2 activation",
-      "Per-row int6 quantization + zstd"
+      "XSA on all 11 layers",
+      "LeakyReLU(0.5)² with Value Residual & Gated Attention",
+      "int6 per-row quantization with SmearGate/BigramHash"
     ]
   },
   "compatibility": {

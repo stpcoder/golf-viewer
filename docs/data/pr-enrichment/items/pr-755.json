@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-03-25T19:03:29.271Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 755,
+    "title": "Gravity Tokenizer: 1.0321 BPB via ablation leverage vocabulary optimization",
+    "state": "open",
+    "updatedAt": "2026-03-25T18:44:05Z",
+    "headSha": "f6c66ae1ffa3562689cc751e372b60c2cd522c57",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/755",
+    "authorLogin": "dcrow85"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_GravityTokenizer_AblationLeverage/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Retokenizes FineWeb using ablation-leverage scoring to replace most BPE merges so vocabulary choice alone drives the quality gain.",
+    "tags": [
+      "tokenization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Ablation leverage scoring for merge selection",
+      "GPT-2 reference model measures downstream loss impact",
+      "Retokenize FineWeb with the curated 1024-token vocabulary"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

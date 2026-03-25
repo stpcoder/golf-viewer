@@ -1,8 +1,53 @@
 {
-  "generatedAt": "2026-03-25T18:33:34.264Z",
+  "generatedAt": "2026-03-25T19:03:34.123Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 757,
+      "title": "Record: Aggressive SGD TTT (3-seed mean val_bpb=1.1124)",
+      "status": "open",
+      "updatedAt": "2026-03-25T19:01:53Z",
+      "headSha": "777ed6762dd2ecc442170772776727eca9f74391",
+      "generatedAt": "2026-03-25T19:03:22.319Z",
+      "summary": "After base training, they run 30-epoch, high-LR SGD TTT with every block unfrozen to amplify validation adaptation gains.",
+      "tags": [
+        "val-only",
+        "training-schedule",
+        "optimizer",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": false
+      },
+      "file": "items/pr-757.json"
+    },
+    {
+      "prNumber": 755,
+      "title": "Gravity Tokenizer: 1.0321 BPB via ablation leverage vocabulary optimization",
+      "status": "open",
+      "updatedAt": "2026-03-25T18:44:05Z",
+      "headSha": "f6c66ae1ffa3562689cc751e372b60c2cd522c57",
+      "generatedAt": "2026-03-25T19:03:29.271Z",
+      "summary": "Retokenizes FineWeb using ablation-leverage scoring to replace most BPE merges so vocabulary choice alone drives the quality gain.",
+      "tags": [
+        "tokenization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-755.json"
+    },
     {
       "prNumber": 754,
       "title": "Non-Record: 11L Parallel Muon + LeakyReLU² MLP3x + Legal TTT (val_bpb 1.1253)",
@@ -1868,15 +1913,14 @@
       "prNumber": 638,
       "title": "Record: 11L XSA-all + LeakyReLU(0.5)² + VR + GA (val_bpb=1.1164, pending 3-seed)",
       "status": "open",
-      "updatedAt": "2026-03-25T18:31:11Z",
-      "headSha": "a96341a9eabb5406cc7908c357e8ad13f9994688",
-      "generatedAt": "2026-03-25T18:33:23.973Z",
-      "summary": "11-layer GQA stack applies XSA in every layer with LeakyReLU(0.5)^2 plus Value Residual and Gated Attention before int6 compression.",
+      "updatedAt": "2026-03-25T18:57:34Z",
+      "headSha": "b92b5bf0a0146457708ebb849c8d5d71a02e6048",
+      "generatedAt": "2026-03-25T19:03:34.025Z",
+      "summary": "11-layer model runs Exclusive Self-Attention everywhere with LeakyReLU(0.5)² plus Value Residual/Gated Attention stack before int6 compression.",
       "tags": [
         "architecture",
         "attention",
-        "quantization",
-        "training-schedule"
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
