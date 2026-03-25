@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-25T17:02:47.090Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 744,
+    "title": "WSD Cosine Decay Schedule + 10L Int5-MLP BigramHash SmearGate SWA",
+    "state": "open",
+    "updatedAt": "2026-03-25T16:55:11Z",
+    "headSha": "3466150dd1e0f2bb945c1c1618606eb63fb7ba64",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/744",
+    "authorLogin": "ShihChunHao"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_WSD_CosineDecay_Schedule/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Adds a Warmup-Stable-Decay cosine LR schedule keeping peak LR for 75% of steps atop the SmearGate BigramHash int5/int6 base with SWA.",
+    "tags": [
+      "training-schedule",
+      "architecture",
+      "quantization",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Warmup-Stable-Decay cosine schedule (5% warmup, 75% stable, 20% decay)",
+      "Int5/6 quantized SmearGate+BigramHash 10L base with Muon optimizer and SWA",
+      "Sliding-window evaluation (stride=64) with orthogonal init"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

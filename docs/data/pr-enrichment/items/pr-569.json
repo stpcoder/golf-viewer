@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-24T16:26:59.883Z",
+  "generatedAt": "2026-03-25T17:03:33.707Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 569,
     "title": "Record: 11L VRL + LeakyReLU² + Full GPTQ (3-seed mean val_bpb=1.1175)",
     "state": "closed",
-    "updatedAt": "2026-03-24T16:13:39Z",
+    "updatedAt": "2026-03-25T16:27:49Z",
     "headSha": "1a4f3aaf4c125882705386d26e2bb271b4907243",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/569",
     "authorLogin": "gowtham0992"
@@ -19,17 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Adds Value Residual Learning gating from layer0 and LeakyReLU(0.5)^2 MLPs, then Full GPTQ + aligned QAT/pruning for the 11-layer frontier model.",
+    "summary": "Sigmoid-gated VRL adds layer-0 values to every stage, paired with LeakyReLU² MLPs and Full GPTQ plus late QAT/pruning for compact eval.",
     "tags": [
+      "architecture",
       "quantization",
-      "architecture"
+      "training-schedule",
+      "regularization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "VRL gating of layer0 value outputs",
-      "LeakyReLU(0.5)^2 in MLP block",
-      "Full GPTQ int6 + aligned QAT and pruning"
+      "Sigmoid-gated VRL skip from layer-0 to later layers",
+      "LeakyReLU(0.5)² activations in MLPs",
+      "Full GPTQ with STE quantile alignment and post-quant pruning"
     ]
   },
   "compatibility": {

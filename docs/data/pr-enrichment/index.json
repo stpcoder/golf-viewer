@@ -1,16 +1,86 @@
 {
-  "generatedAt": "2026-03-25T16:33:29.449Z",
+  "generatedAt": "2026-03-25T17:03:33.792Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
+      "prNumber": 744,
+      "title": "WSD Cosine Decay Schedule + 10L Int5-MLP BigramHash SmearGate SWA",
+      "status": "open",
+      "updatedAt": "2026-03-25T16:55:11Z",
+      "headSha": "3466150dd1e0f2bb945c1c1618606eb63fb7ba64",
+      "generatedAt": "2026-03-25T17:02:47.090Z",
+      "summary": "Adds a Warmup-Stable-Decay cosine LR schedule keeping peak LR for 75% of steps atop the SmearGate BigramHash int5/int6 base with SWA.",
+      "tags": [
+        "training-schedule",
+        "architecture",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-744.json"
+    },
+    {
+      "prNumber": 742,
+      "title": "EPSILON-AETHER Geometric Sparse Attention (12L Record Attempt)",
+      "status": "open",
+      "updatedAt": "2026-03-25T16:42:59Z",
+      "headSha": "257d72ed81809806bba0eb736022db0e2ad3aedd",
+      "generatedAt": "2026-03-25T17:02:53.594Z",
+      "summary": "Fuses EPSILON’s JL-projected S^31 scoring with AETHER block-sparse attention plus Lyapunov governor for faster 12-layer runs.",
+      "tags": [
+        "attention",
+        "architecture",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-742.json"
+    },
+    {
+      "prNumber": 741,
+      "title": "Record: Cosine TTT + Multi-Order N-gram Cache (3-seed mean val_bpb=0.9850)",
+      "status": "open",
+      "updatedAt": "2026-03-25T16:46:56Z",
+      "headSha": "30ba8e4100bd32bf11bd0a41a1f88f9371003733",
+      "generatedAt": "2026-03-25T17:03:00.061Z",
+      "summary": "Single-pass cosine LR TTT adaptation followed by sliding-window multi-order n-gram cache with entropy-adaptive interpolation.",
+      "tags": [
+        "val-only",
+        "training-schedule",
+        "sliding-window-eval"
+      ],
+      "flags": {
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": false
+      },
+      "file": "items/pr-741.json"
+    },
+    {
       "prNumber": 739,
       "title": "T5: Phase-Based Depth Recurrence + MLA + Graduated Precision (Non-Record)",
       "status": "open",
-      "updatedAt": "2026-03-25T16:29:15Z",
-      "headSha": "fc5e2b8316676dea29ce1696fb5a8cbe3df20a48",
-      "generatedAt": "2026-03-25T16:32:46.874Z",
-      "summary": "Phase-based recurrence reuses 8 unique blocks across four specialized phases with MLA and graduated FP4→Int6 precision to keep T5 depth under ~13MB.",
+      "updatedAt": "2026-03-25T16:57:38Z",
+      "headSha": "84a80d03b54c38192bf17a650297181d7753b907",
+      "generatedAt": "2026-03-25T17:03:06.831Z",
+      "summary": "Phase-based recurrence shares 8 transformers across four specialized phases with MLA and graduated precision to deliver 40 effective layers in ~13MB.",
       "tags": [
         "architecture",
         "attention",
@@ -31,14 +101,14 @@
       "prNumber": 738,
       "title": "Record: VRL + Full GPTQ + 5-gram Cache + Hidden-State kNN-LM (3-seed mean val_bpb=1.0970)",
       "status": "open",
-      "updatedAt": "2026-03-25T16:31:34Z",
-      "headSha": "e2b0749fc90382056d3090e626d17cb81973da31",
-      "generatedAt": "2026-03-25T16:32:51.148Z",
-      "summary": "Combines VRL-inspired 11-layer stack with Full GPTQ quantization, sliding-window eval with adaptive 5-gram cache, and hidden-state kNN-LM reranking.",
+      "updatedAt": "2026-03-25T16:34:48Z",
+      "headSha": "c458ceffd39aa103a914a228c6561428216eac1c",
+      "generatedAt": "2026-03-25T17:03:13.499Z",
+      "summary": "Combines VRL stack with GPTQ-int6 quantization and adaptive 5-gram plus hidden-state kNN caches to capture semantic repetition during eval.",
       "tags": [
-        "architecture",
         "quantization",
-        "evaluation"
+        "evaluation",
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,
@@ -517,14 +587,14 @@
       "prNumber": 710,
       "title": "Submission: 11L EMA + GPTQ-lite + Int6 (val_bpb: 1.1240)",
       "status": "open",
-      "updatedAt": "2026-03-25T13:47:35Z",
-      "headSha": "c573d65cb4c89c970b463c4def81a7563f58e83c",
-      "generatedAt": "2026-03-25T14:01:57.561Z",
-      "summary": "11L transformer stacks Partial XSA/RoPE, SmearGate/BigramHash, EMA+tight SWA, and late GPTQ-lite int6 quantization on Muon optimizer.",
+      "updatedAt": "2026-03-25T16:38:45Z",
+      "headSha": "698bbba7f534d1e5cf7c0263daa17aef2408554f",
+      "generatedAt": "2026-03-25T17:03:20.973Z",
+      "summary": "11-layer GQA-style transformer uses EMA+tight SWA, Partial RoPE/XSA, Muon + warmdown, and late QAT/GPTQ-lite for int6+zstd compression.",
       "tags": [
-        "architecture",
         "quantization",
-        "optimizer"
+        "optimizer",
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1753,10 +1823,10 @@
       "prNumber": 635,
       "title": "Non-record: 11L MLP3.5x LeakyReLU(0.5)^2 + Full SOTA Stack (mean val_bpb=1.1330, 8xH100 SXM)",
       "status": "open",
-      "updatedAt": "2026-03-25T15:55:29Z",
-      "headSha": "76039abdb2030c6cc06e2061297f8885c52beffb",
-      "generatedAt": "2026-03-25T16:02:58.414Z",
-      "summary": "11-layer 512d GQA transformer couples MLP 3.5x LeakyReLU(0.5)^2 with Value Residual, Gated Attention, XSA, partial RoPE, Muon schedule, int6 GPTQ-lite quant.",
+      "updatedAt": "2026-03-25T16:39:13Z",
+      "headSha": "726a3ce849b0d5641ebe6b880377908bb58436a9",
+      "generatedAt": "2026-03-25T17:03:25.514Z",
+      "summary": "11-layer 512d model blends MLP3.5x LeakyReLU² with SmearGate, gated attention/value residual, XSA, and late STE-based int6+GPTQ-lite quantization.",
       "tags": [
         "architecture",
         "quantization",
@@ -2822,6 +2892,30 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-570.json"
+    },
+    {
+      "prNumber": 569,
+      "title": "Record: 11L VRL + LeakyReLU² + Full GPTQ (3-seed mean val_bpb=1.1175)",
+      "status": "closed",
+      "updatedAt": "2026-03-25T16:27:49Z",
+      "headSha": "1a4f3aaf4c125882705386d26e2bb271b4907243",
+      "generatedAt": "2026-03-25T17:03:33.707Z",
+      "summary": "Sigmoid-gated VRL adds layer-0 values to every stage, paired with LeakyReLU² MLPs and Full GPTQ plus late QAT/pruning for compact eval.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "training-schedule",
+        "regularization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-569.json"
     },
     {
       "prNumber": 568,
@@ -4942,29 +5036,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-440.json"
-    },
-    {
-      "prNumber": 439,
-      "title": "Non-record: AETHER block-sparse attention with Lyapunov-stable governor (12L) ",
-      "status": "open",
-      "updatedAt": "2026-03-25T16:26:14Z",
-      "headSha": "ecfee039f2db8bc274eb2b32fc96c6f96df6a904",
-      "generatedAt": "2026-03-25T16:33:15.667Z",
-      "summary": "Adds AETHER block-sparse attention with a Lyapunov-stable PD governor to fit a 12-layer Transformer inside the 10-minute budget.",
-      "tags": [
-        "attention",
-        "architecture",
-        "training-schedule"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-439.json"
     },
     {
       "prNumber": 438,

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-25T14:01:57.561Z",
+  "generatedAt": "2026-03-25T17:03:20.973Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 710,
     "title": "Submission: 11L EMA + GPTQ-lite + Int6 (val_bpb: 1.1240)",
     "state": "open",
-    "updatedAt": "2026-03-25T13:47:35Z",
-    "headSha": "c573d65cb4c89c970b463c4def81a7563f58e83c",
+    "updatedAt": "2026-03-25T16:38:45Z",
+    "headSha": "698bbba7f534d1e5cf7c0263daa17aef2408554f",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/710",
     "authorLogin": "Dhruba531"
   },
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11L transformer stacks Partial XSA/RoPE, SmearGate/BigramHash, EMA+tight SWA, and late GPTQ-lite int6 quantization on Muon optimizer.",
+    "summary": "11-layer GQA-style transformer uses EMA+tight SWA, Partial RoPE/XSA, Muon + warmdown, and late QAT/GPTQ-lite for int6+zstd compression.",
     "tags": [
-      "architecture",
       "quantization",
-      "optimizer"
+      "optimizer",
+      "architecture"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Partial XSA/RoPE, SmearGate, and U-Net skips in an 11-layer transformer",
-      "Late int6 QAT with GPTQ-lite per-row clipping plus zstd level 22 compression",
-      "Muon optimizer with EMA(0.997) and tight SWA warmdown"
+      "Late QAT plus GPTQ-lite per-row clipping for int6 weights",
+      "EMA with tight SWA on Partial XSA-equipped transformer",
+      "Muon optimizer with warmdown and high-throughput batching"
     ]
   },
   "compatibility": {
