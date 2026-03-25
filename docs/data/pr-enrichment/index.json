@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-25T22:35:05.675Z",
+  "generatedAt": "2026-03-25T23:04:50.852Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 781,
+      "title": "Claude/train optimized model xc45 w",
+      "status": "open",
+      "updatedAt": "2026-03-25T23:02:59Z",
+      "headSha": "84905cc7ae92093b0e4aeb99ca05074c075196d2",
+      "generatedAt": "2026-03-25T23:04:44.153Z",
+      "summary": "Eval-time hybrid decoder blends neural logits with FST, cache, and match predictors via a GLN mixer that updates weights per entropy bin.",
+      "tags": [
+        "evaluation",
+        "architecture",
+        "compression",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-781.json"
+    },
     {
       "prNumber": 779,
       "title": "Record: BackoffNgramMixer + Drift-Free TTT (3-seed mean val_bpb=0.6683)",
@@ -9866,15 +9890,15 @@
       "prNumber": 182,
       "title": "Non-record: Linearized Neural Memory + TTT (val_bpb=1.1844)",
       "status": "open",
-      "updatedAt": "2026-03-25T22:06:49Z",
-      "headSha": "2fc7d5e603d06504ba895fa929c551f0844ffa57",
-      "generatedAt": "2026-03-25T22:35:05.647Z",
-      "summary": "Inserts Titans-style linearized neural memory between attention and MLP, yielding causal linear attention with LoRA TTT and int6/FP16 quantized layers for eval adaptation.",
+      "updatedAt": "2026-03-25T22:45:19Z",
+      "headSha": "6461ec1391db5020188617b74952fae03cb5737a",
+      "generatedAt": "2026-03-25T23:04:50.825Z",
+      "summary": "Linearized Titans-style neural memory per block (cumsum causal linear attention) plus LoRA TTT, overtone init, and FP16/int6 mixed precision for compact evaluation.",
       "tags": [
         "architecture",
         "attention",
         "quantization",
-        "muon"
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,

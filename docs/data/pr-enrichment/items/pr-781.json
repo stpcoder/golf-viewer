@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-25T23:04:44.153Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 781,
+    "title": "Claude/train optimized model xc45 w",
+    "state": "open",
+    "updatedAt": "2026-03-25T23:02:59Z",
+    "headSha": "84905cc7ae92093b0e4aeb99ca05074c075196d2",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/781",
+    "authorLogin": "sargonxg"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-25_OAG_Neurosymbolic_Hybrid_WIP/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Eval-time hybrid decoder blends neural logits with FST, cache, and match predictors via a GLN mixer that updates weights per entropy bin.",
+    "tags": [
+      "evaluation",
+      "architecture",
+      "compression",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Hybrid eval merges neural, FST, cache, and match predictors",
+      "GLN mixer applies entropy-binned online weight updates",
+      "Backward-looking predictors keep artifact cost zero"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

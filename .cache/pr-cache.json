@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-25T22:34:24.010Z",
-  "lastSeenUpdatedAt": "2026-03-25T22:30:05Z",
+  "generatedAt": "2026-03-25T23:04:37.358Z",
+  "lastSeenUpdatedAt": "2026-03-25T23:02:59Z",
   "prs": {
     "1": {
       "number": 1,
@@ -13849,7 +13849,7 @@
     },
     "182": {
       "number": 182,
-      "updatedAt": "2026-03-25T22:06:49Z",
+      "updatedAt": "2026-03-25T22:45:19Z",
       "pr": {
         "number": 182,
         "title": "Non-record: Linearized Neural Memory + TTT (val_bpb=1.1844)",
@@ -13860,8 +13860,8 @@
         "authorLogin": "mihir-s-05",
         "authorName": null,
         "createdAt": "2026-03-20T07:06:15Z",
-        "updatedAt": "2026-03-25T22:06:49Z",
-        "headSha": "2fc7d5e603d06504ba895fa929c551f0844ffa57",
+        "updatedAt": "2026-03-25T22:45:19Z",
+        "headSha": "6461ec1391db5020188617b74952fae03cb5737a",
         "headRepo": "mihir-s-05/parameter-golf"
       },
       "submissions": [
@@ -13923,16 +13923,16 @@
             "authorLogin": "mihir-s-05",
             "authorName": null,
             "createdAt": "2026-03-20T07:06:15Z",
-            "updatedAt": "2026-03-25T22:06:49Z",
-            "headSha": "2fc7d5e603d06504ba895fa929c551f0844ffa57",
+            "updatedAt": "2026-03-25T22:45:19Z",
+            "headSha": "6461ec1391db5020188617b74952fae03cb5737a",
             "headRepo": "mihir-s-05/parameter-golf"
           },
           "links": {
-            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/2fc7d5e603d06504ba895fa929c551f0844ffa57/records/track_10min_16mb/2026-03-20_LinearizedNeuralMemory_TTT/submission.json",
-            "readme": "https://github.com/openai/parameter-golf/blob/2fc7d5e603d06504ba895fa929c551f0844ffa57/records/track_10min_16mb/2026-03-20_LinearizedNeuralMemory_TTT/README.md",
-            "trainLog": "https://github.com/openai/parameter-golf/blob/2fc7d5e603d06504ba895fa929c551f0844ffa57/records/track_10min_16mb/2026-03-20_LinearizedNeuralMemory_TTT/train.log",
-            "script": "https://github.com/openai/parameter-golf/blob/2fc7d5e603d06504ba895fa929c551f0844ffa57/records/track_10min_16mb/2026-03-20_LinearizedNeuralMemory_TTT/train_gpt.py",
-            "folder": "https://github.com/openai/parameter-golf/tree/2fc7d5e603d06504ba895fa929c551f0844ffa57/records/track_10min_16mb/2026-03-20_LinearizedNeuralMemory_TTT",
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/6461ec1391db5020188617b74952fae03cb5737a/records/track_10min_16mb/2026-03-20_LinearizedNeuralMemory_TTT/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/6461ec1391db5020188617b74952fae03cb5737a/records/track_10min_16mb/2026-03-20_LinearizedNeuralMemory_TTT/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/6461ec1391db5020188617b74952fae03cb5737a/records/track_10min_16mb/2026-03-20_LinearizedNeuralMemory_TTT/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/6461ec1391db5020188617b74952fae03cb5737a/records/track_10min_16mb/2026-03-20_LinearizedNeuralMemory_TTT/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/6461ec1391db5020188617b74952fae03cb5737a/records/track_10min_16mb/2026-03-20_LinearizedNeuralMemory_TTT",
             "pr": "https://github.com/openai/parameter-golf/pull/182"
           }
         }
@@ -63732,7 +63732,7 @@
     },
     "756": {
       "number": 756,
-      "updatedAt": "2026-03-25T18:57:51Z",
+      "updatedAt": "2026-03-25T22:39:48Z",
       "pr": {
         "number": 756,
         "title": "Non-record: Negative results — quantization algorithms & TTT on val-GPTQ stack",
@@ -63743,7 +63743,7 @@
         "authorLogin": "abaybektursun",
         "authorName": null,
         "createdAt": "2026-03-25T18:57:51Z",
-        "updatedAt": "2026-03-25T18:57:51Z",
+        "updatedAt": "2026-03-25T22:39:48Z",
         "headSha": "e16f7aac737d8a8e960f740c0828c61b3bdc524b",
         "headRepo": "abaybektursun/parameter-golf"
       },
@@ -65887,6 +65887,188 @@
             "script": "https://github.com/openai/parameter-golf/blob/611612ee244acd290b7c30d952c8159816532e43/records/track_10min_16mb/2026-03-25_BackoffNgramMixer_DriftFreeTTT_0.6683/train_gpt.py",
             "folder": "https://github.com/openai/parameter-golf/tree/611612ee244acd290b7c30d952c8159816532e43/records/track_10min_16mb/2026-03-25_BackoffNgramMixer_DriftFreeTTT_0.6683",
             "pr": "https://github.com/openai/parameter-golf/pull/779"
+          }
+        }
+      ]
+    },
+    "780": {
+      "number": 780,
+      "updatedAt": "2026-03-25T22:40:00Z",
+      "pr": {
+        "number": 780,
+        "title": "Non-record WIP: OAG Neurosymbolic Hybrid — FST + N-gram Cache + Entropy-Adaptive Gating",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/780",
+        "authorLogin": "sargonxg",
+        "authorName": null,
+        "createdAt": "2026-03-25T22:40:00Z",
+        "updatedAt": "2026-03-25T22:40:00Z",
+        "headSha": "d5bbc04bd7daccb3fd41dedde8ecd8291cd0202f",
+        "headRepo": "sargonxg/parameter-golf-Giulio-train"
+      },
+      "submissions": [
+        {
+          "id": "pr-780-records-track_non_record_16mb-2026-03-25_OAG_Neurosymbolic_Hybrid_WIP-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "non-record",
+          "track": {
+            "path": "records/track_non_record_16mb",
+            "slug": "track_non_record_16mb",
+            "label": "Non-record / 16MB",
+            "official": false,
+            "category": "non-record"
+          },
+          "record": {
+            "folderName": "2026-03-25_OAG_Neurosymbolic_Hybrid_WIP",
+            "folderPath": "records/track_non_record_16mb/2026-03-25_OAG_Neurosymbolic_Hybrid_WIP",
+            "submissionPath": "records/track_non_record_16mb/2026-03-25_OAG_Neurosymbolic_Hybrid_WIP/submission.json",
+            "readmePath": "records/track_non_record_16mb/2026-03-25_OAG_Neurosymbolic_Hybrid_WIP/README.md",
+            "trainLogPath": "records/track_non_record_16mb/2026-03-25_OAG_Neurosymbolic_Hybrid_WIP/train.log",
+            "scriptPath": "records/track_non_record_16mb/2026-03-25_OAG_Neurosymbolic_Hybrid_WIP/train_gpt.py"
+          },
+          "submission": {
+            "author": "sargonxg",
+            "githubId": "sargonxg",
+            "name": "Giulio Catanzariti",
+            "blurb": null,
+            "date": "2026-03-25"
+          },
+          "metrics": {
+            "valBpb": null,
+            "valLoss": null,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": null,
+            "bytesCode": null,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 780,
+            "title": "Non-record WIP: OAG Neurosymbolic Hybrid — FST + N-gram Cache + Entropy-Adaptive Gating",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/780",
+            "authorLogin": "sargonxg",
+            "authorName": null,
+            "createdAt": "2026-03-25T22:40:00Z",
+            "updatedAt": "2026-03-25T22:40:00Z",
+            "headSha": "d5bbc04bd7daccb3fd41dedde8ecd8291cd0202f",
+            "headRepo": "sargonxg/parameter-golf-Giulio-train"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/d5bbc04bd7daccb3fd41dedde8ecd8291cd0202f/records/track_non_record_16mb/2026-03-25_OAG_Neurosymbolic_Hybrid_WIP/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/d5bbc04bd7daccb3fd41dedde8ecd8291cd0202f/records/track_non_record_16mb/2026-03-25_OAG_Neurosymbolic_Hybrid_WIP/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/d5bbc04bd7daccb3fd41dedde8ecd8291cd0202f/records/track_non_record_16mb/2026-03-25_OAG_Neurosymbolic_Hybrid_WIP/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/d5bbc04bd7daccb3fd41dedde8ecd8291cd0202f/records/track_non_record_16mb/2026-03-25_OAG_Neurosymbolic_Hybrid_WIP/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/d5bbc04bd7daccb3fd41dedde8ecd8291cd0202f/records/track_non_record_16mb/2026-03-25_OAG_Neurosymbolic_Hybrid_WIP",
+            "pr": "https://github.com/openai/parameter-golf/pull/780"
+          }
+        }
+      ]
+    },
+    "781": {
+      "number": 781,
+      "updatedAt": "2026-03-25T23:02:59Z",
+      "pr": {
+        "number": 781,
+        "title": "Claude/train optimized model xc45 w",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/781",
+        "authorLogin": "sargonxg",
+        "authorName": null,
+        "createdAt": "2026-03-25T23:02:59Z",
+        "updatedAt": "2026-03-25T23:02:59Z",
+        "headSha": "84905cc7ae92093b0e4aeb99ca05074c075196d2",
+        "headRepo": "sargonxg/parameter-golf-Giulio-train"
+      },
+      "submissions": [
+        {
+          "id": "pr-781-records-track_non_record_16mb-2026-03-25_OAG_Neurosymbolic_Hybrid_WIP-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "non-record",
+          "track": {
+            "path": "records/track_non_record_16mb",
+            "slug": "track_non_record_16mb",
+            "label": "Non-record / 16MB",
+            "official": false,
+            "category": "non-record"
+          },
+          "record": {
+            "folderName": "2026-03-25_OAG_Neurosymbolic_Hybrid_WIP",
+            "folderPath": "records/track_non_record_16mb/2026-03-25_OAG_Neurosymbolic_Hybrid_WIP",
+            "submissionPath": "records/track_non_record_16mb/2026-03-25_OAG_Neurosymbolic_Hybrid_WIP/submission.json",
+            "readmePath": "records/track_non_record_16mb/2026-03-25_OAG_Neurosymbolic_Hybrid_WIP/README.md",
+            "trainLogPath": "records/track_non_record_16mb/2026-03-25_OAG_Neurosymbolic_Hybrid_WIP/train.log",
+            "scriptPath": "records/track_non_record_16mb/2026-03-25_OAG_Neurosymbolic_Hybrid_WIP/train_gpt.py"
+          },
+          "submission": {
+            "author": "sargonxg",
+            "githubId": "sargonxg",
+            "name": "Giulio Catanzariti",
+            "blurb": null,
+            "date": "2026-03-25"
+          },
+          "metrics": {
+            "valBpb": null,
+            "valLoss": null,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": null,
+            "bytesCode": null,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 781,
+            "title": "Claude/train optimized model xc45 w",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/781",
+            "authorLogin": "sargonxg",
+            "authorName": null,
+            "createdAt": "2026-03-25T23:02:59Z",
+            "updatedAt": "2026-03-25T23:02:59Z",
+            "headSha": "84905cc7ae92093b0e4aeb99ca05074c075196d2",
+            "headRepo": "sargonxg/parameter-golf-Giulio-train"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/84905cc7ae92093b0e4aeb99ca05074c075196d2/records/track_non_record_16mb/2026-03-25_OAG_Neurosymbolic_Hybrid_WIP/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/84905cc7ae92093b0e4aeb99ca05074c075196d2/records/track_non_record_16mb/2026-03-25_OAG_Neurosymbolic_Hybrid_WIP/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/84905cc7ae92093b0e4aeb99ca05074c075196d2/records/track_non_record_16mb/2026-03-25_OAG_Neurosymbolic_Hybrid_WIP/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/84905cc7ae92093b0e4aeb99ca05074c075196d2/records/track_non_record_16mb/2026-03-25_OAG_Neurosymbolic_Hybrid_WIP/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/84905cc7ae92093b0e4aeb99ca05074c075196d2/records/track_non_record_16mb/2026-03-25_OAG_Neurosymbolic_Hybrid_WIP",
+            "pr": "https://github.com/openai/parameter-golf/pull/781"
           }
         }
       ]
