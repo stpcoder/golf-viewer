@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-25T15:32:35.043Z",
+  "generatedAt": "2026-03-25T21:04:14.137Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 728,
-    "title": "Record: Val-Calibrated GPTQ + XSA-all + BigramHash 3072×112",
+    "title": "WIP: GPTQ + XSA-all + BigramHash 3072×112",
     "state": "open",
-    "updatedAt": "2026-03-25T15:15:07Z",
+    "updatedAt": "2026-03-25T20:50:51Z",
     "headSha": "713bb3fcd9017ba01d104723b3f873201976bab8",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/728",
     "authorLogin": "abaybektursun"
@@ -19,17 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Adapts the XSA-all stack with Full Hessian GPTQ calibrated on validation shards plus a BigramHash 3072×112 table to stay legal under the eval rules.",
+    "summary": "Full-Hessian GPTQ calibrated on val shards and a 3072×112 BigramHash stack keep the XSA-all/Parallel Muon pipeline within the 16MB budget.",
     "tags": [
+      "quantization",
       "architecture",
-      "quantization"
+      "optimizer"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "Validation shards only supply read-only GPTQ calibration; no training occurs solely on validation data.",
+    "valOnlyReasoning": "",
     "techniques": [
-      "Val-only GPTQ calibration via validation shard loader",
-      "BigramHash 3072×112 expansion within the 16MB budget",
-      "XSA-all + Full GPTQ + selective pruning quant stack"
+      "Val-shard GPTQ calibration avoids eval-time train access",
+      "Expanded BigramHash table (3072×112) fits under 16MB",
+      "Parallel Muon parameter banking accelerates training"
     ]
   },
   "compatibility": {

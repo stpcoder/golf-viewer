@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-25T21:04:02.514Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 766,
+    "title": "[Non-Record] Depth Recurrence + SwiGLU + Mixed Quantization",
+    "state": "open",
+    "updatedAt": "2026-03-25T20:47:20Z",
+    "headSha": "91c8ee68c899d4ebf4870cd1e6ed01c07eec027b",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/766",
+    "authorLogin": "Shakil281"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-25_DepthRecurrence_SwiGLU_AdvancedTTT_MixedQuant/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Pairs depth recurrence with SwiGLU MLPs and mixed int5/int6 quantization atop the existing stack.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "mixed-precision",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Depth recurrence loops 11 layers twice to trade compute for depth",
+      "SwiGLU gating replaces LeakyReLU² with a 2× wider up projection",
+      "Per-layer mixed int5/int6 quantization prioritizes critical blocks"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

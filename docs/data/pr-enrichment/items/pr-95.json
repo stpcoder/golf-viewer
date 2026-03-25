@@ -1,37 +1,37 @@
 {
-  "generatedAt": "2026-03-21T19:05:26.680Z",
+  "generatedAt": "2026-03-25T21:04:50.856Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 95,
-    "title": "PROTEUS EMA — val_bpb: 1.2253",
+    "title": "PROTEUS EMA — val_bpb: 1.1836 (3-seed mean, Notable Non-Record)",
     "state": "open",
-    "updatedAt": "2026-03-21T18:50:40Z",
-    "headSha": "ef1863d2aa5e095b06d9155821397bc4d11ff4d1",
+    "updatedAt": "2026-03-25T20:53:44Z",
+    "headSha": "ed6850a56260e15b0eacdfb2c95763220f3488ff",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/95",
     "authorLogin": "MatoTeziTanka"
   },
   "inputs": {
-    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
     "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_PROTEUS_EMA_Notable/README.md",
       "records/track_10min_16mb/2026-03-19_PROTEUS_EMA/README.md"
     ],
-    "submissionCount": 1
+    "submissionCount": 2
   },
   "output": {
-    "summary": "EMA averaging plus FP16 embedding passthrough, seq2048 training, and sliding-window eval keep quantized baseline weights and embeddings sharp.",
+    "summary": "EMA weight averaging on the baseline transformer smooths weights to shrink INT8 quantization loss while documenting INT4 and recurrence failures.",
     "tags": [
-      "architecture",
-      "optimizer",
+      "regularization",
       "quantization",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "EMA weight averaging every 10 steps",
-      "FP16 embedding passthrough to avoid INT8 on tied embeddings",
-      "Sliding-window stride 64 eval with seq_len 2048"
+      "EMA weight averaging on baseline transformer",
+      "INT8 post-training quant evaluation",
+      "documented INT4 and shared-weight depth recurrence failures"
     ]
   },
   "compatibility": {

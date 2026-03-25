@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-25T20:34:36.029Z",
+  "generatedAt": "2026-03-25T21:04:50.870Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 766,
+      "title": "[Non-Record] Depth Recurrence + SwiGLU + Mixed Quantization",
+      "status": "open",
+      "updatedAt": "2026-03-25T20:47:20Z",
+      "headSha": "91c8ee68c899d4ebf4870cd1e6ed01c07eec027b",
+      "generatedAt": "2026-03-25T21:04:02.514Z",
+      "summary": "Pairs depth recurrence with SwiGLU MLPs and mixed int5/int6 quantization atop the existing stack.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "mixed-precision",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-766.json"
+    },
     {
       "prNumber": 764,
       "title": "Record: Curriculum Learning + LeakyReLU(0.9)² + 7-gram Backoff (val_bpb=0.9633)",
@@ -54,15 +78,13 @@
       "prNumber": 762,
       "title": "Record: LeakyReLU(0.5)² + Legal Per-Document LoRA TTT + GPTQ-lite (mean val_bpb=0.7139, 3 seeds)",
       "status": "open",
-      "updatedAt": "2026-03-25T20:33:16Z",
-      "headSha": "2ce25a722f02725ed692cfd1a18e718fc669cb6a",
-      "generatedAt": "2026-03-25T20:34:07.278Z",
-      "summary": "LeakyReLU² U-Net leverages legal per-document LoRA TTT with extended budget and GPTQ-lite multi-percentile int6 quant to refine evaluation-time adaptation.",
+      "updatedAt": "2026-03-25T21:02:52Z",
+      "headSha": "5cc7c74e9d5fccecba70924d170509a2cb359cfc",
+      "generatedAt": "2026-03-25T21:04:07.372Z",
+      "summary": "Per-document accumulators force loss scoring before LoRA updates while GPTQ-lite multi-percentile int6 quant and a larger LoRA budget keep validation legal and tight.",
       "tags": [
-        "architecture",
-        "quantization",
         "training-schedule",
-        "evaluation"
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -586,15 +608,16 @@
     },
     {
       "prNumber": 728,
-      "title": "Record: Val-Calibrated GPTQ + XSA-all + BigramHash 3072×112",
+      "title": "WIP: GPTQ + XSA-all + BigramHash 3072×112",
       "status": "open",
-      "updatedAt": "2026-03-25T15:15:07Z",
+      "updatedAt": "2026-03-25T20:50:51Z",
       "headSha": "713bb3fcd9017ba01d104723b3f873201976bab8",
-      "generatedAt": "2026-03-25T15:32:35.043Z",
-      "summary": "Adapts the XSA-all stack with Full Hessian GPTQ calibrated on validation shards plus a BigramHash 3072×112 table to stay legal under the eval rules.",
+      "generatedAt": "2026-03-25T21:04:14.137Z",
+      "summary": "Full-Hessian GPTQ calibrated on val shards and a 3072×112 BigramHash stack keep the XSA-all/Parallel Muon pipeline within the 16MB budget.",
       "tags": [
+        "quantization",
         "architecture",
-        "quantization"
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2307,6 +2330,30 @@
         "valOnlyMatchesCollector": false
       },
       "file": "items/pr-622.json"
+    },
+    {
+      "prNumber": 620,
+      "title": "Record: LeakyReLU(0.5)² + Per-Document LoRA TTT (mean val_bpb=0.9443, 3 seeds)",
+      "status": "closed",
+      "updatedAt": "2026-03-24T15:58:33Z",
+      "headSha": "e323a65682be6692b48855edd50d3b2b7742ac22",
+      "generatedAt": "2026-03-25T21:04:21.644Z",
+      "summary": "U-Net with LeakyReLU(0.5)² activations plus per-document LoRA TTT adaptation for each validation chunk.",
+      "tags": [
+        "architecture",
+        "val-only",
+        "optimizer",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": false
+      },
+      "file": "items/pr-620.json"
     },
     {
       "prNumber": 619,
@@ -5132,17 +5179,17 @@
     },
     {
       "prNumber": 447,
-      "title": "Bigram-Aware Context Modeling with Mixed-Precision Quantization (val_bpb: 1.1431)",
+      "title": "Non-Record: Bigram-Aware Context Modeling with Mixed-Precision Quantization (val_bpb: 1.1431)",
       "status": "open",
-      "updatedAt": "2026-03-22T17:39:18Z",
+      "updatedAt": "2026-03-25T21:03:20Z",
       "headSha": "2107e74514f4e4c22423ec2c5a629c104ee81e4d",
-      "generatedAt": "2026-03-22T17:41:18.278Z",
-      "summary": "10-layer transformer injects bigram context via hash embeddings and SmearGate while using mixed int5/int6 quantization to fund extra depth.",
+      "generatedAt": "2026-03-25T21:04:27.472Z",
+      "summary": "Injects bigram context via hash+gated blending and uses mixed int5/int6 quantization to fund a deeper 10-layer transformer under the 16MB cap.",
       "tags": [
-        "architecture",
         "quantization",
-        "training-schedule",
-        "evaluation"
+        "mixed-precision",
+        "architecture",
+        "sliding-window-eval"
       ],
       "flags": {
         "usesValOnly": false,
@@ -5342,14 +5389,15 @@
       "prNumber": 435,
       "title": "Radial bitnet submission",
       "status": "open",
-      "updatedAt": "2026-03-24T22:52:59Z",
-      "headSha": "56da17dff025b405fc579371667fbfcfb94e43df",
-      "generatedAt": "2026-03-24T22:57:34.422Z",
-      "summary": "Dual-branch compressed transformer uses FRO with radial token geometry, bigram hash, and BitNet ternary projections for fast convergence within the 16MB/10min budget.",
+      "updatedAt": "2026-03-25T20:40:23Z",
+      "headSha": "f95351a5345b062ae1957fc7fbed6dbb22b0ad4b",
+      "generatedAt": "2026-03-25T21:04:31.536Z",
+      "summary": "Compressed dual-branch transformer fuses radial token geometry, hashed bigram branch, and a ternary-weight core tuned by FRO Stable to hit the 16MB/10min budget.",
       "tags": [
-        "optimizer",
         "architecture",
-        "quantization"
+        "optimizer",
+        "compression",
+        "tokenization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -6825,13 +6873,14 @@
       "prNumber": 347,
       "title": "LongContext 4096 + Full SOTA Stack + QAT Int4/Int6 → 16 Layers",
       "status": "open",
-      "updatedAt": "2026-03-25T17:29:53Z",
-      "headSha": "ee26d04066533914a042561c19db73a636f88505",
-      "generatedAt": "2026-03-25T17:33:28.555Z",
-      "summary": "Extends the PR #549 SOTA stack to 4096 context and 16 layers via int4 nibble packing plus full-model QAT on CastedLinear and bank weights.",
+      "updatedAt": "2026-03-25T20:49:40Z",
+      "headSha": "b7eb0ed4e8f6d9783ef356285a18fc3b565f9976",
+      "generatedAt": "2026-03-25T21:04:41.617Z",
+      "summary": "Extends PR#549 SOTA stack with 4096-context training, 16-layer int4 nibble packing, and QAT on both CastedLinear and bank weight slices.",
       "tags": [
+        "architecture",
         "quantization",
-        "architecture"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -9609,14 +9658,14 @@
       "prNumber": 182,
       "title": "Non-record: Linearized Neural Memory + TTT (val_bpb=1.1844)",
       "status": "open",
-      "updatedAt": "2026-03-25T19:14:59Z",
-      "headSha": "0c5a7f7d5b4c6e53a2251bfc783c5ed221f7bcb1",
-      "generatedAt": "2026-03-25T19:33:42.819Z",
-      "summary": "Adds Titans-style linearized neural memory per block with LoRA TTT eval, overtone init, and lightweight FP16/int6 layers for built-in test-time adaptation.",
+      "updatedAt": "2026-03-25T20:51:37Z",
+      "headSha": "195d2f8b6649022caebde04957ea452a3323355c",
+      "generatedAt": "2026-03-25T21:04:46.023Z",
+      "summary": "Each block adds a linearized Titans-style memory (cumsum attention) with gated residuals plus LoRA TTT, overtone init, Muon WD, and int6/FP16 fusions.",
       "tags": [
         "architecture",
-        "evaluation",
-        "mixed-precision",
+        "attention",
+        "quantization",
         "regularization"
       ],
       "flags": {
@@ -11015,15 +11064,14 @@
     },
     {
       "prNumber": 95,
-      "title": "PROTEUS EMA — val_bpb: 1.2253",
+      "title": "PROTEUS EMA — val_bpb: 1.1836 (3-seed mean, Notable Non-Record)",
       "status": "open",
-      "updatedAt": "2026-03-21T18:50:40Z",
-      "headSha": "ef1863d2aa5e095b06d9155821397bc4d11ff4d1",
-      "generatedAt": "2026-03-21T19:05:26.680Z",
-      "summary": "EMA averaging plus FP16 embedding passthrough, seq2048 training, and sliding-window eval keep quantized baseline weights and embeddings sharp.",
+      "updatedAt": "2026-03-25T20:53:44Z",
+      "headSha": "ed6850a56260e15b0eacdfb2c95763220f3488ff",
+      "generatedAt": "2026-03-25T21:04:50.856Z",
+      "summary": "EMA weight averaging on the baseline transformer smooths weights to shrink INT8 quantization loss while documenting INT4 and recurrence failures.",
       "tags": [
-        "architecture",
-        "optimizer",
+        "regularization",
         "quantization",
         "evaluation"
       ],

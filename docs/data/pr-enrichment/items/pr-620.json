@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-24T16:26:16.555Z",
+  "generatedAt": "2026-03-25T21:04:21.644Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
@@ -19,25 +19,25 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "U-Net swaps in LeakyReLU(0.5)² while applying per-document LoRA TTT with Muon/SWA and int8+zstd compression for adaptive inference.",
+    "summary": "U-Net with LeakyReLU(0.5)² activations plus per-document LoRA TTT adaptation for each validation chunk.",
     "tags": [
       "architecture",
+      "val-only",
       "optimizer",
-      "evaluation",
       "quantization"
     ],
-    "usesValOnly": false,
-    "valOnlyReasoning": "Standard training plus test-time LoRA adaptation; no val-only training regime reported.",
+    "usesValOnly": true,
+    "valOnlyReasoning": "Per-document LoRA TTT trains on each validation document (TTT epochs) before scoring, so adaptation happens on the validation shard.",
     "techniques": [
-      "LeakyReLU(0.5)² activation across MLP layers",
-      "Per-document LoRA test-time training",
-      "Muon optimizer with SWA and int8+zstd compression"
+      "LeakyReLU(0.5)² activation in MLPs",
+      "Per-document backward-looking LoRA TTT (rank 8, 3 epochs)",
+      "int8+zstd compression with Muon optimizer and SWA"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": false,
-    "finalUsesValOnly": false,
-    "valOnlyMatchesCollector": true
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
   }
 }

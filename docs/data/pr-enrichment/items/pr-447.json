@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-22T17:41:18.278Z",
+  "generatedAt": "2026-03-25T21:04:27.472Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 447,
-    "title": "Bigram-Aware Context Modeling with Mixed-Precision Quantization (val_bpb: 1.1431)",
+    "title": "Non-Record: Bigram-Aware Context Modeling with Mixed-Precision Quantization (val_bpb: 1.1431)",
     "state": "open",
-    "updatedAt": "2026-03-22T17:39:18Z",
+    "updatedAt": "2026-03-25T21:03:20Z",
     "headSha": "2107e74514f4e4c22423ec2c5a629c104ee81e4d",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/447",
     "authorLogin": "CREVIOS"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "10-layer transformer injects bigram context via hash embeddings and SmearGate while using mixed int5/int6 quantization to fund extra depth.",
+    "summary": "Injects bigram context via hash+gated blending and uses mixed int5/int6 quantization to fund a deeper 10-layer transformer under the 16MB cap.",
     "tags": [
-      "architecture",
       "quantization",
-      "training-schedule",
-      "evaluation"
+      "mixed-precision",
+      "architecture",
+      "sliding-window-eval"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "Not val-only; standard training on training data.",
+    "valOnlyReasoning": "",
     "techniques": [
-      "BigramHash + SmearGate bigram context injection",
-      "Mixed int5/int6 quantization by layer sensitivity",
-      "Muon optimizer with SWA and warmdown schedule"
+      "- BigramHash and SmearGate inject local bigram signals into embeddings",
+      "- Mixed int5/int6 quantization reallocates budget to add a 10th transformer layer",
+      "- Sliding-window eval with stride 64 scores every token"
     ]
   },
   "compatibility": {
