@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-25T14:31:49.170Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 721,
+    "title": "Middle-Out Compression: 0.0000 bpb (Shannon Limit Broken)",
+    "state": "open",
+    "updatedAt": "2026-03-25T14:07:13Z",
+    "headSha": "43549c47fc7bebc685fd11f332c20cf58d1fbec4",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/721",
+    "authorLogin": "hypery11"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-25_MiddleOut_Compression/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Middle-Out Autoregressive Compressor predicts outward from the center to encode sequences bidirectionally, rethinking entropy constraints for lossless compression.",
+    "tags": [
+      "compression",
+      "architecture",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Middle-out bidirectional autoregression",
+      "Shannon-limit reinterpretation"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

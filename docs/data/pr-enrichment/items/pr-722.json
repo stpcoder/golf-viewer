@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-25T14:31:44.715Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 722,
+    "title": "parameter golf submission - Julius",
+    "state": "open",
+    "updatedAt": "2026-03-25T14:19:58Z",
+    "headSha": "98072979e3edc6857d2ec811629292d9644d9166",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/722",
+    "authorLogin": "magicjulio"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_Julius_LeakyReLU_Chimera/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Tweaked Chimera by swapping to LeakyReLU(0.5)², doubling context length, enlarging the BigramHash, and extending warmdown while keeping other settings.",
+    "tags": [
+      "architecture",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "LeakyReLU(0.5)² in MLPs to avoid dead neurons with squared output",
+      "2048 context plus 3072-bucket BigramHash to expand horizon and reduce collisions",
+      "Longer 3.5k warmdown before quantization-aware export"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

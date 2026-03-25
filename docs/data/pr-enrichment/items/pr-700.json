@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-25T11:00:55.432Z",
+  "generatedAt": "2026-03-25T14:32:07.927Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 700,
     "title": "Record Submission: 1.0541 BPB - 5-expert Hedge Mixer + CROWN-Q + stride=64",
     "state": "open",
-    "updatedAt": "2026-03-25T10:50:30Z",
+    "updatedAt": "2026-03-25T14:27:31Z",
     "headSha": "57d1d2c8cc01f150830bc3d559b3d8189b424188",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/700",
     "authorLogin": "RoyiRa"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines a 5-expert Hedge mixer with warmdown CROWN-Q penalty and stride/TTT tweaks to favor quantization-friendly weights and faster eval.",
+    "summary": "Combines CROWN-Q warmdown penalty, doubled eval stride, and an extra TTT epoch to regularize quantization and reuse evaluation time for adaptation.",
     "tags": [
       "quantization",
       "evaluation",
-      "architecture"
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Warmdown CROWN-Q penalty to shrink quantization-sensitive weights",
-      "Stride=64 sliding window frees budget for a 4th TTT epoch",
-      "5-expert Hedge mixer over n-gram and entropy stats"
+      "CROWN-Q warmdown penalty for quantization-friendly weights",
+      "Eval stride 64 to halve scoring cost and free budget",
+      "Fourth TTT epoch uses freed time for chunk-specific adaptation"
     ]
   },
   "compatibility": {

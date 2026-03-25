@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-25T14:31:39.235Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 724,
+    "title": "Record: 10L + 7-gram eval cache (mean val_bpb=1.0717)",
+    "state": "open",
+    "updatedAt": "2026-03-25T14:29:00Z",
+    "headSha": "d7dd6d05d05640da901a2ee71362a1a70c22faa7",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/724",
+    "authorLogin": "hypery11"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_10L_7gram_cache/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "10L transformer with BigramHash smearing, gated attention + U-Net skips, mixed int5/int6 quantization, and a backward-looking 7-gram eval cache.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "evaluation",
+      "compression"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Mixed int5/int6 quantization with zstd-22",
+      "Backward-looking 7-gram score-first eval cache",
+      "Gated attention + U-Net skip + SmearGate architecture"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

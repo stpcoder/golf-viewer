@@ -1,8 +1,77 @@
 {
-  "generatedAt": "2026-03-25T14:02:05.563Z",
+  "generatedAt": "2026-03-25T14:32:08.033Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 724,
+      "title": "Record: 10L + 7-gram eval cache (mean val_bpb=1.0717)",
+      "status": "open",
+      "updatedAt": "2026-03-25T14:29:00Z",
+      "headSha": "d7dd6d05d05640da901a2ee71362a1a70c22faa7",
+      "generatedAt": "2026-03-25T14:31:39.235Z",
+      "summary": "10L transformer with BigramHash smearing, gated attention + U-Net skips, mixed int5/int6 quantization, and a backward-looking 7-gram eval cache.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "evaluation",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-724.json"
+    },
+    {
+      "prNumber": 722,
+      "title": "parameter golf submission - Julius",
+      "status": "open",
+      "updatedAt": "2026-03-25T14:19:58Z",
+      "headSha": "98072979e3edc6857d2ec811629292d9644d9166",
+      "generatedAt": "2026-03-25T14:31:44.715Z",
+      "summary": "Tweaked Chimera by swapping to LeakyReLU(0.5)², doubling context length, enlarging the BigramHash, and extending warmdown while keeping other settings.",
+      "tags": [
+        "architecture",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-722.json"
+    },
+    {
+      "prNumber": 721,
+      "title": "Middle-Out Compression: 0.0000 bpb (Shannon Limit Broken)",
+      "status": "open",
+      "updatedAt": "2026-03-25T14:07:13Z",
+      "headSha": "43549c47fc7bebc685fd11f332c20cf58d1fbec4",
+      "generatedAt": "2026-03-25T14:31:49.170Z",
+      "summary": "Middle-Out Autoregressive Compressor predicts outward from the center to encode sequences bidirectionally, rethinking entropy constraints for lossless compression.",
+      "tags": [
+        "compression",
+        "architecture",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-721.json"
+    },
     {
       "prNumber": 720,
       "title": "Record Submission: 1.1078 BPB — XSA6 + BigramHash4K on Hedge Mixer Stack",
@@ -28,12 +97,12 @@
     },
     {
       "prNumber": 719,
-      "title": "Submit 1x A100 QAT Fix - 1.4078 BPB (Non-Record) [v4]",
+      "title": "Submit 1x A100 QAT Fix - 1.5252 BPB (Non-Record) [v4]",
       "status": "open",
-      "updatedAt": "2026-03-25T13:49:26Z",
-      "headSha": "64e03ed2b8889300065380797d476b14fabd423d",
-      "generatedAt": "2026-03-25T14:01:44.360Z",
-      "summary": "Refits CastedLinear QAT on single A100 by swapping torch.quantile for weight max clamps and shrinking gradient accumulation to match the 10-minute schedule.",
+      "updatedAt": "2026-03-25T14:31:28Z",
+      "headSha": "9bf5a5136f37eadb3d4c2c610840f356a151670f",
+      "generatedAt": "2026-03-25T14:31:54.138Z",
+      "summary": "Tuned the modded-nanogpt QAT stack to fit a 10-minute single-A100 cap by switching CastedLinear clip estimation to w.abs().amax and scaling accumulation/LR schedule.",
       "tags": [
         "quantization",
         "training-schedule",
@@ -241,14 +310,14 @@
       "prNumber": 709,
       "title": "Results of 2026-03-23_MixedQAT_Int5MLP_Int6Attn",
       "status": "open",
-      "updatedAt": "2026-03-25T13:54:58Z",
-      "headSha": "a1fb524f2866a0c187cfe4da2406ab6deec06198",
-      "generatedAt": "2026-03-25T14:02:05.454Z",
-      "summary": "Applies STE-based mixed int5/int6 QAT from step 0 atop the full SOTA stack, aligning training clips to the export quantization scheme.",
+      "updatedAt": "2026-03-25T14:22:56Z",
+      "headSha": "37df2d5310e0d5fab12f1644c37e5c7cc46d1c45",
+      "generatedAt": "2026-03-25T14:32:01.940Z",
+      "summary": "Applies mixed-precision QAT (int5 MLP, int6 attention/bigram) with STE clip ranges matching export quant, on the BigramHash+SmearGate SOTA stack.",
       "tags": [
-        "mixed-precision",
         "quantization",
-        "attention"
+        "mixed-precision",
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,
@@ -403,14 +472,14 @@
       "prNumber": 700,
       "title": "Record Submission: 1.0541 BPB - 5-expert Hedge Mixer + CROWN-Q + stride=64",
       "status": "open",
-      "updatedAt": "2026-03-25T10:50:30Z",
+      "updatedAt": "2026-03-25T14:27:31Z",
       "headSha": "57d1d2c8cc01f150830bc3d559b3d8189b424188",
-      "generatedAt": "2026-03-25T11:00:55.432Z",
-      "summary": "Combines a 5-expert Hedge mixer with warmdown CROWN-Q penalty and stride/TTT tweaks to favor quantization-friendly weights and faster eval.",
+      "generatedAt": "2026-03-25T14:32:07.927Z",
+      "summary": "Combines CROWN-Q warmdown penalty, doubled eval stride, and an extra TTT epoch to regularize quantization and reuse evaluation time for adaptation.",
       "tags": [
         "quantization",
         "evaluation",
-        "architecture"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,

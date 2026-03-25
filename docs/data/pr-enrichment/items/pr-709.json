@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-25T14:02:05.454Z",
+  "generatedAt": "2026-03-25T14:32:01.940Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 709,
     "title": "Results of 2026-03-23_MixedQAT_Int5MLP_Int6Attn",
     "state": "open",
-    "updatedAt": "2026-03-25T13:54:58Z",
-    "headSha": "a1fb524f2866a0c187cfe4da2406ab6deec06198",
+    "updatedAt": "2026-03-25T14:22:56Z",
+    "headSha": "37df2d5310e0d5fab12f1644c37e5c7cc46d1c45",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/709",
     "authorLogin": "StolbaJ"
   },
@@ -21,18 +21,18 @@
     "submissionCount": 3
   },
   "output": {
-    "summary": "Applies STE-based mixed int5/int6 QAT from step 0 atop the full SOTA stack, aligning training clips to the export quantization scheme.",
+    "summary": "Applies mixed-precision QAT (int5 MLP, int6 attention/bigram) with STE clip ranges matching export quant, on the BigramHash+SmearGate SOTA stack.",
     "tags": [
-      "mixed-precision",
       "quantization",
-      "attention"
+      "mixed-precision",
+      "architecture"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "STE-simulated quantization with export-aligned clip ranges",
-      "Full SOTA stack (BigramHash, SmearGate, Muon WD=0.04, SWA) preserved",
-      "Layerwise mixed int5 MLP and int6 attention precision"
+      "STE with export-matched clip ranges",
+      "Mixed int5/int6 QAT across MLP and attention",
+      "SOTA BigramHash+SmearGate architecture"
     ]
   },
   "compatibility": {
