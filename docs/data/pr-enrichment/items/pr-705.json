@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-25T13:01:53.693Z",
+  "generatedAt": "2026-03-25T13:32:41.753Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 705,
     "title": "Byte-Level Tokenizer-Free Transformer: 1.2151 BPB (beats baseline 1.2244)",
     "state": "open",
-    "updatedAt": "2026-03-25T12:41:17Z",
-    "headSha": "8a8dc76070b990629b83b434b88a308e11d9224e",
+    "updatedAt": "2026-03-25T13:25:12Z",
+    "headSha": "c574e8be200208720674776e7a433a2ff7526ed3",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/705",
     "authorLogin": "seanward"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Tokenizer-free pure-attention transformer on raw UTF-8 bytes using LeakyReLU², SmearGate with hashed byte bigrams and U-Net-style skips.",
+    "summary": "Tokenizer-free byte-level transformer uses SmearGate, hashed byte-bigram inputs, and U-Net skip connections plus sliding-window eval to beat the sp1024 baseline.",
     "tags": [
-      "tokenization",
       "architecture",
-      "attention",
-      "sliding-window-eval"
+      "tokenization",
+      "quantization",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Raw UTF-8 byte inputs with hashed byte-bigram embeddings",
-      "LeakyReLU² + SmearGate with tied embeddings and logit softcap",
-      "Sliding-window eval with int6+zstd quantization"
+      "Pure-attention on 4096-byte inputs with sliding-window scoring",
+      "LeakyReLU², SmearGate, and hashed byte-bigram embeddings",
+      "Int6 + zstd-22 quantization"
     ]
   },
   "compatibility": {

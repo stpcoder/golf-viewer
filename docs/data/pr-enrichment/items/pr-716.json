@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-25T13:31:49.321Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 716,
+    "title": "Add non-record 4090 warmdown submission",
+    "state": "open",
+    "updatedAt": "2026-03-25T13:20:52Z",
+    "headSha": "f6a849b8d1e8ae61e4231f0a102ca08508901005",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/716",
+    "authorLogin": "SHN2004"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-25_CompiledLeakyReLU2_Warmdown300_1xRTX4090/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Compiled GPT training with LeakyReLU2 MLP, quarter-sized batch tokens, and extended 300-iter warmdown on a 4090 proxy to explore 16MB-viable submissions.",
+    "tags": [
+      "architecture",
+      "training-schedule",
+      "quantization",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Compiled torch execution",
+      "LeakyReLU2 MLP activation with smaller batch tokens",
+      "Extended WARMDOWN_ITERS=300"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

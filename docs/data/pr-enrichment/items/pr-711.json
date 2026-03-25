@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-25T13:32:17.875Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 711,
+    "title": "Partitioned MoE + BigramHash + SlidingWindow + Int5/Int6 (Complexity-ML)",
+    "state": "open",
+    "updatedAt": "2026-03-25T13:27:49Z",
+    "headSha": "33333511ac12966be4083246167714dd7403684f",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/711",
+    "authorLogin": "Complexity-ML"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_ComplexityMoE_PID/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Partitioned MoE pairs per-layer hash routing, BigramHash embeddings, and sliding-window eval with mixed int5/int6 quantization for tight 10min/16MB runs.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Layer-specific hash routing to break co-activation bias",
+      "Partitioned expert tiers with INL BetaMu+SmearGate blocks",
+      "Mixed int5/int6 quantization feeding sliding-window eval"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-25T13:32:11.486Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 712,
+    "title": "Submit 1x A100 QAT Fix - 1.4078 BPB (Non-Record) [v3]",
+    "state": "open",
+    "updatedAt": "2026-03-25T13:15:13Z",
+    "headSha": "952a8003f65c514db587c85c9645651b12c36082",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/712",
+    "authorLogin": "Shuvam-Banerji-Seal"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-23_Single_A100_QAT_FastFix/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Adapts a modded-nanogpt QAT loop to single-A100 limits by swapping torch.quantile for per-row amax clipping and downscaling the LR schedule to 2.6K steps.",
+    "tags": [
+      "quantization",
+      "training-schedule",
+      "optimizer",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "CastedLinear clip factor estimated via w.abs().amax(dim=1)",
+      "Gradient accumulation and LR decay rescaled for a 10-minute single-A100 run",
+      "Straight-through estimator enables QAT inside CastedLinear"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

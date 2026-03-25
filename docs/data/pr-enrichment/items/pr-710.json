@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-25T13:32:26.601Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 710,
+    "title": "Submission: 11L EMA + GPTQ-lite + Int6 (val_bpb: 1.1240)",
+    "state": "open",
+    "updatedAt": "2026-03-25T13:05:19Z",
+    "headSha": "b693c4fe59c47eb78fe52e94dfcc0448a6645b49",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/710",
+    "authorLogin": "Dhruba531"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_11L_EMA_Int6_GPTQ-lite_1.1240/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11-layer 512d transformer uses U-Net skips, partial XSA/RoPE, EMA+SWA+late QAT, and GPTQ-lite int6 quantization with Muon/AdamW training.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "optimizer",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "Standard training; no val-only regime.",
+    "techniques": [
+      "U-Net skip connections in the 11-layer design with partial XSA/RoPE",
+      "Late QAT plus GPTQ-lite per-row percentile clipping for int6",
+      "Muon/AdamW mix with EMA and tight SWA schedule"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

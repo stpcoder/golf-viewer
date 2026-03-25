@@ -1,25 +1,26 @@
 {
-  "generatedAt": "2026-03-25T13:01:38.189Z",
+  "generatedAt": "2026-03-25T13:32:35.740Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 709,
     "title": "Results of 2026-03-23_MixedQAT_Int5MLP_Int6Attn",
     "state": "open",
-    "updatedAt": "2026-03-25T13:00:26Z",
-    "headSha": "adde9caee1199a31f04b9b35c2f694a508f7548b",
+    "updatedAt": "2026-03-25T13:27:20Z",
+    "headSha": "29b506b7dd7681d6d15fc2d2040dc8bc090996f4",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/709",
     "authorLogin": "StolbaJ"
   },
   "inputs": {
-    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
     "readmePaths": [
-      "records/track_10min_16mb/2026-03-23_MixedQAT_Int5MLP_Int6Attn/README.md"
+      "records/track_10min_16mb/2026-03-23_MixedQAT_Int5MLP_Int6Attn/README.md",
+      "records/track_10min_16mb/2026-03-23_10L_LeakyReLU2_EMA_GPTQlite/README.md"
     ],
-    "submissionCount": 1
+    "submissionCount": 2
   },
   "output": {
-    "summary": "Applies mixed-precision QAT (int5 MLP, int6 attention/bigram) aligned to export ranges on the full SOTA stack.",
+    "summary": "Int5 MLP/int6 attention STE-based mixed-precision QAT from step zero atop the current SOTA stack aligns training with the post-training export quantization.",
     "tags": [
       "quantization",
       "mixed-precision"
@@ -27,9 +28,8 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "INT5 QAT for MLP with STE to simulate export noise",
-      "INT6 QAT for attention and bigram projection matching export clipping",
-      "Built atop full SOTA stack including SmearGate, BigramHash, Muon+SWA"
+      "Int5 MLP + int6 attention STE-based QAT",
+      "QAT clip ranges mirror the export quant scheme"
     ]
   },
   "compatibility": {

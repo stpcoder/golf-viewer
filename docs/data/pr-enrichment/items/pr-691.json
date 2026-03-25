@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-25T09:00:38.716Z",
+  "generatedAt": "2026-03-25T13:32:45.964Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 691,
-    "title": "PR #414 + 30-Epoch Cosine TTT (1.0988 BPB)",
+    "title": "11L EMA + GPTQ-lite + Legal Score-First TTT (1.1408 BPB)",
     "state": "open",
-    "updatedAt": "2026-03-25T08:44:00Z",
+    "updatedAt": "2026-03-25T13:05:00Z",
     "headSha": "787610be3db0453b2a12a5a99eebb78932f9d9e0",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/691",
     "authorLogin": "xexyz"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "The PR applies 30-epoch cosine Test-Time Training on the PR #414 stack after GPTQ-lite int6 quantization, then evaluates via stride-64 sliding windows.",
+    "summary": "Legal chunk-based score-first TTT scores each 32K validation chunk before three-epoch SGD training on the PR#414 GPTQ-lite stack.",
     "tags": [
       "val-only",
       "quantization",
-      "training-schedule",
-      "sliding-window-eval"
+      "optimizer",
+      "training-schedule"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "Performs Test-Time Training by fine-tuning on validation shards after quantization before final evaluation.",
+    "valOnlyReasoning": "Training is conducted exclusively on validation chunks after scoring them under the legal score-first TTT protocol.",
     "techniques": [
-      "Cosine-scheduled TTT on validation data with per-layer LR groups",
-      "SmearGate+GQA architecture with GPTQ-lite int6+zstd-22 compression",
-      "Stride-64 sliding-window eval post fine-tuning"
+      "Chunked score-first val-only TTT",
+      "32K-token chunks with SGD+cosine LR",
+      "GPTQ-lite int6 quantization"
     ]
   },
   "compatibility": {

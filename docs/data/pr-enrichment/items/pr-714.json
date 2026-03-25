@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-25T13:32:00.087Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 714,
+    "title": "Add 11L RotaryFix + LegalTTT + BIGRAM3072 — val_bpb 1.11869 (3-seed m…",
+    "state": "open",
+    "updatedAt": "2026-03-25T13:10:39Z",
+    "headSha": "191c2134d09d6277cd10b418181e9571a53589db",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/714",
+    "authorLogin": "Upsalla"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_11L_RotaryFix_LegalTTT_BIGRAM3072/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Rotary NTK-scaling now respects 2K seq length while BIGRAM-3072 with late QAT and Parallel Muon feeds Legal TTT scoring under torch.no_grad.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "optimizer",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Rotary NTK scaling uses the actual train_seq_len=2048",
+      "BIGRAM-3072 plus late (0.57) QAT threshold extends quantization adaptation",
+      "Legal TTT sliding-window scoring under torch.no_grad with Parallel Muon optimizer"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

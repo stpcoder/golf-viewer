@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-25T13:32:06.195Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 713,
+    "title": "Record: 10L + Batched LoRA TTT (mean val_bpb=1.1180, 3 seeds)",
+    "state": "open",
+    "updatedAt": "2026-03-25T13:10:04Z",
+    "headSha": "9b6ab5b0ce58fdc45fa284993f6d612ee454264f",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/713",
+    "authorLogin": "hypery11"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_10L_LoRA_TTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "10-layer GQA transformer with SmearGate/U-Net skips, mixed int5/int6 quantization, and batched per-document LoRA test-time training.",
+    "tags": [
+      "architecture",
+      "attention",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Batched rank-8 LoRA on Q/V+LM head per document with 64-way parallelism",
+      "Adam resets per document scoring only final epoch after 3 epochs on 256-token chunks",
+      "Mixed int5/int6 quantization paired with zstd-22 compression"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

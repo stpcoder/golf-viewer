@@ -1,16 +1,206 @@
 {
-  "generatedAt": "2026-03-25T13:02:13.364Z",
+  "generatedAt": "2026-03-25T13:32:53.847Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
+      "prNumber": 717,
+      "title": "Grant nonrecord tied blocks",
+      "status": "open",
+      "updatedAt": "2026-03-25T13:28:31Z",
+      "headSha": "37e9726064c26cb2cb1911edc33e772fa20d3435",
+      "generatedAt": "2026-03-25T13:31:44.786Z",
+      "summary": "Late-window INT8 fake quantization with partial-graph torch.compile and GQA attention drives this 1×H100 dev snapshot.",
+      "tags": [
+        "quantization",
+        "attention",
+        "mixed-precision",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-717.json"
+    },
+    {
+      "prNumber": 716,
+      "title": "Add non-record 4090 warmdown submission",
+      "status": "open",
+      "updatedAt": "2026-03-25T13:20:52Z",
+      "headSha": "f6a849b8d1e8ae61e4231f0a102ca08508901005",
+      "generatedAt": "2026-03-25T13:31:49.321Z",
+      "summary": "Compiled GPT training with LeakyReLU2 MLP, quarter-sized batch tokens, and extended 300-iter warmdown on a 4090 proxy to explore 16MB-viable submissions.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "quantization",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-716.json"
+    },
+    {
+      "prNumber": 715,
+      "title": "Record: XSA-all + LeakyReLU² + VR + GA + 7-gram cache (val_bpb=1.0337)",
+      "status": "open",
+      "updatedAt": "2026-03-25T13:10:46Z",
+      "headSha": "6ce7ee938a199fdcb0b23ead3bf65dda48e3ce81",
+      "generatedAt": "2026-03-25T13:31:54.419Z",
+      "summary": "11-layer XSA-all transformer blends LeakyReLU², gated/value-residual attention, and a deterministic 7-gram eval cache for richer context mixing.",
+      "tags": [
+        "architecture",
+        "attention",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-715.json"
+    },
+    {
+      "prNumber": 714,
+      "title": "Add 11L RotaryFix + LegalTTT + BIGRAM3072 — val_bpb 1.11869 (3-seed m…",
+      "status": "open",
+      "updatedAt": "2026-03-25T13:10:39Z",
+      "headSha": "191c2134d09d6277cd10b418181e9571a53589db",
+      "generatedAt": "2026-03-25T13:32:00.087Z",
+      "summary": "Rotary NTK-scaling now respects 2K seq length while BIGRAM-3072 with late QAT and Parallel Muon feeds Legal TTT scoring under torch.no_grad.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "optimizer",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-714.json"
+    },
+    {
+      "prNumber": 713,
+      "title": "Record: 10L + Batched LoRA TTT (mean val_bpb=1.1180, 3 seeds)",
+      "status": "open",
+      "updatedAt": "2026-03-25T13:10:04Z",
+      "headSha": "9b6ab5b0ce58fdc45fa284993f6d612ee454264f",
+      "generatedAt": "2026-03-25T13:32:06.195Z",
+      "summary": "10-layer GQA transformer with SmearGate/U-Net skips, mixed int5/int6 quantization, and batched per-document LoRA test-time training.",
+      "tags": [
+        "architecture",
+        "attention",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-713.json"
+    },
+    {
+      "prNumber": 712,
+      "title": "Submit 1x A100 QAT Fix - 1.4078 BPB (Non-Record) [v3]",
+      "status": "open",
+      "updatedAt": "2026-03-25T13:15:13Z",
+      "headSha": "952a8003f65c514db587c85c9645651b12c36082",
+      "generatedAt": "2026-03-25T13:32:11.486Z",
+      "summary": "Adapts a modded-nanogpt QAT loop to single-A100 limits by swapping torch.quantile for per-row amax clipping and downscaling the LR schedule to 2.6K steps.",
+      "tags": [
+        "quantization",
+        "training-schedule",
+        "optimizer",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-712.json"
+    },
+    {
+      "prNumber": 711,
+      "title": "Partitioned MoE + BigramHash + SlidingWindow + Int5/Int6 (Complexity-ML)",
+      "status": "open",
+      "updatedAt": "2026-03-25T13:27:49Z",
+      "headSha": "33333511ac12966be4083246167714dd7403684f",
+      "generatedAt": "2026-03-25T13:32:17.875Z",
+      "summary": "Partitioned MoE pairs per-layer hash routing, BigramHash embeddings, and sliding-window eval with mixed int5/int6 quantization for tight 10min/16MB runs.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-711.json"
+    },
+    {
+      "prNumber": 710,
+      "title": "Submission: 11L EMA + GPTQ-lite + Int6 (val_bpb: 1.1240)",
+      "status": "open",
+      "updatedAt": "2026-03-25T13:05:19Z",
+      "headSha": "b693c4fe59c47eb78fe52e94dfcc0448a6645b49",
+      "generatedAt": "2026-03-25T13:32:26.601Z",
+      "summary": "11-layer 512d transformer uses U-Net skips, partial XSA/RoPE, EMA+SWA+late QAT, and GPTQ-lite int6 quantization with Muon/AdamW training.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "optimizer",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-710.json"
+    },
+    {
       "prNumber": 709,
       "title": "Results of 2026-03-23_MixedQAT_Int5MLP_Int6Attn",
       "status": "open",
-      "updatedAt": "2026-03-25T13:00:26Z",
-      "headSha": "adde9caee1199a31f04b9b35c2f694a508f7548b",
-      "generatedAt": "2026-03-25T13:01:38.189Z",
-      "summary": "Applies mixed-precision QAT (int5 MLP, int6 attention/bigram) aligned to export ranges on the full SOTA stack.",
+      "updatedAt": "2026-03-25T13:27:20Z",
+      "headSha": "29b506b7dd7681d6d15fc2d2040dc8bc090996f4",
+      "generatedAt": "2026-03-25T13:32:35.740Z",
+      "summary": "Int5 MLP/int6 attention STE-based mixed-precision QAT from step zero atop the current SOTA stack aligns training with the post-training export quantization.",
       "tags": [
         "quantization",
         "mixed-precision"
@@ -24,30 +214,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-709.json"
-    },
-    {
-      "prNumber": 707,
-      "title": "Submit 1x A100 QAT Fix - 1.4078 BPB (Non-Record) [v2]",
-      "status": "open",
-      "updatedAt": "2026-03-25T12:46:36Z",
-      "headSha": "ea5049c30f6553d18211e69ab5797324a2b6bf56",
-      "generatedAt": "2026-03-25T13:01:41.832Z",
-      "summary": "Single-A100 QAT run resizes hyperparameters and swaps quantile for w.abs().amax-based clipping so CastedLinear fits the LR schedule without Triton penalties.",
-      "tags": [
-        "quantization",
-        "training-schedule",
-        "architecture",
-        "non-record"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-707.json"
     },
     {
       "prNumber": 706,
@@ -76,15 +242,15 @@
       "prNumber": 705,
       "title": "Byte-Level Tokenizer-Free Transformer: 1.2151 BPB (beats baseline 1.2244)",
       "status": "open",
-      "updatedAt": "2026-03-25T12:41:17Z",
-      "headSha": "8a8dc76070b990629b83b434b88a308e11d9224e",
-      "generatedAt": "2026-03-25T13:01:53.693Z",
-      "summary": "Tokenizer-free pure-attention transformer on raw UTF-8 bytes using LeakyReLU², SmearGate with hashed byte bigrams and U-Net-style skips.",
+      "updatedAt": "2026-03-25T13:25:12Z",
+      "headSha": "c574e8be200208720674776e7a433a2ff7526ed3",
+      "generatedAt": "2026-03-25T13:32:41.753Z",
+      "summary": "Tokenizer-free byte-level transformer uses SmearGate, hashed byte-bigram inputs, and U-Net skip connections plus sliding-window eval to beat the sp1024 baseline.",
       "tags": [
-        "tokenization",
         "architecture",
-        "attention",
-        "sliding-window-eval"
+        "tokenization",
+        "quantization",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -332,17 +498,17 @@
     },
     {
       "prNumber": 691,
-      "title": "PR #414 + 30-Epoch Cosine TTT (1.0988 BPB)",
+      "title": "11L EMA + GPTQ-lite + Legal Score-First TTT (1.1408 BPB)",
       "status": "open",
-      "updatedAt": "2026-03-25T08:44:00Z",
+      "updatedAt": "2026-03-25T13:05:00Z",
       "headSha": "787610be3db0453b2a12a5a99eebb78932f9d9e0",
-      "generatedAt": "2026-03-25T09:00:38.716Z",
-      "summary": "The PR applies 30-epoch cosine Test-Time Training on the PR #414 stack after GPTQ-lite int6 quantization, then evaluates via stride-64 sliding windows.",
+      "generatedAt": "2026-03-25T13:32:45.964Z",
+      "summary": "Legal chunk-based score-first TTT scores each 32K validation chunk before three-epoch SGD training on the PR#414 GPTQ-lite stack.",
       "tags": [
         "val-only",
         "quantization",
-        "training-schedule",
-        "sliding-window-eval"
+        "optimizer",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": true,
@@ -1171,15 +1337,14 @@
       "prNumber": 638,
       "title": "Record: 11L XSA-all + LeakyReLU(0.5)² + VR + GA (val_bpb=1.1164, pending 3-seed)",
       "status": "open",
-      "updatedAt": "2026-03-25T12:17:02Z",
-      "headSha": "c46eceef29ce8b53225e40a02d62c170250d3da3",
-      "generatedAt": "2026-03-25T12:31:33.751Z",
-      "summary": "11-layer GQA stack pairs XSA on every layer with LeakyReLU(0.5)^2, value residuals, gated attention, and int6 quantization to squeeze in under 16MB.",
+      "updatedAt": "2026-03-25T13:29:46Z",
+      "headSha": "7d65721d4a1c72ecd29c5c73cfd20018e1577e98",
+      "generatedAt": "2026-03-25T13:32:53.751Z",
+      "summary": "11-layer GQA stack adds XSA everywhere, LeakyReLU(0.5)^2, value-residual gated attention, and int6 quantization for compact non-TTT record runs.",
       "tags": [
         "architecture",
-        "attention",
         "quantization",
-        "evaluation"
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,
@@ -8183,29 +8348,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-225.json"
-    },
-    {
-      "prNumber": 224,
-      "title": "Complexity MoE + PID Dynamics (Token-Routed I64)",
-      "status": "open",
-      "updatedAt": "2026-03-20T18:34:49Z",
-      "headSha": "2b4ff01a0e28dbeebed594917bb845f65ee7ca15",
-      "generatedAt": "2026-03-25T13:02:13.333Z",
-      "summary": "Deterministic token-routed 4-expert MoE with PID-hidden dynamics, SwiGLU activations, and cosine warm restarts for stable under-16MB training.",
-      "tags": [
-        "architecture",
-        "training-schedule",
-        "regularization"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-224.json"
     },
     {
       "prNumber": 223,
