@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-03-25T15:01:52.901Z",
+  "generatedAt": "2026-03-25T15:32:08.704Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "counts": {
-    "submissions": 565,
+    "submissions": 569,
     "official": 1,
-    "openPr": 448,
+    "openPr": 451,
     "mergedPr": 21,
-    "closedPr": 95,
-    "prBacked": 565,
+    "closedPr": 96,
+    "prBacked": 569,
     "readmeListed": 20,
-    "collectorErrors": 0
+    "collectorErrors": 1
   },
   "best": {
     "officialMainTrack": {
@@ -148,7 +148,7 @@
         "authorLogin": "raahilg",
         "authorName": null,
         "createdAt": "2026-03-25T00:23:35Z",
-        "updatedAt": "2026-03-25T00:23:35Z",
+        "updatedAt": "2026-03-25T15:27:52Z",
         "headSha": "1a6118bdb0f0608decfcc6dfed56571c318c0b27",
         "headRepo": "raahilg/parameter-golf"
       },

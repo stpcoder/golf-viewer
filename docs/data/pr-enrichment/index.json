@@ -1,21 +1,111 @@
 {
-  "generatedAt": "2026-03-25T15:02:25.518Z",
+  "generatedAt": "2026-03-25T15:33:24.042Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
-      "prNumber": 727,
-      "title": "Record: Multi-order N-gram Backoff + Entropy-Adaptive Alpha (val_bpb=0.9674)",
+      "prNumber": 734,
+      "title": "Non-record: Full GPTQ + XSA-4 + Score-First TTT (3-seed mean 1.1198)",
       "status": "open",
-      "updatedAt": "2026-03-25T14:58:23Z",
-      "headSha": "091afd7b00f5d1beb759496ec51e17caee1828b7",
-      "generatedAt": "2026-03-25T15:02:02.479Z",
-      "summary": "11-layer GQA LM uses eval-time multi-order n-gram cache with entropy-adaptive alpha to balance neural logits and historical statistics.",
+      "updatedAt": "2026-03-25T15:24:50Z",
+      "headSha": "281a26e10733e564da0aaf1b9384b192930de79b",
+      "generatedAt": "2026-03-25T15:32:15.813Z",
+      "summary": "Combines Hessian-aware GPTQ, cross-sequence attention on late layers, and SWA/EMA blending before score-first TTT adaptation.",
+      "tags": [
+        "quantization",
+        "attention",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-734.json"
+    },
+    {
+      "prNumber": 733,
+      "title": "Record: XSA-all + Depth Recurrence + Hedge Mixer TTT (val_bpb=1.0278, 3-seed mean)",
+      "status": "closed",
+      "updatedAt": "2026-03-25T15:27:03Z",
+      "headSha": "cada1c8a02cb8ccbaa2c1613146f1988688d2b48",
+      "generatedAt": "2026-03-25T15:32:21.365Z",
+      "summary": "Applies XSA everywhere along with value residuals, depth recurrence, and CROWN-Q while using Hedge Mixer score-first TTT scoring.",
+      "tags": [
+        "attention",
+        "architecture",
+        "training-schedule",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-733.json"
+    },
+    {
+      "prNumber": 731,
+      "title": "Record: 1.0400 BPB -- Hedge Mixer + VRL + AdamW TTT + Polyak EMA",
+      "status": "open",
+      "updatedAt": "2026-03-25T15:15:24Z",
+      "headSha": "6cff4df0d716a65f25466ed05c088fc78141a63c",
+      "generatedAt": "2026-03-25T15:32:27.648Z",
+      "summary": "11-layer VRL transformer applies AdamW+Polyak EMA test-time training with a deferred Hedge Mixer blending neural logits and hashed n-gram experts under score-first rules.",
       "tags": [
         "architecture",
-        "attention",
+        "training-schedule",
         "evaluation",
         "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-731.json"
+    },
+    {
+      "prNumber": 728,
+      "title": "Record: Val-Calibrated GPTQ + XSA-all + BigramHash 3072×112",
+      "status": "open",
+      "updatedAt": "2026-03-25T15:15:07Z",
+      "headSha": "713bb3fcd9017ba01d104723b3f873201976bab8",
+      "generatedAt": "2026-03-25T15:32:35.043Z",
+      "summary": "Adapts the XSA-all stack with Full Hessian GPTQ calibrated on validation shards plus a BigramHash 3072×112 table to stay legal under the eval rules.",
+      "tags": [
+        "architecture",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-728.json"
+    },
+    {
+      "prNumber": 727,
+      "title": "Record: First Legal Sub-1.0 BPB — Multi-order N-gram Backoff + Entropy-Adaptive Alpha (val_bpb=0.9674, 3-seed)",
+      "status": "open",
+      "updatedAt": "2026-03-25T15:17:52Z",
+      "headSha": "091afd7b00f5d1beb759496ec51e17caee1828b7",
+      "generatedAt": "2026-03-25T15:32:48.642Z",
+      "summary": "Eval-time n-gram cache uses 2–7 order backoff with entropy-adaptive interpolation to augment logits from the 11-layer GQA LM.",
+      "tags": [
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -359,14 +449,13 @@
       "prNumber": 709,
       "title": "Results of 2026-03-23_MixedQAT_Int5MLP_Int6Attn",
       "status": "open",
-      "updatedAt": "2026-03-25T14:22:56Z",
-      "headSha": "37df2d5310e0d5fab12f1644c37e5c7cc46d1c45",
-      "generatedAt": "2026-03-25T14:32:01.940Z",
-      "summary": "Applies mixed-precision QAT (int5 MLP, int6 attention/bigram) with STE clip ranges matching export quant, on the BigramHash+SmearGate SOTA stack.",
+      "updatedAt": "2026-03-25T15:24:00Z",
+      "headSha": "490bc6ee6c49d678d2d9a7d8718e60aa74449d3d",
+      "generatedAt": "2026-03-25T15:32:56.406Z",
+      "summary": "Runs mixed int5/int6 STE QAT from step 0 on top of the full SOTA stack to align training with the export quantization scheme.",
       "tags": [
         "quantization",
-        "mixed-precision",
-        "architecture"
+        "mixed-precision"
       ],
       "flags": {
         "usesValOnly": false,
@@ -475,10 +564,10 @@
       "prNumber": 702,
       "title": "Record: 1.0240 BPB — Multi-Order N-gram Backoff + Entropy-Adaptive Alpha (100% autonomous research via goldfish)",
       "status": "open",
-      "updatedAt": "2026-03-25T11:56:53Z",
+      "updatedAt": "2026-03-25T15:23:31Z",
       "headSha": "e165ee590d59a68aa4223c41e92c54dda2783419",
-      "generatedAt": "2026-03-25T12:01:31.868Z",
-      "summary": "Multi-order n-gram cache backs off through 2-5 grams and blends with entropy-weighted mixing during sliding eval atop the Soft-Round+GPTQ quantized LM.",
+      "generatedAt": "2026-03-25T15:33:04.153Z",
+      "summary": "Eval-time multi-order n-gram cache with entropy-adaptive mixing augments Soft-Round QAT/GPTQ 11-layer transformer outputs for scoring.",
       "tags": [
         "evaluation",
         "quantization"
@@ -711,12 +800,14 @@
       "prNumber": 686,
       "title": "Record:  Depth Recurrence (layers 4 and 5 repeated): val_bpb 1.1182",
       "status": "open",
-      "updatedAt": "2026-03-25T11:59:52Z",
-      "headSha": "f5b9631ef32865ba3bf7f9c1a770242c90816fce",
-      "generatedAt": "2026-03-25T12:01:47.428Z",
-      "summary": "Depth recurrence replays layers 4 and 5 with per-block scalars to emulate 13 virtual layers while keeping the artifact under 16MB alongside inherited TTT/SWA stack.",
+      "updatedAt": "2026-03-25T15:28:40Z",
+      "headSha": "3162c39ca919a9f8fc9057efc3380ed03aecd0d4",
+      "generatedAt": "2026-03-25T15:33:11.551Z",
+      "summary": "Dual depth recurrence reruns layers 4/5 with block scalars to mimic extra depth under budget while leveraging TTT and int6 compression.",
       "tags": [
         "architecture",
+        "training-schedule",
+        "quantization",
         "evaluation"
       ],
       "flags": {
@@ -1130,14 +1221,13 @@
       "prNumber": 663,
       "title": "V18 Manifold-Guided Architecture — val_bpb 0.434",
       "status": "open",
-      "updatedAt": "2026-03-25T00:23:35Z",
+      "updatedAt": "2026-03-25T15:27:52Z",
       "headSha": "1a6118bdb0f0608decfcc6dfed56571c318c0b27",
-      "generatedAt": "2026-03-25T00:28:00.211Z",
-      "summary": "Physics-precomputed token manifold feeds sparsemax-routed 4-hop GNN message passing so the model only navigates fixed geometry, not building it.",
+      "generatedAt": "2026-03-25T15:33:16.554Z",
+      "summary": "Precompute a physics-simulated token manifold and run GNN-style sparsemax message passing over spectral coords so the model only navigates the graph.",
       "tags": [
         "architecture",
         "attention",
-        "quantization",
         "training-schedule"
       ],
       "flags": {
@@ -2086,14 +2176,14 @@
       "prNumber": 604,
       "title": "GolfStudent v2 14L: d=352, Value Residuals, GPTQ-lite, Schedule-Free, Muon+EMA",
       "status": "open",
-      "updatedAt": "2026-03-25T14:54:58Z",
-      "headSha": "8bdeef022b36c2d70e25fb745f37fab9bb68a5ca",
-      "generatedAt": "2026-03-25T15:02:25.428Z",
-      "summary": "14-layer hybrid (10 gated MLP, 4 attention) with value residual skip gates, GPTQ-lite INT8+zlib, Muon+EMA, and schedule-free final phase.",
+      "updatedAt": "2026-03-25T15:21:31Z",
+      "headSha": "bc96740ca8b21250c358321c5ed7205f03437a82",
+      "generatedAt": "2026-03-25T15:33:23.950Z",
+      "summary": "GolfStudent v2 builds a 14-layer d=352 GatedMLP/attention stack with value-residual skips, Muon+EMA training, and a schedule-free final phase before GPTQ-lite quantization.",
       "tags": [
         "architecture",
+        "optimizer",
         "quantization",
-        "muon",
         "training-schedule"
       ],
       "flags": {

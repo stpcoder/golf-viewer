@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-25T00:28:00.211Z",
+  "generatedAt": "2026-03-25T15:33:16.554Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 663,
     "title": "V18 Manifold-Guided Architecture — val_bpb 0.434",
     "state": "open",
-    "updatedAt": "2026-03-25T00:23:35Z",
+    "updatedAt": "2026-03-25T15:27:52Z",
     "headSha": "1a6118bdb0f0608decfcc6dfed56571c318c0b27",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/663",
     "authorLogin": "raahilg"
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Physics-precomputed token manifold feeds sparsemax-routed 4-hop GNN message passing so the model only navigates fixed geometry, not building it.",
+    "summary": "Precompute a physics-simulated token manifold and run GNN-style sparsemax message passing over spectral coords so the model only navigates the graph.",
     "tags": [
       "architecture",
       "attention",
-      "quantization",
       "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Physics-simulated Hessian spectral token coordinates",
-      "Sparsemax routing with manifold-guided 4-hop message passing",
-      "EMA snapshots with cosine-decay-plus-hold LR schedule"
+      "precomputed physics-simulated token manifold",
+      "GNN-style sparsemax geodesic message passing",
+      "spectral-coordinate-conditioned attention"
     ]
   },
   "compatibility": {

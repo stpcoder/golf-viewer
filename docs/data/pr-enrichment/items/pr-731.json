@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-25T15:32:27.648Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 731,
+    "title": "Record: 1.0400 BPB -- Hedge Mixer + VRL + AdamW TTT + Polyak EMA",
+    "state": "open",
+    "updatedAt": "2026-03-25T15:15:24Z",
+    "headSha": "6cff4df0d716a65f25466ed05c088fc78141a63c",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/731",
+    "authorLogin": "pentxayc"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_HedgeMixer_VRL_AdamWTTT_1.0400/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11-layer VRL transformer applies AdamW+Polyak EMA test-time training with a deferred Hedge Mixer blending neural logits and hashed n-gram experts under score-first rules.",
+    "tags": [
+      "architecture",
+      "training-schedule",
+      "evaluation",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "VRL-enhanced transformer with LeakyReLU² and XSA-4",
+      "AdamW TTT with Polyak EMA, byte-weighted loss, and frozen early blocks",
+      "Deferred score-first Hedge Mixer over neural and n-gram experts"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-25T15:32:35.043Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 728,
+    "title": "Record: Val-Calibrated GPTQ + XSA-all + BigramHash 3072×112",
+    "state": "open",
+    "updatedAt": "2026-03-25T15:15:07Z",
+    "headSha": "713bb3fcd9017ba01d104723b3f873201976bab8",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/728",
+    "authorLogin": "abaybektursun"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_ValCalib_GPTQ_XSA_BigramHash3072/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Adapts the XSA-all stack with Full Hessian GPTQ calibrated on validation shards plus a BigramHash 3072×112 table to stay legal under the eval rules.",
+    "tags": [
+      "architecture",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "Validation shards only supply read-only GPTQ calibration; no training occurs solely on validation data.",
+    "techniques": [
+      "Val-only GPTQ calibration via validation shard loader",
+      "BigramHash 3072×112 expansion within the 16MB budget",
+      "XSA-all + Full GPTQ + selective pruning quant stack"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

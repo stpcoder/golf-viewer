@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-25T15:32:21.365Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 733,
+    "title": "Record: XSA-all + Depth Recurrence + Hedge Mixer TTT (val_bpb=1.0278, 3-seed mean)",
+    "state": "closed",
+    "updatedAt": "2026-03-25T15:27:03Z",
+    "headSha": "cada1c8a02cb8ccbaa2c1613146f1988688d2b48",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/733",
+    "authorLogin": "stukenov"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_v4_XSA11_VRL_CROWNQ_DepthRecur_HedgeMixer_TTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Applies XSA everywhere along with value residuals, depth recurrence, and CROWN-Q while using Hedge Mixer score-first TTT scoring.",
+    "tags": [
+      "attention",
+      "architecture",
+      "training-schedule",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "- Depth recurrence creates 13 virtual layers for richer modeling",
+      "- CROWN-Q curvature-aware regularization before int6 quant",
+      "- GPU Hedge Mixer blends neural and n-gram experts during score-first TTT"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

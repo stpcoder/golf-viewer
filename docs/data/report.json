@@ -1,20 +1,32 @@
 {
-  "generatedAt": "2026-03-25T15:01:27.501Z",
+  "generatedAt": "2026-03-25T15:31:31.971Z",
   "sourceRepo": "openai/parameter-golf",
   "siteRoot": null,
   "tokenConfigured": true,
-  "skipped": [],
-  "errors": [],
+  "skipped": [
+    {
+      "pr": 730,
+      "reason": "no-record-submission-json"
+    }
+  ],
+  "errors": [
+    {
+      "stage": "pull-request-file",
+      "pr": 679,
+      "filename": "records/track_non_record_16mb/2026-03-18_ASQU_MoC_BankedLinear/submission.json",
+      "message": "Expected double-quoted property name in JSON at position 491 (line 14 column 1)"
+    }
+  ],
   "incremental": {
     "mode": "incremental",
-    "cutoffUpdatedAt": "2026-03-25T14:31:13Z",
+    "cutoffUpdatedAt": "2026-03-25T14:58:23Z",
     "pagesScanned": 2,
     "prsScanned": 200,
-    "prsRefreshed": 5,
-    "prsReused": 195,
+    "prsRefreshed": 12,
+    "prsReused": 188,
     "stoppedEarly": true,
     "refreshFailures": 0,
-    "cacheEntries": 698,
+    "cacheEntries": 703,
     "retryWindowRetained": false
   }
 }

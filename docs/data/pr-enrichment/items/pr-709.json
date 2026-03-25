@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-25T14:32:01.940Z",
+  "generatedAt": "2026-03-25T15:32:56.406Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 709,
     "title": "Results of 2026-03-23_MixedQAT_Int5MLP_Int6Attn",
     "state": "open",
-    "updatedAt": "2026-03-25T14:22:56Z",
-    "headSha": "37df2d5310e0d5fab12f1644c37e5c7cc46d1c45",
+    "updatedAt": "2026-03-25T15:24:00Z",
+    "headSha": "490bc6ee6c49d678d2d9a7d8718e60aa74449d3d",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/709",
     "authorLogin": "StolbaJ"
   },
@@ -21,18 +21,17 @@
     "submissionCount": 3
   },
   "output": {
-    "summary": "Applies mixed-precision QAT (int5 MLP, int6 attention/bigram) with STE clip ranges matching export quant, on the BigramHash+SmearGate SOTA stack.",
+    "summary": "Runs mixed int5/int6 STE QAT from step 0 on top of the full SOTA stack to align training with the export quantization scheme.",
     "tags": [
       "quantization",
-      "mixed-precision",
-      "architecture"
+      "mixed-precision"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "STE with export-matched clip ranges",
-      "Mixed int5/int6 QAT across MLP and attention",
-      "SOTA BigramHash+SmearGate architecture"
+      "Mixed int5/int6 STE QAT with export-matching clip ranges",
+      "Full SOTA stack base (SmearGate, BigramHash, Muon+SWA)",
+      "QAT enabled from step 0 to shrink train/export gap"
     ]
   },
   "compatibility": {
