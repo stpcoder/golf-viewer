@@ -1,8 +1,141 @@
 {
-  "generatedAt": "2026-03-26T16:41:40.029Z",
+  "generatedAt": "2026-03-26T17:42:55.112Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 874,
+      "title": "Non-record: Random Linear Maps + Learned Adapters (val_bpb=1.607, 1.92MB artifact)",
+      "status": "open",
+      "updatedAt": "2026-03-26T17:23:09Z",
+      "headSha": "a0e74550512d3306d6ba12afa8a42549c4333b76",
+      "generatedAt": "2026-03-26T17:41:20.746Z",
+      "summary": "Use seeded random base matrices plus rank-16 adapters per projection so only 11% of weights are learned and stored.",
+      "tags": [
+        "architecture",
+        "compression",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-874.json"
+    },
+    {
+      "prNumber": 873,
+      "title": "E2E TTT: End-to-End Test-Time Training with Meta-Learning (1.0467 BPB)",
+      "status": "open",
+      "updatedAt": "2026-03-26T17:21:26Z",
+      "headSha": "d2c823a23648916f5f6808f1ed50e2afa53900df",
+      "generatedAt": "2026-03-26T17:41:24.936Z",
+      "summary": "Applies MAML-style meta-learning in the final 20% of training so the Transformer learns weights optimized for test-time adaptation.",
+      "tags": [
+        "training-schedule",
+        "optimizer",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-873.json"
+    },
+    {
+      "prNumber": 870,
+      "title": "Record: BROADSIDE — Full-Rescore N-gram Cache (val_bpb 0.0935)",
+      "status": "open",
+      "updatedAt": "2026-03-26T17:07:34Z",
+      "headSha": "21b493b8d57fc5eb87e8fa7f91cfc05d57dae449",
+      "generatedAt": "2026-03-26T17:41:35.020Z",
+      "summary": "Decoupled sliding-window eval to store logits, vectorized build of the full n-gram cache, then pure-CPU rescore of every token with entropy-adaptive blending.",
+      "tags": [
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-870.json"
+    },
+    {
+      "prNumber": 869,
+      "title": "Record: N-gram Two-Pass Score-First Evaluation (0.1290 BPB)",
+      "status": "open",
+      "updatedAt": "2026-03-26T16:59:47Z",
+      "headSha": "7b04ed42ec55a83c9f10a33921edbb6ac54e14d1",
+      "generatedAt": "2026-03-26T17:41:41.408Z",
+      "summary": "Score-first two-pass n-gram evaluation warms a 62M-token cache so every token sees full corpus statistics before mixing with an int5 neural model.",
+      "tags": [
+        "evaluation",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-869.json"
+    },
+    {
+      "prNumber": 868,
+      "title": "Record: Budgeted Two-Pass N-gram Backoff — val_bpb 0.11814796 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-03-26T17:05:11Z",
+      "headSha": "4ef9abf6631f13d9781d1fb91b3444dd4e2d63cc",
+      "generatedAt": "2026-03-26T17:41:47.030Z",
+      "summary": "Budgeted two-pass tuner auto-caps chunk rescoring to keep an order-12 weighted N-gram backoff score-first eval within the 10-minute innovation envelope.",
+      "tags": [
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-868.json"
+    },
+    {
+      "prNumber": 866,
+      "title": "Claude/peaceful mclean",
+      "status": "closed",
+      "updatedAt": "2026-03-26T16:39:53Z",
+      "headSha": "902f42a6ada93e956735ab4416b757ab948c8cf4",
+      "generatedAt": "2026-03-26T17:41:52.879Z",
+      "summary": "Uses dual surprise-gated LoRA and in-place TTT on an 11-layer hashed/Value-Residual stack with LeakyReLU^2 and full GPTQ quantization.",
+      "tags": [
+        "training-schedule",
+        "quantization",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-866.json"
+    },
     {
       "prNumber": 865,
       "title": "Record: 11L Parallel Muon + N-gram Backoff Cache — val_bpb 0.2841 (3-seed mean)",
@@ -27,42 +160,17 @@
       "file": "items/pr-865.json"
     },
     {
-      "prNumber": 863,
-      "title": "v10 moonshot: ternary MLP quant + scaled model + hedge mixer + enhanced n-gram",
-      "status": "open",
-      "updatedAt": "2026-03-26T16:22:12Z",
-      "headSha": "7341e5f17dc69a7139cce516bd85d124342d39d0",
-      "generatedAt": "2026-03-26T16:40:55.224Z",
-      "summary": "Hedge Mixer, add-delta n-gram smoothing, and ternary/int4/int6 quant let the 42M-param moonshot model fit under 16MB while boosting generalization.",
-      "tags": [
-        "quantization",
-        "architecture",
-        "compression",
-        "regularization"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-863.json"
-    },
-    {
       "prNumber": 862,
       "title": "RECORD: Denseformer+VRL+XSA on last 4 layers+Gradient Clipping (pending 8xH100 eval)",
       "status": "open",
-      "updatedAt": "2026-03-26T16:24:33Z",
+      "updatedAt": "2026-03-26T17:23:51Z",
       "headSha": "78c324119bf844ac1e6bb57c9ef8695e414c96c2",
-      "generatedAt": "2026-03-26T16:40:59.821Z",
-      "summary": "Combines DenseFormer depth-weighted pooling, LeakyReLU(0.5)², VRL value blending, last-4-layer XSA, and gradient clipping to stabilize cross-layer attention.",
+      "generatedAt": "2026-03-26T17:41:56.855Z",
+      "summary": "Adds DenseFormer depth-weighting, Value Residual Learning, LeakyReLU(0.5)^2, XSA on final layers, and gradient clipping to stabilize GPT training.",
       "tags": [
         "architecture",
         "attention",
-        "regularization",
-        "training-schedule"
+        "regularization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -102,14 +210,15 @@
       "prNumber": 860,
       "title": "Learned Routing + Two-Pass N-gram Rescoring + Extended Orders (2-12)",
       "status": "open",
-      "updatedAt": "2026-03-26T16:39:30Z",
+      "updatedAt": "2026-03-26T16:42:55Z",
       "headSha": "23c9f2609f4906c48ad7aa3a9c152fad3fc74fb5",
-      "generatedAt": "2026-03-26T16:41:03.984Z",
-      "summary": "Combines a learned Linear(512→12) routing head with two-pass cold-cache rescoring and extended 2-12 n-gram orders plus larger hash tables for the mixer.",
+      "generatedAt": "2026-03-26T17:42:01.869Z",
+      "summary": "Unified learned routing head, two-pass cold-cache rescoring, and expanded n-gram orders with depth recurrence-inspired shared blocks to boost eval fidelity.",
       "tags": [
         "architecture",
+        "quantization",
         "evaluation",
-        "training-schedule"
+        "attention"
       ],
       "flags": {
         "usesValOnly": false,
@@ -381,13 +490,13 @@
       "prNumber": 846,
       "title": "Record: Two-Pass N-gram Rescoring (val_bpb 0.1434)",
       "status": "open",
-      "updatedAt": "2026-03-26T16:22:46Z",
+      "updatedAt": "2026-03-26T16:43:49Z",
       "headSha": "e4cea2ccf12853e4b8dbca827216211a68d18311",
-      "generatedAt": "2026-03-26T16:41:10.867Z",
-      "summary": "Two-pass eval rescores early chunks with the completed n-gram cache atop GPTQ-Int5 + score-first TTT to erase cold-cache BPB while staying within the budget.",
+      "generatedAt": "2026-03-26T17:42:07.335Z",
+      "summary": "Two-pass n-gram eval rescoring early chunks with the full cache on a Score-first TTT + GPTQ-Int5 pipeline to erase the cold-start penalty.",
       "tags": [
-        "evaluation",
         "quantization",
+        "evaluation",
         "optimizer"
       ],
       "flags": {
@@ -820,12 +929,11 @@
       "prNumber": 814,
       "title": "Record: X-WING 3D Cubric + Complementary Training (val_bpb=0.4820)",
       "status": "open",
-      "updatedAt": "2026-03-26T06:52:11Z",
-      "headSha": "3ebaf383d0f8f6eebb13951d758b3c2e29c34d62",
-      "generatedAt": "2026-03-26T07:07:26.881Z",
-      "summary": "Chunk-shared n-gram tables drive a transformer whose 3D cubric alpha multipliers (warm-started) combine with complementary training reweighting to rebalance n-gram mixing.",
+      "updatedAt": "2026-03-26T17:27:02Z",
+      "headSha": "88ec4cabaed7359a754f2f68e4874812e0f98d9c",
+      "generatedAt": "2026-03-26T17:42:13.858Z",
+      "summary": "Chunk-shared n-gram tables feed 3D cubric multipliers and complementary training to adaptively weight order/entropy regimes before mixing with neural outputs.",
       "tags": [
-        "architecture",
         "evaluation",
         "regularization"
       ],
@@ -1118,14 +1226,14 @@
       "prNumber": 801,
       "title": "Non-Record: Training on the Apple Neural Engine",
       "status": "open",
-      "updatedAt": "2026-03-26T03:23:25Z",
+      "updatedAt": "2026-03-26T16:58:57Z",
       "headSha": "23b27bb5b2c1deb2c97ccac31ec2fb70a74da1fb",
-      "generatedAt": "2026-03-26T03:36:44.498Z",
-      "summary": "Reverse-engineered ANE dispatch runs GolfWide matmuls/backward activations on the Apple Neural Engine while CPU handles grads and optimizer updates.",
+      "generatedAt": "2026-03-26T17:42:21.727Z",
+      "summary": "Runs GolfWide transformer matmuls and activation grads on the Apple Neural Engine via reverse-engineered MIL kernels while CPU handles masks, gradients, and optimizer.",
       "tags": [
-        "non-record",
         "architecture",
-        "evaluation"
+        "evaluation",
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1643,6 +1751,29 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-773.json"
+    },
+    {
+      "prNumber": 771,
+      "title": "Record: AdamW TTT 30ep Cosine + Per-Layer LR (val_bpb: 1.0705)",
+      "status": "open",
+      "updatedAt": "2026-03-26T00:15:45Z",
+      "headSha": "318b9cc499e6eb9e2d39a4665470d68e54574e32",
+      "generatedAt": "2026-03-26T17:42:26.788Z",
+      "summary": "Whole-validation AdamW TTT (30ep cosine decay, per-layer LRs) adapts the PR #549 base before sliding-window scoring.",
+      "tags": [
+        "val-only",
+        "optimizer",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": false
+      },
+      "file": "items/pr-771.json"
     },
     {
       "prNumber": 770,
@@ -2251,14 +2382,15 @@
       "prNumber": 728,
       "title": "Record: Val-Calibrated GPTQ + XSA-all + BigramHash 3072×112 — val_bpb 1.1142 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-26T16:35:53Z",
+      "updatedAt": "2026-03-26T17:05:50Z",
       "headSha": "713bb3fcd9017ba01d104723b3f873201976bab8",
-      "generatedAt": "2026-03-26T16:41:39.918Z",
-      "summary": "XSA-all 11L stack uses BigramHash 3072×112 and val-data Full Hessian GPTQ calibration to quantize int6 without touching train shards.",
+      "generatedAt": "2026-03-26T17:42:32.136Z",
+      "summary": "XSA-all + Full GPTQ stack swaps calibration to validation shards while widening BigramHash (3072×112) under 16MB for tighter int6 rounding.",
       "tags": [
         "quantization",
         "architecture",
-        "attention"
+        "attention",
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,
@@ -3109,10 +3241,10 @@
       "prNumber": 675,
       "title": "Non-record: LeakyReLU² + LAWA + Ramping WD + Val Training (val_bpb=1.2302, 1xH100)",
       "status": "open",
-      "updatedAt": "2026-03-25T20:13:29Z",
-      "headSha": "67a71d68edf78773742f924beb0ea865dac3f1f7",
-      "generatedAt": "2026-03-25T20:34:19.139Z",
-      "summary": "Stacks LeakyReLU², LAWA averaging, ramped WD warmdown, lzma compression, and validation-set training on the 10-layer baseline model.",
+      "updatedAt": "2026-03-26T17:35:11Z",
+      "headSha": "4d3f2e5eda96ead2e9f2506b83deca0048b10ffa",
+      "generatedAt": "2026-03-26T17:42:45.771Z",
+      "summary": "Stacked LeakyReLU² baseline with LAWA averaging, lzma compression, ramped WD, and val-set training on 1xH100 for a compact leaderboard entry.",
       "tags": [
         "val-only",
         "compression",
@@ -3952,15 +4084,15 @@
       "prNumber": 619,
       "title": "non-record 16MB A100 SXM run (10L mixed int5/int6 + EMA + QAT)",
       "status": "open",
-      "updatedAt": "2026-03-25T04:25:44Z",
-      "headSha": "ed68090dfb54e2ebc8ed8b7b15d7fe9974ed0c54",
-      "generatedAt": "2026-03-25T04:29:09.068Z",
-      "summary": "10-layer Transformer mixes int5/int6 quant for MLP vs attention, adds EMA exports with final-fraction QAT, and leverages BigramHash on 1xA100 SXM.",
+      "updatedAt": "2026-03-26T17:23:44Z",
+      "headSha": "90b1916b401c1a6a46fee34f150d6328aac8fe27",
+      "generatedAt": "2026-03-26T17:42:55.020Z",
+      "summary": "10-layer GPT uses mixed int5/int6 quantization with EMA-exported weights and late-stage QAT plus bigram hashing for a 16MB SXM run.",
       "tags": [
         "quantization",
-        "architecture",
-        "training-schedule",
-        "tokenization"
+        "tokenization",
+        "regularization",
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,

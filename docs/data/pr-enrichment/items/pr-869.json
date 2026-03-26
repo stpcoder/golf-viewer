@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-26T17:41:41.408Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 869,
+    "title": "Record: N-gram Two-Pass Score-First Evaluation (0.1290 BPB)",
+    "state": "open",
+    "updatedAt": "2026-03-26T16:59:47Z",
+    "headSha": "7b04ed42ec55a83c9f10a33921edbb6ac54e14d1",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/869",
+    "authorLogin": "THUQiXuan"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-26_NGram2Pass_0.1294/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Score-first two-pass n-gram evaluation warms a 62M-token cache so every token sees full corpus statistics before mixing with an int5 neural model.",
+    "tags": [
+      "evaluation",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "score-first two-pass n-gram cache build",
+      "OAEG gating between neural and n-gram logits",
+      "stride=64 halves forward passes while keeping 2048-token context"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

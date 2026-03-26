@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-26T16:41:03.984Z",
+  "generatedAt": "2026-03-26T17:42:01.869Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 860,
     "title": "Learned Routing + Two-Pass N-gram Rescoring + Extended Orders (2-12)",
     "state": "open",
-    "updatedAt": "2026-03-26T16:39:30Z",
+    "updatedAt": "2026-03-26T16:42:55Z",
     "headSha": "23c9f2609f4906c48ad7aa3a9c152fad3fc74fb5",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/860",
     "authorLogin": "pappanick"
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines a learned Linear(512→12) routing head with two-pass cold-cache rescoring and extended 2-12 n-gram orders plus larger hash tables for the mixer.",
+    "summary": "Unified learned routing head, two-pass cold-cache rescoring, and expanded n-gram orders with depth recurrence-inspired shared blocks to boost eval fidelity.",
     "tags": [
       "architecture",
+      "quantization",
       "evaluation",
-      "training-schedule"
+      "attention"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Learned Linear(512,12) routing mixing neural expert with 11 n-gram orders",
-      "Two-pass cold-cache rescoring for the first 15 chunks after cache build-up",
-      "Extended 2-12 n-gram orders with 8M hash buckets and per-order min_count thresholds"
+      "Learned routing head mixing neural expert with n-gram orders during eval",
+      "Two-pass cold-cache rescoring over first 15 chunks with fixed caches",
+      "Expanded 2-12 n-gram orders plus depth recurrence weight sharing before untie"
     ]
   },
   "compatibility": {

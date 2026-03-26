@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-26T03:36:44.498Z",
+  "generatedAt": "2026-03-26T17:42:21.727Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 801,
     "title": "Non-Record: Training on the Apple Neural Engine",
     "state": "open",
-    "updatedAt": "2026-03-26T03:23:25Z",
+    "updatedAt": "2026-03-26T16:58:57Z",
     "headSha": "23b27bb5b2c1deb2c97ccac31ec2fb70a74da1fb",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/801",
     "authorLogin": "garindean"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Reverse-engineered ANE dispatch runs GolfWide matmuls/backward activations on the Apple Neural Engine while CPU handles grads and optimizer updates.",
+    "summary": "Runs GolfWide transformer matmuls and activation grads on the Apple Neural Engine via reverse-engineered MIL kernels while CPU handles masks, gradients, and optimizer.",
     "tags": [
-      "non-record",
       "architecture",
-      "evaluation"
+      "evaluation",
+      "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Reverse-engineered private ANE APIs for transformer matmul and activation-derivative offload",
-      "GolfWide 9L dim512 SwiGLU stack with DeepNet residual scaling",
-      "Sliding-window eval with stride 64 via reusable artifact"
+      "Reverse-engineered MIL kernels for ANE matmuls",
+      "CPU handles causal masking, weight gradients, and Adam updates",
+      "IOSurface staging lets compiled kernels reuse weights without recompiles"
     ]
   },
   "compatibility": {

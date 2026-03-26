@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-26T17:41:24.936Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 873,
+    "title": "E2E TTT: End-to-End Test-Time Training with Meta-Learning (1.0467 BPB)",
+    "state": "open",
+    "updatedAt": "2026-03-26T17:21:26Z",
+    "headSha": "d2c823a23648916f5f6808f1ed50e2afa53900df",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/873",
+    "authorLogin": "gowtham0992"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-26_E2E_TTT_MetaLearning/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Applies MAML-style meta-learning in the final 20% of training so the Transformer learns weights optimized for test-time adaptation.",
+    "tags": [
+      "training-schedule",
+      "optimizer",
+      "architecture"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "inner GD on last-block MLPs with create_graph meta-gradients",
+      "phase 2 uncompiled fine-tune for score-first TTT readiness"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

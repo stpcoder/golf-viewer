@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-26T17:41:52.879Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 866,
+    "title": "Claude/peaceful mclean",
+    "state": "closed",
+    "updatedAt": "2026-03-26T16:39:53Z",
+    "headSha": "902f42a6ada93e956735ab4416b757ab948c8cf4",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/866",
+    "authorLogin": "sunnypatneedi"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-22_FullStack_v51/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Uses dual surprise-gated LoRA and in-place TTT on an 11-layer hashed/Value-Residual stack with LeakyReLU^2 and full GPTQ quantization.",
+    "tags": [
+      "training-schedule",
+      "quantization",
+      "architecture"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Dual TTT (surprise-gated LoRA + in-place MLP updates)",
+      "Hessian-aware per-layer int6 GPTQ calibration",
+      "LeakyReLU(0.5)^2 hashed MLP stack with Value Residual"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

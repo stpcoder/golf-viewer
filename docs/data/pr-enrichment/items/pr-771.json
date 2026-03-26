@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-26T00:36:17.693Z",
+  "generatedAt": "2026-03-26T17:42:26.788Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
@@ -19,17 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Whole-validation TTT uses AdamW with 30-epoch cosine decay and per-layer LR multipliers to adapt the PR #549 quantized model before sliding-window eval.",
+    "summary": "Whole-validation AdamW TTT (30ep cosine decay, per-layer LRs) adapts the PR #549 base before sliding-window scoring.",
     "tags": [
       "val-only",
       "optimizer",
       "training-schedule"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "TTT trains on the entire validation token stream (validation-shard training) before scoring, so the run is a val-only adaptation.",
+    "valOnlyReasoning": "TTT trains on the entire validation token stream (legal per rules) prior to the final sliding-window evaluation.",
     "techniques": [
-      "AdamW TTT with cosine-decayed LR",
-      "Per-layer LR multipliers for mlp projections"
+      "AdamW TTT with 30-epoch cosine decay",
+      "Per-layer learning-rate scaling (mlp.proj 3×, mlp.fc 0.5×)"
     ]
   },
   "compatibility": {
