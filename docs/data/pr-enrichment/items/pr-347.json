@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-25T21:04:41.617Z",
+  "generatedAt": "2026-03-26T09:08:12.932Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 347,
     "title": "LongContext 4096 + Full SOTA Stack + QAT Int4/Int6 → 16 Layers",
     "state": "open",
-    "updatedAt": "2026-03-25T20:49:40Z",
-    "headSha": "b7eb0ed4e8f6d9783ef356285a18fc3b565f9976",
+    "updatedAt": "2026-03-26T09:07:14Z",
+    "headSha": "b937791c4f96a8a30d7fa23996e7391ab174eaac",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/347",
     "authorLogin": "FlashyFlash3011"
   },
@@ -25,18 +25,18 @@
     "submissionCount": 7
   },
   "output": {
-    "summary": "Extends PR#549 SOTA stack with 4096-context training, 16-layer int4 nibble packing, and QAT on both CastedLinear and bank weight slices.",
+    "summary": "Extends PR #549 stack with 4k context, 16-layer int4 nibble depth, and bank-level int4 QAT (plus int6 baseline) under 16MB.",
     "tags": [
-      "architecture",
       "quantization",
+      "architecture",
       "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "4096-token training/eval context with NTK-scaled RoPE base",
-      "Int4 nibble-packed 16-layer model with GPTQ-lite export",
-      "Full-model QAT covering CastedLinear and bank weights"
+      "Long-context 4096 training with dynamic NTK-scaled RoPE",
+      "Int4 nibble-packing to fit 16 transformer layers in 16MB",
+      "Quantization-aware training on CastedLinear and bank weights with safe int6 baseline"
     ]
   },
   "compatibility": {
