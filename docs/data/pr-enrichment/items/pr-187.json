@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-26T03:37:06.814Z",
+  "generatedAt": "2026-03-26T04:07:09.810Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 187,
-    "title": "Record: EMA-GPU + Multi-Order N-gram Backoff (val_bpb=0.9784)",
+    "title": "Record: EMA-GPU + Multi-Order N-gram Backoff (val_bpb=0.9408)",
     "state": "open",
-    "updatedAt": "2026-03-26T03:07:24Z",
-    "headSha": "777500efdd213b962844d1803918fe4e645d4815",
+    "updatedAt": "2026-03-26T03:41:38Z",
+    "headSha": "08d7068b819834f5e9d8c7b9116d222676301c82",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/187",
     "authorLogin": "Idan3011"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "GPU-resident EMA fuels faster U-Net updates feeding GELU pre-enrichment plus XSA and entropy-adaptive multi-order n-gram backoff.",
+    "summary": "GPU-resident EMA, GELU pre-enrichment, XSA, and entropy-adaptive multi-order backward n-gram backoff power this record submission’s architecture+evaluation combo.",
     "tags": [
-      "architecture",
       "optimizer",
+      "architecture",
       "quantization",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "GPU-resident EMA to slash step time",
-      "GELU pre-enrichment with SmearGate+BigramHash before transformer blocks",
-      "XSA on final layers plus entropy-adaptive multi-order n-gram backoff cache"
+      "GPU-resident EMA updates",
+      "Entropy-adaptive multi-order backward n-gram backoff",
+      "GELU pre-enrichment with XSA on final layers"
     ]
   },
   "compatibility": {

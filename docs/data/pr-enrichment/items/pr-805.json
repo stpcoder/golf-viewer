@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-26T04:06:45.226Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 805,
+    "title": "Int6 GPTQ-lite + LeakyReLU(0.5)^2 + EMA + 11L MLP3x",
+    "state": "open",
+    "updatedAt": "2026-03-26T03:40:03Z",
+    "headSha": "6c2645449e52bf12365743b67c268edbeb3f9af8",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/805",
+    "authorLogin": "zeytx"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_Int6_LeakyReLU2_EMA_11L_MLP3x/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Stack includes 11 transformer layers with 3x MLP expansion, LeakyReLU(0.5)^2, per-row Int6 GPTQ-lite (clip search + zstd-22), late STE QAT, EMA, and GQA.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "11L transformer backbone with 3x MLP expansion",
+      "Per-row Int6 GPTQ-lite + late STE QAT trigger",
+      "EMA (0.997) averaging with GQA heads"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

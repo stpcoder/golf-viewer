@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-26T04:06:53.082Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 804,
+    "title": "[Non-record] CAGE5 Colab T4 smoke: strictly causal 5-gram mixer",
+    "state": "open",
+    "updatedAt": "2026-03-26T03:39:35Z",
+    "headSha": "dd463fd20ce4ad58ddf6a15ba627f9c89ce6d36c",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/804",
+    "authorLogin": "Devchandrasen"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-26_CAGE5_ColabT4_Smoke/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Validates a tiny Colab GPT pipeline by interpolating a strictly causal hashed 5-gram cache during sliding-window evaluation.",
+    "tags": [
+      "sliding-window-eval",
+      "evaluation",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "strictly causal hashed 5-gram mixer during sliding-window evaluation",
+      "tiny Colab smoke pipeline validation"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-26T04:06:34.181Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 807,
+    "title": "Non-record: Sequential Momentum TTT (val_bpb=1.0116, 3-seed mean, 4xA10G)",
+    "state": "open",
+    "updatedAt": "2026-03-26T03:47:36Z",
+    "headSha": "993255937d924ca01220920e74b9e46ee52b72af",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/807",
+    "authorLogin": "connectwithprakash"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_SequentialMomentumTTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "EMA-warmed LoRA adapters flow between documents for sequential momentum TTT on a 10L GQA/XSA4 stack with mixed int5/int6 compression.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Cross-document LoRA EMA warm-start",
+      "10L GQA+XSA4 backbone",
+      "Mixed int5/int6 quantization with LZMA"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

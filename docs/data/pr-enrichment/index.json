@@ -1,20 +1,110 @@
 {
-  "generatedAt": "2026-03-26T03:37:06.840Z",
+  "generatedAt": "2026-03-26T04:07:09.838Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
-      "prNumber": 803,
-      "title": "Record: 0.4416 BPB -- Complementary Training + Backoff N-gram Mixer",
+      "prNumber": 807,
+      "title": "Non-record: Sequential Momentum TTT (val_bpb=1.0116, 3-seed mean, 4xA10G)",
       "status": "open",
-      "updatedAt": "2026-03-26T03:33:09Z",
-      "headSha": "d9cf80d9d26eab15896941004ef88e910ffe2700",
-      "generatedAt": "2026-03-26T03:36:33.888Z",
-      "summary": "Train a transformer to downweight bigram-predictable tokens so it complements a high-alpha Backoff N-gram Mixer with entropy-adaptive blending.",
+      "updatedAt": "2026-03-26T03:47:36Z",
+      "headSha": "993255937d924ca01220920e74b9e46ee52b72af",
+      "generatedAt": "2026-03-26T04:06:34.181Z",
+      "summary": "EMA-warmed LoRA adapters flow between documents for sequential momentum TTT on a 10L GQA/XSA4 stack with mixed int5/int6 compression.",
       "tags": [
         "architecture",
         "quantization",
-        "training-schedule"
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-807.json"
+    },
+    {
+      "prNumber": 806,
+      "title": "Record: Backoff N-gram Cache + LeakyReLU(0.9)² (val_bpb=0.6678)",
+      "status": "open",
+      "updatedAt": "2026-03-26T03:47:28Z",
+      "headSha": "9876d60008393c88f90b38b53329dfdaf74f64e8",
+      "generatedAt": "2026-03-26T04:06:40.595Z",
+      "summary": "Uses entropy-adaptive backoff n-gram cache plus distributed GPU prefill and LeakyReLU(0.9)² on an 11L 512d transformer.",
+      "tags": [
+        "architecture",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-806.json"
+    },
+    {
+      "prNumber": 805,
+      "title": "Int6 GPTQ-lite + LeakyReLU(0.5)^2 + EMA + 11L MLP3x",
+      "status": "open",
+      "updatedAt": "2026-03-26T03:40:03Z",
+      "headSha": "6c2645449e52bf12365743b67c268edbeb3f9af8",
+      "generatedAt": "2026-03-26T04:06:45.226Z",
+      "summary": "Stack includes 11 transformer layers with 3x MLP expansion, LeakyReLU(0.5)^2, per-row Int6 GPTQ-lite (clip search + zstd-22), late STE QAT, EMA, and GQA.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-805.json"
+    },
+    {
+      "prNumber": 804,
+      "title": "[Non-record] CAGE5 Colab T4 smoke: strictly causal 5-gram mixer",
+      "status": "open",
+      "updatedAt": "2026-03-26T03:39:35Z",
+      "headSha": "dd463fd20ce4ad58ddf6a15ba627f9c89ce6d36c",
+      "generatedAt": "2026-03-26T04:06:53.082Z",
+      "summary": "Validates a tiny Colab GPT pipeline by interpolating a strictly causal hashed 5-gram cache during sliding-window evaluation.",
+      "tags": [
+        "sliding-window-eval",
+        "evaluation",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-804.json"
+    },
+    {
+      "prNumber": 803,
+      "title": "Record: 0.4416 BPB -- Complementary Training + Backoff N-gram Mixer",
+      "status": "open",
+      "updatedAt": "2026-03-26T03:40:29Z",
+      "headSha": "d9cf80d9d26eab15896941004ef88e910ffe2700",
+      "generatedAt": "2026-03-26T04:06:56.514Z",
+      "summary": "Reweight training loss by bigram predictability so the 11L transformer specializes on tokens the BackoffNgramMixer can’t, enabling heavy eval-time mixing.",
+      "tags": [
+        "regularization",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -30,10 +120,10 @@
       "prNumber": 802,
       "title": "10L + Multi-Order N-gram Backoff (0.9123 BPB)",
       "status": "open",
-      "updatedAt": "2026-03-26T03:25:40Z",
-      "headSha": "72501ea5757603af304f66936ecb46fda927791b",
-      "generatedAt": "2026-03-26T03:36:38.949Z",
-      "summary": "10-layer GQA model with LeakyReLU² MLP, BigramHash+U-Net skips, and int5/int6 quantization feeding a multi-order n-gram backoff cache with entropy-adaptive weighting.",
+      "updatedAt": "2026-03-26T03:49:03Z",
+      "headSha": "e5a23775c260a7a30f111b03268d4f9b9b4e1dfc",
+      "generatedAt": "2026-03-26T04:07:01.728Z",
+      "summary": "10-layer Int5/Int6 GQA model with Partial RoPE/XSA and BigramHash feeding a multi-order n-gram cache interpolated by entropy-adaptive alpha.",
       "tags": [
         "architecture",
         "quantization",
@@ -1856,6 +1946,29 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-695.json"
+    },
+    {
+      "prNumber": 694,
+      "title": "10L Int5-MLP + BigramHash(4096) + SWA (1.1507 BPB)",
+      "status": "closed",
+      "updatedAt": "2026-03-26T03:43:24Z",
+      "headSha": "345f145c54d9c7526e010bdc19cf43b5902fe998",
+      "generatedAt": "2026-03-26T04:07:06.123Z",
+      "summary": "10-layer GQA transformer with BigramHash(4096), SmearGate/U-Net skips, mixed int5/int6 quantization, and SWA for compact 16MB deployment.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-694.json"
     },
     {
       "prNumber": 693,
@@ -10116,15 +10229,15 @@
     },
     {
       "prNumber": 187,
-      "title": "Record: EMA-GPU + Multi-Order N-gram Backoff (val_bpb=0.9784)",
+      "title": "Record: EMA-GPU + Multi-Order N-gram Backoff (val_bpb=0.9408)",
       "status": "open",
-      "updatedAt": "2026-03-26T03:07:24Z",
-      "headSha": "777500efdd213b962844d1803918fe4e645d4815",
-      "generatedAt": "2026-03-26T03:37:06.814Z",
-      "summary": "GPU-resident EMA fuels faster U-Net updates feeding GELU pre-enrichment plus XSA and entropy-adaptive multi-order n-gram backoff.",
+      "updatedAt": "2026-03-26T03:41:38Z",
+      "headSha": "08d7068b819834f5e9d8c7b9116d222676301c82",
+      "generatedAt": "2026-03-26T04:07:09.810Z",
+      "summary": "GPU-resident EMA, GELU pre-enrichment, XSA, and entropy-adaptive multi-order backward n-gram backoff power this record submission’s architecture+evaluation combo.",
       "tags": [
-        "architecture",
         "optimizer",
+        "architecture",
         "quantization",
         "evaluation"
       ],
