@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-26T12:09:04.435Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 843,
+    "title": "Record: Order-12 N-gram Backoff + 256K Chunks — 0.2834 BPB",
+    "state": "open",
+    "updatedAt": "2026-03-26T12:03:37Z",
+    "headSha": "becf6819e43b2f8ffb4a67cf1ba56a404e523923",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/843",
+    "authorLogin": "quietsmile"
+  },
+  "inputs": {
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-26_Order12_Chunk256K_AlphaMax070/README.md",
+      "records/track_10min_16mb/2026-03-26_NgramChunk65K_LeakyReLU09_GPTQ5/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "Eval-only tweak ups n-gram pipeline: extend order to 12, refresh cache with 256K chunks, and raise alpha_max to 0.70 for stronger mixing.",
+    "tags": [
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "Not a val-only training regimen; changes are eval-time only.",
+    "techniques": [
+      "Order-12 n-gram backoff",
+      "256K-token eval chunks for faster cache refresh",
+      "Alpha_max raised to 0.70 for stronger mixing"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

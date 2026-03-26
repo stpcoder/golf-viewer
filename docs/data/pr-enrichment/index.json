@@ -1,8 +1,53 @@
 {
-  "generatedAt": "2026-03-26T11:39:06.595Z",
+  "generatedAt": "2026-03-26T12:09:16.502Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 843,
+      "title": "Record: Order-12 N-gram Backoff + 256K Chunks — 0.2834 BPB",
+      "status": "open",
+      "updatedAt": "2026-03-26T12:03:37Z",
+      "headSha": "becf6819e43b2f8ffb4a67cf1ba56a404e523923",
+      "generatedAt": "2026-03-26T12:09:04.435Z",
+      "summary": "Eval-only tweak ups n-gram pipeline: extend order to 12, refresh cache with 256K chunks, and raise alpha_max to 0.70 for stronger mixing.",
+      "tags": [
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-843.json"
+    },
+    {
+      "prNumber": 842,
+      "title": "Non-record: 5L MLP4x + SlidingWindow + SWA + QAT — val_bpb 1.3827 (1xH100)",
+      "status": "open",
+      "updatedAt": "2026-03-26T11:42:27Z",
+      "headSha": "9b6c41bb6a24e5103325e5d8eda8897203f47a0c",
+      "generatedAt": "2026-03-26T12:09:11.812Z",
+      "summary": "Autonomous search picked a width-focused 5-layer MLP4x with BigramHash/SmearGate, QAT, SWA, and sliding-window eval to stay under 16MB.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "regularization",
+        "sliding-window-eval"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-842.json"
+    },
     {
       "prNumber": 841,
       "title": "Add 11L XSA11 + BigramHash3072 + AdamW Legal TTT submission",
@@ -25,28 +70,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-841.json"
-    },
-    {
-      "prNumber": 840,
-      "title": "Record: 0.2873 BPB — Fine-Grained N-gram Cache (65K chunks)",
-      "status": "open",
-      "updatedAt": "2026-03-26T11:03:07Z",
-      "headSha": "f1da25d4abf3e309822099110c62d14b033ed093",
-      "generatedAt": "2026-03-26T11:08:50.277Z",
-      "summary": "Eval-time N-gram cache refreshes every 65K tokens so multi-order stats update frequently, letting a score-first cache boost predictions without retraining.",
-      "tags": [
-        "evaluation",
-        "compression"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-840.json"
     },
     {
       "prNumber": 838,
@@ -654,12 +677,12 @@
       "prNumber": 804,
       "title": "[Non-record] CAGE5 Colab T4 smoke: strictly causal 5-gram mixer",
       "status": "open",
-      "updatedAt": "2026-03-26T03:39:35Z",
-      "headSha": "dd463fd20ce4ad58ddf6a15ba627f9c89ce6d36c",
-      "generatedAt": "2026-03-26T04:06:53.082Z",
-      "summary": "Validates a tiny Colab GPT pipeline by interpolating a strictly causal hashed 5-gram cache during sliding-window evaluation.",
+      "updatedAt": "2026-03-26T12:03:59Z",
+      "headSha": "1b75d14991620974471e36db706bb4d103ec2af8",
+      "generatedAt": "2026-03-26T12:09:16.383Z",
+      "summary": "Smoke checks a strictly causal hashed 5-gram mixer interpolated during sliding-window eval and stacked with legal score-first TTT on Colab T4.",
       "tags": [
-        "sliding-window-eval",
+        "architecture",
         "evaluation",
         "non-record"
       ],

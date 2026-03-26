@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-26T04:06:53.082Z",
+  "generatedAt": "2026-03-26T12:09:16.383Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 804,
     "title": "[Non-record] CAGE5 Colab T4 smoke: strictly causal 5-gram mixer",
     "state": "open",
-    "updatedAt": "2026-03-26T03:39:35Z",
-    "headSha": "dd463fd20ce4ad58ddf6a15ba627f9c89ce6d36c",
+    "updatedAt": "2026-03-26T12:03:59Z",
+    "headSha": "1b75d14991620974471e36db706bb4d103ec2af8",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/804",
     "authorLogin": "Devchandrasen"
   },
@@ -19,17 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Validates a tiny Colab GPT pipeline by interpolating a strictly causal hashed 5-gram cache during sliding-window evaluation.",
+    "summary": "Smoke checks a strictly causal hashed 5-gram mixer interpolated during sliding-window eval and stacked with legal score-first TTT on Colab T4.",
     "tags": [
-      "sliding-window-eval",
+      "architecture",
       "evaluation",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "strictly causal hashed 5-gram mixer during sliding-window evaluation",
-      "tiny Colab smoke pipeline validation"
+      "strictly causal hashed 5-gram interpolation",
+      "stacked with legal score-first TTT",
+      "applied during sliding-window evaluation"
     ]
   },
   "compatibility": {

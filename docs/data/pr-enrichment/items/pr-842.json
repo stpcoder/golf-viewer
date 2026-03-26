@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-26T12:09:11.812Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 842,
+    "title": "Non-record: 5L MLP4x + SlidingWindow + SWA + QAT — val_bpb 1.3827 (1xH100)",
+    "state": "open",
+    "updatedAt": "2026-03-26T11:42:27Z",
+    "headSha": "9b6c41bb6a24e5103325e5d8eda8897203f47a0c",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/842",
+    "authorLogin": "JUSTSUJAY"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-26_5L_MLP4x_SlidingWindow_SWA_QAT_1xH100/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Autonomous search picked a width-focused 5-layer MLP4x with BigramHash/SmearGate, QAT, SWA, and sliding-window eval to stay under 16MB.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "regularization",
+      "sliding-window-eval"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Width-focused 5-layer MLP4x backbone with BigramHash embeddings and SmearGate gating.",
+      "QAT with int8 STE during training plus SWA over 18 checkpoints for smoother weights.",
+      "Sliding-window evaluation with stride 64 to reuse long-context scoring."
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
