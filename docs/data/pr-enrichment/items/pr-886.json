@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-26T19:12:35.739Z",
+  "generatedAt": "2026-03-26T19:43:59.118Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 886,
-    "title": "Non-record: Your 16 MB model is 272 MB at eval time",
+    "title": "RFC: A framework for deciding the n-gram question",
     "state": "open",
-    "updatedAt": "2026-03-26T19:10:30Z",
+    "updatedAt": "2026-03-26T19:43:04Z",
     "headSha": "4555280179944f63c90a7c73572a6a26d8651ee0",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/886",
     "authorLogin": "abaybektursun"
@@ -19,17 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Study shows eval-time causal n-gram caching mixes neural scores with massive hash tables, inflating the effective model from 16MB to 272MB and urging an eval-state cap.",
+    "summary": "Eval-time n-gram caching blended with neural scores creates 272MB runtime state, prompting a cap on eval-state growth for 16MB models.",
     "tags": [
       "evaluation",
+      "compression",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "causal n-gram cache blended with neural logits",
-      "hash-table state growth beyond artifact limit",
-      "rule proposal to cap eval-time memory"
+      "Strictly causal n-gram cache mixed with neural probabilities",
+      "All-reduce hash-table sync across GPUs",
+      "Proposal to cap peak eval-time state"
     ]
   },
   "compatibility": {

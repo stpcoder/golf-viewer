@@ -1,16 +1,108 @@
 {
-  "generatedAt": "2026-03-26T19:13:20.523Z",
+  "generatedAt": "2026-03-26T19:44:13.132Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
+      "prNumber": 893,
+      "title": "Record: Two-Pass Order-12 N-gram Backoff + Parallel Muon — val_bpb 0.1310 (3-seed)",
+      "status": "open",
+      "updatedAt": "2026-03-26T19:32:05Z",
+      "headSha": "30f414b5cd732070f5df466f1938ad033c288c65",
+      "generatedAt": "2026-03-26T19:43:07.611Z",
+      "summary": "Two-pass evaluation builds order-12 n-gram cache from warm tokens, then rescoring cold chunks atop an 11-layer Parallel Muon stack.",
+      "tags": [
+        "architecture",
+        "evaluation",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-893.json"
+    },
+    {
+      "prNumber": 892,
+      "title": "Non-record: Technique Taxonomy — Tier List, Interaction Effects, and BPB Verification Tools",
+      "status": "open",
+      "updatedAt": "2026-03-26T19:28:08Z",
+      "headSha": "ddb87dee0d2254f9fc1ce2319b0b69038f7366dd",
+      "generatedAt": "2026-03-26T19:43:13.547Z",
+      "summary": "Curates a tiered taxonomy of Parameter Golf techniques plus interaction and verification tools to steer non-record submissions.",
+      "tags": [
+        "non-record",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-892.json"
+    },
+    {
+      "prNumber": 890,
+      "title": "Record: Order-Adaptive 9-gram  Backoff + Distributed Prefill — val_bpb 0.4405 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-03-26T19:18:18Z",
+      "headSha": "1a2ac56c297b1081b0819abf41f1c34315ea4f35",
+      "generatedAt": "2026-03-26T19:43:23.791Z",
+      "summary": "11L XSA transformer with int5 quant and EMA+SWA uses an order-adaptive 9-gram entropy-gated cache plus distributed prefill during sliding-window eval.",
+      "tags": [
+        "architecture",
+        "attention",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-890.json"
+    },
+    {
+      "prNumber": 889,
+      "title": "Record: N-gram Backoff + VRL + LeakyReLU² — val_bpb 0.9642 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-03-26T19:20:14Z",
+      "headSha": "50ec6bce1d6722caa8d20ad6f6f53fbec9abfdae",
+      "generatedAt": "2026-03-26T19:43:30.978Z",
+      "summary": "Blend a VRL + LeakyReLU² 11L/GQA base with an entropy-adaptive multi-order n-gram backoff cache that mixes neural and cached probabilities at eval.",
+      "tags": [
+        "architecture",
+        "evaluation",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-889.json"
+    },
+    {
       "prNumber": 888,
       "title": "Record: Fast Full-Rescore N-gram — val_bpb 0.09420444 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-26T19:11:12Z",
+      "updatedAt": "2026-03-26T19:13:29Z",
       "headSha": "f3d4a98707c8a443b420c9b1d2c3a7167b9592e7",
-      "generatedAt": "2026-03-26T19:12:25.810Z",
-      "summary": "Score-first N-gram eval caches pass1 token stats to rerank every chunk without another neural pass, plus self-exclude/confidence knobs for robustness.",
+      "generatedAt": "2026-03-26T19:43:37.561Z",
+      "summary": "Score-first full-rescore caches per-token neural stats then rescoring every chunk without extra forwards, with optional self-exclude/confidence knobs for robustness.",
       "tags": [
         "evaluation"
       ],
@@ -28,13 +120,14 @@
       "prNumber": 887,
       "title": "Record: N-gram Backoff + VRL + LeakyReLU² — val_bpb 0.9642 (3-seed mean)",
       "status": "closed",
-      "updatedAt": "2026-03-26T19:10:50Z",
+      "updatedAt": "2026-03-26T19:14:39Z",
       "headSha": "10556aebcc62c4ddc97ce750b25a23ab9739305b",
-      "generatedAt": "2026-03-26T19:12:31.105Z",
-      "summary": "Combines a VRL/LeakyReLU² backbone with entropy-weighted mixing into a multi-order n-gram backoff cache that’s updated causally during evaluation.",
+      "generatedAt": "2026-03-26T19:43:48.614Z",
+      "summary": "Combine multi-order n-gram backoff with entropy-adaptive alpha on a LeakyReLU²+VRL base to improve scored outputs before GPTQ-lite int6 compression.",
       "tags": [
-        "evaluation",
         "architecture",
+        "evaluation",
+        "quantization",
         "non-record"
       ],
       "flags": {
@@ -49,14 +142,15 @@
     },
     {
       "prNumber": 886,
-      "title": "Non-record: Your 16 MB model is 272 MB at eval time",
+      "title": "RFC: A framework for deciding the n-gram question",
       "status": "open",
-      "updatedAt": "2026-03-26T19:10:30Z",
+      "updatedAt": "2026-03-26T19:43:04Z",
       "headSha": "4555280179944f63c90a7c73572a6a26d8651ee0",
-      "generatedAt": "2026-03-26T19:12:35.739Z",
-      "summary": "Study shows eval-time causal n-gram caching mixes neural scores with massive hash tables, inflating the effective model from 16MB to 272MB and urging an eval-state cap.",
+      "generatedAt": "2026-03-26T19:43:59.118Z",
+      "summary": "Eval-time n-gram caching blended with neural scores creates 272MB runtime state, prompting a cap on eval-state growth for 16MB models.",
       "tags": [
         "evaluation",
+        "compression",
         "non-record"
       ],
       "flags": {
@@ -409,29 +503,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-866.json"
-    },
-    {
-      "prNumber": 865,
-      "title": "Record: 11L Parallel Muon + N-gram Backoff Cache — val_bpb 0.2841 (3-seed mean)",
-      "status": "open",
-      "updatedAt": "2026-03-26T16:35:20Z",
-      "headSha": "8fbcf91980c280004a3f58d9817eb7d8e984f32c",
-      "generatedAt": "2026-03-26T16:40:46.057Z",
-      "summary": "11-layer Parallel Muon transformer integrates entropy-adaptive order-2-9 backward N-gram caching plus GPTQ-lite int6 quantization during eval for 16MB track.",
-      "tags": [
-        "architecture",
-        "muon",
-        "evaluation"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-865.json"
     },
     {
       "prNumber": 862,
@@ -1591,14 +1662,13 @@
       "prNumber": 796,
       "title": "Record: 0.2292 BPB — Dirichlet-Multinomial Smoothing + Distributed Prefill + 15-Gram + EBLS",
       "status": "open",
-      "updatedAt": "2026-03-26T18:43:12Z",
+      "updatedAt": "2026-03-26T19:35:45Z",
       "headSha": "c3e2c4304144dccad1eb2613e5a02fdfb0c92d17",
-      "generatedAt": "2026-03-26T19:13:04.380Z",
-      "summary": "Hierarchical Dirichlet-Multinomial smoothing mixes the neural LM prior with up-to-15-gram counts using one concentration parameter instead of per-order multipliers.",
+      "generatedAt": "2026-03-26T19:44:07.870Z",
+      "summary": "Hierarchical Dirichlet-Multinomial mixing uses the neural LM as a prior across 2–15-gram orders with one concentration, replacing per-order weights ahead of distributed cache prefill.",
       "tags": [
-        "architecture",
-        "quantization",
-        "evaluation"
+        "evaluation",
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,
@@ -4336,14 +4406,14 @@
       "prNumber": 619,
       "title": "non-record 16MB A100 SXM run (10L mixed int5/int6 + EMA + QAT)",
       "status": "open",
-      "updatedAt": "2026-03-26T19:11:27Z",
-      "headSha": "ed858c0612195a7cccc3254e1167fc8ba821463c",
-      "generatedAt": "2026-03-26T19:13:15.418Z",
-      "summary": "10-layer model mixes int5/int6 quantization with EMA-exported weights and late QAT alongside bigram hashing to fit the 16MB non-record setup.",
+      "updatedAt": "2026-03-26T19:38:06Z",
+      "headSha": "9f0fbf2750ef8a470253c919ae1da151c54069a8",
+      "generatedAt": "2026-03-26T19:44:13.033Z",
+      "summary": "10-layer GPT run mixes int5 MLP/int6 attention quantization with EMA-weight export and late QAT plus bigram hashing.",
       "tags": [
         "quantization",
-        "architecture",
         "regularization",
+        "tokenization",
         "non-record"
       ],
       "flags": {

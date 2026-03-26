@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-26T19:43:30.978Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 889,
+    "title": "Record: N-gram Backoff + VRL + LeakyReLU² — val_bpb 0.9642 (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-03-26T19:20:14Z",
+    "headSha": "50ec6bce1d6722caa8d20ad6f6f53fbec9abfdae",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/889",
+    "authorLogin": "anthony-maio"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-26_NgramBackoff_VRL_LeakyReLU2/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Blend a VRL + LeakyReLU² 11L/GQA base with an entropy-adaptive multi-order n-gram backoff cache that mixes neural and cached probabilities at eval.",
+    "tags": [
+      "architecture",
+      "evaluation",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Entropy-adaptive multi-order (2-7) n-gram backoff cache",
+      "VRL + LeakyReLU² 11L GQA base with U-Net skips and SmearGate",
+      "Late QAT + GPTQ-lite int6 + lzma compression"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
