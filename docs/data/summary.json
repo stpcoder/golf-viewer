@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-03-26T12:08:55.313Z",
+  "generatedAt": "2026-03-26T12:39:00.487Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "counts": {
-    "submissions": 654,
+    "submissions": 656,
     "official": 1,
-    "openPr": 525,
+    "openPr": 527,
     "mergedPr": 22,
     "closedPr": 106,
-    "prBacked": 654,
+    "prBacked": 656,
     "readmeListed": 20,
     "collectorErrors": 0
   },
@@ -91,7 +91,7 @@
       }
     },
     "openPrMainTrack": {
-      "id": "record-records-track_10min_16mb-2026-03-26_Order12_Chunk256K_AlphaMax070",
+      "id": "record-records-track_10min_16mb-2026-03-27_TwoPassNgram_0-1434",
       "source": "pull_request",
       "status": "open",
       "category": "main-track",
@@ -103,32 +103,32 @@
         "category": "main-track"
       },
       "record": {
-        "folderName": "2026-03-26_Order12_Chunk256K_AlphaMax070",
-        "folderPath": "records/track_10min_16mb/2026-03-26_Order12_Chunk256K_AlphaMax070",
-        "submissionPath": "records/track_10min_16mb/2026-03-26_Order12_Chunk256K_AlphaMax070/submission.json",
-        "readmePath": "records/track_10min_16mb/2026-03-26_Order12_Chunk256K_AlphaMax070/README.md",
-        "trainLogPath": "records/track_10min_16mb/2026-03-26_Order12_Chunk256K_AlphaMax070/train.log",
-        "scriptPath": "records/track_10min_16mb/2026-03-26_Order12_Chunk256K_AlphaMax070/train_gpt.py"
+        "folderName": "2026-03-27_TwoPassNgram_0.1434",
+        "folderPath": "records/track_10min_16mb/2026-03-27_TwoPassNgram_0.1434",
+        "submissionPath": "records/track_10min_16mb/2026-03-27_TwoPassNgram_0.1434/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-27_TwoPassNgram_0.1434/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-27_TwoPassNgram_0.1434/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-27_TwoPassNgram_0.1434/train_gpt.py"
       },
       "submission": {
-        "author": "quietsmile",
-        "githubId": "quietsmile",
-        "name": "Order-12 N-gram Backoff + 256K Chunks + Alpha 0.70",
-        "blurb": "Extended n-gram backoff to order 12 (from 9) with 256K token chunks (from 1M) and higher alpha_max=0.70 (from 0.60). 11L 512d GQA 8/4, MLP 3.0x, XSA-4, LeakyReLU(0.9)², BigramHash(4096), GPTQ int5. Mean of 2 seeds: val_bpb 0.2834 (std 0.0001). Key changes: (1) 6 additional hash primes for orders 10-15, (2) 256K chunk tokens for faster cache refresh, (3) alpha_max 0.70 for stronger n-gram mixing. Training 525s on 8xH100 SXM equivalent (L20Z), eval 431s.",
-        "date": "2026-03-26"
+        "author": "Himanshu Dongre",
+        "githubId": "himanshudongre",
+        "name": "Two-Pass N-gram Rescoring + Score-First TTT + GPTQ-Int5",
+        "blurb": "Novel two-pass eval strategy that rescores cold-cache early chunks using the complete n-gram cache built during pass 1. Chunks 1-15 improve from 0.28-1.15 BPB to 0.11-0.12 BPB. Pass 2 costs only 53s on 8xH100, fitting within the 600s eval budget. Combined with order-9 adaptive n-gram backoff, score-first TTT, and GPTQ-Int5 quantization. 3-seed mean: 0.1434 BPB (std 0.00002), 51% improvement over single-pass SOTA (0.295).",
+        "date": "2026-03-27"
       },
       "metrics": {
-        "valBpb": 0.2834,
-        "valLoss": 0.47851,
-        "preQuantValBpb": 1.1454,
+        "valBpb": 0.1434,
+        "valLoss": 0.24213182,
+        "preQuantValBpb": 1.1448,
         "preQuantValLoss": null,
-        "stepStop": 6192,
+        "stepStop": 6120,
         "wallclockSeconds": 525,
-        "evalTimeSeconds": 431
+        "evalTimeSeconds": 338.7
       },
       "artifact": {
-        "bytesTotal": 13412672,
-        "bytesCode": 193000,
+        "bytesTotal": 13423057,
+        "bytesCode": 186129,
         "bytesModelInt8Zlib": null
       },
       "flags": {
@@ -139,26 +139,26 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 843,
-        "title": "Record: Order-12 N-gram Backoff + 256K Chunks — 0.2834 BPB",
+        "number": 846,
+        "title": "Record: Two-Pass N-gram Rescoring (val_bpb 0.1434)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/843",
-        "authorLogin": "quietsmile",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/846",
+        "authorLogin": "himanshudongre",
         "authorName": null,
-        "createdAt": "2026-03-26T12:03:37Z",
-        "updatedAt": "2026-03-26T12:03:37Z",
-        "headSha": "becf6819e43b2f8ffb4a67cf1ba56a404e523923",
-        "headRepo": "quietsmile/parameter-golf"
+        "createdAt": "2026-03-26T12:20:06Z",
+        "updatedAt": "2026-03-26T12:20:06Z",
+        "headSha": "e4cea2ccf12853e4b8dbca827216211a68d18311",
+        "headRepo": "himanshudongre/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/becf6819e43b2f8ffb4a67cf1ba56a404e523923/records/track_10min_16mb/2026-03-26_Order12_Chunk256K_AlphaMax070/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/becf6819e43b2f8ffb4a67cf1ba56a404e523923/records/track_10min_16mb/2026-03-26_Order12_Chunk256K_AlphaMax070/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/becf6819e43b2f8ffb4a67cf1ba56a404e523923/records/track_10min_16mb/2026-03-26_Order12_Chunk256K_AlphaMax070/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/becf6819e43b2f8ffb4a67cf1ba56a404e523923/records/track_10min_16mb/2026-03-26_Order12_Chunk256K_AlphaMax070/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/becf6819e43b2f8ffb4a67cf1ba56a404e523923/records/track_10min_16mb/2026-03-26_Order12_Chunk256K_AlphaMax070",
-        "pr": "https://github.com/openai/parameter-golf/pull/843",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/e4cea2ccf12853e4b8dbca827216211a68d18311/records/track_10min_16mb/2026-03-27_TwoPassNgram_0.1434/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/e4cea2ccf12853e4b8dbca827216211a68d18311/records/track_10min_16mb/2026-03-27_TwoPassNgram_0.1434/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/e4cea2ccf12853e4b8dbca827216211a68d18311/records/track_10min_16mb/2026-03-27_TwoPassNgram_0.1434/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/e4cea2ccf12853e4b8dbca827216211a68d18311/records/track_10min_16mb/2026-03-27_TwoPassNgram_0.1434/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/e4cea2ccf12853e4b8dbca827216211a68d18311/records/track_10min_16mb/2026-03-27_TwoPassNgram_0.1434",
+        "pr": "https://github.com/openai/parameter-golf/pull/846",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-03-26T11:09:06.097Z",
+  "generatedAt": "2026-03-26T12:39:16.743Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 347,
     "title": "LongContext 4096 + Full SOTA Stack + QAT Int4/Int6 → 16 Layers",
     "state": "open",
-    "updatedAt": "2026-03-26T11:04:04Z",
-    "headSha": "8ccc5d2a112b4e5420792f236fb44685038abde9",
+    "updatedAt": "2026-03-26T12:31:58Z",
+    "headSha": "4c492e6e73db1d5bb12b46186f9aa3cffb63ea7a",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/347",
     "authorLogin": "FlashyFlash3011"
   },
   "inputs": {
-    "hash": "0b1d87128e22dc6f06252ac5fe0239197cad107af0ef9c123d24be680ff456a1",
+    "hash": "8986d7e21e1a39d2edd4e76b295c0af19b81820615d903fd88bb4b8c62e7e93d",
     "readmePaths": [
       "records/track_10min_16mb/2026-03-26_BankQAT_2048train_4096eval/README.md",
       "records/track_10min_16mb/2026-03-25_LongContext4096_Int4_BankQAT/README.md",
@@ -23,21 +23,21 @@
       "records/track_10min_16mb/2026-03-21_LongContext4096_FullStack/README.md",
       "records/track_10min_16mb/2026-03-21_QAT_Int4_16L/README.md"
     ],
-    "submissionCount": 8
+    "submissionCount": 9
   },
   "output": {
-    "summary": "Extends PR #549 stack to 4096-context, 16-layer int4 models with bank-wide QAT and consistent GPTQ export.",
+    "summary": "Builds on PR#549 SOTA stack by doubling context to 4096 while pairing nibble-packed 16L depth with universal bank QAT/int4+int6 quantization to stay under 16MB.",
     "tags": [
-      "quantization",
       "architecture",
+      "quantization",
       "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "4096-token training and sliding-window evaluation",
-      "Full-model int4 QAT plus GPTQ-lite export",
-      "Depth boost to 16 layers via nibble packing"
+      "4096-context SOTA training stack",
+      "Int4 nibble-packing to fit 16 transformer layers",
+      "Bank-wide QAT plus int6 fake-quant regularization"
     ]
   },
   "compatibility": {

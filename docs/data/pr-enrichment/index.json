@@ -1,8 +1,30 @@
 {
-  "generatedAt": "2026-03-26T12:09:16.502Z",
+  "generatedAt": "2026-03-26T12:39:16.794Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 846,
+      "title": "Record: Two-Pass N-gram Rescoring (val_bpb 0.1434)",
+      "status": "open",
+      "updatedAt": "2026-03-26T12:20:06Z",
+      "headSha": "e4cea2ccf12853e4b8dbca827216211a68d18311",
+      "generatedAt": "2026-03-26T12:39:07.445Z",
+      "summary": "Rescore early cold-cache n-gram chunks in a fast second pass after a GPTQ-Int5 + score-first TTT run to leverage the full cache.",
+      "tags": [
+        "evaluation",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-846.json"
+    },
     {
       "prNumber": 843,
       "title": "Record: Order-12 N-gram Backoff + 256K Chunks — 0.2834 BPB",
@@ -8045,13 +8067,13 @@
       "prNumber": 347,
       "title": "LongContext 4096 + Full SOTA Stack + QAT Int4/Int6 → 16 Layers",
       "status": "open",
-      "updatedAt": "2026-03-26T11:04:04Z",
-      "headSha": "8ccc5d2a112b4e5420792f236fb44685038abde9",
-      "generatedAt": "2026-03-26T11:09:06.097Z",
-      "summary": "Extends PR #549 stack to 4096-context, 16-layer int4 models with bank-wide QAT and consistent GPTQ export.",
+      "updatedAt": "2026-03-26T12:31:58Z",
+      "headSha": "4c492e6e73db1d5bb12b46186f9aa3cffb63ea7a",
+      "generatedAt": "2026-03-26T12:39:16.743Z",
+      "summary": "Builds on PR#549 SOTA stack by doubling context to 4096 while pairing nibble-packed 16L depth with universal bank QAT/int4+int6 quantization to stay under 16MB.",
       "tags": [
-        "quantization",
         "architecture",
+        "quantization",
         "training-schedule"
       ],
       "flags": {
