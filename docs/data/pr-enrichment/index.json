@@ -1,8 +1,122 @@
 {
-  "generatedAt": "2026-03-26T18:42:15.316Z",
+  "generatedAt": "2026-03-26T19:13:20.523Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 888,
+      "title": "Record: Fast Full-Rescore N-gram — val_bpb 0.09420444 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-03-26T19:11:12Z",
+      "headSha": "f3d4a98707c8a443b420c9b1d2c3a7167b9592e7",
+      "generatedAt": "2026-03-26T19:12:25.810Z",
+      "summary": "Score-first N-gram eval caches pass1 token stats to rerank every chunk without another neural pass, plus self-exclude/confidence knobs for robustness.",
+      "tags": [
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-888.json"
+    },
+    {
+      "prNumber": 887,
+      "title": "Record: N-gram Backoff + VRL + LeakyReLU² — val_bpb 0.9642 (3-seed mean)",
+      "status": "closed",
+      "updatedAt": "2026-03-26T19:10:50Z",
+      "headSha": "10556aebcc62c4ddc97ce750b25a23ab9739305b",
+      "generatedAt": "2026-03-26T19:12:31.105Z",
+      "summary": "Combines a VRL/LeakyReLU² backbone with entropy-weighted mixing into a multi-order n-gram backoff cache that’s updated causally during evaluation.",
+      "tags": [
+        "evaluation",
+        "architecture",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-887.json"
+    },
+    {
+      "prNumber": 886,
+      "title": "Non-record: Your 16 MB model is 272 MB at eval time",
+      "status": "open",
+      "updatedAt": "2026-03-26T19:10:30Z",
+      "headSha": "4555280179944f63c90a7c73572a6a26d8651ee0",
+      "generatedAt": "2026-03-26T19:12:35.739Z",
+      "summary": "Study shows eval-time causal n-gram caching mixes neural scores with massive hash tables, inflating the effective model from 16MB to 272MB and urging an eval-state cap.",
+      "tags": [
+        "evaluation",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-886.json"
+    },
+    {
+      "prNumber": 885,
+      "title": "Record: LeakyReLU(0.9)² + N-gram Cache + Entropy-Reg QAT — val_bpb 0.9958 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-03-26T18:58:06Z",
+      "headSha": "7ccb4a43d287495eba665dbfcecda7a54c3b993e",
+      "generatedAt": "2026-03-26T19:12:45.092Z",
+      "summary": "Combines LeakyReLU(0.9)² base, score-first TTT, backward-looking n-gram eval cache, and entropy-regularized mixed int5/int6 quantization for FineWeb.",
+      "tags": [
+        "quantization",
+        "mixed-precision",
+        "architecture",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-885.json"
+    },
+    {
+      "prNumber": 884,
+      "title": "submission: LeakyReLU2 + TrigramHashEmbedding (1.1448 bpb)",
+      "status": "open",
+      "updatedAt": "2026-03-26T18:47:04Z",
+      "headSha": "16e1e8c18b2f694008b4106022f60d0232e27629",
+      "generatedAt": "2026-03-26T19:12:51.185Z",
+      "summary": "Adds gated TrigramHashEmbedding + LeakyReLU(0.5)² to PR #414 stack, extending hash context to 3-token ngrams before int6 GPTQ-lite quantization.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "training-schedule",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-884.json"
+    },
     {
       "prNumber": 883,
       "title": "Order-13 N-gram Oracle + Score-First TTT (0.0308 BPB)",
@@ -1089,13 +1203,12 @@
       "prNumber": 814,
       "title": "Record: X-WING 3D Cubric + Complementary Training (val_bpb=0.4820)",
       "status": "open",
-      "updatedAt": "2026-03-26T17:46:18Z",
-      "headSha": "5876cf5cfb9833dc529f3d378a30bd3eb6d648c3",
-      "generatedAt": "2026-03-26T18:12:02.764Z",
-      "summary": "Chunk-shared n-gram tables combine with warm-started 3D cubric multipliers and complementary bigram-reweighted training to adapt the mixture alpha per regime.",
+      "updatedAt": "2026-03-26T18:57:06Z",
+      "headSha": "a37d7c349642972ad334dbfb57df6bbd7fc9c14a",
+      "generatedAt": "2026-03-26T19:12:56.813Z",
+      "summary": "Shared n-gram tables feed warm-started 3D cubric multipliers with entropy/count bins plus complementary training to tune α blending per context.",
       "tags": [
         "architecture",
-        "regularization",
         "evaluation"
       ],
       "flags": {
@@ -1478,13 +1591,14 @@
       "prNumber": 796,
       "title": "Record: 0.2292 BPB — Dirichlet-Multinomial Smoothing + Distributed Prefill + 15-Gram + EBLS",
       "status": "open",
-      "updatedAt": "2026-03-26T18:02:31Z",
+      "updatedAt": "2026-03-26T18:43:12Z",
       "headSha": "c3e2c4304144dccad1eb2613e5a02fdfb0c92d17",
-      "generatedAt": "2026-03-26T18:12:16.353Z",
-      "summary": "Hierarchical n-gram cache mixes counts with a neural prior via one Dirichlet-Multinomial concentration, atop EBLS and distributed prefill.",
+      "generatedAt": "2026-03-26T19:13:04.380Z",
+      "summary": "Hierarchical Dirichlet-Multinomial smoothing mixes the neural LM prior with up-to-15-gram counts using one concentration parameter instead of per-order multipliers.",
       "tags": [
-        "evaluation",
-        "architecture"
+        "architecture",
+        "quantization",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1683,15 +1797,15 @@
     },
     {
       "prNumber": 785,
-      "title": "Applied Async Prefetching Boost Performance of Any Approach",
+      "title": "(Nonrecord) Applied Async Prefetching Potentially Boosts Performance",
       "status": "open",
-      "updatedAt": "2026-03-26T00:19:44Z",
-      "headSha": "308cea5e6228b40c7f1a47dacea6607ab16c37e1",
-      "generatedAt": "2026-03-26T00:35:54.788Z",
-      "summary": "Pinned async prefetch loader plus compiler-friendly LeakyReLU² MLP to squeeze extra steps from the Parallel Muon training stack.",
+      "updatedAt": "2026-03-26T19:05:48Z",
+      "headSha": "d3fc20b82ccd76e96ab0fea35ae6fb8a5b24da3a",
+      "generatedAt": "2026-03-26T19:13:10.360Z",
+      "summary": "Pinned async prefetch plus fusion-friendly LeakyReLU² MLP speeds the Parallel Muon base data loading and MLP path without other recipe changes.",
       "tags": [
         "architecture",
-        "training-schedule"
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,
@@ -4222,13 +4336,14 @@
       "prNumber": 619,
       "title": "non-record 16MB A100 SXM run (10L mixed int5/int6 + EMA + QAT)",
       "status": "open",
-      "updatedAt": "2026-03-26T18:13:40Z",
-      "headSha": "d784df342a1b9d90bf73d2555cf54eaa9d53891e",
-      "generatedAt": "2026-03-26T18:42:15.221Z",
-      "summary": "10-layer bigram model pairs mixed int5/int6 quantization with EMA exports and late QAT to hit the 16MB non-record size budget.",
+      "updatedAt": "2026-03-26T19:11:27Z",
+      "headSha": "ed858c0612195a7cccc3254e1167fc8ba821463c",
+      "generatedAt": "2026-03-26T19:13:15.418Z",
+      "summary": "10-layer model mixes int5/int6 quantization with EMA-exported weights and late QAT alongside bigram hashing to fit the 16MB non-record setup.",
       "tags": [
         "quantization",
-        "training-schedule",
+        "architecture",
+        "regularization",
         "non-record"
       ],
       "flags": {
@@ -7203,14 +7318,14 @@
       "prNumber": 435,
       "title": "Radial bitnet submission",
       "status": "open",
-      "updatedAt": "2026-03-25T20:40:23Z",
-      "headSha": "f95351a5345b062ae1957fc7fbed6dbb22b0ad4b",
-      "generatedAt": "2026-03-25T21:04:31.536Z",
-      "summary": "Compressed dual-branch transformer fuses radial token geometry, hashed bigram branch, and a ternary-weight core tuned by FRO Stable to hit the 16MB/10min budget.",
+      "updatedAt": "2026-03-26T18:57:31Z",
+      "headSha": "b539789bc547b34f8aa7e9319f27b9d73294b2d0",
+      "generatedAt": "2026-03-26T19:13:20.460Z",
+      "summary": "Dual-branch transformer marries an FRO Stable-optimized core with radial token geometry and disciplined bigram-hash branches plus BitNet-style quantization for 16MB/10m.",
       "tags": [
         "architecture",
         "optimizer",
-        "compression",
+        "quantization",
         "tokenization"
       ],
       "flags": {
@@ -8136,30 +8251,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-379.json"
-    },
-    {
-      "prNumber": 376,
-      "title": "Record: 11L Next-Gen Stack + Custom Kernels, val_bpb=1.1399",
-      "status": "closed",
-      "updatedAt": "2026-03-24T16:17:34Z",
-      "headSha": "962419301eac2eeb5f9f90b324f4be6029b39029",
-      "generatedAt": "2026-03-24T16:27:35.416Z",
-      "summary": "11-layer transformer blends GQA/XSA/NTK-RoPE with Muon tuning, int5+zstd compression, and fused kernels for sliding-window evaluation.",
-      "tags": [
-        "architecture",
-        "quantization",
-        "optimizer",
-        "sliding-window-eval"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-376.json"
     },
     {
       "prNumber": 375,

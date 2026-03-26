@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-26T19:12:51.185Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 884,
+    "title": "submission: LeakyReLU2 + TrigramHashEmbedding (1.1448 bpb)",
+    "state": "open",
+    "updatedAt": "2026-03-26T18:47:04Z",
+    "headSha": "16e1e8c18b2f694008b4106022f60d0232e27629",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/884",
+    "authorLogin": "BhatiaUday"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-26_LeakyReLU2_TrigramHash/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Adds gated TrigramHashEmbedding + LeakyReLU(0.5)² to PR #414 stack, extending hash context to 3-token ngrams before int6 GPTQ-lite quantization.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "training-schedule",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "XOR-based trigram embedding with zero init and learnable scale",
+      "LeakyReLU(0.5)² MLPs atop same 11-layer backbone",
+      "Int6 GPTQ-lite + LZMA compression pipeline"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

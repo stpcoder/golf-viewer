@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-25T21:04:31.536Z",
+  "generatedAt": "2026-03-26T19:13:20.460Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 435,
     "title": "Radial bitnet submission",
     "state": "open",
-    "updatedAt": "2026-03-25T20:40:23Z",
-    "headSha": "f95351a5345b062ae1957fc7fbed6dbb22b0ad4b",
+    "updatedAt": "2026-03-26T18:57:31Z",
+    "headSha": "b539789bc547b34f8aa7e9319f27b9d73294b2d0",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/435",
     "authorLogin": "rthgit"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Compressed dual-branch transformer fuses radial token geometry, hashed bigram branch, and a ternary-weight core tuned by FRO Stable to hit the 16MB/10min budget.",
+    "summary": "Dual-branch transformer marries an FRO Stable-optimized core with radial token geometry and disciplined bigram-hash branches plus BitNet-style quantization for 16MB/10m.",
     "tags": [
       "architecture",
       "optimizer",
-      "compression",
+      "quantization",
       "tokenization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Dual-branch fusion of radial features and hashed bigram context",
-      "FRO Stable on core with AdamW for auxiliary branches",
-      "Mixed int8/int6 export with pruning for artifact sizing"
+      "Dual-branch fusion of transformer core and radial analytic token branch",
+      "FRO Stable optimizer tuned for high-rate, short-horizon training",
+      "BitNet-style ternary core with int8/int6 export plus disciplined bigram hash"
     ]
   },
   "compatibility": {

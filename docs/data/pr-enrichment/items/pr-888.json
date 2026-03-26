@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-03-26T19:12:25.810Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 888,
+    "title": "Record: Fast Full-Rescore N-gram — val_bpb 0.09420444 (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-03-26T19:11:12Z",
+    "headSha": "f3d4a98707c8a443b420c9b1d2c3a7167b9592e7",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/888",
+    "authorLogin": "aamodbhatt"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-26_FastPush_FullRescore_8xH100/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Score-first N-gram eval caches pass1 token stats to rerank every chunk without another neural pass, plus self-exclude/confidence knobs for robustness.",
+    "tags": [
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Score-first pass stores per-token stats for full rescore",
+      "Full N-gram cache reused to rerank all chunks without second neural pass",
+      "Configurable self-exclude and confidence gain controls"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

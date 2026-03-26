@@ -1,34 +1,34 @@
 {
-  "generatedAt": "2026-03-26T00:35:54.788Z",
+  "generatedAt": "2026-03-26T19:13:10.360Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 785,
-    "title": "Applied Async Prefetching Boost Performance of Any Approach",
+    "title": "(Nonrecord) Applied Async Prefetching Potentially Boosts Performance",
     "state": "open",
-    "updatedAt": "2026-03-26T00:19:44Z",
-    "headSha": "308cea5e6228b40c7f1a47dacea6607ab16c37e1",
+    "updatedAt": "2026-03-26T19:05:48Z",
+    "headSha": "d3fc20b82ccd76e96ab0fea35ae6fb8a5b24da3a",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/785",
     "authorLogin": "SirSaltySalmon"
   },
   "inputs": {
     "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
     "readmePaths": [
-      "records/track_10min_16mb/2026-03-26_LeakyReLU_LegalTTT_ParallelMuon_PinnedPrefetch_FusionFriendlyMLP/README.md"
+      "records/track_non_record_16mb/2026-03-26_LeakyReLU_LegalTTT_ParallelMuon_PinnedPrefetch_FusionFriendlyMLP/README.md"
     ],
     "submissionCount": 1
   },
   "output": {
-    "summary": "Pinned async prefetch loader plus compiler-friendly LeakyReLU² MLP to squeeze extra steps from the Parallel Muon training stack.",
+    "summary": "Pinned async prefetch plus fusion-friendly LeakyReLU² MLP speeds the Parallel Muon base data loading and MLP path without other recipe changes.",
     "tags": [
       "architecture",
-      "training-schedule"
+      "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Background loader threads producing pinned batches with optional H2D copy stream",
-      "Rewritten LeakyReLU² MLP (h*h) with explicit dtype casts for better compiler fusion"
+      "Pinned async prefetch loader with CPU queue and optional H2D stream",
+      "Fusion-friendly LeakyReLU² MLP layout to nudge Inductor fusion"
     ]
   },
   "compatibility": {

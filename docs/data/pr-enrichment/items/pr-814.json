@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-26T18:12:02.764Z",
+  "generatedAt": "2026-03-26T19:12:56.813Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 814,
     "title": "Record: X-WING 3D Cubric + Complementary Training (val_bpb=0.4820)",
     "state": "open",
-    "updatedAt": "2026-03-26T17:46:18Z",
-    "headSha": "5876cf5cfb9833dc529f3d378a30bd3eb6d648c3",
+    "updatedAt": "2026-03-26T18:57:06Z",
+    "headSha": "a37d7c349642972ad334dbfb57df6bbd7fc9c14a",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/814",
     "authorLogin": "newjordan"
   },
@@ -19,18 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Chunk-shared n-gram tables combine with warm-started 3D cubric multipliers and complementary bigram-reweighted training to adapt the mixture alpha per regime.",
+    "summary": "Shared n-gram tables feed warm-started 3D cubric multipliers with entropy/count bins plus complementary training to tune α blending per context.",
     "tags": [
       "architecture",
-      "regularization",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Warm-started 3D cubric multipliers gating alpha by order/entropy/count",
-      "Complementary training downweights bigram-predictable tokens during model training",
-      "Shared chunk-based n-gram tables expose every rank to the full token stream"
+      "Shared n-gram tables across ranks to expose full chunk history",
+      "Warm-started 3D cubric grid (order×entropy×count) adapts n-gram α per regime",
+      "Complementary training downweights bigram-predictable tokens so the model focuses on harder contexts"
     ]
   },
   "compatibility": {

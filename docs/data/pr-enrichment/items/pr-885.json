@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-26T19:12:45.092Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 885,
+    "title": "Record: LeakyReLU(0.9)² + N-gram Cache + Entropy-Reg QAT — val_bpb 0.9958 (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-03-26T18:58:06Z",
+    "headSha": "7ccb4a43d287495eba665dbfcecda7a54c3b993e",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/885",
+    "authorLogin": "lolrazh"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-26_LeakyReLU09_NgramCache_EntropyQAT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Combines LeakyReLU(0.9)² base, score-first TTT, backward-looking n-gram eval cache, and entropy-regularized mixed int5/int6 quantization for FineWeb.",
+    "tags": [
+      "quantization",
+      "mixed-precision",
+      "architecture",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "- LeakyReLU(0.9)² MLP layered on the Parallel Muon base with score-first TTT.",
+      "- Backward-looking 7-gram eval cache blended during inference for repetitively structured validation.",
+      "- Entropy-regularized QAT plus mixed int5/int6 quantization with GPTQ-lite per-row clipping."
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

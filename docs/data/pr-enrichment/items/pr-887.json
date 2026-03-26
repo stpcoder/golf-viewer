@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-26T19:12:31.105Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 887,
+    "title": "Record: N-gram Backoff + VRL + LeakyReLU² — val_bpb 0.9642 (3-seed mean)",
+    "state": "closed",
+    "updatedAt": "2026-03-26T19:10:50Z",
+    "headSha": "10556aebcc62c4ddc97ce750b25a23ab9739305b",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/887",
+    "authorLogin": "anthony-maio"
+  },
+  "inputs": {
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-26_NgramBackoff_VRL_LeakyReLU2/README.md",
+      "records/track_non_record_16mb/2026-03-26_DiffusionNoisedTeacher_AR/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "Combines a VRL/LeakyReLU² backbone with entropy-weighted mixing into a multi-order n-gram backoff cache that’s updated causally during evaluation.",
+    "tags": [
+      "evaluation",
+      "architecture",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Entropy-adaptive alpha mixing neural and n-gram logprobs",
+      "Multi-order (2–7gram) backoff cache with causal score-first updates",
+      "VRL + LeakyReLU² base model with GPTQ-lite int6 quantization and lzma"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

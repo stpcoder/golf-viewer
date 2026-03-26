@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-26T19:12:35.739Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 886,
+    "title": "Non-record: Your 16 MB model is 272 MB at eval time",
+    "state": "open",
+    "updatedAt": "2026-03-26T19:10:30Z",
+    "headSha": "4555280179944f63c90a7c73572a6a26d8651ee0",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/886",
+    "authorLogin": "abaybektursun"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-26_EvalTime_NGram_ModelGrowth_Study/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Study shows eval-time causal n-gram caching mixes neural scores with massive hash tables, inflating the effective model from 16MB to 272MB and urging an eval-state cap.",
+    "tags": [
+      "evaluation",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "causal n-gram cache blended with neural logits",
+      "hash-table state growth beyond artifact limit",
+      "rule proposal to cap eval-time memory"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-26T18:12:16.353Z",
+  "generatedAt": "2026-03-26T19:13:04.380Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 796,
     "title": "Record: 0.2292 BPB — Dirichlet-Multinomial Smoothing + Distributed Prefill + 15-Gram + EBLS",
     "state": "open",
-    "updatedAt": "2026-03-26T18:02:31Z",
+    "updatedAt": "2026-03-26T18:43:12Z",
     "headSha": "c3e2c4304144dccad1eb2613e5a02fdfb0c92d17",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/796",
     "authorLogin": "Robby955"
@@ -19,17 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Hierarchical n-gram cache mixes counts with a neural prior via one Dirichlet-Multinomial concentration, atop EBLS and distributed prefill.",
+    "summary": "Hierarchical Dirichlet-Multinomial smoothing mixes the neural LM prior with up-to-15-gram counts using one concentration parameter instead of per-order multipliers.",
     "tags": [
-      "evaluation",
-      "architecture"
+      "architecture",
+      "quantization",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Dirichlet-Multinomial smoothing with neural prior",
-      "Recursive 2-15 gram cache backoff",
-      "Distributed prefill for multi-rank evaluation"
+      "Neural-prior Dirichlet-Multinomial smoothing applied recursively from bigrams to 15-grams",
+      "Complementary training downweights cache-easy tokens so the neural model learns what caching misses",
+      "Distributed cache prefill ensures sliding evaluation matches single-pass ordering"
     ]
   },
   "compatibility": {
