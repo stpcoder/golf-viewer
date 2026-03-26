@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-03-26T00:35:54.788Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 785,
+    "title": "Applied Async Prefetching Boost Performance of Any Approach",
+    "state": "open",
+    "updatedAt": "2026-03-26T00:19:44Z",
+    "headSha": "308cea5e6228b40c7f1a47dacea6607ab16c37e1",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/785",
+    "authorLogin": "SirSaltySalmon"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-26_LeakyReLU_LegalTTT_ParallelMuon_PinnedPrefetch_FusionFriendlyMLP/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Pinned async prefetch loader plus compiler-friendly LeakyReLU² MLP to squeeze extra steps from the Parallel Muon training stack.",
+    "tags": [
+      "architecture",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Background loader threads producing pinned batches with optional H2D copy stream",
+      "Rewritten LeakyReLU² MLP (h*h) with explicit dtype casts for better compiler fusion"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

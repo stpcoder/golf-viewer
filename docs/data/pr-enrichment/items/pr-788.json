@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-26T00:35:44.324Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 788,
+    "title": "Record: 11L + order-adaptive 9-gram backoff (mean val_bpb=0.9059)",
+    "state": "open",
+    "updatedAt": "2026-03-26T00:16:37Z",
+    "headSha": "9d25bf3678e9045a0d9a6259b0c353e062d38aa0",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/788",
+    "authorLogin": "hypery11"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_11L_order_adaptive_9gram/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11-layer XSA-all transformer with gated attention/value residuals paired with entropy-gated 2-9gram backoff cache for deterministic scoring.",
+    "tags": [
+      "architecture",
+      "attention",
+      "quantization",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "11-layer XSA-all backbone with LeakyReLU² and gated attention/value residuals",
+      "order-adaptive entropy-gated 2-9gram backoff cache for score-first eval",
+      "GPTQ-lite int6 plus zstd-22 compression"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

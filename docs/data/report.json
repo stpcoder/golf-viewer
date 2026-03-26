@@ -1,25 +1,37 @@
 {
-  "generatedAt": "2026-03-26T00:04:59.340Z",
+  "generatedAt": "2026-03-26T00:35:01.091Z",
   "sourceRepo": "openai/parameter-golf",
   "siteRoot": null,
   "tokenConfigured": true,
   "skipped": [
     {
-      "pr": 649,
+      "stage": "pull-request-readme",
+      "pr": 780,
+      "submissionPath": "records/track_non_record_16mb/2026-03-25_Concordia_Discors_Neurosymbolic/submission.json",
+      "reason": "missing-or-unreadable-readme"
+    },
+    {
+      "stage": "pull-request-readme",
+      "pr": 780,
+      "submissionPath": "records/track_non_record_16mb/2026-03-25_OAG_Neurosymbolic_Hybrid/submission.json",
+      "reason": "missing-or-unreadable-readme"
+    },
+    {
+      "pr": 550,
       "reason": "no-record-submission-json"
     }
   ],
   "errors": [],
   "incremental": {
     "mode": "incremental",
-    "cutoffUpdatedAt": "2026-03-25T23:33:52Z",
+    "cutoffUpdatedAt": "2026-03-26T00:03:48Z",
     "pagesScanned": 2,
     "prsScanned": 200,
-    "prsRefreshed": 6,
-    "prsReused": 194,
+    "prsRefreshed": 13,
+    "prsReused": 187,
     "stoppedEarly": true,
     "refreshFailures": 0,
-    "cacheEntries": 749,
+    "cacheEntries": 754,
     "retryWindowRetained": false
   }
 }

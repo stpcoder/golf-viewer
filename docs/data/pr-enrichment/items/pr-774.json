@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-25T22:04:26.375Z",
+  "generatedAt": "2026-03-26T00:36:13.726Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 774,
     "title": "Record: Order-Adaptive Entropy Gating + XSA-All (val_bpb=0.9370)",
     "state": "open",
-    "updatedAt": "2026-03-25T21:44:58Z",
+    "updatedAt": "2026-03-26T00:18:13Z",
     "headSha": "b4edf2a84b069b2adae9ee590736aa2dd02fcf4b",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/774",
     "authorLogin": "travispchen"
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "XSA spans every layer while per-order entropy thresholds gate n-gram cache mixing so higher-order matches can override sooner.",
+    "summary": "Gates multi-order n-gram cache via order-adaptive entropy thresholds while extending XSA to all 11 layers for finer cache trust.",
     "tags": [
       "attention",
       "architecture",
@@ -28,9 +28,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Per-order entropy thresholds for cache mixing",
-      "XSA applied across all 11 layers",
-      "Lower entropy center to bias gating"
+      "order-based entropy centers for n-gram gating",
+      "XSA applied to every layer to support cache mixing",
+      "multi-order hash n-gram evaluation"
     ]
   },
   "compatibility": {

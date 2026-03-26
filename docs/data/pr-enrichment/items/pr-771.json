@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-25T23:35:53.851Z",
+  "generatedAt": "2026-03-26T00:36:17.693Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 771,
     "title": "Record: AdamW TTT 30ep Cosine + Per-Layer LR (val_bpb: 1.0705)",
     "state": "open",
-    "updatedAt": "2026-03-25T23:25:11Z",
-    "headSha": "e326535058b9a0ca5744dc37fde91404a2066abc",
+    "updatedAt": "2026-03-26T00:15:45Z",
+    "headSha": "318b9cc499e6eb9e2d39a4665470d68e54574e32",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/771",
     "authorLogin": "sunnypatneedi"
   },
@@ -19,18 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Use AdamW 30-epoch cosine-decayed TTT with per-layer LR multipliers and all layers unfrozen to adapt the PR #549 base via validation-only training.",
+    "summary": "Whole-validation TTT uses AdamW with 30-epoch cosine decay and per-layer LR multipliers to adapt the PR #549 quantized model before sliding-window eval.",
     "tags": [
       "val-only",
       "optimizer",
       "training-schedule"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "The TTT run trains on the entire validation stream (tokens pre-graded) to adapt the model before scoring, matching the val-only protocol.",
+    "valOnlyReasoning": "TTT trains on the entire validation token stream (validation-shard training) before scoring, so the run is a val-only adaptation.",
     "techniques": [
-      "AdamW TTT with cosine schedule over 30 epochs",
-      "Per-layer LR multipliers (mlp.proj 3×, mlp.fc 0.5×)",
-      "Validation stream used for adaptation batches"
+      "AdamW TTT with cosine-decayed LR",
+      "Per-layer LR multipliers for mlp projections"
     ]
   },
   "compatibility": {

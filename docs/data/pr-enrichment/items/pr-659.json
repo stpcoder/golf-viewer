@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-25T01:58:28.535Z",
+  "generatedAt": "2026-03-26T00:36:27.099Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
@@ -19,17 +19,15 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Adds confidence-gated online 5-gram cache mixing during sliding-window eval on LeakyReLU/Parallel Muon to capture repeats without extra GPU cost.",
+    "summary": "Introduces a CPU-side confidence-gated 5-gram cache that mixes with sliding-window base scores to boost eval predictions without extra training overhead.",
     "tags": [
-      "evaluation",
-      "sliding-window-eval"
+      "evaluation"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "valOnlyReasoning": "Evaluation innovation applied after standard training; no val-only training.",
     "techniques": [
-      "Confidence-gated online 5-gram cache with log-sum-exp mixing",
-      "Safety gate ensures n-gram mixing never worsens predictions",
-      "Zero-GPU CPU dict lookups accumulate backward-looking statistics"
+      "Confidence-gated log-sum-exp mix of 5-gram cache",
+      "Sliding-window eval with backward-looking n-gram updates"
     ]
   },
   "compatibility": {

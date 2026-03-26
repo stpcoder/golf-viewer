@@ -1,43 +1,41 @@
 {
-  "generatedAt": "2026-03-26T00:05:38.974Z",
+  "generatedAt": "2026-03-26T00:36:09.167Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 779,
     "title": "Record: BackoffNgramMixer + Drift-Free TTT (3-seed mean val_bpb=0.6683)",
     "state": "open",
-    "updatedAt": "2026-03-25T23:49:58Z",
-    "headSha": "611612ee244acd290b7c30d952c8159816532e43",
+    "updatedAt": "2026-03-26T00:35:02Z",
+    "headSha": "bd5e1b9c1e70fbc4e3ada5b5f061b684666ee33b",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/779",
     "authorLogin": "deanbrr"
   },
   "inputs": {
-    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
     "readmePaths": [
-      "records/track_10min_16mb/2026-03-24_5gram_LeakyReLU_ParallelMuon/README.md",
       "records/track_10min_16mb/2026-03-25_BackoffNgramMixer_DriftFreeTTT_0.6683/README.md"
     ],
-    "submissionCount": 2
+    "submissionCount": 1
   },
   "output": {
-    "summary": "BackoffNgramMixer mixes 2-7 order counts via entropy-scaled alpha and pairs with drift-free Q-only TTT adaptation to smooth eval-time compression.",
+    "summary": "Uses entropy-adaptive multi-order n-gram backoff plus drift-free Q-projection TTT to replace the oracle gate with compliant eval-time mixing.",
     "tags": [
-      "val-only",
       "evaluation",
       "training-schedule"
     ],
-    "usesValOnly": true,
-    "valOnlyReasoning": "TTT adaptation is performed directly on validation chunks, so training phases only see the validation shard during inference.",
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
     "techniques": [
-      "multi-order (2-7) n-gram backoff cache",
-      "entropy-adaptive mixing using model entropy",
-      "drift-free Q-only TTT updates (low LR, no Polyak)"
+      "multi-order n-gram cache with entropy-driven mixing",
+      "drift-free QTTT chunk tuning",
+      "pure eval-time mixer over base logits"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": true,
-    "finalUsesValOnly": true,
-    "valOnlyMatchesCollector": false
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
   }
 }

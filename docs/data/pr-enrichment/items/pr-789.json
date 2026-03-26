@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-26T00:35:38.979Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 789,
+    "title": "Add non-record submission: Depth Recurrence + TTT + Gradient Checkpointing ",
+    "state": "open",
+    "updatedAt": "2026-03-26T00:33:14Z",
+    "headSha": "52bcb5f78b0d11d1f7fe722687ce67c57f84110e",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/789",
+    "authorLogin": "ab2891"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-25_DepthRecurrence_TTT_GradCheckpoint/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Depth-recurrent transformer loops (3 blocks ×4) with U-Net skips, TTT, and gradient checkpointing for DDP-enabled training plus final sliding-window eval.",
+    "tags": [
+      "architecture",
+      "training-schedule",
+      "evaluation",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Reused 3 unique transformer blocks across 4 loops with per-iteration RMSNorm and U-Net skip connections",
+      "Swapped torch.compile for gradient checkpointing during DDP training, re-enabling torch.compile post-training for fast eval",
+      "Reserved sliding-window eval and TTT adaptation for the final evaluation stage"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

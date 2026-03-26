@@ -1,8 +1,100 @@
 {
-  "generatedAt": "2026-03-26T00:05:49.513Z",
+  "generatedAt": "2026-03-26T00:36:32.368Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 789,
+      "title": "Add non-record submission: Depth Recurrence + TTT + Gradient Checkpointing ",
+      "status": "open",
+      "updatedAt": "2026-03-26T00:33:14Z",
+      "headSha": "52bcb5f78b0d11d1f7fe722687ce67c57f84110e",
+      "generatedAt": "2026-03-26T00:35:38.979Z",
+      "summary": "Depth-recurrent transformer loops (3 blocks ×4) with U-Net skips, TTT, and gradient checkpointing for DDP-enabled training plus final sliding-window eval.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "evaluation",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-789.json"
+    },
+    {
+      "prNumber": 788,
+      "title": "Record: 11L + order-adaptive 9-gram backoff (mean val_bpb=0.9059)",
+      "status": "open",
+      "updatedAt": "2026-03-26T00:16:37Z",
+      "headSha": "9d25bf3678e9045a0d9a6259b0c353e062d38aa0",
+      "generatedAt": "2026-03-26T00:35:44.324Z",
+      "summary": "11-layer XSA-all transformer with gated attention/value residuals paired with entropy-gated 2-9gram backoff cache for deterministic scoring.",
+      "tags": [
+        "architecture",
+        "attention",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-788.json"
+    },
+    {
+      "prNumber": 786,
+      "title": "Classical Compression Eval-Time Augmentation (WIP)",
+      "status": "open",
+      "updatedAt": "2026-03-26T00:15:00Z",
+      "headSha": "546ebf3355554e9088939af2c890d181b497bf60",
+      "generatedAt": "2026-03-26T00:35:47.952Z",
+      "summary": "Adds cmix/PAQ-style multi-order n-gram backoff, logistic-domain mixing, and planned match/APM steps as eval-time compression augmentations atop PR549 base.",
+      "tags": [
+        "evaluation",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-786.json"
+    },
+    {
+      "prNumber": 785,
+      "title": "Applied Async Prefetching Boost Performance of Any Approach",
+      "status": "open",
+      "updatedAt": "2026-03-26T00:19:44Z",
+      "headSha": "308cea5e6228b40c7f1a47dacea6607ab16c37e1",
+      "generatedAt": "2026-03-26T00:35:54.788Z",
+      "summary": "Pinned async prefetch loader plus compiler-friendly LeakyReLU² MLP to squeeze extra steps from the Parallel Muon training stack.",
+      "tags": [
+        "architecture",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-785.json"
+    },
     {
       "prNumber": 784,
       "title": "Non-record: Depth Recurrence + XSA + LeakyReLU² (val_bpb 1.2065)",
@@ -73,18 +165,39 @@
       "file": "items/pr-782.json"
     },
     {
+      "prNumber": 781,
+      "title": "Claude/train optimized model xc45 w",
+      "status": "closed",
+      "updatedAt": "2026-03-26T00:18:28Z",
+      "headSha": "84905cc7ae92093b0e4aeb99ca05074c075196d2",
+      "generatedAt": "2026-03-26T00:35:59.068Z",
+      "summary": "Eval-time hybrid mixes neural transformer outputs with FST, n-gram cache, and LZ77 predictors via GLN context mixing to improve compression scoring.",
+      "tags": [
+        "evaluation",
+        "architecture",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-781.json"
+    },
+    {
       "prNumber": 780,
       "title": "Non-record WIP: OAG Neurosymbolic Hybrid — FST + N-gram Cache + Entropy-Adaptive Gating",
       "status": "open",
-      "updatedAt": "2026-03-25T22:40:00Z",
-      "headSha": "d5bbc04bd7daccb3fd41dedde8ecd8291cd0202f",
-      "generatedAt": "2026-03-25T23:35:42.489Z",
-      "summary": "Combines neural transformer with ontology-driven FST and high-coverage n-gram cache, gating contributions by prediction entropy.",
+      "updatedAt": "2026-03-26T00:19:02Z",
+      "headSha": "14d1a2d40e1dcd3b373bb47722a7a0f177ce43c0",
+      "generatedAt": "2026-03-26T00:36:05.065Z",
+      "summary": "Systematically mixes zero-cost eval-time predictors (LZ77 match, n-gram cache, FST) with entropy-adaptive gating to boost Parameter Golf performance.",
       "tags": [
-        "non-record",
-        "architecture",
-        "compression",
-        "evaluation"
+        "evaluation",
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,
@@ -100,22 +213,21 @@
       "prNumber": 779,
       "title": "Record: BackoffNgramMixer + Drift-Free TTT (3-seed mean val_bpb=0.6683)",
       "status": "open",
-      "updatedAt": "2026-03-25T23:49:58Z",
-      "headSha": "611612ee244acd290b7c30d952c8159816532e43",
-      "generatedAt": "2026-03-26T00:05:38.974Z",
-      "summary": "BackoffNgramMixer mixes 2-7 order counts via entropy-scaled alpha and pairs with drift-free Q-only TTT adaptation to smooth eval-time compression.",
+      "updatedAt": "2026-03-26T00:35:02Z",
+      "headSha": "bd5e1b9c1e70fbc4e3ada5b5f061b684666ee33b",
+      "generatedAt": "2026-03-26T00:36:09.167Z",
+      "summary": "Uses entropy-adaptive multi-order n-gram backoff plus drift-free Q-projection TTT to replace the oracle gate with compliant eval-time mixing.",
       "tags": [
-        "val-only",
         "evaluation",
         "training-schedule"
       ],
       "flags": {
-        "usesValOnly": true,
-        "usesValOnlyAi": true,
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": false
+        "valOnlyMatchesCollector": true
       },
       "file": "items/pr-779.json"
     },
@@ -192,10 +304,10 @@
       "prNumber": 774,
       "title": "Record: Order-Adaptive Entropy Gating + XSA-All (val_bpb=0.9370)",
       "status": "open",
-      "updatedAt": "2026-03-25T21:44:58Z",
+      "updatedAt": "2026-03-26T00:18:13Z",
       "headSha": "b4edf2a84b069b2adae9ee590736aa2dd02fcf4b",
-      "generatedAt": "2026-03-25T22:04:26.375Z",
-      "summary": "XSA spans every layer while per-order entropy thresholds gate n-gram cache mixing so higher-order matches can override sooner.",
+      "generatedAt": "2026-03-26T00:36:13.726Z",
+      "summary": "Gates multi-order n-gram cache via order-adaptive entropy thresholds while extending XSA to all 11 layers for finer cache trust.",
       "tags": [
         "attention",
         "architecture",
@@ -239,10 +351,10 @@
       "prNumber": 771,
       "title": "Record: AdamW TTT 30ep Cosine + Per-Layer LR (val_bpb: 1.0705)",
       "status": "open",
-      "updatedAt": "2026-03-25T23:25:11Z",
-      "headSha": "e326535058b9a0ca5744dc37fde91404a2066abc",
-      "generatedAt": "2026-03-25T23:35:53.851Z",
-      "summary": "Use AdamW 30-epoch cosine-decayed TTT with per-layer LR multipliers and all layers unfrozen to adapt the PR #549 base via validation-only training.",
+      "updatedAt": "2026-03-26T00:15:45Z",
+      "headSha": "318b9cc499e6eb9e2d39a4665470d68e54574e32",
+      "generatedAt": "2026-03-26T00:36:17.693Z",
+      "summary": "Whole-validation TTT uses AdamW with 30-epoch cosine decay and per-layer LR multipliers to adapt the PR #549 quantized model before sliding-window eval.",
       "tags": [
         "val-only",
         "optimizer",
@@ -283,14 +395,14 @@
       "prNumber": 769,
       "title": "PROTEUS+STYX — val_bpb 0.8508 (3-seed mean) — LeakyReLU(0.9)² + 5-gram Eval Cache",
       "status": "open",
-      "updatedAt": "2026-03-25T22:22:11Z",
+      "updatedAt": "2026-03-26T00:20:03Z",
       "headSha": "1c51c1042a1f6a81af271c5a00a8bd66b927dbb4",
-      "generatedAt": "2026-03-25T22:34:38.465Z",
-      "summary": "Applies LeakyReLU(0.9)² activations with a backward-looking 5-gram eval cache blended 0.8/0.2 during sliding-window evaluation.",
+      "generatedAt": "2026-03-26T00:36:21.882Z",
+      "summary": "PROTEUS+STYX pairs a steeper LeakyReLU² activation with a backward-looking 5-gram hash cache and fixed blending during sliding-window eval.",
       "tags": [
         "architecture",
         "evaluation",
-        "sliding-window-eval"
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2141,6 +2253,27 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-660.json"
+    },
+    {
+      "prNumber": 659,
+      "title": "Record: 5-gram Eval Cache + LeakyReLU² + Parallel Muon val_bpb: 1.0920 (3-seed mean, std 0.0007) | ~15.9 MB | 8×H100 SXM",
+      "status": "closed",
+      "updatedAt": "2026-03-25T01:56:47Z",
+      "headSha": "d9349d06fca5021e39ecb906d09516b2146f8114",
+      "generatedAt": "2026-03-26T00:36:27.099Z",
+      "summary": "Introduces a CPU-side confidence-gated 5-gram cache that mixes with sliding-window base scores to boost eval predictions without extra training overhead.",
+      "tags": [
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-659.json"
     },
     {
       "prNumber": 658,
@@ -9957,15 +10090,14 @@
       "prNumber": 182,
       "title": "Non-record: Linearized Neural Memory + TTT (val_bpb=1.1844)",
       "status": "open",
-      "updatedAt": "2026-03-26T00:03:48Z",
-      "headSha": "3cf05f9aaea4f2f02dd479d3e1a0051270e6725f",
-      "generatedAt": "2026-03-26T00:05:49.484Z",
-      "summary": "Adds Titans-style closed-form neural memory in each block plus LoRA TTT eval and mixed-precision quantization to embed adaptation in the forward pass.",
+      "updatedAt": "2026-03-26T00:30:03Z",
+      "headSha": "0e239fcfe0e4626d46f71294bbf93e043d7c9f31",
+      "generatedAt": "2026-03-26T00:36:32.343Z",
+      "summary": "Adds Titans-style linearized neural memory per block plus LoRA TTT adaptation with int6/FP16 tweaks for the 16MB track.",
       "tags": [
         "architecture",
         "attention",
-        "quantization",
-        "optimizer"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,

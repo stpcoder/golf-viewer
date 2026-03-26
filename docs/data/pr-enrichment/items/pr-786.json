@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-26T00:35:47.952Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 786,
+    "title": "Classical Compression Eval-Time Augmentation (WIP)",
+    "state": "open",
+    "updatedAt": "2026-03-26T00:15:00Z",
+    "headSha": "546ebf3355554e9088939af2c890d181b497bf60",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/786",
+    "authorLogin": "shinegami-2002"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_Classical_Compression_Eval/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Adds cmix/PAQ-style multi-order n-gram backoff, logistic-domain mixing, and planned match/APM steps as eval-time compression augmentations atop PR549 base.",
+    "tags": [
+      "evaluation",
+      "compression"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Multi-order n-gram backoff with entropy-adaptive mixing",
+      "Logistic-domain mixture for extreme probabilities",
+      "Eval-time classical compression stack on PR549"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
