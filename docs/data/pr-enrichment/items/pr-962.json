@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-27T17:17:01.323Z",
+  "generatedAt": "2026-03-27T18:17:07.126Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 962,
-    "title": "Record: 0.0214 bpb - Low Eval-Time Memory Regime: Packed Training N-gram Artifact + Learned Gate (No Phrase Cache)",
-    "state": "open",
-    "updatedAt": "2026-03-27T17:15:11Z",
+    "title": "[Closed] Record: 0.0214 bpb - Low Eval-Time Memory Regime: Packed Training N-gram Artifact + Learned Gate (No Phrase Cache)",
+    "state": "closed",
+    "updatedAt": "2026-03-27T17:54:42Z",
     "headSha": "e5a0cbc8dedf449592e760922b0af5314eb7cf67",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/962",
     "authorLogin": "AnirudhRahul"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines a packed order-2..9 training n-gram cache with a learned neural-vs-ngram gate and drops mixer/cache overlays for a lean single-pass eval path.",
+    "summary": "Blends a packed order-2..9 training n-gram artifact with a learned gate while keeping a single-pass causal eval and no mixer or phrase cache overlays.",
     "tags": [
       "architecture",
       "evaluation",
-      "quantization"
+      "compression"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Packed order-2..9 n-gram cache artifact",
-      "Learned gate mixing neural and n-gram experts without mixer",
-      "Per-token renormalization of final distribution"
+      "Packed order-2..9 n-gram cache artifact loaded at eval start",
+      "Learned gate mixing neural and n-gram experts with normalized outputs",
+      "Removed mixer/phrase cache to stay within low eval-memory regime"
     ]
   },
   "compatibility": {

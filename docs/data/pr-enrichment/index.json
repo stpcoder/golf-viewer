@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-27T17:47:35.207Z",
+  "generatedAt": "2026-03-27T18:17:16.571Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -96,16 +96,16 @@
     },
     {
       "prNumber": 962,
-      "title": "Record: 0.0214 bpb - Low Eval-Time Memory Regime: Packed Training N-gram Artifact + Learned Gate (No Phrase Cache)",
-      "status": "open",
-      "updatedAt": "2026-03-27T17:15:11Z",
+      "title": "[Closed] Record: 0.0214 bpb - Low Eval-Time Memory Regime: Packed Training N-gram Artifact + Learned Gate (No Phrase Cache)",
+      "status": "closed",
+      "updatedAt": "2026-03-27T17:54:42Z",
       "headSha": "e5a0cbc8dedf449592e760922b0af5314eb7cf67",
-      "generatedAt": "2026-03-27T17:17:01.323Z",
-      "summary": "Combines a packed order-2..9 training n-gram cache with a learned neural-vs-ngram gate and drops mixer/cache overlays for a lean single-pass eval path.",
+      "generatedAt": "2026-03-27T18:17:07.126Z",
+      "summary": "Blends a packed order-2..9 training n-gram artifact with a learned gate while keeping a single-pass causal eval and no mixer or phrase cache overlays.",
       "tags": [
         "architecture",
         "evaluation",
-        "quantization"
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
@@ -121,15 +121,14 @@
       "prNumber": 961,
       "title": "Record: 0.0881 BPB — 11L Int5 GPTQ + Order-12 N-gram + Phrase Cache + 65K Chunks",
       "status": "open",
-      "updatedAt": "2026-03-27T15:19:25Z",
+      "updatedAt": "2026-03-27T18:14:23Z",
       "headSha": "920692d672dea8425c281836182ac4000f6c6e43",
-      "generatedAt": "2026-03-27T15:46:43.216Z",
-      "summary": "Fully-trained 11L 512d GPT uses Full-Hessian int5 GPTQ plus order-12 n-gram/phrase caches and 65K-token chunks to fit single-pass leaderboard eval limits.",
+      "generatedAt": "2026-03-27T18:17:11.720Z",
+      "summary": "11L Int5 GPTQ model pairs full Hessian quantization with order-12 backoff n-gram and phrase caches, adaptive alpha, and 65K chunks to meet eval limits.",
       "tags": [
-        "architecture",
         "quantization",
-        "evaluation",
-        "compression"
+        "architecture",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -8699,13 +8698,14 @@
       "prNumber": 425,
       "title": "Codex/runpod 2026 03 20 checkpoint",
       "status": "open",
-      "updatedAt": "2026-03-27T16:18:16Z",
-      "headSha": "ad84ca93dcc176b4d7a5c0cc9849bc77f7297bcd",
-      "generatedAt": "2026-03-27T16:47:17.703Z",
-      "summary": "Single H100 run pairs ATTN_TWICE_ALPHA tuning with split eval lengths (2048 vs 1024) to balance roundtrip and TTT scoring for compact checkpoints.",
+      "updatedAt": "2026-03-27T18:10:16Z",
+      "headSha": "7dba94e6464124a869f0afdeb1782390fcfbf830",
+      "generatedAt": "2026-03-27T18:17:16.511Z",
+      "summary": "Explored ATTN_TWICE alpha tuning with split EVAL/TTT sequence lengths to balance roundtrip and TTT eval behavior in a 1xH100 ablation run.",
       "tags": [
-        "evaluation",
         "attention",
+        "evaluation",
+        "muon",
         "non-record"
       ],
       "flags": {

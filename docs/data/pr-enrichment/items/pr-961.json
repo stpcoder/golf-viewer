@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-27T15:46:43.216Z",
+  "generatedAt": "2026-03-27T18:17:11.720Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 961,
     "title": "Record: 0.0881 BPB — 11L Int5 GPTQ + Order-12 N-gram + Phrase Cache + 65K Chunks",
     "state": "open",
-    "updatedAt": "2026-03-27T15:19:25Z",
+    "updatedAt": "2026-03-27T18:14:23Z",
     "headSha": "920692d672dea8425c281836182ac4000f6c6e43",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/961",
     "authorLogin": "callithyia"
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Fully-trained 11L 512d GPT uses Full-Hessian int5 GPTQ plus order-12 n-gram/phrase caches and 65K-token chunks to fit single-pass leaderboard eval limits.",
+    "summary": "11L Int5 GPTQ model pairs full Hessian quantization with order-12 backoff n-gram and phrase caches, adaptive alpha, and 65K chunks to meet eval limits.",
     "tags": [
-      "architecture",
       "quantization",
-      "evaluation",
-      "compression"
+      "architecture",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Full-Hessian GPTQ int5 quantization",
-      "Order-12 backoff n-gram with long phrase cache scoring",
-      "65K-token chunks for warmer cache and faster single-pass eval"
+      "Order-12 backoff n-gram + phrase cache with entropy-adaptive alpha",
+      "Full Hessian GPTQ int5 quantization with LZMA compression",
+      "65K token chunks with temperature sharpening to stay within eval budget"
     ]
   },
   "compatibility": {

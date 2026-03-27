@@ -2,7 +2,7 @@
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
-  "generatedAt": "2026-03-27T17:47:35.207Z",
+  "generatedAt": "2026-03-27T18:17:16.571Z",
   "prs": {
     "6": {
       "signature": "2026-03-20-pr-enrichment-v2-approach-first:11373420c1f50e6a83599fb25bb73f38a6555cb7:closed:2026-03-18T18:34:32Z",
@@ -1679,10 +1679,10 @@
       "headSha": "94aeda35513990af3d2854bf3fa57b4006f0b399"
     },
     "425": {
-      "signature": "2026-03-20-pr-enrichment-v2-approach-first:ad84ca93dcc176b4d7a5c0cc9849bc77f7297bcd:open:2026-03-27T16:18:16Z",
+      "signature": "2026-03-20-pr-enrichment-v2-approach-first:7dba94e6464124a869f0afdeb1782390fcfbf830:open:2026-03-27T18:10:16Z",
       "file": "items/pr-425.json",
-      "updatedAt": "2026-03-27T16:18:16Z",
-      "headSha": "ad84ca93dcc176b4d7a5c0cc9849bc77f7297bcd"
+      "updatedAt": "2026-03-27T18:10:16Z",
+      "headSha": "7dba94e6464124a869f0afdeb1782390fcfbf830"
     },
     "426": {
       "signature": "2026-03-20-pr-enrichment-v2-approach-first:2010a3929ffa0e7cc407fdc0d53ee8fde57b57a2:open:2026-03-22T14:04:59Z",
@@ -3899,15 +3899,15 @@
       "headSha": "a2b2b3d0b1b8f5df9c3cd6471342cb7cb4b17844"
     },
     "961": {
-      "signature": "2026-03-20-pr-enrichment-v2-approach-first:920692d672dea8425c281836182ac4000f6c6e43:open:2026-03-27T15:19:25Z",
+      "signature": "2026-03-20-pr-enrichment-v2-approach-first:920692d672dea8425c281836182ac4000f6c6e43:open:2026-03-27T18:14:23Z",
       "file": "items/pr-961.json",
-      "updatedAt": "2026-03-27T15:19:25Z",
+      "updatedAt": "2026-03-27T18:14:23Z",
       "headSha": "920692d672dea8425c281836182ac4000f6c6e43"
     },
     "962": {
-      "signature": "2026-03-20-pr-enrichment-v2-approach-first:e5a0cbc8dedf449592e760922b0af5314eb7cf67:open:2026-03-27T17:15:11Z",
+      "signature": "2026-03-20-pr-enrichment-v2-approach-first:e5a0cbc8dedf449592e760922b0af5314eb7cf67:closed:2026-03-27T17:54:42Z",
       "file": "items/pr-962.json",
-      "updatedAt": "2026-03-27T17:15:11Z",
+      "updatedAt": "2026-03-27T17:54:42Z",
       "headSha": "e5a0cbc8dedf449592e760922b0af5314eb7cf67"
     },
     "964": {
