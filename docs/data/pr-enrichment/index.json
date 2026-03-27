@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-27T01:44:28.029Z",
+  "generatedAt": "2026-03-27T02:13:53.185Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -351,16 +351,15 @@
     },
     {
       "prNumber": 900,
-      "title": "Record: Two-Level Dirichlet Posterior Mixing — 0.11807 BPB",
+      "title": "Record: Two-Level Dirichlet Posterior Mixing with Per-Order OBCL -- 0.1156 BPB",
       "status": "open",
-      "updatedAt": "2026-03-27T00:58:18Z",
-      "headSha": "3a9cd5c5d14d54ee462807ca527686181f39af9e",
-      "generatedAt": "2026-03-27T01:13:38.346Z",
-      "summary": "Hierarchically smooth neural-base probabilities via Dirichlet posterior mixing across 2–15-gram backoff and phrase suffix probes.",
+      "updatedAt": "2026-03-27T02:09:44Z",
+      "headSha": "1190eebd8670aa31c74488836a1b80f7c062fb61",
+      "generatedAt": "2026-03-27T02:13:39.079Z",
+      "summary": "Two-level Dirichlet hierarchy with neural base, per-order OBCL-tuned concentrations across 2–15 grams, and phrase suffix smoothing.",
       "tags": [
         "architecture",
-        "regularization",
-        "evaluation"
+        "regularization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1936,12 +1935,11 @@
       "prNumber": 800,
       "title": "Record: X-WING — Shared N-gram Tables + Cubric (val_bpb=0.5644)",
       "status": "open",
-      "updatedAt": "2026-03-26T05:22:35Z",
+      "updatedAt": "2026-03-27T02:05:12Z",
       "headSha": "7b29d6b5e32db72c66f6a6db26109fda8e46b5e0",
-      "generatedAt": "2026-03-26T05:37:17.896Z",
-      "summary": "Chunk-based shared n-gram tables let each rank see all 62M tokens; Cubric per-order adaptive alphas damp orders 2-3 while boosting 5-7.",
+      "generatedAt": "2026-03-27T02:13:45.041Z",
+      "summary": "Chunked shared n-gram tables give every GPU the full validation history while Cubric per-order alpha adjusts each order’s trust.",
       "tags": [
-        "architecture",
         "evaluation"
       ],
       "flags": {
@@ -7751,15 +7749,15 @@
       "prNumber": 435,
       "title": "Radial bitnet submission",
       "status": "open",
-      "updatedAt": "2026-03-26T23:27:34Z",
-      "headSha": "c930854526880488b11435d55ba6c0dd6a6f8cf5",
-      "generatedAt": "2026-03-26T23:45:01.131Z",
-      "summary": "Combines FRO Stable optimizer, radial token geometry, and disciplined bigram hash fusion with H100-tuned precision for the 16MB Parameter Golf run.",
+      "updatedAt": "2026-03-27T01:56:12Z",
+      "headSha": "fabca72d94fce88e7c4cc4856f4db126f7fe1b5e",
+      "generatedAt": "2026-03-27T02:13:53.121Z",
+      "summary": "Combines FRO Stable optimizer with radial token geometry, bigram-hash branch, and residual_b fusion fine-tuned for H100 token-density in the 16MB track.",
       "tags": [
         "optimizer",
         "architecture",
-        "tokenization",
-        "mixed-precision"
+        "mixed-precision",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-26T23:45:01.131Z",
+  "generatedAt": "2026-03-27T02:13:53.121Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 435,
     "title": "Radial bitnet submission",
     "state": "open",
-    "updatedAt": "2026-03-26T23:27:34Z",
-    "headSha": "c930854526880488b11435d55ba6c0dd6a6f8cf5",
+    "updatedAt": "2026-03-27T01:56:12Z",
+    "headSha": "fabca72d94fce88e7c4cc4856f4db126f7fe1b5e",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/435",
     "authorLogin": "rthgit"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines FRO Stable optimizer, radial token geometry, and disciplined bigram hash fusion with H100-tuned precision for the 16MB Parameter Golf run.",
+    "summary": "Combines FRO Stable optimizer with radial token geometry, bigram-hash branch, and residual_b fusion fine-tuned for H100 token-density in the 16MB track.",
     "tags": [
       "optimizer",
       "architecture",
-      "tokenization",
-      "mixed-precision"
+      "mixed-precision",
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "FRO Stable optimizer with analytic LR schedule",
-      "Radial token geometry plus disciplined bigram hash branches",
-      "H100-tuned bfloat16/TF32 throughput with GPU EMA"
+      "FRO Stable + AdamW combo with 400-step warmup and cosine decay",
+      "Radial token geometry plus 1024-bucket bigram-hash branch",
+      "Residual_b fusion (beta 0.36) with GPU EMA and high-throughput tuning"
     ]
   },
   "compatibility": {

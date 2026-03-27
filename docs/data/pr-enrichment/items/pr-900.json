@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-27T01:13:38.346Z",
+  "generatedAt": "2026-03-27T02:13:39.079Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 900,
-    "title": "Record: Two-Level Dirichlet Posterior Mixing — 0.11807 BPB",
+    "title": "Record: Two-Level Dirichlet Posterior Mixing with Per-Order OBCL -- 0.1156 BPB",
     "state": "open",
-    "updatedAt": "2026-03-27T00:58:18Z",
-    "headSha": "3a9cd5c5d14d54ee462807ca527686181f39af9e",
+    "updatedAt": "2026-03-27T02:09:44Z",
+    "headSha": "1190eebd8670aa31c74488836a1b80f7c062fb61",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/900",
     "authorLogin": "Robby955"
   },
@@ -19,18 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Hierarchically smooth neural-base probabilities via Dirichlet posterior mixing across 2–15-gram backoff and phrase suffix probes.",
+    "summary": "Two-level Dirichlet hierarchy with neural base, per-order OBCL-tuned concentrations across 2–15 grams, and phrase suffix smoothing.",
     "tags": [
       "architecture",
-      "regularization",
-      "evaluation"
+      "regularization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Hierarchical Dirichlet smoothing chaining neural base, n-gram orders, and phrase suffix counts",
-      "Phrase suffix cache queried at fixed lengths with tuned concentration",
-      "Neural LM serves as the OBCL-informed base measure for each posterior"
+      "Per-order OBCL concentration learning for each n-gram order",
+      "Phrase-level Dirichlet smoothing over suffix matches",
+      "Neural LM base prior feeding the hierarchical Dirichlet chain"
     ]
   },
   "compatibility": {

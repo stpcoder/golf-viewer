@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-26T05:37:17.896Z",
+  "generatedAt": "2026-03-27T02:13:45.041Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 800,
     "title": "Record: X-WING — Shared N-gram Tables + Cubric (val_bpb=0.5644)",
     "state": "open",
-    "updatedAt": "2026-03-26T05:22:35Z",
+    "updatedAt": "2026-03-27T02:05:12Z",
     "headSha": "7b29d6b5e32db72c66f6a6db26109fda8e46b5e0",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/800",
     "authorLogin": "newjordan"
@@ -25,16 +25,15 @@
     "submissionCount": 7
   },
   "output": {
-    "summary": "Chunk-based shared n-gram tables let each rank see all 62M tokens; Cubric per-order adaptive alphas damp orders 2-3 while boosting 5-7.",
+    "summary": "Chunked shared n-gram tables give every GPU the full validation history while Cubric per-order alpha adjusts each order’s trust.",
     "tags": [
-      "architecture",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "chunk-based shared n-gram tables aggregating counts across ranks",
-      "per-order Cubric alpha scaling to suppress noisy low orders and amplify reliable high ones"
+      "chunk-based shared n-gram tables",
+      "per-order Cubric adaptive alpha scaling"
     ]
   },
   "compatibility": {
