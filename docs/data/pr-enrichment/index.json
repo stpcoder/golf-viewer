@@ -1,8 +1,55 @@
 {
-  "generatedAt": "2026-03-27T21:19:00.182Z",
+  "generatedAt": "2026-03-27T21:48:42.704Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 986,
+      "title": "Record: Packed N-gram + Two-Pass   Dirichlet CTW — val_bpb 0.0830 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-03-27T21:32:28Z",
+      "headSha": "1c70fa129218ea7107a314c465c74588a1af7b9f",
+      "generatedAt": "2026-03-27T21:48:32.261Z",
+      "summary": "Prebuilt packed order-2–13 n-gram tables and two-pass rescore feed a hierarchical Dirichlet CTW mixer allowing the vestigial GPT to defer to rich caches.",
+      "tags": [
+        "architecture",
+        "evaluation",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-986.json"
+    },
+    {
+      "prNumber": 985,
+      "title": "Add 128-cluster baseline submission files",
+      "status": "open",
+      "updatedAt": "2026-03-27T21:26:27Z",
+      "headSha": "463e67295410e328ab67a3ba805e26c46ec4cefd",
+      "generatedAt": "2026-03-27T21:48:37.091Z",
+      "summary": "6-layer 800D Transformer uses 128-cluster specialist MoE with Muon/Adam training, SWA, and hybrid quantization to fit the 16MB limit.",
+      "tags": [
+        "architecture",
+        "muon",
+        "quantization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-985.json"
+    },
     {
       "prNumber": 984,
       "title": "submission 2026-03-27_PhaseCoherenceGatedGradients PIC-GID + ParallelMuon",
@@ -54,10 +101,10 @@
       "prNumber": 982,
       "title": " Record: Fort Knox — Legal Packed Training Cache, Zero Val Adaptation (val_bpb 0.0638, 3-seed)",
       "status": "open",
-      "updatedAt": "2026-03-27T20:57:05Z",
+      "updatedAt": "2026-03-27T21:47:02Z",
       "headSha": "2c970e959c151916411737173c7eba618975d879",
-      "generatedAt": "2026-03-27T21:18:41.404Z",
-      "summary": "Fort Knox trains a 6L FP16 transformer and packs a frozen order-2-9 n-gram cache into the artifact, then blends neural logits with cached stats during single-pass eval.",
+      "generatedAt": "2026-03-27T21:48:42.553Z",
+      "summary": "Fuses a frozen 6L transformer with packed training-only n-gram stats and sharpened logits so eval uses no validation-time adaptation.",
       "tags": [
         "val-only",
         "architecture",
@@ -1570,30 +1617,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-892.json"
-    },
-    {
-      "prNumber": 890,
-      "title": "Record: Order-Adaptive 9-gram  Backoff + Distributed Prefill — val_bpb 0.4405 (3-seed mean)",
-      "status": "open",
-      "updatedAt": "2026-03-26T19:18:18Z",
-      "headSha": "1a2ac56c297b1081b0819abf41f1c34315ea4f35",
-      "generatedAt": "2026-03-26T19:43:23.791Z",
-      "summary": "11L XSA transformer with int5 quant and EMA+SWA uses an order-adaptive 9-gram entropy-gated cache plus distributed prefill during sliding-window eval.",
-      "tags": [
-        "architecture",
-        "attention",
-        "quantization",
-        "evaluation"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-890.json"
     },
     {
       "prNumber": 888,
@@ -11384,30 +11407,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-281.json"
-    },
-    {
-      "prNumber": 279,
-      "title": "Title: AtomLogic v3.2 Universal SOTA - 1.15 BPB Target",
-      "status": "open",
-      "updatedAt": "2026-03-22T20:21:39Z",
-      "headSha": "dc28366bfeed41432cad6be176c93cc9b5ce78bb",
-      "generatedAt": "2026-03-22T20:42:29.939Z",
-      "summary": "Universal Transformer stacks 20 shared-block iterations with Value-Only MoE, VeRA TTT adaptation, and Muon/NF4 precision for a compact SOTA run.",
-      "tags": [
-        "architecture",
-        "optimizer",
-        "quantization",
-        "non-record"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-279.json"
     },
     {
       "prNumber": 278,

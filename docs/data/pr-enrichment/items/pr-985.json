@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-27T21:48:37.091Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 985,
+    "title": "Add 128-cluster baseline submission files",
+    "state": "open",
+    "updatedAt": "2026-03-27T21:26:27Z",
+    "headSha": "463e67295410e328ab67a3ba805e26c46ec4cefd",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/985",
+    "authorLogin": "danielweidinger2299-debug"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-27_6L_128c_Gating_Muon_SWA_Mixed56_1.3540/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "6-layer 800D Transformer uses 128-cluster specialist MoE with Muon/Adam training, SWA, and hybrid quantization to fit the 16MB limit.",
+    "tags": [
+      "architecture",
+      "muon",
+      "quantization",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Specialist MoE with 128 Bigram Gating experts",
+      "Muon-backed Adam training with SWA averaging",
+      "Hybrid 5-bit MLP / 6-bit rest quantization to meet size cap"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

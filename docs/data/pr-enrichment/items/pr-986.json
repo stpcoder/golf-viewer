@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-27T21:48:32.261Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 986,
+    "title": "Record: Packed N-gram + Two-Pass   Dirichlet CTW — val_bpb 0.0830 (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-03-27T21:32:28Z",
+    "headSha": "1c70fa129218ea7107a314c465c74588a1af7b9f",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/986",
+    "authorLogin": "sofiabod"
+  },
+  "inputs": {
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-27_PackedNgram_TwoPass_DirichletCTW/README.md",
+      "records/track_10min_16mb/2026-03-26_OrderAdaptive_9gram_Prefill/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "Prebuilt packed order-2–13 n-gram tables and two-pass rescore feed a hierarchical Dirichlet CTW mixer allowing the vestigial GPT to defer to rich caches.",
+    "tags": [
+      "architecture",
+      "evaluation",
+      "compression"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Prebuilt packed order-2–13 n-gram artifact caches",
+      "Two-pass eval that warms the cache then rescores every position",
+      "Hierarchical Dirichlet CTW mixing across orders"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
