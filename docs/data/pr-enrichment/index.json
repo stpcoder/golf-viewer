@@ -1,8 +1,50 @@
 {
-  "generatedAt": "2026-03-26T23:45:01.196Z",
+  "generatedAt": "2026-03-27T00:13:47.655Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 913,
+      "title": "Record: Cache Is All You Need — val_bpb 0.0887, 622KB artifact (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-03-27T00:12:28Z",
+      "headSha": "64c9d07a00e618ebd4f74ee9b2e2d6f2a7ef4f58",
+      "generatedAt": "2026-03-27T00:13:21.572Z",
+      "summary": "Tiny GPT baseline enhanced with online, entropy-weighted n-gram then phrase caches for eval-time compression of repeated contexts.",
+      "tags": [
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-913.json"
+    },
+    {
+      "prNumber": 912,
+      "title": "10L + PPM Full-Rescore Order-12 N-gram (0.3461 BPB)",
+      "status": "open",
+      "updatedAt": "2026-03-27T00:11:44Z",
+      "headSha": "eb92389ec34a408ed071a0d04b56cf29fc3f2f4c",
+      "generatedAt": "2026-03-27T00:13:28.587Z",
+      "summary": "Two-pass eval builds a full n-gram cache, then PPM-blends orders 2-12 with leave-one-out counts to complement the 10L GQA model.",
+      "tags": [
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-912.json"
+    },
     {
       "prNumber": 911,
       "title": "Ternary Reasoner — 12L/768d Capsule-Feedback Universal Transformer",
@@ -210,16 +252,16 @@
     },
     {
       "prNumber": 896,
-      "title": "[Non-Record] JEPA Self-Distillation with EMA Target Encoder for Autoregressive LM (val_bpb: 1.19) | Current Noisy/Negative Result",
+      "title": "[Non-Record] JEPA Self-Distillation with EMA Target Encoder for Autoregressive LM | Controlled A/B Shows No Gain Over Vanilla CE (val_bpb: 1.19)",
       "status": "open",
-      "updatedAt": "2026-03-26T23:34:07Z",
-      "headSha": "78006f176c7cf5f36d8ebd665a761b1457d4a90d",
-      "generatedAt": "2026-03-26T23:44:26.518Z",
-      "summary": "Adds JEPA-style EMA target encoder self-distillation on top of a causal transformer to forecast next-token latents but shows no gain over vanilla CE.",
+      "updatedAt": "2026-03-26T23:59:59Z",
+      "headSha": "8c31f458a7af1fb9b8d5c692aefe2349ba0111bc",
+      "generatedAt": "2026-03-27T00:13:35.302Z",
+      "summary": "Causal transformer augmented with JEPA self-distillation using an EMA target encoder, predictor MLP, and VICReg-stabilized latent loss alongside CE training.",
       "tags": [
         "architecture",
         "regularization",
-        "training-schedule",
+        "attention",
         "non-record"
       ],
       "flags": {
@@ -551,29 +593,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-877.json"
-    },
-    {
-      "prNumber": 876,
-      "title": "10L + Two-Pass Order-11 N-gram Backoff (0.5863 BPB)",
-      "status": "open",
-      "updatedAt": "2026-03-26T17:47:45Z",
-      "headSha": "7a81a23a5ad782a2eaeee36d2fefea894cb9ca9b",
-      "generatedAt": "2026-03-26T18:11:51.562Z",
-      "summary": "10L GQA model with mixed int5/int6 quantization uses two-pass order-11 hashed n-gram cache with entropy-adaptive interpolation.",
-      "tags": [
-        "evaluation",
-        "quantization",
-        "architecture"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-876.json"
     },
     {
       "prNumber": 875,
@@ -1431,14 +1450,13 @@
       "prNumber": 818,
       "title": "[record] add HWNODE record - 0.5527",
       "status": "open",
-      "updatedAt": "2026-03-26T23:09:17Z",
+      "updatedAt": "2026-03-26T23:58:27Z",
       "headSha": "54e7686674675775fe43e372d9bf6d5c1e428dab",
-      "generatedAt": "2026-03-26T23:44:50.055Z",
-      "summary": "HWNODE replaces MLPs with a Hammerstein-Wiener linearized ODE whose Taylor terms create virtual layers while spectral norm keeps the dynamics stable.",
+      "generatedAt": "2026-03-27T00:13:47.534Z",
+      "summary": "Wraps a spectral-normalized linear ODE core in Hammerstein-Wiener nonlinearities to Taylor-expand shared weights into virtual layers.",
       "tags": [
         "architecture",
-        "regularization",
-        "compression"
+        "regularization"
       ],
       "flags": {
         "usesValOnly": false,
