@@ -1,20 +1,43 @@
 {
-  "generatedAt": "2026-03-27T15:16:45.575Z",
+  "generatedAt": "2026-03-27T15:46:59.737Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
+      "prNumber": 962,
+      "title": "Record: 0.0214 bpb - Low Eval-Time Memory Regime: Packed Training N-gram Artifact + Learned Gate (No Phrase Cache)",
+      "status": "open",
+      "updatedAt": "2026-03-27T15:45:45Z",
+      "headSha": "57776873fc584397a41022103228febb0063f00f",
+      "generatedAt": "2026-03-27T15:46:37.339Z",
+      "summary": "Packed order-2..9 training n-gram cache plus a learned neural/ngram gate and dropped the mixer/phrase cache to keep the causal eval path lean.",
+      "tags": [
+        "architecture",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-962.json"
+    },
+    {
       "prNumber": 961,
       "title": "Record: 0.0881 BPB — 11L Int5 GPTQ + Order-12 N-gram + Phrase Cache + 65K Chunks",
       "status": "open",
-      "updatedAt": "2026-03-27T15:13:03Z",
-      "headSha": "42bb4aa34affad22c0a713997a735cef0cf297ed",
-      "generatedAt": "2026-03-27T15:16:34.118Z",
-      "summary": "Uses an int5-quantized 11L base model with order-12 n-gram plus phrase caches and 65K-token chunks for single-pass cache evaluation.",
+      "updatedAt": "2026-03-27T15:19:25Z",
+      "headSha": "920692d672dea8425c281836182ac4000f6c6e43",
+      "generatedAt": "2026-03-27T15:46:43.216Z",
+      "summary": "Fully-trained 11L 512d GPT uses Full-Hessian int5 GPTQ plus order-12 n-gram/phrase caches and 65K-token chunks to fit single-pass leaderboard eval limits.",
       "tags": [
+        "architecture",
         "quantization",
         "evaluation",
-        "architecture"
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
@@ -561,15 +584,15 @@
     {
       "prNumber": 931,
       "title": "Record: 0.0498 bpb - Packed Training N-gram Artifact + Learned Weighting Gate (updated) ",
-      "status": "open",
-      "updatedAt": "2026-03-27T07:18:14Z",
+      "status": "closed",
+      "updatedAt": "2026-03-27T15:31:59Z",
       "headSha": "5e6c5de2aebbe7bf6b9a93e95b08d0c8ab80669d",
-      "generatedAt": "2026-03-27T07:44:52.749Z",
-      "summary": "Learned gate blends neural output with packed order-2..9 n-gram experts whose cache is serialized into the artifact for immediate warm-start and causal eval.",
+      "generatedAt": "2026-03-27T15:46:47.675Z",
+      "summary": "Learned gate blends the neural LM with a packed order-2..9 n-gram artifact that loads from the submission to warm eval while keeping single-pass score-first TTT.",
       "tags": [
         "architecture",
-        "evaluation",
-        "compression"
+        "compression",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1273,15 +1296,14 @@
     },
     {
       "prNumber": 886,
-      "title": "RFC: N-gram scores are invalid, and the eval setup needs constraints",
+      "title": "RFC: N-gram distributions don't sum to 1 — proposed fixes",
       "status": "open",
-      "updatedAt": "2026-03-27T15:02:01Z",
+      "updatedAt": "2026-03-27T15:41:04Z",
       "headSha": "37aa1892cd4607a4a20a2027067b8f86b0244da4",
-      "generatedAt": "2026-03-27T15:16:45.435Z",
-      "summary": "Shows n-gram cache BPB claims stem from invalid cache-bin ratios and proposes per-token distribution checks plus causality/aux-state/time caps.",
+      "generatedAt": "2026-03-27T15:46:53.271Z",
+      "summary": "Proposes verifying eval-time N-gram cache distributions sum to 1, tightening causality rules, and capping state/latency so reported BPB stays meaningful.",
       "tags": [
         "evaluation",
-        "training-schedule",
         "non-record"
       ],
       "flags": {
@@ -1482,14 +1504,14 @@
       "prNumber": 875,
       "title": "New Record: Pure Neural GDN 1.0226 BPB (shalyhinpavel)",
       "status": "open",
-      "updatedAt": "2026-03-26T17:45:57Z",
+      "updatedAt": "2026-03-27T15:40:18Z",
       "headSha": "90d5115e4071a2538e05dafeb6e97c9490d0afe8",
-      "generatedAt": "2026-03-26T18:11:56.157Z",
-      "summary": "Gated DeltaNet stack plus FastLoader and curriculum batch scaling to fit a zero-shot pure-neural model under 16MB in 10min without TTT.",
+      "generatedAt": "2026-03-27T15:46:59.609Z",
+      "summary": "Pure neural 16MB submission swaps to Gated DeltaNet layers, fast loader, and curriculum batch growth to hit 1.0226 BPB without TTT.",
       "tags": [
         "architecture",
         "training-schedule",
-        "mixed-precision"
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,

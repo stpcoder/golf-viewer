@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-27T15:16:23.066Z",
-  "lastSeenUpdatedAt": "2026-03-27T15:13:03Z",
+  "generatedAt": "2026-03-27T15:46:27.170Z",
+  "lastSeenUpdatedAt": "2026-03-27T15:45:45Z",
   "prs": {
     "1": {
       "number": 1,
@@ -75080,7 +75080,7 @@
     },
     "875": {
       "number": 875,
-      "updatedAt": "2026-03-26T17:45:57Z",
+      "updatedAt": "2026-03-27T15:40:18Z",
       "pr": {
         "number": 875,
         "title": "New Record: Pure Neural GDN 1.0226 BPB (shalyhinpavel)",
@@ -75091,7 +75091,7 @@
         "authorLogin": "shalyhinpavel",
         "authorName": null,
         "createdAt": "2026-03-26T17:45:18Z",
-        "updatedAt": "2026-03-26T17:45:57Z",
+        "updatedAt": "2026-03-27T15:40:18Z",
         "headSha": "90d5115e4071a2538e05dafeb6e97c9490d0afe8",
         "headRepo": "shalyhinpavel/parameter-golf"
       },
@@ -75154,7 +75154,7 @@
             "authorLogin": "shalyhinpavel",
             "authorName": null,
             "createdAt": "2026-03-26T17:45:18Z",
-            "updatedAt": "2026-03-26T17:45:57Z",
+            "updatedAt": "2026-03-27T15:40:18Z",
             "headSha": "90d5115e4071a2538e05dafeb6e97c9490d0afe8",
             "headRepo": "shalyhinpavel/parameter-golf"
           },
@@ -76079,10 +76079,10 @@
     },
     "886": {
       "number": 886,
-      "updatedAt": "2026-03-27T15:02:01Z",
+      "updatedAt": "2026-03-27T15:41:04Z",
       "pr": {
         "number": 886,
-        "title": "RFC: N-gram scores are invalid, and the eval setup needs constraints",
+        "title": "RFC: N-gram distributions don't sum to 1 — proposed fixes",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -76090,7 +76090,7 @@
         "authorLogin": "abaybektursun",
         "authorName": null,
         "createdAt": "2026-03-26T19:03:36Z",
-        "updatedAt": "2026-03-27T15:02:01Z",
+        "updatedAt": "2026-03-27T15:41:04Z",
         "headSha": "37aa1892cd4607a4a20a2027067b8f86b0244da4",
         "headRepo": "abaybektursun/parameter-golf"
       },
@@ -76145,7 +76145,7 @@
           },
           "pr": {
             "number": 886,
-            "title": "RFC: N-gram scores are invalid, and the eval setup needs constraints",
+            "title": "RFC: N-gram distributions don't sum to 1 — proposed fixes",
             "state": "open",
             "draft": false,
             "mergedAt": null,
@@ -76153,7 +76153,7 @@
             "authorLogin": "abaybektursun",
             "authorName": null,
             "createdAt": "2026-03-26T19:03:36Z",
-            "updatedAt": "2026-03-27T15:02:01Z",
+            "updatedAt": "2026-03-27T15:41:04Z",
             "headSha": "37aa1892cd4607a4a20a2027067b8f86b0244da4",
             "headRepo": "abaybektursun/parameter-golf"
           },
@@ -80056,18 +80056,18 @@
     },
     "931": {
       "number": 931,
-      "updatedAt": "2026-03-27T07:18:14Z",
+      "updatedAt": "2026-03-27T15:31:59Z",
       "pr": {
         "number": 931,
         "title": "Record: 0.0498 bpb - Packed Training N-gram Artifact + Learned Weighting Gate (updated) ",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/931",
         "authorLogin": "AnirudhRahul",
         "authorName": null,
         "createdAt": "2026-03-27T04:21:54Z",
-        "updatedAt": "2026-03-27T07:18:14Z",
+        "updatedAt": "2026-03-27T15:31:59Z",
         "headSha": "5e6c5de2aebbe7bf6b9a93e95b08d0c8ab80669d",
         "headRepo": "AnirudhRahul/parameter-golf"
       },
@@ -80075,7 +80075,7 @@
         {
           "id": "pr-931-records-track_10min_16mb-2026-03-27_PackedTrainCache_LearnedGate_SinglePassTTT-submission-json",
           "source": "pull_request",
-          "status": "open",
+          "status": "closed",
           "category": "main-track",
           "track": {
             "path": "records/track_10min_16mb",
@@ -80123,14 +80123,14 @@
           "pr": {
             "number": 931,
             "title": "Record: 0.0498 bpb - Packed Training N-gram Artifact + Learned Weighting Gate (updated) ",
-            "state": "open",
+            "state": "closed",
             "draft": false,
             "mergedAt": null,
             "htmlUrl": "https://github.com/openai/parameter-golf/pull/931",
             "authorLogin": "AnirudhRahul",
             "authorName": null,
             "createdAt": "2026-03-27T04:21:54Z",
-            "updatedAt": "2026-03-27T07:18:14Z",
+            "updatedAt": "2026-03-27T15:31:59Z",
             "headSha": "5e6c5de2aebbe7bf6b9a93e95b08d0c8ab80669d",
             "headRepo": "AnirudhRahul/parameter-golf"
           },
@@ -83759,7 +83759,7 @@
     },
     "961": {
       "number": 961,
-      "updatedAt": "2026-03-27T15:13:03Z",
+      "updatedAt": "2026-03-27T15:19:25Z",
       "pr": {
         "number": 961,
         "title": "Record: 0.0881 BPB — 11L Int5 GPTQ + Order-12 N-gram + Phrase Cache + 65K Chunks",
@@ -83770,8 +83770,8 @@
         "authorLogin": "callithyia",
         "authorName": null,
         "createdAt": "2026-03-27T15:08:19Z",
-        "updatedAt": "2026-03-27T15:13:03Z",
-        "headSha": "42bb4aa34affad22c0a713997a735cef0cf297ed",
+        "updatedAt": "2026-03-27T15:19:25Z",
+        "headSha": "920692d672dea8425c281836182ac4000f6c6e43",
         "headRepo": "callithyia/parameter-golf"
       },
       "submissions": [
@@ -83799,11 +83799,11 @@
             "author": "callithyia",
             "githubId": "callithyia",
             "name": "11L Int5 GPTQ + Order-12 N-gram + Phrase Cache + 65K Chunks",
-            "blurb": "Fully-trained 11L 512d base model (pre-quant 1.14 BPB) with order-12 backoff n-gram cache, long phrase cache, entropy-adaptive alpha, temperature sharpening (T=0.85), and 65K-token chunks. Full Hessian GPTQ int5 + LZMA. Eval approach from PR #913 adapted with 65K chunk size for properly trained models where 131K exceeds eval budget. 3-seed mean 0.0881 (std 0.0004).",
+            "blurb": "Fully-trained 11L 512d base model (pre-quant 1.14 BPB) with order-12 backoff n-gram cache, long phrase cache, entropy-adaptive alpha, temperature sharpening (T=0.85), and 65K-token chunks. Full Hessian GPTQ int5 + LZMA. Eval approach from PR #913 adapted with 65K chunk size for properly trained models where 131K exceeds eval budget.",
             "date": "2026-03-27"
           },
           "metrics": {
-            "valBpb": 0.0881,
+            "valBpb": 0.08808,
             "valLoss": null,
             "preQuantValBpb": null,
             "preQuantValLoss": null,
@@ -83812,7 +83812,7 @@
             "evalTimeSeconds": null
           },
           "artifact": {
-            "bytesTotal": 13001360,
+            "bytesTotal": null,
             "bytesCode": null,
             "bytesModelInt8Zlib": null
           },
@@ -83833,17 +83833,108 @@
             "authorLogin": "callithyia",
             "authorName": null,
             "createdAt": "2026-03-27T15:08:19Z",
-            "updatedAt": "2026-03-27T15:13:03Z",
-            "headSha": "42bb4aa34affad22c0a713997a735cef0cf297ed",
+            "updatedAt": "2026-03-27T15:19:25Z",
+            "headSha": "920692d672dea8425c281836182ac4000f6c6e43",
             "headRepo": "callithyia/parameter-golf"
           },
           "links": {
-            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/42bb4aa34affad22c0a713997a735cef0cf297ed/records/track_10min_16mb/2026-03-27_11L_Int5GPTQ_Order12_NgramPhrase_65K/submission.json",
-            "readme": "https://github.com/openai/parameter-golf/blob/42bb4aa34affad22c0a713997a735cef0cf297ed/records/track_10min_16mb/2026-03-27_11L_Int5GPTQ_Order12_NgramPhrase_65K/README.md",
-            "trainLog": "https://github.com/openai/parameter-golf/blob/42bb4aa34affad22c0a713997a735cef0cf297ed/records/track_10min_16mb/2026-03-27_11L_Int5GPTQ_Order12_NgramPhrase_65K/train.log",
-            "script": "https://github.com/openai/parameter-golf/blob/42bb4aa34affad22c0a713997a735cef0cf297ed/records/track_10min_16mb/2026-03-27_11L_Int5GPTQ_Order12_NgramPhrase_65K/train_gpt.py",
-            "folder": "https://github.com/openai/parameter-golf/tree/42bb4aa34affad22c0a713997a735cef0cf297ed/records/track_10min_16mb/2026-03-27_11L_Int5GPTQ_Order12_NgramPhrase_65K",
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/920692d672dea8425c281836182ac4000f6c6e43/records/track_10min_16mb/2026-03-27_11L_Int5GPTQ_Order12_NgramPhrase_65K/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/920692d672dea8425c281836182ac4000f6c6e43/records/track_10min_16mb/2026-03-27_11L_Int5GPTQ_Order12_NgramPhrase_65K/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/920692d672dea8425c281836182ac4000f6c6e43/records/track_10min_16mb/2026-03-27_11L_Int5GPTQ_Order12_NgramPhrase_65K/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/920692d672dea8425c281836182ac4000f6c6e43/records/track_10min_16mb/2026-03-27_11L_Int5GPTQ_Order12_NgramPhrase_65K/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/920692d672dea8425c281836182ac4000f6c6e43/records/track_10min_16mb/2026-03-27_11L_Int5GPTQ_Order12_NgramPhrase_65K",
             "pr": "https://github.com/openai/parameter-golf/pull/961"
+          }
+        }
+      ]
+    },
+    "962": {
+      "number": 962,
+      "updatedAt": "2026-03-27T15:45:45Z",
+      "pr": {
+        "number": 962,
+        "title": "Record: 0.0214 bpb - Low Eval-Time Memory Regime: Packed Training N-gram Artifact + Learned Gate (No Phrase Cache)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/962",
+        "authorLogin": "AnirudhRahul",
+        "authorName": null,
+        "createdAt": "2026-03-27T15:18:55Z",
+        "updatedAt": "2026-03-27T15:45:45Z",
+        "headSha": "57776873fc584397a41022103228febb0063f00f",
+        "headRepo": "AnirudhRahul/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-962-records-track_10min_16mb-2026-03-27_LowEvalMemoryRegime_PackedTrainCache_NoMixer-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-27_LowEvalMemoryRegime_PackedTrainCache_NoMixer",
+            "folderPath": "records/track_10min_16mb/2026-03-27_LowEvalMemoryRegime_PackedTrainCache_NoMixer",
+            "submissionPath": "records/track_10min_16mb/2026-03-27_LowEvalMemoryRegime_PackedTrainCache_NoMixer/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-27_LowEvalMemoryRegime_PackedTrainCache_NoMixer/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-27_LowEvalMemoryRegime_PackedTrainCache_NoMixer/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-27_LowEvalMemoryRegime_PackedTrainCache_NoMixer/train_gpt.py"
+          },
+          "submission": {
+            "author": "Ani",
+            "githubId": "AnirudhRahul",
+            "name": "Low Eval-Time Memory Regime: Packed Training N-gram Artifact + Learned Gate (No Phrase Cache)",
+            "blurb": "Packed a 32K-bucket order-2..9 training n-gram cache into the artifact, used a learned gate over the neural model plus order-2..9 n-gram experts, and removed both the logistic context mixer and long phrase cache from the final eval path. The cache is loaded from the artifact at eval start, the run stays single-pass and causal, and the final 3-seed mean val_bpb is 0.02137047 (std 0.00002830) with all submissions under 16MB.",
+            "date": "2026-03-27"
+          },
+          "metrics": {
+            "valBpb": 0.02137047,
+            "valLoss": null,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": 15849498,
+            "bytesCode": null,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 962,
+            "title": "Record: 0.0214 bpb - Low Eval-Time Memory Regime: Packed Training N-gram Artifact + Learned Gate (No Phrase Cache)",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/962",
+            "authorLogin": "AnirudhRahul",
+            "authorName": null,
+            "createdAt": "2026-03-27T15:18:55Z",
+            "updatedAt": "2026-03-27T15:45:45Z",
+            "headSha": "57776873fc584397a41022103228febb0063f00f",
+            "headRepo": "AnirudhRahul/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/57776873fc584397a41022103228febb0063f00f/records/track_10min_16mb/2026-03-27_LowEvalMemoryRegime_PackedTrainCache_NoMixer/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/57776873fc584397a41022103228febb0063f00f/records/track_10min_16mb/2026-03-27_LowEvalMemoryRegime_PackedTrainCache_NoMixer/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/57776873fc584397a41022103228febb0063f00f/records/track_10min_16mb/2026-03-27_LowEvalMemoryRegime_PackedTrainCache_NoMixer/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/57776873fc584397a41022103228febb0063f00f/records/track_10min_16mb/2026-03-27_LowEvalMemoryRegime_PackedTrainCache_NoMixer/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/57776873fc584397a41022103228febb0063f00f/records/track_10min_16mb/2026-03-27_LowEvalMemoryRegime_PackedTrainCache_NoMixer",
+            "pr": "https://github.com/openai/parameter-golf/pull/962"
           }
         }
       ]
