@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-27T16:46:47.093Z",
-  "lastSeenUpdatedAt": "2026-03-27T16:30:50Z",
+  "generatedAt": "2026-03-27T17:16:47.931Z",
+  "lastSeenUpdatedAt": "2026-03-27T17:15:11Z",
   "prs": {
     "1": {
       "number": 1,
@@ -75715,7 +75715,7 @@
     },
     "882": {
       "number": 882,
-      "updatedAt": "2026-03-26T18:25:54Z",
+      "updatedAt": "2026-03-27T17:04:51Z",
       "pr": {
         "number": 882,
         "title": "Non-record: LeakyReLU(0.5)^2 + TrigramHash on PR414 stack (1.3762 bpb, 1xA100)",
@@ -75726,8 +75726,8 @@
         "authorLogin": "IshiPareek",
         "authorName": null,
         "createdAt": "2026-03-26T18:25:54Z",
-        "updatedAt": "2026-03-26T18:25:54Z",
-        "headSha": "da24d769d95d5e8802bddc642cc4b726afe924e9",
+        "updatedAt": "2026-03-27T17:04:51Z",
+        "headSha": "206ceb978b04a46d4a743edcb78d9edcf2282e14",
         "headRepo": "IshiPareek/parameter-golf"
       },
       "submissions": [
@@ -75789,16 +75789,16 @@
             "authorLogin": "IshiPareek",
             "authorName": null,
             "createdAt": "2026-03-26T18:25:54Z",
-            "updatedAt": "2026-03-26T18:25:54Z",
-            "headSha": "da24d769d95d5e8802bddc642cc4b726afe924e9",
+            "updatedAt": "2026-03-27T17:04:51Z",
+            "headSha": "206ceb978b04a46d4a743edcb78d9edcf2282e14",
             "headRepo": "IshiPareek/parameter-golf"
           },
           "links": {
-            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/da24d769d95d5e8802bddc642cc4b726afe924e9/records/track_non_record_16mb/2026-03-25_LeakyReLU_TrigramHash/submission.json",
-            "readme": "https://github.com/openai/parameter-golf/blob/da24d769d95d5e8802bddc642cc4b726afe924e9/records/track_non_record_16mb/2026-03-25_LeakyReLU_TrigramHash/README.md",
-            "trainLog": "https://github.com/openai/parameter-golf/blob/da24d769d95d5e8802bddc642cc4b726afe924e9/records/track_non_record_16mb/2026-03-25_LeakyReLU_TrigramHash/train.log",
-            "script": "https://github.com/openai/parameter-golf/blob/da24d769d95d5e8802bddc642cc4b726afe924e9/records/track_non_record_16mb/2026-03-25_LeakyReLU_TrigramHash/train_gpt.py",
-            "folder": "https://github.com/openai/parameter-golf/tree/da24d769d95d5e8802bddc642cc4b726afe924e9/records/track_non_record_16mb/2026-03-25_LeakyReLU_TrigramHash",
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/206ceb978b04a46d4a743edcb78d9edcf2282e14/records/track_non_record_16mb/2026-03-25_LeakyReLU_TrigramHash/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/206ceb978b04a46d4a743edcb78d9edcf2282e14/records/track_non_record_16mb/2026-03-25_LeakyReLU_TrigramHash/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/206ceb978b04a46d4a743edcb78d9edcf2282e14/records/track_non_record_16mb/2026-03-25_LeakyReLU_TrigramHash/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/206ceb978b04a46d4a743edcb78d9edcf2282e14/records/track_non_record_16mb/2026-03-25_LeakyReLU_TrigramHash/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/206ceb978b04a46d4a743edcb78d9edcf2282e14/records/track_non_record_16mb/2026-03-25_LeakyReLU_TrigramHash",
             "pr": "https://github.com/openai/parameter-golf/pull/882"
           }
         }
@@ -83992,7 +83992,7 @@
     },
     "962": {
       "number": 962,
-      "updatedAt": "2026-03-27T15:52:45Z",
+      "updatedAt": "2026-03-27T17:15:11Z",
       "pr": {
         "number": 962,
         "title": "Record: 0.0214 bpb - Low Eval-Time Memory Regime: Packed Training N-gram Artifact + Learned Gate (No Phrase Cache)",
@@ -84003,8 +84003,8 @@
         "authorLogin": "AnirudhRahul",
         "authorName": null,
         "createdAt": "2026-03-27T15:18:55Z",
-        "updatedAt": "2026-03-27T15:52:45Z",
-        "headSha": "57776873fc584397a41022103228febb0063f00f",
+        "updatedAt": "2026-03-27T17:15:11Z",
+        "headSha": "e5a0cbc8dedf449592e760922b0af5314eb7cf67",
         "headRepo": "AnirudhRahul/parameter-golf"
       },
       "submissions": [
@@ -84032,11 +84032,11 @@
             "author": "Ani",
             "githubId": "AnirudhRahul",
             "name": "Low Eval-Time Memory Regime: Packed Training N-gram Artifact + Learned Gate (No Phrase Cache)",
-            "blurb": "Packed a 32K-bucket order-2..9 training n-gram cache into the artifact, used a learned gate over the neural model plus order-2..9 n-gram experts, and removed both the logistic context mixer and long phrase cache from the final eval path. The cache is loaded from the artifact at eval start, the run stays single-pass and causal, and the final 3-seed mean val_bpb is 0.02137047 (std 0.00002830) with all submissions under 16MB.",
+            "blurb": "Packed a 32K-bucket order-2..9 training n-gram cache into the artifact, used a learned gate over the neural model plus order-2..9 n-gram experts, and removed both the logistic context mixer and long phrase cache from the final eval path. The cache is loaded from the artifact at eval start, the run stays single-pass and causal, and the final distribution is renormalized to sum to 1 before scoring. The renormalized 3-seed mean val_bpb is 0.02139943 (std 0.00003918) with all submissions under 16MB.",
             "date": "2026-03-27"
           },
           "metrics": {
-            "valBpb": 0.02137047,
+            "valBpb": 0.02139943,
             "valLoss": null,
             "preQuantValBpb": null,
             "preQuantValLoss": null,
@@ -84045,7 +84045,7 @@
             "evalTimeSeconds": null
           },
           "artifact": {
-            "bytesTotal": 15849498,
+            "bytesTotal": 15881331,
             "bytesCode": null,
             "bytesModelInt8Zlib": null
           },
@@ -84066,16 +84066,16 @@
             "authorLogin": "AnirudhRahul",
             "authorName": null,
             "createdAt": "2026-03-27T15:18:55Z",
-            "updatedAt": "2026-03-27T15:52:45Z",
-            "headSha": "57776873fc584397a41022103228febb0063f00f",
+            "updatedAt": "2026-03-27T17:15:11Z",
+            "headSha": "e5a0cbc8dedf449592e760922b0af5314eb7cf67",
             "headRepo": "AnirudhRahul/parameter-golf"
           },
           "links": {
-            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/57776873fc584397a41022103228febb0063f00f/records/track_10min_16mb/2026-03-27_LowEvalMemoryRegime_PackedTrainCache_NoMixer/submission.json",
-            "readme": "https://github.com/openai/parameter-golf/blob/57776873fc584397a41022103228febb0063f00f/records/track_10min_16mb/2026-03-27_LowEvalMemoryRegime_PackedTrainCache_NoMixer/README.md",
-            "trainLog": "https://github.com/openai/parameter-golf/blob/57776873fc584397a41022103228febb0063f00f/records/track_10min_16mb/2026-03-27_LowEvalMemoryRegime_PackedTrainCache_NoMixer/train.log",
-            "script": "https://github.com/openai/parameter-golf/blob/57776873fc584397a41022103228febb0063f00f/records/track_10min_16mb/2026-03-27_LowEvalMemoryRegime_PackedTrainCache_NoMixer/train_gpt.py",
-            "folder": "https://github.com/openai/parameter-golf/tree/57776873fc584397a41022103228febb0063f00f/records/track_10min_16mb/2026-03-27_LowEvalMemoryRegime_PackedTrainCache_NoMixer",
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/e5a0cbc8dedf449592e760922b0af5314eb7cf67/records/track_10min_16mb/2026-03-27_LowEvalMemoryRegime_PackedTrainCache_NoMixer/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/e5a0cbc8dedf449592e760922b0af5314eb7cf67/records/track_10min_16mb/2026-03-27_LowEvalMemoryRegime_PackedTrainCache_NoMixer/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/e5a0cbc8dedf449592e760922b0af5314eb7cf67/records/track_10min_16mb/2026-03-27_LowEvalMemoryRegime_PackedTrainCache_NoMixer/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/e5a0cbc8dedf449592e760922b0af5314eb7cf67/records/track_10min_16mb/2026-03-27_LowEvalMemoryRegime_PackedTrainCache_NoMixer/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/e5a0cbc8dedf449592e760922b0af5314eb7cf67/records/track_10min_16mb/2026-03-27_LowEvalMemoryRegime_PackedTrainCache_NoMixer",
             "pr": "https://github.com/openai/parameter-golf/pull/962"
           }
         }
@@ -84262,6 +84262,116 @@
           }
         }
       ]
+    },
+    "965": {
+      "number": 965,
+      "updatedAt": "2026-03-27T17:07:03Z",
+      "pr": {
+        "number": 965,
+        "title": "Architectural Record: 1.11837 BPB via KGIIR Trajectory Mixing",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/965",
+        "authorLogin": "Adam-Jacuch",
+        "authorName": null,
+        "createdAt": "2026-03-27T17:07:03Z",
+        "updatedAt": "2026-03-27T17:07:03Z",
+        "headSha": "8d680e58e3f75a610cd95a16e4b1c2d408c05eac",
+        "headRepo": "Adam-Jacuch/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-965-records-track_10min_16mb-2026-03-27_11L_KGIIR_Fused_Adam-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-27_11L_KGIIR_Fused_Adam",
+            "folderPath": "records/track_10min_16mb/2026-03-27_11L_KGIIR_Fused_Adam",
+            "submissionPath": "records/track_10min_16mb/2026-03-27_11L_KGIIR_Fused_Adam/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-27_11L_KGIIR_Fused_Adam/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-27_11L_KGIIR_Fused_Adam/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-27_11L_KGIIR_Fused_Adam/train_gpt.py"
+          },
+          "submission": {
+            "author": "Adam Jacuch",
+            "githubId": "Adam-Jacuch",
+            "name": "KGIIR Trajectory Mixing + Depth-11",
+            "blurb": "Depth-11 KGIIR trajectory mixing with hardware-fused kernels. Achieved 1.11837 BPB on 8xH100. Note: Single-seed run provided due to compute constraints; submitted for architectural documentation of the KGIIR primitive.",
+            "date": "2026-03-27"
+          },
+          "metrics": {
+            "valBpb": 1.11837,
+            "valLoss": null,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": 15877440,
+            "bytesCode": null,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 965,
+            "title": "Architectural Record: 1.11837 BPB via KGIIR Trajectory Mixing",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/965",
+            "authorLogin": "Adam-Jacuch",
+            "authorName": null,
+            "createdAt": "2026-03-27T17:07:03Z",
+            "updatedAt": "2026-03-27T17:07:03Z",
+            "headSha": "8d680e58e3f75a610cd95a16e4b1c2d408c05eac",
+            "headRepo": "Adam-Jacuch/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/8d680e58e3f75a610cd95a16e4b1c2d408c05eac/records/track_10min_16mb/2026-03-27_11L_KGIIR_Fused_Adam/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/8d680e58e3f75a610cd95a16e4b1c2d408c05eac/records/track_10min_16mb/2026-03-27_11L_KGIIR_Fused_Adam/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/8d680e58e3f75a610cd95a16e4b1c2d408c05eac/records/track_10min_16mb/2026-03-27_11L_KGIIR_Fused_Adam/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/8d680e58e3f75a610cd95a16e4b1c2d408c05eac/records/track_10min_16mb/2026-03-27_11L_KGIIR_Fused_Adam/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/8d680e58e3f75a610cd95a16e4b1c2d408c05eac/records/track_10min_16mb/2026-03-27_11L_KGIIR_Fused_Adam",
+            "pr": "https://github.com/openai/parameter-golf/pull/965"
+          }
+        }
+      ]
+    },
+    "966": {
+      "number": 966,
+      "updatedAt": "2026-03-27T17:09:53Z",
+      "pr": {
+        "number": 966,
+        "title": "Mixture of Convolutions (MoC): token-adaptive short convolutions via kernel mixtures",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/966",
+        "authorLogin": "andrewmouldon",
+        "authorName": null,
+        "createdAt": "2026-03-27T17:09:11Z",
+        "updatedAt": "2026-03-27T17:09:53Z",
+        "headSha": "0cf745c209bb615e8a844645c1a3fa1125964788",
+        "headRepo": "andrewmouldon/parameter-golf"
+      },
+      "submissions": []
     }
   }
 }

@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-03-27T16:47:17.771Z",
+  "generatedAt": "2026-03-27T17:17:06.212Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 965,
+      "title": "Architectural Record: 1.11837 BPB via KGIIR Trajectory Mixing",
+      "status": "open",
+      "updatedAt": "2026-03-27T17:07:03Z",
+      "headSha": "8d680e58e3f75a610cd95a16e4b1c2d408c05eac",
+      "generatedAt": "2026-03-27T17:16:55.197Z",
+      "summary": "Stacks hardware-fused KGIIR trajectory mixing with gated token shifts to offload local dependencies and free attention capacity within the 88ms step budget.",
+      "tags": [
+        "architecture",
+        "attention",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-965.json"
+    },
     {
       "prNumber": 964,
       "title": "Record: Doc-Isolated TTT + Eval Optimizations",
@@ -30,14 +53,14 @@
       "prNumber": 962,
       "title": "Record: 0.0214 bpb - Low Eval-Time Memory Regime: Packed Training N-gram Artifact + Learned Gate (No Phrase Cache)",
       "status": "open",
-      "updatedAt": "2026-03-27T15:52:45Z",
-      "headSha": "57776873fc584397a41022103228febb0063f00f",
-      "generatedAt": "2026-03-27T16:16:45.178Z",
-      "summary": "Packed training-derived order-2..9 n-gram cache lives in the artifact and a learned gate blends neural+ngram experts without the logistic mixer or phrase cache.",
+      "updatedAt": "2026-03-27T17:15:11Z",
+      "headSha": "e5a0cbc8dedf449592e760922b0af5314eb7cf67",
+      "generatedAt": "2026-03-27T17:17:01.323Z",
+      "summary": "Combines a packed order-2..9 training n-gram cache with a learned neural-vs-ngram gate and drops mixer/cache overlays for a lean single-pass eval path.",
       "tags": [
+        "architecture",
         "evaluation",
-        "quantization",
-        "architecture"
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1413,13 +1436,14 @@
       "prNumber": 882,
       "title": "Non-record: LeakyReLU(0.5)^2 + TrigramHash on PR414 stack (1.3762 bpb, 1xA100)",
       "status": "open",
-      "updatedAt": "2026-03-26T18:25:54Z",
-      "headSha": "da24d769d95d5e8802bddc642cc4b726afe924e9",
-      "generatedAt": "2026-03-26T18:41:44.626Z",
-      "summary": "Builds on PR414 stack by swapping relu^2 for LeakyReLU(0.5)^2 and adding TrigramHash attention buckets for richer local context.",
+      "updatedAt": "2026-03-27T17:04:51Z",
+      "headSha": "206ceb978b04a46d4a743edcb78d9edcf2282e14",
+      "generatedAt": "2026-03-27T17:17:06.083Z",
+      "summary": "MLP activation switched to LeakyReLU(0.5)^2 while attention inputs use TrigramHash grouping 3-token buckets for richer local context.",
       "tags": [
+        "regularization",
         "attention",
-        "architecture",
+        "tokenization",
         "non-record"
       ],
       "flags": {
