@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-27T14:16:31.100Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 958,
+    "title": "Record: DominationV2 + BOS-Reset Bigram Cache + TTT (val_bpb=1.1382, 3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-03-27T14:07:54Z",
+    "headSha": "2eb49c166a64b644231fe11db1be9bbc7f9bf782",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/958",
+    "authorLogin": "shouryamaanjain"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-27_DominationV2_BigramCache_TTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "DominationV2 U-Net stack adds eval-time BOS-reset bigram cache blending entropy-gated counts with model probs after TTT and quantization.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "DominationV2 U-Net + SmearGate + BigramHash core stack",
+      "BOS-reset bigram cache mixes counts with model probs via entropy gating",
+      "TTT post-quantization prep before sliding-window eval"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

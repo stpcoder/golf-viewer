@@ -1,8 +1,100 @@
 {
-  "generatedAt": "2026-03-27T13:46:37.370Z",
+  "generatedAt": "2026-03-27T14:16:49.658Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 958,
+      "title": "Record: DominationV2 + BOS-Reset Bigram Cache + TTT (val_bpb=1.1382, 3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-03-27T14:07:54Z",
+      "headSha": "2eb49c166a64b644231fe11db1be9bbc7f9bf782",
+      "generatedAt": "2026-03-27T14:16:31.100Z",
+      "summary": "DominationV2 U-Net stack adds eval-time BOS-reset bigram cache blending entropy-gated counts with model probs after TTT and quantization.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-958.json"
+    },
+    {
+      "prNumber": 957,
+      "title": "Non-record: Mixture of Depth (MoD) Per-Layer Token Routing",
+      "status": "open",
+      "updatedAt": "2026-03-27T13:59:28Z",
+      "headSha": "9e02ff57e27d4b7fb94dd082689f0f7b32c8e608",
+      "generatedAt": "2026-03-27T14:16:36.312Z",
+      "summary": "Per-layer binary routers let easy tokens skip transformer layers so MoD adaptively reduces compute depth without adding export parameters.",
+      "tags": [
+        "architecture",
+        "attention",
+        "regularization",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-957.json"
+    },
+    {
+      "prNumber": 956,
+      "title": "Non-record: Sequence Curriculum (Short-to-Long) Exploration",
+      "status": "open",
+      "updatedAt": "2026-03-27T13:58:48Z",
+      "headSha": "92b2c78adc457a536b75a467fcbb95150dcabed5",
+      "generatedAt": "2026-03-27T14:16:39.494Z",
+      "summary": "Trains with a short-to-long sequence curriculum so early phases use shorter context for faster steps before scaling up to the full target length.",
+      "tags": [
+        "training-schedule",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-956.json"
+    },
+    {
+      "prNumber": 955,
+      "title": "Non-record: MTP Auxiliary Loss Exploration",
+      "status": "open",
+      "updatedAt": "2026-03-27T13:58:09Z",
+      "headSha": "6e364c8b4843295c57aa38ed36be2f6ccb7ddd6f",
+      "generatedAt": "2026-03-27T14:16:44.650Z",
+      "summary": "Enables the dormant multi-token prediction head as an auxiliary loss to refine representations without affecting the exported artifact size.",
+      "tags": [
+        "architecture",
+        "regularization",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-955.json"
+    },
     {
       "prNumber": 953,
       "title": "  Record: 1.1069 BPB — Improved TTT + HedgeMixer with Per-Layer LR Groups",
@@ -1116,10 +1208,10 @@
       "prNumber": 886,
       "title": "RFC: A framework for deciding the n-gram question",
       "status": "open",
-      "updatedAt": "2026-03-27T13:34:36Z",
-      "headSha": "ecd339f91571c72ea3c4b57603ea130a597b3377",
-      "generatedAt": "2026-03-27T13:46:30.912Z",
-      "summary": "Study probes causal eval-time n-gram mixing with hash-collision analysis to decide if auxiliary eval state should count toward the 16MB artifact limit.",
+      "updatedAt": "2026-03-27T13:48:33Z",
+      "headSha": "9671d3d9d8e7f1bb98e4ac52cd84ebd612a5b3aa",
+      "generatedAt": "2026-03-27T14:16:49.528Z",
+      "summary": "Study of strictly causal eval-time n-gram caching that blends cached counts with LM logits, exposing inflated scores and prompting cache-size/distribution rules.",
       "tags": [
         "evaluation",
         "non-record"

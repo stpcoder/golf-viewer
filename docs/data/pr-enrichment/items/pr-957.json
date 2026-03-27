@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-03-27T14:16:36.312Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 957,
+    "title": "Non-record: Mixture of Depth (MoD) Per-Layer Token Routing",
+    "state": "open",
+    "updatedAt": "2026-03-27T13:59:28Z",
+    "headSha": "9e02ff57e27d4b7fb94dd082689f0f7b32c8e608",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/957",
+    "authorLogin": "genji0306"
+  },
+  "inputs": {
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-27_MultiAgent_Orchestrator_Framework/README.md",
+      "records/track_non_record_16mb/2026-03-27_Mixture_of_Depth_Exploration/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "Per-layer binary routers let easy tokens skip transformer layers so MoD adaptively reduces compute depth without adding export parameters.",
+    "tags": [
+      "architecture",
+      "attention",
+      "regularization",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "per-layer binary token routers enabling depth skipping",
+      "router trained with auxiliary load-balancing loss",
+      "minimal linear routers keep exported model unchanged"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

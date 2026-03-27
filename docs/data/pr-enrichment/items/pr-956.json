@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-03-27T14:16:39.494Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 956,
+    "title": "Non-record: Sequence Curriculum (Short-to-Long) Exploration",
+    "state": "open",
+    "updatedAt": "2026-03-27T13:58:48Z",
+    "headSha": "92b2c78adc457a536b75a467fcbb95150dcabed5",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/956",
+    "authorLogin": "genji0306"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-27_Sequence_Curriculum_Exploration/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Trains with a short-to-long sequence curriculum so early phases use shorter context for faster steps before scaling up to the full target length.",
+    "tags": [
+      "training-schedule",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Short-to-long sequence curriculum",
+      "Phased length scaling"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

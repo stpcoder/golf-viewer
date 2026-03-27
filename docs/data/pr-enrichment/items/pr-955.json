@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-27T14:16:44.650Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 955,
+    "title": "Non-record: MTP Auxiliary Loss Exploration",
+    "state": "open",
+    "updatedAt": "2026-03-27T13:58:09Z",
+    "headSha": "6e364c8b4843295c57aa38ed36be2f6ccb7ddd6f",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/955",
+    "authorLogin": "genji0306"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-27_MTP_Auxiliary_Loss_Exploration/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Enables the dormant multi-token prediction head as an auxiliary loss to refine representations without affecting the exported artifact size.",
+    "tags": [
+      "architecture",
+      "regularization",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Enable existing MTP head with tuned weight/head count",
+      "Drop auxiliary head before export to stay within constraints"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
