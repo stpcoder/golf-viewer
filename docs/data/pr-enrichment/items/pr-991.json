@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-28T00:19:12.229Z",
+  "generatedAt": "2026-03-28T01:19:40.787Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 991,
     "title": "Record: 33.6M Int5 GPTQ + Score-First TTT (val_bpb=1.1145, 3-seed)",
     "state": "open",
-    "updatedAt": "2026-03-28T00:04:18Z",
+    "updatedAt": "2026-03-28T01:09:41Z",
     "headSha": "4d2a4eda713276c6a31e5b9e07a04bc058c92f75",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/991",
     "authorLogin": "ibarrajo"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Int5-GPTQ compresses a 33.6M model whose evaluation uses legal score-first backward TTT on the final blocks plus post-TTT temperature calibration.",
+    "summary": "33.6M GPT uses int5 GPTQ compression with legal score-first backward-looking TTT and temperature calibration before final eval.",
     "tags": [
       "val-only",
       "quantization",
-      "training-schedule",
-      "evaluation"
+      "evaluation",
+      "architecture"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "Score-first backward TTT fine-tunes on validation shards after scoring before the final evaluation.",
+    "valOnlyReasoning": "Score-first TTT adaptation trains on validation chunks (scored first) before recomputing final eval, so the model only learns from the validation shard.",
     "techniques": [
-      "- Int5 GPTQ clipping [-16,15] with zstd-22",
-      "- Score-first backward-looking TTT on the last two blocks",
-      "- Post-TTT temperature calibration at T=0.98"
+      "int5 GPTQ with clip [-16,15] plus zstd-22 compression",
+      "Score-first backward TTT (AdamW, cosine LR, 3 epochs on last two blocks)",
+      "Post-TTT temperature calibration (T=0.98) with sliding-window eval"
     ]
   },
   "compatibility": {

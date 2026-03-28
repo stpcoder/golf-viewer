@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-03-28T00:50:29.321Z",
+  "generatedAt": "2026-03-28T01:19:51.639Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 996,
+      "title": "Pre-Enrichment + EMA-GPU + SmearGate + XSA4 (val_bpb=1.1478, …",
+      "status": "open",
+      "updatedAt": "2026-03-28T00:55:14Z",
+      "headSha": "efa0dd17bae1c097e23e2212aca0364d0f51d073",
+      "generatedAt": "2026-03-28T01:19:34.771Z",
+      "summary": "10-layer GQA model uses GELU pre-enrichment, SmearGate+BigramHash, XSA on last layers, and GPU-held EMA to speed training plus sliding-window scoring.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-996.json"
+    },
     {
       "prNumber": 995,
       "title": "Record: 1.0362 BPB — SGD Momentum 0.95 TTT + HedgeMixer + Per-Layer LR",
@@ -100,15 +123,15 @@
       "prNumber": 991,
       "title": "Record: 33.6M Int5 GPTQ + Score-First TTT (val_bpb=1.1145, 3-seed)",
       "status": "open",
-      "updatedAt": "2026-03-28T00:04:18Z",
+      "updatedAt": "2026-03-28T01:09:41Z",
       "headSha": "4d2a4eda713276c6a31e5b9e07a04bc058c92f75",
-      "generatedAt": "2026-03-28T00:19:12.229Z",
-      "summary": "Int5-GPTQ compresses a 33.6M model whose evaluation uses legal score-first backward TTT on the final blocks plus post-TTT temperature calibration.",
+      "generatedAt": "2026-03-28T01:19:40.787Z",
+      "summary": "33.6M GPT uses int5 GPTQ compression with legal score-first backward-looking TTT and temperature calibration before final eval.",
       "tags": [
         "val-only",
         "quantization",
-        "training-schedule",
-        "evaluation"
+        "evaluation",
+        "architecture"
       ],
       "flags": {
         "usesValOnly": true,
@@ -2039,14 +2062,15 @@
       "prNumber": 875,
       "title": "New Record: Pure Neural GDN 1.0226 BPB (shalyhinpavel)",
       "status": "open",
-      "updatedAt": "2026-03-27T16:30:50Z",
+      "updatedAt": "2026-03-28T00:59:24Z",
       "headSha": "90d5115e4071a2538e05dafeb6e97c9490d0afe8",
-      "generatedAt": "2026-03-27T16:47:12.574Z",
-      "summary": "Pure neural Gated DeltaNet stack with FastLoader throughput hacks and a dynamic global batch curriculum to maximize updates within the 10min/16MB constraint.",
+      "generatedAt": "2026-03-28T01:19:44.033Z",
+      "summary": "Pure Gated DeltaNet stack with dynamic batch/chunk curriculum and FastLoader throughput tweaks to hit 10min/16MB leaderboard constraints.",
       "tags": [
         "architecture",
         "training-schedule",
-        "optimizer"
+        "optimizer",
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
@@ -3000,30 +3024,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-811.json"
-    },
-    {
-      "prNumber": 810,
-      "title": " Record: Phrase Cache + N-gram Backoff + EMA-GPU (val_bpb=0.2722)",
-      "status": "closed",
-      "updatedAt": "2026-03-28T00:49:01Z",
-      "headSha": "efa0dd17bae1c097e23e2212aca0364d0f51d073",
-      "generatedAt": "2026-03-28T00:50:16.376Z",
-      "summary": "Combines shared multi-order n-gram cache with long phrase matching, entropy-adaptive mixing, GPU EMA, and XSA-enhanced GELU-pre-enriched model for efficient scoring.",
-      "tags": [
-        "evaluation",
-        "attention",
-        "architecture",
-        "optimizer"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-810.json"
     },
     {
       "prNumber": 809,
@@ -13081,13 +13081,12 @@
       "status": "open",
       "updatedAt": "2026-03-28T00:49:37Z",
       "headSha": "585c651ee9c27a833b0b9e8bb4a01f2dcaf8a640",
-      "generatedAt": "2026-03-28T00:50:29.295Z",
-      "summary": "Combines an 11-layer LeakyReLU² transformer with XSA, Partial RoPE, LN-scale, Parallel Muon/SWA, GPTQ-lite int6/int8 quantization, and TTT evaluation.",
+      "generatedAt": "2026-03-28T01:19:51.612Z",
+      "summary": "11-layer LeakyReLU² transformer uses XSA on final layers with Partial RoPE and LN Scale, pairing Parallel Muon+EMA/SWA with GPTQ-lite quant and TTT.",
       "tags": [
         "architecture",
-        "optimizer",
-        "quantization",
-        "evaluation"
+        "attention",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,

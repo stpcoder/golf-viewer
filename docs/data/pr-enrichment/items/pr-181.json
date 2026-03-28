@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-28T00:50:29.295Z",
+  "generatedAt": "2026-03-28T01:19:51.612Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
@@ -24,19 +24,18 @@
     "submissionCount": 6
   },
   "output": {
-    "summary": "Combines an 11-layer LeakyReLU² transformer with XSA, Partial RoPE, LN-scale, Parallel Muon/SWA, GPTQ-lite int6/int8 quantization, and TTT evaluation.",
+    "summary": "11-layer LeakyReLU² transformer uses XSA on final layers with Partial RoPE and LN Scale, pairing Parallel Muon+EMA/SWA with GPTQ-lite quant and TTT.",
     "tags": [
       "architecture",
-      "optimizer",
-      "quantization",
-      "evaluation"
+      "attention",
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "LeakyReLU² + XSA4 + Partial RoPE with LN-scale",
-      "Parallel Muon optimizer plus EMA/SWA averaging",
-      "GPTQ-lite int6/int8 quantization feeding Legal Score-First TTT"
+      "XSA4 + Partial RoPE and LN Scale stacking",
+      "Parallel Muon optimizer with EMA/SWA and late QAT",
+      "GPTQ-lite int6/int8 quant with SmearGate/BigramHash input enrichments"
     ]
   },
   "compatibility": {
