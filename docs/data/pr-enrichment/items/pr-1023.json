@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-03-28T14:23:05.488Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1023,
+    "title": "Phase 1: Three Optimization Variants",
+    "state": "open",
+    "updatedAt": "2026-03-28T14:10:41Z",
+    "headSha": "1356f594a4cec18ade617bdf0d98c4180d0d270f",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1023",
+    "authorLogin": "DanielSooman"
+  },
+  "inputs": {
+    "hash": "c4f8d017d13e812b0ad5a78b677f8350df1124736cd3f84c8d4e37f273206c70",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-28_12L_Leaner480/README.md",
+      "records/track_10min_16mb/2026-03-28_AggressiveLR_CosineWarmup/README.md",
+      "records/track_10min_16mb/2026-03-28_Int4QAT_EMA_Warmdown/README.md"
+    ],
+    "submissionCount": 3
+  },
+  "output": {
+    "summary": "Phase 1 explores int4 QAT with adaptive warmdown, leaner depth/width, and extended warmup cosine LR to squeeze improvements within the 16MB/10min window.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Adaptive int4 QAT warmdown schedule",
+      "12-layer 480-width depth/width tradeoff",
+      "Long warmup cosine LR with higher EMA"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

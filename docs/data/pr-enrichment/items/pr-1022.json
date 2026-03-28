@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-03-28T14:23:10.635Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1022,
+    "title": "Non-Record: McGilchrist Register Token — causal cumulative mean + FiLM global context pathway",
+    "state": "open",
+    "updatedAt": "2026-03-28T13:59:41Z",
+    "headSha": "329d124caca8c4d86feadb1fed9a06d41efa1f64",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1022",
+    "authorLogin": "aramdov"
+  },
+  "inputs": {
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-21_LoRA_TTT_SOTA/README.md",
+      "records/track_10min_16mb/2026-03-21_McGilchrist_Register/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "Each block adds a right-hemisphere global pathway: a causal cumulative mean feeds a zero-initialized FiLM bottleneck that modulates outputs with holistic context.",
+    "tags": [
+      "architecture",
+      "attention",
+      "regularization",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "causal cumulative mean summarizes prefix for global context",
+      "FiLM projection learns per-block scale/shift from the running mean",
+      "zero-init register scale keeps training identical to baseline at start"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

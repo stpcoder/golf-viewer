@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-28T13:52:47.381Z",
+  "generatedAt": "2026-03-28T14:22:57.240Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -4302,7 +4302,7 @@
         "authorLogin": "MatoTeziTanka",
         "authorName": null,
         "createdAt": "2026-03-25T21:28:08Z",
-        "updatedAt": "2026-03-27T22:50:30Z",
+        "updatedAt": "2026-03-28T14:20:07Z",
         "headSha": "ca847e29a3ce3d61b7cf41f14828a6b95dca13c4",
         "headRepo": "MatoTeziTanka/parameter-golf"
       },
@@ -20965,6 +20965,83 @@
       }
     },
     {
+      "id": "record-records-track_10min_16mb-2026-03-21_LoRA_TTT_SOTA",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-21_LoRA_TTT_SOTA",
+        "folderPath": "records/track_10min_16mb/2026-03-21_LoRA_TTT_SOTA",
+        "submissionPath": "records/track_10min_16mb/2026-03-21_LoRA_TTT_SOTA/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-21_LoRA_TTT_SOTA/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-21_LoRA_TTT_SOTA/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-21_LoRA_TTT_SOTA/train_gpt.py"
+      },
+      "submission": {
+        "author": "Aram Dovlatyan",
+        "githubId": "aramdovlatyan",
+        "name": "LoRA TTT on SOTA (negative result)",
+        "blurb": "Per-document LoRA test-time training (rank=8 on c_q+c_v, Adam lr=0.01, stride=256) applied at eval time to the 1.1428 SOTA checkpoint. Training identical to 2026-03-20_10L_Int5MLP_MuonWD04_SWA50. TTT degraded performance significantly (+0.19 bpb). Non-record: artifact 16.9MB > 16MB limit; TTT eval took 20.4 min > 10 min eval budget.",
+        "date": "2026-03-21"
+      },
+      "metrics": {
+        "valBpb": 1.15402184,
+        "valLoss": 1.94851239,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 16907757,
+        "bytesCode": 65526,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1022,
+        "title": "Non-Record: McGilchrist Register Token — causal cumulative mean + FiLM global context pathway",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1022",
+        "authorLogin": "aramdov",
+        "authorName": null,
+        "createdAt": "2026-03-28T13:58:44Z",
+        "updatedAt": "2026-03-28T13:59:41Z",
+        "headSha": "329d124caca8c4d86feadb1fed9a06d41efa1f64",
+        "headRepo": "aramdov/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/329d124caca8c4d86feadb1fed9a06d41efa1f64/records/track_10min_16mb/2026-03-21_LoRA_TTT_SOTA/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/329d124caca8c4d86feadb1fed9a06d41efa1f64/records/track_10min_16mb/2026-03-21_LoRA_TTT_SOTA/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/329d124caca8c4d86feadb1fed9a06d41efa1f64/records/track_10min_16mb/2026-03-21_LoRA_TTT_SOTA/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/329d124caca8c4d86feadb1fed9a06d41efa1f64/records/track_10min_16mb/2026-03-21_LoRA_TTT_SOTA/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/329d124caca8c4d86feadb1fed9a06d41efa1f64/records/track_10min_16mb/2026-03-21_LoRA_TTT_SOTA",
+        "pr": "https://github.com/openai/parameter-golf/pull/1022",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_10min_16mb-2026-03-20_Int6_MLP3x_NorMuon_WD",
       "source": "pull_request",
       "status": "open",
@@ -23959,6 +24036,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/9b03d736ab45fc8c41a0cb4985d1bc996d674e4f/records/track_10min_16mb/2026-03-19_Vocab4096_MLP3x_SlidingWindow/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/9b03d736ab45fc8c41a0cb4985d1bc996d674e4f/records/track_10min_16mb/2026-03-19_Vocab4096_MLP3x_SlidingWindow",
         "pr": "https://github.com/openai/parameter-golf/pull/123",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-21_McGilchrist_Register",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-21_McGilchrist_Register",
+        "folderPath": "records/track_10min_16mb/2026-03-21_McGilchrist_Register",
+        "submissionPath": "records/track_10min_16mb/2026-03-21_McGilchrist_Register/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-21_McGilchrist_Register/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-21_McGilchrist_Register/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-21_McGilchrist_Register/train_gpt.py"
+      },
+      "submission": {
+        "author": "Aram Dovlatyan",
+        "githubId": "aramdov",
+        "name": "McGilchrist Register Token",
+        "blurb": "Causal cumulative mean + FiLM conditioning per block — a 'right hemisphere' global context signal inspired by McGilchrist's hemispheric asymmetry thesis. The running mean is a holistic document summary; FiLM projects it into per-dimension scale+shift to modulate each block output. Zero-initialized so training starts identical to SOTA. Non-record: artifact 16.86MB > 16MB limit due to untied lm_head addition; v4 removes that.",
+        "date": "2026-03-28"
+      },
+      "metrics": {
+        "valBpb": 1.16465346,
+        "valLoss": 1.96646608,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 16855808,
+        "bytesCode": 55529,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1022,
+        "title": "Non-Record: McGilchrist Register Token — causal cumulative mean + FiLM global context pathway",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1022",
+        "authorLogin": "aramdov",
+        "authorName": null,
+        "createdAt": "2026-03-28T13:58:44Z",
+        "updatedAt": "2026-03-28T13:59:41Z",
+        "headSha": "329d124caca8c4d86feadb1fed9a06d41efa1f64",
+        "headRepo": "aramdov/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/329d124caca8c4d86feadb1fed9a06d41efa1f64/records/track_10min_16mb/2026-03-21_McGilchrist_Register/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/329d124caca8c4d86feadb1fed9a06d41efa1f64/records/track_10min_16mb/2026-03-21_McGilchrist_Register/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/329d124caca8c4d86feadb1fed9a06d41efa1f64/records/track_10min_16mb/2026-03-21_McGilchrist_Register/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/329d124caca8c4d86feadb1fed9a06d41efa1f64/records/track_10min_16mb/2026-03-21_McGilchrist_Register/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/329d124caca8c4d86feadb1fed9a06d41efa1f64/records/track_10min_16mb/2026-03-21_McGilchrist_Register",
+        "pr": "https://github.com/openai/parameter-golf/pull/1022",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -43599,6 +43753,237 @@
         "script": "https://github.com/openai/parameter-golf/blob/381ece0b8f6f876cdea2b10e3e411d12d9ea8010/records/track_10min_16mb/2026-03-XX_DepthRecurrence_eb1386/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/381ece0b8f6f876cdea2b10e3e411d12d9ea8010/records/track_10min_16mb/2026-03-XX_DepthRecurrence_eb1386",
         "pr": "https://github.com/openai/parameter-golf/pull/449",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-28_12L_Leaner480",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-28_12L_Leaner480",
+        "folderPath": "records/track_10min_16mb/2026-03-28_12L_Leaner480",
+        "submissionPath": "records/track_10min_16mb/2026-03-28_12L_Leaner480/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-28_12L_Leaner480/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-28_12L_Leaner480/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-28_12L_Leaner480/train_gpt.py"
+      },
+      "submission": {
+        "author": "copilot-phase1-variant",
+        "githubId": "openai-parameter-golf",
+        "name": null,
+        "blurb": null,
+        "date": "2026-03-28T14:10:41Z"
+      },
+      "metrics": {
+        "valBpb": null,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1023,
+        "title": "Phase 1: Three Optimization Variants",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1023",
+        "authorLogin": "DanielSooman",
+        "authorName": null,
+        "createdAt": "2026-03-28T14:10:41Z",
+        "updatedAt": "2026-03-28T14:10:41Z",
+        "headSha": "1356f594a4cec18ade617bdf0d98c4180d0d270f",
+        "headRepo": "DanielSooman/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/1356f594a4cec18ade617bdf0d98c4180d0d270f/records/track_10min_16mb/2026-03-28_12L_Leaner480/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/1356f594a4cec18ade617bdf0d98c4180d0d270f/records/track_10min_16mb/2026-03-28_12L_Leaner480/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/1356f594a4cec18ade617bdf0d98c4180d0d270f/records/track_10min_16mb/2026-03-28_12L_Leaner480/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/1356f594a4cec18ade617bdf0d98c4180d0d270f/records/track_10min_16mb/2026-03-28_12L_Leaner480/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/1356f594a4cec18ade617bdf0d98c4180d0d270f/records/track_10min_16mb/2026-03-28_12L_Leaner480",
+        "pr": "https://github.com/openai/parameter-golf/pull/1023",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-28_AggressiveLR_CosineWarmup",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-28_AggressiveLR_CosineWarmup",
+        "folderPath": "records/track_10min_16mb/2026-03-28_AggressiveLR_CosineWarmup",
+        "submissionPath": "records/track_10min_16mb/2026-03-28_AggressiveLR_CosineWarmup/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-28_AggressiveLR_CosineWarmup/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-28_AggressiveLR_CosineWarmup/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-28_AggressiveLR_CosineWarmup/train_gpt.py"
+      },
+      "submission": {
+        "author": "copilot-phase1-variant",
+        "githubId": "openai-parameter-golf",
+        "name": null,
+        "blurb": null,
+        "date": "2026-03-28T14:10:41Z"
+      },
+      "metrics": {
+        "valBpb": null,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1023,
+        "title": "Phase 1: Three Optimization Variants",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1023",
+        "authorLogin": "DanielSooman",
+        "authorName": null,
+        "createdAt": "2026-03-28T14:10:41Z",
+        "updatedAt": "2026-03-28T14:10:41Z",
+        "headSha": "1356f594a4cec18ade617bdf0d98c4180d0d270f",
+        "headRepo": "DanielSooman/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/1356f594a4cec18ade617bdf0d98c4180d0d270f/records/track_10min_16mb/2026-03-28_AggressiveLR_CosineWarmup/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/1356f594a4cec18ade617bdf0d98c4180d0d270f/records/track_10min_16mb/2026-03-28_AggressiveLR_CosineWarmup/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/1356f594a4cec18ade617bdf0d98c4180d0d270f/records/track_10min_16mb/2026-03-28_AggressiveLR_CosineWarmup/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/1356f594a4cec18ade617bdf0d98c4180d0d270f/records/track_10min_16mb/2026-03-28_AggressiveLR_CosineWarmup/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/1356f594a4cec18ade617bdf0d98c4180d0d270f/records/track_10min_16mb/2026-03-28_AggressiveLR_CosineWarmup",
+        "pr": "https://github.com/openai/parameter-golf/pull/1023",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-28_Int4QAT_EMA_Warmdown",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-28_Int4QAT_EMA_Warmdown",
+        "folderPath": "records/track_10min_16mb/2026-03-28_Int4QAT_EMA_Warmdown",
+        "submissionPath": "records/track_10min_16mb/2026-03-28_Int4QAT_EMA_Warmdown/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-28_Int4QAT_EMA_Warmdown/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-28_Int4QAT_EMA_Warmdown/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-28_Int4QAT_EMA_Warmdown/train_gpt.py"
+      },
+      "submission": {
+        "author": "copilot-phase1-variant",
+        "githubId": "openai-parameter-golf",
+        "name": null,
+        "blurb": null,
+        "date": "2026-03-28T14:10:41Z"
+      },
+      "metrics": {
+        "valBpb": null,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1023,
+        "title": "Phase 1: Three Optimization Variants",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1023",
+        "authorLogin": "DanielSooman",
+        "authorName": null,
+        "createdAt": "2026-03-28T14:10:41Z",
+        "updatedAt": "2026-03-28T14:10:41Z",
+        "headSha": "1356f594a4cec18ade617bdf0d98c4180d0d270f",
+        "headRepo": "DanielSooman/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/1356f594a4cec18ade617bdf0d98c4180d0d270f/records/track_10min_16mb/2026-03-28_Int4QAT_EMA_Warmdown/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/1356f594a4cec18ade617bdf0d98c4180d0d270f/records/track_10min_16mb/2026-03-28_Int4QAT_EMA_Warmdown/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/1356f594a4cec18ade617bdf0d98c4180d0d270f/records/track_10min_16mb/2026-03-28_Int4QAT_EMA_Warmdown/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/1356f594a4cec18ade617bdf0d98c4180d0d270f/records/track_10min_16mb/2026-03-28_Int4QAT_EMA_Warmdown/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/1356f594a4cec18ade617bdf0d98c4180d0d270f/records/track_10min_16mb/2026-03-28_Int4QAT_EMA_Warmdown",
+        "pr": "https://github.com/openai/parameter-golf/pull/1023",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

@@ -1,8 +1,55 @@
 {
-  "generatedAt": "2026-03-28T13:53:02.082Z",
+  "generatedAt": "2026-03-28T14:23:17.617Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1023,
+      "title": "Phase 1: Three Optimization Variants",
+      "status": "open",
+      "updatedAt": "2026-03-28T14:10:41Z",
+      "headSha": "1356f594a4cec18ade617bdf0d98c4180d0d270f",
+      "generatedAt": "2026-03-28T14:23:05.488Z",
+      "summary": "Phase 1 explores int4 QAT with adaptive warmdown, leaner depth/width, and extended warmup cosine LR to squeeze improvements within the 16MB/10min window.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1023.json"
+    },
+    {
+      "prNumber": 1022,
+      "title": "Non-Record: McGilchrist Register Token — causal cumulative mean + FiLM global context pathway",
+      "status": "open",
+      "updatedAt": "2026-03-28T13:59:41Z",
+      "headSha": "329d124caca8c4d86feadb1fed9a06d41efa1f64",
+      "generatedAt": "2026-03-28T14:23:10.635Z",
+      "summary": "Each block adds a right-hemisphere global pathway: a causal cumulative mean feeds a zero-initialized FiLM bottleneck that modulates outputs with holistic context.",
+      "tags": [
+        "architecture",
+        "attention",
+        "regularization",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1022.json"
+    },
     {
       "prNumber": 1021,
       "title": "Non-record: MC Dropout ensembling is negative for small LMs",
@@ -4178,13 +4225,14 @@
       "prNumber": 769,
       "title": "PROTEUS+STYX — val_bpb 0.8495 (3-seed mean) — LeakyReLU(0.9)² + 5-gram Eval Cache",
       "status": "closed",
-      "updatedAt": "2026-03-27T22:50:30Z",
+      "updatedAt": "2026-03-28T14:20:07Z",
       "headSha": "ca847e29a3ce3d61b7cf41f14828a6b95dca13c4",
-      "generatedAt": "2026-03-27T23:20:39.086Z",
-      "summary": "11L GQA stack pairs LeakyReLU(0.9)² activations with a backward-looking 5-gram eval cache blended into sliding-window outputs.",
+      "generatedAt": "2026-03-28T14:23:17.504Z",
+      "summary": "PROTEUS+STYX pairs LeakyReLU(0.9)² architecture tweaks with a backward-looking 5-gram sliding-window cache blend for evaluation-time gains.",
       "tags": [
         "architecture",
-        "evaluation"
+        "evaluation",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
