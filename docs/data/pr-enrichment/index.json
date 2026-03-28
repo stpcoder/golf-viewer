@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-28T01:19:51.639Z",
+  "generatedAt": "2026-03-28T01:49:48.697Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -77,15 +77,14 @@
       "prNumber": 993,
       "title": "Record: 11L XSA + Mixed INT6 + Adaptive N-gram Cache (2->7 backoff) - val_bpb=0.9631, 3-seed",
       "status": "closed",
-      "updatedAt": "2026-03-28T00:28:29Z",
+      "updatedAt": "2026-03-28T01:33:24Z",
       "headSha": "479aa0891a8099f279cdc1af1dbff19dcb764bec",
-      "generatedAt": "2026-03-28T00:49:53.211Z",
-      "summary": "Combines an 11-layer XSA GPT with post-training mixed INT6 quantization, sliding-window scoring, and a score-first adaptive n-gram cache.",
+      "generatedAt": "2026-03-28T01:49:32.063Z",
+      "summary": "11-layer XSA GPT pairs mixed INT6 quantization with sliding-window eval and a score-first adaptive 2→7 n-gram cache.",
       "tags": [
         "architecture",
         "quantization",
-        "evaluation",
-        "compression"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -147,15 +146,14 @@
       "prNumber": 990,
       "title": "ClownCar: Frugendorff compression baseline + canonical DeltaNet integration",
       "status": "open",
-      "updatedAt": "2026-03-28T00:38:03Z",
+      "updatedAt": "2026-03-28T01:32:39Z",
       "headSha": "90741b4c55ca0a0d0f79056dec29da64d7636491",
-      "generatedAt": "2026-03-28T00:49:59.853Z",
-      "summary": "Shares one crawler block per loop with flow-conditioned instructions and plugs in canonical DeltaNet kernels for a compact recurrent transformer compression.",
+      "generatedAt": "2026-03-28T01:49:38.282Z",
+      "summary": "Frugendorff shares a recurrent crawler with Flow instructions plus canonical DeltaNet kernels to compress transformer depth into ~13M params.",
       "tags": [
         "architecture",
-        "attention",
-        "quantization",
-        "compression"
+        "compression",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1279,22 +1277,23 @@
       "prNumber": 927,
       "title": "Recursive Transformer 4B/7L + VE + QAT + TTT — val_bpb 1.1696 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-27T03:36:19Z",
-      "headSha": "dba058ba81d969d752ed0e67ead7f4df54999b4a",
-      "generatedAt": "2026-03-27T03:43:36.427Z",
-      "summary": "Four-block recursive transformer loops seven times at dim1024 with U-Net skips, VE/SmearGate/BigramHash, int6 QAT, and score-first TTT sliding eval.",
+      "updatedAt": "2026-03-28T01:29:26Z",
+      "headSha": "64490b14a165c0f0df67d0b5c59cbe5453fdfd13",
+      "generatedAt": "2026-03-28T01:49:44.165Z",
+      "summary": "Recursive transformer loops 4 shared blocks 7 times with U-Net skips, VE, int6 QAT, and score-first TTT sliding eval to fit 1024-dim under 16MB.",
       "tags": [
+        "val-only",
         "architecture",
         "quantization",
         "evaluation"
       ],
       "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": true
+        "valOnlyMatchesCollector": false
       },
       "file": "items/pr-927.json"
     },
@@ -4924,13 +4923,13 @@
       "prNumber": 688,
       "title": "Record: 5-expert Hedge Mixer + TTT (3-seed mean val_bpb=1.0745)",
       "status": "closed",
-      "updatedAt": "2026-03-27T22:49:21Z",
+      "updatedAt": "2026-03-28T01:42:26Z",
       "headSha": "a366675fbcda83df0f634a8967d6f041b868a651",
-      "generatedAt": "2026-03-27T23:21:02.336Z",
-      "summary": "GPU-vectorized 5-expert Hedge context mixer during TTT blends neural logits with incremental n-gram and entropy experts for post-training adaptation.",
+      "generatedAt": "2026-03-28T01:49:48.597Z",
+      "summary": "Online 5-expert Hedge context mixer blends neural logits with n-gram stats during sliding-window TTT eval while keeping GPTQ calibration inside the 600s budget.",
       "tags": [
-        "evaluation",
         "training-schedule",
+        "evaluation",
         "quantization"
       ],
       "flags": {

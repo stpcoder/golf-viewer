@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-27T03:43:36.427Z",
+  "generatedAt": "2026-03-28T01:49:44.165Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 927,
     "title": "Recursive Transformer 4B/7L + VE + QAT + TTT — val_bpb 1.1696 (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-03-27T03:36:19Z",
-    "headSha": "dba058ba81d969d752ed0e67ead7f4df54999b4a",
+    "updatedAt": "2026-03-28T01:29:26Z",
+    "headSha": "64490b14a165c0f0df67d0b5c59cbe5453fdfd13",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/927",
     "authorLogin": "Tonyy1977"
   },
@@ -19,24 +19,25 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Four-block recursive transformer loops seven times at dim1024 with U-Net skips, VE/SmearGate/BigramHash, int6 QAT, and score-first TTT sliding eval.",
+    "summary": "Recursive transformer loops 4 shared blocks 7 times with U-Net skips, VE, int6 QAT, and score-first TTT sliding eval to fit 1024-dim under 16MB.",
     "tags": [
+      "val-only",
       "architecture",
       "quantization",
       "evaluation"
     ],
-    "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "usesValOnly": true,
+    "valOnlyReasoning": "Score-first TTT trains on each scored validation chunk before moving on.",
     "techniques": [
-      "Looped 4-block recursive transformer with encoder-decoder skips",
-      "ValueEmbedding + SmearGate + BigramHash reinjection",
-      "Int6 QAT from step0 paired with score-first TTT sliding eval"
+      "Recursive 4-block/7-loop U-Net skip architecture",
+      "Int6 QAT from step 0 for looped weights",
+      "Score-first TTT with sliding-window eval"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": false,
-    "finalUsesValOnly": false,
-    "valOnlyMatchesCollector": true
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
   }
 }
