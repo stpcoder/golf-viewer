@@ -1,43 +1,42 @@
 {
-  "generatedAt": "2026-03-28T02:49:53.664Z",
+  "generatedAt": "2026-03-28T03:49:59.881Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 999,
     "title": "Record: 11L Muon TTT + Entropy-Adaptive Epochs (8×H100) — val_bpb 1.1179 (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-03-28T02:28:37Z",
-    "headSha": "bffd4266401b90620667d45bb3d10af5772fcaa5",
+    "updatedAt": "2026-03-28T03:33:25Z",
+    "headSha": "f21923533c704841b6f1f2cbcc124da411f3ce85",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/999",
     "authorLogin": "aamodbhatt"
   },
   "inputs": {
-    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
     "readmePaths": [
-      "records/track_10min_16mb/2026-03-28_MuonTTT_EntropyAdaptive_11L_8xH100/README.md",
-      "records/track_10min_16mb/2026-03-27_Legal_NeuralOnly_NoTTT_Alt_8xH100/README.md"
+      "records/track_10min_16mb/2026-03-28_MuonTTT_EntropyAdaptive_11L_8xH100/README.md"
     ],
-    "submissionCount": 2
+    "submissionCount": 1
   },
   "output": {
-    "summary": "Applies Muon-style Newton-Schulz updates and entropy-gated per-chunk epoch counts to the score-first TTT loop over the 11-layer SOTA stack.",
+    "summary": "Test-time training replaces SGD with Newton-Schulz Muon updates and gates 2/3/4 epochs per chunk based on entropy to concentrate adaptation on harder validation content.",
     "tags": [
       "muon",
       "optimizer",
-      "training-schedule"
+      "training-schedule",
+      "val-only"
     ],
-    "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "usesValOnly": true,
+    "valOnlyReasoning": "TTT loop adapts model weights on validation chunks during the score-first regime rather than training-data updates.",
     "techniques": [
-      "Muon Newton-Schulz updates replace SGD inside the TTT optimizer",
-      "Chunk NLL gates 2/3/4 epoch counts with global sync",
-      "Score-first TTT on the SOTA 11L base with full adaptation budget"
+      "Newton-Schulz Muon optimizer in the TTT loop",
+      "Entropy-triggered 2/3/4 epoch allocation per chunk"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": false,
-    "finalUsesValOnly": false,
-    "valOnlyMatchesCollector": true
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
   }
 }

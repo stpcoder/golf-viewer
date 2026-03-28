@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-28T03:19:53.010Z",
+  "generatedAt": "2026-03-28T03:50:20.481Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -30,22 +30,23 @@
       "prNumber": 999,
       "title": "Record: 11L Muon TTT + Entropy-Adaptive Epochs (8×H100) — val_bpb 1.1179 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-28T02:28:37Z",
-      "headSha": "bffd4266401b90620667d45bb3d10af5772fcaa5",
-      "generatedAt": "2026-03-28T02:49:53.664Z",
-      "summary": "Applies Muon-style Newton-Schulz updates and entropy-gated per-chunk epoch counts to the score-first TTT loop over the 11-layer SOTA stack.",
+      "updatedAt": "2026-03-28T03:33:25Z",
+      "headSha": "f21923533c704841b6f1f2cbcc124da411f3ce85",
+      "generatedAt": "2026-03-28T03:49:59.881Z",
+      "summary": "Test-time training replaces SGD with Newton-Schulz Muon updates and gates 2/3/4 epochs per chunk based on entropy to concentrate adaptation on harder validation content.",
       "tags": [
         "muon",
         "optimizer",
-        "training-schedule"
+        "training-schedule",
+        "val-only"
       ],
       "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": true
+        "valOnlyMatchesCollector": false
       },
       "file": "items/pr-999.json"
     },
@@ -919,6 +920,29 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-951.json"
+    },
+    {
+      "prNumber": 947,
+      "title": "Non-record: Legal Neural-Only No-TTT Alt (8xH100) val_bpb=1.1576",
+      "status": "open",
+      "updatedAt": "2026-03-27T10:42:54Z",
+      "headSha": "c941cc0121f3a0e83a7402ab6525cce9dd4ccdb3",
+      "generatedAt": "2026-03-28T03:50:09.442Z",
+      "summary": "Compliance-focused frontier_candidate run on 8xH100 uses BIGRAM_VOCAB_SIZE=2048, MLP_MULT=3.2, and purely neural evaluation without cache rescoring or TTT.",
+      "tags": [
+        "architecture",
+        "evaluation",
+        "depth-width"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-947.json"
     },
     {
       "prNumber": 946,
@@ -1849,29 +1873,6 @@
       "file": "items/pr-895.json"
     },
     {
-      "prNumber": 893,
-      "title": "Record: Two-Pass Order-12 N-gram Backoff + Parallel Muon — val_bpb 0.1310 (3-seed)",
-      "status": "closed",
-      "updatedAt": "2026-03-27T22:35:25Z",
-      "headSha": "aff6a980cded172e2bafc44061323fbd591a7c89",
-      "generatedAt": "2026-03-27T22:49:28.380Z",
-      "summary": "11L parallel Muon transformer uses order-12 N-gram backoff cache built in pass one and rescoring cold chunks in pass two.",
-      "tags": [
-        "architecture",
-        "muon",
-        "evaluation"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-893.json"
-    },
-    {
       "prNumber": 892,
       "title": "Non-record: Technique Taxonomy — Tier List, Interaction Effects, and BPB Verification Tools",
       "status": "open",
@@ -2258,6 +2259,29 @@
       "file": "items/pr-868.json"
     },
     {
+      "prNumber": 865,
+      "title": "Record: 11L Parallel Muon + N-gram Backoff Cache — val_bpb 0.2841 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-03-28T03:26:42Z",
+      "headSha": "8fbcf91980c280004a3f58d9817eb7d8e984f32c",
+      "generatedAt": "2026-03-28T03:50:13.721Z",
+      "summary": "11-layer 512d Parallel Muon model uses eval-time N-gram backoff cache with entropy-adaptive blending to capture repeated patterns.",
+      "tags": [
+        "architecture",
+        "evaluation",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-865.json"
+    },
+    {
       "prNumber": 862,
       "title": "RECORD: Denseformer+VRL+XSA on last 4 layers+Gradient Clipping (pending 8xH100 eval)",
       "status": "open",
@@ -2424,17 +2448,17 @@
     },
     {
       "prNumber": 854,
-      "title": "Non-record submission: MLP3x 9L 512d, 1.4530 bpb (1xRTX 4090)",
+      "title": "Non-record: Value Embeddings 8L 512d, 1.3712 bpb (1x RTX 4090)",
       "status": "open",
-      "updatedAt": "2026-03-28T00:42:08Z",
+      "updatedAt": "2026-03-28T03:39:07Z",
       "headSha": "193b37d6c310fdfa7989abcd2b6f4c713cd509d1",
-      "generatedAt": "2026-03-28T00:50:10.802Z",
-      "summary": "Sweep on RTX 4090 finds 9-layer GPT with 3x FFN width (1536) plus Muon optimizer beats deeper 12-layer models at ~22M params with int8+zlib.",
+      "generatedAt": "2026-03-28T03:50:20.357Z",
+      "summary": "Autoresearch 8L 512d on RTX 4090 adds alternating gated value embeddings plus SSSL sliding attention and 8192 BPE to enrich context.",
       "tags": [
         "architecture",
-        "depth-width",
-        "muon",
-        "quantization"
+        "attention",
+        "tokenization",
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,
@@ -4448,29 +4472,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-721.json"
-    },
-    {
-      "prNumber": 718,
-      "title": "Non-record Submission: CrystalGPT + Diamond Fusion — Ternary Crystal Architecture",
-      "status": "open",
-      "updatedAt": "2026-03-26T05:30:53Z",
-      "headSha": "7355025132d09e268e5b6e5708d07d76cc0cfbc0",
-      "generatedAt": "2026-03-26T05:37:28.188Z",
-      "summary": "CrystalGPT reuses one transformer block with per-iteration crystal modulation, diamond fusion consensus, and ternary voting for param-efficient recurrence.",
-      "tags": [
-        "architecture",
-        "attention",
-        "non-record"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-718.json"
     },
     {
       "prNumber": 717,

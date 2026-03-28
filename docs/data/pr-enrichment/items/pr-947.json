@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-27T10:45:28.051Z",
+  "generatedAt": "2026-03-28T03:50:09.442Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Scaling a frontier_candidate preset (BIGRAM_VOCAB=2048, MLP_MULT=3.2) to stay neural-only at eval while disabling cache rescoring/TTT.",
+    "summary": "Compliance-focused frontier_candidate run on 8xH100 uses BIGRAM_VOCAB_SIZE=2048, MLP_MULT=3.2, and purely neural evaluation without cache rescoring or TTT.",
     "tags": [
       "architecture",
       "evaluation",
-      "non-record"
+      "depth-width"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "frontier_candidate scaling with BIGRAM_VOCAB=2048 and MLP_MULT=3.2",
-      "neural-only evaluation via disabling n-gram rescoring and TTT",
-      "sliding eval disabled for bounded runtime"
+      "- frontier_candidate preset scaled to 8xH100",
+      "- BIGRAM_VOCAB_SIZE=2048 with MLP_MULT=3.2 adjustments",
+      "- Neural-only eval flow with cache rescoring and TTT disabled"
     ]
   },
   "compatibility": {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-28T03:19:46.759Z",
+  "generatedAt": "2026-03-28T03:49:52.684Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -2165,7 +2165,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-03-26_11L_ParallelMuon_NgramBackoff",
       "source": "pull_request",
-      "status": "closed",
+      "status": "open",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -2211,26 +2211,26 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 893,
-        "title": "Record: Two-Pass Order-12 N-gram Backoff + Parallel Muon — val_bpb 0.1310 (3-seed)",
-        "state": "closed",
+        "number": 865,
+        "title": "Record: 11L Parallel Muon + N-gram Backoff Cache — val_bpb 0.2841 (3-seed mean)",
+        "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/893",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/865",
         "authorLogin": "aryanbhosale",
         "authorName": null,
-        "createdAt": "2026-03-26T19:32:05Z",
-        "updatedAt": "2026-03-27T22:35:25Z",
-        "headSha": "aff6a980cded172e2bafc44061323fbd591a7c89",
+        "createdAt": "2026-03-26T16:35:20Z",
+        "updatedAt": "2026-03-28T03:26:42Z",
+        "headSha": "8fbcf91980c280004a3f58d9817eb7d8e984f32c",
         "headRepo": "aryanbhosale/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/f158dce667f4dfdd9f91b96933b95fa5f79546c7/records/track_10min_16mb/2026-03-26_11L_ParallelMuon_NgramBackoff/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/f158dce667f4dfdd9f91b96933b95fa5f79546c7/records/track_10min_16mb/2026-03-26_11L_ParallelMuon_NgramBackoff/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/f158dce667f4dfdd9f91b96933b95fa5f79546c7/records/track_10min_16mb/2026-03-26_11L_ParallelMuon_NgramBackoff/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/f158dce667f4dfdd9f91b96933b95fa5f79546c7/records/track_10min_16mb/2026-03-26_11L_ParallelMuon_NgramBackoff/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/f158dce667f4dfdd9f91b96933b95fa5f79546c7/records/track_10min_16mb/2026-03-26_11L_ParallelMuon_NgramBackoff",
-        "pr": "https://github.com/openai/parameter-golf/pull/893",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/420d651b1093a4c7c294331a1587c56a1bb00447/records/track_10min_16mb/2026-03-26_11L_ParallelMuon_NgramBackoff/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/420d651b1093a4c7c294331a1587c56a1bb00447/records/track_10min_16mb/2026-03-26_11L_ParallelMuon_NgramBackoff/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/420d651b1093a4c7c294331a1587c56a1bb00447/records/track_10min_16mb/2026-03-26_11L_ParallelMuon_NgramBackoff/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/420d651b1093a4c7c294331a1587c56a1bb00447/records/track_10min_16mb/2026-03-26_11L_ParallelMuon_NgramBackoff/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/420d651b1093a4c7c294331a1587c56a1bb00447/records/track_10min_16mb/2026-03-26_11L_ParallelMuon_NgramBackoff",
+        "pr": "https://github.com/openai/parameter-golf/pull/865",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -10396,16 +10396,16 @@
         "authorLogin": "aamodbhatt",
         "authorName": null,
         "createdAt": "2026-03-28T02:27:49Z",
-        "updatedAt": "2026-03-28T02:28:37Z",
-        "headSha": "bffd4266401b90620667d45bb3d10af5772fcaa5",
+        "updatedAt": "2026-03-28T03:33:25Z",
+        "headSha": "f21923533c704841b6f1f2cbcc124da411f3ce85",
         "headRepo": "aamodbhatt/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/bffd4266401b90620667d45bb3d10af5772fcaa5/records/track_10min_16mb/2026-03-28_MuonTTT_EntropyAdaptive_11L_8xH100/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/bffd4266401b90620667d45bb3d10af5772fcaa5/records/track_10min_16mb/2026-03-28_MuonTTT_EntropyAdaptive_11L_8xH100/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/bffd4266401b90620667d45bb3d10af5772fcaa5/records/track_10min_16mb/2026-03-28_MuonTTT_EntropyAdaptive_11L_8xH100/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/bffd4266401b90620667d45bb3d10af5772fcaa5/records/track_10min_16mb/2026-03-28_MuonTTT_EntropyAdaptive_11L_8xH100/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/bffd4266401b90620667d45bb3d10af5772fcaa5/records/track_10min_16mb/2026-03-28_MuonTTT_EntropyAdaptive_11L_8xH100",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/f21923533c704841b6f1f2cbcc124da411f3ce85/records/track_10min_16mb/2026-03-28_MuonTTT_EntropyAdaptive_11L_8xH100/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/f21923533c704841b6f1f2cbcc124da411f3ce85/records/track_10min_16mb/2026-03-28_MuonTTT_EntropyAdaptive_11L_8xH100/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/f21923533c704841b6f1f2cbcc124da411f3ce85/records/track_10min_16mb/2026-03-28_MuonTTT_EntropyAdaptive_11L_8xH100/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/f21923533c704841b6f1f2cbcc124da411f3ce85/records/track_10min_16mb/2026-03-28_MuonTTT_EntropyAdaptive_11L_8xH100/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/f21923533c704841b6f1f2cbcc124da411f3ce85/records/track_10min_16mb/2026-03-28_MuonTTT_EntropyAdaptive_11L_8xH100",
         "pr": "https://github.com/openai/parameter-golf/pull/999",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
@@ -21552,17 +21552,17 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 999,
-        "title": "Record: 11L Muon TTT + Entropy-Adaptive Epochs (8×H100) — val_bpb 1.1179 (3-seed mean)",
+        "number": 947,
+        "title": "Non-record: Legal Neural-Only No-TTT Alt (8xH100) val_bpb=1.1576",
         "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/999",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/947",
         "authorLogin": "aamodbhatt",
         "authorName": null,
-        "createdAt": "2026-03-28T02:27:49Z",
-        "updatedAt": "2026-03-28T02:28:37Z",
-        "headSha": "bffd4266401b90620667d45bb3d10af5772fcaa5",
+        "createdAt": "2026-03-27T10:42:54Z",
+        "updatedAt": "2026-03-27T10:42:54Z",
+        "headSha": "c941cc0121f3a0e83a7402ab6525cce9dd4ccdb3",
         "headRepo": "aamodbhatt/parameter-golf"
       },
       "links": {
@@ -21571,7 +21571,7 @@
         "trainLog": "https://github.com/openai/parameter-golf/blob/c941cc0121f3a0e83a7402ab6525cce9dd4ccdb3/records/track_10min_16mb/2026-03-27_Legal_NeuralOnly_NoTTT_Alt_8xH100/train.log",
         "script": "https://github.com/openai/parameter-golf/blob/c941cc0121f3a0e83a7402ab6525cce9dd4ccdb3/records/track_10min_16mb/2026-03-27_Legal_NeuralOnly_NoTTT_Alt_8xH100/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/c941cc0121f3a0e83a7402ab6525cce9dd4ccdb3/records/track_10min_16mb/2026-03-27_Legal_NeuralOnly_NoTTT_Alt_8xH100",
-        "pr": "https://github.com/openai/parameter-golf/pull/999",
+        "pr": "https://github.com/openai/parameter-golf/pull/947",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -35798,7 +35798,7 @@
       },
       "pr": {
         "number": 854,
-        "title": "Non-record submission: MLP3x 9L 512d, 1.4530 bpb (1xRTX 4090)",
+        "title": "Non-record: Value Embeddings 8L 512d, 1.3712 bpb (1x RTX 4090)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -35806,7 +35806,7 @@
         "authorLogin": "ivanontech",
         "authorName": null,
         "createdAt": "2026-03-26T14:35:02Z",
-        "updatedAt": "2026-03-28T00:42:08Z",
+        "updatedAt": "2026-03-28T03:39:07Z",
         "headSha": "193b37d6c310fdfa7989abcd2b6f4c713cd509d1",
         "headRepo": "ivanontech/parameter-golf"
       },
@@ -37261,7 +37261,7 @@
       },
       "pr": {
         "number": 854,
-        "title": "Non-record submission: MLP3x 9L 512d, 1.4530 bpb (1xRTX 4090)",
+        "title": "Non-record: Value Embeddings 8L 512d, 1.3712 bpb (1x RTX 4090)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -37269,7 +37269,7 @@
         "authorLogin": "ivanontech",
         "authorName": null,
         "createdAt": "2026-03-26T14:35:02Z",
-        "updatedAt": "2026-03-28T00:42:08Z",
+        "updatedAt": "2026-03-28T03:39:07Z",
         "headSha": "193b37d6c310fdfa7989abcd2b6f4c713cd509d1",
         "headRepo": "ivanontech/parameter-golf"
       },
@@ -42367,83 +42367,6 @@
         "script": "https://github.com/openai/parameter-golf/blob/10556aebcc62c4ddc97ce750b25a23ab9739305b/records/track_non_record_16mb/2026-03-26_DiffusionNoisedTeacher_AR/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/10556aebcc62c4ddc97ce750b25a23ab9739305b/records/track_non_record_16mb/2026-03-26_DiffusionNoisedTeacher_AR",
         "pr": "https://github.com/openai/parameter-golf/pull/904",
-        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
-      },
-      "provenance": {
-        "onMain": false,
-        "hasPullRequest": true,
-        "listedInReadme": false
-      }
-    },
-    {
-      "id": "record-records-track_non_record_16mb-2026-03-25_CrystalGPT_DiamondFusion_M4",
-      "source": "pull_request",
-      "status": "open",
-      "category": "non-record",
-      "track": {
-        "path": "records/track_non_record_16mb",
-        "slug": "track_non_record_16mb",
-        "label": "Non-record / 16MB",
-        "official": false,
-        "category": "non-record"
-      },
-      "record": {
-        "folderName": "2026-03-25_CrystalGPT_DiamondFusion_M4",
-        "folderPath": "records/track_non_record_16mb/2026-03-25_CrystalGPT_DiamondFusion_M4",
-        "submissionPath": "records/track_non_record_16mb/2026-03-25_CrystalGPT_DiamondFusion_M4/submission.json",
-        "readmePath": "records/track_non_record_16mb/2026-03-25_CrystalGPT_DiamondFusion_M4/README.md",
-        "trainLogPath": "records/track_non_record_16mb/2026-03-25_CrystalGPT_DiamondFusion_M4/train.log",
-        "scriptPath": "records/track_non_record_16mb/2026-03-25_CrystalGPT_DiamondFusion_M4/train_gpt.py"
-      },
-      "submission": {
-        "author": "Warren Reed Baum",
-        "githubId": "delistish",
-        "name": "CrystalGPT + Diamond Fusion (Ternary Crystal Architecture)",
-        "blurb": "Non-record submission: Novel crystal lattice architecture with diamond fusion junctions, recurrent transformer block with per-iteration crystal modulation gates, and ternary voting ensemble. Inspired by 'Ternary Crystal Computing' (Baum, 2026). Smoke test on M4: 4.18 bpb in 3 min. Architecture is param-efficient (~3.4M) and designed for L(N) optimization under 16MB constraint. Full 8xH100 training pending.",
-        "date": "2026-03-25T00:00:00Z"
-      },
-      "metrics": {
-        "valBpb": 4.1778,
-        "valLoss": 7.0541,
-        "preQuantValBpb": null,
-        "preQuantValLoss": null,
-        "stepStop": 5,
-        "wallclockSeconds": 183,
-        "evalTimeSeconds": null
-      },
-      "artifact": {
-        "bytesTotal": 3500000,
-        "bytesCode": null,
-        "bytesModelInt8Zlib": null
-      },
-      "flags": {
-        "usesValOnly": false
-      },
-      "detection": {
-        "valOnlyConfidence": "none",
-        "valOnlyMatches": []
-      },
-      "pr": {
-        "number": 718,
-        "title": "Non-record Submission: CrystalGPT + Diamond Fusion — Ternary Crystal Architecture",
-        "state": "open",
-        "draft": false,
-        "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/718",
-        "authorLogin": "ivanontech",
-        "authorName": null,
-        "createdAt": "2026-03-25T13:31:19Z",
-        "updatedAt": "2026-03-26T05:30:53Z",
-        "headSha": "7355025132d09e268e5b6e5708d07d76cc0cfbc0",
-        "headRepo": "ivanontech/parameter-golf"
-      },
-      "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/7355025132d09e268e5b6e5708d07d76cc0cfbc0/records/track_non_record_16mb/2026-03-25_CrystalGPT_DiamondFusion_M4/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/7355025132d09e268e5b6e5708d07d76cc0cfbc0/records/track_non_record_16mb/2026-03-25_CrystalGPT_DiamondFusion_M4/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/7355025132d09e268e5b6e5708d07d76cc0cfbc0/records/track_non_record_16mb/2026-03-25_CrystalGPT_DiamondFusion_M4/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/7355025132d09e268e5b6e5708d07d76cc0cfbc0/records/track_non_record_16mb/2026-03-25_CrystalGPT_DiamondFusion_M4/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/7355025132d09e268e5b6e5708d07d76cc0cfbc0/records/track_non_record_16mb/2026-03-25_CrystalGPT_DiamondFusion_M4",
-        "pr": "https://github.com/openai/parameter-golf/pull/718",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

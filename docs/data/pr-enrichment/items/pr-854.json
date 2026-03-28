@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-28T00:50:10.802Z",
+  "generatedAt": "2026-03-28T03:50:20.357Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 854,
-    "title": "Non-record submission: MLP3x 9L 512d, 1.4530 bpb (1xRTX 4090)",
+    "title": "Non-record: Value Embeddings 8L 512d, 1.3712 bpb (1x RTX 4090)",
     "state": "open",
-    "updatedAt": "2026-03-28T00:42:08Z",
+    "updatedAt": "2026-03-28T03:39:07Z",
     "headSha": "193b37d6c310fdfa7989abcd2b6f4c713cd509d1",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/854",
     "authorLogin": "ivanontech"
@@ -20,19 +20,19 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "Sweep on RTX 4090 finds 9-layer GPT with 3x FFN width (1536) plus Muon optimizer beats deeper 12-layer models at ~22M params with int8+zlib.",
+    "summary": "Autoresearch 8L 512d on RTX 4090 adds alternating gated value embeddings plus SSSL sliding attention and 8192 BPE to enrich context.",
     "tags": [
       "architecture",
-      "depth-width",
-      "muon",
-      "quantization"
+      "attention",
+      "tokenization",
+      "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Muon optimizer with int8+zlib compression",
-      "3x MLP multiplier (1536 FFN dim) vs deeper stacks",
-      "Single-GPU automated sweep across configs"
+      "Gated value embeddings fused every other layer",
+      "SSSL sliding-window attention pattern",
+      "8192 BPE vocab with tied embeddings"
     ]
   },
   "compatibility": {
