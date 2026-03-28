@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-28T20:24:33.196Z",
+  "generatedAt": "2026-03-28T20:54:45.965Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -29349,6 +29349,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/afdc3d5693b50ceac789fc8c880bf72906dd9f91/records/track_10min_16mb/2026-03-20_SlidingWindowMuon6/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/afdc3d5693b50ceac789fc8c880bf72906dd9f91/records/track_10min_16mb/2026-03-20_SlidingWindowMuon6",
         "pr": "https://github.com/openai/parameter-golf/pull/169",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-03-28_AutoResearch_R3_1x4090",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-28_AutoResearch_R3_1x4090",
+        "folderPath": "records/track_non_record_16mb/2026-03-28_AutoResearch_R3_1x4090",
+        "submissionPath": "records/track_non_record_16mb/2026-03-28_AutoResearch_R3_1x4090/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-28_AutoResearch_R3_1x4090/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-28_AutoResearch_R3_1x4090/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-28_AutoResearch_R3_1x4090/train_gpt.py"
+      },
+      "submission": {
+        "author": "ivanontech",
+        "githubId": "ivanontech",
+        "name": "AutoResearch R3 — Batch Size Reduction + Value Embeddings",
+        "blurb": "Non-record submission on 1x RTX 4090: 12L 1024d transformer with Value Embeddings (31.4M gated fusion params), 32768 BPE vocab, all long-range attention. Key insight: reducing TOTAL_BATCH from 2^19 to 2^16 yields 6.4x more gradient steps in the same 5-min budget, dramatically improving convergence. 31 automated experiments across 3 rounds of hyperparameter search via karpathy/autoresearch.",
+        "date": "2026-03-28T20:00:00Z"
+      },
+      "metrics": {
+        "valBpb": 1.197368,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": 26085,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1036,
+        "title": "Non-record: AutoResearch Batch Optimization — 1.1974 bpb (1× RTX 4090)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1036",
+        "authorLogin": "ivanontech",
+        "authorName": null,
+        "createdAt": "2026-03-28T19:40:46Z",
+        "updatedAt": "2026-03-28T20:28:42Z",
+        "headSha": "9ca8d13b74d1e436c170c50e1e253887c31c3ee3",
+        "headRepo": "ivanontech/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/9ca8d13b74d1e436c170c50e1e253887c31c3ee3/records/track_non_record_16mb/2026-03-28_AutoResearch_R3_1x4090/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/9ca8d13b74d1e436c170c50e1e253887c31c3ee3/records/track_non_record_16mb/2026-03-28_AutoResearch_R3_1x4090/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/9ca8d13b74d1e436c170c50e1e253887c31c3ee3/records/track_non_record_16mb/2026-03-28_AutoResearch_R3_1x4090/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/9ca8d13b74d1e436c170c50e1e253887c31c3ee3/records/track_non_record_16mb/2026-03-28_AutoResearch_R3_1x4090/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/9ca8d13b74d1e436c170c50e1e253887c31c3ee3/records/track_non_record_16mb/2026-03-28_AutoResearch_R3_1x4090",
+        "pr": "https://github.com/openai/parameter-golf/pull/1036",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

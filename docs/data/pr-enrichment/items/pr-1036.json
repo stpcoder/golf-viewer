@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-28T20:54:55.584Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1036,
+    "title": "Non-record: AutoResearch Batch Optimization — 1.1974 bpb (1× RTX 4090)",
+    "state": "open",
+    "updatedAt": "2026-03-28T20:28:42Z",
+    "headSha": "9ca8d13b74d1e436c170c50e1e253887c31c3ee3",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1036",
+    "authorLogin": "ivanontech"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-28_AutoResearch_R3_1x4090/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "12-layer 1024d transformer with gated value embeddings and AdamW+Muon runs 2¹⁶ token batches to cram ~404 5-minute steps for faster convergence.",
+    "tags": [
+      "architecture",
+      "optimizer",
+      "training-schedule",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Gated value embeddings on alternating layers",
+      "AdamW+Muon split optimizer with cosine warmdown",
+      "2¹⁶ total batch tokens to multiply steps"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
