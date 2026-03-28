@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-28T21:55:06.023Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1039,
+    "title": "Add LeakyReLU² + 4ep Legal TTT submission",
+    "state": "open",
+    "updatedAt": "2026-03-28T21:37:17Z",
+    "headSha": "d92991776dccb93a745a6faff78f1167e791280a",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1039",
+    "authorLogin": "yufengli-oai"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-28_LeakyReLU_LegalTTT_EvalOnlySweep/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "LeakyReLU² 11-layer GPT with Parameter Banking + Parallel Muon runs legal score-first TTT at lr0.0025 for four epochs while skipping diagnostic pre-evals.",
+    "tags": [
+      "architecture",
+      "muon",
+      "training-schedule",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Legal score-first TTT lr0.0025 4-epoch schedule",
+      "Skip pre-TTT diagnostics via eval-only checkpoint",
+      "LeakyReLU² base stack with Parameter Banking + Parallel Muon"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

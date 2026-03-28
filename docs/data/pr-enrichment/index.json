@@ -1,8 +1,55 @@
 {
-  "generatedAt": "2026-03-28T21:25:13.991Z",
+  "generatedAt": "2026-03-28T21:55:12.641Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1039,
+      "title": "Add LeakyReLU² + 4ep Legal TTT submission",
+      "status": "open",
+      "updatedAt": "2026-03-28T21:37:17Z",
+      "headSha": "d92991776dccb93a745a6faff78f1167e791280a",
+      "generatedAt": "2026-03-28T21:55:06.023Z",
+      "summary": "LeakyReLU² 11-layer GPT with Parameter Banking + Parallel Muon runs legal score-first TTT at lr0.0025 for four epochs while skipping diagnostic pre-evals.",
+      "tags": [
+        "architecture",
+        "muon",
+        "training-schedule",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1039.json"
+    },
+    {
+      "prNumber": 1038,
+      "title": "Add 1.20 BPB submission with Legal TTT and Calibration (9L/448D)",
+      "status": "open",
+      "updatedAt": "2026-03-28T21:36:05Z",
+      "headSha": "04731146061b71d41c26b406e72ee2d521b2e6fa",
+      "generatedAt": "2026-03-28T21:55:12.487Z",
+      "summary": "9-layer 448-dim GPT uses Legal token-train transfer with temperature calibration and tied embeddings for the 16MB/10m challenge.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1038.json"
+    },
     {
       "prNumber": 1037,
       "title": "Record: Muon TTT + Entropy-Adaptive Epochs — val_bpb 1.1179 (3-seed mean)",
@@ -1142,29 +1189,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-978.json"
-    },
-    {
-      "prNumber": 976,
-      "title": "Add 1.20 BPB submission with Legal TTT and Calibration (9L/448D)",
-      "status": "closed",
-      "updatedAt": "2026-03-28T18:19:51Z",
-      "headSha": "c75bbf0e6247636389af611a3a61956e79334ceb",
-      "generatedAt": "2026-03-28T18:24:07.612Z",
-      "summary": "9-layer, 448-dim GPT trained under long-context Legal TTT with temperature calibration before int8+zlib compression for the 16MB/10min track.",
-      "tags": [
-        "architecture",
-        "quantization",
-        "evaluation"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-976.json"
     },
     {
       "prNumber": 975,
