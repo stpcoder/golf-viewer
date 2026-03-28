@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-28T06:20:51.540Z",
+  "generatedAt": "2026-03-28T06:51:26.575Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1007,
+      "title": "Submission/hybrid rwkv token shift",
+      "status": "open",
+      "updatedAt": "2026-03-28T06:26:55Z",
+      "headSha": "9d1a09cd58230ec874c30559a29582debcb7779d",
+      "generatedAt": "2026-03-28T06:50:59.768Z",
+      "summary": "Hybrid stack uses RWKV-inspired per-dim token shifts for 8 of 11 layers, with three short-window/full attention layers to preserve long-range context.",
+      "tags": [
+        "architecture",
+        "attention",
+        "quantization",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1007.json"
+    },
     {
       "prNumber": 1006,
       "title": "1.1085 BPB: JEPA + AdamW TTT + Full GPTQ + FA3 + LZMA",
@@ -77,15 +101,15 @@
       "prNumber": 1003,
       "title": "[WIP] Non-record: Probatum — QAT + LeakyReLU² + EMA baseline",
       "status": "open",
-      "updatedAt": "2026-03-28T04:58:33Z",
-      "headSha": "d9d57afb24794c40a1b3914338fff35217854699",
-      "generatedAt": "2026-03-28T05:20:25.382Z",
-      "summary": "Adapts Probatum on-device coding tactics by applying QAT (int6 warmup), LeakyReLU², EMA, and Muon on a 9x512 baseline for Parameter Golf.",
+      "updatedAt": "2026-03-28T06:48:30Z",
+      "headSha": "5ee7e34031fb5785855c07997a5a422c1846ef6a",
+      "generatedAt": "2026-03-28T06:51:04.389Z",
+      "summary": "Adapting Probatum-derived methods to a 9×512 transformer, applying int6 QAT, LeakyReLU², EMA, and Muon optimizer within the 16MB non-record setup.",
       "tags": [
         "quantization",
-        "optimizer",
         "architecture",
-        "non-record"
+        "optimizer",
+        "regularization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -310,12 +334,14 @@
       "prNumber": 992,
       "title": "[Non-Record] H-Net with Dynamic Sequence Chunking",
       "status": "open",
-      "updatedAt": "2026-03-28T00:06:25Z",
+      "updatedAt": "2026-03-28T06:24:13Z",
       "headSha": "81e66fdcfd83420b492852979726f1117dfd20ab",
-      "generatedAt": "2026-03-28T00:19:05.694Z",
-      "summary": "Implements H-Net with learned dynamic chunking to compress sequences into latent chunks, model them, and upsample for autoregressive decoding on the Parameter Golf stack.",
+      "generatedAt": "2026-03-28T06:51:08.992Z",
+      "summary": "Hierarchical H-Net learns content-dependent chunk boundaries to compress sequences, run most work in a latent chunk transformer, then upsample via encoder/decoder-heavy layout.",
       "tags": [
         "architecture",
+        "attention",
+        "compression",
         "non-record"
       ],
       "flags": {
@@ -400,14 +426,14 @@
       "prNumber": 986,
       "title": "Record: Packed N-gram + Two-Pass   Dirichlet CTW — val_bpb 0.0830 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-27T23:31:16Z",
+      "updatedAt": "2026-03-28T06:24:18Z",
       "headSha": "1c70fa129218ea7107a314c465c74588a1af7b9f",
-      "generatedAt": "2026-03-27T23:48:56.677Z",
-      "summary": "Pre-compute packed order-2-13 n-gram artifact with phrase cache, then two-pass eval with hierarchical Dirichlet CTW mixing to fully warm the cache.",
+      "generatedAt": "2026-03-28T06:51:15.184Z",
+      "summary": "Packed order-2..13 n-gram artifact plus sliding-window cache warms a two-pass rescore that mixes orders via hierarchical Dirichlet CTW and phrase cache lookups.",
       "tags": [
-        "architecture",
+        "sliding-window-eval",
         "evaluation",
-        "compression"
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,
@@ -535,6 +561,29 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-981.json"
+    },
+    {
+      "prNumber": 980,
+      "title": "Record: LOGOS-44 Z=0 ",
+      "status": "open",
+      "updatedAt": "2026-03-28T06:47:33Z",
+      "headSha": "036c2033dd44319825452887969af4adc0d2cd32",
+      "generatedAt": "2026-03-28T06:51:20.376Z",
+      "summary": "LOGOS-44 reuses one toroidal bottleneck 44 times with CDMA field decoding and coherence gating to trade parameters for compute depth.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-980.json"
     },
     {
       "prNumber": 979,
@@ -5086,22 +5135,23 @@
       "prNumber": 688,
       "title": "Record: 5-expert Hedge Mixer + TTT (3-seed mean val_bpb=1.0745)",
       "status": "closed",
-      "updatedAt": "2026-03-28T01:42:26Z",
+      "updatedAt": "2026-03-28T06:32:21Z",
       "headSha": "a366675fbcda83df0f634a8967d6f041b868a651",
-      "generatedAt": "2026-03-28T01:49:48.597Z",
-      "summary": "Online 5-expert Hedge context mixer blends neural logits with n-gram stats during sliding-window TTT eval while keeping GPTQ calibration inside the 600s budget.",
+      "generatedAt": "2026-03-28T06:51:26.475Z",
+      "summary": "GPU Hedge mixer blends neural logits with incremental ngram stats plus entropy regularizer during sliding-window TTT, updating expert weights online per token.",
       "tags": [
-        "training-schedule",
-        "evaluation",
-        "quantization"
+        "val-only",
+        "quantization",
+        "optimizer",
+        "evaluation"
       ],
       "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": true
+        "valOnlyMatchesCollector": false
       },
       "file": "items/pr-688.json"
     },

@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-28T06:51:20.376Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 980,
+    "title": "Record: LOGOS-44 Z=0 ",
+    "state": "open",
+    "updatedAt": "2026-03-28T06:47:33Z",
+    "headSha": "036c2033dd44319825452887969af4adc0d2cd32",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/980",
+    "authorLogin": "slowomir33-arch"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-28_LOGOS44_Quantum_ToroidalCDMA_Z0/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "LOGOS-44 reuses one toroidal bottleneck 44 times with CDMA field decoding and coherence gating to trade parameters for compute depth.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "compression"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "44 shared-pass toroidal bottleneck routing",
+      "128-signal CDMA field decoder with coherence gate",
+      "Int8 per-row quantization plus zlib compression"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-28T05:20:25.382Z",
+  "generatedAt": "2026-03-28T06:51:04.389Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1003,
     "title": "[WIP] Non-record: Probatum — QAT + LeakyReLU² + EMA baseline",
     "state": "open",
-    "updatedAt": "2026-03-28T04:58:33Z",
-    "headSha": "d9d57afb24794c40a1b3914338fff35217854699",
+    "updatedAt": "2026-03-28T06:48:30Z",
+    "headSha": "5ee7e34031fb5785855c07997a5a422c1846ef6a",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1003",
     "authorLogin": "techleadershipofanurag"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Adapts Probatum on-device coding tactics by applying QAT (int6 warmup), LeakyReLU², EMA, and Muon on a 9x512 baseline for Parameter Golf.",
+    "summary": "Adapting Probatum-derived methods to a 9×512 transformer, applying int6 QAT, LeakyReLU², EMA, and Muon optimizer within the 16MB non-record setup.",
     "tags": [
       "quantization",
-      "optimizer",
       "architecture",
-      "non-record"
+      "optimizer",
+      "regularization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "int6 QAT warmup",
-      "LeakyReLU² activations replacing GeLU",
-      "EMA smoothing with Muon optimizer"
+      "int6 quantization-aware training",
+      "LeakyReLU² activations with EMA smoothing",
+      "Muon optimizer for short-budget runs"
     ]
   },
   "compatibility": {

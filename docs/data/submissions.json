@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-28T06:20:45.263Z",
+  "generatedAt": "2026-03-28T06:50:51.620Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -834,7 +834,7 @@
         "authorLogin": "sofiabod",
         "authorName": null,
         "createdAt": "2026-03-27T21:32:05Z",
-        "updatedAt": "2026-03-27T23:31:16Z",
+        "updatedAt": "2026-03-28T06:24:18Z",
         "headSha": "1c70fa129218ea7107a314c465c74588a1af7b9f",
         "headRepo": "sofiabod/parameter-golf"
       },
@@ -2836,7 +2836,7 @@
         "authorLogin": "sofiabod",
         "authorName": null,
         "createdAt": "2026-03-27T21:32:05Z",
-        "updatedAt": "2026-03-27T23:31:16Z",
+        "updatedAt": "2026-03-28T06:24:18Z",
         "headSha": "1c70fa129218ea7107a314c465c74588a1af7b9f",
         "headRepo": "sofiabod/parameter-golf"
       },
@@ -31591,6 +31591,83 @@
       }
     },
     {
+      "id": "record-records-track_non_record_16mb-2026-03-28_HybridRWKV_TokenShift_ShortWindowAttn",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-28_HybridRWKV_TokenShift_ShortWindowAttn",
+        "folderPath": "records/track_non_record_16mb/2026-03-28_HybridRWKV_TokenShift_ShortWindowAttn",
+        "submissionPath": "records/track_non_record_16mb/2026-03-28_HybridRWKV_TokenShift_ShortWindowAttn/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-28_HybridRWKV_TokenShift_ShortWindowAttn/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-28_HybridRWKV_TokenShift_ShortWindowAttn/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-28_HybridRWKV_TokenShift_ShortWindowAttn/train_gpt.py"
+      },
+      "submission": {
+        "author": "Dillon Blake",
+        "githubId": "dillonblake",
+        "name": "Hybrid RWKV Token-Shift + Short Window Attention",
+        "blurb": null,
+        "date": "2026-03-28"
+      },
+      "metrics": {
+        "valBpb": 1.2252,
+        "valLoss": 2.0687,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15863546,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1007,
+        "title": "Submission/hybrid rwkv token shift",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1007",
+        "authorLogin": "dillon-blake",
+        "authorName": null,
+        "createdAt": "2026-03-28T06:26:55Z",
+        "updatedAt": "2026-03-28T06:26:55Z",
+        "headSha": "9d1a09cd58230ec874c30559a29582debcb7779d",
+        "headRepo": "dillon-blake/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/9d1a09cd58230ec874c30559a29582debcb7779d/records/track_non_record_16mb/2026-03-28_HybridRWKV_TokenShift_ShortWindowAttn/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/9d1a09cd58230ec874c30559a29582debcb7779d/records/track_non_record_16mb/2026-03-28_HybridRWKV_TokenShift_ShortWindowAttn/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/9d1a09cd58230ec874c30559a29582debcb7779d/records/track_non_record_16mb/2026-03-28_HybridRWKV_TokenShift_ShortWindowAttn/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/9d1a09cd58230ec874c30559a29582debcb7779d/records/track_non_record_16mb/2026-03-28_HybridRWKV_TokenShift_ShortWindowAttn/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/9d1a09cd58230ec874c30559a29582debcb7779d/records/track_non_record_16mb/2026-03-28_HybridRWKV_TokenShift_ShortWindowAttn",
+        "pr": "https://github.com/openai/parameter-golf/pull/1007",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_non_record_16mb-2026-03-22_AuxNet_Baseline",
       "source": "pull_request",
       "status": "open",
@@ -36884,7 +36961,7 @@
         "authorLogin": "TimS-ml",
         "authorName": null,
         "createdAt": "2026-03-28T00:06:25Z",
-        "updatedAt": "2026-03-28T00:06:25Z",
+        "updatedAt": "2026-03-28T06:24:13Z",
         "headSha": "81e66fdcfd83420b492852979726f1117dfd20ab",
         "headRepo": "TimS-ml/parameter-golf"
       },
@@ -41216,6 +41293,83 @@
       }
     },
     {
+      "id": "record-records-track_non_record_16mb-2026-03-28_Probatum_LoRA_Distill_QAT_Baseline",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-28_Probatum_LoRA_Distill_QAT_Baseline",
+        "folderPath": "records/track_non_record_16mb/2026-03-28_Probatum_LoRA_Distill_QAT_Baseline",
+        "submissionPath": "records/track_non_record_16mb/2026-03-28_Probatum_LoRA_Distill_QAT_Baseline/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-28_Probatum_LoRA_Distill_QAT_Baseline/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-28_Probatum_LoRA_Distill_QAT_Baseline/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-28_Probatum_LoRA_Distill_QAT_Baseline/train_gpt.py"
+      },
+      "submission": {
+        "author": "Anurag M",
+        "githubId": "techleadershipofanurag",
+        "name": "Probatum Baseline — QAT + LeakyReLU² + EMA",
+        "blurb": "Non-record baseline submission adapting quantization-aware training and distillation techniques from the Probatum Code project to the 16MB parameter golf constraint. MLX local baseline (M2 Pro): val_bpb 2.3502 at 200 steps. Pending 8xH100 run for full 10-min training.",
+        "date": "2026-03-28T04:30:00Z"
+      },
+      "metrics": {
+        "valBpb": 2.3501821,
+        "valLoss": 3.96818402,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": 200,
+        "wallclockSeconds": 137.778,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 10565814,
+        "bytesCode": 47686,
+        "bytesModelInt8Zlib": 10518128
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1003,
+        "title": "[WIP] Non-record: Probatum — QAT + LeakyReLU² + EMA baseline",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1003",
+        "authorLogin": "techleadershipofanurag",
+        "authorName": null,
+        "createdAt": "2026-03-28T04:58:33Z",
+        "updatedAt": "2026-03-28T06:48:30Z",
+        "headSha": "5ee7e34031fb5785855c07997a5a422c1846ef6a",
+        "headRepo": "techleadershipofanurag/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/5ee7e34031fb5785855c07997a5a422c1846ef6a/records/track_non_record_16mb/2026-03-28_Probatum_LoRA_Distill_QAT_Baseline/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/5ee7e34031fb5785855c07997a5a422c1846ef6a/records/track_non_record_16mb/2026-03-28_Probatum_LoRA_Distill_QAT_Baseline/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/5ee7e34031fb5785855c07997a5a422c1846ef6a/records/track_non_record_16mb/2026-03-28_Probatum_LoRA_Distill_QAT_Baseline/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/5ee7e34031fb5785855c07997a5a422c1846ef6a/records/track_non_record_16mb/2026-03-28_Probatum_LoRA_Distill_QAT_Baseline/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/5ee7e34031fb5785855c07997a5a422c1846ef6a/records/track_non_record_16mb/2026-03-28_Probatum_LoRA_Distill_QAT_Baseline",
+        "pr": "https://github.com/openai/parameter-golf/pull/1003",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_10min_16mb-2026-03-22_10L_MLP3x_Int6_Baseline",
       "source": "pull_request",
       "status": "open",
@@ -43069,83 +43223,6 @@
       }
     },
     {
-      "id": "record-records-track_non_record_16mb-2026-03-28_Probatum_LoRA_Distill_QAT_Baseline",
-      "source": "pull_request",
-      "status": "open",
-      "category": "non-record",
-      "track": {
-        "path": "records/track_non_record_16mb",
-        "slug": "track_non_record_16mb",
-        "label": "Non-record / 16MB",
-        "official": false,
-        "category": "non-record"
-      },
-      "record": {
-        "folderName": "2026-03-28_Probatum_LoRA_Distill_QAT_Baseline",
-        "folderPath": "records/track_non_record_16mb/2026-03-28_Probatum_LoRA_Distill_QAT_Baseline",
-        "submissionPath": "records/track_non_record_16mb/2026-03-28_Probatum_LoRA_Distill_QAT_Baseline/submission.json",
-        "readmePath": "records/track_non_record_16mb/2026-03-28_Probatum_LoRA_Distill_QAT_Baseline/README.md",
-        "trainLogPath": "records/track_non_record_16mb/2026-03-28_Probatum_LoRA_Distill_QAT_Baseline/train.log",
-        "scriptPath": "records/track_non_record_16mb/2026-03-28_Probatum_LoRA_Distill_QAT_Baseline/train_gpt.py"
-      },
-      "submission": {
-        "author": "Anurag M",
-        "githubId": "techleadershipofanurag",
-        "name": "Probatum Baseline — QAT + LeakyReLU² + EMA",
-        "blurb": "Non-record baseline submission adapting quantization-aware training and distillation techniques from the Probatum Code project to the 16MB parameter golf constraint. Starting from stock 9x512 config with planned improvements in QAT, activation functions, and optimizer tuning.",
-        "date": "2026-03-28T04:30:00Z"
-      },
-      "metrics": {
-        "valBpb": null,
-        "valLoss": null,
-        "preQuantValBpb": null,
-        "preQuantValLoss": null,
-        "stepStop": null,
-        "wallclockSeconds": null,
-        "evalTimeSeconds": null
-      },
-      "artifact": {
-        "bytesTotal": null,
-        "bytesCode": null,
-        "bytesModelInt8Zlib": null
-      },
-      "flags": {
-        "usesValOnly": false
-      },
-      "detection": {
-        "valOnlyConfidence": "none",
-        "valOnlyMatches": []
-      },
-      "pr": {
-        "number": 1003,
-        "title": "[WIP] Non-record: Probatum — QAT + LeakyReLU² + EMA baseline",
-        "state": "open",
-        "draft": false,
-        "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1003",
-        "authorLogin": "techleadershipofanurag",
-        "authorName": null,
-        "createdAt": "2026-03-28T04:58:33Z",
-        "updatedAt": "2026-03-28T04:58:33Z",
-        "headSha": "d9d57afb24794c40a1b3914338fff35217854699",
-        "headRepo": "techleadershipofanurag/parameter-golf"
-      },
-      "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/d9d57afb24794c40a1b3914338fff35217854699/records/track_non_record_16mb/2026-03-28_Probatum_LoRA_Distill_QAT_Baseline/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/d9d57afb24794c40a1b3914338fff35217854699/records/track_non_record_16mb/2026-03-28_Probatum_LoRA_Distill_QAT_Baseline/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/d9d57afb24794c40a1b3914338fff35217854699/records/track_non_record_16mb/2026-03-28_Probatum_LoRA_Distill_QAT_Baseline/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/d9d57afb24794c40a1b3914338fff35217854699/records/track_non_record_16mb/2026-03-28_Probatum_LoRA_Distill_QAT_Baseline/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/d9d57afb24794c40a1b3914338fff35217854699/records/track_non_record_16mb/2026-03-28_Probatum_LoRA_Distill_QAT_Baseline",
-        "pr": "https://github.com/openai/parameter-golf/pull/1003",
-        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
-      },
-      "provenance": {
-        "onMain": false,
-        "hasPullRequest": true,
-        "listedInReadme": false
-      }
-    },
-    {
       "id": "record-records-track_10min_16mb-2026-03-28_AwebGDN",
       "source": "pull_request",
       "status": "open",
@@ -43214,6 +43291,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/585c651ee9c27a833b0b9e8bb4a01f2dcaf8a640/records/track_10min_16mb/2026-03-28_AwebGDN/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/585c651ee9c27a833b0b9e8bb4a01f2dcaf8a640/records/track_10min_16mb/2026-03-28_AwebGDN",
         "pr": "https://github.com/openai/parameter-golf/pull/181",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-28_LOGOS44_Quantum_ToroidalCDMA_Z0",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-28_LOGOS44_Quantum_ToroidalCDMA_Z0",
+        "folderPath": "records/track_10min_16mb/2026-03-28_LOGOS44_Quantum_ToroidalCDMA_Z0",
+        "submissionPath": "records/track_10min_16mb/2026-03-28_LOGOS44_Quantum_ToroidalCDMA_Z0/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-28_LOGOS44_Quantum_ToroidalCDMA_Z0/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-28_LOGOS44_Quantum_ToroidalCDMA_Z0/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-28_LOGOS44_Quantum_ToroidalCDMA_Z0/train_gpt.py"
+      },
+      "submission": {
+        "author": "slowomir33-arch",
+        "githubId": "slowomir33-arch",
+        "name": "LOGOS-44 Z=0: Toroidal CDMA Field Decoder (44-pass iterative routing)",
+        "blurb": "Non-transformer architecture: 44 iterative passes through a shared toroidal bottleneck (sin·cos rank-64) with 128-signal CDMA field decoder and coherence gating. ~4.5M params with tied 1024-vocab embeddings. Explores compute-depth over parameter-count scaling. Muon optimizer + int8+zlib compression.",
+        "date": "2026-03-28T00:00:00Z"
+      },
+      "metrics": {
+        "valBpb": null,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 980,
+        "title": "Record: LOGOS-44 Z=0 ",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/980",
+        "authorLogin": "slowomir33-arch",
+        "authorName": null,
+        "createdAt": "2026-03-27T20:03:30Z",
+        "updatedAt": "2026-03-28T06:47:33Z",
+        "headSha": "036c2033dd44319825452887969af4adc0d2cd32",
+        "headRepo": "slowomir33-arch/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/036c2033dd44319825452887969af4adc0d2cd32/records/track_10min_16mb/2026-03-28_LOGOS44_Quantum_ToroidalCDMA_Z0/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/036c2033dd44319825452887969af4adc0d2cd32/records/track_10min_16mb/2026-03-28_LOGOS44_Quantum_ToroidalCDMA_Z0/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/036c2033dd44319825452887969af4adc0d2cd32/records/track_10min_16mb/2026-03-28_LOGOS44_Quantum_ToroidalCDMA_Z0/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/036c2033dd44319825452887969af4adc0d2cd32/records/track_10min_16mb/2026-03-28_LOGOS44_Quantum_ToroidalCDMA_Z0/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/036c2033dd44319825452887969af4adc0d2cd32/records/track_10min_16mb/2026-03-28_LOGOS44_Quantum_ToroidalCDMA_Z0",
+        "pr": "https://github.com/openai/parameter-golf/pull/980",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -49594,7 +49748,7 @@
         "authorLogin": "RoyiRa",
         "authorName": null,
         "createdAt": "2026-03-25T06:32:22Z",
-        "updatedAt": "2026-03-28T01:42:26Z",
+        "updatedAt": "2026-03-28T06:32:21Z",
         "headSha": "a366675fbcda83df0f634a8967d6f041b868a651",
         "headRepo": "RoyiRa/parameter-golf"
       },

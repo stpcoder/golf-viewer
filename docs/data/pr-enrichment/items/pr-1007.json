@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-28T06:50:59.768Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1007,
+    "title": "Submission/hybrid rwkv token shift",
+    "state": "open",
+    "updatedAt": "2026-03-28T06:26:55Z",
+    "headSha": "9d1a09cd58230ec874c30559a29582debcb7779d",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1007",
+    "authorLogin": "dillon-blake"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-28_HybridRWKV_TokenShift_ShortWindowAttn/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Hybrid stack uses RWKV-inspired per-dim token shifts for 8 of 11 layers, with three short-window/full attention layers to preserve long-range context.",
+    "tags": [
+      "architecture",
+      "attention",
+      "quantization",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "- RWKV-style learned token-shift mixing for local context",
+      "- Short-window attention layers interspersed to maintain broader context",
+      "- Int6 quantization with zlib compression"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
