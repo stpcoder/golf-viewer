@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-03-28T17:54:26.999Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1030,
+    "title": "Record: Single-Pass Packed N-gram + Dirichlet CTW — val_bpb 0.1130 (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-03-28T17:42:40Z",
+    "headSha": "f76188ebfecc9675b7f11023def656b8cbc8e24e",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1030",
+    "authorLogin": "sofiabod"
+  },
+  "inputs": {
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-28_SinglePass_PackedNgram_DirichletCTW/README.md",
+      "records/track_10min_16mb/2026-03-26_OrderAdaptive_9gram_Prefill/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "Prebuild order-13 n-gram tables from 10B tokens into a packed artifact, then use hierarchical Dirichlet CTW smoothing in single-pass eval over a tiny GPT.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "compression",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "Training relies on training shards only and validation data is used just for evaluation.",
+    "techniques": [
+      "Packed n-gram artifact with uint16 counts and zstd compression",
+      "Hierarchical Dirichlet CTW mixing per order with score-first cache updates",
+      "Single-pass sliding-window eval over a vestigial 2-layer GPT with int6 quantization"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

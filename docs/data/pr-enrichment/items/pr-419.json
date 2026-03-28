@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-22T12:39:17.920Z",
+  "generatedAt": "2026-03-28T17:54:50.732Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 419,
     "title": "feat: Add Andreas' first test submission",
-    "state": "open",
-    "updatedAt": "2026-03-22T12:18:43Z",
+    "state": "closed",
+    "updatedAt": "2026-03-28T17:32:36Z",
     "headSha": "40f66287ccde17dd4163bfb46b1f41b6bb0f3366",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/419",
     "authorLogin": "AndreasBis"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Test uses SOTA 10L Int5-MLP with BigramHash and SWA to validate the submission workflow.",
+    "summary": "Test submission reuses the SOTA 10-layer Int5-MLP stack with BigramHash tokenization and SWA to validate the submission workflow.",
     "tags": [
       "architecture",
       "quantization",
-      "training-schedule",
+      "optimizer",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "10-layer Int5 quantized MLP",
-      "BigramHash input tokenization",
-      "SWA weight averaging"
+      "- 10-layer Int5-MLP backbone",
+      "- BigramHash tokenization prep",
+      "- SWA for optimizer stability"
     ]
   },
   "compatibility": {

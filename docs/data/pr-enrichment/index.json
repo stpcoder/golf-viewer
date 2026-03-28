@@ -1,8 +1,56 @@
 {
-  "generatedAt": "2026-03-28T16:54:01.399Z",
+  "generatedAt": "2026-03-28T17:54:50.794Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1030,
+      "title": "Record: Single-Pass Packed N-gram + Dirichlet CTW — val_bpb 0.1130 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-03-28T17:42:40Z",
+      "headSha": "f76188ebfecc9675b7f11023def656b8cbc8e24e",
+      "generatedAt": "2026-03-28T17:54:26.999Z",
+      "summary": "Prebuild order-13 n-gram tables from 10B tokens into a packed artifact, then use hierarchical Dirichlet CTW smoothing in single-pass eval over a tiny GPT.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "compression",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1030.json"
+    },
+    {
+      "prNumber": 1029,
+      "title": "Non-record: Knowledge Distillation - A Negative Result (val_bpb=1.152)",
+      "status": "open",
+      "updatedAt": "2026-03-28T17:29:44Z",
+      "headSha": "4a3cfc598d1720d09e9b5b4d7aaa0e24abdac372",
+      "generatedAt": "2026-03-28T17:54:31.575Z",
+      "summary": "Cached top-32 logits from a 105M teacher and swept hard vs. soft KL distillation on the 11-layer student, but step overhead erased any gains.",
+      "tags": [
+        "architecture",
+        "regularization",
+        "evaluation",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1029.json"
+    },
     {
       "prNumber": 1028,
       "title": "Medusa: Unstable — DeltaNet Crawler 0.8104 BPB 10mb file size(best seed), mean 0.9984, Frugendorff continuation",
@@ -241,14 +289,14 @@
       "prNumber": 1013,
       "title": "Non-record: S4D-Lin SSM Hybrid — Fixing Why Mamba Failed in Parameter…",
       "status": "open",
-      "updatedAt": "2026-03-28T16:38:39Z",
+      "updatedAt": "2026-03-28T17:36:47Z",
       "headSha": "dafde7df4176e836ee936969bc91037ec6142044",
-      "generatedAt": "2026-03-28T16:53:52.057Z",
-      "summary": "Hybrid replaces the first two layers with S4D-Lin SSM blocks computed via standard conv1d, keeping baseline throughput while upper layers stay attention-based.",
+      "generatedAt": "2026-03-28T17:54:38.284Z",
+      "summary": "Hybrid model replaces custom SSM kernels with standard conv1d S4D-Lin layers to keep throughput parity while blending SSM lower layers with attention.",
       "tags": [
         "architecture",
+        "attention",
         "quantization",
-        "evaluation",
         "non-record"
       ],
       "flags": {
@@ -569,10 +617,10 @@
       "prNumber": 998,
       "title": "Add Conker-5 tandem residual exact experts non-record submission",
       "status": "open",
-      "updatedAt": "2026-03-28T16:09:43Z",
-      "headSha": "084a2fe41800de14ec63a7e18ebe71611f73b805",
-      "generatedAt": "2026-03-28T16:23:56.586Z",
-      "summary": "Conker-3 tandem base learns with sparse exact-history residual experts whose gate-only selectors are packaged int6+zlib for this non-record 16MB submission.",
+      "updatedAt": "2026-03-28T17:48:53Z",
+      "headSha": "cb7619f66f259b9e1817c66378d47d7298d09708",
+      "generatedAt": "2026-03-28T17:54:44.305Z",
+      "summary": "Tandem-trained Conker-3 base pairs with sparse exact residual experts and gate-only routing, packaged via int6+zlib for a non-record leaderboard entry.",
       "tags": [
         "architecture",
         "quantization",
@@ -9749,15 +9797,15 @@
     {
       "prNumber": 419,
       "title": "feat: Add Andreas' first test submission",
-      "status": "open",
-      "updatedAt": "2026-03-22T12:18:43Z",
+      "status": "closed",
+      "updatedAt": "2026-03-28T17:32:36Z",
       "headSha": "40f66287ccde17dd4163bfb46b1f41b6bb0f3366",
-      "generatedAt": "2026-03-22T12:39:17.920Z",
-      "summary": "Test uses SOTA 10L Int5-MLP with BigramHash and SWA to validate the submission workflow.",
+      "generatedAt": "2026-03-28T17:54:50.732Z",
+      "summary": "Test submission reuses the SOTA 10-layer Int5-MLP stack with BigramHash tokenization and SWA to validate the submission workflow.",
       "tags": [
         "architecture",
         "quantization",
-        "training-schedule",
+        "optimizer",
         "non-record"
       ],
       "flags": {
