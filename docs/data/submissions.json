@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-28T07:20:58.235Z",
+  "generatedAt": "2026-03-28T07:51:03.006Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -20571,6 +20571,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/5c2d1ada9020d99742e8fa7fa3856575abc318c6/records/track_10min_16mb/2026-03-20_ContextFuse-2048-BigramSmear/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/5c2d1ada9020d99742e8fa7fa3856575abc318c6/records/track_10min_16mb/2026-03-20_ContextFuse-2048-BigramSmear",
         "pr": "https://github.com/openai/parameter-golf/pull/174",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-03-28_11L_16h_Local4060Ti_LeakyTTT",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-28_11L_16h_Local4060Ti_LeakyTTT",
+        "folderPath": "records/track_non_record_16mb/2026-03-28_11L_16h_Local4060Ti_LeakyTTT",
+        "submissionPath": "records/track_non_record_16mb/2026-03-28_11L_16h_Local4060Ti_LeakyTTT/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-28_11L_16h_Local4060Ti_LeakyTTT/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-28_11L_16h_Local4060Ti_LeakyTTT/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-28_11L_16h_Local4060Ti_LeakyTTT/train_gpt.py"
+      },
+      "submission": {
+        "author": "Clement Tham",
+        "githubId": "monkeyKingProgrammer",
+        "name": "11L 16h Local 4060 Ti LeakyTTT",
+        "blurb": "Unlimited compute local run on a single RTX 4060 Ti of the 11-layer LeakyReLU^2 + Parallel Muon + XSA4 + Partial RoPE + LN scale + EMA + legal TTT stack. Timed training stopped at 7,998 steps after 16 hours; final legal score-first TTT evaluation reached 1.15377788 val_bpb under the 16,000,000-byte artifact cap.",
+        "date": "2026-03-28T00:00:00Z"
+      },
+      "metrics": {
+        "valBpb": 1.15377788,
+        "valLoss": 1.94810047,
+        "preQuantValBpb": 1.1742,
+        "preQuantValLoss": 1.9826,
+        "stepStop": 7998,
+        "wallclockSeconds": 57602.615,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15807729,
+        "bytesCode": 96829,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1008,
+        "title": "Add non-record unlimited-compute 11L 16h local RTX 4060 Ti LeakyTTT run",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1008",
+        "authorLogin": "monkeyKingProgrammer",
+        "authorName": null,
+        "createdAt": "2026-03-28T07:44:02Z",
+        "updatedAt": "2026-03-28T07:44:02Z",
+        "headSha": "e2141834bd976e6d14cd262add88b42bb945ef83",
+        "headRepo": "monkeyKingProgrammer/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/e2141834bd976e6d14cd262add88b42bb945ef83/records/track_non_record_16mb/2026-03-28_11L_16h_Local4060Ti_LeakyTTT/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/e2141834bd976e6d14cd262add88b42bb945ef83/records/track_non_record_16mb/2026-03-28_11L_16h_Local4060Ti_LeakyTTT/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/e2141834bd976e6d14cd262add88b42bb945ef83/records/track_non_record_16mb/2026-03-28_11L_16h_Local4060Ti_LeakyTTT/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/e2141834bd976e6d14cd262add88b42bb945ef83/records/track_non_record_16mb/2026-03-28_11L_16h_Local4060Ti_LeakyTTT/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/e2141834bd976e6d14cd262add88b42bb945ef83/records/track_non_record_16mb/2026-03-28_11L_16h_Local4060Ti_LeakyTTT",
+        "pr": "https://github.com/openai/parameter-golf/pull/1008",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
