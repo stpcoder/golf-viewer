@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-28T15:23:07.146Z",
+  "generatedAt": "2026-03-28T15:53:17.533Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -8553,6 +8553,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/a1fa11bd90a8b407df9363fd4ba75735a94f8453/records/track_non_record_16mb/2026-03-24_11L_GEPA_25kSteps_PureInt6_LegalTTT/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/a1fa11bd90a8b407df9363fd4ba75735a94f8453/records/track_non_record_16mb/2026-03-24_11L_GEPA_25kSteps_PureInt6_LegalTTT",
         "pr": "https://github.com/openai/parameter-golf/pull/644",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-28_NGram_Cache_Entropy_Adaptive",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-28_NGram_Cache_Entropy_Adaptive",
+        "folderPath": "records/track_10min_16mb/2026-03-28_NGram_Cache_Entropy_Adaptive",
+        "submissionPath": "records/track_10min_16mb/2026-03-28_NGram_Cache_Entropy_Adaptive/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-28_NGram_Cache_Entropy_Adaptive/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-28_NGram_Cache_Entropy_Adaptive/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-28_NGram_Cache_Entropy_Adaptive/train_gpt.py"
+      },
+      "submission": {
+        "author": "danielxmed",
+        "githubId": "danielxmed",
+        "name": "N-gram Cache with Entropy-Adaptive Alpha",
+        "blurb": "Order-7 N-gram cache with entropy-adaptive alpha replaces TTT for ~20x more BPB improvement. Cache interpolates N-gram predictions with model logits using alpha scaled by clamped per-token NLL (alpha * clamp(nll/threshold, 0.1, 2.0)), achieving -0.032 BPB over sliding window eval. Built on PR #414 stack with EMA(0.997) + SWA(50) + GPTQ-lite int6 + lzma. 3-seed mean: 1.0945 (std 0.0001). All artifacts under 16MB, all eval under 10 min.",
+        "date": "2026-03-28"
+      },
+      "metrics": {
+        "valBpb": 1.0945,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15988183,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1026,
+        "title": "N-gram Cache + Entropy-Adaptive Alpha: 1.0945 BPB",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1026",
+        "authorLogin": "danielxmed",
+        "authorName": null,
+        "createdAt": "2026-03-28T15:40:26Z",
+        "updatedAt": "2026-03-28T15:42:56Z",
+        "headSha": "2767cdae1d210a28eb45dcc853f77d30747a6680",
+        "headRepo": "danielxmed/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/2767cdae1d210a28eb45dcc853f77d30747a6680/records/track_10min_16mb/2026-03-28_NGram_Cache_Entropy_Adaptive/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/2767cdae1d210a28eb45dcc853f77d30747a6680/records/track_10min_16mb/2026-03-28_NGram_Cache_Entropy_Adaptive/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/2767cdae1d210a28eb45dcc853f77d30747a6680/records/track_10min_16mb/2026-03-28_NGram_Cache_Entropy_Adaptive/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/2767cdae1d210a28eb45dcc853f77d30747a6680/records/track_10min_16mb/2026-03-28_NGram_Cache_Entropy_Adaptive/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/2767cdae1d210a28eb45dcc853f77d30747a6680/records/track_10min_16mb/2026-03-28_NGram_Cache_Entropy_Adaptive",
+        "pr": "https://github.com/openai/parameter-golf/pull/1026",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

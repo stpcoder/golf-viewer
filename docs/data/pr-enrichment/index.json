@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-28T15:23:21.717Z",
+  "generatedAt": "2026-03-28T15:53:24.571Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1026,
+      "title": "N-gram Cache + Entropy-Adaptive Alpha: 1.0945 BPB",
+      "status": "open",
+      "updatedAt": "2026-03-28T15:42:56Z",
+      "headSha": "2767cdae1d210a28eb45dcc853f77d30747a6680",
+      "generatedAt": "2026-03-28T15:53:24.420Z",
+      "summary": "Order-7 byte N-gram cache with entropy-adaptive alpha interpolates CPU cache logps with GPU logits, replacing TTT while the base model uses GPTQ-lite int6 plus EMA+SWA.",
+      "tags": [
+        "quantization",
+        "optimizer",
+        "evaluation",
+        "sliding-window-eval"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1026.json"
+    },
     {
       "prNumber": 1025,
       "title": "non-record: MASA  low-rank shared attention + SwiGLU, 1.3579 BPB",

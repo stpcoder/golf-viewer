@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-28T15:53:24.420Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1026,
+    "title": "N-gram Cache + Entropy-Adaptive Alpha: 1.0945 BPB",
+    "state": "open",
+    "updatedAt": "2026-03-28T15:42:56Z",
+    "headSha": "2767cdae1d210a28eb45dcc853f77d30747a6680",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1026",
+    "authorLogin": "danielxmed"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-28_NGram_Cache_Entropy_Adaptive/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Order-7 byte N-gram cache with entropy-adaptive alpha interpolates CPU cache logps with GPU logits, replacing TTT while the base model uses GPTQ-lite int6 plus EMA+SWA.",
+    "tags": [
+      "quantization",
+      "optimizer",
+      "evaluation",
+      "sliding-window-eval"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "Training uses standard track data; no validation-only regime was employed.",
+    "techniques": [
+      "Entropy-adaptive alpha scales cache weight by per-token NLL",
+      "CPU-based N-gram cache runs concurrently with GPU sliding-window eval",
+      "Base stack couples GPTQ-lite int6 quantization with EMA(0.997)+SWA(50)"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
