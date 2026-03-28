@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-28T05:51:02.283Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1005,
+    "title": "[Non-Record] Extended Compute Scaling Analysis: 1.0853 BPB at 50K steps (11.5 hours) on 4×A100MIG",
+    "state": "open",
+    "updatedAt": "2026-03-28T05:40:07Z",
+    "headSha": "6d97a058527ac7bfab8266469e1e8247f574de0f",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1005",
+    "authorLogin": "OnlyJundong"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-28_ExtendedCompute_50K_11hours_4xA100MIG_ScalingAnalysis/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Extended compute scaling of PR #549 stack on 4×A100 MIG studies plateau and warmdown effects while reusing the TTT/Parallel Muon pipeline.",
+    "tags": [
+      "non-record",
+      "training-schedule",
+      "compression"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Extended compute scaling on 4×A100 MIG",
+      "Warmdown-driven artifact compression recovery",
+      "Reuses PR #549 TTT/Parallel Muon stack"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

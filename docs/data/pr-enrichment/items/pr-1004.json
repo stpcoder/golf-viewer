@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-28T05:51:07.447Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1004,
+    "title": "Non-record: 33.6M Int5 GPTQ + Legal s_0-only TTT (val_bpb=1.1182)",
+    "state": "open",
+    "updatedAt": "2026-03-28T05:36:42Z",
+    "headSha": "363b63503eb51db08bca879fc8d98a8dce4b98bc",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1004",
+    "authorLogin": "ibarrajo"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-27_ApproachB_LargerModel_Int5/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "33.6M int5 GPTQ model uses score-first s_0 TTT without re-eval/calibration plus tighter pruning to meet artifact and runtime budgets.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "score-first s_0 TTT with no post-training re-eval",
+      "int5 GPTQ + 5% pruning to keep artifact <16MB",
+      "runtime assertion checks for budgets"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
