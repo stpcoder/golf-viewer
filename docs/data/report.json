@@ -1,20 +1,32 @@
 {
-  "generatedAt": "2026-03-29T04:26:36.235Z",
+  "generatedAt": "2026-03-29T04:56:47.138Z",
   "sourceRepo": "openai/parameter-golf",
   "siteRoot": null,
   "tokenConfigured": true,
-  "skipped": [],
-  "errors": [],
+  "skipped": [
+    {
+      "pr": 1054,
+      "reason": "no-record-submission-json"
+    }
+  ],
+  "errors": [
+    {
+      "stage": "pull-request-file",
+      "pr": 1055,
+      "filename": "records/track_10min_16mb/2026-03-28_TestTime_Activation_ReAlignment/submission.json",
+      "message": "Unterminated string in JSON at position 224 (line 7 column 22)"
+    }
+  ],
   "incremental": {
     "mode": "incremental",
-    "cutoffUpdatedAt": "2026-03-29T03:41:48Z",
+    "cutoffUpdatedAt": "2026-03-29T04:19:13Z",
     "pagesScanned": 2,
     "prsScanned": 200,
-    "prsRefreshed": 2,
-    "prsReused": 198,
+    "prsRefreshed": 7,
+    "prsReused": 193,
     "stoppedEarly": true,
     "refreshFailures": 0,
-    "cacheEntries": 1006,
+    "cacheEntries": 1008,
     "retryWindowRetained": false
   }
 }

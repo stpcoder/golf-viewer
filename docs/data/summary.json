@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-03-29T04:26:55.949Z",
+  "generatedAt": "2026-03-29T04:57:10.641Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "counts": {
-    "submissions": 814,
+    "submissions": 815,
     "official": 1,
-    "openPr": 637,
+    "openPr": 638,
     "mergedPr": 22,
     "closedPr": 154,
-    "prBacked": 814,
+    "prBacked": 815,
     "readmeListed": 20,
-    "collectorErrors": 0
+    "collectorErrors": 1
   },
   "best": {
     "officialMainTrack": {
@@ -91,7 +91,7 @@
       }
     },
     "openPrMainTrack": {
-      "id": "record-records-track_10min_16mb-2026-03-27_FrozenNgramOracle_order16_TTT1epoch",
+      "id": "record-records-track_10min_16mb-2026-03-28_PackedCausal_DirichletBackoff",
       "source": "pull_request",
       "status": "open",
       "category": "main-track",
@@ -103,23 +103,23 @@
         "category": "main-track"
       },
       "record": {
-        "folderName": "2026-03-27_FrozenNgramOracle_order16_TTT1epoch",
-        "folderPath": "records/track_10min_16mb/2026-03-27_FrozenNgramOracle_order16_TTT1epoch",
-        "submissionPath": "records/track_10min_16mb/2026-03-27_FrozenNgramOracle_order16_TTT1epoch/submission.json",
-        "readmePath": "records/track_10min_16mb/2026-03-27_FrozenNgramOracle_order16_TTT1epoch/README.md",
-        "trainLogPath": "records/track_10min_16mb/2026-03-27_FrozenNgramOracle_order16_TTT1epoch/train.log",
-        "scriptPath": "records/track_10min_16mb/2026-03-27_FrozenNgramOracle_order16_TTT1epoch/train_gpt.py"
+        "folderName": "2026-03-28_PackedCausal_DirichletBackoff",
+        "folderPath": "records/track_10min_16mb/2026-03-28_PackedCausal_DirichletBackoff",
+        "submissionPath": "records/track_10min_16mb/2026-03-28_PackedCausal_DirichletBackoff/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-28_PackedCausal_DirichletBackoff/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-28_PackedCausal_DirichletBackoff/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-28_PackedCausal_DirichletBackoff/train_gpt.py"
       },
       "submission": {
-        "author": "THUQiXuan",
-        "githubId": "THUQiXuan",
-        "name": "Order-16 Frozen N-gram Oracle + Score-First TTT",
-        "blurb": "Pre-fill order-16 n-gram tables from all 8B training tokens (15-token context window). BackoffNgramMixer combines neural + 15 n-gram expert predictions via learned alpha_head weights. Score-first TTT adapts neural weights at eval time without data contamination.",
-        "date": "2026-03-27"
+        "author": "sofiabod",
+        "githubId": "sofiabod",
+        "name": "Packed Causal N-gram + Dirichlet Backoff Mixing",
+        "blurb": "Single-pass causal score-first eval with packed 32K-bucket n-gram memory (8M training tokens, order 2-12) and Dirichlet posterior backoff mixing with count-confidence gating (gain=12). 2-layer 128d neural model (vestigial). No two-pass, no phrase cache, no TTT.",
+        "date": "2026-03-28"
       },
       "metrics": {
-        "valBpb": 0.02800607,
-        "valLoss": 0.04728708,
+        "valBpb": 0.01800106,
+        "valLoss": 0.03039395,
         "preQuantValBpb": null,
         "preQuantValLoss": null,
         "stepStop": null,
@@ -127,8 +127,8 @@
         "evalTimeSeconds": null
       },
       "artifact": {
-        "bytesTotal": 13465940,
-        "bytesCode": 98302,
+        "bytesTotal": 1384609,
+        "bytesCode": 107000,
         "bytesModelInt8Zlib": null
       },
       "flags": {
@@ -139,26 +139,26 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 924,
-        "title": "Order-16 Frozen N-gram Oracle + Score-First TTT (0.02801 BPB)",
+        "number": 1030,
+        "title": "Record: Single-Pass Packed N-gram + Dirichlet CTW — val_bpb 0.1130 (3-seed mean)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/924",
-        "authorLogin": "THUQiXuan",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1030",
+        "authorLogin": "sofiabod",
         "authorName": null,
-        "createdAt": "2026-03-27T02:40:23Z",
-        "updatedAt": "2026-03-27T03:06:55Z",
-        "headSha": "6edfbe62385f761fbf9b04b679afd69dce57e424",
-        "headRepo": "THUQiXuan/parameter-golf"
+        "createdAt": "2026-03-28T17:42:40Z",
+        "updatedAt": "2026-03-29T04:55:58Z",
+        "headSha": "7a5524b35bd81d605f8753148bd852c2762946bd",
+        "headRepo": "sofiabod/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/6edfbe62385f761fbf9b04b679afd69dce57e424/records/track_10min_16mb/2026-03-27_FrozenNgramOracle_order16_TTT1epoch/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/6edfbe62385f761fbf9b04b679afd69dce57e424/records/track_10min_16mb/2026-03-27_FrozenNgramOracle_order16_TTT1epoch/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/6edfbe62385f761fbf9b04b679afd69dce57e424/records/track_10min_16mb/2026-03-27_FrozenNgramOracle_order16_TTT1epoch/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/6edfbe62385f761fbf9b04b679afd69dce57e424/records/track_10min_16mb/2026-03-27_FrozenNgramOracle_order16_TTT1epoch/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/6edfbe62385f761fbf9b04b679afd69dce57e424/records/track_10min_16mb/2026-03-27_FrozenNgramOracle_order16_TTT1epoch",
-        "pr": "https://github.com/openai/parameter-golf/pull/924",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/7a5524b35bd81d605f8753148bd852c2762946bd/records/track_10min_16mb/2026-03-28_PackedCausal_DirichletBackoff/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/7a5524b35bd81d605f8753148bd852c2762946bd/records/track_10min_16mb/2026-03-28_PackedCausal_DirichletBackoff/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/7a5524b35bd81d605f8753148bd852c2762946bd/records/track_10min_16mb/2026-03-28_PackedCausal_DirichletBackoff/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/7a5524b35bd81d605f8753148bd852c2762946bd/records/track_10min_16mb/2026-03-28_PackedCausal_DirichletBackoff/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/7a5524b35bd81d605f8753148bd852c2762946bd/records/track_10min_16mb/2026-03-28_PackedCausal_DirichletBackoff",
+        "pr": "https://github.com/openai/parameter-golf/pull/1030",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

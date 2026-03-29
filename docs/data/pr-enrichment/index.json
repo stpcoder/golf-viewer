@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-29T04:27:03.116Z",
+  "generatedAt": "2026-03-29T04:57:38.091Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -465,13 +465,12 @@
       "prNumber": 1030,
       "title": "Record: Single-Pass Packed N-gram + Dirichlet CTW — val_bpb 0.1130 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-28T17:42:40Z",
-      "headSha": "f76188ebfecc9675b7f11023def656b8cbc8e24e",
-      "generatedAt": "2026-03-28T17:54:26.999Z",
-      "summary": "Prebuild order-13 n-gram tables from 10B tokens into a packed artifact, then use hierarchical Dirichlet CTW smoothing in single-pass eval over a tiny GPT.",
+      "updatedAt": "2026-03-29T04:55:58Z",
+      "headSha": "7a5524b35bd81d605f8753148bd852c2762946bd",
+      "generatedAt": "2026-03-29T04:57:18.184Z",
+      "summary": "Prewarmed packed n-gram artifact plus hierarchical Dirichlet CTW mixing enables single-pass score-first evaluation without rescoring.",
       "tags": [
         "architecture",
-        "quantization",
         "compression",
         "evaluation"
       ],
@@ -489,13 +488,13 @@
       "prNumber": 1029,
       "title": "Non-record: Knowledge Distillation — A Negative\n  Result (val_bpb=1.1553)",
       "status": "open",
-      "updatedAt": "2026-03-29T01:45:11Z",
-      "headSha": "266a01260b03063b9d9f42fb2ccacd2e184bc9a9",
-      "generatedAt": "2026-03-29T01:56:41.210Z",
-      "summary": "Cached teacher logits for soft KL distillation but the lookup overhead offsets any gain, leaving the student tied with the hard-label baseline even after extended runs.",
+      "updatedAt": "2026-03-29T04:27:37Z",
+      "headSha": "acdc7170459a7561773bad1999df68bc76e8b108",
+      "generatedAt": "2026-03-29T04:57:23.437Z",
+      "summary": "Cached teacher logits for soft KL distillation but overhead (~11ms/step) offset benefits, so a bigger teacher can’t beat the baseline in ten-minute runs.",
       "tags": [
-        "non-record",
-        "evaluation"
+        "evaluation",
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,
@@ -676,14 +675,14 @@
       "prNumber": 1019,
       "title": "Record: AR Self-Gen GPTQ + XSA-all + BigramHash 3072×112 — val_bpb 1.11473 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-28T15:09:05Z",
+      "updatedAt": "2026-03-29T04:42:28Z",
       "headSha": "d7fbe3d16f81a16e26604353bafc61d151cf5264",
-      "generatedAt": "2026-03-28T15:23:15.663Z",
-      "summary": "Full-Hessian GPTQ calibrates on autoregressively self-generated text combined with XSA-all and a 3072×112 BigramHash under 16MB.",
+      "generatedAt": "2026-03-29T04:57:33.223Z",
+      "summary": "Autoregressive self-generated data drives Full Hessian GPTQ calibration while XSA-all + BigramHash 3072×112 sit atop the selective-pruning stack.",
       "tags": [
         "quantization",
-        "attention",
-        "architecture"
+        "architecture",
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2109,15 +2108,15 @@
       "prNumber": 937,
       "title": "[Non-Record Submission] CompressedUT CE + EMA Export + Export-Aligned Late QAT (1.4457 BPB)",
       "status": "open",
-      "updatedAt": "2026-03-29T02:41:43Z",
-      "headSha": "ec308d78859e681b4010a2dac47cae99a0dd6204",
-      "generatedAt": "2026-03-29T02:56:43.893Z",
-      "summary": "CompressedUT CE-only run boosts exported artifact via EMA-smoothed weights, export-aligned late QAT, tighter clip search, and a wider compressed backbone.",
+      "updatedAt": "2026-03-29T04:53:22Z",
+      "headSha": "9c011678af64fc49827fd8b6106c85a61502eee6",
+      "generatedAt": "2026-03-29T04:57:37.948Z",
+      "summary": "CompressedUT trains a strided latent transformer with byte embeddings, EMA export, and export-aligned late QAT to narrow the quantized artifact gap under 16MB.",
       "tags": [
         "architecture",
-        "compression",
         "quantization",
-        "evaluation"
+        "training-schedule",
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,
