@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-03-29T14:59:59.591Z",
+  "generatedAt": "2026-03-29T15:29:48.312Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1081,
+      "title": "Non-record: Swarm-Guided KG-Conditioned Training (val_bpb=1.1220)",
+      "status": "open",
+      "updatedAt": "2026-03-29T15:18:04Z",
+      "headSha": "30b555b81cf0d799a6788c0017384579da0d243a",
+      "generatedAt": "2026-03-29T15:29:43.969Z",
+      "summary": "A multi-agent swarm votes every 800 steps to steer quantization, clip, and MTP schedules while KG-conditioned embeddings bias the tiny GPT init.",
+      "tags": [
+        "non-record",
+        "architecture",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1081.json"
+    },
     {
       "prNumber": 1080,
       "title": "Add non-record 16MB submission: quant-quality-first 1.12276 BPB",
@@ -543,10 +566,10 @@
       "prNumber": 1047,
       "title": "INVALID* (0.8822 BPB mean) Medusa: Unstable S2 — DeltaNet Crawler, Legal  10mb. .77bpb single seed.",
       "status": "open",
-      "updatedAt": "2026-03-29T14:31:37Z",
+      "updatedAt": "2026-03-29T15:00:27Z",
       "headSha": "99d34869c2ced0dd13b353f075765cac14246961",
-      "generatedAt": "2026-03-29T14:59:49.266Z",
-      "summary": "DeltaNet crawler with 4 flat +1 loop layers uses chunk_delta_rule and loop-aware GPTQ timing to keep int6 quantization inside the 600s budget.",
+      "generatedAt": "2026-03-29T15:29:48.020Z",
+      "summary": "DeltaNet crawler stack with loop-aware GPTQ uses GPTQ_RESERVE_MS to finish int6+Zstd quantization inside 600s for the Frugendorff-inspired flat+loop design.",
       "tags": [
         "architecture",
         "quantization",

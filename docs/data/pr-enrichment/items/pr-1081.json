@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-29T15:29:43.969Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1081,
+    "title": "Non-record: Swarm-Guided KG-Conditioned Training (val_bpb=1.1220)",
+    "state": "open",
+    "updatedAt": "2026-03-29T15:18:04Z",
+    "headSha": "30b555b81cf0d799a6788c0017384579da0d243a",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1081",
+    "authorLogin": "michaelwinczuk"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-29_SwarmGuided_KGConditioned_Training/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "A multi-agent swarm votes every 800 steps to steer quantization, clip, and MTP schedules while KG-conditioned embeddings bias the tiny GPT init.",
+    "tags": [
+      "non-record",
+      "architecture",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Swarm of four rule-based agents voting on interventions",
+      "Knowledge-graph-informed embedding initialization from typed edges",
+      "Swarm-driven schedule for quantization, clipping, and MTP weights"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
