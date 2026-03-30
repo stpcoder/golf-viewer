@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T10:35:37.471Z",
+  "generatedAt": "2026-03-30T11:05:11.468Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -10715,6 +10715,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/c27131c5c7b708ef90828c1c4d5e232f1c2cf140/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/c27131c5c7b708ef90828c1c4d5e232f1c2cf140/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap",
         "pr": "https://github.com/openai/parameter-golf/pull/1105",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-29_KitchenSinkV2",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-29_KitchenSinkV2",
+        "folderPath": "records/track_10min_16mb/2026-03-29_KitchenSinkV2",
+        "submissionPath": "records/track_10min_16mb/2026-03-29_KitchenSinkV2/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-29_KitchenSinkV2/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-29_KitchenSinkV2/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-29_KitchenSinkV2/train_gpt.py"
+      },
+      "submission": {
+        "author": "alejandro",
+        "githubId": "Gusanidas",
+        "name": "Kitchen Sink V2 Improved: ResidLambdas + BigBigram + BigVE + FA3",
+        "blurb": "PR #549 base with split early/late LR banks, MiLe margin loss, cache+backout residual, LeakyReLU(0.5), XSA on last 7 layers, coprime-stride data loader, residual lambdas (learnable per-sublayer scaling), bigger bigram hash (6144 buckets), bigger value embeddings (dim=196, layers 5,9,10), Flash Attention 3, train-data GPTQ int6 calibration within training budget, and sliding window eval (stride=64). Hyperparameters tuned via Optuna.",
+        "date": "2026-03-29"
+      },
+      "metrics": {
+        "valBpb": 1.114,
+        "valLoss": 1.8809,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15884408,
+        "bytesCode": 126292,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1130,
+        "title": "Record: 1.1140 BPB — ResidLambdas + Split-LR + Train-Budget GPTQ + Coprime Loader (12-seed mean)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1130",
+        "authorLogin": "Gusanidas",
+        "authorName": null,
+        "createdAt": "2026-03-30T11:03:22Z",
+        "updatedAt": "2026-03-30T11:03:53Z",
+        "headSha": "521f1480ef87370a244377e87536a0621d789521",
+        "headRepo": "Gusanidas/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/521f1480ef87370a244377e87536a0621d789521/records/track_10min_16mb/2026-03-29_KitchenSinkV2/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/521f1480ef87370a244377e87536a0621d789521/records/track_10min_16mb/2026-03-29_KitchenSinkV2/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/521f1480ef87370a244377e87536a0621d789521/records/track_10min_16mb/2026-03-29_KitchenSinkV2/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/521f1480ef87370a244377e87536a0621d789521/records/track_10min_16mb/2026-03-29_KitchenSinkV2/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/521f1480ef87370a244377e87536a0621d789521/records/track_10min_16mb/2026-03-29_KitchenSinkV2",
+        "pr": "https://github.com/openai/parameter-golf/pull/1130",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

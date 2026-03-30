@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-30T10:36:02.503Z",
+  "generatedAt": "2026-03-30T11:05:18.638Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1130,
+      "title": "Record: 1.1140 BPB — ResidLambdas + Split-LR + Train-Budget GPTQ + Coprime Loader (12-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-03-30T11:03:53Z",
+      "headSha": "521f1480ef87370a244377e87536a0621d789521",
+      "generatedAt": "2026-03-30T11:05:18.467Z",
+      "summary": "Combines residual lambdas with split early/late LR banks, cache/backout gating, MiLe loss, FlashAttention3, bigger hash/VE, and in-budget train-data GPTQ plus coprime loader.",
+      "tags": [
+        "architecture",
+        "optimizer",
+        "quantization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1130.json"
+    },
     {
       "prNumber": 1129,
       "title": "Record: CROWN-Q + GPTQ + Legal TTT — val_bpb 1.1174 (3-seed mean)",
