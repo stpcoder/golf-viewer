@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T11:35:21.706Z",
+  "generatedAt": "2026-03-30T12:05:24.071Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -45143,6 +45143,83 @@
       }
     },
     {
+      "id": "record-records-track_non_record_16mb-2026-03-29_DeepSupervision_BatchScaling_M4MacBook",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-29_DeepSupervision_BatchScaling_M4MacBook",
+        "folderPath": "records/track_non_record_16mb/2026-03-29_DeepSupervision_BatchScaling_M4MacBook",
+        "submissionPath": "records/track_non_record_16mb/2026-03-29_DeepSupervision_BatchScaling_M4MacBook/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-29_DeepSupervision_BatchScaling_M4MacBook/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-29_DeepSupervision_BatchScaling_M4MacBook/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-29_DeepSupervision_BatchScaling_M4MacBook/train_gpt.py"
+      },
+      "submission": {
+        "author": "Rana Usman",
+        "githubId": "ranausmanai",
+        "name": "Systematic Exploration: Deep Supervision, LR Tuning, Architecture (M4 MacBook)",
+        "blurb": "Non-record M4 MacBook submission: 27 experiments across deep supervision, learning rate tuning, batch scaling, architecture changes, and convergence techniques. Best: 1.6414 int8_bpb via LR 0.08 at 128K batch. Found deep supervision gives -0.05 BPB at equal batch size (novel technique), LR 0.08 beats default by -0.025, and grad clipping helps -0.019.",
+        "date": "2026-03-30T00:00:00Z"
+      },
+      "metrics": {
+        "valBpb": 1.6414,
+        "valLoss": 2.7714,
+        "preQuantValBpb": 1.6395,
+        "preQuantValLoss": 2.7683,
+        "stepStop": 300,
+        "wallclockSeconds": 4125,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 9815427,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": 9815427
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1073,
+        "title": "Non-record: Deep Supervision on M4 MacBook",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1073",
+        "authorLogin": "ranausmanai",
+        "authorName": null,
+        "createdAt": "2026-03-29T11:50:49Z",
+        "updatedAt": "2026-03-30T11:45:55Z",
+        "headSha": "58df5b4864f10f36c8fa9ba56d944da5609c6bfd",
+        "headRepo": "ranausmanai/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/58df5b4864f10f36c8fa9ba56d944da5609c6bfd/records/track_non_record_16mb/2026-03-29_DeepSupervision_BatchScaling_M4MacBook/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/58df5b4864f10f36c8fa9ba56d944da5609c6bfd/records/track_non_record_16mb/2026-03-29_DeepSupervision_BatchScaling_M4MacBook/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/58df5b4864f10f36c8fa9ba56d944da5609c6bfd/records/track_non_record_16mb/2026-03-29_DeepSupervision_BatchScaling_M4MacBook/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/58df5b4864f10f36c8fa9ba56d944da5609c6bfd/records/track_non_record_16mb/2026-03-29_DeepSupervision_BatchScaling_M4MacBook/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/58df5b4864f10f36c8fa9ba56d944da5609c6bfd/records/track_non_record_16mb/2026-03-29_DeepSupervision_BatchScaling_M4MacBook",
+        "pr": "https://github.com/openai/parameter-golf/pull/1073",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_non_record_16mb-2026-03-20_RTX4070_SP1024_7x512_KV4_500steps",
       "source": "pull_request",
       "status": "open",
@@ -45365,83 +45442,6 @@
         "script": "https://github.com/openai/parameter-golf/blob/b2bcd556fea04e49b01a43f0644bcbc1143fc451/records/track_non_record_16mb/2026-03-20_RTX4070_SP1024_7x512_KV2_500steps/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/b2bcd556fea04e49b01a43f0644bcbc1143fc451/records/track_non_record_16mb/2026-03-20_RTX4070_SP1024_7x512_KV2_500steps",
         "pr": "https://github.com/openai/parameter-golf/pull/240",
-        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
-      },
-      "provenance": {
-        "onMain": false,
-        "hasPullRequest": true,
-        "listedInReadme": false
-      }
-    },
-    {
-      "id": "record-records-track_non_record_16mb-2026-03-29_DeepSupervision_BatchScaling_M4MacBook",
-      "source": "pull_request",
-      "status": "open",
-      "category": "non-record",
-      "track": {
-        "path": "records/track_non_record_16mb",
-        "slug": "track_non_record_16mb",
-        "label": "Non-record / 16MB",
-        "official": false,
-        "category": "non-record"
-      },
-      "record": {
-        "folderName": "2026-03-29_DeepSupervision_BatchScaling_M4MacBook",
-        "folderPath": "records/track_non_record_16mb/2026-03-29_DeepSupervision_BatchScaling_M4MacBook",
-        "submissionPath": "records/track_non_record_16mb/2026-03-29_DeepSupervision_BatchScaling_M4MacBook/submission.json",
-        "readmePath": "records/track_non_record_16mb/2026-03-29_DeepSupervision_BatchScaling_M4MacBook/README.md",
-        "trainLogPath": "records/track_non_record_16mb/2026-03-29_DeepSupervision_BatchScaling_M4MacBook/train.log",
-        "scriptPath": "records/track_non_record_16mb/2026-03-29_DeepSupervision_BatchScaling_M4MacBook/train_gpt.py"
-      },
-      "submission": {
-        "author": "Rana Usman",
-        "githubId": "ranausmanai",
-        "name": "Deep Supervision + Batch Scaling (M4 MacBook)",
-        "blurb": "Non-record M4 MacBook submission: 16 experiments exploring deep supervision at the U-Net encoder-decoder boundary. Found optimal weight=0.03 gives -0.05 BPB at small batch, but effect disappears at large batch sizes. Novel technique not explored by other competitors.",
-        "date": "2026-03-29T00:00:00Z"
-      },
-      "metrics": {
-        "valBpb": 1.6668,
-        "valLoss": 2.8143,
-        "preQuantValBpb": 1.6611,
-        "preQuantValLoss": 2.8047,
-        "stepStop": 300,
-        "wallclockSeconds": 4315,
-        "evalTimeSeconds": null
-      },
-      "artifact": {
-        "bytesTotal": 9815427,
-        "bytesCode": null,
-        "bytesModelInt8Zlib": 9815427
-      },
-      "flags": {
-        "usesValOnly": false
-      },
-      "detection": {
-        "valOnlyConfidence": "none",
-        "valOnlyMatches": []
-      },
-      "pr": {
-        "number": 1073,
-        "title": "Non-record: Deep Supervision on M4 MacBook",
-        "state": "open",
-        "draft": false,
-        "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1073",
-        "authorLogin": "ranausmanai",
-        "authorName": null,
-        "createdAt": "2026-03-29T11:50:49Z",
-        "updatedAt": "2026-03-29T12:15:47Z",
-        "headSha": "fc4bed02669b61cf06b3d2ad59734f9b946998a2",
-        "headRepo": "ranausmanai/parameter-golf"
-      },
-      "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/fc4bed02669b61cf06b3d2ad59734f9b946998a2/records/track_non_record_16mb/2026-03-29_DeepSupervision_BatchScaling_M4MacBook/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/fc4bed02669b61cf06b3d2ad59734f9b946998a2/records/track_non_record_16mb/2026-03-29_DeepSupervision_BatchScaling_M4MacBook/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/fc4bed02669b61cf06b3d2ad59734f9b946998a2/records/track_non_record_16mb/2026-03-29_DeepSupervision_BatchScaling_M4MacBook/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/fc4bed02669b61cf06b3d2ad59734f9b946998a2/records/track_non_record_16mb/2026-03-29_DeepSupervision_BatchScaling_M4MacBook/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/fc4bed02669b61cf06b3d2ad59734f9b946998a2/records/track_non_record_16mb/2026-03-29_DeepSupervision_BatchScaling_M4MacBook",
-        "pr": "https://github.com/openai/parameter-golf/pull/1073",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

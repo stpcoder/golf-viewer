@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T11:35:37.632Z",
+  "generatedAt": "2026-03-30T12:05:33.310Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -916,14 +916,14 @@
       "prNumber": 1073,
       "title": "Non-record: Deep Supervision on M4 MacBook",
       "status": "open",
-      "updatedAt": "2026-03-29T12:15:47Z",
-      "headSha": "fc4bed02669b61cf06b3d2ad59734f9b946998a2",
-      "generatedAt": "2026-03-29T12:28:44.243Z",
-      "summary": "Adds a U-Net encoder-decoder boundary auxiliary loss to stabilize noisy gradients while probing batch scaling and convergence behavior on an M4 MacBook.",
+      "updatedAt": "2026-03-30T11:45:55Z",
+      "headSha": "58df5b4864f10f36c8fa9ba56d944da5609c6bfd",
+      "generatedAt": "2026-03-30T12:05:33.153Z",
+      "summary": "Combined encoder-decoder deep supervision with higher LR and clipping to regularize 300-step large-batch U-Net training before scaling.",
       "tags": [
         "architecture",
         "regularization",
-        "training-schedule",
+        "optimizer",
         "non-record"
       ],
       "flags": {

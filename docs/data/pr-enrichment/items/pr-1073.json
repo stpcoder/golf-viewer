@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-29T12:28:44.243Z",
+  "generatedAt": "2026-03-30T12:05:33.153Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1073,
     "title": "Non-record: Deep Supervision on M4 MacBook",
     "state": "open",
-    "updatedAt": "2026-03-29T12:15:47Z",
-    "headSha": "fc4bed02669b61cf06b3d2ad59734f9b946998a2",
+    "updatedAt": "2026-03-30T11:45:55Z",
+    "headSha": "58df5b4864f10f36c8fa9ba56d944da5609c6bfd",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1073",
     "authorLogin": "ranausmanai"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Adds a U-Net encoder-decoder boundary auxiliary loss to stabilize noisy gradients while probing batch scaling and convergence behavior on an M4 MacBook.",
+    "summary": "Combined encoder-decoder deep supervision with higher LR and clipping to regularize 300-step large-batch U-Net training before scaling.",
     "tags": [
       "architecture",
       "regularization",
-      "training-schedule",
+      "optimizer",
       "non-record"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "valOnlyReasoning": "N/A",
     "techniques": [
-      "- Encoder-decoder boundary deep supervision loss",
-      "- Systematic batch-size scaling to 128K tokens",
-      "- Step-count analysis of EMA/SWA convergence tricks"
+      "Deep supervision loss at encoder-decoder boundary",
+      "Higher LR and grad clipping for limited-step large batches",
+      "Batch scaling exploration up to 128K"
     ]
   },
   "compatibility": {
