@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-30T19:07:46.109Z",
+  "generatedAt": "2026-03-30T19:38:11.198Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1145,
     "title": "Record: 1.1109 BPB Loader FullGPTQ XSA11 + online ngram augment",
     "state": "open",
-    "updatedAt": "2026-03-30T19:07:24Z",
+    "updatedAt": "2026-03-30T19:32:17Z",
     "headSha": "63cc3a350d1f038c9e4ee99ec9af46e2ac2f915b",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1145",
     "authorLogin": "AnirudhRahul"
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Retunes the GPTQ XSA11 bigram-hash stack with WARMDOWN_ITERS=4000 and adds a causal online n-gram/word-start agreement boost atop the base softmax.",
+    "summary": "Retunes the GPTQ XSA11 bigram-hash stack with WARMDOWN_ITERS=4000 and layers a causal single-pass n-gram/word-start agreement overlay that boosts hinted tokens online.",
     "tags": [
+      "quantization",
       "architecture",
-      "evaluation",
-      "quantization"
+      "training-schedule",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "GPTQ XSA11 bigram-hash backbone with retuned warmdown schedule",
-      "Single-pass causal experts for token n-grams, within-word continuations, and word-start hints",
-      "Online boost+renormalization overlay on the model softmax"
+      "GPTQ XSA11 bigram-hash base with WARMDOWN_ITERS=4000",
+      "single-pass online n-gram/within-word/word-start agreement evaluator",
+      "normalized distribution boost from causal prefix-only hints"
     ]
   },
   "compatibility": {

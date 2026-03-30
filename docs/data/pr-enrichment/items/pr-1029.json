@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-30T15:07:15.253Z",
+  "generatedAt": "2026-03-30T19:38:40.798Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1029,
     "title": "Non-record: Knowledge Distillation — A Negative\n  Result (val_bpb=1.1553)",
     "state": "open",
-    "updatedAt": "2026-03-30T14:55:38Z",
-    "headSha": "f2b1ba50956c5063e54f4fec72ae897543f3f96b",
+    "updatedAt": "2026-03-30T19:29:52Z",
+    "headSha": "4d8b3045d2d93914145435637399086253cc2406",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1029",
     "authorLogin": "fielding"
   },
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Cached top-32 teacher logits and swept hard/soft distillation mixes to see if extra signal can beat the overhead within a ten-minute training budget.",
+    "summary": "Cached top-32 teacher logits for soft KL distillation, showing step overhead cancels any transfer gains under tight budget.",
     "tags": [
-      "regularization",
+      "architecture",
       "evaluation",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Cached teacher top-32 logits for soft KL distillation to minimize online overhead",
-      "Compared hard vs soft distillation alphas while tracking step penalties",
-      "Extended runs to see if distillation benefits outrun cached-logit costs over time"
+      "cached teacher logits",
+      "soft KL distillation sweep",
+      "step-overhead ablation"
     ]
   },
   "compatibility": {

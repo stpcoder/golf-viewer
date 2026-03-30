@@ -1,21 +1,43 @@
 {
-  "generatedAt": "2026-03-30T19:08:37.294Z",
+  "generatedAt": "2026-03-30T19:38:46.637Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
-      "prNumber": 1146,
-      "title": "Non-record: Elastic Associative Memory as a Language Model, 97% Intelligence Transfer in 14MBs",
+      "prNumber": 1148,
+      "title": "Record: 11L Muon Legal TTT + Entropy-Adaptive Epochs (8×H100) — val_bpb 1.1179 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-30T19:00:14Z",
+      "updatedAt": "2026-03-30T19:32:34Z",
+      "headSha": "f21923533c704841b6f1f2cbcc124da411f3ce85",
+      "generatedAt": "2026-03-30T19:38:00.734Z",
+      "summary": "TTT loop applies Muon Newton-Schulz updates and entropy-driven 2/3/4 epoch counts per chunk to direct adaptation effort toward harder validation content.",
+      "tags": [
+        "muon",
+        "training-schedule",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1148.json"
+    },
+    {
+      "prNumber": 1146,
+      "title": "Non-record: Discarding Transformers. Elastic Associative Memory as a Language Model, 97% Intelligence Transfer in 14MBs",
+      "status": "open",
+      "updatedAt": "2026-03-30T19:23:15Z",
       "headSha": "04113fd8731fd421fe4622a0d387f73c6c3b3708",
-      "generatedAt": "2026-03-30T19:07:39.039Z",
-      "summary": "Distills a transformer into a fixed encoder→Elastic Associative Memory→decoder pipeline that reads superposed hidden states and augments them with a kNN cache.",
+      "generatedAt": "2026-03-30T19:38:05.909Z",
+      "summary": "Replaces the inference transformer with an elastic associative memory storing teacher hidden states so evaluation runs as encoder→EAM read→decoder (plus kNN).",
       "tags": [
         "architecture",
         "compression",
-        "evaluation",
-        "non-record"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -31,14 +53,15 @@
       "prNumber": 1145,
       "title": "Record: 1.1109 BPB Loader FullGPTQ XSA11 + online ngram augment",
       "status": "open",
-      "updatedAt": "2026-03-30T19:07:24Z",
+      "updatedAt": "2026-03-30T19:32:17Z",
       "headSha": "63cc3a350d1f038c9e4ee99ec9af46e2ac2f915b",
-      "generatedAt": "2026-03-30T19:07:46.109Z",
-      "summary": "Retunes the GPTQ XSA11 bigram-hash stack with WARMDOWN_ITERS=4000 and adds a causal online n-gram/word-start agreement boost atop the base softmax.",
+      "generatedAt": "2026-03-30T19:38:11.198Z",
+      "summary": "Retunes the GPTQ XSA11 bigram-hash stack with WARMDOWN_ITERS=4000 and layers a causal single-pass n-gram/word-start agreement overlay that boosts hinted tokens online.",
       "tags": [
+        "quantization",
         "architecture",
-        "evaluation",
-        "quantization"
+        "training-schedule",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -147,13 +170,14 @@
       "prNumber": 1140,
       "title": "Crawler —  8.8MB -1.1874 BPB (3-seed mean, 8xH100, 600s)",
       "status": "open",
-      "updatedAt": "2026-03-30T17:35:13Z",
+      "updatedAt": "2026-03-30T19:36:15Z",
       "headSha": "11949489d4de7d8fa9b5cbd4dba71f6e4f7baf88",
-      "generatedAt": "2026-03-30T17:37:27.814Z",
-      "summary": "Micro Crawler stacks 4 flat XSA layers with a shared crawler block loop, QAT-aware int8 path, and naive int6+zstd packing for a sub-9.4MB model.",
+      "generatedAt": "2026-03-30T19:38:20.405Z",
+      "summary": "Micro Crawler pairs 4 flat XSA layers with a shared crawler block looped three times, using crawler QAT and int6+zstd packing to hit ~9.4MB.",
       "tags": [
         "architecture",
-        "quantization"
+        "quantization",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -423,15 +447,14 @@
       "prNumber": 1122,
       "title": "Record: EngramLite + Gated Skips + Full GPTQ + FA3 — val_bpb 1.1146 (1-seed, 2 pending)",
       "status": "open",
-      "updatedAt": "2026-03-30T18:54:52Z",
-      "headSha": "6d6feec0ed08bae3c9d5767dbc7509eb85c5dcad",
-      "generatedAt": "2026-03-30T19:08:14.905Z",
-      "summary": "Combines EngramLite hashing, sigmoid-gated skips, Turbo-Muon, XSA, and FlashAttention3 before full Hessian GPTQ on an 11L 512d stack.",
+      "updatedAt": "2026-03-30T19:27:07Z",
+      "headSha": "eae9e87c660b47acc33bb756baaadb7c9ef98234",
+      "generatedAt": "2026-03-30T19:38:26.516Z",
+      "summary": "Combines EngramLite hashing, sigmoid-gated U-Net skips, Turbo-Muon optimizer, and full Hessian GPTQ with FlashAttention to compress an 11-layer GPT.",
       "tags": [
         "architecture",
         "optimizer",
-        "quantization",
-        "evaluation"
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -724,12 +747,12 @@
     },
     {
       "prNumber": 1105,
-      "title": "Record: Fused MLP (Triton+CUTLASS EVT) + MLP 3.5× + Mixed int5/int6 + SLOT + Brotli — 1.1086 BPB (seed 314, more seeds running)",
+      "title": "Record: Fused MLP (Triton+CUTLASS EVT) + MLP 3.5× + Mixed int5/int6 + SLOT + Brotli — 1.1088 BPB (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-30T18:58:39Z",
+      "updatedAt": "2026-03-30T19:37:00Z",
       "headSha": "0df40cc5465a80bd114588fe2e631cd316b9338a",
-      "generatedAt": "2026-03-30T19:08:25.204Z",
-      "summary": "Fuses Triton TMA forward with CUTLASS EVT backward MLP kernels, widens MLP to 3.5×, and pairs Hessian-guided int5/int6 quantization with Brotli compression.",
+      "generatedAt": "2026-03-30T19:38:31.815Z",
+      "summary": "Fuses Triton TMA forward and CUTLASS EVT backward MLP kernels, widens the MLP to 3.5×, and uses Hessian-guided mixed int5/int6 plus Brotli to stay under budget.",
       "tags": [
         "architecture",
         "quantization",
@@ -1774,15 +1797,14 @@
       "prNumber": 1039,
       "title": "Add LeakyReLU² + 4ep Legal TTT submission",
       "status": "open",
-      "updatedAt": "2026-03-30T19:03:44Z",
-      "headSha": "8fc315d81548a61cc7d080faa4ee37934923a5fe",
-      "generatedAt": "2026-03-30T19:08:30.527Z",
-      "summary": "Legal TTT tuning adds 4-epoch score-first adaptation with lr 0.0025, LeakyReLU² model, Parallel Muon optimizer, and eval-only checkpoint loading for fast sweeps.",
+      "updatedAt": "2026-03-30T19:32:35Z",
+      "headSha": "39f7ba759f924684e50c047274f5ef1d21ec253d",
+      "generatedAt": "2026-03-30T19:38:36.101Z",
+      "summary": "Extends the LeakyReLU² + Parallel Muon stack by boosting Legal TTT to lr=0.0025/4ep, skipping pre-TTT diagnostics, and loading eval-only checkpoints for fast sweeps.",
       "tags": [
-        "architecture",
         "training-schedule",
-        "optimizer",
-        "evaluation"
+        "evaluation",
+        "muon"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1959,12 +1981,12 @@
       "prNumber": 1029,
       "title": "Non-record: Knowledge Distillation — A Negative\n  Result (val_bpb=1.1553)",
       "status": "open",
-      "updatedAt": "2026-03-30T14:55:38Z",
-      "headSha": "f2b1ba50956c5063e54f4fec72ae897543f3f96b",
-      "generatedAt": "2026-03-30T15:07:15.253Z",
-      "summary": "Cached top-32 teacher logits and swept hard/soft distillation mixes to see if extra signal can beat the overhead within a ten-minute training budget.",
+      "updatedAt": "2026-03-30T19:29:52Z",
+      "headSha": "4d8b3045d2d93914145435637399086253cc2406",
+      "generatedAt": "2026-03-30T19:38:40.798Z",
+      "summary": "Cached top-32 teacher logits for soft KL distillation, showing step overhead cancels any transfer gains under tight budget.",
       "tags": [
-        "regularization",
+        "architecture",
         "evaluation",
         "non-record"
       ],
@@ -2466,30 +2488,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-1000.json"
-    },
-    {
-      "prNumber": 999,
-      "title": "Record: 11L Muon TTT + Entropy-Adaptive Epochs (8×H100) — val_bpb 1.1179 (3-seed mean)",
-      "status": "open",
-      "updatedAt": "2026-03-28T03:33:25Z",
-      "headSha": "f21923533c704841b6f1f2cbcc124da411f3ce85",
-      "generatedAt": "2026-03-28T03:49:59.881Z",
-      "summary": "Test-time training replaces SGD with Newton-Schulz Muon updates and gates 2/3/4 epochs per chunk based on entropy to concentrate adaptation on harder validation content.",
-      "tags": [
-        "muon",
-        "optimizer",
-        "training-schedule",
-        "val-only"
-      ],
-      "flags": {
-        "usesValOnly": true,
-        "usesValOnlyAi": true,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": false
-      },
-      "file": "items/pr-999.json"
     },
     {
       "prNumber": 998,
@@ -4481,10 +4479,10 @@
       "prNumber": 874,
       "title": "Non-record: Random Linear Maps + Learned Adapters (val_bpb=1.607, 1.92MB artifact)",
       "status": "open",
-      "updatedAt": "2026-03-30T14:08:09Z",
-      "headSha": "a14e98c5e8f0d607f333e804f74f296b83a52678",
-      "generatedAt": "2026-03-30T14:37:18.652Z",
-      "summary": "Regenerate nearly all linear weights from fixed seeds and only learn rank-16 adapters so the 5-layer GPT fits in a ~2 MB artifact.",
+      "updatedAt": "2026-03-30T19:33:36Z",
+      "headSha": "6b211a8bc44fbe80fec1c146b1e060286d4f4246",
+      "generatedAt": "2026-03-30T19:38:46.512Z",
+      "summary": "Random linear base weights saved via seed regeneration plus small rank-16 adapters learn adjustments, letting artifacts shrink to ~2MB.",
       "tags": [
         "architecture",
         "compression",

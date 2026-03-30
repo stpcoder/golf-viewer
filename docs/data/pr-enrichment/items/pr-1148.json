@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-30T19:38:00.734Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1148,
+    "title": "Record: 11L Muon Legal TTT + Entropy-Adaptive Epochs (8×H100) — val_bpb 1.1179 (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-03-30T19:32:34Z",
+    "headSha": "f21923533c704841b6f1f2cbcc124da411f3ce85",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1148",
+    "authorLogin": "aamodbhatt"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-28_MuonTTT_EntropyAdaptive_11L_8xH100/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "TTT loop applies Muon Newton-Schulz updates and entropy-driven 2/3/4 epoch counts per chunk to direct adaptation effort toward harder validation content.",
+    "tags": [
+      "muon",
+      "training-schedule",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Newton-Schulz orthogonalized TTT updates",
+      "Entropy-adaptive 2/3/4 epochs per chunk",
+      "Score-first chunked TTT with cosine LR"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

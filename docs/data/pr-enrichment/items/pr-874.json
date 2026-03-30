@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-30T14:37:18.652Z",
+  "generatedAt": "2026-03-30T19:38:46.512Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 874,
     "title": "Non-record: Random Linear Maps + Learned Adapters (val_bpb=1.607, 1.92MB artifact)",
     "state": "open",
-    "updatedAt": "2026-03-30T14:08:09Z",
-    "headSha": "a14e98c5e8f0d607f333e804f74f296b83a52678",
+    "updatedAt": "2026-03-30T19:33:36Z",
+    "headSha": "6b211a8bc44fbe80fec1c146b1e060286d4f4246",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/874",
     "authorLogin": "fielding"
   },
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Regenerate nearly all linear weights from fixed seeds and only learn rank-16 adapters so the 5-layer GPT fits in a ~2 MB artifact.",
+    "summary": "Random linear base weights saved via seed regeneration plus small rank-16 adapters learn adjustments, letting artifacts shrink to ~2MB.",
     "tags": [
       "architecture",
       "compression",
       "non-record"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "valOnlyReasoning": "Trains normally with sliding eval; no val-only regime.",
     "techniques": [
-      "Seeded random base matrices with persistent=False to skip storing noise",
-      "Trainable rank-16 adapters on every attention/MLP projection",
-      "MuON+AdamW training with EMA and sliding-window eval"
+      "Seeded random linear bases regenerated per layer",
+      "Rank-16 LoRA-style adapters store the learned updates",
+      "Favor 4-5 layer configs so few parameters can optimize within the time budget"
     ]
   },
   "compatibility": {
