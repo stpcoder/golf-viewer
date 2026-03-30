@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-30T15:36:53.667Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1135,
+    "title": "Record: Fused Triton MLP + Full GPTQ + Coprime Loader + XSA-all + BH2816 (val_bpb 1.1116)",
+    "state": "open",
+    "updatedAt": "2026-03-30T15:31:54Z",
+    "headSha": "fe30417220b14035e9c34702f274e7138c55aaca",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1135",
+    "authorLogin": "barneywohl"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-30_FusedMLP_FullGPTQ_CoprimeLoader_XSA11_BH2816/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Fuses Triton leaky_relu² MLP, full Hessian GPTQ, coprime-stride loader, XSA on every layer, and enlarged bigram hash under fullgraph compile.",
+    "tags": [
+      "quantization",
+      "attention",
+      "architecture"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Custom Triton kernel fusing leaky_relu(x,0.5)² per MLP layer",
+      "Full Hessian GPTQ with Cholesky, actorder permutation, and multi-way clip sweep",
+      "Coprime-stride data loader plus XSA everywhere and bigger BigramHash features"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

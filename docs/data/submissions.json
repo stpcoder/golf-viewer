@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T15:06:58.238Z",
+  "generatedAt": "2026-03-30T15:36:45.124Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -10262,6 +10262,83 @@
       }
     },
     {
+      "id": "record-records-track_10min_16mb-2026-03-30_FusedMLP_FullGPTQ_CoprimeLoader_XSA11_BH2816",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-30_FusedMLP_FullGPTQ_CoprimeLoader_XSA11_BH2816",
+        "folderPath": "records/track_10min_16mb/2026-03-30_FusedMLP_FullGPTQ_CoprimeLoader_XSA11_BH2816",
+        "submissionPath": "records/track_10min_16mb/2026-03-30_FusedMLP_FullGPTQ_CoprimeLoader_XSA11_BH2816/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-30_FusedMLP_FullGPTQ_CoprimeLoader_XSA11_BH2816/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-30_FusedMLP_FullGPTQ_CoprimeLoader_XSA11_BH2816/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-30_FusedMLP_FullGPTQ_CoprimeLoader_XSA11_BH2816/train_gpt.py"
+      },
+      "submission": {
+        "author": "barneywohl",
+        "githubId": "barneywohl",
+        "name": null,
+        "blurb": null,
+        "date": "2026-03-30"
+      },
+      "metrics": {
+        "valBpb": 1.1116,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": 80
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1135,
+        "title": "Record: Fused Triton MLP + Full GPTQ + Coprime Loader + XSA-all + BH2816 (val_bpb 1.1116)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1135",
+        "authorLogin": "barneywohl",
+        "authorName": null,
+        "createdAt": "2026-03-30T15:31:54Z",
+        "updatedAt": "2026-03-30T15:31:54Z",
+        "headSha": "fe30417220b14035e9c34702f274e7138c55aaca",
+        "headRepo": "barneywohl/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/fe30417220b14035e9c34702f274e7138c55aaca/records/track_10min_16mb/2026-03-30_FusedMLP_FullGPTQ_CoprimeLoader_XSA11_BH2816/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/fe30417220b14035e9c34702f274e7138c55aaca/records/track_10min_16mb/2026-03-30_FusedMLP_FullGPTQ_CoprimeLoader_XSA11_BH2816/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/fe30417220b14035e9c34702f274e7138c55aaca/records/track_10min_16mb/2026-03-30_FusedMLP_FullGPTQ_CoprimeLoader_XSA11_BH2816/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/fe30417220b14035e9c34702f274e7138c55aaca/records/track_10min_16mb/2026-03-30_FusedMLP_FullGPTQ_CoprimeLoader_XSA11_BH2816/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/fe30417220b14035e9c34702f274e7138c55aaca/records/track_10min_16mb/2026-03-30_FusedMLP_FullGPTQ_CoprimeLoader_XSA11_BH2816",
+        "pr": "https://github.com/openai/parameter-golf/pull/1135",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_10min_16mb-2026-03-29_AllInOne_SmearGate_LeakyRoPE_TTT",
       "source": "pull_request",
       "status": "open",
@@ -10935,7 +11012,7 @@
         "authorLogin": "icryo",
         "authorName": null,
         "createdAt": "2026-03-30T05:30:52Z",
-        "updatedAt": "2026-03-30T05:30:52Z",
+        "updatedAt": "2026-03-30T15:31:57Z",
         "headSha": "7a90577632ed6b1944c55802abc74f80891c4fed",
         "headRepo": "icryo/parameter-golf"
       },

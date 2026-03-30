@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-30T05:33:54.353Z",
+  "generatedAt": "2026-03-30T15:36:57.846Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1122,
     "title": "Record: EngramLite + Gated Skips + Full GPTQ + FA3 — val_bpb 1.1146 (1-seed, 2 pending)",
     "state": "open",
-    "updatedAt": "2026-03-30T05:30:52Z",
+    "updatedAt": "2026-03-30T15:31:57Z",
     "headSha": "7a90577632ed6b1944c55802abc74f80891c4fed",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1122",
     "authorLogin": "icryo"
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Stacked EngramLite multi-head ngram hashing, sigmoid-gated skips, Turbo-Muon updates, and FlashAttention 3 with full Hessian GPTQ plus a coprime loader.",
+    "summary": "Combines EngramLite multi-head ngram hashing, sigmoid-gated U-Net skips, Turbo-Muon steps, and FA3/XSA layers with full Hessian GPTQ for compact sliding eval.",
     "tags": [
       "architecture",
-      "optimizer",
-      "quantization"
+      "attention",
+      "compression",
+      "optimizer"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
       "EngramLite multi-head bigram+trigram hash embeddings",
-      "Sigmoid-gated skip weighting with Turbo-Muon LR floor",
-      "Full Hessian GPTQ calibration with coprime-stride loader and FA3"
+      "Sigmoid-gated U-Net skip integration",
+      "Full Hessian GPTQ calibration with FA3 attention"
     ]
   },
   "compatibility": {
