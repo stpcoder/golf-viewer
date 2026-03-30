@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-26T07:08:19.483Z",
+  "generatedAt": "2026-03-30T11:35:37.531Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 703,
     "title": "Record: PR549 + MiLe decay + 8-bit Muon + 1.04x LR + Cache+Backout — val_bpb 1.1176",
-    "state": "open",
-    "updatedAt": "2026-03-26T06:56:16Z",
+    "state": "closed",
+    "updatedAt": "2026-03-30T11:10:34Z",
     "headSha": "3c770dd01cbc26aef5c6a05e66b350d4fb9064ca",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/703",
     "authorLogin": "Gusanidas"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines adaptive MiLe loss, blockwise 8-bit Muon momentum, and Cache+Backout context cleanup atop LeakyReLU² architecture for sharper training focus.",
+    "summary": "Extends PR549 with MiLe loss warmdown, Cache+Backout context correction, a 1.04× LR boost, and blockwise int8 Muon momentum to sharpen training focus.",
     "tags": [
-      "regularization",
-      "quantization",
       "optimizer",
-      "architecture"
+      "quantization",
+      "attention",
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "MiLe entropy-reweighted loss decay",
-      "Blockwise int8 Muon momentum storage",
-      "Cache+Backout residual gating"
+      "MiLe entropy-weighted loss decay",
+      "Cache+Backout late-layer context routing",
+      "Blockwise 8-bit Muon momentum quantization"
     ]
   },
   "compatibility": {

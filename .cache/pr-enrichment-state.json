@@ -2,7 +2,7 @@
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
-  "generatedAt": "2026-03-30T11:05:18.638Z",
+  "generatedAt": "2026-03-30T11:35:37.632Z",
   "prs": {
     "6": {
       "signature": "2026-03-20-pr-enrichment-v2-approach-first:11373420c1f50e6a83599fb25bb73f38a6555cb7:closed:2026-03-18T18:34:32Z",
@@ -2807,9 +2807,9 @@
       "headSha": "e165ee590d59a68aa4223c41e92c54dda2783419"
     },
     "703": {
-      "signature": "2026-03-20-pr-enrichment-v2-approach-first:3c770dd01cbc26aef5c6a05e66b350d4fb9064ca:open:2026-03-26T06:56:16Z",
+      "signature": "2026-03-20-pr-enrichment-v2-approach-first:3c770dd01cbc26aef5c6a05e66b350d4fb9064ca:closed:2026-03-30T11:10:34Z",
       "file": "items/pr-703.json",
-      "updatedAt": "2026-03-26T06:56:16Z",
+      "updatedAt": "2026-03-30T11:10:34Z",
       "headSha": "3c770dd01cbc26aef5c6a05e66b350d4fb9064ca"
     },
     "704": {
@@ -4451,10 +4451,10 @@
       "headSha": "46f4486db4dd359d7c43161b2489a2312834d82d"
     },
     "1104": {
-      "signature": "2026-03-20-pr-enrichment-v2-approach-first:dea0514e52ed3139f37b37eea80b7fceec76d1d1:open:2026-03-30T10:17:38Z",
+      "signature": "2026-03-20-pr-enrichment-v2-approach-first:6d67d690ad3a4916f2a4ff4f00f3b47fd3bca23c:open:2026-03-30T11:18:18Z",
       "file": "items/pr-1104.json",
-      "updatedAt": "2026-03-30T10:17:38Z",
-      "headSha": "dea0514e52ed3139f37b37eea80b7fceec76d1d1"
+      "updatedAt": "2026-03-30T11:18:18Z",
+      "headSha": "6d67d690ad3a4916f2a4ff4f00f3b47fd3bca23c"
     },
     "1105": {
       "signature": "2026-03-20-pr-enrichment-v2-approach-first:c27131c5c7b708ef90828c1c4d5e232f1c2cf140:open:2026-03-30T05:18:12Z",
@@ -4469,9 +4469,9 @@
       "headSha": "ed08ba8b60154fa2a062127097b5302337467eb5"
     },
     "1107": {
-      "signature": "2026-03-20-pr-enrichment-v2-approach-first:f30e99441bb477132d5e0b233526924472eb7882:open:2026-03-30T00:55:11Z",
+      "signature": "2026-03-20-pr-enrichment-v2-approach-first:f30e99441bb477132d5e0b233526924472eb7882:open:2026-03-30T11:19:48Z",
       "file": "items/pr-1107.json",
-      "updatedAt": "2026-03-30T00:55:11Z",
+      "updatedAt": "2026-03-30T11:19:48Z",
       "headSha": "f30e99441bb477132d5e0b233526924472eb7882"
     },
     "1110": {

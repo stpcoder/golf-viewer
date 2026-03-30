@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T11:05:18.638Z",
+  "generatedAt": "2026-03-30T11:35:37.632Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -423,15 +423,15 @@
       "prNumber": 1107,
       "title": "Mamba-3 SSD + Attention Hybrid with QAT (1.5633 bpb)",
       "status": "open",
-      "updatedAt": "2026-03-30T00:55:11Z",
+      "updatedAt": "2026-03-30T11:19:48Z",
       "headSha": "f30e99441bb477132d5e0b233526924472eb7882",
-      "generatedAt": "2026-03-30T01:02:17.624Z",
-      "summary": "Hybrid model runs Mamba-3 SISO SSD blocks with one attention layer, tuning QAT coverage and hardware-aware warmdown for INT6 compression.",
+      "generatedAt": "2026-03-30T11:35:28.100Z",
+      "summary": "Hybrid Mamba-3 SSD SISO blocks with a singleton attention layer and fully QAT-covered projections keep INT6 inputs competitive while exploiting SSD throughput.",
       "tags": [
         "architecture",
         "quantization",
-        "attention",
-        "training-schedule"
+        "training-schedule",
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,
@@ -493,13 +493,13 @@
       "prNumber": 1104,
       "title": "[Non-record] 1-Stage Byte-level H-Net at 17.5M: Dynamic Chunking Learns Word Boundaries (39x-91x fewer params than H-Net paper)",
       "status": "open",
-      "updatedAt": "2026-03-30T10:17:38Z",
-      "headSha": "dea0514e52ed3139f37b37eea80b7fceec76d1d1",
-      "generatedAt": "2026-03-30T10:35:56.039Z",
-      "summary": "Byte-level H-Net uses dynamic chunking to learn whitespace-aligned boundaries from raw bytes while matching subword behavior and running padded multi-GPU DDP on 8×H100.",
+      "updatedAt": "2026-03-30T11:18:18Z",
+      "headSha": "6d67d690ad3a4916f2a4ff4f00f3b47fd3bca23c",
+      "generatedAt": "2026-03-30T11:35:33.582Z",
+      "summary": "1-stage H-Net compares byte260 vs sp1024 dynamic chunking, learning whitespace-aligned boundaries via padded multi-GPU training and boundary metrics.",
       "tags": [
-        "tokenization",
         "architecture",
+        "tokenization",
         "evaluation",
         "non-record"
       ],
@@ -6830,16 +6830,16 @@
     {
       "prNumber": 703,
       "title": "Record: PR549 + MiLe decay + 8-bit Muon + 1.04x LR + Cache+Backout — val_bpb 1.1176",
-      "status": "open",
-      "updatedAt": "2026-03-26T06:56:16Z",
+      "status": "closed",
+      "updatedAt": "2026-03-30T11:10:34Z",
       "headSha": "3c770dd01cbc26aef5c6a05e66b350d4fb9064ca",
-      "generatedAt": "2026-03-26T07:08:19.483Z",
-      "summary": "Combines adaptive MiLe loss, blockwise 8-bit Muon momentum, and Cache+Backout context cleanup atop LeakyReLU² architecture for sharper training focus.",
+      "generatedAt": "2026-03-30T11:35:37.531Z",
+      "summary": "Extends PR549 with MiLe loss warmdown, Cache+Backout context correction, a 1.04× LR boost, and blockwise int8 Muon momentum to sharpen training focus.",
       "tags": [
-        "regularization",
-        "quantization",
         "optimizer",
-        "architecture"
+        "quantization",
+        "attention",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
