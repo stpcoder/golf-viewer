@@ -1,24 +1,17 @@
 {
-  "generatedAt": "2026-03-30T23:08:19.906Z",
+  "generatedAt": "2026-03-30T23:38:28.794Z",
   "sourceRepo": "openai/parameter-golf",
   "siteRoot": null,
   "tokenConfigured": true,
-  "skipped": [
-    {
-      "stage": "pull-request-readme",
-      "pr": 1156,
-      "submissionPath": "records/track_10min_16mb/2026-03-30_EGGROLL_PostGPTQ_BinRefinement/submission.json",
-      "reason": "missing-or-unreadable-readme"
-    }
-  ],
+  "skipped": [],
   "errors": [],
   "incremental": {
     "mode": "incremental",
-    "cutoffUpdatedAt": "2026-03-30T22:37:31Z",
+    "cutoffUpdatedAt": "2026-03-30T23:08:12Z",
     "pagesScanned": 2,
     "prsScanned": 200,
-    "prsRefreshed": 1,
-    "prsReused": 199,
+    "prsRefreshed": 0,
+    "prsReused": 200,
     "stoppedEarly": true,
     "refreshFailures": 0,
     "cacheEntries": 1106,
