@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-29T23:32:09.862Z",
+  "generatedAt": "2026-03-30T00:02:21.791Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1097,
     "title": "Parameter golf jepa",
     "state": "open",
-    "updatedAt": "2026-03-29T23:18:41Z",
+    "updatedAt": "2026-03-29T23:50:21Z",
     "headSha": "5bed757868cf5b8508d09074ad42dd12e96abdaa",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1097",
     "authorLogin": "danielxmed"
@@ -19,17 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Recasts the U-Net LM as JEPA with a 256-d latent predictor plus SIGReg to shape encoder representations for text compression without inference overhead.",
+    "summary": "Reframes the U-Net transformer as JEPA with a 256-d bottleneck predictor plus SIGReg to sculpt latent representations for text compression without eval overhead.",
     "tags": [
       "architecture",
-      "regularization"
+      "regularization",
+      "compression"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "JEPA latent projection with next-step predictor using stop-gradient targets",
-      "SIGReg isotropic Gaussian regularizer preventing latent collapse",
-      "Combined CE + JEPA MSE + SIGReg loss weighting"
+      "JEPA latent prediction at the bottleneck",
+      "SIGReg anti-collapse regularizer",
+      "CE + JEPA_MSE + SIGReg composite loss"
     ]
   },
   "compatibility": {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-29T23:32:02.168Z",
+  "generatedAt": "2026-03-30T00:02:05.298Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -3375,7 +3375,7 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-03-29T15:59:30Z",
-        "updatedAt": "2026-03-29T21:01:20Z",
+        "updatedAt": "2026-03-29T23:56:40Z",
         "headSha": "4efa746c3596aba503b77ad4c5c5181aafab04bd",
         "headRepo": "newjordan/parameter-golf-1"
       },
@@ -3529,7 +3529,7 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-03-29T15:59:30Z",
-        "updatedAt": "2026-03-29T21:01:20Z",
+        "updatedAt": "2026-03-29T23:56:40Z",
         "headSha": "4efa746c3596aba503b77ad4c5c5181aafab04bd",
         "headRepo": "newjordan/parameter-golf-1"
       },
@@ -6540,7 +6540,7 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-03-29T15:59:30Z",
-        "updatedAt": "2026-03-29T21:01:20Z",
+        "updatedAt": "2026-03-29T23:56:40Z",
         "headSha": "4efa746c3596aba503b77ad4c5c5181aafab04bd",
         "headRepo": "newjordan/parameter-golf-1"
       },
@@ -38963,7 +38963,7 @@
         "authorLogin": "danielxmed",
         "authorName": null,
         "createdAt": "2026-03-29T21:23:41Z",
-        "updatedAt": "2026-03-29T23:18:41Z",
+        "updatedAt": "2026-03-29T23:50:21Z",
         "headSha": "5bed757868cf5b8508d09074ad42dd12e96abdaa",
         "headRepo": "danielxmed/parameter-golf"
       },
@@ -40437,6 +40437,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/2d02d157b44414e070483da0b30826ebec239e6a/records/track_non_record_16mb/2026-03-28_MASA_LowRank/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/2d02d157b44414e070483da0b30826ebec239e6a/records/track_non_record_16mb/2026-03-28_MASA_LowRank",
         "pr": "https://github.com/openai/parameter-golf/pull/1025",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-03-29_HNet_ByteVsSubword_Study",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-29_HNet_ByteVsSubword_Study",
+        "folderPath": "records/track_non_record_16mb/2026-03-29_HNet_ByteVsSubword_Study",
+        "submissionPath": "records/track_non_record_16mb/2026-03-29_HNet_ByteVsSubword_Study/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-29_HNet_ByteVsSubword_Study/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-29_HNet_ByteVsSubword_Study/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-29_HNet_ByteVsSubword_Study/train_gpt.py"
+      },
+      "submission": {
+        "author": "Darius Feher",
+        "githubId": "DariusFeher",
+        "name": "H-Net Byte vs H-Net Subword Study",
+        "blurb": "Systematic ablation comparing H-Net dynamic chunking on byte260 vs sp1024 tokenization. 20+ matched runs across 4 axes (chunk length, outer layers, ratio loss, LR diff). First working multi-GPU H-Net with boundary visualization showing the model learns word-level segmentation from raw bytes.",
+        "date": "2026-03-30"
+      },
+      "metrics": {
+        "valBpb": 1.35945128,
+        "valLoss": 0.94198807,
+        "preQuantValBpb": 1.325,
+        "preQuantValLoss": null,
+        "stepStop": 85242,
+        "wallclockSeconds": 14400,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15962226,
+        "bytesCode": 57968,
+        "bytesModelInt8Zlib": 15904258
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1104,
+        "title": "[Non-record] 1-Stage Byte-level H-Net at 17.5M: Dynamic Chunking Learns Word Boundaries (39x-91x fewer params than H-Net paper)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1104",
+        "authorLogin": "DariusFeher",
+        "authorName": null,
+        "createdAt": "2026-03-29T23:52:12Z",
+        "updatedAt": "2026-03-30T00:00:06Z",
+        "headSha": "dea0514e52ed3139f37b37eea80b7fceec76d1d1",
+        "headRepo": "DariusFeher/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/dea0514e52ed3139f37b37eea80b7fceec76d1d1/records/track_non_record_16mb/2026-03-29_HNet_ByteVsSubword_Study/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/dea0514e52ed3139f37b37eea80b7fceec76d1d1/records/track_non_record_16mb/2026-03-29_HNet_ByteVsSubword_Study/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/dea0514e52ed3139f37b37eea80b7fceec76d1d1/records/track_non_record_16mb/2026-03-29_HNet_ByteVsSubword_Study/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/dea0514e52ed3139f37b37eea80b7fceec76d1d1/records/track_non_record_16mb/2026-03-29_HNet_ByteVsSubword_Study/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/dea0514e52ed3139f37b37eea80b7fceec76d1d1/records/track_non_record_16mb/2026-03-29_HNet_ByteVsSubword_Study",
+        "pr": "https://github.com/openai/parameter-golf/pull/1104",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
