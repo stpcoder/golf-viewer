@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-30T05:34:10.804Z",
+  "generatedAt": "2026-03-30T17:37:38.551Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1105,
-    "title": "Record: Fused MLP (Triton+CUTLASS EVT) + Brotli + Memmap — 1.1138 BPB",
+    "title": "Record: Fused MLP (Triton+CUTLASS EVT) + MLP 3.5× + Mixed int5/int6 + Brotli — 1.1123 BPB (seed 314, more seeds running)",
     "state": "open",
-    "updatedAt": "2026-03-30T05:18:12Z",
+    "updatedAt": "2026-03-30T17:30:54Z",
     "headSha": "c27131c5c7b708ef90828c1c4d5e232f1c2cf140",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1105",
     "authorLogin": "abaybektursun"
@@ -19,17 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Fuses Triton TMA forward and CUTLASS EVT backward MLP kernels, adds precomputed act gradient, Brotli compression, and memmap multi-shard pipeline.",
+    "summary": "Fuses Triton/CUTLASS MLP kernels, Hessian-guided int5/int6 quant, and a 3.5× MLP expansion while trimming artifact size to recover throughput and add capacity.",
     "tags": [
       "architecture",
-      "compression"
+      "quantization",
+      "compression",
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Triton TMA forward + CUTLASS EVT backward fusion",
-      "Pre-computed activation gradient simplifies epilogue",
-      "Brotli-11 artifacts + memmap multi-shard data prefetch"
+      "Fused Triton TMA forward + CUTLASS EVT backward MLP kernels",
+      "Hessian-based mixed int5/int6 allocation to fit wider MLP",
+      "Brotli-11 compression with memmap GPU-prefetch pipeline"
     ]
   },
   "compatibility": {

@@ -1,8 +1,54 @@
 {
-  "generatedAt": "2026-03-30T17:07:24.540Z",
+  "generatedAt": "2026-03-30T17:37:55.134Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1141,
+      "title": "Non-record: AutoResearch Value Embeddings + MLP3x, 1.1801 bpb (1x RTX 4090)",
+      "status": "open",
+      "updatedAt": "2026-03-30T17:24:48Z",
+      "headSha": "193b37d6c310fdfa7989abcd2b6f4c713cd509d1",
+      "generatedAt": "2026-03-30T17:37:21.083Z",
+      "summary": "Autoresearch sweep triples MLP width while adding learned value embeddings, sliding-window attention, Muon, and 8K BPE vocab on single RTX 4090.",
+      "tags": [
+        "architecture",
+        "attention",
+        "tokenization",
+        "optimizer"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1141.json"
+    },
+    {
+      "prNumber": 1140,
+      "title": "Crawler —  8.8MB -1.1874 BPB (3-seed mean, 8xH100, 600s)",
+      "status": "open",
+      "updatedAt": "2026-03-30T17:35:13Z",
+      "headSha": "11949489d4de7d8fa9b5cbd4dba71f6e4f7baf88",
+      "generatedAt": "2026-03-30T17:37:27.814Z",
+      "summary": "Micro Crawler stacks 4 flat XSA layers with a shared crawler block loop, QAT-aware int8 path, and naive int6+zstd packing for a sub-9.4MB model.",
+      "tags": [
+        "architecture",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1140.json"
+    },
     {
       "prNumber": 1139,
       "title": "Non-record: AutoResearch Value Embeddings + MLP3x, 1.1801 bpb (1x RTX 4090)",
@@ -305,30 +351,6 @@
       "file": "items/pr-1121.json"
     },
     {
-      "prNumber": 1120,
-      "title": "val_bpb 1.1099 (3-seed mean) Rascal",
-      "status": "open",
-      "updatedAt": "2026-03-30T05:05:52Z",
-      "headSha": "39ed402b3b11b680e15a3596efd6f3bf385ffee9",
-      "generatedAt": "2026-03-30T05:34:05.930Z",
-      "summary": "Blends an 11-layer XSA-all transformer with Parallel Muon, Coprime loader, RoPE16, Bigram2048, SWA, Late QAT, and naive int6 embed compression.",
-      "tags": [
-        "architecture",
-        "optimizer",
-        "training-schedule",
-        "quantization"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-1120.json"
-    },
-    {
       "prNumber": 1119,
       "title": "Notable Non-Record: Text Diffusion (MDLM) — 1.4584 BPB — Masked Diffusion Language Model",
       "status": "open",
@@ -540,13 +562,13 @@
       "prNumber": 1107,
       "title": "Mamba-3 SSD + Attention Hybrid with QAT (1.5633 bpb)",
       "status": "open",
-      "updatedAt": "2026-03-30T11:19:48Z",
-      "headSha": "f30e99441bb477132d5e0b233526924472eb7882",
-      "generatedAt": "2026-03-30T11:35:28.100Z",
-      "summary": "Hybrid Mamba-3 SSD SISO blocks with a singleton attention layer and fully QAT-covered projections keep INT6 inputs competitive while exploiting SSD throughput.",
+      "updatedAt": "2026-03-30T17:34:54Z",
+      "headSha": "3559aa74aecb21dbba6c69b0e0422d7d3a50e382",
+      "generatedAt": "2026-03-30T17:37:33.199Z",
+      "summary": "Hybrid Mamba-3 SSD SISO stack with one attention layer, GLU values, and QAT-extended projections for efficient INT6 despite SSD quantization quirks.",
       "tags": [
-        "architecture",
         "quantization",
+        "architecture",
         "training-schedule",
         "non-record"
       ],
@@ -586,15 +608,17 @@
     },
     {
       "prNumber": 1105,
-      "title": "Record: Fused MLP (Triton+CUTLASS EVT) + Brotli + Memmap — 1.1138 BPB",
+      "title": "Record: Fused MLP (Triton+CUTLASS EVT) + MLP 3.5× + Mixed int5/int6 + Brotli — 1.1123 BPB (seed 314, more seeds running)",
       "status": "open",
-      "updatedAt": "2026-03-30T05:18:12Z",
+      "updatedAt": "2026-03-30T17:30:54Z",
       "headSha": "c27131c5c7b708ef90828c1c4d5e232f1c2cf140",
-      "generatedAt": "2026-03-30T05:34:10.804Z",
-      "summary": "Fuses Triton TMA forward and CUTLASS EVT backward MLP kernels, adds precomputed act gradient, Brotli compression, and memmap multi-shard pipeline.",
+      "generatedAt": "2026-03-30T17:37:38.551Z",
+      "summary": "Fuses Triton/CUTLASS MLP kernels, Hessian-guided int5/int6 quant, and a 3.5× MLP expansion while trimming artifact size to recover throughput and add capacity.",
       "tags": [
         "architecture",
-        "compression"
+        "quantization",
+        "compression",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1985,14 +2009,14 @@
       "prNumber": 1019,
       "title": "Record: AR Self-Gen GPTQ + XSA-all + BigramHash 3072×112 — val_bpb 1.11473 (3-seed mean)",
       "status": "closed",
-      "updatedAt": "2026-03-30T16:59:20Z",
+      "updatedAt": "2026-03-30T17:30:38Z",
       "headSha": "d7fbe3d16f81a16e26604353bafc61d151cf5264",
-      "generatedAt": "2026-03-30T17:07:18.820Z",
-      "summary": "Full Hessian GPTQ uses autoregressive self-generated calibration alongside 3072×112 BigramHash and XSA applied to every layer for the record stack.",
+      "generatedAt": "2026-03-30T17:37:47.770Z",
+      "summary": "Full-Hessian GPTQ calibrates from autoregressively self-generated tokens while XSA spans all layers and BigramHash widens to 3072×112.",
       "tags": [
         "quantization",
-        "attention",
-        "architecture"
+        "architecture",
+        "attention"
       ],
       "flags": {
         "usesValOnly": false,
@@ -4679,30 +4703,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-855.json"
-    },
-    {
-      "prNumber": 854,
-      "title": "Non-record: Value Embeddings 8L 512d, 1.3712 bpb (1x RTX 4090)",
-      "status": "closed",
-      "updatedAt": "2026-03-28T19:40:24Z",
-      "headSha": "193b37d6c310fdfa7989abcd2b6f4c713cd509d1",
-      "generatedAt": "2026-03-28T19:54:27.603Z",
-      "summary": "Fuses a large value-embedding table into an 8-layer, 512d model with SSSL sliding attention and 8192 BPE vocab on a single RTX 4090.",
-      "tags": [
-        "architecture",
-        "attention",
-        "tokenization",
-        "quantization"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-854.json"
     },
     {
       "prNumber": 853,
@@ -12614,16 +12614,17 @@
     },
     {
       "prNumber": 347,
-      "title": "GatedAttn + ValueResidual + Full QAT + lzma-9 + BigramHash(2048)",
+      "title": "Record: GatedAttn + ValueResidual + Full QAT + lzma-9 + BigramHash(2048)",
       "status": "open",
-      "updatedAt": "2026-03-30T14:28:42Z",
+      "updatedAt": "2026-03-30T17:14:33Z",
       "headSha": "92e02e0567136186196445351a7ae7fc881b1b80",
-      "generatedAt": "2026-03-30T14:37:58.625Z",
-      "summary": "Lean GPTQLite config disables gated attention/value residual, postpones QAT until warmdown, and trims vocab/features to boost steps and preserve TTT under 10min/16MB.",
+      "generatedAt": "2026-03-30T17:37:55.082Z",
+      "summary": "Turns off gating/value residuals and delays QAT to warmdown so more steps and cleaner TTT fit within 10min/16MB.",
       "tags": [
         "architecture",
         "quantization",
-        "training-schedule"
+        "training-schedule",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,

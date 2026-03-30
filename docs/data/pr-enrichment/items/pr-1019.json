@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-30T17:07:18.820Z",
+  "generatedAt": "2026-03-30T17:37:47.770Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1019,
     "title": "Record: AR Self-Gen GPTQ + XSA-all + BigramHash 3072×112 — val_bpb 1.11473 (3-seed mean)",
     "state": "closed",
-    "updatedAt": "2026-03-30T16:59:20Z",
+    "updatedAt": "2026-03-30T17:30:38Z",
     "headSha": "d7fbe3d16f81a16e26604353bafc61d151cf5264",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1019",
     "authorLogin": "abaybektursun"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Full Hessian GPTQ uses autoregressive self-generated calibration alongside 3072×112 BigramHash and XSA applied to every layer for the record stack.",
+    "summary": "Full-Hessian GPTQ calibrates from autoregressively self-generated tokens while XSA spans all layers and BigramHash widens to 3072×112.",
     "tags": [
       "quantization",
-      "attention",
-      "architecture"
+      "architecture",
+      "attention"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Full Hessian GPTQ with AR self-generated calibration",
-      "Expanded BigramHash (3072×112) within 16MB",
-      "XSA attention applied across all 11 layers"
+      "Autoregressive self-gen calibration for Full Hessian GPTQ",
+      "XSA applied on all 11 layers",
+      "BigramHash widened to 3072×112 within 16MB"
     ]
   },
   "compatibility": {

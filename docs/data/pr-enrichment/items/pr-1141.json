@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-03-30T17:37:21.083Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1141,
+    "title": "Non-record: AutoResearch Value Embeddings + MLP3x, 1.1801 bpb (1x RTX 4090)",
+    "state": "open",
+    "updatedAt": "2026-03-30T17:24:48Z",
+    "headSha": "193b37d6c310fdfa7989abcd2b6f4c713cd509d1",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1141",
+    "authorLogin": "ivanontech"
+  },
+  "inputs": {
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-27_Autoresearch_8L_512d_RTX4090/README.md",
+      "records/track_non_record_16mb/2026-03-26_MLP3x_9L_512d_RTX4090/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "Autoresearch sweep triples MLP width while adding learned value embeddings, sliding-window attention, Muon, and 8K BPE vocab on single RTX 4090.",
+    "tags": [
+      "architecture",
+      "attention",
+      "tokenization",
+      "optimizer"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Value embedding table augmentation",
+      "SSSL sliding-window attention",
+      "Muon optimizer with widened FFN"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

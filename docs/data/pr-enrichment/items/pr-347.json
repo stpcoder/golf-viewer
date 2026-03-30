@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-30T14:37:58.625Z",
+  "generatedAt": "2026-03-30T17:37:55.082Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 347,
-    "title": "GatedAttn + ValueResidual + Full QAT + lzma-9 + BigramHash(2048)",
+    "title": "Record: GatedAttn + ValueResidual + Full QAT + lzma-9 + BigramHash(2048)",
     "state": "open",
-    "updatedAt": "2026-03-30T14:28:42Z",
+    "updatedAt": "2026-03-30T17:14:33Z",
     "headSha": "92e02e0567136186196445351a7ae7fc881b1b80",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/347",
     "authorLogin": "FlashyFlash3011"
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Lean GPTQLite config disables gated attention/value residual, postpones QAT until warmdown, and trims vocab/features to boost steps and preserve TTT under 10min/16MB.",
+    "summary": "Turns off gating/value residuals and delays QAT to warmdown so more steps and cleaner TTT fit within 10min/16MB.",
     "tags": [
       "architecture",
       "quantization",
-      "training-schedule"
+      "training-schedule",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Disable GatedAttention/ValueResidual to cut per-step latency",
-      "Trigger QAT only in final 15% of warmdown to avoid overhead",
-      "Keep 11L/512d core with BIGRAM_VOCAB=1536 to stay within 16MB while maximizing steps"
+      "Lean 11L/512d stack with GatedAttention/ValueResidual disabled to save ~1.5 ms per step",
+      "Late-stage GPTQ-lite int6 quantization (LATE_QAT_THRESHOLD=0.15, no BANK QAT) to avoid early overhead",
+      "Disables SWA, uses EMA at the end, and keeps TRAIN_SEQ_LEN=2048 to maximize TTT-friendly training budget"
     ]
   },
   "compatibility": {

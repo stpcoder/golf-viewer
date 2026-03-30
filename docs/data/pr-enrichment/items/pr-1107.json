@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-30T11:35:28.100Z",
+  "generatedAt": "2026-03-30T17:37:33.199Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1107,
     "title": "Mamba-3 SSD + Attention Hybrid with QAT (1.5633 bpb)",
     "state": "open",
-    "updatedAt": "2026-03-30T11:19:48Z",
-    "headSha": "f30e99441bb477132d5e0b233526924472eb7882",
+    "updatedAt": "2026-03-30T17:34:54Z",
+    "headSha": "3559aa74aecb21dbba6c69b0e0422d7d3a50e382",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1107",
     "authorLogin": "mradassaad"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Hybrid Mamba-3 SSD SISO blocks with a singleton attention layer and fully QAT-covered projections keep INT6 inputs competitive while exploiting SSD throughput.",
+    "summary": "Hybrid Mamba-3 SSD SISO stack with one attention layer, GLU values, and QAT-extended projections for efficient INT6 despite SSD quantization quirks.",
     "tags": [
-      "architecture",
       "quantization",
+      "architecture",
       "training-schedule",
       "non-record"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "Standard training with quantization-aware fine-tuning; no validation-only training regime.",
+    "valOnlyReasoning": "",
     "techniques": [
-      "Hybrid SSD-heavy encoder with one attention layer for faster step throughput",
-      "Replace Mamba-3 proj layers with CastedLinear so QAT/fake-quant covers them",
-      "Tune WARMDOWN_ITERS to match hardware step time for consistent LR schedules"
+      "Mamba-3 SSD + single attention hybrid",
+      "Attention GLU values with Muon params",
+      "Extended QAT to SSD projections"
     ]
   },
   "compatibility": {
