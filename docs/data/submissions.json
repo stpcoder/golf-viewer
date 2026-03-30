@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T08:34:54.628Z",
+  "generatedAt": "2026-03-30T09:04:39.367Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -17189,6 +17189,83 @@
         "onMain": true,
         "hasPullRequest": true,
         "listedInReadme": true
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-30_11L_XSA4_EMA_LoRATTT_PartialRoPE_dim480_1-1311",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-30_11L_XSA4_EMA_LoRATTT_PartialRoPE_dim480_1.1311",
+        "folderPath": "records/track_10min_16mb/2026-03-30_11L_XSA4_EMA_LoRATTT_PartialRoPE_dim480_1.1311",
+        "submissionPath": "records/track_10min_16mb/2026-03-30_11L_XSA4_EMA_LoRATTT_PartialRoPE_dim480_1.1311/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-30_11L_XSA4_EMA_LoRATTT_PartialRoPE_dim480_1.1311/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-30_11L_XSA4_EMA_LoRATTT_PartialRoPE_dim480_1.1311/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-30_11L_XSA4_EMA_LoRATTT_PartialRoPE_dim480_1.1311/train_gpt.py"
+      },
+      "submission": {
+        "author": "Nathan Maine",
+        "githubId": "NathanMaine",
+        "name": "11L XSA4 + EMA + LoRA TTT + Partial RoPE + GPTQ-lite (dim480)",
+        "blurb": "PR #462 architecture compressed to ~15.5MB: MODEL_DIM=480, NUM_KV_HEADS=4, MLP_HIDDEN=1536, 11L. EMA (decay 0.9985), Partial RoPE (16/64 dims), Late QAT int6 STE (threshold 0.15), single-pass LoRA TTT (rank 8, lr 0.01, 1 epoch), XSA on deepest 4 layers, BigramHash (8192 buckets, dim 128), SmearGate, int6+zstd-22 compression (3.83x ratio). ~7,900 steps in 600s on 8xH100 SXM Iceland. NVIDIA Inception member.",
+        "date": "2026-03-30"
+      },
+      "metrics": {
+        "valBpb": 1.13112447,
+        "valLoss": 1.90718,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15462699,
+        "bytesCode": 64073,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1127,
+        "title": "Record: 11L XSA4 + EMA + LoRA TTT + Partial RoPE + dim480 — val_bpb 1.13112 (3-seed)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1127",
+        "authorLogin": "dentity007",
+        "authorName": null,
+        "createdAt": "2026-03-30T09:01:09Z",
+        "updatedAt": "2026-03-30T09:01:09Z",
+        "headSha": "8096c1b3c87a2bbd44bc35ca24c13cf72661635b",
+        "headRepo": "dentity007/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/8096c1b3c87a2bbd44bc35ca24c13cf72661635b/records/track_10min_16mb/2026-03-30_11L_XSA4_EMA_LoRATTT_PartialRoPE_dim480_1.1311/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/8096c1b3c87a2bbd44bc35ca24c13cf72661635b/records/track_10min_16mb/2026-03-30_11L_XSA4_EMA_LoRATTT_PartialRoPE_dim480_1.1311/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/8096c1b3c87a2bbd44bc35ca24c13cf72661635b/records/track_10min_16mb/2026-03-30_11L_XSA4_EMA_LoRATTT_PartialRoPE_dim480_1.1311/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/8096c1b3c87a2bbd44bc35ca24c13cf72661635b/records/track_10min_16mb/2026-03-30_11L_XSA4_EMA_LoRATTT_PartialRoPE_dim480_1.1311/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/8096c1b3c87a2bbd44bc35ca24c13cf72661635b/records/track_10min_16mb/2026-03-30_11L_XSA4_EMA_LoRATTT_PartialRoPE_dim480_1.1311",
+        "pr": "https://github.com/openai/parameter-golf/pull/1127",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
       }
     },
     {

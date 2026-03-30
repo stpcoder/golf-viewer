@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-30T09:04:46.735Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1127,
+    "title": "Record: 11L XSA4 + EMA + LoRA TTT + Partial RoPE + dim480 — val_bpb 1.13112 (3-seed)",
+    "state": "open",
+    "updatedAt": "2026-03-30T09:01:09Z",
+    "headSha": "8096c1b3c87a2bbd44bc35ca24c13cf72661635b",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1127",
+    "authorLogin": "dentity007"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-30_11L_XSA4_EMA_LoRATTT_PartialRoPE_dim480_1.1311/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11-layer MODEL_DIM=480 transformer applies deep-layer XSA, Partial RoPE, LoRA TTT, and EMA before GPTQ-lite int6+zstd compression to fit under 16MB.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "regularization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Partial RoPE with XSA on deepest layers",
+      "LoRA TTT paired with EMA fine-tuning",
+      "GPTQ-lite int6 quantization + zstd-22 compression"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

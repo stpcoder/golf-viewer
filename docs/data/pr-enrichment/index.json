@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-03-30T08:35:02.998Z",
+  "generatedAt": "2026-03-30T09:04:46.902Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1127,
+      "title": "Record: 11L XSA4 + EMA + LoRA TTT + Partial RoPE + dim480 — val_bpb 1.13112 (3-seed)",
+      "status": "open",
+      "updatedAt": "2026-03-30T09:01:09Z",
+      "headSha": "8096c1b3c87a2bbd44bc35ca24c13cf72661635b",
+      "generatedAt": "2026-03-30T09:04:46.735Z",
+      "summary": "11-layer MODEL_DIM=480 transformer applies deep-layer XSA, Partial RoPE, LoRA TTT, and EMA before GPTQ-lite int6+zstd compression to fit under 16MB.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "regularization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1127.json"
+    },
     {
       "prNumber": 1126,
       "title": "review: Rerun of PR #1089",
