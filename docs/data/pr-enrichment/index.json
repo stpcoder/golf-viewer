@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T12:35:36.331Z",
+  "generatedAt": "2026-03-30T13:06:07.209Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -12429,14 +12429,14 @@
       "prNumber": 347,
       "title": "GatedAttn + ValueResidual + Full QAT + lzma-9 + BigramHash(2048)",
       "status": "open",
-      "updatedAt": "2026-03-30T12:33:29Z",
+      "updatedAt": "2026-03-30T12:40:25Z",
       "headSha": "9cd14898fc8e9d67daea35627261a899e5a7d6f1",
-      "generatedAt": "2026-03-30T12:35:36.283Z",
-      "summary": "GatedAttention + ValueResidual with per-head gating and early GPTQ-lite QAT lets lzma-9 savings restore BigramHash 2048 capacity.",
+      "generatedAt": "2026-03-30T13:06:07.161Z",
+      "summary": "Lean GPTQLite: disable gated attention/value residual, drop SWA, and late-enable QAT so 2048-context training maximizes steps before legal TTT.",
       "tags": [
         "architecture",
-        "quantization",
-        "compression"
+        "training-schedule",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
