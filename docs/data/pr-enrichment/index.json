@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T06:34:10.017Z",
+  "generatedAt": "2026-03-30T07:04:19.175Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -124,14 +124,13 @@
       "prNumber": 1118,
       "title": "Submission: 11L XSA4 + TrigramHash + ValueResidual + Legal TTT (val_bpb=1.1187)",
       "status": "open",
-      "updatedAt": "2026-03-30T04:15:35Z",
+      "updatedAt": "2026-03-30T06:34:28Z",
       "headSha": "8d7b23a2fa9363031490f7290a4fccf4a3ff6ab6",
-      "generatedAt": "2026-03-30T04:33:19.935Z",
-      "summary": "Parameter-banking 11-layer model blends XSA4, Partial RoPE, Bigram+Trigram hash embeddings, and ValueResidual with legal score-first TTT plus int6+lzma compression.",
+      "generatedAt": "2026-03-30T07:04:09.675Z",
+      "summary": "11-layer XSA4/GQA Transformer uses ValueResidual-enhanced hash embeddings and legal score-first TTT tuning before int6+lzma compression.",
       "tags": [
-        "architecture",
         "attention",
-        "compression",
+        "quantization",
         "evaluation"
       ],
       "flags": {
@@ -379,10 +378,10 @@
       "prNumber": 1104,
       "title": "[Non-record] 1-Stage Byte-level H-Net at 17.5M: Dynamic Chunking Learns Word Boundaries (39x-91x fewer params than H-Net paper)",
       "status": "open",
-      "updatedAt": "2026-03-30T05:37:10Z",
+      "updatedAt": "2026-03-30T06:36:00Z",
       "headSha": "dea0514e52ed3139f37b37eea80b7fceec76d1d1",
-      "generatedAt": "2026-03-30T06:04:03.754Z",
-      "summary": "1-stage 9-layer H-Net learns byte-level dynamic chunking, tuning outer-layer depth and ratio loss to recover whitespace-aligned segments without a tokenizer.",
+      "generatedAt": "2026-03-30T07:04:15.830Z",
+      "summary": "1-stage H-Net trained with dynamic chunking on byte260 vs sp1024, showing byte-level whitespace-aligned boundaries via multi-GPU DDP.",
       "tags": [
         "architecture",
         "tokenization",
@@ -1039,13 +1038,14 @@
       "prNumber": 1061,
       "title": "Causal Oscillator LM: physics-native architecture (BPB 1.34)",
       "status": "open",
-      "updatedAt": "2026-03-29T06:52:55Z",
+      "updatedAt": "2026-03-30T06:46:24Z",
       "headSha": "ff0135d66b7fdaed35f0359bf89782fb38a67360",
-      "generatedAt": "2026-03-29T06:57:46.399Z",
-      "summary": "Physics-native LM feeds tokens into damped oscillator banks whose impulse responses, via FFT convolution, drive attention without standard transformer blocks.",
+      "generatedAt": "2026-03-30T07:04:19.021Z",
+      "summary": "Processes tokens through FFT-implemented damped harmonic oscillator impulse responses before feeding physics-enriched states to attention layers for long-range text modeling.",
       "tags": [
         "architecture",
-        "attention"
+        "attention",
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,

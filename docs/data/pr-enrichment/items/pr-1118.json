@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-30T04:33:19.935Z",
+  "generatedAt": "2026-03-30T07:04:09.675Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1118,
     "title": "Submission: 11L XSA4 + TrigramHash + ValueResidual + Legal TTT (val_bpb=1.1187)",
     "state": "open",
-    "updatedAt": "2026-03-30T04:15:35Z",
+    "updatedAt": "2026-03-30T06:34:28Z",
     "headSha": "8d7b23a2fa9363031490f7290a4fccf4a3ff6ab6",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1118",
     "authorLogin": "adityakm24"
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Parameter-banking 11-layer model blends XSA4, Partial RoPE, Bigram+Trigram hash embeddings, and ValueResidual with legal score-first TTT plus int6+lzma compression.",
+    "summary": "11-layer XSA4/GQA Transformer uses ValueResidual-enhanced hash embeddings and legal score-first TTT tuning before int6+lzma compression.",
     "tags": [
-      "architecture",
       "attention",
-      "compression",
+      "quantization",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Parameter-banking stack with legal score-first TTT",
-      "XSA4/ValueResidual with Bigram+Trigram hash embeddings",
-      "int6+lzma compression"
+      "XSA4+GQA attention with Partial RoPE and ValueResidual",
+      "Bigram/Trigram hash embeddings feeding ValueEmbedding",
+      "Legal score-first TTT tuning prior to sliding-window int6+lzma export"
     ]
   },
   "compatibility": {
