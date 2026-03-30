@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T22:38:21.722Z",
+  "generatedAt": "2026-03-30T23:08:38.708Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -50221,6 +50221,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/381ece0b8f6f876cdea2b10e3e411d12d9ea8010/records/track_10min_16mb/2026-03-XX_DepthRecurrence_eb1386/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/381ece0b8f6f876cdea2b10e3e411d12d9ea8010/records/track_10min_16mb/2026-03-XX_DepthRecurrence_eb1386",
         "pr": "https://github.com/openai/parameter-golf/pull/449",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-30_EGGROLL_PostGPTQ_BinRefinement",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-30_EGGROLL_PostGPTQ_BinRefinement",
+        "folderPath": "records/track_10min_16mb/2026-03-30_EGGROLL_PostGPTQ_BinRefinement",
+        "submissionPath": "records/track_10min_16mb/2026-03-30_EGGROLL_PostGPTQ_BinRefinement/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-30_EGGROLL_PostGPTQ_BinRefinement/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-30_EGGROLL_PostGPTQ_BinRefinement/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-30_EGGROLL_PostGPTQ_BinRefinement/train_gpt.py"
+      },
+      "submission": {
+        "author": "haikosys",
+        "githubId": "haikosys",
+        "name": null,
+        "blurb": null,
+        "date": "2026-03-30T23:08:12Z"
+      },
+      "metrics": {
+        "valBpb": null,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1156,
+        "title": "Record: EGGROLL v2 — val_bpb 1.1161 (3-seed mean, std 0.0001)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1156",
+        "authorLogin": "haikosys",
+        "authorName": null,
+        "createdAt": "2026-03-30T23:08:12Z",
+        "updatedAt": "2026-03-30T23:08:12Z",
+        "headSha": "03ea861d08adaf5640dde25eaa12b1ac2645f7ae",
+        "headRepo": "haikosys/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/03ea861d08adaf5640dde25eaa12b1ac2645f7ae/records/track_10min_16mb/2026-03-30_EGGROLL_PostGPTQ_BinRefinement/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/03ea861d08adaf5640dde25eaa12b1ac2645f7ae/records/track_10min_16mb/2026-03-30_EGGROLL_PostGPTQ_BinRefinement/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/03ea861d08adaf5640dde25eaa12b1ac2645f7ae/records/track_10min_16mb/2026-03-30_EGGROLL_PostGPTQ_BinRefinement/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/03ea861d08adaf5640dde25eaa12b1ac2645f7ae/records/track_10min_16mb/2026-03-30_EGGROLL_PostGPTQ_BinRefinement/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/03ea861d08adaf5640dde25eaa12b1ac2645f7ae/records/track_10min_16mb/2026-03-30_EGGROLL_PostGPTQ_BinRefinement",
+        "pr": "https://github.com/openai/parameter-golf/pull/1156",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

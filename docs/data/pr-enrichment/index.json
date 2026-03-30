@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-03-30T22:38:39.269Z",
+  "generatedAt": "2026-03-30T23:08:44.651Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1156,
+      "title": "Record: EGGROLL v2 — val_bpb 1.1161 (3-seed mean, std 0.0001)",
+      "status": "open",
+      "updatedAt": "2026-03-30T23:08:12Z",
+      "headSha": "03ea861d08adaf5640dde25eaa12b1ac2645f7ae",
+      "generatedAt": "2026-03-30T23:08:44.475Z",
+      "summary": "Adds EGGROLL antithetic ternary bin search to refine INT6 quant assignments during evaluation, complementing GPTQ and enabling sliding-window TTT.",
+      "tags": [
+        "quantization",
+        "evaluation",
+        "sliding-window-eval"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1156.json"
+    },
     {
       "prNumber": 1155,
       "title": "Non-record: MLX smoke test on MacBook Air M3 — val_bpb 2.3029",

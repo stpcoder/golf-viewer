@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-03-30T23:08:44.475Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1156,
+    "title": "Record: EGGROLL v2 — val_bpb 1.1161 (3-seed mean, std 0.0001)",
+    "state": "open",
+    "updatedAt": "2026-03-30T23:08:12Z",
+    "headSha": "03ea861d08adaf5640dde25eaa12b1ac2645f7ae",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1156",
+    "authorLogin": "haikosys"
+  },
+  "inputs": {
+    "hash": "072662c123505c465dfcb1e80cbfb797fc5a748edd0e2a3564b0b095cec763f8",
+    "readmePaths": [],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Adds EGGROLL antithetic ternary bin search to refine INT6 quant assignments during evaluation, complementing GPTQ and enabling sliding-window TTT.",
+    "tags": [
+      "quantization",
+      "evaluation",
+      "sliding-window-eval"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Antithetic bin search refinement",
+      "Eval-time GPTQ complement",
+      "Sliding-window eval hook"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
