@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T20:07:52.700Z",
+  "generatedAt": "2026-03-30T20:37:50.841Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -10704,7 +10704,7 @@
         "authorLogin": "abaybektursun",
         "authorName": null,
         "createdAt": "2026-03-30T00:03:19Z",
-        "updatedAt": "2026-03-30T19:49:35Z",
+        "updatedAt": "2026-03-30T20:26:03Z",
         "headSha": "0df40cc5465a80bd114588fe2e631cd316b9338a",
         "headRepo": "abaybektursun/parameter-golf"
       },
@@ -11183,6 +11183,83 @@
         "onMain": true,
         "hasPullRequest": true,
         "listedInReadme": true
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-30_SLOT_SGD_Final",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-30_SLOT_SGD_Final",
+        "folderPath": "records/track_10min_16mb/2026-03-30_SLOT_SGD_Final",
+        "submissionPath": "records/track_10min_16mb/2026-03-30_SLOT_SGD_Final/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-30_SLOT_SGD_Final/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-30_SLOT_SGD_Final/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-30_SLOT_SGD_Final/train_gpt.py"
+      },
+      "submission": {
+        "author": "sahiee-dev",
+        "githubId": "sahiee-dev",
+        "name": null,
+        "blurb": null,
+        "date": "2026-03-30T20:14:28Z"
+      },
+      "metrics": {
+        "valBpb": 1.11512,
+        "valLoss": 1.88283,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1150,
+        "title": "Legal TTT (SGD, 3-epoch) + SLOT (lr=0.003, steps=5) on PR #549 base -- val_bpb: 1.11512 (3-seed mean, beats merged SOTA 1.1194)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1150",
+        "authorLogin": "sahiee-dev",
+        "authorName": null,
+        "createdAt": "2026-03-30T20:14:28Z",
+        "updatedAt": "2026-03-30T20:18:26Z",
+        "headSha": "f24a386e23346fa5ebc87d82da146e87b2d96331",
+        "headRepo": "sahiee-dev/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/f24a386e23346fa5ebc87d82da146e87b2d96331/records/track_10min_16mb/2026-03-30_SLOT_SGD_Final/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/f24a386e23346fa5ebc87d82da146e87b2d96331/records/track_10min_16mb/2026-03-30_SLOT_SGD_Final/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/f24a386e23346fa5ebc87d82da146e87b2d96331/records/track_10min_16mb/2026-03-30_SLOT_SGD_Final/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/f24a386e23346fa5ebc87d82da146e87b2d96331/records/track_10min_16mb/2026-03-30_SLOT_SGD_Final/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/f24a386e23346fa5ebc87d82da146e87b2d96331/records/track_10min_16mb/2026-03-30_SLOT_SGD_Final",
+        "pr": "https://github.com/openai/parameter-golf/pull/1150",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
       }
     },
     {
@@ -47521,6 +47598,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/7c1a6df3f7bf573912cf2febce147e8987a103d6/records/track_non_record_16mb/2026-03-29_brelt_wip_2xH100_20min/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/7c1a6df3f7bf573912cf2febce147e8987a103d6/records/track_non_record_16mb/2026-03-29_brelt_wip_2xH100_20min",
         "pr": "https://github.com/openai/parameter-golf/pull/1075",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-03-30_KVCache_QJL_Polar_Turbo_1x3090",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-30_KVCache_QJL_Polar_Turbo_1x3090",
+        "folderPath": "records/track_non_record_16mb/2026-03-30_KVCache_QJL_Polar_Turbo_1x3090",
+        "submissionPath": "records/track_non_record_16mb/2026-03-30_KVCache_QJL_Polar_Turbo_1x3090/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-30_KVCache_QJL_Polar_Turbo_1x3090/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-30_KVCache_QJL_Polar_Turbo_1x3090/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-30_KVCache_QJL_Polar_Turbo_1x3090/train_gpt.py"
+      },
+      "submission": {
+        "author": "Lucas Ercolano",
+        "githubId": "LucasErcolano",
+        "name": "Faithful KV-cache Quantization Backends (1x3090)",
+        "blurb": "Non-record local study on 1x RTX 3090 adding a teacher-forced autoregressive KV-cache evaluator plus QJL, PolarQuant, and TurboQuant-inspired backends to a baseline Parameter Golf model. Best quantized local capped result: Polar backend at 1.98346882 val_bpb on a 2048-token evaluation cap, with a 10.46MB compressed artifact.",
+        "date": "2026-03-30T00:00:00Z"
+      },
+      "metrics": {
+        "valBpb": 1.98346882,
+        "valLoss": 3.66264856,
+        "preQuantValBpb": 1.6507,
+        "preQuantValLoss": 2.7872,
+        "stepStop": 570,
+        "wallclockSeconds": 600,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 10458900,
+        "bytesCode": 102687,
+        "bytesModelInt8Zlib": 10356213
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1149,
+        "title": "Add non-record submission: faithful KV-cache quantization backends on 1x RTX 3090",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1149",
+        "authorLogin": "LucasErcolano",
+        "authorName": null,
+        "createdAt": "2026-03-30T20:10:39Z",
+        "updatedAt": "2026-03-30T20:10:39Z",
+        "headSha": "bbd566bc45411f3dcedd0518e2cdf45192ff8b49",
+        "headRepo": "LucasErcolano/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/bbd566bc45411f3dcedd0518e2cdf45192ff8b49/records/track_non_record_16mb/2026-03-30_KVCache_QJL_Polar_Turbo_1x3090/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/bbd566bc45411f3dcedd0518e2cdf45192ff8b49/records/track_non_record_16mb/2026-03-30_KVCache_QJL_Polar_Turbo_1x3090/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/bbd566bc45411f3dcedd0518e2cdf45192ff8b49/records/track_non_record_16mb/2026-03-30_KVCache_QJL_Polar_Turbo_1x3090/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/bbd566bc45411f3dcedd0518e2cdf45192ff8b49/records/track_non_record_16mb/2026-03-30_KVCache_QJL_Polar_Turbo_1x3090/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/bbd566bc45411f3dcedd0518e2cdf45192ff8b49/records/track_non_record_16mb/2026-03-30_KVCache_QJL_Polar_Turbo_1x3090",
+        "pr": "https://github.com/openai/parameter-golf/pull/1149",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

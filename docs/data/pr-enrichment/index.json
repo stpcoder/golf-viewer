@@ -1,8 +1,53 @@
 {
-  "generatedAt": "2026-03-30T20:08:17.486Z",
+  "generatedAt": "2026-03-30T20:38:12.284Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1150,
+      "title": "Legal TTT (SGD, 3-epoch) + SLOT (lr=0.003, steps=5) on PR #549 base -- val_bpb: 1.11512 (3-seed mean, beats merged SOTA 1.1194)",
+      "status": "open",
+      "updatedAt": "2026-03-30T20:18:26Z",
+      "headSha": "f24a386e23346fa5ebc87d82da146e87b2d96331",
+      "generatedAt": "2026-03-30T20:37:57.761Z",
+      "summary": "Stacks SLOT’s per-batch output-delta optimization (5 AdamW steps) atop Legal TTT, keeping the transformer frozen while reusing a single forward pass per chunk.",
+      "tags": [
+        "evaluation",
+        "optimizer"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1150.json"
+    },
+    {
+      "prNumber": 1149,
+      "title": "Add non-record submission: faithful KV-cache quantization backends on 1x RTX 3090",
+      "status": "open",
+      "updatedAt": "2026-03-30T20:10:39Z",
+      "headSha": "bbd566bc45411f3dcedd0518e2cdf45192ff8b49",
+      "generatedAt": "2026-03-30T20:38:02.394Z",
+      "summary": "Adds a teacher-forced autoregressive KV-cache evaluator with per-layer updates and QJL/Polar/Turbo-inspired quantization backends on the baseline Parameter Golf model.",
+      "tags": [
+        "evaluation",
+        "quantization",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1149.json"
+    },
     {
       "prNumber": 1148,
       "title": "Record: 11L Muon Legal TTT + Entropy-Adaptive Epochs (8×H100) — val_bpb 1.1179 (3-seed mean)",
@@ -748,14 +793,15 @@
       "prNumber": 1105,
       "title": "Record: Fused MLP (Triton+CUTLASS EVT) + MLP 3.5× + Mixed int5/int6 + SLOT + Brotli — 1.1088 BPB (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-30T19:49:35Z",
+      "updatedAt": "2026-03-30T20:26:03Z",
       "headSha": "0df40cc5465a80bd114588fe2e631cd316b9338a",
-      "generatedAt": "2026-03-30T20:08:06.594Z",
-      "summary": "Fuses Triton TMA+CUTLASS EVT MLP kernels, expands the MLP to 3.5×, and uses Hessian-guided mixed int5/int6 quant plus Brotli to keep quality within 16MB.",
+      "generatedAt": "2026-03-30T20:38:12.105Z",
+      "summary": "Fuses Triton/CUTLASS MLP kernels, widens the MLP to 3.5×, and applies Hessian-guided mixed int5/int6 GPTQ plus Brotli compression and SLOT eval.",
       "tags": [
-        "quantization",
         "architecture",
-        "compression"
+        "quantization",
+        "compression",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,

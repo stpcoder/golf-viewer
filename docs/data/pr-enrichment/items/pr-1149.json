@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-30T20:38:02.394Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1149,
+    "title": "Add non-record submission: faithful KV-cache quantization backends on 1x RTX 3090",
+    "state": "open",
+    "updatedAt": "2026-03-30T20:10:39Z",
+    "headSha": "bbd566bc45411f3dcedd0518e2cdf45192ff8b49",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1149",
+    "authorLogin": "LucasErcolano"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-30_KVCache_QJL_Polar_Turbo_1x3090/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Adds a teacher-forced autoregressive KV-cache evaluator with per-layer updates and QJL/Polar/Turbo-inspired quantization backends on the baseline Parameter Golf model.",
+    "tags": [
+      "evaluation",
+      "quantization",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "teacher-forced autoregressive KV-cache evaluation",
+      "QJL/Polar/Turbo-style cache quantization backends",
+      "pure PyTorch KV evaluation implementation"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
