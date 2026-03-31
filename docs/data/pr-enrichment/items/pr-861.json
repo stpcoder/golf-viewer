@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-28T22:55:45.232Z",
+  "generatedAt": "2026-03-31T17:45:08.767Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 861,
     "title": "Non-record: 11L Int5 QAT + Score-First TTT — val_bpb 1.1326 (15.51 MB)",
     "state": "open",
-    "updatedAt": "2026-03-28T22:38:35Z",
+    "updatedAt": "2026-03-31T17:39:38Z",
     "headSha": "28d45d26f58981b4e4c94acf8748cc38e1d3a93a",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/861",
     "authorLogin": "JoeProAI"
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer U-Net uses int5 QAT with pruning, bigram hash embeddings, and score-first TTT for MLP-only adaptation before eval.",
+    "summary": "11L U-Net pairs Int5 per-row QAT with pre-pruning and score-first TTT on MLP params while adding bigram hash embeddings plus full-layer XSA for tight artifacts.",
     "tags": [
       "quantization",
-      "architecture",
-      "training-schedule",
-      "optimizer"
+      "attention",
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Int5 QAT + 15% pruning for compact weights",
-      "MLP-only score-first TTT adaptation",
-      "Bigram hash embeddings in U-Net token stream"
+      "Int5 per-row QAT with 15% weight pruning",
+      "Score-first TTT updating only MLP params after chunk scoring",
+      "Bigram hash embed + cross-layer shared attention across all layers"
     ]
   },
   "compatibility": {

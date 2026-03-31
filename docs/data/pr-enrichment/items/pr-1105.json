@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-31T11:12:27.279Z",
+  "generatedAt": "2026-03-31T17:45:03.437Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1105,
     "title": "Record: Fused MLP (Triton+CUTLASS EVT) + MLP 3.5× + Mixed int5/int6 + Brotli — 1.1125 BPB (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-03-31T11:08:26Z",
+    "updatedAt": "2026-03-31T17:37:59Z",
     "headSha": "920cea57be16c068be5560fc3404f603543d03b8",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1105",
     "authorLogin": "abaybektursun"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Fused Triton/CUTLASS MLP kernels, 3.5× hidden dim, and Hessian-guided mixed int5/int6 quantization push capacity while Brotli keeps it under 16 MB.",
+    "summary": "Fuses Triton TMA forward + CUTLASS EVT backward MLP kernels, widens MLP to 3.5× hidden dim, and pairs Hessian-mixed int5/int6 quantization with Brotli compression.",
     "tags": [
-      "architecture",
       "quantization",
-      "compression"
+      "compression",
+      "architecture"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Fused Triton TMA forward + CUTLASS EVT backward MLP kernels",
-      "MLP width 3.5× with Hessian-ranked mixed int5/int6 quantization",
-      "Brotli-11 artifact compression with memmap multi-shard prefetch pipeline"
+      "Fused Triton TMA + CUTLASS EVT MLP kernels with pre-computed activation gradient",
+      "3.5× MLP width driven by SVD-based capacity analysis",
+      "Hessian-trace mixed int5/int6 quantization alongside Brotli-11 compression"
     ]
   },
   "compatibility": {

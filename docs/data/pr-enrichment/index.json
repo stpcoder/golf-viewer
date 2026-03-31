@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T17:15:13.539Z",
+  "generatedAt": "2026-03-31T17:45:08.906Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -77,17 +77,16 @@
     },
     {
       "prNumber": 1182,
-      "title": "[track_10min_16mb] XSA7 + BigramHash + ValueResidual + Legal TTT — val_bpb=1.1227",
+      "title": "Record: [track_10min_16mb] XSA7 + BigramHash + ValueResidual + Legal TTT — val_bpb=1.1227",
       "status": "open",
-      "updatedAt": "2026-03-31T15:36:24Z",
+      "updatedAt": "2026-03-31T17:17:29Z",
       "headSha": "60822cd54da08eb6faff9c3104f242ce07e39448",
-      "generatedAt": "2026-03-31T15:44:19.163Z",
-      "summary": "11-layer parameter-banking GPT uses cross-sequence attention on the final 7 layers with bigram/trigram hash embeddings, value residual reinjection, and legal TTT with int6 quant.",
+      "generatedAt": "2026-03-31T17:44:57.617Z",
+      "summary": "11-layer parameter-banking GPT fuses XSA on the final 7 layers with Bigram/Trigram hash embeddings, value-residual reinjection, and late QAT for legal score-first TTT.",
       "tags": [
         "architecture",
         "quantization",
-        "training-schedule",
-        "evaluation"
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1329,14 +1328,14 @@
       "prNumber": 1105,
       "title": "Record: Fused MLP (Triton+CUTLASS EVT) + MLP 3.5× + Mixed int5/int6 + Brotli — 1.1125 BPB (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-31T11:08:26Z",
+      "updatedAt": "2026-03-31T17:37:59Z",
       "headSha": "920cea57be16c068be5560fc3404f603543d03b8",
-      "generatedAt": "2026-03-31T11:12:27.279Z",
-      "summary": "Fused Triton/CUTLASS MLP kernels, 3.5× hidden dim, and Hessian-guided mixed int5/int6 quantization push capacity while Brotli keeps it under 16 MB.",
+      "generatedAt": "2026-03-31T17:45:03.437Z",
+      "summary": "Fuses Triton TMA forward + CUTLASS EVT backward MLP kernels, widens MLP to 3.5× hidden dim, and pairs Hessian-mixed int5/int6 quantization with Brotli compression.",
       "tags": [
-        "architecture",
         "quantization",
-        "compression"
+        "compression",
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,
@@ -5239,15 +5238,14 @@
       "prNumber": 861,
       "title": "Non-record: 11L Int5 QAT + Score-First TTT — val_bpb 1.1326 (15.51 MB)",
       "status": "open",
-      "updatedAt": "2026-03-28T22:38:35Z",
+      "updatedAt": "2026-03-31T17:39:38Z",
       "headSha": "28d45d26f58981b4e4c94acf8748cc38e1d3a93a",
-      "generatedAt": "2026-03-28T22:55:45.232Z",
-      "summary": "11-layer U-Net uses int5 QAT with pruning, bigram hash embeddings, and score-first TTT for MLP-only adaptation before eval.",
+      "generatedAt": "2026-03-31T17:45:08.767Z",
+      "summary": "11L U-Net pairs Int5 per-row QAT with pre-pruning and score-first TTT on MLP params while adding bigram hash embeddings plus full-layer XSA for tight artifacts.",
       "tags": [
         "quantization",
-        "architecture",
-        "training-schedule",
-        "optimizer"
+        "attention",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,

@@ -2,7 +2,7 @@
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
-  "generatedAt": "2026-03-31T17:15:13.539Z",
+  "generatedAt": "2026-03-31T17:45:08.906Z",
   "prs": {
     "6": {
       "signature": "2026-03-20-pr-enrichment-v2-approach-first:11373420c1f50e6a83599fb25bb73f38a6555cb7:closed:2026-03-18T18:34:32Z",
@@ -3443,9 +3443,9 @@
       "headSha": "23c9f2609f4906c48ad7aa3a9c152fad3fc74fb5"
     },
     "861": {
-      "signature": "2026-03-20-pr-enrichment-v2-approach-first:28d45d26f58981b4e4c94acf8748cc38e1d3a93a:open:2026-03-28T22:38:35Z",
+      "signature": "2026-03-20-pr-enrichment-v2-approach-first:28d45d26f58981b4e4c94acf8748cc38e1d3a93a:open:2026-03-31T17:39:38Z",
       "file": "items/pr-861.json",
-      "updatedAt": "2026-03-28T22:38:35Z",
+      "updatedAt": "2026-03-31T17:39:38Z",
       "headSha": "28d45d26f58981b4e4c94acf8748cc38e1d3a93a"
     },
     "862": {
@@ -4457,9 +4457,9 @@
       "headSha": "e3ea22adc4582aabf47c22c5e46d73ec3393b589"
     },
     "1105": {
-      "signature": "2026-03-20-pr-enrichment-v2-approach-first:920cea57be16c068be5560fc3404f603543d03b8:open:2026-03-31T11:08:26Z",
+      "signature": "2026-03-20-pr-enrichment-v2-approach-first:920cea57be16c068be5560fc3404f603543d03b8:open:2026-03-31T17:37:59Z",
       "file": "items/pr-1105.json",
-      "updatedAt": "2026-03-31T11:08:26Z",
+      "updatedAt": "2026-03-31T17:37:59Z",
       "headSha": "920cea57be16c068be5560fc3404f603543d03b8"
     },
     "1106": {
@@ -4781,9 +4781,9 @@
       "headSha": "dc2fad1ee7137c9b4b627e74e70f547a0e19bece"
     },
     "1182": {
-      "signature": "2026-03-20-pr-enrichment-v2-approach-first:60822cd54da08eb6faff9c3104f242ce07e39448:open:2026-03-31T15:36:24Z",
+      "signature": "2026-03-20-pr-enrichment-v2-approach-first:60822cd54da08eb6faff9c3104f242ce07e39448:open:2026-03-31T17:17:29Z",
       "file": "items/pr-1182.json",
-      "updatedAt": "2026-03-31T15:36:24Z",
+      "updatedAt": "2026-03-31T17:17:29Z",
       "headSha": "60822cd54da08eb6faff9c3104f242ce07e39448"
     },
     "1183": {
