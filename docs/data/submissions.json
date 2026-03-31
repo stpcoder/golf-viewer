@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T19:15:04.699Z",
+  "generatedAt": "2026-03-31T19:45:05.400Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -10318,11 +10318,11 @@
         "headRepo": "newjordan/parameter-golf-1"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/99b790dd8eb4c7bbdaa26012944a7c66ba9bd610/records/track_10min_16mb/2026-03-30_Rascal_8xH100/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/99b790dd8eb4c7bbdaa26012944a7c66ba9bd610/records/track_10min_16mb/2026-03-30_Rascal_8xH100/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/99b790dd8eb4c7bbdaa26012944a7c66ba9bd610/records/track_10min_16mb/2026-03-30_Rascal_8xH100/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/99b790dd8eb4c7bbdaa26012944a7c66ba9bd610/records/track_10min_16mb/2026-03-30_Rascal_8xH100/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/99b790dd8eb4c7bbdaa26012944a7c66ba9bd610/records/track_10min_16mb/2026-03-30_Rascal_8xH100",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/e5c909f02b80e789f41a883a5dee23ba2d43d585/records/track_10min_16mb/2026-03-30_Rascal_8xH100/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/e5c909f02b80e789f41a883a5dee23ba2d43d585/records/track_10min_16mb/2026-03-30_Rascal_8xH100/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/e5c909f02b80e789f41a883a5dee23ba2d43d585/records/track_10min_16mb/2026-03-30_Rascal_8xH100/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/e5c909f02b80e789f41a883a5dee23ba2d43d585/records/track_10min_16mb/2026-03-30_Rascal_8xH100/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/e5c909f02b80e789f41a883a5dee23ba2d43d585/records/track_10min_16mb/2026-03-30_Rascal_8xH100",
         "pr": "https://github.com/openai/parameter-golf/pull/1140",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
@@ -11804,7 +11804,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-03-30_EngramLite_GatedSkips_FullGPTQ_FA3_1-1146",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -11852,14 +11852,14 @@
       "pr": {
         "number": 1122,
         "title": "Record: EngramLite + Gated Skips + Full GPTQ + FA3 — val_bpb 1.1146 (1-seed, 2 pending)",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/1122",
         "authorLogin": "icryo",
         "authorName": null,
         "createdAt": "2026-03-30T05:30:52Z",
-        "updatedAt": "2026-03-30T19:27:07Z",
+        "updatedAt": "2026-03-31T19:15:08Z",
         "headSha": "eae9e87c660b47acc33bb756baaadb7c9ef98234",
         "headRepo": "icryo/parameter-golf"
       },
