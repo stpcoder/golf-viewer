@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-31T08:12:31.229Z",
+  "generatedAt": "2026-03-31T13:44:34.724Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1143,
     "title": "Record: Scylla (novel tokenizer) + Legal Score-First TTT (val_bpb: 1.08056553)",
     "state": "open",
-    "updatedAt": "2026-03-31T07:41:35Z",
+    "updatedAt": "2026-03-31T13:42:52Z",
     "headSha": "07c721f05508e6a2ebbe6455de4dc14104d65d05",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1143",
     "authorLogin": "simon-marcus"
@@ -20,7 +20,7 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "Search-tuned TokenMonster tokenizer Scylla with per-token metadata accounting couples with legal score-first TTT evaluation over a full-data retokenized bundle.",
+    "summary": "TokenMonster-derived Scylla tokenizer discovered via autoresearch powers a full-data FineWeb bundle evaluated with legal score-first TTT and metadata byte accounting.",
     "tags": [
       "tokenization",
       "evaluation"
@@ -28,9 +28,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "TokenMonster-derived Scylla tokenizer found via autoresearch",
-      "Full-data retokenization plus metadata-driven byte accounting",
-      "Backward-looking legal score-first TTT evaluation"
+      "TokenMonster-derived Scylla tokenizer via autoresearch",
+      "Metadata-driven byte accounting for runtime eval",
+      "Legal score-first TTT on retokenized FineWeb bundle"
     ]
   },
   "compatibility": {

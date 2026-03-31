@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T13:13:00.630Z",
+  "generatedAt": "2026-03-31T13:44:39.188Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -53,15 +53,15 @@
     },
     {
       "prNumber": 1176,
-      "title": "Record: QK-Gain 4.0 + XSA-11 + Muon-TTT + SLOT — val_bpb 1.0962 (3-seed mean)",
+      "title": "Record: QK-Gain 4.0 + XSA-11 + Muon-TTT + SLOT — val_bpb 1.0914 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-31T09:54:16Z",
+      "updatedAt": "2026-03-31T13:20:39Z",
       "headSha": "cc1ad3b313c61aa3af41b44c655d57570d67cf6b",
-      "generatedAt": "2026-03-31T10:12:07.658Z",
-      "summary": "Builds on PR #1135 by boosting QK gain/XSA coverage and adding Muon TTT plus SLOT eval-time deltas.",
+      "generatedAt": "2026-03-31T13:44:21.114Z",
+      "summary": "Extends PR #1135 with qk_gain=4, XSA on every layer, Muon TTT, and SLOT test-time delta tuning for sharper eval adaptivity.",
       "tags": [
         "attention",
-        "optimizer",
+        "architecture",
         "evaluation"
       ],
       "flags": {
@@ -125,15 +125,15 @@
       "prNumber": 1172,
       "title": "Record: SLOT + Split-LR + Full GPTQ + XSA-all — val_bpb 1.1015 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-31T11:44:14Z",
+      "updatedAt": "2026-03-31T13:22:41Z",
       "headSha": "99b080be7ee758616038526f297e9e4f8680734c",
-      "generatedAt": "2026-03-31T12:12:58.081Z",
-      "summary": "Combines SLOT eval-time delta tuning, split Muon LR, sigmoid-gated skips, soft-round QAT, and BigramHash growth atop the GPTQ stack.",
+      "generatedAt": "2026-03-31T13:44:30.191Z",
+      "summary": "Combines eval-time SLOT delta optimization with split Muon learning rates and soft-round QAT on a full GPTQ-int6 backbone.",
       "tags": [
         "evaluation",
         "optimizer",
         "quantization",
-        "architecture"
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
@@ -561,10 +561,10 @@
       "prNumber": 1143,
       "title": "Record: Scylla (novel tokenizer) + Legal Score-First TTT (val_bpb: 1.08056553)",
       "status": "open",
-      "updatedAt": "2026-03-31T07:41:35Z",
+      "updatedAt": "2026-03-31T13:42:52Z",
       "headSha": "07c721f05508e6a2ebbe6455de4dc14104d65d05",
-      "generatedAt": "2026-03-31T08:12:31.229Z",
-      "summary": "Search-tuned TokenMonster tokenizer Scylla with per-token metadata accounting couples with legal score-first TTT evaluation over a full-data retokenized bundle.",
+      "generatedAt": "2026-03-31T13:44:34.724Z",
+      "summary": "TokenMonster-derived Scylla tokenizer discovered via autoresearch powers a full-data FineWeb bundle evaluated with legal score-first TTT and metadata byte accounting.",
       "tags": [
         "tokenization",
         "evaluation"
@@ -1232,12 +1232,12 @@
     },
     {
       "prNumber": 1104,
-      "title": "[Non-record] 1-Stage Byte-level H-Net at 17.5M: Dynamic Chunking Learns Word Boundaries (39x-91x fewer params than H-Net paper)",
+      "title": "[Non-record] 1-Stage Byte-level H-Net at 17.5M: Dynamic Chunking Learns Whitespace-aligned (Word-like) Boundaries (39x-91x fewer params than H-Net paper)",
       "status": "open",
-      "updatedAt": "2026-03-30T13:30:13Z",
+      "updatedAt": "2026-03-31T13:34:07Z",
       "headSha": "e3ea22adc4582aabf47c22c5e46d73ec3393b589",
-      "generatedAt": "2026-03-30T13:36:52.373Z",
-      "summary": "Byte-level 1-stage H-Net learns whitespace-aligned word boundaries via dynamic chunking while matched byte vs subword runs trace compression behavior.",
+      "generatedAt": "2026-03-31T13:44:39.025Z",
+      "summary": "Byte-level 1-stage H-Net matches the subword version by learning whitespace-aligned chunking from raw bytes via dynamic routing and padded DDP training.",
       "tags": [
         "architecture",
         "tokenization",

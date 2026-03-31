@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T13:12:52.395Z",
+  "generatedAt": "2026-03-31T13:44:09.863Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -1604,7 +1604,7 @@
         "authorLogin": "simon-marcus",
         "authorName": null,
         "createdAt": "2026-03-30T18:53:55Z",
-        "updatedAt": "2026-03-31T07:41:35Z",
+        "updatedAt": "2026-03-31T13:42:52Z",
         "headSha": "07c721f05508e6a2ebbe6455de4dc14104d65d05",
         "headRepo": "simon-marcus/parameter-golf-fork"
       },
@@ -8619,7 +8619,7 @@
         "authorLogin": "simon-marcus",
         "authorName": null,
         "createdAt": "2026-03-30T18:53:55Z",
-        "updatedAt": "2026-03-31T07:41:35Z",
+        "updatedAt": "2026-03-31T13:42:52Z",
         "headSha": "07c721f05508e6a2ebbe6455de4dc14104d65d05",
         "headRepo": "simon-marcus/parameter-golf-fork"
       },
@@ -9928,7 +9928,7 @@
         "authorLogin": "dexhunter",
         "authorName": null,
         "createdAt": "2026-03-31T06:22:04Z",
-        "updatedAt": "2026-03-31T11:44:14Z",
+        "updatedAt": "2026-03-31T13:22:41Z",
         "headSha": "99b080be7ee758616038526f297e9e4f8680734c",
         "headRepo": "dexhunter/parameter-golf"
       },
@@ -42574,7 +42574,7 @@
       },
       "pr": {
         "number": 1104,
-        "title": "[Non-record] 1-Stage Byte-level H-Net at 17.5M: Dynamic Chunking Learns Word Boundaries (39x-91x fewer params than H-Net paper)",
+        "title": "[Non-record] 1-Stage Byte-level H-Net at 17.5M: Dynamic Chunking Learns Whitespace-aligned (Word-like) Boundaries (39x-91x fewer params than H-Net paper)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -42582,7 +42582,7 @@
         "authorLogin": "DariusFeher",
         "authorName": null,
         "createdAt": "2026-03-29T23:52:12Z",
-        "updatedAt": "2026-03-30T13:30:13Z",
+        "updatedAt": "2026-03-31T13:34:07Z",
         "headSha": "e3ea22adc4582aabf47c22c5e46d73ec3393b589",
         "headRepo": "DariusFeher/parameter-golf"
       },
@@ -51434,7 +51434,7 @@
       },
       "pr": {
         "number": 1176,
-        "title": "Record: QK-Gain 4.0 + XSA-11 + Muon-TTT + SLOT — val_bpb 1.0962 (3-seed mean)",
+        "title": "Record: QK-Gain 4.0 + XSA-11 + Muon-TTT + SLOT — val_bpb 1.0914 (3-seed mean)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -51442,7 +51442,7 @@
         "authorLogin": "bigbag",
         "authorName": null,
         "createdAt": "2026-03-31T09:45:23Z",
-        "updatedAt": "2026-03-31T09:54:16Z",
+        "updatedAt": "2026-03-31T13:20:39Z",
         "headSha": "cc1ad3b313c61aa3af41b44c655d57570d67cf6b",
         "headRepo": "bigbag/parameter-golf"
       },
