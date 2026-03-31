@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T19:45:05.400Z",
+  "generatedAt": "2026-03-31T20:15:08.937Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -64543,6 +64543,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/4e465ee7c8c8c3adbfa9c2db9631bdd15b68a791/records/track_10min_16mb/2026-03-21_SWA_BigramHash_SmearGate_Int5MLP_MuonWD/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/4e465ee7c8c8c3adbfa9c2db9631bdd15b68a791/records/track_10min_16mb/2026-03-21_SWA_BigramHash_SmearGate_Int5MLP_MuonWD",
         "pr": "https://github.com/openai/parameter-golf/pull/673",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-21_OrchestratedStack_10LInt5",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-21_OrchestratedStack_10LInt5",
+        "folderPath": "records/track_10min_16mb/2026-03-21_OrchestratedStack_10LInt5",
+        "submissionPath": "records/track_10min_16mb/2026-03-21_OrchestratedStack_10LInt5/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-21_OrchestratedStack_10LInt5/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-21_OrchestratedStack_10LInt5/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-21_OrchestratedStack_10LInt5/train_gpt.py"
+      },
+      "submission": {
+        "author": "TBD",
+        "githubId": "TBD",
+        "name": "Orchestrated stack 10L Int5 + SmearGate + BigramHash + SWA (10L Int5 fork)",
+        "blurb": "Production-ready fork of 2026-03-20_10L_Int5MLP_MuonWD04_SWA50: mixed int5/int6, zstd-22, sliding eval (default EVAL_BATCH_SEQS=64 for eval throughput). Replace metrics after a real 8xH100 run.",
+        "date": "2026-03-21T00:00:00Z"
+      },
+      "metrics": {
+        "valBpb": null,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1188,
+        "title": "Orchestrated 10L Int5 record stack, LeakyReLU² toggle, RunPod helpers",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1188",
+        "authorLogin": "rithvik-duddupudi",
+        "authorName": null,
+        "createdAt": "2026-03-31T20:07:30Z",
+        "updatedAt": "2026-03-31T20:07:30Z",
+        "headSha": "d4da6d7e0e26123855a8c0a619a82f6c91e3f11b",
+        "headRepo": "rithvik-duddupudi/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/ba899d0bbf24ab7b150ea6e5d0945c86fc92e290/records/track_10min_16mb/2026-03-21_OrchestratedStack_10LInt5/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/ba899d0bbf24ab7b150ea6e5d0945c86fc92e290/records/track_10min_16mb/2026-03-21_OrchestratedStack_10LInt5/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/ba899d0bbf24ab7b150ea6e5d0945c86fc92e290/records/track_10min_16mb/2026-03-21_OrchestratedStack_10LInt5/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/ba899d0bbf24ab7b150ea6e5d0945c86fc92e290/records/track_10min_16mb/2026-03-21_OrchestratedStack_10LInt5/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/ba899d0bbf24ab7b150ea6e5d0945c86fc92e290/records/track_10min_16mb/2026-03-21_OrchestratedStack_10LInt5",
+        "pr": "https://github.com/openai/parameter-golf/pull/1188",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-31T19:45:13.368Z",
+  "generatedAt": "2026-03-31T20:15:24.476Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1188,
+      "title": "Orchestrated 10L Int5 record stack, LeakyReLU² toggle, RunPod helpers",
+      "status": "open",
+      "updatedAt": "2026-03-31T20:07:30Z",
+      "headSha": "d4da6d7e0e26123855a8c0a619a82f6c91e3f11b",
+      "generatedAt": "2026-03-31T20:15:24.300Z",
+      "summary": "Stacks a 10L mixed int5/int6 trainer with SmearGate, BigramHash, Muon+WD+SWA, sliding eval defaults, and optional LeakyReLU² toggle plus run helpers.",
+      "tags": [
+        "quantization",
+        "sliding-window-eval",
+        "optimizer",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1188.json"
+    },
     {
       "prNumber": 1186,
       "title": "Non-record: Negative Results — Architecture, TTT Variants, Quantization, and N-gram Cache Illegality",

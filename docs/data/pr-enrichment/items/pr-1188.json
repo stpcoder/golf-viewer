@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-31T20:15:24.300Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1188,
+    "title": "Orchestrated 10L Int5 record stack, LeakyReLU² toggle, RunPod helpers",
+    "state": "open",
+    "updatedAt": "2026-03-31T20:07:30Z",
+    "headSha": "d4da6d7e0e26123855a8c0a619a82f6c91e3f11b",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1188",
+    "authorLogin": "rithvik-duddupudi"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-21_OrchestratedStack_10LInt5/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Stacks a 10L mixed int5/int6 trainer with SmearGate, BigramHash, Muon+WD+SWA, sliding eval defaults, and optional LeakyReLU² toggle plus run helpers.",
+    "tags": [
+      "quantization",
+      "sliding-window-eval",
+      "optimizer",
+      "architecture"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "Includes full training plus validation evaluation; not a validation-only regimen.",
+    "techniques": [
+      "Mixed int5 MLP + int6 attention quantization",
+      "Muon+WD optimizer with SWA and sliding-window eval defaults",
+      "Optional LeakyReLU² toggle plus orchestration/run helpers"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
