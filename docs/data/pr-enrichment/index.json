@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T08:12:31.392Z",
+  "generatedAt": "2026-03-31T09:12:17.192Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -53,16 +53,16 @@
     {
       "prNumber": 1172,
       "title": "Record: SLOT + Split-LR + Full GPTQ + XSA-all — val_bpb 1.1015 (3-seed mean)",
-      "status": "closed",
-      "updatedAt": "2026-03-31T07:03:27Z",
+      "status": "open",
+      "updatedAt": "2026-03-31T09:08:52Z",
       "headSha": "99b080be7ee758616038526f297e9e4f8680734c",
-      "generatedAt": "2026-03-31T07:11:57.667Z",
-      "summary": "Combines sliding-window SLOT eval delta tuning with split Muon LR, sigmoid-gated skips, soft-round QAT, and compression tweaks on a GPTQ stack.",
+      "generatedAt": "2026-03-31T09:12:08.899Z",
+      "summary": "Combines SLOT eval-time delta tuning with split early/late Muon LR, sigmoid-gated skips, soft-round QAT, and compression/minification tweaks.",
       "tags": [
-        "architecture",
+        "val-only",
         "optimizer",
         "quantization",
-        "evaluation"
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,
@@ -11926,12 +11926,13 @@
       "prNumber": 425,
       "title": "Codex/runpod 2026 03 20 checkpoint",
       "status": "open",
-      "updatedAt": "2026-03-27T19:59:32Z",
-      "headSha": "b0fd77231ca24fa07f5cf56a8b7d3c4acd98fba9",
-      "generatedAt": "2026-03-27T20:18:40.723Z",
-      "summary": "Single-H100 ablation blends ATTN_TWICE_ALPHA=0.05 with split eval lengths (2048/1024) and LoRA-TTT tuning to balance roundtrip and TTT the 600s run.",
+      "updatedAt": "2026-03-31T09:02:58Z",
+      "headSha": "093600ce3b8fa7766c4488364f5a052f1f25fb3d",
+      "generatedAt": "2026-03-31T09:12:17.131Z",
+      "summary": "Runpod ablation splits eval lengths while using ATTN_TWICE_ALPHA=0.05 and LoRA-TTT tuning on single H100 to balance roundtrip/TTT scores in 600s.",
       "tags": [
         "attention",
+        "optimizer",
         "evaluation",
         "non-record"
       ],
