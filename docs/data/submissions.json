@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T03:10:08.525Z",
+  "generatedAt": "2026-03-31T03:40:22.200Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -10801,6 +10801,83 @@
       }
     },
     {
+      "id": "record-records-track_10min_16mb-2026-03-30_V18_FusedTritonOp",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-30_V18_FusedTritonOp",
+        "folderPath": "records/track_10min_16mb/2026-03-30_V18_FusedTritonOp",
+        "submissionPath": "records/track_10min_16mb/2026-03-30_V18_FusedTritonOp/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-30_V18_FusedTritonOp/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-30_V18_FusedTritonOp/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-30_V18_FusedTritonOp/train_gpt.py"
+      },
+      "submission": {
+        "author": "Bortlesboat",
+        "githubId": "Bortlesboat",
+        "name": "Turbo-Muon + EngramLite + ParamBanking + GPTQ Reserve Optimization",
+        "blurb": "PR #1089 stack (Turbo-Muon, EngramLite, Parameter Banking, mixed GPTQ, brotli) with GPTQ reserve optimization (14s to 9s, +55 training steps). Includes experimental fused Triton MLP kernel architecture (disabled, pending PT2.11 compat). 3-seed mean: 1.1126 (std 0.0003). Built on PR #1089.",
+        "date": "2026-03-30"
+      },
+      "metrics": {
+        "valBpb": 1.1126,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15985912,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1169,
+        "title": "Turbo-Muon + EngramLite + ParamBanking + GPTQ Reserve Opt — val_bpb 1.1126 (3-seed mean)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1169",
+        "authorLogin": "Bortlesboat",
+        "authorName": null,
+        "createdAt": "2026-03-31T03:38:33Z",
+        "updatedAt": "2026-03-31T03:38:33Z",
+        "headSha": "c41b29990421a5057088e6bbfc5b22171257aa6a",
+        "headRepo": "Bortlesboat/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/c41b29990421a5057088e6bbfc5b22171257aa6a/records/track_10min_16mb/2026-03-30_V18_FusedTritonOp/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/c41b29990421a5057088e6bbfc5b22171257aa6a/records/track_10min_16mb/2026-03-30_V18_FusedTritonOp/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/c41b29990421a5057088e6bbfc5b22171257aa6a/records/track_10min_16mb/2026-03-30_V18_FusedTritonOp/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/c41b29990421a5057088e6bbfc5b22171257aa6a/records/track_10min_16mb/2026-03-30_V18_FusedTritonOp/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/c41b29990421a5057088e6bbfc5b22171257aa6a/records/track_10min_16mb/2026-03-30_V18_FusedTritonOp",
+        "pr": "https://github.com/openai/parameter-golf/pull/1169",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_10min_16mb-2026-03-29_SOTA_11L_XSA_EMA_TTT",
       "source": "pull_request",
       "status": "open",
@@ -18558,16 +18635,16 @@
         "authorLogin": "Christopher-Lee-McClendon",
         "authorName": null,
         "createdAt": "2026-03-31T03:03:12Z",
-        "updatedAt": "2026-03-31T03:03:12Z",
-        "headSha": "acc84009e73cfc14bceecdb819cb1c53ecc867dd",
+        "updatedAt": "2026-03-31T03:17:17Z",
+        "headSha": "fdb829f7946d676df6dd2f1eb86888d49cba394a",
         "headRepo": "Christopher-Lee-McClendon/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/acc84009e73cfc14bceecdb819cb1c53ecc867dd/records/track_non_record_16mb/2026-03-30_10L_E2E_TTT_FlowRefiner/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/acc84009e73cfc14bceecdb819cb1c53ecc867dd/records/track_non_record_16mb/2026-03-30_10L_E2E_TTT_FlowRefiner/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/acc84009e73cfc14bceecdb819cb1c53ecc867dd/records/track_non_record_16mb/2026-03-30_10L_E2E_TTT_FlowRefiner/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/acc84009e73cfc14bceecdb819cb1c53ecc867dd/records/track_non_record_16mb/2026-03-30_10L_E2E_TTT_FlowRefiner/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/acc84009e73cfc14bceecdb819cb1c53ecc867dd/records/track_non_record_16mb/2026-03-30_10L_E2E_TTT_FlowRefiner",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/fdb829f7946d676df6dd2f1eb86888d49cba394a/records/track_non_record_16mb/2026-03-30_10L_E2E_TTT_FlowRefiner/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/fdb829f7946d676df6dd2f1eb86888d49cba394a/records/track_non_record_16mb/2026-03-30_10L_E2E_TTT_FlowRefiner/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/fdb829f7946d676df6dd2f1eb86888d49cba394a/records/track_non_record_16mb/2026-03-30_10L_E2E_TTT_FlowRefiner/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/fdb829f7946d676df6dd2f1eb86888d49cba394a/records/track_non_record_16mb/2026-03-30_10L_E2E_TTT_FlowRefiner/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/fdb829f7946d676df6dd2f1eb86888d49cba394a/records/track_non_record_16mb/2026-03-30_10L_E2E_TTT_FlowRefiner",
         "pr": "https://github.com/openai/parameter-golf/pull/1166",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
@@ -42217,6 +42294,83 @@
       }
     },
     {
+      "id": "record-records-track_10min_16mb-2026-03-30_HNet_Dynamic_Chunking",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-30_HNet_Dynamic_Chunking",
+        "folderPath": "records/track_10min_16mb/2026-03-30_HNet_Dynamic_Chunking",
+        "submissionPath": "records/track_10min_16mb/2026-03-30_HNet_Dynamic_Chunking/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-30_HNet_Dynamic_Chunking/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-30_HNet_Dynamic_Chunking/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-30_HNet_Dynamic_Chunking/train_gpt.py"
+      },
+      "submission": {
+        "author": "gowtham0992",
+        "githubId": "gowtham0992",
+        "name": "H-Net: Dynamic Chunking for Hierarchical Sequence Modeling",
+        "blurb": "First H-Net submission. Dynamic Chunking (Hwang et al., 2025): cosine similarity routing finds content-dependent chunk boundaries, EMA smoothing makes chunking differentiable. Encoder at compressed resolution (~T/2), decoder at full resolution. Eval: sliding window.",
+        "date": "2026-03-30T00:00:00Z"
+      },
+      "metrics": {
+        "valBpb": 1.3639,
+        "valLoss": 2.3029,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 10394755,
+        "bytesCode": 81190,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1168,
+        "title": "Notable Non-Record: H-Net Dynamic Chunking — 1.3639 BPB — Learned Content-Dependent Segmentation",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1168",
+        "authorLogin": "gowtham0992",
+        "authorName": null,
+        "createdAt": "2026-03-31T03:32:38Z",
+        "updatedAt": "2026-03-31T03:35:59Z",
+        "headSha": "72be5de027936b90f0846a1f0fd723739bf384d9",
+        "headRepo": "gowtham0992/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/72be5de027936b90f0846a1f0fd723739bf384d9/records/track_10min_16mb/2026-03-30_HNet_Dynamic_Chunking/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/72be5de027936b90f0846a1f0fd723739bf384d9/records/track_10min_16mb/2026-03-30_HNet_Dynamic_Chunking/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/72be5de027936b90f0846a1f0fd723739bf384d9/records/track_10min_16mb/2026-03-30_HNet_Dynamic_Chunking/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/72be5de027936b90f0846a1f0fd723739bf384d9/records/track_10min_16mb/2026-03-30_HNet_Dynamic_Chunking/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/72be5de027936b90f0846a1f0fd723739bf384d9/records/track_10min_16mb/2026-03-30_HNet_Dynamic_Chunking",
+        "pr": "https://github.com/openai/parameter-golf/pull/1168",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_non_record_16mb-2026-03-28_QAT_DeadCode_Analysis_NovelTechniques_1xH100",
       "source": "pull_request",
       "status": "open",
@@ -52217,11 +52371,11 @@
         "headRepo": "AnirudhRahul/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/7a9aa1ba22e4cb4c0a4791c4bab1744f0a431ccf/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/7a9aa1ba22e4cb4c0a4791c4bab1744f0a431ccf/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/7a9aa1ba22e4cb4c0a4791c4bab1744f0a431ccf/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/7a9aa1ba22e4cb4c0a4791c4bab1744f0a431ccf/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/7a9aa1ba22e4cb4c0a4791c4bab1744f0a431ccf/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/c1342b47df6d5b52a1f33c723ff821ab93f91bbc/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/c1342b47df6d5b52a1f33c723ff821ab93f91bbc/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/c1342b47df6d5b52a1f33c723ff821ab93f91bbc/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/c1342b47df6d5b52a1f33c723ff821ab93f91bbc/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/c1342b47df6d5b52a1f33c723ff821ab93f91bbc/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking",
         "pr": "https://github.com/openai/parameter-golf/pull/1126",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },

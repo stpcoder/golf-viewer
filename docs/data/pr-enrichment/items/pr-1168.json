@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-31T03:40:33.664Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1168,
+    "title": "Notable Non-Record: H-Net Dynamic Chunking — 1.3639 BPB — Learned Content-Dependent Segmentation",
+    "state": "open",
+    "updatedAt": "2026-03-31T03:35:59Z",
+    "headSha": "72be5de027936b90f0846a1f0fd723739bf384d9",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1168",
+    "authorLogin": "gowtham0992"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-30_HNet_Dynamic_Chunking/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Applies H-Net dynamic chunking with cosine boundary routing, EMA smoothing, and multi-resolution Transformer encoder-decoder for content-aware hierarchical compression.",
+    "tags": [
+      "architecture",
+      "attention"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Cosine similarity routing for learned chunk boundaries",
+      "EMA-weighted dechunking with confidence-aware upsampling",
+      "Multi-resolution Transformer encoder-decoder with ratio loss"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

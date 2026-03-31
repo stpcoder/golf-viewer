@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-31T03:40:28.113Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1169,
+    "title": "Turbo-Muon + EngramLite + ParamBanking + GPTQ Reserve Opt — val_bpb 1.1126 (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-03-31T03:38:33Z",
+    "headSha": "c41b29990421a5057088e6bbfc5b22171257aa6a",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1169",
+    "authorLogin": "Bortlesboat"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-30_V18_FusedTritonOp/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Combines Turbo-Muon optimizer, EngramLite hashing, and ParamBanking with GPTQ reserve trimming plus a disabled fused Triton MLP prototype.",
+    "tags": [
+      "optimizer",
+      "architecture",
+      "quantization",
+      "mixed-precision"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "- Turbo-Muon + EngramLite + ParamBanking backbone",
+      "- GPTQ reserve cut from 14s to 9s to recover ~55 training steps",
+      "- torch.library triton_op fused MLP prototype (forward-only, currently disabled)"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

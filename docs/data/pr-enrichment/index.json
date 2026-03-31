@@ -1,16 +1,62 @@
 {
-  "generatedAt": "2026-03-31T03:10:33.726Z",
+  "generatedAt": "2026-03-31T03:40:39.539Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
+      "prNumber": 1169,
+      "title": "Turbo-Muon + EngramLite + ParamBanking + GPTQ Reserve Opt — val_bpb 1.1126 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-03-31T03:38:33Z",
+      "headSha": "c41b29990421a5057088e6bbfc5b22171257aa6a",
+      "generatedAt": "2026-03-31T03:40:28.113Z",
+      "summary": "Combines Turbo-Muon optimizer, EngramLite hashing, and ParamBanking with GPTQ reserve trimming plus a disabled fused Triton MLP prototype.",
+      "tags": [
+        "optimizer",
+        "architecture",
+        "quantization",
+        "mixed-precision"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1169.json"
+    },
+    {
+      "prNumber": 1168,
+      "title": "Notable Non-Record: H-Net Dynamic Chunking — 1.3639 BPB — Learned Content-Dependent Segmentation",
+      "status": "open",
+      "updatedAt": "2026-03-31T03:35:59Z",
+      "headSha": "72be5de027936b90f0846a1f0fd723739bf384d9",
+      "generatedAt": "2026-03-31T03:40:33.664Z",
+      "summary": "Applies H-Net dynamic chunking with cosine boundary routing, EMA smoothing, and multi-resolution Transformer encoder-decoder for content-aware hierarchical compression.",
+      "tags": [
+        "architecture",
+        "attention"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1168.json"
+    },
+    {
       "prNumber": 1166,
       "title": "Non-record: 10L E2E TTT-Linear + FlowRefiner — val_bpb 1.1347",
       "status": "open",
-      "updatedAt": "2026-03-31T03:03:12Z",
-      "headSha": "acc84009e73cfc14bceecdb819cb1c53ecc867dd",
-      "generatedAt": "2026-03-31T03:10:16.256Z",
-      "summary": "10-layer transformer adds E2E TTT-Linear and a FlowRefiner after final LayerNorm, then uses per-row int6/int8 quant plus lzma to stay under the 16 MB cap.",
+      "updatedAt": "2026-03-31T03:17:17Z",
+      "headSha": "fdb829f7946d676df6dd2f1eb86888d49cba394a",
+      "generatedAt": "2026-03-31T03:40:39.372Z",
+      "summary": "Combines a 10-layer transformer with end-to-end TTT-Linear inner loops and a single-step FlowRefiner on hidden states, fitting under 16MB via int6/int8 quantization.",
       "tags": [
         "architecture",
         "quantization",
