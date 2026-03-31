@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-31T22:46:30.240Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1203,
+    "title": "Add non-record recurrent 0011+g2 R768 submission",
+    "state": "open",
+    "updatedAt": "2026-03-31T22:23:29Z",
+    "headSha": "165ce0fc2708a2a3647380570e919875ab5a0104",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1203",
+    "authorLogin": "raider99k"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-31_Recurrent0011G2_SP1024_R768_1xH100_600s/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Packages a stripped recurrent block_anchor 0,0,1,1 (A-A-C-C) candidate with grouped anchor gating and shared corrective cores for the non-record 16MB track.",
+    "tags": [
+      "non-record",
+      "architecture",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "- fixed four-step block_anchor recurrence schedule",
+      "- grouped anchor gating with shared corrective core",
+      "- minimal trainer snapshot focused on submitted candidate"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

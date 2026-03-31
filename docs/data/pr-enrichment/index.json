@@ -1,20 +1,43 @@
 {
-  "generatedAt": "2026-03-31T22:15:53.957Z",
+  "generatedAt": "2026-03-31T22:46:36.892Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
+      "prNumber": 1203,
+      "title": "Add non-record recurrent 0011+g2 R768 submission",
+      "status": "open",
+      "updatedAt": "2026-03-31T22:23:29Z",
+      "headSha": "165ce0fc2708a2a3647380570e919875ab5a0104",
+      "generatedAt": "2026-03-31T22:46:30.240Z",
+      "summary": "Packages a stripped recurrent block_anchor 0,0,1,1 (A-A-C-C) candidate with grouped anchor gating and shared corrective cores for the non-record 16MB track.",
+      "tags": [
+        "non-record",
+        "architecture",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1203.json"
+    },
+    {
       "prNumber": 1202,
       "title": "Record: Unified Attention + FA3 + Legal TTT (val_bpb=1.1412, 3-seed)",
       "status": "open",
-      "updatedAt": "2026-03-31T22:14:27Z",
+      "updatedAt": "2026-03-31T22:38:47Z",
       "headSha": "2882f3a43af9c8f42c7b4592d3bf9968766f3f8f",
-      "generatedAt": "2026-03-31T22:15:50.182Z",
-      "summary": "Unified attention reallocates QKV bytes to the MLP while FA3 head-dim padding and legal score-first TTT speed validation adaptation.",
+      "generatedAt": "2026-03-31T22:46:36.709Z",
+      "summary": "Unified Attention reallocates routing budget to a larger MLP, adds FA3 head-dim padding for Hopper speed, and uses legal score-first TTT adaptation.",
       "tags": [
         "val-only",
         "attention",
-        "architecture",
+        "training-schedule",
         "evaluation"
       ],
       "flags": {

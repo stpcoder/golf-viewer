@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T22:15:41.102Z",
+  "generatedAt": "2026-03-31T22:46:22.429Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -21022,7 +21022,7 @@
         "authorLogin": "VirajDeshwal",
         "authorName": null,
         "createdAt": "2026-03-31T21:53:17Z",
-        "updatedAt": "2026-03-31T22:14:27Z",
+        "updatedAt": "2026-03-31T22:38:47Z",
         "headSha": "2882f3a43af9c8f42c7b4592d3bf9968766f3f8f",
         "headRepo": "VirajDeshwal/parameter-golf"
       },
@@ -42670,6 +42670,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/fa8cd9947410c0ea9003835722bcb402f3e1af89/records/track_non_record_16mb/2026-03-26_Seq2048_Compile_1xA100_Draft/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/fa8cd9947410c0ea9003835722bcb402f3e1af89/records/track_non_record_16mb/2026-03-26_Seq2048_Compile_1xA100_Draft",
         "pr": "https://github.com/openai/parameter-golf/pull/746",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-03-31_Recurrent0011G2_SP1024_R768_1xH100_600s",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-31_Recurrent0011G2_SP1024_R768_1xH100_600s",
+        "folderPath": "records/track_non_record_16mb/2026-03-31_Recurrent0011G2_SP1024_R768_1xH100_600s",
+        "submissionPath": "records/track_non_record_16mb/2026-03-31_Recurrent0011G2_SP1024_R768_1xH100_600s/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-31_Recurrent0011G2_SP1024_R768_1xH100_600s/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-31_Recurrent0011G2_SP1024_R768_1xH100_600s/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-31_Recurrent0011G2_SP1024_R768_1xH100_600s/train_gpt.py"
+      },
+      "submission": {
+        "author": "Pasquale",
+        "githubId": "raider99k",
+        "name": "Recurrent 0011 + g2 R768",
+        "blurb": "Non-record 16MB track submission using a stripped recurrent SP-1024 candidate with a fixed block_anchor 0011 + g2 schedule (R768, H12/KV6, shared corrective core) on 1xH100 for 600s; final int8+zlib roundtrip scored 1.35568780 BPB under the 16,000,000-byte cap.",
+        "date": "2026-03-31T21:47:49Z"
+      },
+      "metrics": {
+        "valBpb": 1.3556878,
+        "valLoss": 2.29287744,
+        "preQuantValBpb": 1.3465,
+        "preQuantValLoss": 2.2774,
+        "stepStop": 7432,
+        "wallclockSeconds": 600.151,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 12618732,
+        "bytesCode": 48881,
+        "bytesModelInt8Zlib": 12569851
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1203,
+        "title": "Add non-record recurrent 0011+g2 R768 submission",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1203",
+        "authorLogin": "raider99k",
+        "authorName": null,
+        "createdAt": "2026-03-31T22:23:29Z",
+        "updatedAt": "2026-03-31T22:23:29Z",
+        "headSha": "165ce0fc2708a2a3647380570e919875ab5a0104",
+        "headRepo": "raider99k/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/165ce0fc2708a2a3647380570e919875ab5a0104/records/track_non_record_16mb/2026-03-31_Recurrent0011G2_SP1024_R768_1xH100_600s/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/165ce0fc2708a2a3647380570e919875ab5a0104/records/track_non_record_16mb/2026-03-31_Recurrent0011G2_SP1024_R768_1xH100_600s/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/165ce0fc2708a2a3647380570e919875ab5a0104/records/track_non_record_16mb/2026-03-31_Recurrent0011G2_SP1024_R768_1xH100_600s/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/165ce0fc2708a2a3647380570e919875ab5a0104/records/track_non_record_16mb/2026-03-31_Recurrent0011G2_SP1024_R768_1xH100_600s/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/165ce0fc2708a2a3647380570e919875ab5a0104/records/track_non_record_16mb/2026-03-31_Recurrent0011G2_SP1024_R768_1xH100_600s",
+        "pr": "https://github.com/openai/parameter-golf/pull/1203",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
