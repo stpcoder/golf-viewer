@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T12:13:05.527Z",
+  "generatedAt": "2026-03-31T13:13:00.630Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -7,15 +7,15 @@
       "prNumber": 1180,
       "title": "SR-CM-P2Loss: 1.0577 bpb (~15.06MB)",
       "status": "open",
-      "updatedAt": "2026-03-31T11:32:19Z",
+      "updatedAt": "2026-03-31T12:57:15Z",
       "headSha": "827b05787c397d51b93381260cf3f5b80bc95c8c",
-      "generatedAt": "2026-03-31T11:42:34.746Z",
-      "summary": "Combines difficulty-aware P2 loss with wallclock-aware warmdown, residual mixing, and compression-first training (conv token mixer + int6 QAT) for a compact GPT.",
+      "generatedAt": "2026-03-31T13:13:00.457Z",
+      "summary": "Mixes P2 difficulty-aware loss with wallclock-aligned warmdown, residual+conv mixing, and a Muon/Adam split to keep GPT compression-friendly under ~15MB.",
       "tags": [
         "training-schedule",
         "optimizer",
-        "quantization",
-        "architecture"
+        "architecture",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,

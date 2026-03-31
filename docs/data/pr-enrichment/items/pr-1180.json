@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-31T11:42:34.746Z",
+  "generatedAt": "2026-03-31T13:13:00.457Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1180,
     "title": "SR-CM-P2Loss: 1.0577 bpb (~15.06MB)",
     "state": "open",
-    "updatedAt": "2026-03-31T11:32:19Z",
+    "updatedAt": "2026-03-31T12:57:15Z",
     "headSha": "827b05787c397d51b93381260cf3f5b80bc95c8c",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1180",
     "authorLogin": "estesryan"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines difficulty-aware P2 loss with wallclock-aware warmdown, residual mixing, and compression-first training (conv token mixer + int6 QAT) for a compact GPT.",
+    "summary": "Mixes P2 difficulty-aware loss with wallclock-aligned warmdown, residual+conv mixing, and a Muon/Adam split to keep GPT compression-friendly under ~15MB.",
     "tags": [
       "training-schedule",
       "optimizer",
-      "quantization",
-      "architecture"
+      "architecture",
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Difficulty-aware P2 loss targeting low-confidence tokens",
-      "Wallclock-aligned LR warmdown plus Muon/Adam optimizer split",
-      "Compression-aware int6 training with late QAT and conv token mixer"
+      "P2 ((1-p)^2) loss to emphasize low-confidence tokens",
+      "Wallclock-aware LR warmdown tuned to the 10-minute cap",
+      "Residual mixing + conv token mixer with Muon (matrix) and Adam split"
     ]
   },
   "compatibility": {
