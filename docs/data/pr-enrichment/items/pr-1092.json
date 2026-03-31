@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-29T19:31:02.637Z",
+  "generatedAt": "2026-03-31T15:14:19.381Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1092,
     "title": "XSA-All 11L + LeakyReLU(0.75)² + Aggressive Legal TTT → 1.1219 BPB",
     "state": "open",
-    "updatedAt": "2026-03-29T19:29:24Z",
+    "updatedAt": "2026-03-31T15:10:24Z",
     "headSha": "86f53b217c7db13c23db9c68222ce3d2a3efb3fc",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1092",
     "authorLogin": "teddyoweh"
@@ -19,24 +19,25 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Extends eXtended Self-Attention to all 11 layers with a LeakyReLU(0.75)^2 MLP and aggressive high-LR legal TTT adaptation.",
+    "summary": "Extends XSA to every layer, swaps the MLP to LeakyReLU(0.75)², and runs aggressive score-first legal TTT with 15× higher LR on validation chunks.",
     "tags": [
+      "val-only",
       "attention",
-      "architecture",
-      "training-schedule"
+      "optimizer",
+      "evaluation"
     ],
-    "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "usesValOnly": true,
+    "valOnlyReasoning": "Validation chunks are explicitly scored and then adapted via score-first legal TTT training (SGD on each chunk) rather than just evaluated.",
     "techniques": [
-      "Extended self-attention across all 11 layers",
-      "LeakyReLU(0.75)^2 activation in MLP",
-      "Score-first legal TTT with lr 0.03"
+      "XSA on all 11 layers",
+      "LeakyReLU(0.75)² MLP activations",
+      "Aggressive score-first legal TTT at LR 0.03"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": false,
-    "finalUsesValOnly": false,
-    "valOnlyMatchesCollector": true
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
   }
 }

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-31T11:43:03.561Z",
+  "generatedAt": "2026-03-31T15:14:25.583Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 425,
     "title": "Codex/runpod 2026 03 20 checkpoint",
     "state": "open",
-    "updatedAt": "2026-03-31T11:30:37Z",
-    "headSha": "bab64e4b3ed8580fc352926a4bf8982798a0d34a",
+    "updatedAt": "2026-03-31T14:47:20Z",
+    "headSha": "015b28a8bac26b37522b68aae23f074fb0adbc18",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/425",
     "authorLogin": "DeividasMat"
   },
@@ -20,18 +20,19 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "Single H100 run used twice-pass attention (ATTN_TWICE_ALPHA=0.05) and split eval lengths (2048 vs 1024) to balance roundtrip and TTT scoring before bigger tests.",
+    "summary": "1xH100 ablation uses ATTN_TWICE_ALPHA with split eval/TTT sequence lengths to balance roundtrip and TTT scoring before larger runs.",
     "tags": [
       "attention",
       "evaluation",
+      "regularization",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "ATTN_TWICE_ALPHA=0.05 twice-pass attention",
-      "Separate EVAL_SEQ_LEN=2048 and TTT_EVAL_SEQ_LEN=1024 evaluations",
-      "LoRA-TTT tuning in quick one-shard ablation"
+      "ATTN_TWICE_ALPHA=0.05 during short ablation runs",
+      "Split eval vs TTT sequences (2048 vs 1024)",
+      "10-minute single-shard validation-focused checkpoints"
     ]
   },
   "compatibility": {

@@ -2,7 +2,7 @@
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
-  "generatedAt": "2026-03-31T14:43:44.383Z",
+  "generatedAt": "2026-03-31T15:14:25.639Z",
   "prs": {
     "6": {
       "signature": "2026-03-20-pr-enrichment-v2-approach-first:11373420c1f50e6a83599fb25bb73f38a6555cb7:closed:2026-03-18T18:34:32Z",
@@ -1667,10 +1667,10 @@
       "headSha": "94aeda35513990af3d2854bf3fa57b4006f0b399"
     },
     "425": {
-      "signature": "2026-03-20-pr-enrichment-v2-approach-first:bab64e4b3ed8580fc352926a4bf8982798a0d34a:open:2026-03-31T11:30:37Z",
+      "signature": "2026-03-20-pr-enrichment-v2-approach-first:015b28a8bac26b37522b68aae23f074fb0adbc18:open:2026-03-31T14:47:20Z",
       "file": "items/pr-425.json",
-      "updatedAt": "2026-03-31T11:30:37Z",
-      "headSha": "bab64e4b3ed8580fc352926a4bf8982798a0d34a"
+      "updatedAt": "2026-03-31T14:47:20Z",
+      "headSha": "015b28a8bac26b37522b68aae23f074fb0adbc18"
     },
     "426": {
       "signature": "2026-03-20-pr-enrichment-v2-approach-first:2010a3929ffa0e7cc407fdc0d53ee8fde57b57a2:open:2026-03-22T14:04:59Z",
@@ -4409,9 +4409,9 @@
       "headSha": "cb7f4170b8a152cc2be270c49e56a1f4cb149323"
     },
     "1092": {
-      "signature": "2026-03-20-pr-enrichment-v2-approach-first:86f53b217c7db13c23db9c68222ce3d2a3efb3fc:open:2026-03-29T19:29:24Z",
+      "signature": "2026-03-20-pr-enrichment-v2-approach-first:86f53b217c7db13c23db9c68222ce3d2a3efb3fc:open:2026-03-31T15:10:24Z",
       "file": "items/pr-1092.json",
-      "updatedAt": "2026-03-29T19:29:24Z",
+      "updatedAt": "2026-03-31T15:10:24Z",
       "headSha": "86f53b217c7db13c23db9c68222ce3d2a3efb3fc"
     },
     "1094": {
@@ -4625,9 +4625,9 @@
       "headSha": "23c986cc1c6349f49aae80df3aae13c73f906b23"
     },
     "1143": {
-      "signature": "2026-03-20-pr-enrichment-v2-approach-first:07c721f05508e6a2ebbe6455de4dc14104d65d05:open:2026-03-31T13:42:52Z",
+      "signature": "2026-03-20-pr-enrichment-v2-approach-first:07c721f05508e6a2ebbe6455de4dc14104d65d05:closed:2026-03-31T14:44:56Z",
       "file": "items/pr-1143.json",
-      "updatedAt": "2026-03-31T13:42:52Z",
+      "updatedAt": "2026-03-31T14:44:56Z",
       "headSha": "07c721f05508e6a2ebbe6455de4dc14104d65d05"
     },
     "1144": {

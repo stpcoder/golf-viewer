@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T14:43:44.383Z",
+  "generatedAt": "2026-03-31T15:14:25.640Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -561,11 +561,11 @@
     {
       "prNumber": 1143,
       "title": "Record: Scylla (novel tokenizer) + Legal Score-First TTT (val_bpb: 1.08056553)",
-      "status": "open",
-      "updatedAt": "2026-03-31T13:42:52Z",
+      "status": "closed",
+      "updatedAt": "2026-03-31T14:44:56Z",
       "headSha": "07c721f05508e6a2ebbe6455de4dc14104d65d05",
-      "generatedAt": "2026-03-31T13:44:34.724Z",
-      "summary": "TokenMonster-derived Scylla tokenizer discovered via autoresearch powers a full-data FineWeb bundle evaluated with legal score-first TTT and metadata byte accounting.",
+      "generatedAt": "2026-03-31T15:14:13.624Z",
+      "summary": "Combines a TokenMonster-derived Scylla tokenizer chosen via autoresearch with full-data retokenization metadata and legal score-first TTT evaluation.",
       "tags": [
         "tokenization",
         "evaluation"
@@ -1398,22 +1398,23 @@
       "prNumber": 1092,
       "title": "XSA-All 11L + LeakyReLU(0.75)² + Aggressive Legal TTT → 1.1219 BPB",
       "status": "open",
-      "updatedAt": "2026-03-29T19:29:24Z",
+      "updatedAt": "2026-03-31T15:10:24Z",
       "headSha": "86f53b217c7db13c23db9c68222ce3d2a3efb3fc",
-      "generatedAt": "2026-03-29T19:31:02.637Z",
-      "summary": "Extends eXtended Self-Attention to all 11 layers with a LeakyReLU(0.75)^2 MLP and aggressive high-LR legal TTT adaptation.",
+      "generatedAt": "2026-03-31T15:14:19.381Z",
+      "summary": "Extends XSA to every layer, swaps the MLP to LeakyReLU(0.75)², and runs aggressive score-first legal TTT with 15× higher LR on validation chunks.",
       "tags": [
+        "val-only",
         "attention",
-        "architecture",
-        "training-schedule"
+        "optimizer",
+        "evaluation"
       ],
       "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": true
+        "valOnlyMatchesCollector": false
       },
       "file": "items/pr-1092.json"
     },
@@ -11997,13 +11998,14 @@
       "prNumber": 425,
       "title": "Codex/runpod 2026 03 20 checkpoint",
       "status": "open",
-      "updatedAt": "2026-03-31T11:30:37Z",
-      "headSha": "bab64e4b3ed8580fc352926a4bf8982798a0d34a",
-      "generatedAt": "2026-03-31T11:43:03.561Z",
-      "summary": "Single H100 run used twice-pass attention (ATTN_TWICE_ALPHA=0.05) and split eval lengths (2048 vs 1024) to balance roundtrip and TTT scoring before bigger tests.",
+      "updatedAt": "2026-03-31T14:47:20Z",
+      "headSha": "015b28a8bac26b37522b68aae23f074fb0adbc18",
+      "generatedAt": "2026-03-31T15:14:25.583Z",
+      "summary": "1xH100 ablation uses ATTN_TWICE_ALPHA with split eval/TTT sequence lengths to balance roundtrip and TTT scoring before larger runs.",
       "tags": [
         "attention",
         "evaluation",
+        "regularization",
         "non-record"
       ],
       "flags": {
