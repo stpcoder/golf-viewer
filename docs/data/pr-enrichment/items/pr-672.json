@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-31T18:14:56.280Z",
+  "generatedAt": "2026-03-31T22:15:53.866Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 672,
     "title": "Record: 30ep Cosine TTT on LeakyReLU² stack (3-seed mean val_bpb=1.0781)",
     "state": "open",
-    "updatedAt": "2026-03-31T18:10:29Z",
+    "updatedAt": "2026-03-31T22:12:34Z",
     "headSha": "3f9fa54e5975dba72598fa52828f496f803b2531",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/672",
     "authorLogin": "andrewbaggio1"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Extends the LeakyReLU² 11-layer stack with 30-epoch cosine TTT using AdamW layer-wise LR groups before sliding-window evaluation.",
+    "summary": "Extends the LeakyReLU² / SmearGate stack from PR #518 with a 30-epoch cosine TTT phase to improve post-training BPB.",
     "tags": [
       "training-schedule",
       "architecture",
-      "optimizer"
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "30-epoch cosine TTT with AdamW and layer-specific LR scalings",
-      "LeakyReLU² + BigramHash + XSA4 stack with Partial RoPE and GQA",
-      "Late QAT/EMA/SWA regularization on int6 artifacts"
+      "LeakyReLU² + SmearGate + Partial RoPE stack",
+      "30-epoch cosine TTT fine-tuning",
+      "Sliding-window eval (stride=64)"
     ]
   },
   "compatibility": {

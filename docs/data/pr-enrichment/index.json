@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-31T21:45:50.984Z",
+  "generatedAt": "2026-03-31T22:15:53.957Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1202,
+      "title": "Record: Unified Attention + FA3 + Legal TTT (val_bpb=1.1412, 3-seed)",
+      "status": "open",
+      "updatedAt": "2026-03-31T22:14:27Z",
+      "headSha": "2882f3a43af9c8f42c7b4592d3bf9968766f3f8f",
+      "generatedAt": "2026-03-31T22:15:50.182Z",
+      "summary": "Unified attention reallocates QKV bytes to the MLP while FA3 head-dim padding and legal score-first TTT speed validation adaptation.",
+      "tags": [
+        "val-only",
+        "attention",
+        "architecture",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": false
+      },
+      "file": "items/pr-1202.json"
+    },
     {
       "prNumber": 1201,
       "title": "records: add 2026-03-27 TrigramHash run, harden quantization safety, and clean docs",
@@ -8436,14 +8460,14 @@
       "prNumber": 672,
       "title": "Record: 30ep Cosine TTT on LeakyReLU² stack (3-seed mean val_bpb=1.0781)",
       "status": "open",
-      "updatedAt": "2026-03-31T18:10:29Z",
+      "updatedAt": "2026-03-31T22:12:34Z",
       "headSha": "3f9fa54e5975dba72598fa52828f496f803b2531",
-      "generatedAt": "2026-03-31T18:14:56.280Z",
-      "summary": "Extends the LeakyReLU² 11-layer stack with 30-epoch cosine TTT using AdamW layer-wise LR groups before sliding-window evaluation.",
+      "generatedAt": "2026-03-31T22:15:53.866Z",
+      "summary": "Extends the LeakyReLU² / SmearGate stack from PR #518 with a 30-epoch cosine TTT phase to improve post-training BPB.",
       "tags": [
         "training-schedule",
         "architecture",
-        "optimizer"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
