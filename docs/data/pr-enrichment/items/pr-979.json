@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-27T20:18:16.847Z",
+  "generatedAt": "2026-03-31T14:13:52.235Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 979,
     "title": "Record: 1.1387 BPB — 11L LeakyReLU² + Early QAT@0.5 + GPTQ-lite + EMA",
     "state": "open",
-    "updatedAt": "2026-03-27T19:59:19Z",
-    "headSha": "b0bcfbaac4e8c86cfdb1ab63e4ab3c4a78a96b87",
+    "updatedAt": "2026-03-31T13:48:28Z",
+    "headSha": "0f2d8a620946bcf6609f3d7b9ebe57e5cf22a875",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/979",
     "authorLogin": "0xadvait"
   },
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11L 512-dim transformer with LeakyReLU², early LR-scale 0.5 STE int6 QAT, and GPTQ-lite per-row clip search before export.",
+    "summary": "11-layer 512d transformer couples Muon+AdamW with EMA and early STE QAT at LR scale 0.5 plus GPTQ-lite per-row int6/8 quantization before sliding eval.",
     "tags": [
       "quantization",
-      "architecture",
-      "training-schedule"
+      "optimizer",
+      "evaluation"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "valOnlyReasoning": "Training used the standard dataset rather than a validation-only regimen.",
     "techniques": [
-      "Early LR-scale 0.5 STE int6 QAT during warmdown",
-      "GPTQ-lite per-row clip search for int6 attn/MLP weights",
-      "LeakyReLU² activations with U-Net skip links"
+      "Early STE QAT triggered at LR scale 0.5 for ~1400 int6 steps",
+      "GPTQ-lite per-row clip search with mixed int6/int8 export and zstd compression",
+      "Muon+AdamW with EMA and sliding-window stride-64 evaluation"
     ]
   },
   "compatibility": {
