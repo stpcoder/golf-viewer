@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-01T04:19:33.081Z",
+  "generatedAt": "2026-04-01T04:49:25.361Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1208,
-    "title": "Nightcrawler — 1.17651313 val_bpb (seed 444)",
+    "title": "Nightcrawler — 1.176bpb   10mb ",
     "state": "open",
-    "updatedAt": "2026-04-01T04:17:29Z",
-    "headSha": "6f8e09379ad12584f20f925fdcced3462f706501",
+    "updatedAt": "2026-04-01T04:25:31Z",
+    "headSha": "bcd26f765af9462bf7cde9178772f4940128181f",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1208",
     "authorLogin": "newjordan"
   },
@@ -25,15 +25,15 @@
     "submissionCount": 7
   },
   "output": {
-    "summary": "Adds a fifth flat transformer layer on each side of the crawler bottleneck and shares TAP encoder connections across crawler loops.",
+    "summary": "Deepens the crawler backbone by adding a fifth flat transformer layer on each side of the bottleneck with shared TAP encoder links to every loop.",
     "tags": [
       "architecture"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Extra flat layer per crawler side",
-      "Shared TAP encoder links for each loop"
+      "5F+1C+5F topology",
+      "shared TAP encoder connections per loop"
     ]
   },
   "compatibility": {

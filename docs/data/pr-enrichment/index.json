@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-04-01T04:20:01.598Z",
+  "generatedAt": "2026-04-01T04:49:30.663Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
       "prNumber": 1208,
-      "title": "Nightcrawler — 1.17651313 val_bpb (seed 444)",
+      "title": "Nightcrawler — 1.176bpb   10mb ",
       "status": "open",
-      "updatedAt": "2026-04-01T04:17:29Z",
-      "headSha": "6f8e09379ad12584f20f925fdcced3462f706501",
-      "generatedAt": "2026-04-01T04:19:33.081Z",
-      "summary": "Adds a fifth flat transformer layer on each side of the crawler bottleneck and shares TAP encoder connections across crawler loops.",
+      "updatedAt": "2026-04-01T04:25:31Z",
+      "headSha": "bcd26f765af9462bf7cde9178772f4940128181f",
+      "generatedAt": "2026-04-01T04:49:25.361Z",
+      "summary": "Deepens the crawler backbone by adding a fifth flat transformer layer on each side of the bottleneck with shared TAP encoder links to every loop.",
       "tags": [
         "architecture"
       ],
@@ -1772,13 +1772,13 @@
       "prNumber": 1105,
       "title": "Record: Fused MLP (Triton+CUTLASS EVT) + Fast Causal N-Gram Tilt & Subword Certainty— 1.1052 BPB (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-01T04:18:52Z",
+      "updatedAt": "2026-04-01T04:46:06Z",
       "headSha": "d854d6256eae65f973882ad006a4c0ebf8c24dca",
-      "generatedAt": "2026-04-01T04:20:01.433Z",
-      "summary": "Fuses Triton TMA forward + CUTLASS EVT backward MLP kernels, widens MLP 3.5×, and uses Hessian-driven mixed int5/int6 quantization with Brotli packaging.",
+      "generatedAt": "2026-04-01T04:49:30.504Z",
+      "summary": "Fuses Triton TMA forward + CUTLASS EVT backward MLP kernels, widens MLP 3.5× with Hessian-guided mixed int5/int6 quant, and adds a fast causal n-gram tilt.",
       "tags": [
-        "architecture",
         "quantization",
+        "architecture",
         "evaluation"
       ],
       "flags": {

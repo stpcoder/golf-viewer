@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-01T04:19:25.635Z",
+  "generatedAt": "2026-04-01T04:49:15.910Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -3444,7 +3444,7 @@
       },
       "pr": {
         "number": 1208,
-        "title": "Nightcrawler — 1.17651313 val_bpb (seed 444)",
+        "title": "Nightcrawler — 1.176bpb   10mb ",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -3452,8 +3452,8 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-04-01T04:16:49Z",
-        "updatedAt": "2026-04-01T04:17:29Z",
-        "headSha": "6f8e09379ad12584f20f925fdcced3462f706501",
+        "updatedAt": "2026-04-01T04:25:31Z",
+        "headSha": "bcd26f765af9462bf7cde9178772f4940128181f",
         "headRepo": "newjordan/parameter-golf-1"
       },
       "links": {
@@ -3598,7 +3598,7 @@
       },
       "pr": {
         "number": 1208,
-        "title": "Nightcrawler — 1.17651313 val_bpb (seed 444)",
+        "title": "Nightcrawler — 1.176bpb   10mb ",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -3606,8 +3606,8 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-04-01T04:16:49Z",
-        "updatedAt": "2026-04-01T04:17:29Z",
-        "headSha": "6f8e09379ad12584f20f925fdcced3462f706501",
+        "updatedAt": "2026-04-01T04:25:31Z",
+        "headSha": "bcd26f765af9462bf7cde9178772f4940128181f",
         "headRepo": "newjordan/parameter-golf-1"
       },
       "links": {
@@ -6763,7 +6763,7 @@
       },
       "pr": {
         "number": 1208,
-        "title": "Nightcrawler — 1.17651313 val_bpb (seed 444)",
+        "title": "Nightcrawler — 1.176bpb   10mb ",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -6771,8 +6771,8 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-04-01T04:16:49Z",
-        "updatedAt": "2026-04-01T04:17:29Z",
-        "headSha": "6f8e09379ad12584f20f925fdcced3462f706501",
+        "updatedAt": "2026-04-01T04:25:31Z",
+        "headSha": "bcd26f765af9462bf7cde9178772f4940128181f",
         "headRepo": "newjordan/parameter-golf-1"
       },
       "links": {
@@ -10159,7 +10159,7 @@
         "authorLogin": "abaybektursun",
         "authorName": null,
         "createdAt": "2026-03-30T00:03:19Z",
-        "updatedAt": "2026-04-01T04:18:52Z",
+        "updatedAt": "2026-04-01T04:46:06Z",
         "headSha": "d854d6256eae65f973882ad006a4c0ebf8c24dca",
         "headRepo": "abaybektursun/parameter-golf"
       },
@@ -10459,7 +10459,7 @@
       },
       "pr": {
         "number": 1208,
-        "title": "Nightcrawler — 1.17651313 val_bpb (seed 444)",
+        "title": "Nightcrawler — 1.176bpb   10mb ",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -10467,8 +10467,8 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-04-01T04:16:49Z",
-        "updatedAt": "2026-04-01T04:17:29Z",
-        "headSha": "6f8e09379ad12584f20f925fdcced3462f706501",
+        "updatedAt": "2026-04-01T04:25:31Z",
+        "headSha": "bcd26f765af9462bf7cde9178772f4940128181f",
         "headRepo": "newjordan/parameter-golf-1"
       },
       "links": {
@@ -30694,7 +30694,7 @@
         "date": "2026-04-01T00:00:00Z"
       },
       "metrics": {
-        "valBpb": 1.1757,
+        "valBpb": 1.1761,
         "valLoss": null,
         "preQuantValBpb": null,
         "preQuantValLoss": null,
@@ -30716,7 +30716,7 @@
       },
       "pr": {
         "number": 1208,
-        "title": "Nightcrawler — 1.17651313 val_bpb (seed 444)",
+        "title": "Nightcrawler — 1.176bpb   10mb ",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -30724,16 +30724,16 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-04-01T04:16:49Z",
-        "updatedAt": "2026-04-01T04:17:29Z",
-        "headSha": "6f8e09379ad12584f20f925fdcced3462f706501",
+        "updatedAt": "2026-04-01T04:25:31Z",
+        "headSha": "bcd26f765af9462bf7cde9178772f4940128181f",
         "headRepo": "newjordan/parameter-golf-1"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/6f8e09379ad12584f20f925fdcced3462f706501/records/track_10min_16mb/2026-04-01_Nightcrawler_8xH100/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/6f8e09379ad12584f20f925fdcced3462f706501/records/track_10min_16mb/2026-04-01_Nightcrawler_8xH100/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/6f8e09379ad12584f20f925fdcced3462f706501/records/track_10min_16mb/2026-04-01_Nightcrawler_8xH100/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/6f8e09379ad12584f20f925fdcced3462f706501/records/track_10min_16mb/2026-04-01_Nightcrawler_8xH100/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/6f8e09379ad12584f20f925fdcced3462f706501/records/track_10min_16mb/2026-04-01_Nightcrawler_8xH100",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/bcd26f765af9462bf7cde9178772f4940128181f/records/track_10min_16mb/2026-04-01_Nightcrawler_8xH100/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/bcd26f765af9462bf7cde9178772f4940128181f/records/track_10min_16mb/2026-04-01_Nightcrawler_8xH100/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/bcd26f765af9462bf7cde9178772f4940128181f/records/track_10min_16mb/2026-04-01_Nightcrawler_8xH100/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/bcd26f765af9462bf7cde9178772f4940128181f/records/track_10min_16mb/2026-04-01_Nightcrawler_8xH100/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/bcd26f765af9462bf7cde9178772f4940128181f/records/track_10min_16mb/2026-04-01_Nightcrawler_8xH100",
         "pr": "https://github.com/openai/parameter-golf/pull/1208",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
@@ -32487,7 +32487,7 @@
       },
       "pr": {
         "number": 1208,
-        "title": "Nightcrawler — 1.17651313 val_bpb (seed 444)",
+        "title": "Nightcrawler — 1.176bpb   10mb ",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -32495,8 +32495,8 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-04-01T04:16:49Z",
-        "updatedAt": "2026-04-01T04:17:29Z",
-        "headSha": "6f8e09379ad12584f20f925fdcced3462f706501",
+        "updatedAt": "2026-04-01T04:25:31Z",
+        "headSha": "bcd26f765af9462bf7cde9178772f4940128181f",
         "headRepo": "newjordan/parameter-golf-1"
       },
       "links": {
@@ -58364,7 +58364,7 @@
       },
       "pr": {
         "number": 1208,
-        "title": "Nightcrawler — 1.17651313 val_bpb (seed 444)",
+        "title": "Nightcrawler — 1.176bpb   10mb ",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -58372,8 +58372,8 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-04-01T04:16:49Z",
-        "updatedAt": "2026-04-01T04:17:29Z",
-        "headSha": "6f8e09379ad12584f20f925fdcced3462f706501",
+        "updatedAt": "2026-04-01T04:25:31Z",
+        "headSha": "bcd26f765af9462bf7cde9178772f4940128181f",
         "headRepo": "newjordan/parameter-golf-1"
       },
       "links": {
