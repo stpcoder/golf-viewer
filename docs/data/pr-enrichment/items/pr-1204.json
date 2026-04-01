@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-01T00:47:44.885Z",
+  "generatedAt": "2026-04-01T18:24:23.882Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1204,
     "title": "Record: ParallelResiduals + MiniDepthRecurrence, 1.1063 BPB / 1.8679 nats, -0.0072 vs PR #1179, -0.0143 vs merged SOTA",
     "state": "open",
-    "updatedAt": "2026-04-01T00:46:06Z",
+    "updatedAt": "2026-04-01T18:02:58Z",
     "headSha": "ae2f7b7f7b58ec0ae6bd6154f5cb3f38a6fda0c3",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1204",
     "authorLogin": "msisovic"
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines parallel dual-lane residual routing from layer 7 with mid-training mini-depth recurrence (layers 4-5) and GPTQ mixed quantization.",
+    "summary": "Parallel residual lanes from layer7 plus a delayed mini-depth recurrence on layers4-5 layered atop an autoregressive GPTQ mixed-quant path.",
     "tags": [
       "architecture",
       "training-schedule",
-      "quantization",
-      "mixed-precision"
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Parallel residual lanes with learned read/write mixing from layer 7 onward",
-      "Mini depth recurrence on layers 4-5 enabled mid-training with untied MLPs",
-      "Autoregressive self-generated GPTQ mixed quantization pipeline"
+      "Parallel residual routing starting at layer7",
+      "Delayed mini-depth recurrence on layers4-5 with untied MLPs",
+      "Autoregressive GPTQ mixed quantization pipeline"
     ]
   },
   "compatibility": {
