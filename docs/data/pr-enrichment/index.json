@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-31T23:16:39.449Z",
+  "generatedAt": "2026-04-01T00:47:51.668Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1204,
+      "title": "Record: ParallelResiduals + MiniDepthRecurrence, 1.1063 BPB / 1.8679 nats, -0.0072 vs PR #1179, -0.0143 vs merged SOTA",
+      "status": "open",
+      "updatedAt": "2026-04-01T00:46:06Z",
+      "headSha": "ae2f7b7f7b58ec0ae6bd6154f5cb3f38a6fda0c3",
+      "generatedAt": "2026-04-01T00:47:44.885Z",
+      "summary": "Combines parallel dual-lane residual routing from layer 7 with mid-training mini-depth recurrence (layers 4-5) and GPTQ mixed quantization.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "quantization",
+        "mixed-precision"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1204.json"
+    },
     {
       "prNumber": 1203,
       "title": "Add non-record recurrent 0011+g2 R768 submission",
@@ -497,15 +521,15 @@
       "prNumber": 1179,
       "title": "Record: Split-LR + BigramHash(2816x160) + Full GPTQ + Brotli — val_bpb 1.1105 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-31T11:17:43Z",
+      "updatedAt": "2026-04-01T00:30:48Z",
       "headSha": "6772e6ae8a761241a88187903a74e44dc5d92a56",
-      "generatedAt": "2026-03-31T11:42:40.641Z",
-      "summary": "Split-LR with wider BigramHash, sigmoid-gated U-Net skips, and soft-round QAT, paired with Brotli byte-shuffle plus minified code to fit 16MB.",
+      "generatedAt": "2026-04-01T00:47:51.498Z",
+      "summary": "Split-LR with wider BigramHash, sigmoid-gated U-Net skips, and soft-round QAT feed full Hessian GPTQ with Brotli/minified artifact packaging.",
       "tags": [
+        "optimizer",
         "architecture",
-        "training-schedule",
-        "compression",
-        "quantization"
+        "quantization",
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,

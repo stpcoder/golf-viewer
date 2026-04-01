@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-01T00:47:44.885Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1204,
+    "title": "Record: ParallelResiduals + MiniDepthRecurrence, 1.1063 BPB / 1.8679 nats, -0.0072 vs PR #1179, -0.0143 vs merged SOTA",
+    "state": "open",
+    "updatedAt": "2026-04-01T00:46:06Z",
+    "headSha": "ae2f7b7f7b58ec0ae6bd6154f5cb3f38a6fda0c3",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1204",
+    "authorLogin": "msisovic"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-31_ParallelResiduals_MiniDepthRecurrence/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Combines parallel dual-lane residual routing from layer 7 with mid-training mini-depth recurrence (layers 4-5) and GPTQ mixed quantization.",
+    "tags": [
+      "architecture",
+      "training-schedule",
+      "quantization",
+      "mixed-precision"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Parallel residual lanes with learned read/write mixing from layer 7 onward",
+      "Mini depth recurrence on layers 4-5 enabled mid-training with untied MLPs",
+      "Autoregressive self-generated GPTQ mixed quantization pipeline"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

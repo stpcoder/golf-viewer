@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-01T00:17:17.154Z",
+  "generatedAt": "2026-04-01T00:47:35.928Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -10102,6 +10102,83 @@
       }
     },
     {
+      "id": "record-records-track_10min_16mb-2026-03-31_ParallelResiduals_MiniDepthRecurrence",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-31_ParallelResiduals_MiniDepthRecurrence",
+        "folderPath": "records/track_10min_16mb/2026-03-31_ParallelResiduals_MiniDepthRecurrence",
+        "submissionPath": "records/track_10min_16mb/2026-03-31_ParallelResiduals_MiniDepthRecurrence/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-31_ParallelResiduals_MiniDepthRecurrence/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-31_ParallelResiduals_MiniDepthRecurrence/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-31_ParallelResiduals_MiniDepthRecurrence/train_gpt.py"
+      },
+      "submission": {
+        "author": "Marko Sisovic",
+        "githubId": "msisovic",
+        "name": "Parallel Residuals + Mini Depth Recurrence",
+        "blurb": "Built from PR #1179 with AR self-generated GPTQ and mixed quantization ported from PR #1105. Adds parallel residual routing from layer 7 plus delayed mini depth recurrence on layers 4,5 with untied repeated MLPs. Exact 3-seed mean: 1.10625353 BPB / 1.86785780 nats, improving on PR #1179 by 0.00722646 nats and on the current merged SOTA by 0.01432073 nats.",
+        "date": "2026-03-31"
+      },
+      "metrics": {
+        "valBpb": 1.10625353,
+        "valLoss": 1.8678578,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15946657,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1204,
+        "title": "Record: ParallelResiduals + MiniDepthRecurrence, 1.1063 BPB / 1.8679 nats, -0.0072 vs PR #1179, -0.0143 vs merged SOTA",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1204",
+        "authorLogin": "msisovic",
+        "authorName": null,
+        "createdAt": "2026-04-01T00:46:06Z",
+        "updatedAt": "2026-04-01T00:46:06Z",
+        "headSha": "ae2f7b7f7b58ec0ae6bd6154f5cb3f38a6fda0c3",
+        "headRepo": "msisovic/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/ae2f7b7f7b58ec0ae6bd6154f5cb3f38a6fda0c3/records/track_10min_16mb/2026-03-31_ParallelResiduals_MiniDepthRecurrence/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/ae2f7b7f7b58ec0ae6bd6154f5cb3f38a6fda0c3/records/track_10min_16mb/2026-03-31_ParallelResiduals_MiniDepthRecurrence/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/ae2f7b7f7b58ec0ae6bd6154f5cb3f38a6fda0c3/records/track_10min_16mb/2026-03-31_ParallelResiduals_MiniDepthRecurrence/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/ae2f7b7f7b58ec0ae6bd6154f5cb3f38a6fda0c3/records/track_10min_16mb/2026-03-31_ParallelResiduals_MiniDepthRecurrence/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/ae2f7b7f7b58ec0ae6bd6154f5cb3f38a6fda0c3/records/track_10min_16mb/2026-03-31_ParallelResiduals_MiniDepthRecurrence",
+        "pr": "https://github.com/openai/parameter-golf/pull/1204",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_non_record_16mb-2026-03-24_11L_GEPA_12kSteps_PureInt6_LegalTTT",
       "source": "pull_request",
       "status": "open",
@@ -10621,7 +10698,7 @@
         "authorLogin": "dexhunter",
         "authorName": null,
         "createdAt": "2026-03-31T11:16:23Z",
-        "updatedAt": "2026-03-31T11:17:43Z",
+        "updatedAt": "2026-04-01T00:30:48Z",
         "headSha": "6772e6ae8a761241a88187903a74e44dc5d92a56",
         "headRepo": "dexhunter/parameter-golf"
       },
