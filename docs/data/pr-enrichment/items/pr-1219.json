@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-01T13:22:25.140Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1219,
+    "title": "Record: PR #1105 + window attn + mixed seq_len — 1.1084 bpb (3-seed mean) 1.1084 bpb",
+    "state": "open",
+    "updatedAt": "2026-04-01T13:21:37Z",
+    "headSha": "d23a8aac770d3dbc9c8badf5655730e11505a19d",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1219",
+    "authorLogin": "Gusanidas"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-01_WindowAttn_MixedSeq/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Adds FA3 window attention on select layers, mixed seq-length training, and train-data GPTQ calibration with sliding eval detection for the leaderboard run.",
+    "tags": [
+      "attention",
+      "training-schedule",
+      "quantization",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "FA3 window attention on alternating layers",
+      "Mixed seq_len training across GPUs (2048x36 + 6144x10)",
+      "Train-data GPTQ calibration with auto eval seq_len detection and sliding eval"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

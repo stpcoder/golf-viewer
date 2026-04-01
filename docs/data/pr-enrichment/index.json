@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-04-01T12:52:39.078Z",
+  "generatedAt": "2026-04-01T13:22:25.322Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1219,
+      "title": "Record: PR #1105 + window attn + mixed seq_len — 1.1084 bpb (3-seed mean) 1.1084 bpb",
+      "status": "open",
+      "updatedAt": "2026-04-01T13:21:37Z",
+      "headSha": "d23a8aac770d3dbc9c8badf5655730e11505a19d",
+      "generatedAt": "2026-04-01T13:22:25.140Z",
+      "summary": "Adds FA3 window attention on select layers, mixed seq-length training, and train-data GPTQ calibration with sliding eval detection for the leaderboard run.",
+      "tags": [
+        "attention",
+        "training-schedule",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1219.json"
+    },
     {
       "prNumber": 1218,
       "title": "Record: 4096-Vocab + 4.0-MLP-mult + 0.085-WD + Simplifications — val_bpb 1.09785 (3-seed mean)",
