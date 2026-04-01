@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-01T05:49:23.988Z",
+  "generatedAt": "2026-04-01T08:20:43.815Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1212,
     "title": "Record: Window Attention + Mixed Seq_Len Training, bpb 1.1108, eval at 6144 (5-seed mean)",
     "state": "open",
-    "updatedAt": "2026-04-01T05:44:17Z",
-    "headSha": "2fc09fc7208e1dd100c1dea4f23d4ac754ac6ef7",
+    "updatedAt": "2026-04-01T07:52:33Z",
+    "headSha": "482b3b3566b1d950003df6777e7683d1fde2a576",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1212",
     "authorLogin": "Gusanidas"
   },
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Window attention on even layers plus mixed seq_len GPUs lets the model see long context while keeping compute low, aided by fused Triton MLP and sigmoid-gated skips.",
+    "summary": "Alternates FlashAttention windowed/full layers with mixed per-GPU seq lengths (2048+6144) plus fused MLP/skips to train long-context models efficiently.",
     "tags": [
       "attention",
       "training-schedule",
-      "architecture",
-      "compression"
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "FlashAttention3 windowed layers interleaved with full attention",
-      "5x2048 + 3x6144 mixed sequence lengths per step",
-      "sigmoid-gated skips and fused Triton LeakyReLU² MLP"
+      "Alternating FlashAttention windowed+full layers",
+      "Mixed per-GPU seq_len schedule (5x2048 + 3x6144)",
+      "Fused Triton LeakyReLU² MLP with sigmoid-gated skips"
     ]
   },
   "compatibility": {

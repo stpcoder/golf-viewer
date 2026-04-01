@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-01T07:50:28.898Z",
+  "generatedAt": "2026-04-01T08:20:43.996Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -30,15 +30,14 @@
       "prNumber": 1212,
       "title": "Record: Window Attention + Mixed Seq_Len Training, bpb 1.1108, eval at 6144 (5-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-01T05:44:17Z",
-      "headSha": "2fc09fc7208e1dd100c1dea4f23d4ac754ac6ef7",
-      "generatedAt": "2026-04-01T05:49:23.988Z",
-      "summary": "Window attention on even layers plus mixed seq_len GPUs lets the model see long context while keeping compute low, aided by fused Triton MLP and sigmoid-gated skips.",
+      "updatedAt": "2026-04-01T07:52:33Z",
+      "headSha": "482b3b3566b1d950003df6777e7683d1fde2a576",
+      "generatedAt": "2026-04-01T08:20:43.815Z",
+      "summary": "Alternates FlashAttention windowed/full layers with mixed per-GPU seq lengths (2048+6144) plus fused MLP/skips to train long-context models efficiently.",
       "tags": [
         "attention",
         "training-schedule",
-        "architecture",
-        "compression"
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
