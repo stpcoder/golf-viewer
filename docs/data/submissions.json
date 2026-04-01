@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-01T00:47:35.928Z",
+  "generatedAt": "2026-04-01T01:17:43.239Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -8641,7 +8641,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-03-25_CosineTTT30ep_SwiGLU_8xH100",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -8689,14 +8689,14 @@
       "pr": {
         "number": 672,
         "title": "Record: 30ep Cosine TTT on LeakyReLU² stack (3-seed mean val_bpb=1.0781)",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/672",
         "authorLogin": "andrewbaggio1",
         "authorName": null,
         "createdAt": "2026-03-25T03:22:29Z",
-        "updatedAt": "2026-03-31T22:12:34Z",
+        "updatedAt": "2026-04-01T01:09:20Z",
         "headSha": "3f9fa54e5975dba72598fa52828f496f803b2531",
         "headRepo": "andrewbaggio1/parameter-golf"
       },

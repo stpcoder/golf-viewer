@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-01T00:47:51.668Z",
+  "generatedAt": "2026-04-01T01:17:50.211Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -8506,15 +8506,15 @@
     {
       "prNumber": 672,
       "title": "Record: 30ep Cosine TTT on LeakyReLU² stack (3-seed mean val_bpb=1.0781)",
-      "status": "open",
-      "updatedAt": "2026-03-31T22:12:34Z",
+      "status": "closed",
+      "updatedAt": "2026-04-01T01:09:20Z",
       "headSha": "3f9fa54e5975dba72598fa52828f496f803b2531",
-      "generatedAt": "2026-03-31T22:15:53.866Z",
-      "summary": "Extends the LeakyReLU² / SmearGate stack from PR #518 with a 30-epoch cosine TTT phase to improve post-training BPB.",
+      "generatedAt": "2026-04-01T01:17:50.116Z",
+      "summary": "Apply 30-epoch cosine TTT atop the LeakyReLU² stack from PR #518 while keeping its architecture intact.",
       "tags": [
-        "training-schedule",
         "architecture",
-        "evaluation"
+        "training-schedule",
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,
