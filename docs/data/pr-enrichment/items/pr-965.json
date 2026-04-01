@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-30T16:36:59.263Z",
+  "generatedAt": "2026-04-01T18:54:25.763Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 965,
     "title": "Architectural Record: 1.11837 BPB via KGIIR Trajectory Mixing",
     "state": "open",
-    "updatedAt": "2026-03-30T16:13:56Z",
+    "updatedAt": "2026-04-01T18:35:37Z",
     "headSha": "a91415ab39f2865e667f467a9e9a5e6acdb29eec",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/965",
     "authorLogin": "Adam-Jacuch"
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Adds a fused gated causal 4-tap mixer before Q/K/V to mix recent hidden states and ease short-range dependencies for low-budget attention.",
+    "summary": "Adds a fused gated 4-tap temporal mixer before Q/K/V to offload short-range context from attention in the 16MB/600s regime.",
     "tags": [
       "architecture",
       "attention"
@@ -27,9 +27,8 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "gated per-channel 4-tap mixer fused before Q/K/V",
-      "mixes current timestep with three past states to offload local dependency handling",
-      "keeps 88 ms step time on 8×H100"
+      "gated causal 4-tap temporal mixing",
+      "fusion-friendly pre-QKV module"
     ]
   },
   "compatibility": {
