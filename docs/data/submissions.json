@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-01T21:25:16.917Z",
+  "generatedAt": "2026-04-01T21:55:30.525Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -13729,7 +13729,7 @@
     {
       "id": "record-records-track_non_record_16mb-2026-03-29_CoprimeMultiShardLoader_1-1180",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "non-record",
       "track": {
         "path": "records/track_non_record_16mb",
@@ -13777,14 +13777,14 @@
       "pr": {
         "number": 1058,
         "title": "Publish coprime multi-shard loader candidate 1.11796805 as non-record package",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/1058",
         "authorLogin": "resouer",
         "authorName": null,
         "createdAt": "2026-03-29T05:38:25Z",
-        "updatedAt": "2026-03-29T08:48:17Z",
+        "updatedAt": "2026-04-01T21:25:31Z",
         "headSha": "ee16ec22f18b1632e48194aea9b29fdc5cf2be6c",
         "headRepo": "resouer/parameter-golf"
       },

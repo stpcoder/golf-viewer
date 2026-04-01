@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-29T08:58:08.980Z",
+  "generatedAt": "2026-04-01T21:55:40.288Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1058,
     "title": "Publish coprime multi-shard loader candidate 1.11796805 as non-record package",
-    "state": "open",
-    "updatedAt": "2026-03-29T08:48:17Z",
+    "state": "closed",
+    "updatedAt": "2026-04-01T21:25:31Z",
     "headSha": "ee16ec22f18b1632e48194aea9b29fdc5cf2be6c",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1058",
     "authorLogin": "resouer"
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Packages a coprime multi-shard loader run with a clean no-TTT 16MB boundary and int6 sliding-window evaluation for the non-record release.",
+    "summary": "Coprime multi-shard loader with clean no-TTT boundary packaged as 16MB non-record assembly for int6 sliding-window evaluation.",
     "tags": [
       "non-record",
       "compression",
+      "quantization",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "coprime multi-shard loader boundary",
-      "int6 sliding-window eval",
-      "no-TTT clean packaging"
+      "Coprime multi-shard loader boundary",
+      "Clean no-TTT 16MB packaging",
+      "Int6 sliding-window evaluation"
     ]
   },
   "compatibility": {
