@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-01T10:21:22.279Z",
+  "generatedAt": "2026-04-01T10:51:31.960Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -10093,6 +10093,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/99b080be7ee758616038526f297e9e4f8680734c/records/track_10min_16mb/2026-03-31_SLOT_SplitLR_GPTQ_XSA_1.1015/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/99b080be7ee758616038526f297e9e4f8680734c/records/track_10min_16mb/2026-03-31_SLOT_SplitLR_GPTQ_XSA_1.1015",
         "pr": "https://github.com/openai/parameter-golf/pull/1172",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-04-01_MuonEqR_ContextSLOT_QKGain5",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-04-01_MuonEqR_ContextSLOT_QKGain5",
+        "folderPath": "records/track_10min_16mb/2026-04-01_MuonEqR_ContextSLOT_QKGain5",
+        "submissionPath": "records/track_10min_16mb/2026-04-01_MuonEqR_ContextSLOT_QKGain5/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-04-01_MuonEqR_ContextSLOT_QKGain5/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-04-01_MuonEqR_ContextSLOT_QKGain5/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-04-01_MuonEqR_ContextSLOT_QKGain5/train_gpt.py"
+      },
+      "submission": {
+        "author": "bigbag",
+        "githubId": "bigbag",
+        "name": "MuonEq-R + Context-Only SLOT + QK_GAIN=5.0",
+        "blurb": null,
+        "date": "2026-04-01"
+      },
+      "metrics": {
+        "valBpb": 1.10271599,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15796779,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1217,
+        "title": "Record: MuonEq-R + Context-Only SLOT + QK_GAIN=5.0 — val_bpb 1.1027 (3-seed mean)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1217",
+        "authorLogin": "bigbag",
+        "authorName": null,
+        "createdAt": "2026-04-01T10:37:01Z",
+        "updatedAt": "2026-04-01T10:39:26Z",
+        "headSha": "1b462047cba314e27afefd29c42463bb8ad06985",
+        "headRepo": "bigbag/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/1b462047cba314e27afefd29c42463bb8ad06985/records/track_10min_16mb/2026-04-01_MuonEqR_ContextSLOT_QKGain5/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/1b462047cba314e27afefd29c42463bb8ad06985/records/track_10min_16mb/2026-04-01_MuonEqR_ContextSLOT_QKGain5/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/1b462047cba314e27afefd29c42463bb8ad06985/records/track_10min_16mb/2026-04-01_MuonEqR_ContextSLOT_QKGain5/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/1b462047cba314e27afefd29c42463bb8ad06985/records/track_10min_16mb/2026-04-01_MuonEqR_ContextSLOT_QKGain5/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/1b462047cba314e27afefd29c42463bb8ad06985/records/track_10min_16mb/2026-04-01_MuonEqR_ContextSLOT_QKGain5",
+        "pr": "https://github.com/openai/parameter-golf/pull/1217",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

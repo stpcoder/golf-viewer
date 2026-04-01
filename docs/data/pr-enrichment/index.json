@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-04-01T10:21:31.654Z",
+  "generatedAt": "2026-04-01T10:51:38.039Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1217,
+      "title": "Record: MuonEq-R + Context-Only SLOT + QK_GAIN=5.0 — val_bpb 1.1027 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-04-01T10:39:26Z",
+      "headSha": "1b462047cba314e27afefd29c42463bb8ad06985",
+      "generatedAt": "2026-04-01T10:51:37.856Z",
+      "summary": "Combines MuonEq-R's row-normalized Newton-Schulz, higher QK_GAIN_INIT, and a causal context-only SLOT delta update during sliding-window eval.",
+      "tags": [
+        "optimizer",
+        "muon",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1217.json"
+    },
     {
       "prNumber": 1216,
       "title": "11L INT6 XSA-all + EMA + VE — ttt_bpb 1.1487",
