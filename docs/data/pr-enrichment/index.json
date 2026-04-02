@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-02T06:30:05.222Z",
+  "generatedAt": "2026-04-02T07:59:35.886Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -353,25 +353,25 @@
     },
     {
       "prNumber": 1231,
-      "title": "Non-record: Stable Growing Recurrence, Progressive Depth + Error Feedback ",
+      "title": "Non-record: Stable Growing Recurrence, Progressive Depth + Error Feedback (1.1163 BPB)",
       "status": "open",
-      "updatedAt": "2026-04-01T20:30:34Z",
+      "updatedAt": "2026-04-02T07:37:49Z",
       "headSha": "f0dc83bd47369a6c031917a644d4a53daa2217be",
-      "generatedAt": "2026-04-01T20:55:11.746Z",
-      "summary": "Progressively grow recurrence passes while using learnable residual scaling, error-feedback, and Jacobian-proxy regularization to stabilize depth reuse.",
+      "generatedAt": "2026-04-02T07:59:29.673Z",
+      "summary": "Progressive 1→2→3 recurrence passes with contractive residual scaling, error feedback, and Jacobian proxy regularization to keep recurrence practical under 600s/16MB limits.",
       "tags": [
-        "val-only",
         "architecture",
         "training-schedule",
-        "regularization"
+        "regularization",
+        "quantization"
       ],
       "flags": {
-        "usesValOnly": true,
-        "usesValOnlyAi": true,
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": false
+        "valOnlyMatchesCollector": true
       },
       "file": "items/pr-1231.json"
     },
@@ -5716,10 +5716,10 @@
       "prNumber": 911,
       "title": "KoopCaps-HRM Ternary Reasoner — Koopman Capsule Dynamics + Adaptive Halting",
       "status": "open",
-      "updatedAt": "2026-03-28T07:19:46Z",
-      "headSha": "8538a06e0d14eb5cdece7052a65ac726d6758a22",
-      "generatedAt": "2026-03-28T07:21:14.923Z",
-      "summary": "Ternary U-Net stacks Hadamard-rotated Koopman capsule dynamics, cold-start gating, and adaptive halting with capsule carry for iterative reasoning in tight budgets.",
+      "updatedAt": "2026-04-02T07:50:46Z",
+      "headSha": "4f19faddc7d2e8931851357f5467f001b9a971bf",
+      "generatedAt": "2026-04-02T07:59:35.759Z",
+      "summary": "Ternary U-Net mixes Hadamard-rotated Koopman capsules with adaptive halting and cross-window carry for lightweight iterative reasoning.",
       "tags": [
         "quantization",
         "architecture",

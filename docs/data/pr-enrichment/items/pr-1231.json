@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-01T20:55:11.746Z",
+  "generatedAt": "2026-04-02T07:59:29.673Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1231,
-    "title": "Non-record: Stable Growing Recurrence, Progressive Depth + Error Feedback ",
+    "title": "Non-record: Stable Growing Recurrence, Progressive Depth + Error Feedback (1.1163 BPB)",
     "state": "open",
-    "updatedAt": "2026-04-01T20:30:34Z",
+    "updatedAt": "2026-04-02T07:37:49Z",
     "headSha": "f0dc83bd47369a6c031917a644d4a53daa2217be",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1231",
     "authorLogin": "nestamidavaine"
@@ -19,25 +19,25 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Progressively grow recurrence passes while using learnable residual scaling, error-feedback, and Jacobian-proxy regularization to stabilize depth reuse.",
+    "summary": "Progressive 1→2→3 recurrence passes with contractive residual scaling, error feedback, and Jacobian proxy regularization to keep recurrence practical under 600s/16MB limits.",
     "tags": [
-      "val-only",
       "architecture",
       "training-schedule",
-      "regularization"
+      "regularization",
+      "quantization"
     ],
-    "usesValOnly": true,
-    "valOnlyReasoning": "Legal TTT trains on already-scored validation chunks between sliding-window evaluations.",
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
     "techniques": [
-      "Progressive pass schedule (1→2→3) late in training",
-      "Residual-scale + rank-2 error feedback stabilizes recurrence",
-      "Jacobian-proxy loss keeps multi-pass dynamics contractive"
+      "Progressive recurrence pass schedule (1→2→3) to trade off capacity and step time",
+      "Per-pass learnable residual scaling with low-rank error feedback to stabilize shared layers",
+      "Jacobian-proxy loss to enforce contractive dynamics across recurrence"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": true,
-    "finalUsesValOnly": true,
-    "valOnlyMatchesCollector": false
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
   }
 }

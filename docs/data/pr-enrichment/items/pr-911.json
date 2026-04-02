@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-28T07:21:14.923Z",
+  "generatedAt": "2026-04-02T07:59:35.759Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 911,
     "title": "KoopCaps-HRM Ternary Reasoner — Koopman Capsule Dynamics + Adaptive Halting",
     "state": "open",
-    "updatedAt": "2026-03-28T07:19:46Z",
-    "headSha": "8538a06e0d14eb5cdece7052a65ac726d6758a22",
+    "updatedAt": "2026-04-02T07:50:46Z",
+    "headSha": "4f19faddc7d2e8931851357f5467f001b9a971bf",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/911",
     "authorLogin": "Akhilesh-Gogikar"
   },
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Ternary U-Net stacks Hadamard-rotated Koopman capsule dynamics, cold-start gating, and adaptive halting with capsule carry for iterative reasoning in tight budgets.",
+    "summary": "Ternary U-Net mixes Hadamard-rotated Koopman capsules with adaptive halting and cross-window carry for lightweight iterative reasoning.",
     "tags": [
       "quantization",
       "architecture",
@@ -28,9 +28,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "ternary {-1,0,+1} U-Net with base-3 packing",
-      "Hadamard-rotated KoopCaps predictive dynamics plus cold-start gate",
-      "adaptive halting with sliding-window capsule carry"
+      "Hadamard-rotated Koopman capsule dynamics",
+      "Ternary {-1,0,+1} packing with low-bit footprint",
+      "Adaptive halting plus capsule carry across sliding windows"
     ]
   },
   "compatibility": {
