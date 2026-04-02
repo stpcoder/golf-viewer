@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-02T17:04:00.620Z",
+  "generatedAt": "2026-04-02T17:34:06.140Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1257,
     "title": "Add: 11L Complement Training + TTT + No-JEPA submission (val_bpb 1.0855)",
     "state": "open",
-    "updatedAt": "2026-04-02T16:55:13Z",
+    "updatedAt": "2026-04-02T17:29:39Z",
     "headSha": "58dbb07087909448fee6bee758bef025c93505cd",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1257",
     "authorLogin": "BoxiYu"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Complement training downweights bigram-predictable tokens while Test-Time Training and JEPA removal sharpen transformer focus during 16MB runs.",
+    "summary": "Complement loss weighting plus test-time AdamW adaptation with JEPA off steers the 11-layer transformer toward harder tokens.",
     "tags": [
       "regularization",
-      "training-schedule",
+      "optimizer",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Complement loss reweight via bigram predictor",
-      "Test-time training with AdamW adaptation",
-      "Disable JEPA auxiliary module"
+      "Complement loss downweights bigram-predictable tokens",
+      "Test-time training with AdamW on validation shards",
+      "Disable JEPA auxiliary branch for streamlined inference"
     ]
   },
   "compatibility": {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-02T17:04:06.128Z",
+  "generatedAt": "2026-04-02T17:34:13.385Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -52,13 +52,13 @@
       "prNumber": 1257,
       "title": "Add: 11L Complement Training + TTT + No-JEPA submission (val_bpb 1.0855)",
       "status": "open",
-      "updatedAt": "2026-04-02T16:55:13Z",
+      "updatedAt": "2026-04-02T17:29:39Z",
       "headSha": "58dbb07087909448fee6bee758bef025c93505cd",
-      "generatedAt": "2026-04-02T17:04:00.620Z",
-      "summary": "Complement training downweights bigram-predictable tokens while Test-Time Training and JEPA removal sharpen transformer focus during 16MB runs.",
+      "generatedAt": "2026-04-02T17:34:06.140Z",
+      "summary": "Complement loss weighting plus test-time AdamW adaptation with JEPA off steers the 11-layer transformer toward harder tokens.",
       "tags": [
         "regularization",
-        "training-schedule",
+        "optimizer",
         "evaluation"
       ],
       "flags": {
@@ -2680,15 +2680,14 @@
       "prNumber": 1105,
       "title": "Record: Fused MLP (Triton+CUTLASS EVT) + Fast Causal N-Gram Tilt & Subword Certainty (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-02T14:38:11Z",
-      "headSha": "e5eb594ae834eceac208d7b3c103a4a43b5ef7f0",
-      "generatedAt": "2026-04-02T15:03:17.225Z",
-      "summary": "Fuses Triton TMA forward + CUTLASS EVT backward MLP with all-int6 GPTQ, SP4608 vocab, and a fast sparse causal n-gram tilt as sparse auxiliary memory.",
+      "updatedAt": "2026-04-02T17:31:27Z",
+      "headSha": "97ee24f27d4b6b8cb909622ce2464f310a7e47e1",
+      "generatedAt": "2026-04-02T17:34:13.228Z",
+      "summary": "Fuses Triton TMA and CUTLASS EVT MLP kernels, ups MLP to 3.5× int6 GPTQ, and adds fast causal n-gram tilt as sparse memory for repeats.",
       "tags": [
         "architecture",
         "quantization",
-        "evaluation",
-        "tokenization"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
