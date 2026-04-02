@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-02T02:27:06.436Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1244,
+    "title": "Add non-record unlimited-compute 11L LeakyTTT 24h local RTX 4060 Ti run",
+    "state": "open",
+    "updatedAt": "2026-04-02T02:25:48Z",
+    "headSha": "083f860ff4aa4b5a456c13fe64e5c7ec99f398fc",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1244",
+    "authorLogin": "monkeyKingProgrammer"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-04-02_11L_24h_Local4060Ti_LeakyTTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Extends an 11-layer LeakyReLU^2 + Parallel Muon + XSA4 + Partial RoPE stack with layerwise LN scale, EMA, and legal score-first TTT training for 24h on one RTX 4060 Ti.",
+    "tags": [
+      "architecture",
+      "training-schedule",
+      "evaluation",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "LeakyReLU^2 MLP and Parallel Muon with XSA4 on last layers",
+      "Partial RoPE plus layerwise LN scale and EMA regularization",
+      "Legal score-first TTT after int6 sliding-window evaluation"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

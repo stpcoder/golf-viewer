@@ -1,19 +1,91 @@
 {
-  "generatedAt": "2026-04-02T01:56:55.429Z",
+  "generatedAt": "2026-04-02T02:27:21.948Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
+      "prNumber": 1244,
+      "title": "Add non-record unlimited-compute 11L LeakyTTT 24h local RTX 4060 Ti run",
+      "status": "open",
+      "updatedAt": "2026-04-02T02:25:48Z",
+      "headSha": "083f860ff4aa4b5a456c13fe64e5c7ec99f398fc",
+      "generatedAt": "2026-04-02T02:27:06.436Z",
+      "summary": "Extends an 11-layer LeakyReLU^2 + Parallel Muon + XSA4 + Partial RoPE stack with layerwise LN scale, EMA, and legal score-first TTT training for 24h on one RTX 4060 Ti.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "evaluation",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1244.json"
+    },
+    {
+      "prNumber": 1243,
+      "title": "JEPArdy! Non-Record Submission - JEPA + Leader-Stack - val_bpb 1.1230",
+      "status": "open",
+      "updatedAt": "2026-04-02T02:18:18Z",
+      "headSha": "59055b9b687b540ea253002e6fe52cf3854769ec",
+      "generatedAt": "2026-04-02T02:27:12.683Z",
+      "summary": "JEPA auxiliary loss tuned within the leader-family stack plus storage-only int6 export to deliver a hybrid, EMA-stabilized compression pipeline.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "compression",
+        "sliding-window-eval"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1243.json"
+    },
+    {
+      "prNumber": 1242,
+      "title": "Record: Scylla + n-gram + legal TTT — val_bpb 1.0903 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-04-02T02:04:50Z",
+      "headSha": "93c3ebf72a3fff3a73445c13a0738e7f9ace85de",
+      "generatedAt": "2026-04-02T02:27:16.787Z",
+      "summary": "11-layer cyclic shared-block transformer with Scylla tokenization, n-gram rescoring, legal score-first TTT, BigramHash embeddings, and int6 quantization.",
+      "tags": [
+        "tokenization",
+        "quantization",
+        "evaluation",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1242.json"
+    },
+    {
       "prNumber": 1241,
       "title": "MDLM Diffusion — val_var_bpb 0.9901, EOS learning + full dataset shard rotation, 33M params, 1x AWS A10G",
       "status": "open",
-      "updatedAt": "2026-04-02T01:41:05Z",
-      "headSha": "bce7f0a46a565c8ee296ebea70563640f98566f0",
-      "generatedAt": "2026-04-02T01:56:55.245Z",
-      "summary": "Anchors diffusion with never-masked EOS and distinct PAD plus shard-rotation loading to train MDLM on the full FineWeb dataset within RAM limits.",
+      "updatedAt": "2026-04-02T02:02:35Z",
+      "headSha": "5d46f39f69290735adc989930c7f5fe4e0779158",
+      "generatedAt": "2026-04-02T02:27:21.763Z",
+      "summary": "MDLM v5 learns EOS anchors with a dedicated PAD token and rotates dataset shards so FineWeb trains fully without loading all data at once.",
       "tags": [
-        "architecture",
         "tokenization",
+        "training-schedule",
         "non-record"
       ],
       "flags": {

@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-02T02:27:16.787Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1242,
+    "title": "Record: Scylla + n-gram + legal TTT — val_bpb 1.0903 (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-04-02T02:04:50Z",
+    "headSha": "93c3ebf72a3fff3a73445c13a0738e7f9ace85de",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1242",
+    "authorLogin": "Campbellb"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-01_scylla-tuned-ttt/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11-layer cyclic shared-block transformer with Scylla tokenization, n-gram rescoring, legal score-first TTT, BigramHash embeddings, and int6 quantization.",
+    "tags": [
+      "tokenization",
+      "quantization",
+      "evaluation",
+      "architecture"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Scylla TokenMonster tokenizer with n-gram rescoring",
+      "Legal score-first TTT adaptation over 3 epochs",
+      "int6 per-row quantization with BigramHash embeddings"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
