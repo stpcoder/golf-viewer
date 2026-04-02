@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-04-02T07:59:35.886Z",
+  "generatedAt": "2026-04-02T08:29:47.954Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1248,
+      "title": "Non-record: GQA + LZMA + Selective Pruning (val_bpb=1.1264)",
+      "status": "open",
+      "updatedAt": "2026-04-02T08:10:33Z",
+      "headSha": "bbca6baab6dd34724ebb9710c40b5fad4f1ba4b3",
+      "generatedAt": "2026-04-02T08:29:33.346Z",
+      "summary": "Builds on the SOTA stack with GQA’s four KV heads, BigramHash, LZMA compression, and selective pruning to trade attention capacity for faster steps within budget.",
+      "tags": [
+        "architecture",
+        "compression",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1248.json"
+    },
     {
       "prNumber": 1247,
       "title": "Proposal: Validate ASQU on the March 22 10min/16MB control line",
@@ -821,14 +844,14 @@
       "prNumber": 1204,
       "title": "Record: ParallelResiduals + MiniDepthRecurrence, 1.1063 BPB / 1.8679 nats, -0.0072 vs PR #1179, -0.0143 vs merged SOTA",
       "status": "open",
-      "updatedAt": "2026-04-02T05:59:40Z",
-      "headSha": "ae2f7b7f7b58ec0ae6bd6154f5cb3f38a6fda0c3",
-      "generatedAt": "2026-04-02T06:29:31.845Z",
-      "summary": "Combines parallel residual lanes starting at layer 7 with delayed mini-depth recurrence on layers 4-5 (untied MLPs) and mixed quantization for the 16MB record.",
+      "updatedAt": "2026-04-02T08:25:17Z",
+      "headSha": "e01b7e19895e09efb97c415ad6e32e60d6b4842b",
+      "generatedAt": "2026-04-02T08:29:37.597Z",
+      "summary": "Adds parallel residual routing plus delayed mini-depth recurrence with untied repeated MLPs atop the existing mixed-quant+GPTQ stack.",
       "tags": [
         "architecture",
         "training-schedule",
-        "quantization"
+        "mixed-precision"
       ],
       "flags": {
         "usesValOnly": false,
@@ -3892,14 +3915,14 @@
       "prNumber": 1019,
       "title": "Record: AR Self-Gen GPTQ + XSA-all + BigramHash 3072×112 — val_bpb 1.11473 (3-seed mean)",
       "status": "closed",
-      "updatedAt": "2026-03-30T17:30:38Z",
+      "updatedAt": "2026-04-02T08:28:01Z",
       "headSha": "d7fbe3d16f81a16e26604353bafc61d151cf5264",
-      "generatedAt": "2026-03-30T17:37:47.770Z",
-      "summary": "Full-Hessian GPTQ calibrates from autoregressively self-generated tokens while XSA spans all layers and BigramHash widens to 3072×112.",
+      "generatedAt": "2026-04-02T08:29:42.334Z",
+      "summary": "Full Hessian GPTQ with autoregressive self-gen calibration, XSA on every layer, and a 3072×112 BigramHash tightens the stack for the record submission.",
       "tags": [
         "quantization",
-        "architecture",
-        "attention"
+        "attention",
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,
@@ -4100,14 +4123,14 @@
       "prNumber": 1004,
       "title": "Non-record: 33.6M Int5 GPTQ + Legal s_0-only TTT (val_bpb=1.1182)",
       "status": "open",
-      "updatedAt": "2026-04-01T07:03:51Z",
+      "updatedAt": "2026-04-02T08:21:08Z",
       "headSha": "221032556238c552c83e16ffa208bc8267606e2e",
-      "generatedAt": "2026-04-01T07:19:46.954Z",
-      "summary": "Int5 GPTQ on a 33.6M/11L model with tighter pruning simply reports cumulative s_0 from score-first TTT without any post-retraining re-eval.",
+      "generatedAt": "2026-04-02T08:29:47.805Z",
+      "summary": "Score-first TTT on a 33.6M int5 GPTQ model with no post-training rescore or temperature tuning, plus pruning to keep artifacts under 16MB.",
       "tags": [
         "quantization",
-        "architecture",
-        "training-schedule"
+        "training-schedule",
+        "regularization"
       ],
       "flags": {
         "usesValOnly": false,

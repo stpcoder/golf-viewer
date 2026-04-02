@@ -1,0 +1,39 @@
+{
+  "generatedAt": "2026-04-02T08:29:33.346Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1248,
+    "title": "Non-record: GQA + LZMA + Selective Pruning (val_bpb=1.1264)",
+    "state": "open",
+    "updatedAt": "2026-04-02T08:10:33Z",
+    "headSha": "bbca6baab6dd34724ebb9710c40b5fad4f1ba4b3",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1248",
+    "authorLogin": "ibarrajo"
+  },
+  "inputs": {
+    "hash": "072662c123505c465dfcb1e80cbfb797fc5a748edd0e2a3564b0b095cec763f8",
+    "readmePaths": [],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Builds on the SOTA stack with GQA’s four KV heads, BigramHash, LZMA compression, and selective pruning to trade attention capacity for faster steps within budget.",
+    "tags": [
+      "architecture",
+      "compression",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "GQA 4 KV heads paired with BigramHash for faster attention",
+      "LZMA compression plus selective pruning to keep artifacts under budget"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

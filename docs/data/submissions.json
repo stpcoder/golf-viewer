@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-02T07:59:19.395Z",
+  "generatedAt": "2026-04-02T08:29:23.728Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -10775,16 +10775,16 @@
         "authorLogin": "msisovic",
         "authorName": null,
         "createdAt": "2026-04-01T00:46:06Z",
-        "updatedAt": "2026-04-02T05:59:40Z",
-        "headSha": "ae2f7b7f7b58ec0ae6bd6154f5cb3f38a6fda0c3",
+        "updatedAt": "2026-04-02T08:25:17Z",
+        "headSha": "e01b7e19895e09efb97c415ad6e32e60d6b4842b",
         "headRepo": "msisovic/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/ae2f7b7f7b58ec0ae6bd6154f5cb3f38a6fda0c3/records/track_10min_16mb/2026-03-31_ParallelResiduals_MiniDepthRecurrence/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/ae2f7b7f7b58ec0ae6bd6154f5cb3f38a6fda0c3/records/track_10min_16mb/2026-03-31_ParallelResiduals_MiniDepthRecurrence/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/ae2f7b7f7b58ec0ae6bd6154f5cb3f38a6fda0c3/records/track_10min_16mb/2026-03-31_ParallelResiduals_MiniDepthRecurrence/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/ae2f7b7f7b58ec0ae6bd6154f5cb3f38a6fda0c3/records/track_10min_16mb/2026-03-31_ParallelResiduals_MiniDepthRecurrence/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/ae2f7b7f7b58ec0ae6bd6154f5cb3f38a6fda0c3/records/track_10min_16mb/2026-03-31_ParallelResiduals_MiniDepthRecurrence",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/e01b7e19895e09efb97c415ad6e32e60d6b4842b/records/track_10min_16mb/2026-03-31_ParallelResiduals_MiniDepthRecurrence/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/e01b7e19895e09efb97c415ad6e32e60d6b4842b/records/track_10min_16mb/2026-03-31_ParallelResiduals_MiniDepthRecurrence/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/e01b7e19895e09efb97c415ad6e32e60d6b4842b/records/track_10min_16mb/2026-03-31_ParallelResiduals_MiniDepthRecurrence/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/e01b7e19895e09efb97c415ad6e32e60d6b4842b/records/track_10min_16mb/2026-03-31_ParallelResiduals_MiniDepthRecurrence/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/e01b7e19895e09efb97c415ad6e32e60d6b4842b/records/track_10min_16mb/2026-03-31_ParallelResiduals_MiniDepthRecurrence",
         "pr": "https://github.com/openai/parameter-golf/pull/1204",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
@@ -12321,7 +12321,7 @@
         "authorLogin": "ibarrajo",
         "authorName": null,
         "createdAt": "2026-03-28T05:36:42Z",
-        "updatedAt": "2026-04-01T07:03:51Z",
+        "updatedAt": "2026-04-02T08:21:08Z",
         "headSha": "221032556238c552c83e16ffa208bc8267606e2e",
         "headRepo": "ibarrajo/parameter-golf"
       },
@@ -12475,7 +12475,7 @@
         "authorLogin": "abaybektursun",
         "authorName": null,
         "createdAt": "2026-03-28T13:34:01Z",
-        "updatedAt": "2026-03-30T17:30:38Z",
+        "updatedAt": "2026-04-02T08:28:01Z",
         "headSha": "d7fbe3d16f81a16e26604353bafc61d151cf5264",
         "headRepo": "abaybektursun/parameter-golf"
       },
@@ -55226,6 +55226,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/d3f8e84958db3ba4683864da61aabde8812af667/records/track_10min_16mb/2026-04-01_ApproachF_FusedTriton/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/d3f8e84958db3ba4683864da61aabde8812af667/records/track_10min_16mb/2026-04-01_ApproachF_FusedTriton",
         "pr": "https://github.com/openai/parameter-golf/pull/1237",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-04-01_ApproachI_GQA_LZMA",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-04-01_ApproachI_GQA_LZMA",
+        "folderPath": "records/track_10min_16mb/2026-04-01_ApproachI_GQA_LZMA",
+        "submissionPath": "records/track_10min_16mb/2026-04-01_ApproachI_GQA_LZMA/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-04-01_ApproachI_GQA_LZMA/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-04-01_ApproachI_GQA_LZMA/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-04-01_ApproachI_GQA_LZMA/train_gpt.py"
+      },
+      "submission": {
+        "author": "ibarrajo",
+        "githubId": "ibarrajo",
+        "name": "GQA + LZMA + Selective Pruning (SOTA-adopted stack)",
+        "blurb": "Adopts all safe innovations from merged SOTA #1019: GQA (4 KV heads for faster steps), LZMA compression (better ratio), selective pruning (only prune if needed), BigramHash 3072x112. GPTQ stays within training budget.",
+        "date": "2026-04-01"
+      },
+      "metrics": {
+        "valBpb": 0,
+        "valLoss": 0,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 0,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1248,
+        "title": "Non-record: GQA + LZMA + Selective Pruning (val_bpb=1.1264)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1248",
+        "authorLogin": "ibarrajo",
+        "authorName": null,
+        "createdAt": "2026-04-02T08:10:33Z",
+        "updatedAt": "2026-04-02T08:10:33Z",
+        "headSha": "bbca6baab6dd34724ebb9710c40b5fad4f1ba4b3",
+        "headRepo": "ibarrajo/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/bbca6baab6dd34724ebb9710c40b5fad4f1ba4b3/records/track_10min_16mb/2026-04-01_ApproachI_GQA_LZMA/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/bbca6baab6dd34724ebb9710c40b5fad4f1ba4b3/records/track_10min_16mb/2026-04-01_ApproachI_GQA_LZMA/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/bbca6baab6dd34724ebb9710c40b5fad4f1ba4b3/records/track_10min_16mb/2026-04-01_ApproachI_GQA_LZMA/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/bbca6baab6dd34724ebb9710c40b5fad4f1ba4b3/records/track_10min_16mb/2026-04-01_ApproachI_GQA_LZMA/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/bbca6baab6dd34724ebb9710c40b5fad4f1ba4b3/records/track_10min_16mb/2026-04-01_ApproachI_GQA_LZMA",
+        "pr": "https://github.com/openai/parameter-golf/pull/1248",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
