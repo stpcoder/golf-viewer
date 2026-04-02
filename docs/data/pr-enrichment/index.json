@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-04-02T21:05:05.412Z",
+  "generatedAt": "2026-04-02T21:34:58.183Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1263,
+      "title": "Record: 11L LeakyReLU² + XSA-all + QK-Gain 4.0 + Full GPTQ + SLOT — val_bpb 0.9354 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-04-02T21:14:24Z",
+      "headSha": "b3423826ed961e9c52d8e14d160f73eabb54cecd",
+      "generatedAt": "2026-04-02T21:34:57.995Z",
+      "summary": "11-layer LeakyReLU² transformer uses XSA on every layer with sharp QK gain, GPTQ int6 compression, and SLOT per-sample delta/logit tuning at eval.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1263.json"
+    },
     {
       "prNumber": 1262,
       "title": "Starter kit: align submission schema and path safety",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-02T21:04:51.647Z",
+  "generatedAt": "2026-04-02T21:34:50.620Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -5468,6 +5468,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/b5bfc9aa533a0a86be1881bbc7bc747bf77848da/records/track_10min_16mb/2026-03-25_KitchenSink_7gram_CosineTTT_0.9258/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/b5bfc9aa533a0a86be1881bbc7bc747bf77848da/records/track_10min_16mb/2026-03-25_KitchenSink_7gram_CosineTTT_0.9258",
         "pr": "https://github.com/openai/parameter-golf/pull/776",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-04-02_LeakyReLU2_XSA11_GPTQ_SLOT_0-9354",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-04-02_LeakyReLU2_XSA11_GPTQ_SLOT_0.9354",
+        "folderPath": "records/track_10min_16mb/2026-04-02_LeakyReLU2_XSA11_GPTQ_SLOT_0.9354",
+        "submissionPath": "records/track_10min_16mb/2026-04-02_LeakyReLU2_XSA11_GPTQ_SLOT_0.9354/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-04-02_LeakyReLU2_XSA11_GPTQ_SLOT_0.9354/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-04-02_LeakyReLU2_XSA11_GPTQ_SLOT_0.9354/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-04-02_LeakyReLU2_XSA11_GPTQ_SLOT_0.9354/train_gpt.py"
+      },
+      "submission": {
+        "author": "ajh",
+        "githubId": "xexyz",
+        "name": "LeakyReLU² + XSA-all + QK-Gain 4.0 + Full GPTQ + SLOT",
+        "blurb": "11L/512d with LeakyReLU(0.5)², XSA on all 11 layers, QK-Gain 4.0, Hessian-based GPTQ int6+zstd-22, and SLOT (per-sample delta + logit bias, 16 AdamW steps with cosine LR and scored-position mask) during evaluation.",
+        "date": "2026-04-02"
+      },
+      "metrics": {
+        "valBpb": 0.9354,
+        "valLoss": 1.5795,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15890549,
+        "bytesCode": 73198,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1263,
+        "title": "Record: 11L LeakyReLU² + XSA-all + QK-Gain 4.0 + Full GPTQ + SLOT — val_bpb 0.9354 (3-seed mean)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1263",
+        "authorLogin": "xexyz",
+        "authorName": null,
+        "createdAt": "2026-04-02T21:14:24Z",
+        "updatedAt": "2026-04-02T21:14:24Z",
+        "headSha": "b3423826ed961e9c52d8e14d160f73eabb54cecd",
+        "headRepo": "xexyz/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/b3423826ed961e9c52d8e14d160f73eabb54cecd/records/track_10min_16mb/2026-04-02_LeakyReLU2_XSA11_GPTQ_SLOT_0.9354/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/b3423826ed961e9c52d8e14d160f73eabb54cecd/records/track_10min_16mb/2026-04-02_LeakyReLU2_XSA11_GPTQ_SLOT_0.9354/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/b3423826ed961e9c52d8e14d160f73eabb54cecd/records/track_10min_16mb/2026-04-02_LeakyReLU2_XSA11_GPTQ_SLOT_0.9354/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/b3423826ed961e9c52d8e14d160f73eabb54cecd/records/track_10min_16mb/2026-04-02_LeakyReLU2_XSA11_GPTQ_SLOT_0.9354/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/b3423826ed961e9c52d8e14d160f73eabb54cecd/records/track_10min_16mb/2026-04-02_LeakyReLU2_XSA11_GPTQ_SLOT_0.9354",
+        "pr": "https://github.com/openai/parameter-golf/pull/1263",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
