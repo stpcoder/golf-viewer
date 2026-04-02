@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-02T08:59:48.340Z",
+  "generatedAt": "2026-04-02T09:30:16.641Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -10852,7 +10852,7 @@
         "authorLogin": "msisovic",
         "authorName": null,
         "createdAt": "2026-04-01T00:46:06Z",
-        "updatedAt": "2026-04-02T08:30:36Z",
+        "updatedAt": "2026-04-02T09:22:34Z",
         "headSha": "e01b7e19895e09efb97c415ad6e32e60d6b4842b",
         "headRepo": "msisovic/parameter-golf"
       },
@@ -10863,6 +10863,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/e01b7e19895e09efb97c415ad6e32e60d6b4842b/records/track_10min_16mb/2026-03-31_ParallelResiduals_MiniDepthRecurrence/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/e01b7e19895e09efb97c415ad6e32e60d6b4842b/records/track_10min_16mb/2026-03-31_ParallelResiduals_MiniDepthRecurrence",
         "pr": "https://github.com/openai/parameter-golf/pull/1204",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-04-02_XSA_LoRA_TTT",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-04-02_XSA_LoRA_TTT",
+        "folderPath": "records/track_10min_16mb/2026-04-02_XSA_LoRA_TTT",
+        "submissionPath": "records/track_10min_16mb/2026-04-02_XSA_LoRA_TTT/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-04-02_XSA_LoRA_TTT/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-04-02_XSA_LoRA_TTT/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-04-02_XSA_LoRA_TTT/train_gpt.py"
+      },
+      "submission": {
+        "author": "Elar Wei",
+        "githubId": "Elarwei001",
+        "name": null,
+        "blurb": null,
+        "date": "2026-04-02T09:26:24Z"
+      },
+      "metrics": {
+        "valBpb": 1.107,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1254,
+        "title": "Record: XSA + LoRA TTT (val_bpb=1.1070)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1254",
+        "authorLogin": "Elarwei001",
+        "authorName": null,
+        "createdAt": "2026-04-02T09:26:24Z",
+        "updatedAt": "2026-04-02T09:26:24Z",
+        "headSha": "17a3e18496788059d26ab82e572e2f58113d9f18",
+        "headRepo": "Elarwei001/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/17a3e18496788059d26ab82e572e2f58113d9f18/records/track_10min_16mb/2026-04-02_XSA_LoRA_TTT/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/17a3e18496788059d26ab82e572e2f58113d9f18/records/track_10min_16mb/2026-04-02_XSA_LoRA_TTT/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/17a3e18496788059d26ab82e572e2f58113d9f18/records/track_10min_16mb/2026-04-02_XSA_LoRA_TTT/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/17a3e18496788059d26ab82e572e2f58113d9f18/records/track_10min_16mb/2026-04-02_XSA_LoRA_TTT/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/17a3e18496788059d26ab82e572e2f58113d9f18/records/track_10min_16mb/2026-04-02_XSA_LoRA_TTT",
+        "pr": "https://github.com/openai/parameter-golf/pull/1254",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-02T09:00:04.836Z",
+  "generatedAt": "2026-04-02T09:30:28.738Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1204,
     "title": "Record: ParallelResiduals + MiniDepthRecurrence, 1.1063 BPB / 1.8679 nats, -0.0072 vs PR #1179, -0.0143 vs merged SOTA",
     "state": "open",
-    "updatedAt": "2026-04-02T08:30:36Z",
+    "updatedAt": "2026-04-02T09:22:34Z",
     "headSha": "e01b7e19895e09efb97c415ad6e32e60d6b4842b",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1204",
     "authorLogin": "msisovic"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Parallel residual lanes plus delayed mini depth recurrence ride atop AR GPTQ/mixed quant to squeeze more depth from the stack.",
+    "summary": "Combines parallel residual lanes from layer 7 with delayed mini depth recurrence and AR-GPTQ mixed quantization to recover depth within the 10-minute budget.",
     "tags": [
-      "quantization",
       "architecture",
+      "quantization",
       "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "parallel residual dual-lane routing from layer 7",
-      "mini depth recurrence on layers 4-5 with delayed start and untied MLPs",
-      "mixed quantization with autoregressive GPTQ calibration"
+      "Parallel residual routing keeps attention/MLP on separate lanes with learned writeback strengths.",
+      "Mini depth recurrence repeats layers 4-5 mid-training with untied MLPs for depth without constant slowdown.",
+      "Auto-regressive self-generated GPTQ mixed quantization keeps the 10-minute pipeline manageable."
     ]
   },
   "compatibility": {

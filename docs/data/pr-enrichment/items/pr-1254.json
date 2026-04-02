@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-04-02T09:30:23.054Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1254,
+    "title": "Record: XSA + LoRA TTT (val_bpb=1.1070)",
+    "state": "open",
+    "updatedAt": "2026-04-02T09:26:24Z",
+    "headSha": "17a3e18496788059d26ab82e572e2f58113d9f18",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1254",
+    "authorLogin": "Elarwei001"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-02_XSA_LoRA_TTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11-layer XSA transformer with RMSNorm/RoPE uses mid-training Int6 QAT plus per-document LoRA adapters during evaluation.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "XSA transformer with RMSNorm/RoPE and tied embeddings",
+      "Int6 QAT enabled partway through training for 16MB compliance",
+      "LoRA adapters fine-tuned per document in test-time training loops"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
