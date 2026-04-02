@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-01T23:56:52.752Z",
+  "generatedAt": "2026-04-02T00:56:51.157Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -2330,13 +2330,14 @@
       "prNumber": 1105,
       "title": "Record: Fused MLP (Triton+CUTLASS EVT) + Fast Causal N-Gram Tilt & Subword Certainty— 1.1052 BPB (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-01T19:55:33Z",
+      "updatedAt": "2026-04-02T00:53:46Z",
       "headSha": "30c83c773b8629e45f09a17fefcf33afef6df08b",
-      "generatedAt": "2026-04-01T20:24:53.166Z",
-      "summary": "Custom Triton/CUTLASS fused MLP kernels with precomputed act_grad, wider MLP, Hessian-guided mixed int5/int6 quant, fast n-gram tilt, Brotli.",
+      "generatedAt": "2026-04-02T00:56:39.172Z",
+      "summary": "Fuses Triton/CUTLASS MLP kernels, wider 3.5× MLP, mixed int5/int6 quantization, and a fast causal n-gram tilt as sparse auxiliary memory to stay under 16MB.",
       "tags": [
         "architecture",
         "quantization",
+        "training-schedule",
         "evaluation"
       ],
       "flags": {
@@ -2353,10 +2354,10 @@
       "prNumber": 1104,
       "title": "[Non-record] 1-Stage Byte-level H-Net at 17.5M: Dynamic Chunking Learns Whitespace-aligned (Word-like) Boundaries (39x-91x fewer params than H-Net paper)",
       "status": "open",
-      "updatedAt": "2026-03-31T13:34:07Z",
+      "updatedAt": "2026-04-02T00:32:17Z",
       "headSha": "e3ea22adc4582aabf47c22c5e46d73ec3393b589",
-      "generatedAt": "2026-03-31T13:44:39.025Z",
-      "summary": "Byte-level 1-stage H-Net matches the subword version by learning whitespace-aligned chunking from raw bytes via dynamic routing and padded DDP training.",
+      "generatedAt": "2026-04-02T00:56:44.931Z",
+      "summary": "Byte-level 1-stage H-Net uses dynamic chunking to learn whitespace-aligned, word-like chunks from raw bytes while matched ablations contrast sp1024.",
       "tags": [
         "architecture",
         "tokenization",
@@ -3913,12 +3914,12 @@
     },
     {
       "prNumber": 1005,
-      "title": "[Non-Record] Extended Compute Scaling Analysis: 1.0853 BPB at 50K steps (11.5 hours) on 4×A100MIG",
+      "title": "Non-Record: Extended Compute Scaling Analysis: 1.0853 BPB at 50K steps (11.5 hours) on 4×A100MIG",
       "status": "open",
-      "updatedAt": "2026-03-28T05:40:07Z",
+      "updatedAt": "2026-04-02T00:53:22Z",
       "headSha": "6d97a058527ac7bfab8266469e1e8247f574de0f",
-      "generatedAt": "2026-03-28T05:51:02.283Z",
-      "summary": "Extended compute scaling of PR #549 stack on 4×A100 MIG studies plateau and warmdown effects while reusing the TTT/Parallel Muon pipeline.",
+      "generatedAt": "2026-04-02T00:56:51.016Z",
+      "summary": "Extended compute on the PR#549 LeakyReLU²+Parallel Muon stack trains to 50K steps with warmdown smoothing weights to recover compressibility.",
       "tags": [
         "non-record",
         "training-schedule",

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-28T05:51:02.283Z",
+  "generatedAt": "2026-04-02T00:56:51.016Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1005,
-    "title": "[Non-Record] Extended Compute Scaling Analysis: 1.0853 BPB at 50K steps (11.5 hours) on 4×A100MIG",
+    "title": "Non-Record: Extended Compute Scaling Analysis: 1.0853 BPB at 50K steps (11.5 hours) on 4×A100MIG",
     "state": "open",
-    "updatedAt": "2026-03-28T05:40:07Z",
+    "updatedAt": "2026-04-02T00:53:22Z",
     "headSha": "6d97a058527ac7bfab8266469e1e8247f574de0f",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1005",
     "authorLogin": "OnlyJundong"
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Extended compute scaling of PR #549 stack on 4×A100 MIG studies plateau and warmdown effects while reusing the TTT/Parallel Muon pipeline.",
+    "summary": "Extended compute on the PR#549 LeakyReLU²+Parallel Muon stack trains to 50K steps with warmdown smoothing weights to recover compressibility.",
     "tags": [
       "non-record",
       "training-schedule",
@@ -28,9 +28,8 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Extended compute scaling on 4×A100 MIG",
-      "Warmdown-driven artifact compression recovery",
-      "Reuses PR #549 TTT/Parallel Muon stack"
+      "extended training schedule",
+      "warmdown-driven compressibility recovery"
     ]
   },
   "compatibility": {
