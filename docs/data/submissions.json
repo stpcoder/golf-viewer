@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-02T16:03:28.891Z",
+  "generatedAt": "2026-04-02T16:33:59.756Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -9488,7 +9488,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-04-01_scylla-tuned-ttt",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -9536,14 +9536,14 @@
       "pr": {
         "number": 1242,
         "title": "Record: Scylla + n-gram + legal TTT — val_bpb 1.0903 (3-seed mean)",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/1242",
         "authorLogin": "Campbellb",
         "authorName": null,
         "createdAt": "2026-04-02T02:03:08Z",
-        "updatedAt": "2026-04-02T02:04:50Z",
+        "updatedAt": "2026-04-02T16:10:41Z",
         "headSha": "93c3ebf72a3fff3a73445c13a0738e7f9ace85de",
         "headRepo": "Campbellb/parameter-golf"
       },
@@ -55292,7 +55292,7 @@
         "authorLogin": "fahmitech",
         "authorName": null,
         "createdAt": "2026-04-02T05:18:24Z",
-        "updatedAt": "2026-04-02T05:18:24Z",
+        "updatedAt": "2026-04-02T16:32:30Z",
         "headSha": "f30e006c45f4f63e699a3cb5e8dd7316456dc0fb",
         "headRepo": "fahmitech/parameter-golf"
       },
@@ -55303,6 +55303,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/f30e006c45f4f63e699a3cb5e8dd7316456dc0fb/records/track_10min_16mb/2026-04-02_11L_XSA4_PartialRoPE_LNScale_VE128_ASQU_EMA_GPTQlite/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/f30e006c45f4f63e699a3cb5e8dd7316456dc0fb/records/track_10min_16mb/2026-04-02_11L_XSA4_PartialRoPE_LNScale_VE128_ASQU_EMA_GPTQlite",
         "pr": "https://github.com/openai/parameter-golf/pull/1247",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-04-02_KNN_Scale_Deception_8xH100",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-04-02_KNN_Scale_Deception_8xH100",
+        "folderPath": "records/track_non_record_16mb/2026-04-02_KNN_Scale_Deception_8xH100",
+        "submissionPath": "records/track_non_record_16mb/2026-04-02_KNN_Scale_Deception_8xH100/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-04-02_KNN_Scale_Deception_8xH100/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-04-02_KNN_Scale_Deception_8xH100/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-04-02_KNN_Scale_Deception_8xH100/train_gpt.py"
+      },
+      "submission": {
+        "author": "Himanshu Dongre",
+        "githubId": "himanshudongre",
+        "name": "KNN Hidden State Retrieval — Scale Deception from Weak to Strong Models",
+        "blurb": null,
+        "date": "2026-04-02"
+      },
+      "metrics": {
+        "valBpb": null,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1259,
+        "title": "Non-record: KNN Hidden State Retrieval — Scale Deception from Weak to Strong Models (8xH100)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1259",
+        "authorLogin": "himanshudongre",
+        "authorName": null,
+        "createdAt": "2026-04-02T16:13:22Z",
+        "updatedAt": "2026-04-02T16:13:22Z",
+        "headSha": "257b492884a71b319464c5728b5b51525d6b27b4",
+        "headRepo": "himanshudongre/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/257b492884a71b319464c5728b5b51525d6b27b4/records/track_non_record_16mb/2026-04-02_KNN_Scale_Deception_8xH100/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/257b492884a71b319464c5728b5b51525d6b27b4/records/track_non_record_16mb/2026-04-02_KNN_Scale_Deception_8xH100/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/257b492884a71b319464c5728b5b51525d6b27b4/records/track_non_record_16mb/2026-04-02_KNN_Scale_Deception_8xH100/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/257b492884a71b319464c5728b5b51525d6b27b4/records/track_non_record_16mb/2026-04-02_KNN_Scale_Deception_8xH100/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/257b492884a71b319464c5728b5b51525d6b27b4/records/track_non_record_16mb/2026-04-02_KNN_Scale_Deception_8xH100",
+        "pr": "https://github.com/openai/parameter-golf/pull/1259",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

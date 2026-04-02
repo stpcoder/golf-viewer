@@ -1,8 +1,30 @@
 {
-  "generatedAt": "2026-04-02T16:03:44.289Z",
+  "generatedAt": "2026-04-02T16:34:15.733Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1259,
+      "title": "Non-record: KNN Hidden State Retrieval — Scale Deception from Weak to Strong Models (8xH100)",
+      "status": "open",
+      "updatedAt": "2026-04-02T16:13:22Z",
+      "headSha": "257b492884a71b319464c5728b5b51525d6b27b4",
+      "generatedAt": "2026-04-02T16:34:05.601Z",
+      "summary": "Eval-time KNN hidden-state lookup mixes neighbor-derived distributions with neural predictions to expose scale deception between weak and 8×H100 models.",
+      "tags": [
+        "evaluation",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1259.json"
+    },
     {
       "prNumber": 1258,
       "title": "11L INT7 + MuonWD + SWA (preliminary)",
@@ -195,13 +217,14 @@
       "prNumber": 1247,
       "title": "Proposal: Validate ASQU on the March 22 10min/16MB control line",
       "status": "open",
-      "updatedAt": "2026-04-02T05:18:24Z",
+      "updatedAt": "2026-04-02T16:32:30Z",
       "headSha": "f30e006c45f4f63e699a3cb5e8dd7316456dc0fb",
-      "generatedAt": "2026-04-02T05:28:30.767Z",
-      "summary": "Transfers learned per-channel ASQU activation onto the March 22 11L stack to test its compatibility with the 10min/16MB control line.",
+      "generatedAt": "2026-04-02T16:34:10.298Z",
+      "summary": "Adds per-channel ASQU activation with dedicated beta optimizer to the March22 11L FA3 stack to test transfer on the clean 10min/16MB line.",
       "tags": [
         "architecture",
-        "quantization"
+        "quantization",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -312,15 +335,15 @@
     {
       "prNumber": 1242,
       "title": "Record: Scylla + n-gram + legal TTT — val_bpb 1.0903 (3-seed mean)",
-      "status": "open",
-      "updatedAt": "2026-04-02T02:04:50Z",
+      "status": "closed",
+      "updatedAt": "2026-04-02T16:10:41Z",
       "headSha": "93c3ebf72a3fff3a73445c13a0738e7f9ace85de",
-      "generatedAt": "2026-04-02T02:27:16.787Z",
-      "summary": "11-layer cyclic shared-block transformer with Scylla tokenization, n-gram rescoring, legal score-first TTT, BigramHash embeddings, and int6 quantization.",
+      "generatedAt": "2026-04-02T16:34:15.557Z",
+      "summary": "Uses Scylla TokenMonster vocab with n-gram rescoring, legal score-first TTT, and int6 quantization on an 11-layer cyclic shared-block transformer.",
       "tags": [
         "tokenization",
-        "quantization",
         "evaluation",
+        "quantization",
         "architecture"
       ],
       "flags": {
