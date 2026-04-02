@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-02T19:34:24.477Z",
+  "generatedAt": "2026-04-02T21:04:58.915Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1260,
     "title": "Record: MuonEq-R + Depth Recurrence + Mixed Int5/Int6 GPTQ — val_bpb 1.0929 (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-04-02T19:18:26Z",
+    "updatedAt": "2026-04-02T20:56:46Z",
     "headSha": "b955b6df7187cb89859d84c1055b86644ec793c7",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1260",
     "authorLogin": "dexhunter"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Stacks MuonEq-R optimizer, depth recurrence on layers 4-5, and Hessian-ranked mixed int5/int6 GPTQ atop the high-WD 4096-vocab base.",
+    "summary": "Adds MuonEq-R with row-normalized gradients, shared depth recurrence on layers 4-5, and Hessian-ranked mixed int5/int6 GPTQ to the high-WD stack.",
     "tags": [
       "optimizer",
       "architecture",
       "quantization"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "valOnlyReasoning": "Training uses the standard split and only reports validation metrics after training.",
     "techniques": [
-      "Row-normalized MuonEq-R update with Newton-Schulz",
-      "Depth recurrence sharing MLP weights for layers 4-5",
-      "Hessian-ranked mixed int5/int6 GPTQ compression"
+      "Row-normalized MuonEq-R optimizer",
+      "Depth recurrence with shared MLP on layers 4-5",
+      "Hessian-ranked mixed int5/int6 GPTQ"
     ]
   },
   "compatibility": {

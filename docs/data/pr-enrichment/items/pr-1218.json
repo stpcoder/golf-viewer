@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-02T14:32:28.165Z",
+  "generatedAt": "2026-04-02T21:05:05.231Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1218,
     "title": "Record: 4096-Vocab + 4.0-MLP-mult + 0.085-WD + Simplifications — val_bpb 1.09785 (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-04-02T14:18:55Z",
+    "updatedAt": "2026-04-02T20:36:16Z",
     "headSha": "4421a8d90c6e653bf36e2cbc59c08691d82f46af",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1218",
     "authorLogin": "clarkkev"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Expanded vocab and all-layer XSA with stronger WD/MLP mult, simplified Muon stack, plus Hessian-aware GPTQ and byte-shuffle compression.",
+    "summary": "Larger regularized Transformer with 4× MLP, 4096-token vocab, co-prime batching, and Muon + GPTQ Hessian quantization plus compression tweaks.",
     "tags": [
       "architecture",
-      "regularization",
       "quantization",
+      "tokenization",
       "compression"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "4096-token SentencePiece + coprime-stride loader",
-      "Higher weight decay with 4× MLP mult for tighter compression",
-      "Hessian-aware GPTQ with byte-shuffle + brotli artifacts"
+      "4096-vocab tokenizer with coprime-stride data loader",
+      "Regularized wider model (mlp_mult=4) with stronger WD and sigmoid-gated UNet skips",
+      "Muon training with GPTQ Hessian-aware quantization plus byte-shuffle/brotli compression"
     ]
   },
   "compatibility": {

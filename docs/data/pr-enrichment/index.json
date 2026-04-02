@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-02T20:34:54.131Z",
+  "generatedAt": "2026-04-02T21:05:05.412Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -50,10 +50,10 @@
       "prNumber": 1260,
       "title": "Record: MuonEq-R + Depth Recurrence + Mixed Int5/Int6 GPTQ — val_bpb 1.0929 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-02T19:18:26Z",
+      "updatedAt": "2026-04-02T20:56:46Z",
       "headSha": "b955b6df7187cb89859d84c1055b86644ec793c7",
-      "generatedAt": "2026-04-02T19:34:24.477Z",
-      "summary": "Stacks MuonEq-R optimizer, depth recurrence on layers 4-5, and Hessian-ranked mixed int5/int6 GPTQ atop the high-WD 4096-vocab base.",
+      "generatedAt": "2026-04-02T21:04:58.915Z",
+      "summary": "Adds MuonEq-R with row-normalized gradients, shared depth recurrence on layers 4-5, and Hessian-ranked mixed int5/int6 GPTQ to the high-WD stack.",
       "tags": [
         "optimizer",
         "architecture",
@@ -843,14 +843,14 @@
       "prNumber": 1218,
       "title": "Record: 4096-Vocab + 4.0-MLP-mult + 0.085-WD + Simplifications — val_bpb 1.09785 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-02T14:18:55Z",
+      "updatedAt": "2026-04-02T20:36:16Z",
       "headSha": "4421a8d90c6e653bf36e2cbc59c08691d82f46af",
-      "generatedAt": "2026-04-02T14:32:28.165Z",
-      "summary": "Expanded vocab and all-layer XSA with stronger WD/MLP mult, simplified Muon stack, plus Hessian-aware GPTQ and byte-shuffle compression.",
+      "generatedAt": "2026-04-02T21:05:05.231Z",
+      "summary": "Larger regularized Transformer with 4× MLP, 4096-token vocab, co-prime batching, and Muon + GPTQ Hessian quantization plus compression tweaks.",
       "tags": [
         "architecture",
-        "regularization",
         "quantization",
+        "tokenization",
         "compression"
       ],
       "flags": {
