@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-02T11:01:08.992Z",
+  "generatedAt": "2026-04-02T12:01:36.664Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 911,
     "title": "KoopCaps-HRM Ternary Reasoner — Koopman Capsule Dynamics + Adaptive Halting",
     "state": "open",
-    "updatedAt": "2026-04-02T10:27:37Z",
-    "headSha": "813eee70d5f4f3f00275756c9d32df98cad1551e",
+    "updatedAt": "2026-04-02T11:47:46Z",
+    "headSha": "25229e35f5988ddb2647d969f4a2b1f4cf5ff5af",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/911",
     "authorLogin": "Akhilesh-Gogikar"
   },
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Mixes ternary U-Net storage with Hadamard-rotated Koopman capsules, adaptive halting, and sliding-window carry for compact iterative reasoning.",
+    "summary": "Ternary U-Net pairs Hadamard-rotated Koopman capsules, EngramHash feedback, and adaptive halting to pack structured reasoning into ~12MB via ternary packing.",
     "tags": [
-      "quantization",
       "architecture",
-      "optimizer",
-      "sliding-window-eval"
+      "quantization",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Hadamard-rotated Koopman capsule dynamics with cold-start gating",
-      "Ternary U-Net + EngramHash with TurboQuant packing",
-      "Sliding-window carry with adaptive halting and n-gram cache"
+      "Ternary U-Net with Hadamard-rotated Koopman capsules",
+      "Adaptive halting plus cross-window capsule carry",
+      "EngramHash and Hadamard-gated feedback for iterative refinement"
     ]
   },
   "compatibility": {

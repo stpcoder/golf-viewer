@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-02T11:31:11.270Z",
+  "generatedAt": "2026-04-02T12:01:20.867Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -8718,7 +8718,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-04-02_WARP_WordAware_Representation_Priors",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -8766,14 +8766,14 @@
       "pr": {
         "number": 1252,
         "title": "Record(?): WARP (Word-Aware Representation Priors) — val_bpb 1.0713 | 1xH100 10min | 13.65 MB",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/1252",
         "authorLogin": "ahmetdenizyilmaz",
         "authorName": null,
         "createdAt": "2026-04-02T08:33:33Z",
-        "updatedAt": "2026-04-02T08:33:33Z",
+        "updatedAt": "2026-04-02T11:38:53Z",
         "headSha": "1668e1884e5e5f8d96b9d6751d1ad3df8bdc4632",
         "headRepo": "ahmetdenizyilmaz/parameter-golf"
       },
@@ -51457,6 +51457,83 @@
       }
     },
     {
+      "id": "record-records-track_10min_16mb-2026-03-25_Ternary_Feedback_TTT",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-25_Ternary_Feedback_TTT",
+        "folderPath": "records/track_10min_16mb/2026-03-25_Ternary_Feedback_TTT",
+        "submissionPath": "records/track_10min_16mb/2026-03-25_Ternary_Feedback_TTT/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-25_Ternary_Feedback_TTT/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-25_Ternary_Feedback_TTT/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-25_Ternary_Feedback_TTT/train_gpt.py"
+      },
+      "submission": {
+        "author": "Akhilesh-Gogikar",
+        "githubId": "Akhilesh-Gogikar",
+        "name": "Ternary Koopman-Attention Hybrid (TKA-H) v5",
+        "blurb": "Pareto-optimal hybrid reasoner alternating 4 Attention and 4 Koopman-SSM layers using Shared-Block Recurrence (2 unique blocks tiled across depth). Employs an 8-stage convergence stack including 3-Phase Curriculum Sequencer (256->1024), Stochastic Depth (0.1), Ternary Noise Injection (0.02), and Self-Distillation KL-anchoring. Features EngramHash v2, EMA shadow weights (start@40%), NeoMuon with tuned LR (0.035/matrix, 0.052/embed), fast curriculum (15/40 phase split), and shortened warmdown (35%). Tuned via systematic 15-min ablation sweep across curriculum timing, LR, and noise.",
+        "date": "2026-04-02T00:00:00Z"
+      },
+      "metrics": {
+        "valBpb": 1.9538,
+        "valLoss": 3.3091,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 990894,
+        "bytesCode": 124566,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 911,
+        "title": "KoopCaps-HRM Ternary Reasoner — Koopman Capsule Dynamics + Adaptive Halting",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/911",
+        "authorLogin": "Akhilesh-Gogikar",
+        "authorName": null,
+        "createdAt": "2026-03-26T23:29:05Z",
+        "updatedAt": "2026-04-02T11:47:46Z",
+        "headSha": "25229e35f5988ddb2647d969f4a2b1f4cf5ff5af",
+        "headRepo": "Akhilesh-Gogikar/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/25229e35f5988ddb2647d969f4a2b1f4cf5ff5af/records/track_10min_16mb/2026-03-25_Ternary_Feedback_TTT/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/25229e35f5988ddb2647d969f4a2b1f4cf5ff5af/records/track_10min_16mb/2026-03-25_Ternary_Feedback_TTT/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/25229e35f5988ddb2647d969f4a2b1f4cf5ff5af/records/track_10min_16mb/2026-03-25_Ternary_Feedback_TTT/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/25229e35f5988ddb2647d969f4a2b1f4cf5ff5af/records/track_10min_16mb/2026-03-25_Ternary_Feedback_TTT/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/25229e35f5988ddb2647d969f4a2b1f4cf5ff5af/records/track_10min_16mb/2026-03-25_Ternary_Feedback_TTT",
+        "pr": "https://github.com/openai/parameter-golf/pull/911",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_non_record_16mb-2026-03-21_MLX_TechniqueStack_MacPrototyping",
       "source": "pull_request",
       "status": "open",
@@ -51525,83 +51602,6 @@
         "script": "https://github.com/openai/parameter-golf/blob/109cda3b3e3b87a30776396d9602efdb034bb4d2/records/track_non_record_16mb/2026-03-21_MLX_TechniqueStack_MacPrototyping/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/109cda3b3e3b87a30776396d9602efdb034bb4d2/records/track_non_record_16mb/2026-03-21_MLX_TechniqueStack_MacPrototyping",
         "pr": "https://github.com/openai/parameter-golf/pull/328",
-        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
-      },
-      "provenance": {
-        "onMain": false,
-        "hasPullRequest": true,
-        "listedInReadme": false
-      }
-    },
-    {
-      "id": "record-records-track_10min_16mb-2026-03-25_Ternary_Feedback_TTT",
-      "source": "pull_request",
-      "status": "open",
-      "category": "main-track",
-      "track": {
-        "path": "records/track_10min_16mb",
-        "slug": "track_10min_16mb",
-        "label": "10 Minute / 16MB",
-        "official": true,
-        "category": "main-track"
-      },
-      "record": {
-        "folderName": "2026-03-25_Ternary_Feedback_TTT",
-        "folderPath": "records/track_10min_16mb/2026-03-25_Ternary_Feedback_TTT",
-        "submissionPath": "records/track_10min_16mb/2026-03-25_Ternary_Feedback_TTT/submission.json",
-        "readmePath": "records/track_10min_16mb/2026-03-25_Ternary_Feedback_TTT/README.md",
-        "trainLogPath": "records/track_10min_16mb/2026-03-25_Ternary_Feedback_TTT/train.log",
-        "scriptPath": "records/track_10min_16mb/2026-03-25_Ternary_Feedback_TTT/train_gpt.py"
-      },
-      "submission": {
-        "author": "Akhilesh-Gogikar",
-        "githubId": "Akhilesh-Gogikar",
-        "name": "Ternary Koopman-Attention Hybrid (TKA-H) v5",
-        "blurb": "Pareto-optimal hybrid reasoner alternating 4 Attention and 4 Koopman-SSM layers using Shared-Block Recurrence (2 unique blocks tiled across depth). Employs an 8-stage convergence stack including 3-Phase Curriculum Sequencer (256->1024), Stochastic Depth (0.1), Ternary Noise Injection (0.02), and Self-Distillation KL-anchoring. Features EngramHash v2, EMA shadow weights (start@40%), NeoMuon with tuned LR (0.03/matrix, 0.045/embed), fast curriculum (15/40 phase split), and shortened warmdown (35%). Tuned via systematic 15-min ablation sweep across curriculum timing, LR, and noise.",
-        "date": "2026-04-02T00:00:00Z"
-      },
-      "metrics": {
-        "valBpb": 1.9589,
-        "valLoss": 3.3179,
-        "preQuantValBpb": null,
-        "preQuantValLoss": null,
-        "stepStop": null,
-        "wallclockSeconds": null,
-        "evalTimeSeconds": null
-      },
-      "artifact": {
-        "bytesTotal": 991210,
-        "bytesCode": 124566,
-        "bytesModelInt8Zlib": null
-      },
-      "flags": {
-        "usesValOnly": false
-      },
-      "detection": {
-        "valOnlyConfidence": "none",
-        "valOnlyMatches": []
-      },
-      "pr": {
-        "number": 911,
-        "title": "KoopCaps-HRM Ternary Reasoner — Koopman Capsule Dynamics + Adaptive Halting",
-        "state": "open",
-        "draft": false,
-        "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/911",
-        "authorLogin": "Akhilesh-Gogikar",
-        "authorName": null,
-        "createdAt": "2026-03-26T23:29:05Z",
-        "updatedAt": "2026-04-02T10:27:37Z",
-        "headSha": "813eee70d5f4f3f00275756c9d32df98cad1551e",
-        "headRepo": "Akhilesh-Gogikar/parameter-golf"
-      },
-      "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/813eee70d5f4f3f00275756c9d32df98cad1551e/records/track_10min_16mb/2026-03-25_Ternary_Feedback_TTT/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/813eee70d5f4f3f00275756c9d32df98cad1551e/records/track_10min_16mb/2026-03-25_Ternary_Feedback_TTT/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/813eee70d5f4f3f00275756c9d32df98cad1551e/records/track_10min_16mb/2026-03-25_Ternary_Feedback_TTT/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/813eee70d5f4f3f00275756c9d32df98cad1551e/records/track_10min_16mb/2026-03-25_Ternary_Feedback_TTT/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/813eee70d5f4f3f00275756c9d32df98cad1551e/records/track_10min_16mb/2026-03-25_Ternary_Feedback_TTT",
-        "pr": "https://github.com/openai/parameter-golf/pull/911",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
