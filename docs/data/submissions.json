@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-02T20:04:47.796Z",
+  "generatedAt": "2026-04-02T20:34:48.018Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -54095,7 +54095,7 @@
         "scriptPath": "records/track_non_record_16mb/2026-04-02_StockBaseline_A40_17M/train_gpt.py"
       },
       "submission": {
-        "author": "SID",
+        "author": "Siddhardha Nanda",
         "githubId": "SID-6921",
         "name": "Stock Baseline GPT 17M sp1024 A40",
         "blurb": "Stock unmodified baseline run using sp_bpe_1024 tokenizer (vocab=1024) on a single A40 GPU. 17M parameter model (~17M params), 30 training steps with 2M token batches (~600s wall-clock budget). Final int8+zlib roundtrip val_bpb: 3.2686, submission size 5.3MB well under the 16MB cap.",
@@ -54132,16 +54132,16 @@
         "authorLogin": "SID-6921",
         "authorName": null,
         "createdAt": "2026-04-02T18:48:45Z",
-        "updatedAt": "2026-04-02T19:46:52Z",
-        "headSha": "975919583d4399e230e54ca56b4411b2b0e4c345",
+        "updatedAt": "2026-04-02T20:24:20Z",
+        "headSha": "2ed635d6c24709c2507916893979610598f6d4c6",
         "headRepo": "SID-6921/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/975919583d4399e230e54ca56b4411b2b0e4c345/records/track_non_record_16mb/2026-04-02_StockBaseline_A40_17M/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/975919583d4399e230e54ca56b4411b2b0e4c345/records/track_non_record_16mb/2026-04-02_StockBaseline_A40_17M/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/975919583d4399e230e54ca56b4411b2b0e4c345/records/track_non_record_16mb/2026-04-02_StockBaseline_A40_17M/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/975919583d4399e230e54ca56b4411b2b0e4c345/records/track_non_record_16mb/2026-04-02_StockBaseline_A40_17M/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/975919583d4399e230e54ca56b4411b2b0e4c345/records/track_non_record_16mb/2026-04-02_StockBaseline_A40_17M",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/2ed635d6c24709c2507916893979610598f6d4c6/records/track_non_record_16mb/2026-04-02_StockBaseline_A40_17M/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/2ed635d6c24709c2507916893979610598f6d4c6/records/track_non_record_16mb/2026-04-02_StockBaseline_A40_17M/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/2ed635d6c24709c2507916893979610598f6d4c6/records/track_non_record_16mb/2026-04-02_StockBaseline_A40_17M/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/2ed635d6c24709c2507916893979610598f6d4c6/records/track_non_record_16mb/2026-04-02_StockBaseline_A40_17M/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/2ed635d6c24709c2507916893979610598f6d4c6/records/track_non_record_16mb/2026-04-02_StockBaseline_A40_17M",
         "pr": "https://github.com/openai/parameter-golf/pull/1262",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },

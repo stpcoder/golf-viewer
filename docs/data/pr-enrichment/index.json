@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-02T20:04:55.776Z",
+  "generatedAt": "2026-04-02T20:34:54.131Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -7,10 +7,10 @@
       "prNumber": 1262,
       "title": "Starter kit: align submission schema and path safety",
       "status": "open",
-      "updatedAt": "2026-04-02T19:46:52Z",
-      "headSha": "975919583d4399e230e54ca56b4411b2b0e4c345",
-      "generatedAt": "2026-04-02T20:04:55.593Z",
-      "summary": "Aligns submission schema and track names with repo conventions while sanitizing run names and guarding against path traversal in the starter kit.",
+      "updatedAt": "2026-04-02T20:24:20Z",
+      "headSha": "2ed635d6c24709c2507916893979610598f6d4c6",
+      "generatedAt": "2026-04-02T20:34:53.937Z",
+      "summary": "Starter kit normalizes submission schema/track names and adds run-name/path-safety guards for consistent non-record 16MB submissions.",
       "tags": [
         "non-record"
       ],
