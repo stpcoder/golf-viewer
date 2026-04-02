@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-31T17:45:08.767Z",
+  "generatedAt": "2026-04-02T23:06:04.755Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 861,
     "title": "Non-record: 11L Int5 QAT + Score-First TTT — val_bpb 1.1326 (15.51 MB)",
     "state": "open",
-    "updatedAt": "2026-03-31T17:39:38Z",
+    "updatedAt": "2026-04-02T22:56:43Z",
     "headSha": "28d45d26f58981b4e4c94acf8748cc38e1d3a93a",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/861",
     "authorLogin": "JoeProAI"
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11L U-Net pairs Int5 per-row QAT with pre-pruning and score-first TTT on MLP params while adding bigram hash embeddings plus full-layer XSA for tight artifacts.",
+    "summary": "11-layer U-Net with XSA and bigram hashes, Int5 QAT plus pruning/warmdown, and score-first TTT on MLP heads for a compact artifact.",
     "tags": [
+      "architecture",
       "quantization",
-      "attention",
-      "training-schedule"
+      "training-schedule",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Int5 per-row QAT with 15% weight pruning",
-      "Score-first TTT updating only MLP params after chunk scoring",
-      "Bigram hash embed + cross-layer shared attention across all layers"
+      "U-Net with XSA and bigram hash embeddings",
+      "Int5 per-row quantization with 15% pruning and 6000-step warmdown",
+      "Score-first TTT AdamW on MLP projections"
     ]
   },
   "compatibility": {

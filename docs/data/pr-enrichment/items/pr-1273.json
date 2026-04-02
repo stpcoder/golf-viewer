@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-02T23:05:43.150Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1273,
+    "title": "Non-record: Annealed Muon 1.58-bit Ternary — val_bpb 1.2196 (8xH100 SXM)",
+    "state": "open",
+    "updatedAt": "2026-04-02T22:45:33Z",
+    "headSha": "5b6f4656ddda1d3993e4258f5a5a162015330a78",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1273",
+    "authorLogin": "DushyantChetiwal"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-29_Annealed_Muon_1.58bit_8KV/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Training-time 1.58-bit ternary quantization via AnnealedBitLinear and Muon optimizer, using U-Net skips, XSA, and base-3 packed weights.",
+    "tags": [
+      "quantization",
+      "optimizer",
+      "architecture",
+      "compression"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "AnnealedBitLinear ternary quantization during training",
+      "Muon optimizer with hold-cosine schedule",
+      "Base-3 packing plus zstd-22 for ternary weights"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

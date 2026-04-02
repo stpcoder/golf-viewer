@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-02T02:57:27.679Z",
+  "generatedAt": "2026-04-02T23:05:58.749Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1245,
     "title": "[Non-Record] Hymba-8L: Hybrid SSM + Sliding Window Attention with 32K Context (1.1470 BPB)",
     "state": "open",
-    "updatedAt": "2026-04-02T02:30:36Z",
-    "headSha": "39ec0ae36aae516d4ba378d62e43d9c9bb2e6c9d",
+    "updatedAt": "2026-04-02T23:05:34Z",
+    "headSha": "d56080caf3f1e3ef155d0e5b810b3ce95e584561",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1245",
     "authorLogin": "mkenney2"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Hybrid Hymba uses parallel Mamba SSM + SWA-1024 with untied embeddings, tight regularization, and extended warmdown/TTT to train 32K contexts.",
+    "summary": "Hybrid Hymba8 runs parallel Mamba SSM and 1024-window sliding attention with longer warmdown, untied embeddings, and int8 quantization to hit 32K context in 10m.",
     "tags": [
       "architecture",
       "attention",
       "training-schedule",
-      "regularization"
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Parallel Mamba SSM and SWA-1024 per layer",
-      "Untied embeddings with high WD and int8 quantization",
-      "Extended cosine warmdown plus 25-epoch TTT"
+      "parallel Mamba SSM + SWA-1024 per layer",
+      "long cosine warmdown with WD=0.15 and untied embeddings",
+      "score-first TTT (25 epochs) + int8+zstd-22 artifacts"
     ]
   },
   "compatibility": {

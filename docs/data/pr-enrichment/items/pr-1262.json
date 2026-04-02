@@ -1,34 +1,35 @@
 {
-  "generatedAt": "2026-04-02T20:34:53.937Z",
+  "generatedAt": "2026-04-02T23:05:54.341Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1262,
     "title": "Starter kit: align submission schema and path safety",
     "state": "open",
-    "updatedAt": "2026-04-02T20:24:20Z",
-    "headSha": "2ed635d6c24709c2507916893979610598f6d4c6",
+    "updatedAt": "2026-04-02T22:59:00Z",
+    "headSha": "e5db1182030ea481c6cfd5c07294f906249382a2",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1262",
     "authorLogin": "SID-6921"
   },
   "inputs": {
-    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
     "readmePaths": [
+      "records/track_non_record_16mb/2026-04-02_R08_LRMatrixUp_A40_17M/README.md",
       "records/track_non_record_16mb/2026-04-02_StockBaseline_A40_17M/README.md"
     ],
-    "submissionCount": 1
+    "submissionCount": 2
   },
   "output": {
-    "summary": "Starter kit normalizes submission schema/track names and adds run-name/path-safety guards for consistent non-record 16MB submissions.",
+    "summary": "Normalized submission schema, track naming, CLI options, and added path-safety guard in prepare_submission for safer PR-ready outputs.",
     "tags": [
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Schema normalization for track naming",
-      "Run-name sanitization with path-traversal guard",
-      "Track options aligned for 10min/non-record 16MB"
+      "submission schema and track naming normalization",
+      "updated prepare_submission options for 10min_16mb/non_record_16mb",
+      "run-name sanitization plus resolve-time path traversal guard"
     ]
   },
   "compatibility": {

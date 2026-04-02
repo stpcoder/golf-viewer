@@ -1,8 +1,55 @@
 {
-  "generatedAt": "2026-04-02T22:35:26.602Z",
+  "generatedAt": "2026-04-02T23:06:04.882Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1274,
+      "title": "Record: Scylla + Parallel Residuals + Depth Recurrence + Legal TTT — val_bpb 1.0876 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-04-02T22:48:50Z",
+      "headSha": "567dc403e4864b265134c96115af38e415e9b883",
+      "generatedAt": "2026-04-02T23:05:38.623Z",
+      "summary": "Combines Scylla tokenizer with parallel residual lanes, mini depth recurrence, and legal score-first TTT plus mixed INT5/6 quantization.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1274.json"
+    },
+    {
+      "prNumber": 1273,
+      "title": "Non-record: Annealed Muon 1.58-bit Ternary — val_bpb 1.2196 (8xH100 SXM)",
+      "status": "open",
+      "updatedAt": "2026-04-02T22:45:33Z",
+      "headSha": "5b6f4656ddda1d3993e4258f5a5a162015330a78",
+      "generatedAt": "2026-04-02T23:05:43.150Z",
+      "summary": "Training-time 1.58-bit ternary quantization via AnnealedBitLinear and Muon optimizer, using U-Net skips, XSA, and base-3 packed weights.",
+      "tags": [
+        "quantization",
+        "optimizer",
+        "architecture",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1273.json"
+    },
     {
       "prNumber": 1270,
       "title": "Non-Record: Unified Attention + FA3 + 1hr training (val_bpb=1.1088)",
@@ -26,6 +73,30 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-1270.json"
+    },
+    {
+      "prNumber": 1269,
+      "title": "[Submission] Jtss-ux - 1.1301 BPB (10min_16mb)",
+      "status": "open",
+      "updatedAt": "2026-04-02T22:50:56Z",
+      "headSha": "8a834841c232f9d105f180468837c3d3c25f3615",
+      "generatedAt": "2026-04-02T23:05:49.259Z",
+      "summary": "Combines LeakyReLU(0.5)² MLPs with Parameter Banking + Parallel Muon optimization and legal score-first TTT chunks.",
+      "tags": [
+        "architecture",
+        "optimizer",
+        "training-schedule",
+        "muon"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1269.json"
     },
     {
       "prNumber": 1268,
@@ -78,10 +149,10 @@
       "prNumber": 1262,
       "title": "Starter kit: align submission schema and path safety",
       "status": "open",
-      "updatedAt": "2026-04-02T20:24:20Z",
-      "headSha": "2ed635d6c24709c2507916893979610598f6d4c6",
-      "generatedAt": "2026-04-02T20:34:53.937Z",
-      "summary": "Starter kit normalizes submission schema/track names and adds run-name/path-safety guards for consistent non-record 16MB submissions.",
+      "updatedAt": "2026-04-02T22:59:00Z",
+      "headSha": "e5db1182030ea481c6cfd5c07294f906249382a2",
+      "generatedAt": "2026-04-02T23:05:54.341Z",
+      "summary": "Normalized submission schema, track naming, CLI options, and added path-safety guard in prepare_submission for safer PR-ready outputs.",
       "tags": [
         "non-record"
       ],
@@ -400,15 +471,15 @@
       "prNumber": 1245,
       "title": "[Non-Record] Hymba-8L: Hybrid SSM + Sliding Window Attention with 32K Context (1.1470 BPB)",
       "status": "open",
-      "updatedAt": "2026-04-02T02:30:36Z",
-      "headSha": "39ec0ae36aae516d4ba378d62e43d9c9bb2e6c9d",
-      "generatedAt": "2026-04-02T02:57:27.679Z",
-      "summary": "Hybrid Hymba uses parallel Mamba SSM + SWA-1024 with untied embeddings, tight regularization, and extended warmdown/TTT to train 32K contexts.",
+      "updatedAt": "2026-04-02T23:05:34Z",
+      "headSha": "d56080caf3f1e3ef155d0e5b810b3ce95e584561",
+      "generatedAt": "2026-04-02T23:05:58.749Z",
+      "summary": "Hybrid Hymba8 runs parallel Mamba SSM and 1024-window sliding attention with longer warmdown, untied embeddings, and int8 quantization to hit 32K context in 10m.",
       "tags": [
         "architecture",
         "attention",
         "training-schedule",
-        "regularization"
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -6703,14 +6774,15 @@
       "prNumber": 861,
       "title": "Non-record: 11L Int5 QAT + Score-First TTT — val_bpb 1.1326 (15.51 MB)",
       "status": "open",
-      "updatedAt": "2026-03-31T17:39:38Z",
+      "updatedAt": "2026-04-02T22:56:43Z",
       "headSha": "28d45d26f58981b4e4c94acf8748cc38e1d3a93a",
-      "generatedAt": "2026-03-31T17:45:08.767Z",
-      "summary": "11L U-Net pairs Int5 per-row QAT with pre-pruning and score-first TTT on MLP params while adding bigram hash embeddings plus full-layer XSA for tight artifacts.",
+      "generatedAt": "2026-04-02T23:06:04.755Z",
+      "summary": "11-layer U-Net with XSA and bigram hashes, Int5 QAT plus pruning/warmdown, and score-first TTT on MLP heads for a compact artifact.",
       "tags": [
+        "architecture",
         "quantization",
-        "attention",
-        "training-schedule"
+        "training-schedule",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,

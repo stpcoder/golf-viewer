@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-02T23:05:49.259Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1269,
+    "title": "[Submission] Jtss-ux - 1.1301 BPB (10min_16mb)",
+    "state": "open",
+    "updatedAt": "2026-04-02T22:50:56Z",
+    "headSha": "8a834841c232f9d105f180468837c3d3c25f3615",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1269",
+    "authorLogin": "Jtss-ux"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/Jtss-ux_Submission_1.1301/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Combines LeakyReLU(0.5)² MLPs with Parameter Banking + Parallel Muon optimization and legal score-first TTT chunks.",
+    "tags": [
+      "architecture",
+      "optimizer",
+      "training-schedule",
+      "muon"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "Not applicable; uses standard training.",
+    "techniques": [
+      "LeakyReLU(0.5)² for MLP blocks",
+      "Score-first legal TTT over 32K-token chunks with SGD",
+      "Parameter Banking + Parallel Muon optimizer"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
