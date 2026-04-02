@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-02T12:01:20.867Z",
+  "generatedAt": "2026-04-02T12:31:23.761Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -10852,7 +10852,7 @@
         "authorLogin": "msisovic",
         "authorName": null,
         "createdAt": "2026-04-01T00:46:06Z",
-        "updatedAt": "2026-04-02T09:51:35Z",
+        "updatedAt": "2026-04-02T12:12:35Z",
         "headSha": "e01b7e19895e09efb97c415ad6e32e60d6b4842b",
         "headRepo": "msisovic/parameter-golf"
       },
@@ -23035,6 +23035,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/083f860ff4aa4b5a456c13fe64e5c7ec99f398fc/records/track_non_record_16mb/2026-04-02_11L_24h_Local4060Ti_LeakyTTT/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/083f860ff4aa4b5a456c13fe64e5c7ec99f398fc/records/track_non_record_16mb/2026-04-02_11L_24h_Local4060Ti_LeakyTTT",
         "pr": "https://github.com/openai/parameter-golf/pull/1244",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-04-02_LeakyReLU_SmearGate_BigramHash_Int6_SWA",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-04-02_LeakyReLU_SmearGate_BigramHash_Int6_SWA",
+        "folderPath": "records/track_non_record_16mb/2026-04-02_LeakyReLU_SmearGate_BigramHash_Int6_SWA",
+        "submissionPath": "records/track_non_record_16mb/2026-04-02_LeakyReLU_SmearGate_BigramHash_Int6_SWA/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-04-02_LeakyReLU_SmearGate_BigramHash_Int6_SWA/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-04-02_LeakyReLU_SmearGate_BigramHash_Int6_SWA/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-04-02_LeakyReLU_SmearGate_BigramHash_Int6_SWA/train_gpt.py"
+      },
+      "submission": {
+        "author": "oidebrett",
+        "githubId": "oidebrett",
+        "name": "Ivo Brett",
+        "blurb": null,
+        "date": "2026-04-02T12:16:44Z"
+      },
+      "metrics": {
+        "valBpb": 1.1444,
+        "valLoss": 1.9323,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1256,
+        "title": "Non-record: LeakyReLU(0.5)^2 on SmearGate + BigramHash + Int6 stack (1.1444 bpb)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1256",
+        "authorLogin": "oidebrett",
+        "authorName": null,
+        "createdAt": "2026-04-02T12:16:44Z",
+        "updatedAt": "2026-04-02T12:16:44Z",
+        "headSha": "adc94d24281d9bd89c17d4364167723d32e7dc70",
+        "headRepo": "oidebrett/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/adc94d24281d9bd89c17d4364167723d32e7dc70/records/track_non_record_16mb/2026-04-02_LeakyReLU_SmearGate_BigramHash_Int6_SWA/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/adc94d24281d9bd89c17d4364167723d32e7dc70/records/track_non_record_16mb/2026-04-02_LeakyReLU_SmearGate_BigramHash_Int6_SWA/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/adc94d24281d9bd89c17d4364167723d32e7dc70/records/track_non_record_16mb/2026-04-02_LeakyReLU_SmearGate_BigramHash_Int6_SWA/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/adc94d24281d9bd89c17d4364167723d32e7dc70/records/track_non_record_16mb/2026-04-02_LeakyReLU_SmearGate_BigramHash_Int6_SWA/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/adc94d24281d9bd89c17d4364167723d32e7dc70/records/track_non_record_16mb/2026-04-02_LeakyReLU_SmearGate_BigramHash_Int6_SWA",
+        "pr": "https://github.com/openai/parameter-golf/pull/1256",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

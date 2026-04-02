@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-02T12:31:29.427Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1256,
+    "title": "Non-record: LeakyReLU(0.5)^2 on SmearGate + BigramHash + Int6 stack (1.1444 bpb)",
+    "state": "open",
+    "updatedAt": "2026-04-02T12:16:44Z",
+    "headSha": "adc94d24281d9bd89c17d4364167723d32e7dc70",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1256",
+    "authorLogin": "oidebrett"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-04-02_LeakyReLU_SmearGate_BigramHash_Int6_SWA/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Adds LeakyReLU(0.5)^2 in the MLP atop the SmearGate+BigramHash + Int6 QAT stack with SWA and sliding-window eval for a compact non-record run.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "training-schedule",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "SmearGate + BigramHash with 3×MLP and orthogonal init",
+      "Int6 QAT plus zstd-22 compression for ~16MB artifacts",
+      "SWA averaging and sliding-window evaluation"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

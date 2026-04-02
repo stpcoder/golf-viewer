@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-04-02T12:01:36.792Z",
+  "generatedAt": "2026-04-02T12:31:34.000Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1256,
+      "title": "Non-record: LeakyReLU(0.5)^2 on SmearGate + BigramHash + Int6 stack (1.1444 bpb)",
+      "status": "open",
+      "updatedAt": "2026-04-02T12:16:44Z",
+      "headSha": "adc94d24281d9bd89c17d4364167723d32e7dc70",
+      "generatedAt": "2026-04-02T12:31:29.427Z",
+      "summary": "Adds LeakyReLU(0.5)^2 in the MLP atop the SmearGate+BigramHash + Int6 QAT stack with SWA and sliding-window eval for a compact non-record run.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "training-schedule",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1256.json"
+    },
     {
       "prNumber": 1255,
       "title": "Non-record Submission: Text Diffusion + Retrodiction + TTT + Depth Recurrence",
@@ -938,14 +962,15 @@
       "prNumber": 1204,
       "title": "Record: ParallelResiduals + MiniDepthRecurrence, 1.1063 BPB / 1.8679 nats, -0.0072 vs PR #1179, -0.0143 vs merged SOTA",
       "status": "open",
-      "updatedAt": "2026-04-02T09:51:35Z",
+      "updatedAt": "2026-04-02T12:12:35Z",
       "headSha": "e01b7e19895e09efb97c415ad6e32e60d6b4842b",
-      "generatedAt": "2026-04-02T10:00:56.004Z",
-      "summary": "Ports mixed-quant AR GPTQ and adds layer7+ parallel residual lanes alongside delayed mini depth recurrence with untied repeated MLPs.",
+      "generatedAt": "2026-04-02T12:31:33.827Z",
+      "summary": "Combines parallel residual lanes from layer 7 with delayed mini depth recurrence on layers 4-5 plus mixed-quantization GPTQ calibration for a compact training stack.",
       "tags": [
         "architecture",
-        "training-schedule",
-        "quantization"
+        "depth-width",
+        "mixed-precision",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
