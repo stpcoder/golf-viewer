@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-03T12:39:42.695Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1298,
+    "title": "Record: Polar Express NS + SLOT + MuonEq-R + XSA-all — 1.1043 BPB (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-04-03T12:10:12Z",
+    "headSha": "31a0826757aa089e7c75dda02a3eefe27a0c69e4",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1298",
+    "authorLogin": "Omrigotlieb"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-02_PolarExpress_SLOT_XSAall/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Combines Polar Express Newton-Schulz, MuonEq-R orthogonalization, eval-time SLOT delta tuning, and XSA on all layers over the PR#549 stack.",
+    "tags": [
+      "muon",
+      "attention",
+      "optimizer",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Polar Express per-iteration minimax NS polynomials",
+      "SLOT eval-time additive delta tuned via AdamW",
+      "MuonEq-R row-normalized gradients with XSA across 11 layers"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

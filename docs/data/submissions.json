@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-03T12:09:28.576Z",
+  "generatedAt": "2026-04-03T12:39:34.129Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -11613,17 +11613,17 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 1297,
+        "number": 1298,
         "title": "Record: Polar Express NS + SLOT + MuonEq-R + XSA-all — 1.1043 BPB (3-seed mean)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1297",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1298",
         "authorLogin": "Omrigotlieb",
         "authorName": null,
-        "createdAt": "2026-04-03T12:01:18Z",
-        "updatedAt": "2026-04-03T12:01:18Z",
-        "headSha": "2fe8f5d95e361eb675209ec2dc7e6db5e186b3ff",
+        "createdAt": "2026-04-03T12:10:12Z",
+        "updatedAt": "2026-04-03T12:10:12Z",
+        "headSha": "31a0826757aa089e7c75dda02a3eefe27a0c69e4",
         "headRepo": "Omrigotlieb/parameter-golf"
       },
       "links": {
@@ -11632,7 +11632,7 @@
         "trainLog": "https://github.com/openai/parameter-golf/blob/2fe8f5d95e361eb675209ec2dc7e6db5e186b3ff/records/track_10min_16mb/2026-04-02_PolarExpress_SLOT_XSAall/train.log",
         "script": "https://github.com/openai/parameter-golf/blob/2fe8f5d95e361eb675209ec2dc7e6db5e186b3ff/records/track_10min_16mb/2026-04-02_PolarExpress_SLOT_XSAall/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/2fe8f5d95e361eb675209ec2dc7e6db5e186b3ff/records/track_10min_16mb/2026-04-02_PolarExpress_SLOT_XSAall",
-        "pr": "https://github.com/openai/parameter-golf/pull/1297",
+        "pr": "https://github.com/openai/parameter-golf/pull/1298",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

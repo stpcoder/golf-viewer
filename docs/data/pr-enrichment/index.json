@@ -1,19 +1,20 @@
 {
-  "generatedAt": "2026-04-03T12:09:35.306Z",
+  "generatedAt": "2026-04-03T12:39:42.885Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
-      "prNumber": 1297,
+      "prNumber": 1298,
       "title": "Record: Polar Express NS + SLOT + MuonEq-R + XSA-all — 1.1043 BPB (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-03T12:01:18Z",
-      "headSha": "2fe8f5d95e361eb675209ec2dc7e6db5e186b3ff",
-      "generatedAt": "2026-04-03T12:09:35.118Z",
-      "summary": "Combines Polar Express Newton-Schulz Muon orthogonalization with eval-time SLOT delta tuning, MuonEq-R row normalization, and XSA on every layer.",
+      "updatedAt": "2026-04-03T12:10:12Z",
+      "headSha": "31a0826757aa089e7c75dda02a3eefe27a0c69e4",
+      "generatedAt": "2026-04-03T12:39:42.695Z",
+      "summary": "Combines Polar Express Newton-Schulz, MuonEq-R orthogonalization, eval-time SLOT delta tuning, and XSA on all layers over the PR#549 stack.",
       "tags": [
-        "optimizer",
+        "muon",
         "attention",
+        "optimizer",
         "evaluation"
       ],
       "flags": {
@@ -24,7 +25,7 @@
       "compatibility": {
         "valOnlyMatchesCollector": true
       },
-      "file": "items/pr-1297.json"
+      "file": "items/pr-1298.json"
     },
     {
       "prNumber": 1296,
