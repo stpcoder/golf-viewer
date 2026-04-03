@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-04-03T02:36:50.050Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1278,
+    "title": "WIP: Depth Recurrence via Weight-Shared Transformer Blocks",
+    "state": "open",
+    "updatedAt": "2026-04-03T02:32:12Z",
+    "headSha": "89c725bbad7b7b83de75db8b98852cde8e603db1",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1278",
+    "authorLogin": "GitGeeks"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-02_DepthRecurrence_WeightShared/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Weight-shared transformer recursion reuses a few blocks across iterations with layer-conditioned gating and recurrent skips on the PR#1019 stack.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "regularization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Weight-shared transformer blocks iterated for >20 effective layers",
+      "Layer-index embeddings and learned gates for per-iteration conditioning",
+      "Per-iteration RMSNorm with adapted U-Net-style recurrence skips"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

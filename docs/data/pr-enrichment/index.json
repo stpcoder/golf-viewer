@@ -1,8 +1,55 @@
 {
-  "generatedAt": "2026-04-03T02:06:52.352Z",
+  "generatedAt": "2026-04-03T02:37:01.032Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1278,
+      "title": "WIP: Depth Recurrence via Weight-Shared Transformer Blocks",
+      "status": "open",
+      "updatedAt": "2026-04-03T02:32:12Z",
+      "headSha": "89c725bbad7b7b83de75db8b98852cde8e603db1",
+      "generatedAt": "2026-04-03T02:36:50.050Z",
+      "summary": "Weight-shared transformer recursion reuses a few blocks across iterations with layer-conditioned gating and recurrent skips on the PR#1019 stack.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "regularization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1278.json"
+    },
+    {
+      "prNumber": 1277,
+      "title": "Non-record: JEPA EMA teacher + attention predictor + MLP3x + 10L",
+      "status": "open",
+      "updatedAt": "2026-04-03T02:20:11Z",
+      "headSha": "bdbf5ace81327663be950e79d3e7b1314a79c1fb",
+      "generatedAt": "2026-04-03T02:36:55.118Z",
+      "summary": "Adds JEPA auxiliary loss with EMA teacher, causal attention predictor, and CE-dominant schedule on a 10L MLP3x model to stabilize representations.",
+      "tags": [
+        "regularization",
+        "attention",
+        "architecture",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1277.json"
+    },
     {
       "prNumber": 1276,
       "title": "Record: MuonEq-R + Context-Only SLOT + XSA-all + QK-Gain 5.0",
@@ -9669,15 +9716,15 @@
       "prNumber": 675,
       "title": "Non-record: LeakyReLU² + LAWA + Ramping WD + Val Training (val_bpb=1.2302, 1xH100)",
       "status": "open",
-      "updatedAt": "2026-04-03T02:02:59Z",
-      "headSha": "d4eb7cfc031823db8782e53891709b87fb396a76",
-      "generatedAt": "2026-04-03T02:06:52.262Z",
-      "summary": "10-layer model uses LeakyReLU², LAWA averaging, ramping WD, and lzma compression while training on val set on 1×H100 to fit the 16MB non-record bin.",
+      "updatedAt": "2026-04-03T02:26:29Z",
+      "headSha": "ee34ab61ce7b107dca0b870b6f65bca25e25eccd",
+      "generatedAt": "2026-04-03T02:37:00.939Z",
+      "summary": "Stacks baseline with LeakyReLU², LAWA averaging, ramping WD, val-set training, and lzma compression to squeeze 1xH100 budget runs under 16MB.",
       "tags": [
         "val-only",
-        "architecture",
+        "compression",
         "training-schedule",
-        "compression"
+        "architecture"
       ],
       "flags": {
         "usesValOnly": true,

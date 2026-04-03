@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-03T02:36:55.118Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1277,
+    "title": "Non-record: JEPA EMA teacher + attention predictor + MLP3x + 10L",
+    "state": "open",
+    "updatedAt": "2026-04-03T02:20:11Z",
+    "headSha": "bdbf5ace81327663be950e79d3e7b1314a79c1fb",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1277",
+    "authorLogin": "Ochakov64"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-04-02_JEPA_EMA_MLP3x_10L/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Adds JEPA auxiliary loss with EMA teacher, causal attention predictor, and CE-dominant schedule on a 10L MLP3x model to stabilize representations.",
+    "tags": [
+      "regularization",
+      "attention",
+      "architecture",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "JEPA cosine auxiliary loss blended with CE, annealing to pure CE late",
+      "EMA teacher provides stable targets discarded before serialization",
+      "Causal attention predictor doubles as final projection head"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
