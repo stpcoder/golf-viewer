@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-04-03T20:11:54.836Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1313,
+    "title": "Record: SLOT-24 Aggressive — val_bpb 0.8637 (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-04-03T20:08:13Z",
+    "headSha": "dcda6e6d3342897b9ccc9e381d4674ac54355158",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1313",
+    "authorLogin": "anthony-maio"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-03_SLOT24_LR012_Stride96/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Aggressive SLOT-24 eval with frozen weights using larger LR/min, stride, and per-sample delta/logit bias tuning.",
+    "tags": [
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Per-sample SLOT-24 delta + logit bias tuning",
+      "Cosine AdamW on frozen model with scored-position masking",
+      "Stride 96, 24-step eval sweep for lr/lr_min"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

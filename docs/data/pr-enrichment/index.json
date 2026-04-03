@@ -1,8 +1,29 @@
 {
-  "generatedAt": "2026-04-03T19:42:30.218Z",
+  "generatedAt": "2026-04-03T20:12:11.167Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1313,
+      "title": "Record: SLOT-24 Aggressive — val_bpb 0.8637 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-04-03T20:08:13Z",
+      "headSha": "dcda6e6d3342897b9ccc9e381d4674ac54355158",
+      "generatedAt": "2026-04-03T20:11:54.836Z",
+      "summary": "Aggressive SLOT-24 eval with frozen weights using larger LR/min, stride, and per-sample delta/logit bias tuning.",
+      "tags": [
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1313.json"
+    },
     {
       "prNumber": 1312,
       "title": "Non-record: JEPA-LM Latent Predictive World Model (first JEPA submission)",
@@ -194,10 +215,10 @@
       "prNumber": 1304,
       "title": "Add DeepFloor non-record submission candidate",
       "status": "open",
-      "updatedAt": "2026-04-03T14:55:35Z",
-      "headSha": "deebb7d0fbe6b1b9f3490518efe686b7dc160d51",
-      "generatedAt": "2026-04-03T15:10:11.683Z",
-      "summary": "DeepFloor packages a frozen recurrent multi-view LM with repeated QKV+O loops, floor/fused cross-token recurrence, and explicit stability controls.",
+      "updatedAt": "2026-04-03T20:00:46Z",
+      "headSha": "b3169d429f212778f7a85aa723a8b28e248a2163",
+      "generatedAt": "2026-04-03T20:11:59.286Z",
+      "summary": "DeepFloor packages a compact recurrent multi-view LM with repeated QKV+O blocks, floor/fused cross-token recurrence, and explicit stability controls for deep tied-depth runs.",
       "tags": [
         "architecture",
         "attention",
@@ -618,13 +639,13 @@
       "prNumber": 1281,
       "title": "Non-record: MatrixGPT — O(n) Matrix-State Recurrent LM, 1.33MB artifact",
       "status": "open",
-      "updatedAt": "2026-04-03T19:41:17Z",
-      "headSha": "0b7fd0843fb9c7915782dcf70d1a3bc78d935721",
-      "generatedAt": "2026-04-03T19:42:30.028Z",
-      "summary": "MatrixGPT swaps attention for sequential 2×2 matrix products, building a multiplicative O(n) recurrence per layer while keeping the baseline Muon+int8 setup.",
+      "updatedAt": "2026-04-03T20:03:39Z",
+      "headSha": "65d38a4a5ba72556705e2ab0a6706eec53d64113",
+      "generatedAt": "2026-04-03T20:12:04.849Z",
+      "summary": "MatrixGPT swaps attention for sequential 2×2 matrix-state recurrence so context mixes via O(n) matrix products without KV cache or RoPE.",
       "tags": [
         "architecture",
-        "compression",
+        "attention",
         "non-record"
       ],
       "flags": {
@@ -688,12 +709,13 @@
       "prNumber": 1278,
       "title": "WIP: Depth Recurrence — val_bpb 3.2134 (beats baseline by 0.014 BPB at 2.8x fewer params)",
       "status": "open",
-      "updatedAt": "2026-04-03T18:04:27Z",
-      "headSha": "4c36d2b654d9525932ad72bd82105ae87fde29c4",
-      "generatedAt": "2026-04-03T18:11:42.722Z",
-      "summary": "Shared-weight depth recurrence iterates a small transformer bank with iteration embeddings and U-Net skips to achieve 20+ effective layers under 16MB.",
+      "updatedAt": "2026-04-03T19:41:47Z",
+      "headSha": "683a6547793a245ecae0d074f25ad9a07614dd7f",
+      "generatedAt": "2026-04-03T20:12:10.979Z",
+      "summary": "Shares a few transformer blocks with learned iteration gating to loop through 20+ effective layers inside the 16MB budget.",
       "tags": [
-        "architecture"
+        "architecture",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,

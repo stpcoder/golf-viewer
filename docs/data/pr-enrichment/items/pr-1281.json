@@ -1,35 +1,37 @@
 {
-  "generatedAt": "2026-04-03T19:42:30.028Z",
+  "generatedAt": "2026-04-03T20:12:04.849Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1281,
     "title": "Non-record: MatrixGPT — O(n) Matrix-State Recurrent LM, 1.33MB artifact",
     "state": "open",
-    "updatedAt": "2026-04-03T19:41:17Z",
-    "headSha": "0b7fd0843fb9c7915782dcf70d1a3bc78d935721",
+    "updatedAt": "2026-04-03T20:03:39Z",
+    "headSha": "65d38a4a5ba72556705e2ab0a6706eec53d64113",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1281",
     "authorLogin": "rlphlrnrys"
   },
   "inputs": {
-    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
     "readmePaths": [
+      "records/track_non_record_16mb/2026-04-03_TanHop/README.md",
       "records/track_non_record_16mb/2026-04-02_MatrixGPT/README.md"
     ],
-    "submissionCount": 1
+    "submissionCount": 2
   },
   "output": {
-    "summary": "MatrixGPT swaps attention for sequential 2×2 matrix products, building a multiplicative O(n) recurrence per layer while keeping the baseline Muon+int8 setup.",
+    "summary": "MatrixGPT swaps attention for sequential 2×2 matrix-state recurrence so context mixes via O(n) matrix products without KV cache or RoPE.",
     "tags": [
       "architecture",
-      "compression",
+      "attention",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Sequential 2×2 matrix recurrence replacing attention",
-      "Matrix-state readout via learned projection vectors"
+      "Sequential 2×2 matrix-product recurrence per token",
+      "O(n) state update replaces quadratic attention",
+      "Residual readout projects matrix state back into logits"
     ]
   },
   "compatibility": {
