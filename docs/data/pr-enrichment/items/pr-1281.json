@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-04-03T03:07:08.604Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1281,
+    "title": "Non-record: MatrixGPT — O(n) Matrix-State Recurrent LM, 1.33MB artifact",
+    "state": "open",
+    "updatedAt": "2026-04-03T03:01:19Z",
+    "headSha": "d04f53128ef72f7299f2c76192f11e1807dea846",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1281",
+    "authorLogin": "rlphlrnrys"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-04-02_MatrixGPT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Replaces attention with sequential 2×2 matrix recurrence, maintaining O(n) context through multiplicative state updates across layers.",
+    "tags": [
+      "architecture",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Sequential 2×2 matrix state recurrence",
+      "O(n) context mixing without KV cache",
+      "Pre-RMSNorm residual stream wrap"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

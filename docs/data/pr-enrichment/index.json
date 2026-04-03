@@ -1,8 +1,77 @@
 {
-  "generatedAt": "2026-04-03T02:37:01.032Z",
+  "generatedAt": "2026-04-03T03:07:38.812Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1281,
+      "title": "Non-record: MatrixGPT — O(n) Matrix-State Recurrent LM, 1.33MB artifact",
+      "status": "open",
+      "updatedAt": "2026-04-03T03:01:19Z",
+      "headSha": "d04f53128ef72f7299f2c76192f11e1807dea846",
+      "generatedAt": "2026-04-03T03:07:08.604Z",
+      "summary": "Replaces attention with sequential 2×2 matrix recurrence, maintaining O(n) context through multiplicative state updates across layers.",
+      "tags": [
+        "architecture",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1281.json"
+    },
+    {
+      "prNumber": 1280,
+      "title": "Record: AR Self-Gen GPTQ + XSA-11 + BigramHash3072x112 (mean 1.1156)",
+      "status": "open",
+      "updatedAt": "2026-04-03T02:50:29Z",
+      "headSha": "16196382e498c236e2a773e433eb5401101c535e",
+      "generatedAt": "2026-04-03T03:07:21.673Z",
+      "summary": "Single-pass run uses AR self-generated GPTQ with XSA on all 11 layers plus BigramHash 3072x112, while Muon Newton-Schulz TTT adds entropy-based epochs.",
+      "tags": [
+        "quantization",
+        "attention",
+        "optimizer",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1280.json"
+    },
+    {
+      "prNumber": 1279,
+      "title": "Record: MuonEq-R + Depth Recurrence + N61 Mixed GPTQ — val_bpb 1.0924 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-04-03T02:38:38Z",
+      "headSha": "32ba36e0d24ecf515f78e403612b139416918541",
+      "generatedAt": "2026-04-03T03:07:27.261Z",
+      "summary": "Combines MuonEq-R row-normalized optimizer, shared depth recurrence on layers 4/5, and Hessian-ranked GPTQ mixed int6/int5 quantization to fit an extra int6 layer.",
+      "tags": [
+        "optimizer",
+        "architecture",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1279.json"
+    },
     {
       "prNumber": 1278,
       "title": "WIP: Depth Recurrence via Weight-Shared Transformer Blocks",
@@ -30,15 +99,15 @@
       "prNumber": 1277,
       "title": "Non-record: JEPA EMA teacher + attention predictor + MLP3x + 10L",
       "status": "open",
-      "updatedAt": "2026-04-03T02:20:11Z",
-      "headSha": "bdbf5ace81327663be950e79d3e7b1314a79c1fb",
-      "generatedAt": "2026-04-03T02:36:55.118Z",
-      "summary": "Adds JEPA auxiliary loss with EMA teacher, causal attention predictor, and CE-dominant schedule on a 10L MLP3x model to stabilize representations.",
+      "updatedAt": "2026-04-03T02:50:11Z",
+      "headSha": "34d6e28166f5108703687253c8e9f89560e9704f",
+      "generatedAt": "2026-04-03T03:07:31.886Z",
+      "summary": "Adds JEPA aux loss with EMA teacher targets and a causal attention predictor on a 10-layer MLP3× model, keeping CE dominant while enriching latent regularization.",
       "tags": [
-        "regularization",
         "attention",
+        "regularization",
         "architecture",
-        "training-schedule"
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,
@@ -518,13 +587,12 @@
       "prNumber": 1247,
       "title": "Proposal: Validate ASQU on the March 22 10min/16MB control line",
       "status": "open",
-      "updatedAt": "2026-04-02T16:32:30Z",
+      "updatedAt": "2026-04-03T03:02:32Z",
       "headSha": "f30e006c45f4f63e699a3cb5e8dd7316456dc0fb",
-      "generatedAt": "2026-04-02T16:34:10.298Z",
-      "summary": "Adds per-channel ASQU activation with dedicated beta optimizer to the March22 11L FA3 stack to test transfer on the clean 10min/16MB line.",
+      "generatedAt": "2026-04-03T03:07:38.623Z",
+      "summary": "Validates ASQU by swapping relu^2 for per-channel learnable squared activations on the March 22 11-layer control with gated compute stages.",
       "tags": [
         "architecture",
-        "quantization",
         "evaluation"
       ],
       "flags": {
@@ -2257,29 +2325,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-1150.json"
-    },
-    {
-      "prNumber": 1148,
-      "title": "Record: 11L Muon Legal TTT + Entropy-Adaptive Epochs (8×H100) — val_bpb 1.1179 (3-seed mean)",
-      "status": "open",
-      "updatedAt": "2026-03-30T19:32:34Z",
-      "headSha": "f21923533c704841b6f1f2cbcc124da411f3ce85",
-      "generatedAt": "2026-03-30T19:38:00.734Z",
-      "summary": "TTT loop applies Muon Newton-Schulz updates and entropy-driven 2/3/4 epoch counts per chunk to direct adaptation effort toward harder validation content.",
-      "tags": [
-        "muon",
-        "training-schedule",
-        "evaluation"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-1148.json"
     },
     {
       "prNumber": 1146,
