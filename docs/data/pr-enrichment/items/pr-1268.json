@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-02T22:05:07.303Z",
+  "generatedAt": "2026-04-03T07:38:42.652Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1268,
     "title": "Non-record: Mamba3 Hybrid + GPTQ Long Context (1.1875 BPB)",
     "state": "open",
-    "updatedAt": "2026-04-02T22:02:43Z",
+    "updatedAt": "2026-04-03T07:19:27Z",
     "headSha": "73737ebbb6c12db84d05bc9efa7b65c497d24548",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1268",
     "authorLogin": "samquiring"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Mamba3 hybrid uses eight SSM blocks and two GQA attention layers with U-Net skips, 16K context, EMA smoothing, and Hessian GPTQ for long context models.",
+    "summary": "Mamba3 hybrid mixes eight SSM layers with two GQA attention layers, U-Net skips, and long-context training before EMA + Hessian GPTQ compression.",
     "tags": [
       "architecture",
       "quantization",
-      "training-schedule",
-      "evaluation"
+      "evaluation",
+      "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Mamba3+GQA U-Net hybrid layout",
-      "16K seq len training with EMA smoothing",
-      "Full Hessian GPTQ int6 + LZMA"
+      "Mamba3 hybrid with 2 GQA attention layers and U-Net skip connections for long-context scaling",
+      "EMA smoothing before full Hessian GPTQ int6 compression with LZMA",
+      "Train seq_len=16384 to showcase Mamba linear-time context advantage"
     ]
   },
   "compatibility": {

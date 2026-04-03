@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-04-03T07:38:28.709Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1288,
+    "title": "HyperGPT: Generative Weight Synthesis — val_bpb=8.218640",
+    "state": "open",
+    "updatedAt": "2026-04-03T07:14:34Z",
+    "headSha": "6c8151a8ed066ba261d8bed25f2b1a8f9be70f98",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1288",
+    "authorLogin": "yassienshaalan"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/hypergpt-yassienshaalan-20260403_063554/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "HyperGPT generates per-layer weights from a shared bank plus scaled low-rank adapters, leaning on LeakyReLU² and a Muon/Adam mix for a compact 16-layer model.",
+    "tags": [
+      "architecture",
+      "optimizer",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "- shared weight bank with per-layer low-rank adapters",
+      "- Muon adapters + Adam shared bank with time-aware LR schedule",
+      "- EMA weights for final evaluation"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-23T17:47:46.889Z",
+  "generatedAt": "2026-04-03T07:38:47.923Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 559,
     "title": "Non-record: TernaryRecurrentGPT - ternary 1.58-bit MLP + depth recurrence (1xL4 val_bpb=1.5348)",
     "state": "open",
-    "updatedAt": "2026-03-23T17:23:02Z",
-    "headSha": "b83fd123a77ec4433df05082900b55e5581f45d0",
+    "updatedAt": "2026-04-03T07:08:21Z",
+    "headSha": "d4832a927034099650a42476e22fd4b351218f62",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/559",
     "authorLogin": "Parswanadh"
   },
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Uses ternary 1.58-bit STE-quantized MLPs within looped 7-layer recurrence plus BigramHash/SmearGate and Muon+AdamW+SWA scheduling.",
+    "summary": "Depth-recurrent GPT looping 7 layers twice with SmearGate+BigramHash and late STE-based 1.58-bit ternary MLP weights plus SWA-enhanced Muon+AdamW.",
     "tags": [
-      "quantization",
       "architecture",
+      "quantization",
       "training-schedule"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "valOnlyReasoning": "PR describes standard training with validation checks, not a val-only regime.",
     "techniques": [
-      "Ternary 1.58-bit STE quantization for MLP weights",
-      "Looped 7-layer recurrence with BigramHash+SmearGate gating",
-      "Muon+AdamW+SWA schedule (from 40%)"
+      "14-layer effective depth via two loops over 7 layers",
+      "Late-stage STE QAT for 1.58-bit ternary MLP weights",
+      "Muon+AdamW optimizer with SWA starting at 40%"
     ]
   },
   "compatibility": {

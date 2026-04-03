@@ -1,8 +1,55 @@
 {
-  "generatedAt": "2026-04-03T07:08:17.280Z",
+  "generatedAt": "2026-04-03T07:38:48.004Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1289,
+      "title": "Record: PROTEUS v1.6 — Scylla + Parallel Residuals + Depth Recurrence + Legal TTT — val_bpb 1.0819 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-04-03T07:37:15Z",
+      "headSha": "302f714bebadaf8727f448690f0e138bf3da9b8f",
+      "generatedAt": "2026-04-03T07:38:22.867Z",
+      "summary": "Combines Scylla retokenization with parallel residual lanes, depth recurrence, legal TTT, and mixed INT5/6 per-layer quantization on a LeakyReLU² base.",
+      "tags": [
+        "tokenization",
+        "architecture",
+        "quantization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1289.json"
+    },
+    {
+      "prNumber": 1288,
+      "title": "HyperGPT: Generative Weight Synthesis — val_bpb=8.218640",
+      "status": "open",
+      "updatedAt": "2026-04-03T07:14:34Z",
+      "headSha": "6c8151a8ed066ba261d8bed25f2b1a8f9be70f98",
+      "generatedAt": "2026-04-03T07:38:28.709Z",
+      "summary": "HyperGPT generates per-layer weights from a shared bank plus scaled low-rank adapters, leaning on LeakyReLU² and a Muon/Adam mix for a compact 16-layer model.",
+      "tags": [
+        "architecture",
+        "optimizer",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1288.json"
+    },
     {
       "prNumber": 1287,
       "title": "Record: Vocab4096 + MLP4.0x + WD0.085 - val_bpb 1.1048 (3-seed mean)",
@@ -358,15 +405,15 @@
       "prNumber": 1269,
       "title": "[Submission] Jtss-ux - 1.1301 BPB (10min_16mb)",
       "status": "open",
-      "updatedAt": "2026-04-03T06:59:56Z",
-      "headSha": "9f65f81822350a6b36ab57071f8f973783e6ce87",
-      "generatedAt": "2026-04-03T07:08:17.098Z",
-      "summary": "LeakyReLU(0.5)² MLP with Parameter Banking + Parallel Muon optimizer plus legal score-first chunked TTT on validation tokens.",
+      "updatedAt": "2026-04-03T07:27:33Z",
+      "headSha": "31b40945d9123d3ca3990bce995dc294478d27e9",
+      "generatedAt": "2026-04-03T07:38:37.564Z",
+      "summary": "Recursive 10-layer GPT expands to 30 layers with VRL/MTP hashing, LeakyReLU², Parallel Muon banking optimizer, and legal score-first TTT on validation chunks.",
       "tags": [
         "val-only",
-        "architecture",
         "optimizer",
-        "training-schedule"
+        "training-schedule",
+        "architecture"
       ],
       "flags": {
         "usesValOnly": true,
@@ -382,15 +429,15 @@
       "prNumber": 1268,
       "title": "Non-record: Mamba3 Hybrid + GPTQ Long Context (1.1875 BPB)",
       "status": "open",
-      "updatedAt": "2026-04-02T22:02:43Z",
+      "updatedAt": "2026-04-03T07:19:27Z",
       "headSha": "73737ebbb6c12db84d05bc9efa7b65c497d24548",
-      "generatedAt": "2026-04-02T22:05:07.303Z",
-      "summary": "Mamba3 hybrid uses eight SSM blocks and two GQA attention layers with U-Net skips, 16K context, EMA smoothing, and Hessian GPTQ for long context models.",
+      "generatedAt": "2026-04-03T07:38:42.652Z",
+      "summary": "Mamba3 hybrid mixes eight SSM layers with two GQA attention layers, U-Net skips, and long-context training before EMA + Hessian GPTQ compression.",
       "tags": [
         "architecture",
         "quantization",
-        "training-schedule",
-        "evaluation"
+        "evaluation",
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,
@@ -11655,13 +11702,13 @@
       "prNumber": 559,
       "title": "Non-record: TernaryRecurrentGPT - ternary 1.58-bit MLP + depth recurrence (1xL4 val_bpb=1.5348)",
       "status": "open",
-      "updatedAt": "2026-03-23T17:23:02Z",
-      "headSha": "b83fd123a77ec4433df05082900b55e5581f45d0",
-      "generatedAt": "2026-03-23T17:47:46.889Z",
-      "summary": "Uses ternary 1.58-bit STE-quantized MLPs within looped 7-layer recurrence plus BigramHash/SmearGate and Muon+AdamW+SWA scheduling.",
+      "updatedAt": "2026-04-03T07:08:21Z",
+      "headSha": "d4832a927034099650a42476e22fd4b351218f62",
+      "generatedAt": "2026-04-03T07:38:47.923Z",
+      "summary": "Depth-recurrent GPT looping 7 layers twice with SmearGate+BigramHash and late STE-based 1.58-bit ternary MLP weights plus SWA-enhanced Muon+AdamW.",
       "tags": [
-        "quantization",
         "architecture",
+        "quantization",
         "training-schedule"
       ],
       "flags": {
