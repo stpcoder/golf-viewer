@@ -1,17 +1,18 @@
 {
-  "generatedAt": "2026-04-02T23:36:19.969Z",
+  "generatedAt": "2026-04-03T00:06:06.714Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
       "prNumber": 1274,
       "title": "Record: Scylla + Parallel Residuals + Depth Recurrence + Legal TTT — val_bpb 1.0876 (3-seed mean)",
-      "status": "open",
-      "updatedAt": "2026-04-02T22:48:50Z",
+      "status": "closed",
+      "updatedAt": "2026-04-02T23:44:27Z",
       "headSha": "567dc403e4864b265134c96115af38e415e9b883",
-      "generatedAt": "2026-04-02T23:05:38.623Z",
-      "summary": "Combines Scylla tokenizer with parallel residual lanes, mini depth recurrence, and legal score-first TTT plus mixed INT5/6 quantization.",
+      "generatedAt": "2026-04-03T00:06:06.519Z",
+      "summary": "Combines Scylla tokenizer with parallel residuals, mini depth recurrence, legal TTT, and mixed INT5/INT6 quantization to tighten the architecture+training stack.",
       "tags": [
+        "tokenization",
         "architecture",
         "quantization",
         "training-schedule"
