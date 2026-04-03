@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-04-03T01:06:34.771Z",
+  "generatedAt": "2026-04-03T02:06:52.352Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1276,
+      "title": "Record: MuonEq-R + Context-Only SLOT + XSA-all + QK-Gain 5.0",
+      "status": "open",
+      "updatedAt": "2026-04-03T01:44:27Z",
+      "headSha": "73de0beb3a714f73b90987371d69a97ffbeedc16",
+      "generatedAt": "2026-04-03T02:06:44.460Z",
+      "summary": "Row-normalized MuonEq-R with context-only SLOT adaptation, XSA on all 11 layers, and QK gain 5.0 for more stable autoregressive conditioning.",
+      "tags": [
+        "optimizer",
+        "attention",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1276.json"
+    },
     {
       "prNumber": 1275,
       "title": "Non-record: Asymmetric 1/10 Split — 1.1492 pre-quant BPB on 8xH100 (one-line change)",
@@ -9646,10 +9669,10 @@
       "prNumber": 675,
       "title": "Non-record: LeakyReLU² + LAWA + Ramping WD + Val Training (val_bpb=1.2302, 1xH100)",
       "status": "open",
-      "updatedAt": "2026-03-28T03:51:49Z",
-      "headSha": "6d8d30f0087ba438429382b3a0a9a7242dc551be",
-      "generatedAt": "2026-03-28T04:20:28.987Z",
-      "summary": "10-layer baseline using LeakyReLU(0.5)², LAWA averaging, ramped WD, lzma, and validation-set training on 1xH100 to boost quality within budget.",
+      "updatedAt": "2026-04-03T02:02:59Z",
+      "headSha": "d4eb7cfc031823db8782e53891709b87fb396a76",
+      "generatedAt": "2026-04-03T02:06:52.262Z",
+      "summary": "10-layer model uses LeakyReLU², LAWA averaging, ramping WD, and lzma compression while training on val set on 1×H100 to fit the 16MB non-record bin.",
       "tags": [
         "val-only",
         "architecture",

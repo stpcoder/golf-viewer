@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-04-03T02:06:44.460Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1276,
+    "title": "Record: MuonEq-R + Context-Only SLOT + XSA-all + QK-Gain 5.0",
+    "state": "open",
+    "updatedAt": "2026-04-03T01:44:27Z",
+    "headSha": "73de0beb3a714f73b90987371d69a97ffbeedc16",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1276",
+    "authorLogin": "BiggerDABOSS"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-02_MuonEqR_SLOT_XSA11_QKGain5/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Row-normalized MuonEq-R with context-only SLOT adaptation, XSA on all 11 layers, and QK gain 5.0 for more stable autoregressive conditioning.",
+    "tags": [
+      "optimizer",
+      "attention",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "MuonEq-R row-normalizes gradients before Newton-Schulz",
+      "Context-only SLOT delta optimized per sliding window",
+      "Expanded XSA plus boosted QK gain across layers"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
