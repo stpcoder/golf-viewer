@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-03T08:08:45.097Z",
+  "generatedAt": "2026-04-03T08:38:49.234Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -54,14 +54,14 @@
       "prNumber": 1289,
       "title": "Record: PROTEUS v1.6 — Scylla + Parallel Residuals + Depth Recurrence + Legal TTT — val_bpb 1.0819 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-03T08:07:25Z",
+      "updatedAt": "2026-04-03T08:09:16Z",
       "headSha": "302f714bebadaf8727f448690f0e138bf3da9b8f",
-      "generatedAt": "2026-04-03T08:08:44.899Z",
-      "summary": "Applies sensitivity-driven INT5/INT6 quantization with learnable lane merging to unify Scylla retokenization, parallel residuals, depth recurrence, and legal TTT.",
+      "generatedAt": "2026-04-03T08:38:39.491Z",
+      "summary": "Scylla retokenized base uses parallel residuals plus depth recurrence with learnable lane blending and sensitivity-driven mixed INT5/INT6 quantization.",
       "tags": [
         "quantization",
         "architecture",
-        "tokenization"
+        "attention"
       ],
       "flags": {
         "usesValOnly": false,
@@ -5694,10 +5694,10 @@
       "prNumber": 951,
       "title": "16L XSA-all + INT4 MLP QAT + GPTQ + EMA + Partial RoPE + 30ep Cosine TTT",
       "status": "open",
-      "updatedAt": "2026-04-02T18:40:02Z",
-      "headSha": "1a17ce188d6649ab0dce592042fcf4cc21a6ee08",
-      "generatedAt": "2026-04-02T19:04:42.584Z",
-      "summary": "Shares KV sets across all 16 layers while combining INT4/INT6 quantization, GPTQ-lite clipping, Partial RoPE, hash embeddings, EMA, Muon/WD, and 30-epoch val-token TTT.",
+      "updatedAt": "2026-04-03T08:35:20Z",
+      "headSha": "6580d33ef0e7350860802a3b84048bfd198af728",
+      "generatedAt": "2026-04-03T08:38:49.096Z",
+      "summary": "16-layer XSA-all with shared KV, nibble-packed int4 MLP QAT+GPTQ-lite, hash embeddings, Partial RoPE, EMA/SmearGate, and 30-epoch cosine TTT on val tokens.",
       "tags": [
         "val-only",
         "quantization",
