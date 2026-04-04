@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-04T01:44:15.914Z",
+  "generatedAt": "2026-04-04T02:14:35.077Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -21176,7 +21176,7 @@
         "authorLogin": "htrung1105",
         "authorName": null,
         "createdAt": "2026-04-03T18:38:57Z",
-        "updatedAt": "2026-04-04T00:34:18Z",
+        "updatedAt": "2026-04-04T02:10:13Z",
         "headSha": "8da4520e2057253e314c4eb3b20a7f411c09f778",
         "headRepo": "htrung1105/parameter-golf"
       },
@@ -58029,7 +58029,7 @@
       "submission": {
         "author": "Arnell Milhouse",
         "githubId": "GitGeeks",
-        "name": "SLOT-24 + Partial Depth Recurrence (Layers 4,5) + XSA-11",
+        "name": "SLOT-32 + Partial Depth Recurrence (Layers 4,5) + XSA-11",
         "blurb": null,
         "date": "2026-04-03T02:32:12Z"
       },
@@ -58056,7 +58056,7 @@
       },
       "pr": {
         "number": 1278,
-        "title": "Record: SLOT-24 + Partial Depth Recurrence — val_bpb     0.8648 (3-seed mean)",
+        "title": "Record: SLOT-32 + Partial Depth Recurrence — val_bpb 0.7736 (3-seed mean) ",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -58064,16 +58064,16 @@
         "authorLogin": "GitGeeks",
         "authorName": null,
         "createdAt": "2026-04-03T02:32:12Z",
-        "updatedAt": "2026-04-04T00:54:13Z",
-        "headSha": "96d1dadc53870ff308a2c2eb6272e7a060535c6a",
+        "updatedAt": "2026-04-04T02:12:53Z",
+        "headSha": "e348405e1102624855eebc744c57d6d3a766dc10",
         "headRepo": "GitGeeks/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/96d1dadc53870ff308a2c2eb6272e7a060535c6a/records/track_10min_16mb/2026-04-02_DepthRecurrence_WeightShared/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/96d1dadc53870ff308a2c2eb6272e7a060535c6a/records/track_10min_16mb/2026-04-02_DepthRecurrence_WeightShared/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/96d1dadc53870ff308a2c2eb6272e7a060535c6a/records/track_10min_16mb/2026-04-02_DepthRecurrence_WeightShared/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/96d1dadc53870ff308a2c2eb6272e7a060535c6a/records/track_10min_16mb/2026-04-02_DepthRecurrence_WeightShared/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/96d1dadc53870ff308a2c2eb6272e7a060535c6a/records/track_10min_16mb/2026-04-02_DepthRecurrence_WeightShared",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/e348405e1102624855eebc744c57d6d3a766dc10/records/track_10min_16mb/2026-04-02_DepthRecurrence_WeightShared/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/e348405e1102624855eebc744c57d6d3a766dc10/records/track_10min_16mb/2026-04-02_DepthRecurrence_WeightShared/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/e348405e1102624855eebc744c57d6d3a766dc10/records/track_10min_16mb/2026-04-02_DepthRecurrence_WeightShared/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/e348405e1102624855eebc744c57d6d3a766dc10/records/track_10min_16mb/2026-04-02_DepthRecurrence_WeightShared/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/e348405e1102624855eebc744c57d6d3a766dc10/records/track_10min_16mb/2026-04-02_DepthRecurrence_WeightShared",
         "pr": "https://github.com/openai/parameter-golf/pull/1278",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },

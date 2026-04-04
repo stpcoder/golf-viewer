@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-04T01:14:03.376Z",
+  "generatedAt": "2026-04-04T02:14:46.052Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1278,
-    "title": "Record: SLOT-24 + Partial Depth Recurrence — val_bpb     0.8648 (3-seed mean)",
+    "title": "Record: SLOT-32 + Partial Depth Recurrence — val_bpb 0.7736 (3-seed mean) ",
     "state": "open",
-    "updatedAt": "2026-04-04T00:54:13Z",
-    "headSha": "96d1dadc53870ff308a2c2eb6272e7a060535c6a",
+    "updatedAt": "2026-04-04T02:12:53Z",
+    "headSha": "e348405e1102624855eebc744c57d6d3a766dc10",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1278",
     "authorLogin": "GitGeeks"
   },
@@ -19,24 +19,24 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "SLOT-24 fine-tunes per-sample hidden deltas/logit bias on an XSA-11 base stacked with partial depth recurrence and per-iteration conditioning.",
+    "summary": "Combines SLOT-32 scoring with partial depth recurrence (repeat layers 4/5 + iter conditioning) on XSA-11 to squeeze more tokens.",
     "tags": [
-      "val-only",
       "architecture",
-      "training-schedule"
+      "training-schedule",
+      "quantization"
     ],
-    "usesValOnly": true,
-    "valOnlyReasoning": "SLOT-24 optimizes per-sample deltas/logit bias on the validation shard with frozen model weights.",
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
     "techniques": [
-      "Partial depth recurrence (layers 4,5) with iter_embed/iter_gate conditioning",
-      "SLOT-24 per-sample hidden delta and logit-bias optimization",
-      "XSA-11 backbone with QK-Gain, VRL, BigramHash enhancements"
+      "32-step SLOT tuning with higher LR and cosine->0.001 decay",
+      "Partial depth recurrence on layers 4/5 with iter_embed/iter_gate conditioning",
+      "Late QAT+int6 compression with EMA/SWA weight averaging"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": true,
-    "finalUsesValOnly": true,
-    "valOnlyMatchesCollector": false
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
   }
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-04T01:14:09.267Z",
+  "generatedAt": "2026-04-04T02:14:46.238Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -122,13 +122,13 @@
       "prNumber": 1311,
       "title": "Non-record: 11L LeakyReLU² + EMA + LZMA Int6 (val_bpb: 1.1303, 2-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-04T00:34:18Z",
+      "updatedAt": "2026-04-04T02:10:13Z",
       "headSha": "8da4520e2057253e314c4eb3b20a7f411c09f778",
-      "generatedAt": "2026-04-04T00:44:05.415Z",
-      "summary": "11-layer 512d Transformer with LeakyReLU(0.5)² MLP, BigramHash skips, GPTQ-lite int6, LZMA compression, EMA/SWA, and T=0.9 evaluation.",
+      "generatedAt": "2026-04-04T02:14:42.012Z",
+      "summary": "11-layer 512d Transformer pairs LeakyReLU(0.5)² MLP, EMA/SWA-driven training, GPTQ-lite int6 quant, and LZMA compression with T=0.90 slide eval.",
       "tags": [
-        "quantization",
         "architecture",
+        "quantization",
         "compression",
         "evaluation"
       ],
@@ -777,24 +777,24 @@
     },
     {
       "prNumber": 1278,
-      "title": "Record: SLOT-24 + Partial Depth Recurrence — val_bpb     0.8648 (3-seed mean)",
+      "title": "Record: SLOT-32 + Partial Depth Recurrence — val_bpb 0.7736 (3-seed mean) ",
       "status": "open",
-      "updatedAt": "2026-04-04T00:54:13Z",
-      "headSha": "96d1dadc53870ff308a2c2eb6272e7a060535c6a",
-      "generatedAt": "2026-04-04T01:14:03.376Z",
-      "summary": "SLOT-24 fine-tunes per-sample hidden deltas/logit bias on an XSA-11 base stacked with partial depth recurrence and per-iteration conditioning.",
+      "updatedAt": "2026-04-04T02:12:53Z",
+      "headSha": "e348405e1102624855eebc744c57d6d3a766dc10",
+      "generatedAt": "2026-04-04T02:14:46.052Z",
+      "summary": "Combines SLOT-32 scoring with partial depth recurrence (repeat layers 4/5 + iter conditioning) on XSA-11 to squeeze more tokens.",
       "tags": [
-        "val-only",
         "architecture",
-        "training-schedule"
+        "training-schedule",
+        "quantization"
       ],
       "flags": {
-        "usesValOnly": true,
-        "usesValOnlyAi": true,
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": false
+        "valOnlyMatchesCollector": true
       },
       "file": "items/pr-1278.json"
     },
