@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-04T16:21:15.344Z",
+  "generatedAt": "2026-04-04T16:51:43.345Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -989,15 +989,15 @@
       "prNumber": 1300,
       "title": "Non-record: 1.8184 BPB Single-step Recurrent Transformer with Q-LoRA (Windows 3090)",
       "status": "open",
-      "updatedAt": "2026-04-04T11:13:49Z",
-      "headSha": "6d5ff914b4d550a858c124d7007a0a8ea6fdd829",
-      "generatedAt": "2026-04-04T11:18:50.279Z",
-      "summary": "Documented journey to a single-pass wide transformer with near-full-rank dual-Q attention and throughput-focused tuning on Windows RTX 3090.",
+      "updatedAt": "2026-04-04T16:26:54Z",
+      "headSha": "15cfeba03ad5ce47fd64c2ac9d203ec6e253ef53",
+      "generatedAt": "2026-04-04T16:51:22.449Z",
+      "summary": "Migrated from Universal Transformer recurrence to a single-pass wide transformer with near-full-rank dual-Q attention and RTX 3090-aware tooling.",
       "tags": [
         "architecture",
         "attention",
-        "training-schedule",
-        "quantization"
+        "quantization",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -4222,14 +4222,14 @@
       "prNumber": 1107,
       "title": "Mamba-3 SSD + Attention Hybrid with QAT (1.5633 bpb)",
       "status": "open",
-      "updatedAt": "2026-04-04T16:14:10Z",
-      "headSha": "8bb085443c89cdd365066eb6ccaf99d5d06ee41c",
-      "generatedAt": "2026-04-04T16:21:09.286Z",
-      "summary": "Hybrid Mamba-3 SSD stack with a lone attention layer, GLU values, and Muon optimizer, while QAT now covers Mamba projections to curb quant gaps.",
+      "updatedAt": "2026-04-04T16:25:27Z",
+      "headSha": "00916fa900bcf7eeedc71d438efe98b77aa7210f",
+      "generatedAt": "2026-04-04T16:51:30.305Z",
+      "summary": "Hybrid stacks Mamba-3 SISO SSD blocks with a lone causal attention layer, GLU values, and Muon optimizer while expanding QAT to SSD projections for tighter quantization.",
       "tags": [
         "architecture",
         "quantization",
-        "training-schedule",
+        "attention",
         "non-record"
       ],
       "flags": {
@@ -4293,13 +4293,14 @@
       "prNumber": 1104,
       "title": "[Non-record] 1-Stage Byte-level H-Net at 17.5M: Dynamic Chunking Learns Whitespace-aligned (Word-like) Boundaries (39x-91x fewer params than H-Net paper)",
       "status": "open",
-      "updatedAt": "2026-04-04T16:10:35Z",
+      "updatedAt": "2026-04-04T16:28:07Z",
       "headSha": "e3ea22adc4582aabf47c22c5e46d73ec3393b589",
-      "generatedAt": "2026-04-04T16:21:15.186Z",
-      "summary": "Byte-level 1-stage H-Net uses dynamic chunking on raw bytes with multi-GPU DDP and boundary metrics to rival subword chunking.",
+      "generatedAt": "2026-04-04T16:51:37.656Z",
+      "summary": "1-stage H-Net on raw bytes learns whitespace-aligned dynamic chunks via routing, contrasted with subword behavior in matched DDP ablations.",
       "tags": [
         "architecture",
         "tokenization",
+        "evaluation",
         "non-record"
       ],
       "flags": {
@@ -11823,14 +11824,13 @@
       "prNumber": 619,
       "title": "non-record 16MB A100 SXM run (10L mixed int5/int6 + EMA + QAT)",
       "status": "open",
-      "updatedAt": "2026-03-28T11:14:00Z",
-      "headSha": "880a22922b69e73e9257f2529b3093d590c0b961",
-      "generatedAt": "2026-03-28T11:22:04.655Z",
-      "summary": "10-layer model mixes int5/int6 quant per submodule, exports EMA weights, and applies late QAT with bigram hashing for 16MB non-record run.",
+      "updatedAt": "2026-04-04T16:30:18Z",
+      "headSha": "4a952afbe7852fd2ec461e11ad2bb5ba461ef04d",
+      "generatedAt": "2026-04-04T16:51:43.254Z",
+      "summary": "10-layer Bigram GPT with mixed int5/int6 quantization, EMA-exported weights, and late QAT for a 16MB non-record run.",
       "tags": [
         "quantization",
-        "architecture",
-        "optimizer",
+        "regularization",
         "non-record"
       ],
       "flags": {

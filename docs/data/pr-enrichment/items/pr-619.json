@@ -1,37 +1,37 @@
 {
-  "generatedAt": "2026-03-28T11:22:04.655Z",
+  "generatedAt": "2026-04-04T16:51:43.254Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 619,
     "title": "non-record 16MB A100 SXM run (10L mixed int5/int6 + EMA + QAT)",
     "state": "open",
-    "updatedAt": "2026-03-28T11:14:00Z",
-    "headSha": "880a22922b69e73e9257f2529b3093d590c0b961",
+    "updatedAt": "2026-04-04T16:30:18Z",
+    "headSha": "4a952afbe7852fd2ec461e11ad2bb5ba461ef04d",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/619",
     "authorLogin": "zeal175"
   },
   "inputs": {
-    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
     "readmePaths": [
-      "records/track_non_record_16mb/2026-03-24_A100SXM1_10L_MixedInt5Int6_EMA_QAT/README.md"
+      "records/track_non_record_16mb/2026-03-24_A100SXM1_10L_MixedInt5Int6_EMA_QAT/README.md",
+      "records/track_10min_16mb/2026-04-04_Static-Unified_Flash-Nitro/README.md"
     ],
-    "submissionCount": 1
+    "submissionCount": 2
   },
   "output": {
-    "summary": "10-layer model mixes int5/int6 quant per submodule, exports EMA weights, and applies late QAT with bigram hashing for 16MB non-record run.",
+    "summary": "10-layer Bigram GPT with mixed int5/int6 quantization, EMA-exported weights, and late QAT for a 16MB non-record run.",
     "tags": [
       "quantization",
-      "architecture",
-      "optimizer",
+      "regularization",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "int5/int6 mixed quantization",
-      "EMA-exported weights",
-      "late-stage QAT fraction"
+      "Mixed int5/int6 quantization for MLP versus attention parameters",
+      "EMA-exported weights combined with final-fraction QAT",
+      "Bigram hash vocabulary atop 10-layer, 3x MLP expansion architecture"
     ]
   },
   "compatibility": {
