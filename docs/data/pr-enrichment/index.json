@@ -1,8 +1,55 @@
 {
-  "generatedAt": "2026-04-04T17:21:36.648Z",
+  "generatedAt": "2026-04-04T17:51:46.726Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1353,
+      "title": "Non-record: 11L XSA-All + EMA + Legal GPTQ on 1xH100 PCIe (1.15466807 bpb)",
+      "status": "open",
+      "updatedAt": "2026-04-04T17:49:16Z",
+      "headSha": "a62bc41631b53d7c19575c9e00bfbb6ed0144e05",
+      "generatedAt": "2026-04-04T17:51:33.448Z",
+      "summary": "11-layer all-XSA stack with EMA smoothing plus hardened GPTQ export and pre-quant checkpointing on a single H100 PCIe non-record run.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "regularization",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1353.json"
+    },
+    {
+      "prNumber": 1352,
+      "title": "Add non-record submission: Multi-model cross-attention with dimensional asymmetry",
+      "status": "open",
+      "updatedAt": "2026-04-04T17:39:58Z",
+      "headSha": "e111b2ea4346c0c6d0359cebd7a5c686c75ad300",
+      "generatedAt": "2026-04-04T17:51:36.740Z",
+      "summary": "Multi-model setup merges transformer, MLP, and causal-depthwise branches via shared representation and cross-attention over asymmetric dimensions to stabilize learning.",
+      "tags": [
+        "architecture",
+        "attention",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1352.json"
+    },
     {
       "prNumber": 1351,
       "title": "Record: Discriminative TTT — val_bpb 1.0807 (3-seed mean)",
@@ -4551,15 +4598,15 @@
       "prNumber": 1085,
       "title": "Non-record:11L GQA + MLP 3 + Partial RoPE + Int6 Attn/MLP + QAT40 ",
       "status": "open",
-      "updatedAt": "2026-04-04T14:08:07Z",
-      "headSha": "d1b6a3eb98d685c17cf796f26595d383beeebcd3",
-      "generatedAt": "2026-04-04T14:21:11.817Z",
-      "summary": "Single-H100 11-layer GQA+MLP3 model pairs partial RoPE/XSA with late QAT to tune int6 attention/MLP weights before mixed-bit export.",
+      "updatedAt": "2026-04-04T17:51:06Z",
+      "headSha": "fde255129576a9328f58dbf84268765e9afb91bf",
+      "generatedAt": "2026-04-04T17:51:41.250Z",
+      "summary": "11-layer GPT leverages GQA, partial RoPE/XSA, Muon+AdamW with LR warmdown, late QAT40, and Int6 quantized weights to fit the 16MB limit.",
       "tags": [
         "quantization",
-        "architecture",
-        "training-schedule",
-        "evaluation"
+        "optimizer",
+        "positional-encoding",
+        "sliding-window-eval"
       ],
       "flags": {
         "usesValOnly": false,
@@ -10983,14 +11030,14 @@
       "prNumber": 675,
       "title": "Record: Hypergradient SLOT-24 — val_bpb 0.7625 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-03T22:40:46Z",
-      "headSha": "fab13bf2e277eafd62e292877ebb60805fca6659",
-      "generatedAt": "2026-04-03T22:43:37.307Z",
-      "summary": "Hypergradient descent replaces SLOT's fixed cosine LR schedule so each evaluation step adapts its learning rate via gradient alignment.",
+      "updatedAt": "2026-04-04T17:50:42Z",
+      "headSha": "41c435cb9713134d73729acf2eeafbbed485ceff",
+      "generatedAt": "2026-04-04T17:51:46.633Z",
+      "summary": "Hypergradient descent replaces SLOT's fixed LR schedule so each evaluation batch adapts its step size via gradient alignment instead of cosine decay.",
       "tags": [
         "optimizer",
-        "evaluation",
         "training-schedule",
+        "evaluation",
         "non-record"
       ],
       "flags": {

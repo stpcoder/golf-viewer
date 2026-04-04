@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-04T17:51:33.448Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1353,
+    "title": "Non-record: 11L XSA-All + EMA + Legal GPTQ on 1xH100 PCIe (1.15466807 bpb)",
+    "state": "open",
+    "updatedAt": "2026-04-04T17:49:16Z",
+    "headSha": "a62bc41631b53d7c19575c9e00bfbb6ed0144e05",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1353",
+    "authorLogin": "Rtx09x"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-04-04_11L_XSA11_EMA_GPTQ_1xH100_PCIe/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11-layer all-XSA stack with EMA smoothing plus hardened GPTQ export and pre-quant checkpointing on a single H100 PCIe non-record run.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "regularization",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "11-layer all-XSA backbone with EMA smoothing",
+      "Hardened GPTQ export via damping retries and percentile fallback",
+      "Pre-quant checkpointing before int6 compression"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

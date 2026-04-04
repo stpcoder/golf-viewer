@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-04-04T17:51:36.740Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1352,
+    "title": "Add non-record submission: Multi-model cross-attention with dimensional asymmetry",
+    "state": "open",
+    "updatedAt": "2026-04-04T17:39:58Z",
+    "headSha": "e111b2ea4346c0c6d0359cebd7a5c686c75ad300",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1352",
+    "authorLogin": "alientony"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-04-04_MultiModelCrossDim/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Multi-model setup merges transformer, MLP, and causal-depthwise branches via shared representation and cross-attention over asymmetric dimensions to stabilize learning.",
+    "tags": [
+      "architecture",
+      "attention",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Shared representation with cross-attention across asymmetric model dims",
+      "Combines transformer, MLP, and causal depthwise branches for stability"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
