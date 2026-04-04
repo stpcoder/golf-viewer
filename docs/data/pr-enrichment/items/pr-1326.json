@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-04T12:19:57.491Z",
+  "generatedAt": "2026-04-04T12:49:31.802Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1326,
     "title": "Record: SP4096 + Depth Recurrence + Parallel Residuals + MuonEq-R + Legal TTT — val_bpb 1.0896 (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-04-04T12:14:29Z",
+    "updatedAt": "2026-04-04T12:36:30Z",
     "headSha": "5bc39abb0222a86a1ad59d6c74b507f7ab294457",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1326",
     "authorLogin": "aryanbhosale"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines SP4096 modeling with depth recurrence, parallel residuals, MuonEq-R, QK-Gain, and legal score-first TTT plus GPTQ int6 compression.",
+    "summary": "Combines 4k-vocab depth recurrence with layered parallel residuals, MuonEq-R/QK-Gain scaling, and legal score-first TTT evaluation before GPTQ compression.",
     "tags": [
       "architecture",
-      "muon",
+      "training-schedule",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Depth recurrence on layers 4-5",
-      "Parallel residuals from layer 7",
-      "Legal score-first TTT with MuonEq-R and QK-Gain"
+      "Depth recurrence plus parallel residual mixing from layer 7 onwards",
+      "MuonEq-R with QK-Gain 5.0 token interactions",
+      "Legal score-first TTT scoring before weight updates"
     ]
   },
   "compatibility": {
