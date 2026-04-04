@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-04T14:21:11.970Z",
+  "generatedAt": "2026-04-04T14:50:57.726Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -590,13 +590,14 @@
       "prNumber": 1315,
       "title": "[non-record track] BankLinear: cross-layer shared weight bank",
       "status": "open",
-      "updatedAt": "2026-04-03T23:17:15Z",
+      "updatedAt": "2026-04-04T14:50:00Z",
       "headSha": "2e8b9633af7846ecb6d69d56fa8166cbd58c2287",
-      "generatedAt": "2026-04-03T23:43:35.196Z",
-      "summary": "BankLinear synthesizes QKV weights via mixtures over a shared learned/random basis bank with channel-wise modulation so saved params enlarge the MLP.",
+      "generatedAt": "2026-04-04T14:50:57.537Z",
+      "summary": "BankLinear builds each QKV layer by mixing channel-modulated coefficients over a shared bank of learned bases, replacing per-layer weights with compositional synthesis.",
       "tags": [
         "architecture",
         "attention",
+        "compression",
         "non-record"
       ],
       "flags": {
@@ -4144,30 +4145,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-1110.json"
-    },
-    {
-      "prNumber": 1107,
-      "title": "Mamba-3 SSD + Attention Hybrid with QAT (1.5633 bpb)",
-      "status": "open",
-      "updatedAt": "2026-03-30T17:55:10Z",
-      "headSha": "be0e56d0ff7dbfd12f051ce5e5caa2c9243d4a23",
-      "generatedAt": "2026-03-30T18:07:25.923Z",
-      "summary": "Hybrid Mamba-3 SISO SSD + single attention layer with GLU values and extended QAT on SSD projections to shrink the quantization gap.",
-      "tags": [
-        "architecture",
-        "quantization",
-        "attention",
-        "training-schedule"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-1107.json"
     },
     {
       "prNumber": 1106,

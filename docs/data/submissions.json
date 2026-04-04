@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-04T14:20:34.245Z",
+  "generatedAt": "2026-04-04T14:50:45.201Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -42197,7 +42197,7 @@
         "authorLogin": "andrewmouldon",
         "authorName": null,
         "createdAt": "2026-04-03T22:01:35Z",
-        "updatedAt": "2026-04-03T23:17:15Z",
+        "updatedAt": "2026-04-04T14:50:00Z",
         "headSha": "2e8b9633af7846ecb6d69d56fa8166cbd58c2287",
         "headRepo": "andrewmouldon/parameter-golf"
       },
@@ -52757,83 +52757,6 @@
         "script": "https://github.com/openai/parameter-golf/blob/046b7d2fdcb161ab7e4c082057fc7296ba01df62/records/track_non_record_16mb/2026-03-20_TTT-QAT-LocalGPU/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/046b7d2fdcb161ab7e4c082057fc7296ba01df62/records/track_non_record_16mb/2026-03-20_TTT-QAT-LocalGPU",
         "pr": "https://github.com/openai/parameter-golf/pull/263",
-        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
-      },
-      "provenance": {
-        "onMain": false,
-        "hasPullRequest": true,
-        "listedInReadme": false
-      }
-    },
-    {
-      "id": "record-records-track_non_record_16mb-2026-03-29_Mamba3Hybrid_QAT",
-      "source": "pull_request",
-      "status": "open",
-      "category": "non-record",
-      "track": {
-        "path": "records/track_non_record_16mb",
-        "slug": "track_non_record_16mb",
-        "label": "Non-record / 16MB",
-        "official": false,
-        "category": "non-record"
-      },
-      "record": {
-        "folderName": "2026-03-29_Mamba3Hybrid_QAT",
-        "folderPath": "records/track_non_record_16mb/2026-03-29_Mamba3Hybrid_QAT",
-        "submissionPath": "records/track_non_record_16mb/2026-03-29_Mamba3Hybrid_QAT/submission.json",
-        "readmePath": "records/track_non_record_16mb/2026-03-29_Mamba3Hybrid_QAT/README.md",
-        "trainLogPath": "records/track_non_record_16mb/2026-03-29_Mamba3Hybrid_QAT/train.log",
-        "scriptPath": "records/track_non_record_16mb/2026-03-29_Mamba3Hybrid_QAT/train_gpt.py"
-      },
-      "submission": {
-        "author": "mradassaad",
-        "githubId": "mradassaad",
-        "name": "Mamba-3 SSD + Attention Hybrid with QAT",
-        "blurb": "Mamba-3 SISO SSD (pure Triton) + 1 attention layer hybrid, 8L 512dim. INT6 QAT extended to Mamba-3 in_proj/out_proj (CastedLinear replacement). TTT 1 epoch. WARMDOWN_ITERS tuned per hardware step time.",
-        "date": "2026-03-29"
-      },
-      "metrics": {
-        "valBpb": 1.56334514,
-        "valLoss": 2.63964278,
-        "preQuantValBpb": null,
-        "preQuantValLoss": null,
-        "stepStop": null,
-        "wallclockSeconds": null,
-        "evalTimeSeconds": null
-      },
-      "artifact": {
-        "bytesTotal": 10892315,
-        "bytesCode": 68356,
-        "bytesModelInt8Zlib": null
-      },
-      "flags": {
-        "usesValOnly": false
-      },
-      "detection": {
-        "valOnlyConfidence": "none",
-        "valOnlyMatches": []
-      },
-      "pr": {
-        "number": 1107,
-        "title": "Mamba-3 SSD + Attention Hybrid with QAT (1.5633 bpb)",
-        "state": "open",
-        "draft": false,
-        "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1107",
-        "authorLogin": "mradassaad",
-        "authorName": null,
-        "createdAt": "2026-03-30T00:55:11Z",
-        "updatedAt": "2026-03-30T17:55:10Z",
-        "headSha": "be0e56d0ff7dbfd12f051ce5e5caa2c9243d4a23",
-        "headRepo": "mradassaad/parameter-golf"
-      },
-      "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/be0e56d0ff7dbfd12f051ce5e5caa2c9243d4a23/records/track_non_record_16mb/2026-03-29_Mamba3Hybrid_QAT/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/be0e56d0ff7dbfd12f051ce5e5caa2c9243d4a23/records/track_non_record_16mb/2026-03-29_Mamba3Hybrid_QAT/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/be0e56d0ff7dbfd12f051ce5e5caa2c9243d4a23/records/track_non_record_16mb/2026-03-29_Mamba3Hybrid_QAT/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/be0e56d0ff7dbfd12f051ce5e5caa2c9243d4a23/records/track_non_record_16mb/2026-03-29_Mamba3Hybrid_QAT/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/be0e56d0ff7dbfd12f051ce5e5caa2c9243d4a23/records/track_non_record_16mb/2026-03-29_Mamba3Hybrid_QAT",
-        "pr": "https://github.com/openai/parameter-golf/pull/1107",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
