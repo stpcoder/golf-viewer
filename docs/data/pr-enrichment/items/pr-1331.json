@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-04-04T08:17:35.697Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1331,
+    "title": "Record: MuonEq-R + 3-Layer Recurrence + WD=0.095 + MLR=0.022 + All-Int6 — val_bpb 1.0900 (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-04-04T08:07:23Z",
+    "headSha": "2264ac4b6f52fb1ab6ba505fbe4577211c122d08",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1331",
+    "authorLogin": "dexhunter"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-04_MuonEqR_3LayerRecurrence_WD095_MLR022_AllInt6/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "MuonEq-R hinges on 3-layer depth recurrence with boosted weight decay and matrix LR to keep all-int6 GPTQ under 16MB without hurting quality.",
+    "tags": [
+      "architecture",
+      "optimizer",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "shared MLP recurrence over layers 3-5",
+      "higher WD/MLR synergy for compression-quality balance",
+      "all-int6 GPTQ quantization"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

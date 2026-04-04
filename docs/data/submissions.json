@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-04T07:46:29.521Z",
+  "generatedAt": "2026-04-04T08:17:25.529Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -10247,6 +10247,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/acdf503bc32ee52ffd6e5c2bce91f72197ae813b/records/track_10min_16mb/2026-04-03_SP4096_DepthRecurrence_MuonEqR_GPTQ/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/acdf503bc32ee52ffd6e5c2bce91f72197ae813b/records/track_10min_16mb/2026-04-03_SP4096_DepthRecurrence_MuonEqR_GPTQ",
         "pr": "https://github.com/openai/parameter-golf/pull/1296",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-04-04_MuonEqR_3LayerRecurrence_WD095_MLR022_AllInt6",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-04-04_MuonEqR_3LayerRecurrence_WD095_MLR022_AllInt6",
+        "folderPath": "records/track_10min_16mb/2026-04-04_MuonEqR_3LayerRecurrence_WD095_MLR022_AllInt6",
+        "submissionPath": "records/track_10min_16mb/2026-04-04_MuonEqR_3LayerRecurrence_WD095_MLR022_AllInt6/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-04-04_MuonEqR_3LayerRecurrence_WD095_MLR022_AllInt6/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-04-04_MuonEqR_3LayerRecurrence_WD095_MLR022_AllInt6/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-04-04_MuonEqR_3LayerRecurrence_WD095_MLR022_AllInt6/train_gpt.py"
+      },
+      "submission": {
+        "author": "dexhunter",
+        "githubId": "dexhunter",
+        "name": "Record: MuonEq-R + 3-Layer Recurrence + WD=0.095 + MLR=0.022 + All-Int6",
+        "blurb": "3-layer depth recurrence (3,4,5) with WD=0.095 and MLR=0.022 on all-int6 GPTQ. WD-LR synergy: higher WD compresses for headroom, higher LR recovers quality. 3-seed mean 1.0900 BPP. No TTT, no SLOT.",
+        "date": "2026-04-04"
+      },
+      "metrics": {
+        "valBpb": 1.09,
+        "valLoss": null,
+        "preQuantValBpb": 1.0994,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15964018,
+        "bytesCode": 20302,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1331,
+        "title": "Record: MuonEq-R + 3-Layer Recurrence + WD=0.095 + MLR=0.022 + All-Int6 — val_bpb 1.0900 (3-seed mean)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1331",
+        "authorLogin": "dexhunter",
+        "authorName": null,
+        "createdAt": "2026-04-04T08:07:23Z",
+        "updatedAt": "2026-04-04T08:07:23Z",
+        "headSha": "2264ac4b6f52fb1ab6ba505fbe4577211c122d08",
+        "headRepo": "dexhunter/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/2264ac4b6f52fb1ab6ba505fbe4577211c122d08/records/track_10min_16mb/2026-04-04_MuonEqR_3LayerRecurrence_WD095_MLR022_AllInt6/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/2264ac4b6f52fb1ab6ba505fbe4577211c122d08/records/track_10min_16mb/2026-04-04_MuonEqR_3LayerRecurrence_WD095_MLR022_AllInt6/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/2264ac4b6f52fb1ab6ba505fbe4577211c122d08/records/track_10min_16mb/2026-04-04_MuonEqR_3LayerRecurrence_WD095_MLR022_AllInt6/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/2264ac4b6f52fb1ab6ba505fbe4577211c122d08/records/track_10min_16mb/2026-04-04_MuonEqR_3LayerRecurrence_WD095_MLR022_AllInt6/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/2264ac4b6f52fb1ab6ba505fbe4577211c122d08/records/track_10min_16mb/2026-04-04_MuonEqR_3LayerRecurrence_WD095_MLR022_AllInt6",
+        "pr": "https://github.com/openai/parameter-golf/pull/1331",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -50524,6 +50601,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/6e3082f950c431fc142e6f085a9be8cb2f3a061c/records/track_non_record_16mb/2026-03-23_11L_XSA4_H100_LegalFrontier/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/6e3082f950c431fc142e6f085a9be8cb2f3a061c/records/track_non_record_16mb/2026-03-23_11L_XSA4_H100_LegalFrontier",
         "pr": "https://github.com/openai/parameter-golf/pull/554",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-04-01_JEPA_v2_MultiStep_Int6_BigramHash_EMA",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-04-01_JEPA_v2_MultiStep_Int6_BigramHash_EMA",
+        "folderPath": "records/track_non_record_16mb/2026-04-01_JEPA_v2_MultiStep_Int6_BigramHash_EMA",
+        "submissionPath": "records/track_non_record_16mb/2026-04-01_JEPA_v2_MultiStep_Int6_BigramHash_EMA/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-04-01_JEPA_v2_MultiStep_Int6_BigramHash_EMA/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-04-01_JEPA_v2_MultiStep_Int6_BigramHash_EMA/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-04-01_JEPA_v2_MultiStep_Int6_BigramHash_EMA/train_gpt.py"
+      },
+      "submission": {
+        "author": "luciobaiocchi",
+        "githubId": "luciobaiocchi",
+        "name": "lucio",
+        "blurb": null,
+        "date": "2026-04-04"
+      },
+      "metrics": {
+        "valBpb": 1.4617,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1330,
+        "title": "[Non-record]: JEPA v2 —JEPA v2 — Why same-sequence next-k JEPA collapses in causal LMs",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1330",
+        "authorLogin": "luciobaiocchi",
+        "authorName": null,
+        "createdAt": "2026-04-04T08:01:58Z",
+        "updatedAt": "2026-04-04T08:01:58Z",
+        "headSha": "ceb47577fa9b6de1eb2ea819ec166fc25654f2c0",
+        "headRepo": "luciobaiocchi/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/ceb47577fa9b6de1eb2ea819ec166fc25654f2c0/records/track_non_record_16mb/2026-04-01_JEPA_v2_MultiStep_Int6_BigramHash_EMA/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/ceb47577fa9b6de1eb2ea819ec166fc25654f2c0/records/track_non_record_16mb/2026-04-01_JEPA_v2_MultiStep_Int6_BigramHash_EMA/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/ceb47577fa9b6de1eb2ea819ec166fc25654f2c0/records/track_non_record_16mb/2026-04-01_JEPA_v2_MultiStep_Int6_BigramHash_EMA/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/ceb47577fa9b6de1eb2ea819ec166fc25654f2c0/records/track_non_record_16mb/2026-04-01_JEPA_v2_MultiStep_Int6_BigramHash_EMA/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/ceb47577fa9b6de1eb2ea819ec166fc25654f2c0/records/track_non_record_16mb/2026-04-01_JEPA_v2_MultiStep_Int6_BigramHash_EMA",
+        "pr": "https://github.com/openai/parameter-golf/pull/1330",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

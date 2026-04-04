@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-04T08:17:42.671Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1330,
+    "title": "[Non-record]: JEPA v2 —JEPA v2 — Why same-sequence next-k JEPA collapses in causal LMs",
+    "state": "open",
+    "updatedAt": "2026-04-04T08:01:58Z",
+    "headSha": "ceb47577fa9b6de1eb2ea819ec166fc25654f2c0",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1330",
+    "authorLogin": "luciobaiocchi"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-04-01_JEPA_v2_MultiStep_Int6_BigramHash_EMA/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "JEPA v2 speeds EMA, uses multi-step offsets with per-microstep targets, and adds bigram embeddings plus int6 compression to keep JEPA useful.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "tokenization",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Multi-step JEPA offsets (1/2/4/8) plus 0.9 EMA to avoid collapse",
+      "Per-microstep target encoder runs and BigramHash embeddings free attention representations",
+      "Int6 quantization with LZMA keeps weights within the artifact budget"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
