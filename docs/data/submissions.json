@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-04T21:52:50.449Z",
+  "generatedAt": "2026-04-04T22:23:30.500Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -29657,6 +29657,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/f5e802ba4cf4f9577d430c84b4e669c84af08330/records/track_non_record_16mb/2026-03-22_DepthRecurrence_AggressiveTTT_10L/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/f5e802ba4cf4f9577d430c84b4e669c84af08330/records/track_non_record_16mb/2026-03-22_DepthRecurrence_AggressiveTTT_10L",
         "pr": "https://github.com/openai/parameter-golf/pull/456",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-28_GPTQ_Hessian_Int6",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-28_GPTQ_Hessian_Int6",
+        "folderPath": "records/track_10min_16mb/2026-03-28_GPTQ_Hessian_Int6",
+        "submissionPath": "records/track_10min_16mb/2026-03-28_GPTQ_Hessian_Int6/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-28_GPTQ_Hessian_Int6/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-28_GPTQ_Hessian_Int6/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-28_GPTQ_Hessian_Int6/train_gpt.py"
+      },
+      "submission": {
+        "author": "arnavgarg",
+        "githubId": "arnavgarg",
+        "name": "GPTQ Hessian Int6",
+        "blurb": null,
+        "date": "2026-03-28"
+      },
+      "metrics": {
+        "valBpb": 1.1534023,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1362,
+        "title": "[Non-record] GPTQ Hessian Int6 quantization",
+        "state": "open",
+        "draft": true,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1362",
+        "authorLogin": "gargarnav",
+        "authorName": null,
+        "createdAt": "2026-04-04T22:21:50Z",
+        "updatedAt": "2026-04-04T22:21:50Z",
+        "headSha": "7c46cd6762cbd7ae6c28b865aa8e1a107ea76d09",
+        "headRepo": "gargarnav/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/7c46cd6762cbd7ae6c28b865aa8e1a107ea76d09/records/track_10min_16mb/2026-03-28_GPTQ_Hessian_Int6/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/7c46cd6762cbd7ae6c28b865aa8e1a107ea76d09/records/track_10min_16mb/2026-03-28_GPTQ_Hessian_Int6/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/7c46cd6762cbd7ae6c28b865aa8e1a107ea76d09/records/track_10min_16mb/2026-03-28_GPTQ_Hessian_Int6/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/7c46cd6762cbd7ae6c28b865aa8e1a107ea76d09/records/track_10min_16mb/2026-03-28_GPTQ_Hessian_Int6/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/7c46cd6762cbd7ae6c28b865aa8e1a107ea76d09/records/track_10min_16mb/2026-03-28_GPTQ_Hessian_Int6",
+        "pr": "https://github.com/openai/parameter-golf/pull/1362",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

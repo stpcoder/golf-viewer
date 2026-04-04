@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-04-04T22:23:38.872Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1362,
+    "title": "[Non-record] GPTQ Hessian Int6 quantization",
+    "state": "open",
+    "updatedAt": "2026-04-04T22:21:50Z",
+    "headSha": "7c46cd6762cbd7ae6c28b865aa8e1a107ea76d09",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1362",
+    "authorLogin": "gargarnav"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-28_GPTQ_Hessian_Int6/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Introduces full Hessian-based GPTQ for int6, collecting calibration Hessians from attn/mlp norm hooks instead of the previous clip-percentile sweep.",
+    "tags": [
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Hessian calibration via attn/MLP norm hooks",
+      "Column-wise GPTQ with propagated error compensation",
+      "Percentile-based fallback quantizer"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

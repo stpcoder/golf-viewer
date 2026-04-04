@@ -1,8 +1,29 @@
 {
-  "generatedAt": "2026-04-04T21:52:56.048Z",
+  "generatedAt": "2026-04-04T22:23:39.074Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1362,
+      "title": "[Non-record] GPTQ Hessian Int6 quantization",
+      "status": "open",
+      "updatedAt": "2026-04-04T22:21:50Z",
+      "headSha": "7c46cd6762cbd7ae6c28b865aa8e1a107ea76d09",
+      "generatedAt": "2026-04-04T22:23:38.872Z",
+      "summary": "Introduces full Hessian-based GPTQ for int6, collecting calibration Hessians from attn/mlp norm hooks instead of the previous clip-percentile sweep.",
+      "tags": [
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1362.json"
+    },
     {
       "prNumber": 1361,
       "title": "1.1220 bpb: GPTQ + EMA + XSA-all + BigramHash3072 (11L 512dim)",
