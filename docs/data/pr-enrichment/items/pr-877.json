@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-26T18:11:45.449Z",
+  "generatedAt": "2026-04-04T20:22:35.840Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 877,
     "title": "Non-record: sin² activation + causal screening pipeline",
     "state": "open",
-    "updatedAt": "2026-03-26T18:00:01Z",
-    "headSha": "94ca331c663a4c988eafc4bb9f67be038d119327",
+    "updatedAt": "2026-04-04T20:00:43Z",
+    "headSha": "1c643878e4d5771bffd64d256580f9909860d8cb",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/877",
     "authorLogin": "clthuang"
   },
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "sin² periodic activation replaces relu² in MLPs guided by DAG-driven causal screening plus adaptive multi-token and rho1 masking experiments.",
+    "summary": "Drop-in sin² MLP activation discovered via causal DAG screening, paired with adaptive multi-token prediction and Rho-1 selective loss probes.",
     "tags": [
       "architecture",
-      "non-record",
-      "evaluation"
+      "evaluation",
+      "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Periodic sin² drop-in for MLP activations",
-      "Automated causal-DAG screening pipeline",
-      "Adaptive multi-token/rho1 masking experiments"
+      "periodic sin² MLP activation",
+      "automated causal intervention screening",
+      "adaptive multi-token prediction exploration"
     ]
   },
   "compatibility": {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-04T19:51:59.866Z",
+  "generatedAt": "2026-04-04T20:22:29.170Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -64917,16 +64917,16 @@
         "authorLogin": "clthuang",
         "authorName": null,
         "createdAt": "2026-03-26T18:00:01Z",
-        "updatedAt": "2026-03-26T18:00:01Z",
-        "headSha": "94ca331c663a4c988eafc4bb9f67be038d119327",
+        "updatedAt": "2026-04-04T20:00:43Z",
+        "headSha": "1c643878e4d5771bffd64d256580f9909860d8cb",
         "headRepo": "clthuang/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/94ca331c663a4c988eafc4bb9f67be038d119327/records/track_non_record_16mb/2026-03-27_CausalScreening_SinSq_AdaptiveK/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/94ca331c663a4c988eafc4bb9f67be038d119327/records/track_non_record_16mb/2026-03-27_CausalScreening_SinSq_AdaptiveK/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/94ca331c663a4c988eafc4bb9f67be038d119327/records/track_non_record_16mb/2026-03-27_CausalScreening_SinSq_AdaptiveK/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/94ca331c663a4c988eafc4bb9f67be038d119327/records/track_non_record_16mb/2026-03-27_CausalScreening_SinSq_AdaptiveK/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/94ca331c663a4c988eafc4bb9f67be038d119327/records/track_non_record_16mb/2026-03-27_CausalScreening_SinSq_AdaptiveK",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/1c643878e4d5771bffd64d256580f9909860d8cb/records/track_non_record_16mb/2026-03-27_CausalScreening_SinSq_AdaptiveK/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/1c643878e4d5771bffd64d256580f9909860d8cb/records/track_non_record_16mb/2026-03-27_CausalScreening_SinSq_AdaptiveK/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/1c643878e4d5771bffd64d256580f9909860d8cb/records/track_non_record_16mb/2026-03-27_CausalScreening_SinSq_AdaptiveK/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/1c643878e4d5771bffd64d256580f9909860d8cb/records/track_non_record_16mb/2026-03-27_CausalScreening_SinSq_AdaptiveK/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/1c643878e4d5771bffd64d256580f9909860d8cb/records/track_non_record_16mb/2026-03-27_CausalScreening_SinSq_AdaptiveK",
         "pr": "https://github.com/openai/parameter-golf/pull/877",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
