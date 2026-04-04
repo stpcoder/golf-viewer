@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-04-04T05:46:42.423Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1323,
+    "title": "REHA-DEQ-WSE: Deep Equilibrium with Weight Synthesis for Parameter-Efficient Language Modeling",
+    "state": "open",
+    "updatedAt": "2026-04-04T05:18:01Z",
+    "headSha": "6255f53382101ae3f1106bbd552c5b5664abc63e",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1323",
+    "authorLogin": "sohv"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-04_REHA_DEQ_WSE_GFHE/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Uses a single DEQ layer iterated to convergence plus an entropy-driven weight synthesis hypernetwork to adapt to prose vs code within 16MB.",
+    "tags": [
+      "architecture",
+      "regularization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Deep equilibrium fixed-point iteration instead of stacking layers",
+      "Entropy-driven weight synthesis hypernetwork tunes the layer per input type"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

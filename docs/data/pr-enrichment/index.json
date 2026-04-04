@@ -1,8 +1,53 @@
 {
-  "generatedAt": "2026-04-04T05:16:01.986Z",
+  "generatedAt": "2026-04-04T05:46:42.621Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1324,
+      "title": "Record: val_bpb 0.8275 (3-seed mean) — SLOT-28 + VRL + QK-Gain 4.0 + XSA-11",
+      "status": "open",
+      "updatedAt": "2026-04-04T05:20:29Z",
+      "headSha": "ca37a33176abcdb1afc9681ca28892c916b00169",
+      "generatedAt": "2026-04-04T05:46:37.148Z",
+      "summary": "Extends the XSA-driven 11L/512d model with SLOT-28 eval-time AdamW plus VRL and per-head QK-Gain for tighter generalization.",
+      "tags": [
+        "architecture",
+        "evaluation",
+        "optimizer"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1324.json"
+    },
+    {
+      "prNumber": 1323,
+      "title": "REHA-DEQ-WSE: Deep Equilibrium with Weight Synthesis for Parameter-Efficient Language Modeling",
+      "status": "open",
+      "updatedAt": "2026-04-04T05:18:01Z",
+      "headSha": "6255f53382101ae3f1106bbd552c5b5664abc63e",
+      "generatedAt": "2026-04-04T05:46:42.423Z",
+      "summary": "Uses a single DEQ layer iterated to convergence plus an entropy-driven weight synthesis hypernetwork to adapt to prose vs code within 16MB.",
+      "tags": [
+        "architecture",
+        "regularization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1323.json"
+    },
     {
       "prNumber": 1322,
       "title": "Lucky V — 1.08746285 val_bpb (seed 444)",

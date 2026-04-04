@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-04T05:15:53.450Z",
+  "generatedAt": "2026-04-04T05:46:30.170Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -58075,6 +58075,160 @@
         "script": "https://github.com/openai/parameter-golf/blob/381ece0b8f6f876cdea2b10e3e411d12d9ea8010/records/track_10min_16mb/2026-03-XX_DepthRecurrence_eb1386/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/381ece0b8f6f876cdea2b10e3e411d12d9ea8010/records/track_10min_16mb/2026-03-XX_DepthRecurrence_eb1386",
         "pr": "https://github.com/openai/parameter-golf/pull/449",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-04-04_REHA_DEQ_WSE_GFHE",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-04-04_REHA_DEQ_WSE_GFHE",
+        "folderPath": "records/track_10min_16mb/2026-04-04_REHA_DEQ_WSE_GFHE",
+        "submissionPath": "records/track_10min_16mb/2026-04-04_REHA_DEQ_WSE_GFHE/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-04-04_REHA_DEQ_WSE_GFHE/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-04-04_REHA_DEQ_WSE_GFHE/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-04-04_REHA_DEQ_WSE_GFHE/train_gpt.py"
+      },
+      "submission": {
+        "author": "sohv",
+        "githubId": "sohv",
+        "name": null,
+        "blurb": null,
+        "date": "2026-04-04T05:18:01Z"
+      },
+      "metrics": {
+        "valBpb": null,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1323,
+        "title": "REHA-DEQ-WSE: Deep Equilibrium with Weight Synthesis for Parameter-Efficient Language Modeling",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1323",
+        "authorLogin": "sohv",
+        "authorName": null,
+        "createdAt": "2026-04-04T05:18:01Z",
+        "updatedAt": "2026-04-04T05:18:01Z",
+        "headSha": "6255f53382101ae3f1106bbd552c5b5664abc63e",
+        "headRepo": "sohv/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/6255f53382101ae3f1106bbd552c5b5664abc63e/records/track_10min_16mb/2026-04-04_REHA_DEQ_WSE_GFHE/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/6255f53382101ae3f1106bbd552c5b5664abc63e/records/track_10min_16mb/2026-04-04_REHA_DEQ_WSE_GFHE/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/6255f53382101ae3f1106bbd552c5b5664abc63e/records/track_10min_16mb/2026-04-04_REHA_DEQ_WSE_GFHE/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/6255f53382101ae3f1106bbd552c5b5664abc63e/records/track_10min_16mb/2026-04-04_REHA_DEQ_WSE_GFHE/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/6255f53382101ae3f1106bbd552c5b5664abc63e/records/track_10min_16mb/2026-04-04_REHA_DEQ_WSE_GFHE",
+        "pr": "https://github.com/openai/parameter-golf/pull/1323",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-04-04_SLOT28_VRL_QKGain4_XSA11",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-04-04_SLOT28_VRL_QKGain4_XSA11",
+        "folderPath": "records/track_10min_16mb/2026-04-04_SLOT28_VRL_QKGain4_XSA11",
+        "submissionPath": "records/track_10min_16mb/2026-04-04_SLOT28_VRL_QKGain4_XSA11/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-04-04_SLOT28_VRL_QKGain4_XSA11/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-04-04_SLOT28_VRL_QKGain4_XSA11/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-04-04_SLOT28_VRL_QKGain4_XSA11/train_gpt.py"
+      },
+      "submission": {
+        "author": "yahya010",
+        "githubId": "yahya010",
+        "name": null,
+        "blurb": null,
+        "date": "2026-04-04"
+      },
+      "metrics": {
+        "valBpb": null,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": 359
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1324,
+        "title": "Record: val_bpb 0.8275 (3-seed mean) — SLOT-28 + VRL + QK-Gain 4.0 + XSA-11",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1324",
+        "authorLogin": "yahya010",
+        "authorName": null,
+        "createdAt": "2026-04-04T05:20:29Z",
+        "updatedAt": "2026-04-04T05:20:29Z",
+        "headSha": "ca37a33176abcdb1afc9681ca28892c916b00169",
+        "headRepo": "yahya010/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/ca37a33176abcdb1afc9681ca28892c916b00169/records/track_10min_16mb/2026-04-04_SLOT28_VRL_QKGain4_XSA11/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/ca37a33176abcdb1afc9681ca28892c916b00169/records/track_10min_16mb/2026-04-04_SLOT28_VRL_QKGain4_XSA11/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/ca37a33176abcdb1afc9681ca28892c916b00169/records/track_10min_16mb/2026-04-04_SLOT28_VRL_QKGain4_XSA11/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/ca37a33176abcdb1afc9681ca28892c916b00169/records/track_10min_16mb/2026-04-04_SLOT28_VRL_QKGain4_XSA11/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/ca37a33176abcdb1afc9681ca28892c916b00169/records/track_10min_16mb/2026-04-04_SLOT28_VRL_QKGain4_XSA11",
+        "pr": "https://github.com/openai/parameter-golf/pull/1324",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
