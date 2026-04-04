@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-04-04T15:21:08.466Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1349,
+    "title": "Add shared-block recurrent 10-minute non-record 16MB submission",
+    "state": "open",
+    "updatedAt": "2026-04-04T14:58:38Z",
+    "headSha": "b2e7a3fac5e27869a772a7178506c380ad8b8b09",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1349",
+    "authorLogin": "LocalX991"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-04-04_SharedBlockRecurrent_1.3693_8xH100SXM/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Shared universal transformer block reused across eight passes with pass-conditioned rotation/depth embeddings, partial RoPE, BigramHash, EMA/SWA, and int6+zstd export.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "shared universal transformer block across passes",
+      "pass-dependent rotations and depth embeddings",
+      "int6+zstd export with BigramHash/SmearGate"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

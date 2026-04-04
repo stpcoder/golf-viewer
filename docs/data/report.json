@@ -1,27 +1,29 @@
 {
-  "generatedAt": "2026-04-04T14:50:10.590Z",
+  "generatedAt": "2026-04-04T15:20:19.700Z",
   "sourceRepo": "openai/parameter-golf",
   "siteRoot": null,
   "tokenConfigured": true,
-  "skipped": [],
-  "errors": [
+  "skipped": [
     {
-      "stage": "pull-request-file",
-      "pr": 1107,
-      "filename": "records/track_non_record_16mb/2026-03-29_Mamba3Hybrid_QAT/submission.json",
-      "message": "GitHub API 500 for https://api.github.com/repos/openai/parameter-golf/contents/records%2Ftrack_non_record_16mb%2F2026-03-29_Mamba3Hybrid_QAT%2Fsubmission.json?ref=d8f3c95db6642695012d06a5979547ae5ccee4ff: "
+      "pr": 1292,
+      "reason": "no-record-submission-json"
+    },
+    {
+      "pr": 1348,
+      "reason": "no-record-submission-json"
     }
   ],
+  "errors": [],
   "incremental": {
     "mode": "incremental",
-    "cutoffUpdatedAt": "2026-04-04T14:13:33Z",
+    "cutoffUpdatedAt": "2026-04-04T14:50:00Z",
     "pagesScanned": 2,
     "prsScanned": 200,
-    "prsRefreshed": 2,
-    "prsReused": 198,
+    "prsRefreshed": 6,
+    "prsReused": 194,
     "stoppedEarly": true,
     "refreshFailures": 0,
-    "cacheEntries": 1288,
+    "cacheEntries": 1290,
     "retryWindowRetained": false
   }
 }
