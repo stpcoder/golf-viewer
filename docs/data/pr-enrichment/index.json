@@ -1,8 +1,53 @@
 {
-  "generatedAt": "2026-04-05T01:24:51.316Z",
+  "generatedAt": "2026-04-05T02:24:52.651Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1369,
+      "title": "Non-record: Negative results from gated multi-order hash n-grams",
+      "status": "open",
+      "updatedAt": "2026-04-05T02:15:54Z",
+      "headSha": "cd4e8af53bc35c385410a4221ebcb1ff8c0b36a5",
+      "generatedAt": "2026-04-05T02:24:37.622Z",
+      "summary": "Documented a gated multi-order hash n-gram prior line with scalar gating/multi-hash routing to probe whether richer lexical priors beat simple bigram hash fusion.",
+      "tags": [
+        "architecture",
+        "evaluation",
+        "compression",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1369.json"
+    },
+    {
+      "prNumber": 1368,
+      "title": "Non-record submission: mean-delta warm start + depth recurrence for SLOT (0.8503 BPB)",
+      "status": "open",
+      "updatedAt": "2026-04-05T02:17:28Z",
+      "headSha": "571a7eed08df151cb09db1317633eb6fb039ff7b",
+      "generatedAt": "2026-04-05T02:24:42.037Z",
+      "summary": "Mean-delta SLOT warm start plus learned depth recurrence reuse previous batch corrections and double-pass layers to sharpen per-batch refinement without extra params.",
+      "tags": [
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1368.json"
+    },
     {
       "prNumber": 1367,
       "title": "Non-Record: 10L Spatio-Temporal SNN (BPB: 1.3319)",
@@ -4054,16 +4099,15 @@
     },
     {
       "prNumber": 1138,
-      "title": "Non-record: Whole-Model GTA Megakernel Draft + Manual CUDA Reverse Pass",
+      "title": "Non-record: Real optional megakernel path with ownership-clean reverse bring-up",
       "status": "open",
-      "updatedAt": "2026-03-31T02:06:48Z",
+      "updatedAt": "2026-04-05T02:22:55Z",
       "headSha": "a57d6b8f5a6695b32cabe54b472c524290b4e4ee",
-      "generatedAt": "2026-03-31T02:10:07.108Z",
-      "summary": "Standalone packed-GTA trainer with inline CUDA/cuBLAS whole-model forward+eval and manual packed-buffer reverse pass for megakernel prototyping.",
+      "generatedAt": "2026-04-05T02:24:52.451Z",
+      "summary": "Non-record optional megakernel keeps device-owned forward and ownership-clean reverse on RTX 4090 without host replay or descriptor loops.",
       "tags": [
-        "non-record",
         "architecture",
-        "attention"
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,

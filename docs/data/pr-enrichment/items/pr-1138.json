@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-31T02:10:07.108Z",
+  "generatedAt": "2026-04-05T02:24:52.451Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1138,
-    "title": "Non-record: Whole-Model GTA Megakernel Draft + Manual CUDA Reverse Pass",
+    "title": "Non-record: Real optional megakernel path with ownership-clean reverse bring-up",
     "state": "open",
-    "updatedAt": "2026-03-31T02:06:48Z",
+    "updatedAt": "2026-04-05T02:22:55Z",
     "headSha": "a57d6b8f5a6695b32cabe54b472c524290b4e4ee",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1138",
     "authorLogin": "greqone"
@@ -19,18 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Standalone packed-GTA trainer with inline CUDA/cuBLAS whole-model forward+eval and manual packed-buffer reverse pass for megakernel prototyping.",
+    "summary": "Non-record optional megakernel keeps device-owned forward and ownership-clean reverse on RTX 4090 without host replay or descriptor loops.",
     "tags": [
-      "non-record",
       "architecture",
-      "attention"
+      "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Inline CUDA megakernel forward/eval kernels",
-      "cuBLAS-backed whole-model projection path",
-      "Manual packed-buffer reverse pass"
+      "Device-owned megakernel forward/backward",
+      "Ownership-clean reverse path with no host replay",
+      "Launch count reduced to minimize cleanup"
     ]
   },
   "compatibility": {

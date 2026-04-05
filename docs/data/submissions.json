@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-05T01:54:25.168Z",
+  "generatedAt": "2026-04-05T02:24:29.965Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -5160,6 +5160,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/ca847e29a3ce3d61b7cf41f14828a6b95dca13c4/records/track_10min_16mb/2026-03-25_PROTEUS_STYX_Ngram_0.8508/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/ca847e29a3ce3d61b7cf41f14828a6b95dca13c4/records/track_10min_16mb/2026-03-25_PROTEUS_STYX_Ngram_0.8508",
         "pr": "https://github.com/openai/parameter-golf/pull/769",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-04-04_MeanDelta_SLOT_WarmStart_DepthRecurrence",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-04-04_MeanDelta_SLOT_WarmStart_DepthRecurrence",
+        "folderPath": "records/track_10min_16mb/2026-04-04_MeanDelta_SLOT_WarmStart_DepthRecurrence",
+        "submissionPath": "records/track_10min_16mb/2026-04-04_MeanDelta_SLOT_WarmStart_DepthRecurrence/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-04-04_MeanDelta_SLOT_WarmStart_DepthRecurrence/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-04-04_MeanDelta_SLOT_WarmStart_DepthRecurrence/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-04-04_MeanDelta_SLOT_WarmStart_DepthRecurrence/train_gpt.py"
+      },
+      "submission": {
+        "author": "JKSNS",
+        "githubId": "JKSNS",
+        "name": "JKSNS",
+        "blurb": null,
+        "date": "2026-04-05T02:13:30Z"
+      },
+      "metrics": {
+        "valBpb": 0.8503,
+        "valLoss": 1.4357,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": 316
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1368,
+        "title": "Non-record submission: mean-delta warm start + depth recurrence for SLOT (0.8503 BPB)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1368",
+        "authorLogin": "JKSNS",
+        "authorName": null,
+        "createdAt": "2026-04-05T02:13:30Z",
+        "updatedAt": "2026-04-05T02:17:28Z",
+        "headSha": "571a7eed08df151cb09db1317633eb6fb039ff7b",
+        "headRepo": "JKSNS/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/571a7eed08df151cb09db1317633eb6fb039ff7b/records/track_10min_16mb/2026-04-04_MeanDelta_SLOT_WarmStart_DepthRecurrence/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/571a7eed08df151cb09db1317633eb6fb039ff7b/records/track_10min_16mb/2026-04-04_MeanDelta_SLOT_WarmStart_DepthRecurrence/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/571a7eed08df151cb09db1317633eb6fb039ff7b/records/track_10min_16mb/2026-04-04_MeanDelta_SLOT_WarmStart_DepthRecurrence/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/571a7eed08df151cb09db1317633eb6fb039ff7b/records/track_10min_16mb/2026-04-04_MeanDelta_SLOT_WarmStart_DepthRecurrence/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/571a7eed08df151cb09db1317633eb6fb039ff7b/records/track_10min_16mb/2026-04-04_MeanDelta_SLOT_WarmStart_DepthRecurrence",
+        "pr": "https://github.com/openai/parameter-golf/pull/1368",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -18267,6 +18344,83 @@
         "onMain": true,
         "hasPullRequest": true,
         "listedInReadme": true
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-04-04_NegativeResults_GatedMultiOrderHash",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-04-04_NegativeResults_GatedMultiOrderHash",
+        "folderPath": "records/track_non_record_16mb/2026-04-04_NegativeResults_GatedMultiOrderHash",
+        "submissionPath": "records/track_non_record_16mb/2026-04-04_NegativeResults_GatedMultiOrderHash/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-04-04_NegativeResults_GatedMultiOrderHash/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-04-04_NegativeResults_GatedMultiOrderHash/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-04-04_NegativeResults_GatedMultiOrderHash/train_gpt.py"
+      },
+      "submission": {
+        "author": "Yicheng Xia",
+        "githubId": "xiayicheng3-code",
+        "name": "Negative Results from Gated Multi-Order Hash N-grams",
+        "blurb": "Non-record submission documenting negative results from a gated multi-order hash n-gram line. Multi-hash hard top-1 routing and tail-loss emphasis did not beat the March 25 BigramHash baseline in the 10min/16MB regime. The line also produced practical AR-calibration and systems improvements, including prompt-bank AR tooling, repeat-penalized calibration generation, shard prefetch, async logging, and faster selective-prune search. Best legal simplified variant (single hash per order) reached 1.11959957 sliding exact BPB at 15,937,956 bytes.",
+        "date": "2026-04-04"
+      },
+      "metrics": {
+        "valBpb": 1.11959957,
+        "valLoss": 1.89039198,
+        "preQuantValBpb": 1.1347,
+        "preQuantValLoss": 1.9159,
+        "stepStop": 6863,
+        "wallclockSeconds": 600,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15937956,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1369,
+        "title": "Non-record: Negative results from gated multi-order hash n-grams",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1369",
+        "authorLogin": "xiayicheng3-code",
+        "authorName": null,
+        "createdAt": "2026-04-05T02:15:54Z",
+        "updatedAt": "2026-04-05T02:15:54Z",
+        "headSha": "cd4e8af53bc35c385410a4221ebcb1ff8c0b36a5",
+        "headRepo": "xiayicheng3-code/parameter-golf-base"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/cd4e8af53bc35c385410a4221ebcb1ff8c0b36a5/records/track_non_record_16mb/2026-04-04_NegativeResults_GatedMultiOrderHash/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/cd4e8af53bc35c385410a4221ebcb1ff8c0b36a5/records/track_non_record_16mb/2026-04-04_NegativeResults_GatedMultiOrderHash/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/cd4e8af53bc35c385410a4221ebcb1ff8c0b36a5/records/track_non_record_16mb/2026-04-04_NegativeResults_GatedMultiOrderHash/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/cd4e8af53bc35c385410a4221ebcb1ff8c0b36a5/records/track_non_record_16mb/2026-04-04_NegativeResults_GatedMultiOrderHash/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/cd4e8af53bc35c385410a4221ebcb1ff8c0b36a5/records/track_non_record_16mb/2026-04-04_NegativeResults_GatedMultiOrderHash",
+        "pr": "https://github.com/openai/parameter-golf/pull/1369",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
       }
     },
     {
@@ -53431,7 +53585,7 @@
       },
       "pr": {
         "number": 1138,
-        "title": "Non-record: Whole-Model GTA Megakernel Draft + Manual CUDA Reverse Pass",
+        "title": "Non-record: Real optional megakernel path with ownership-clean reverse bring-up",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -53439,7 +53593,7 @@
         "authorLogin": "greqone",
         "authorName": null,
         "createdAt": "2026-03-30T16:44:28Z",
-        "updatedAt": "2026-03-31T02:06:48Z",
+        "updatedAt": "2026-04-05T02:22:55Z",
         "headSha": "a57d6b8f5a6695b32cabe54b472c524290b4e4ee",
         "headRepo": "greqone/parameter-golf"
       },

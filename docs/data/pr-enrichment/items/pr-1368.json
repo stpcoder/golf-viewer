@@ -1,0 +1,39 @@
+{
+  "generatedAt": "2026-04-05T02:24:42.037Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1368,
+    "title": "Non-record submission: mean-delta warm start + depth recurrence for SLOT (0.8503 BPB)",
+    "state": "open",
+    "updatedAt": "2026-04-05T02:17:28Z",
+    "headSha": "571a7eed08df151cb09db1317633eb6fb039ff7b",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1368",
+    "authorLogin": "JKSNS"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-04_MeanDelta_SLOT_WarmStart_DepthRecurrence/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Mean-delta SLOT warm start plus learned depth recurrence reuse previous batch corrections and double-pass layers to sharpen per-batch refinement without extra params.",
+    "tags": [
+      "architecture"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "SLOT mean-delta warm start using decayed previous-batch deltas",
+      "Depth recurrence with iter_embed/iter_gate to double-pass layers without adding parameters"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
