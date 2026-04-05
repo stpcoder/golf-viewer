@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-05T09:56:44.078Z",
+  "generatedAt": "2026-04-05T10:26:45.216Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -71407,7 +71407,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-03-24_FullGPTQ_SoftRoundQAT_LoRATTT",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -71455,16 +71455,16 @@
       "pr": {
         "number": 624,
         "title": "Rajat submission",
-        "state": "open",
+        "state": "closed",
         "draft": true,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/624",
         "authorLogin": "Rajat123456789",
         "authorName": null,
         "createdAt": "2026-03-24T14:25:18Z",
-        "updatedAt": "2026-03-24T14:25:33Z",
+        "updatedAt": "2026-04-05T10:21:05Z",
         "headSha": "fd0a6d3aa84a5a9bdb0a4e8db2b9c245b7c4c59c",
-        "headRepo": "Rajat123456789/parameter-golf"
+        "headRepo": null
       },
       "links": {
         "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/fd0a6d3aa84a5a9bdb0a4e8db2b9c245b7c4c59c/records/track_10min_16mb/2026-03-24_FullGPTQ_SoftRoundQAT_LoRATTT/submission.json",

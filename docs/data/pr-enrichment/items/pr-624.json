@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-24T14:55:27.106Z",
+  "generatedAt": "2026-04-05T10:26:51.837Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 624,
     "title": "Rajat submission",
-    "state": "open",
-    "updatedAt": "2026-03-24T14:25:33Z",
+    "state": "closed",
+    "updatedAt": "2026-04-05T10:21:05Z",
     "headSha": "fd0a6d3aa84a5a9bdb0a4e8db2b9c245b7c4c59c",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/624",
     "authorLogin": "Rajat123456789"
@@ -19,17 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines Hessian-guided int6 GPTQ, soft-round QAT, and per-chunk LoRA TTT with entropy-coded compression for the 10min/16MB challenge.",
+    "summary": "Blends full GPTQ with soft-round QAT warmdown, LoRA-based per-chunk TTT, and entropy-coded compression atop legal-score sliding evaluation.",
     "tags": [
       "quantization",
       "training-schedule",
-      "compression"
+      "compression",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
       "Full GPTQ + soft-round QAT warmdown",
-      "LoRA adapters for per-chunk TTT with AdamW",
+      "LoRA adapters with AdamW per chunk",
       "Entropy-coded Huffman+LZMA compression"
     ]
   },
