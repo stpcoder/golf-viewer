@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-26T20:43:03.918Z",
+  "generatedAt": "2026-04-05T14:58:10.503Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 895,
     "title": "Non-record: 4-Hour Progressive Depth — val_bpb 1.0889",
-    "state": "open",
-    "updatedAt": "2026-03-26T20:25:59Z",
+    "state": "closed",
+    "updatedAt": "2026-04-05T14:49:55Z",
     "headSha": "0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/895",
     "authorLogin": "iverbovoy"
@@ -23,7 +23,7 @@
     "submissionCount": 5
   },
   "output": {
-    "summary": "Progressively increases repeats on three shared transformer blocks, using SWA checkpoints and Hedge Mixer evaluation to explore recurrence scaling.",
+    "summary": "Progressive depth recurrence ramps three shared blocks from 2→5 repeats while large-scale SWA pairs with Hedge Mixer evaluation for the scaling study.",
     "tags": [
       "architecture",
       "training-schedule",
@@ -33,9 +33,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Progressive depth scheduling across shared recurrence blocks",
-      "Large SWA ensemble to stabilize deep repeats",
-      "Hedge Mixer online expert ensemble during evaluation"
+      "Shared-weight progressive depth scheduling",
+      "SWA checkpoint averaging across depth phases",
+      "Hedge Mixer online ensemble evaluation"
     ]
   },
   "compatibility": {

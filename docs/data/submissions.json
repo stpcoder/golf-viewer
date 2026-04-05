@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-05T14:27:43.759Z",
+  "generatedAt": "2026-04-05T14:57:59.066Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -10335,7 +10335,7 @@
     {
       "id": "record-records-track_non_record_16mb-2026-03-26_ProgressiveDepth_4hour",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "non-record",
       "track": {
         "path": "records/track_non_record_16mb",
@@ -10383,14 +10383,14 @@
       "pr": {
         "number": 895,
         "title": "Non-record: 4-Hour Progressive Depth — val_bpb 1.0889",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/895",
         "authorLogin": "iverbovoy",
         "authorName": null,
         "createdAt": "2026-03-26T20:25:58Z",
-        "updatedAt": "2026-03-26T20:25:59Z",
+        "updatedAt": "2026-04-05T14:49:55Z",
         "headSha": "0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764",
         "headRepo": "iverbovoy/parameter-golf"
       },
@@ -26663,6 +26663,83 @@
       }
     },
     {
+      "id": "record-records-track_10min_16mb-2026-04-05_ProgressiveDepth_HedgeMixer",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-04-05_ProgressiveDepth_HedgeMixer",
+        "folderPath": "records/track_10min_16mb/2026-04-05_ProgressiveDepth_HedgeMixer",
+        "submissionPath": "records/track_10min_16mb/2026-04-05_ProgressiveDepth_HedgeMixer/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-04-05_ProgressiveDepth_HedgeMixer/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-04-05_ProgressiveDepth_HedgeMixer/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-04-05_ProgressiveDepth_HedgeMixer/train_gpt.py"
+      },
+      "submission": {
+        "author": "Ivan Verbovoy",
+        "githubId": "iverbovoy",
+        "name": "Progressive Depth + Hedge Mixer (3x4 depth recurrence, 5-expert online ensemble)",
+        "blurb": "3 shared blocks x 4 repeats (12 effective layers) with progressive depth scheduling (2→3→4 repeats), XSA, LeakyReLU², Cross-Repeat Skip, SWA, int8+zstd22. Eval: 5-expert Hedge Mixer (neural + unigram + bigram + trigram + entropy) with online multiplicative weight updates. Mean over 3 seeds.",
+        "date": "2026-04-05T00:00:00Z"
+      },
+      "metrics": {
+        "valBpb": 1.14407142,
+        "valLoss": 1.9317175,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": 600,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": 65854,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1384,
+        "title": "Progressive Depth + Hedge Mixer — val_bpb 1.1441 (3-seed mean)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1384",
+        "authorLogin": "iverbovoy",
+        "authorName": null,
+        "createdAt": "2026-04-05T14:47:34Z",
+        "updatedAt": "2026-04-05T14:48:36Z",
+        "headSha": "46e17ef556f67ff025011e4f792cc66d998b98b5",
+        "headRepo": "iverbovoy/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/46e17ef556f67ff025011e4f792cc66d998b98b5/records/track_10min_16mb/2026-04-05_ProgressiveDepth_HedgeMixer/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/46e17ef556f67ff025011e4f792cc66d998b98b5/records/track_10min_16mb/2026-04-05_ProgressiveDepth_HedgeMixer/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/46e17ef556f67ff025011e4f792cc66d998b98b5/records/track_10min_16mb/2026-04-05_ProgressiveDepth_HedgeMixer/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/46e17ef556f67ff025011e4f792cc66d998b98b5/records/track_10min_16mb/2026-04-05_ProgressiveDepth_HedgeMixer/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/46e17ef556f67ff025011e4f792cc66d998b98b5/records/track_10min_16mb/2026-04-05_ProgressiveDepth_HedgeMixer",
+        "pr": "https://github.com/openai/parameter-golf/pull/1384",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_non_record_16mb-2026-04-02_11L_24h_Local4060Ti_LeakyTTT",
       "source": "pull_request",
       "status": "open",
@@ -27281,7 +27358,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-03-26_ProgressiveDepth_HedgeMixer",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -27329,14 +27406,14 @@
       "pr": {
         "number": 895,
         "title": "Non-record: 4-Hour Progressive Depth — val_bpb 1.0889",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/895",
         "authorLogin": "iverbovoy",
         "authorName": null,
         "createdAt": "2026-03-26T20:25:58Z",
-        "updatedAt": "2026-03-26T20:25:59Z",
+        "updatedAt": "2026-04-05T14:49:55Z",
         "headSha": "0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764",
         "headRepo": "iverbovoy/parameter-golf"
       },
@@ -40140,7 +40217,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-03-26_ProgressiveDepth",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -40188,14 +40265,14 @@
       "pr": {
         "number": 895,
         "title": "Non-record: 4-Hour Progressive Depth — val_bpb 1.0889",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/895",
         "authorLogin": "iverbovoy",
         "authorName": null,
         "createdAt": "2026-03-26T20:25:58Z",
-        "updatedAt": "2026-03-26T20:25:59Z",
+        "updatedAt": "2026-04-05T14:49:55Z",
         "headSha": "0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764",
         "headRepo": "iverbovoy/parameter-golf"
       },
@@ -41372,7 +41449,7 @@
     {
       "id": "record-records-track_non_record_16mb-2026-03-26_DepthRecurrence_XSA_LeakyReLU",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "non-record",
       "track": {
         "path": "records/track_non_record_16mb",
@@ -41420,14 +41497,14 @@
       "pr": {
         "number": 895,
         "title": "Non-record: 4-Hour Progressive Depth — val_bpb 1.0889",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/895",
         "authorLogin": "iverbovoy",
         "authorName": null,
         "createdAt": "2026-03-26T20:25:58Z",
-        "updatedAt": "2026-03-26T20:25:59Z",
+        "updatedAt": "2026-04-05T14:49:55Z",
         "headSha": "0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764",
         "headRepo": "iverbovoy/parameter-golf"
       },
@@ -42989,7 +43066,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-03-20_DepthRecurrence_CrossRepeatSkip",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -43037,14 +43114,14 @@
       "pr": {
         "number": 895,
         "title": "Non-record: 4-Hour Progressive Depth — val_bpb 1.0889",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/895",
         "authorLogin": "iverbovoy",
         "authorName": null,
         "createdAt": "2026-03-26T20:25:58Z",
-        "updatedAt": "2026-03-26T20:25:59Z",
+        "updatedAt": "2026-04-05T14:49:55Z",
         "headSha": "0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764",
         "headRepo": "iverbovoy/parameter-golf"
       },

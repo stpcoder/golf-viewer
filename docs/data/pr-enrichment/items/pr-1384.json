@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-05T14:58:05.541Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1384,
+    "title": "Progressive Depth + Hedge Mixer — val_bpb 1.1441 (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-04-05T14:48:36Z",
+    "headSha": "46e17ef556f67ff025011e4f792cc66d998b98b5",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1384",
+    "authorLogin": "iverbovoy"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-05_ProgressiveDepth_HedgeMixer/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Shares three transformer blocks repeated and trained via a progressive-depth curriculum, then Hedge Mixer online ensemble improves eval.",
+    "tags": [
+      "architecture",
+      "training-schedule",
+      "evaluation",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Shared-block recurrence with loop/value embeddings",
+      "Progressive depth phases (2→3→4 repeats)",
+      "Hedge Mixer 5-expert online ensemble eval"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

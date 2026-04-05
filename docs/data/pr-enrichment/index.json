@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-04-05T14:27:57.596Z",
+  "generatedAt": "2026-04-05T14:58:10.626Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1384,
+      "title": "Progressive Depth + Hedge Mixer — val_bpb 1.1441 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-04-05T14:48:36Z",
+      "headSha": "46e17ef556f67ff025011e4f792cc66d998b98b5",
+      "generatedAt": "2026-04-05T14:58:05.541Z",
+      "summary": "Shares three transformer blocks repeated and trained via a progressive-depth curriculum, then Hedge Mixer online ensemble improves eval.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "evaluation",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1384.json"
+    },
     {
       "prNumber": 1383,
       "title": "Non-record: Neuromodulatory Depth-Recurrent Transformer with FiLM-only TTT (WIP, val_bpb=1.3151)",
@@ -8313,11 +8337,11 @@
     {
       "prNumber": 895,
       "title": "Non-record: 4-Hour Progressive Depth — val_bpb 1.0889",
-      "status": "open",
-      "updatedAt": "2026-03-26T20:25:59Z",
+      "status": "closed",
+      "updatedAt": "2026-04-05T14:49:55Z",
       "headSha": "0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764",
-      "generatedAt": "2026-03-26T20:43:03.918Z",
-      "summary": "Progressively increases repeats on three shared transformer blocks, using SWA checkpoints and Hedge Mixer evaluation to explore recurrence scaling.",
+      "generatedAt": "2026-04-05T14:58:10.503Z",
+      "summary": "Progressive depth recurrence ramps three shared blocks from 2→5 repeats while large-scale SWA pairs with Hedge Mixer evaluation for the scaling study.",
       "tags": [
         "architecture",
         "training-schedule",
