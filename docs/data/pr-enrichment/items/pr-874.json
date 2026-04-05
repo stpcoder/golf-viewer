@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-30T20:08:17.358Z",
+  "generatedAt": "2026-04-05T21:30:30.246Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 874,
-    "title": "Non-record: Random Linear Maps + Learned Adapters (val_bpb=1.93, 2.4MB artifact)",
+    "title": "Non-record: Random Linear Maps + Learned Adapters (val_bpb=1.93 (1.607 outside 10mins), 2.4MB artifact (1.9mb outside 10mins)",
     "state": "open",
-    "updatedAt": "2026-03-30T20:00:14Z",
+    "updatedAt": "2026-04-05T21:03:01Z",
     "headSha": "6b211a8bc44fbe80fec1c146b1e060286d4f4246",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/874",
     "authorLogin": "fielding"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Seeded random linear projections supply base weights while tiny learned rank-16 adapters are the only stored params, letting a sub-2.5MB model learn language with tuned depth/rank.",
+    "summary": "Learns rank-16 adapters atop seeded random linear maps so only the adapters are stored while Muon+AdamW trains a tiny 5-layer transformer under 16MB.",
     "tags": [
       "architecture",
-      "compression",
-      "training-schedule",
-      "non-record"
+      "muon",
+      "optimizer",
+      "compression"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Seeded random weights regenerated on init so base matrices cost zero artifact space",
-      "LoRA-style rank-16 adapter A/B factors store the only learned updates",
-      "Depth and rank sweeps identify sweet spots under a fixed wallclock budget"
+      "Seeded random base weights regenerated at load time",
+      "Rank-16 adapters learn corrections to fixed projections",
+      "Muon+AdamW optimization on the adapter-only transformer"
     ]
   },
   "compatibility": {

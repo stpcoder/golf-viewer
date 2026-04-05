@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-04-05T21:00:26.031Z",
+  "generatedAt": "2026-04-05T21:30:30.371Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1394,
+      "title": "Record: SP8192 + GPTQ Embeddings + Depth Recurrence + MuonEq-R + SDClip  — val_bpb 1.08563 (5 seed mean)",
+      "status": "open",
+      "updatedAt": "2026-04-05T21:06:33Z",
+      "headSha": "f4fa11fe7671036dd1e3b945e405750f21ddecfc",
+      "generatedAt": "2026-04-05T21:30:09.315Z",
+      "summary": "Shared-loop layers 4-5 with GPTQ-quantized embeddings, MuonEq-R, and STD-based clipping over an 8k vocab keep the compressed model under 16MB.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "tokenization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1394.json"
+    },
     {
       "prNumber": 1393,
       "title": "[Submission] SwiGLU MLP (under 16MB)",
@@ -2286,23 +2309,23 @@
       "prNumber": 1269,
       "title": "30-Layer Recursive GPT (10 Physical x 3 Recursive) + VRL + Parallel Muon",
       "status": "open",
-      "updatedAt": "2026-04-05T20:38:46Z",
-      "headSha": "31b40945d9123d3ca3990bce995dc294478d27e9",
-      "generatedAt": "2026-04-05T21:00:19.723Z",
-      "summary": "Three-level recursive stacking of a 10-layer GPT complements VRL/MTP, Parameter Banking+Parallel Muon, and LeakyReLU² while running legal score-first TTT on validation chunks.",
+      "updatedAt": "2026-04-05T21:27:12Z",
+      "headSha": "cb60c7bd6da5f077723c8cd36dfef1f86561ac10",
+      "generatedAt": "2026-04-05T21:30:14.614Z",
+      "summary": "Combines 10-layer recursion repeated 3× with VRL+MTP, Bigram/Trigram hashing, and Parallel Muon tuning for H100 plus int8+LZMA compression.",
       "tags": [
-        "val-only",
         "architecture",
         "optimizer",
-        "training-schedule"
+        "quantization",
+        "compression"
       ],
       "flags": {
-        "usesValOnly": true,
-        "usesValOnlyAi": true,
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": false
+        "valOnlyMatchesCollector": true
       },
       "file": "items/pr-1269.json"
     },
@@ -2655,10 +2678,10 @@
       "prNumber": 1246,
       "title": "Record: Trinity Ternary GPT — val_bpb 0.9650 (ternary roundtrip)",
       "status": "open",
-      "updatedAt": "2026-04-05T17:25:39Z",
-      "headSha": "787c76f9b34b40309e058ca2686a3623b736fa2c",
-      "generatedAt": "2026-04-05T17:29:02.956Z",
-      "summary": "Ternary QAT with BitNet-inspired packing plus int6 GPTQ roundtrip and Trinity-guided wider MLP width to boost quality per byte.",
+      "updatedAt": "2026-04-05T21:08:47Z",
+      "headSha": "2c4f03cadece65d9d421c29d3227773a77931706",
+      "generatedAt": "2026-04-05T21:30:19.312Z",
+      "summary": "Ternary QAT + int6 GPTQ stack expands MLP width (3.25x) inside NeoMuon/Partial RoPE architecture with EMA/SWA and z-loss.",
       "tags": [
         "quantization",
         "architecture",
@@ -4468,14 +4491,15 @@
     },
     {
       "prNumber": 1138,
-      "title": "Non-record: Real optional megakernel path with ownership-clean reverse bring-up",
+      "title": "Non-record: ownership-clean optional megakernel path on WSL2/RTX 4090",
       "status": "open",
-      "updatedAt": "2026-04-05T02:22:55Z",
+      "updatedAt": "2026-04-05T21:26:50Z",
       "headSha": "a57d6b8f5a6695b32cabe54b472c524290b4e4ee",
-      "generatedAt": "2026-04-05T02:24:52.451Z",
-      "summary": "Non-record optional megakernel keeps device-owned forward and ownership-clean reverse on RTX 4090 without host replay or descriptor loops.",
+      "generatedAt": "2026-04-05T21:30:23.366Z",
+      "summary": "Optional WSL2/RTX 4090 megakernel lane keeps ownership-clean reverse execution while iterating deep inner-phase rewrites and inline CUDA helpers for non-record runs.",
       "tags": [
         "architecture",
+        "evaluation",
         "non-record"
       ],
       "flags": {
@@ -8709,17 +8733,17 @@
     },
     {
       "prNumber": 874,
-      "title": "Non-record: Random Linear Maps + Learned Adapters (val_bpb=1.93, 2.4MB artifact)",
+      "title": "Non-record: Random Linear Maps + Learned Adapters (val_bpb=1.93 (1.607 outside 10mins), 2.4MB artifact (1.9mb outside 10mins)",
       "status": "open",
-      "updatedAt": "2026-03-30T20:00:14Z",
+      "updatedAt": "2026-04-05T21:03:01Z",
       "headSha": "6b211a8bc44fbe80fec1c146b1e060286d4f4246",
-      "generatedAt": "2026-03-30T20:08:17.358Z",
-      "summary": "Seeded random linear projections supply base weights while tiny learned rank-16 adapters are the only stored params, letting a sub-2.5MB model learn language with tuned depth/rank.",
+      "generatedAt": "2026-04-05T21:30:30.246Z",
+      "summary": "Learns rank-16 adapters atop seeded random linear maps so only the adapters are stored while Muon+AdamW trains a tiny 5-layer transformer under 16MB.",
       "tags": [
         "architecture",
-        "compression",
-        "training-schedule",
-        "non-record"
+        "muon",
+        "optimizer",
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,

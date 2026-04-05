@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-05T21:00:02.091Z",
+  "generatedAt": "2026-04-05T21:30:01.300Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -10102,6 +10102,83 @@
       }
     },
     {
+      "id": "record-records-track_10min_16mb-2026-04-05_SP8192_GPTQ-Embeddings_SDClip_Loop45x2",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-04-05_SP8192_GPTQ-Embeddings_SDClip_Loop45x2",
+        "folderPath": "records/track_10min_16mb/2026-04-05_SP8192_GPTQ-Embeddings_SDClip_Loop45x2",
+        "submissionPath": "records/track_10min_16mb/2026-04-05_SP8192_GPTQ-Embeddings_SDClip_Loop45x2/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-04-05_SP8192_GPTQ-Embeddings_SDClip_Loop45x2/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-04-05_SP8192_GPTQ-Embeddings_SDClip_Loop45x2/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-04-05_SP8192_GPTQ-Embeddings_SDClip_Loop45x2/train_gpt.py"
+      },
+      "submission": {
+        "author": "Kevin Clark",
+        "githubId": "clarkkev",
+        "name": "SP8192 + GPTQ Embeddings + Depth Recurrence + MuonEq-R + SD-Clip + Simplifications",
+        "blurb": "8192-token sentencepiece vocab, GPTQ-quantize embeddings, loop layers 4,5 two times, row-normalized muon, standard-deviation based weight clipping",
+        "date": "2026-04-05"
+      },
+      "metrics": {
+        "valBpb": 1.08563,
+        "valLoss": 2.80428,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15985678,
+        "bytesCode": 15516,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1394,
+        "title": "Record: SP8192 + GPTQ Embeddings + Depth Recurrence + MuonEq-R + SDClip  — val_bpb 1.08563 (5 seed mean)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1394",
+        "authorLogin": "clarkkev",
+        "authorName": null,
+        "createdAt": "2026-04-05T21:06:33Z",
+        "updatedAt": "2026-04-05T21:06:33Z",
+        "headSha": "f4fa11fe7671036dd1e3b945e405750f21ddecfc",
+        "headRepo": "clarkkev/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/f4fa11fe7671036dd1e3b945e405750f21ddecfc/records/track_10min_16mb/2026-04-05_SP8192_GPTQ-Embeddings_SDClip_Loop45x2/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/f4fa11fe7671036dd1e3b945e405750f21ddecfc/records/track_10min_16mb/2026-04-05_SP8192_GPTQ-Embeddings_SDClip_Loop45x2/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/f4fa11fe7671036dd1e3b945e405750f21ddecfc/records/track_10min_16mb/2026-04-05_SP8192_GPTQ-Embeddings_SDClip_Loop45x2/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/f4fa11fe7671036dd1e3b945e405750f21ddecfc/records/track_10min_16mb/2026-04-05_SP8192_GPTQ-Embeddings_SDClip_Loop45x2/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/f4fa11fe7671036dd1e3b945e405750f21ddecfc/records/track_10min_16mb/2026-04-05_SP8192_GPTQ-Embeddings_SDClip_Loop45x2",
+        "pr": "https://github.com/openai/parameter-golf/pull/1394",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_10min_16mb-2026-03-27_11L_XSA4_LateSharedWorkspaceAdapter_MLP25",
       "source": "pull_request",
       "status": "closed",
@@ -12480,83 +12557,6 @@
         "script": "https://github.com/openai/parameter-golf/blob/aef01ee4b91efc3f9ef0164b713b13551db91bf2/records/track_10min_16mb/2026-03-23_11L_EMA_AdamWTTT10ep_1.1027/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/aef01ee4b91efc3f9ef0164b713b13551db91bf2/records/track_10min_16mb/2026-03-23_11L_EMA_AdamWTTT10ep_1.1027",
         "pr": "https://github.com/openai/parameter-golf/pull/442",
-        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
-      },
-      "provenance": {
-        "onMain": false,
-        "hasPullRequest": true,
-        "listedInReadme": false
-      }
-    },
-    {
-      "id": "record-records-track_10min_16mb-Jtss-ux_Submission_1-1301",
-      "source": "pull_request",
-      "status": "open",
-      "category": "main-track",
-      "track": {
-        "path": "records/track_10min_16mb",
-        "slug": "track_10min_16mb",
-        "label": "10 Minute / 16MB",
-        "official": true,
-        "category": "main-track"
-      },
-      "record": {
-        "folderName": "Jtss-ux_Submission_1.1301",
-        "folderPath": "records/track_10min_16mb/Jtss-ux_Submission_1.1301",
-        "submissionPath": "records/track_10min_16mb/Jtss-ux_Submission_1.1301/submission.json",
-        "readmePath": "records/track_10min_16mb/Jtss-ux_Submission_1.1301/README.md",
-        "trainLogPath": "records/track_10min_16mb/Jtss-ux_Submission_1.1301/train.log",
-        "scriptPath": "records/track_10min_16mb/Jtss-ux_Submission_1.1301/train_gpt.py"
-      },
-      "submission": {
-        "author": "Jtss-ux",
-        "githubId": "Jtss-ux",
-        "name": "30-Layer Recursive GPT (10 Physical x 3 Recursive) + VRL + Parallel Muon",
-        "blurb": "Extreme 30-layer virtual depth via 3x recursion (10 physical layers) + Value Residual Learning (VRL) + Multi-Token Prediction (MTP) + BigramHash(3072) + Trigram + Parallel Muon. Optimized for H100 with Activation Checkpointing. Target Score: 1.10 BPB. Compressed Size: <16MB target.",
-        "date": "2026-04-03"
-      },
-      "metrics": {
-        "valBpb": 1.1,
-        "valLoss": null,
-        "preQuantValBpb": null,
-        "preQuantValLoss": null,
-        "stepStop": null,
-        "wallclockSeconds": null,
-        "evalTimeSeconds": null
-      },
-      "artifact": {
-        "bytesTotal": 16127115,
-        "bytesCode": null,
-        "bytesModelInt8Zlib": null
-      },
-      "flags": {
-        "usesValOnly": false
-      },
-      "detection": {
-        "valOnlyConfidence": "none",
-        "valOnlyMatches": []
-      },
-      "pr": {
-        "number": 1269,
-        "title": "30-Layer Recursive GPT (10 Physical x 3 Recursive) + VRL + Parallel Muon",
-        "state": "open",
-        "draft": false,
-        "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1269",
-        "authorLogin": "Jtss-ux",
-        "authorName": null,
-        "createdAt": "2026-04-02T22:21:57Z",
-        "updatedAt": "2026-04-05T20:38:46Z",
-        "headSha": "31b40945d9123d3ca3990bce995dc294478d27e9",
-        "headRepo": "Jtss-ux/parameter-golf"
-      },
-      "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/31b40945d9123d3ca3990bce995dc294478d27e9/records/track_10min_16mb/Jtss-ux_Submission_1.1301/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/31b40945d9123d3ca3990bce995dc294478d27e9/records/track_10min_16mb/Jtss-ux_Submission_1.1301/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/31b40945d9123d3ca3990bce995dc294478d27e9/records/track_10min_16mb/Jtss-ux_Submission_1.1301/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/31b40945d9123d3ca3990bce995dc294478d27e9/records/track_10min_16mb/Jtss-ux_Submission_1.1301/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/31b40945d9123d3ca3990bce995dc294478d27e9/records/track_10min_16mb/Jtss-ux_Submission_1.1301",
-        "pr": "https://github.com/openai/parameter-golf/pull/1269",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -21427,83 +21427,6 @@
       }
     },
     {
-      "id": "record-records-track_10min_16mb-2026-04-02_Trinity_Hybrid_Ternary_GPTQ_XSA",
-      "source": "pull_request",
-      "status": "open",
-      "category": "main-track",
-      "track": {
-        "path": "records/track_10min_16mb",
-        "slug": "track_10min_16mb",
-        "label": "10 Minute / 16MB",
-        "official": true,
-        "category": "main-track"
-      },
-      "record": {
-        "folderName": "2026-04-02_Trinity_Hybrid_Ternary_GPTQ_XSA",
-        "folderPath": "records/track_10min_16mb/2026-04-02_Trinity_Hybrid_Ternary_GPTQ_XSA",
-        "submissionPath": "records/track_10min_16mb/2026-04-02_Trinity_Hybrid_Ternary_GPTQ_XSA/submission.json",
-        "readmePath": "records/track_10min_16mb/2026-04-02_Trinity_Hybrid_Ternary_GPTQ_XSA/README.md",
-        "trainLogPath": "records/track_10min_16mb/2026-04-02_Trinity_Hybrid_Ternary_GPTQ_XSA/train.log",
-        "scriptPath": "records/track_10min_16mb/2026-04-02_Trinity_Hybrid_Ternary_GPTQ_XSA/train_gpt.py"
-      },
-      "submission": {
-        "author": "gHashTag",
-        "githubId": "deborahnelson8788726",
-        "name": "Trinity_Hybrid_MLP_XSA",
-        "blurb": null,
-        "date": "2026-04-02"
-      },
-      "metrics": {
-        "valBpb": 1.1251,
-        "valLoss": null,
-        "preQuantValBpb": null,
-        "preQuantValLoss": null,
-        "stepStop": null,
-        "wallclockSeconds": null,
-        "evalTimeSeconds": null
-      },
-      "artifact": {
-        "bytesTotal": null,
-        "bytesCode": null,
-        "bytesModelInt8Zlib": null
-      },
-      "flags": {
-        "usesValOnly": false
-      },
-      "detection": {
-        "valOnlyConfidence": "none",
-        "valOnlyMatches": []
-      },
-      "pr": {
-        "number": 1246,
-        "title": "Record: Trinity Ternary GPT — val_bpb 0.9650 (ternary roundtrip)",
-        "state": "open",
-        "draft": false,
-        "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1246",
-        "authorLogin": "deborahnelson8788726",
-        "authorName": null,
-        "createdAt": "2026-04-02T02:44:32Z",
-        "updatedAt": "2026-04-05T17:25:39Z",
-        "headSha": "787c76f9b34b40309e058ca2686a3623b736fa2c",
-        "headRepo": "deborahnelson8788726/parameter-golf"
-      },
-      "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/787c76f9b34b40309e058ca2686a3623b736fa2c/records/track_10min_16mb/2026-04-02_Trinity_Hybrid_Ternary_GPTQ_XSA/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/787c76f9b34b40309e058ca2686a3623b736fa2c/records/track_10min_16mb/2026-04-02_Trinity_Hybrid_Ternary_GPTQ_XSA/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/787c76f9b34b40309e058ca2686a3623b736fa2c/records/track_10min_16mb/2026-04-02_Trinity_Hybrid_Ternary_GPTQ_XSA/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/787c76f9b34b40309e058ca2686a3623b736fa2c/records/track_10min_16mb/2026-04-02_Trinity_Hybrid_Ternary_GPTQ_XSA/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/787c76f9b34b40309e058ca2686a3623b736fa2c/records/track_10min_16mb/2026-04-02_Trinity_Hybrid_Ternary_GPTQ_XSA",
-        "pr": "https://github.com/openai/parameter-golf/pull/1246",
-        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
-      },
-      "provenance": {
-        "onMain": false,
-        "hasPullRequest": true,
-        "listedInReadme": false
-      }
-    },
-    {
       "id": "record-records-track_10min_16mb-2026-03-25_11L_ParallelMuon_MLP3x_TTT",
       "source": "pull_request",
       "status": "open",
@@ -22804,6 +22727,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/479b8bcfa8ea0e5e7b711aff7f54fafb9b72b0c2/records/track_10min_16mb/2026-03-20_FarnsworthEngine_TTT_11L_Int6_MLP3x/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/479b8bcfa8ea0e5e7b711aff7f54fafb9b72b0c2/records/track_10min_16mb/2026-03-20_FarnsworthEngine_TTT_11L_Int6_MLP3x",
         "pr": "https://github.com/openai/parameter-golf/pull/254",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-04-02_Trinity_Hybrid_Ternary_GPTQ_XSA",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-04-02_Trinity_Hybrid_Ternary_GPTQ_XSA",
+        "folderPath": "records/track_10min_16mb/2026-04-02_Trinity_Hybrid_Ternary_GPTQ_XSA",
+        "submissionPath": "records/track_10min_16mb/2026-04-02_Trinity_Hybrid_Ternary_GPTQ_XSA/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-04-02_Trinity_Hybrid_Ternary_GPTQ_XSA/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-04-02_Trinity_Hybrid_Ternary_GPTQ_XSA/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-04-02_Trinity_Hybrid_Ternary_GPTQ_XSA/train_gpt.py"
+      },
+      "submission": {
+        "author": "gHashTag",
+        "githubId": "deborahnelson8788726",
+        "name": "Trinity_Hybrid_GPTQ_XSA",
+        "blurb": null,
+        "date": "2026-04-05"
+      },
+      "metrics": {
+        "valBpb": 1.1304,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1246,
+        "title": "Record: Trinity Ternary GPT — val_bpb 0.9650 (ternary roundtrip)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1246",
+        "authorLogin": "deborahnelson8788726",
+        "authorName": null,
+        "createdAt": "2026-04-02T02:44:32Z",
+        "updatedAt": "2026-04-05T21:08:47Z",
+        "headSha": "2c4f03cadece65d9d421c29d3227773a77931706",
+        "headRepo": "deborahnelson8788726/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/2c4f03cadece65d9d421c29d3227773a77931706/records/track_10min_16mb/2026-04-02_Trinity_Hybrid_Ternary_GPTQ_XSA/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/2c4f03cadece65d9d421c29d3227773a77931706/records/track_10min_16mb/2026-04-02_Trinity_Hybrid_Ternary_GPTQ_XSA/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/2c4f03cadece65d9d421c29d3227773a77931706/records/track_10min_16mb/2026-04-02_Trinity_Hybrid_Ternary_GPTQ_XSA/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/2c4f03cadece65d9d421c29d3227773a77931706/records/track_10min_16mb/2026-04-02_Trinity_Hybrid_Ternary_GPTQ_XSA/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/2c4f03cadece65d9d421c29d3227773a77931706/records/track_10min_16mb/2026-04-02_Trinity_Hybrid_Ternary_GPTQ_XSA",
+        "pr": "https://github.com/openai/parameter-golf/pull/1246",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -40677,6 +40677,83 @@
       }
     },
     {
+      "id": "record-records-track_10min_16mb-Jtss-ux_Recursive_30_Layer",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "Jtss-ux_Recursive_30_Layer",
+        "folderPath": "records/track_10min_16mb/Jtss-ux_Recursive_30_Layer",
+        "submissionPath": "records/track_10min_16mb/Jtss-ux_Recursive_30_Layer/submission.json",
+        "readmePath": "records/track_10min_16mb/Jtss-ux_Recursive_30_Layer/README.md",
+        "trainLogPath": "records/track_10min_16mb/Jtss-ux_Recursive_30_Layer/train.log",
+        "scriptPath": "records/track_10min_16mb/Jtss-ux_Recursive_30_Layer/train_gpt.py"
+      },
+      "submission": {
+        "author": "Jtss-ux",
+        "githubId": "Jtss-ux",
+        "name": "30-Layer Recursive GPT (10 Physical x 3 Recursive) + VRL + Int8+LZMA + Parallel Muon",
+        "blurb": "30-layer virtual depth via 3x weight-shared recursion (10 physical layers, d_model=640). Value Residual Learning (VRL) with sigmoid gates for deep recursion stability. Multi-Token Prediction (MTP), BigramHash(3072), Trigram embeddings. Int8 GPTQ Hessian calibration (128 seqs x 2048 tokens) + LZMA compression. Trained on 8xH100 with Parallel Muon optimizer. Final size: 8.25MB (well within 16MB limit).",
+        "date": "2026-04-06"
+      },
+      "metrics": {
+        "valBpb": 1.1999,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 8648712,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1269,
+        "title": "30-Layer Recursive GPT (10 Physical x 3 Recursive) + VRL + Parallel Muon",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1269",
+        "authorLogin": "Jtss-ux",
+        "authorName": null,
+        "createdAt": "2026-04-02T22:21:57Z",
+        "updatedAt": "2026-04-05T21:27:12Z",
+        "headSha": "cb60c7bd6da5f077723c8cd36dfef1f86561ac10",
+        "headRepo": "Jtss-ux/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/cb60c7bd6da5f077723c8cd36dfef1f86561ac10/records/track_10min_16mb/Jtss-ux_Recursive_30_Layer/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/cb60c7bd6da5f077723c8cd36dfef1f86561ac10/records/track_10min_16mb/Jtss-ux_Recursive_30_Layer/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/cb60c7bd6da5f077723c8cd36dfef1f86561ac10/records/track_10min_16mb/Jtss-ux_Recursive_30_Layer/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/cb60c7bd6da5f077723c8cd36dfef1f86561ac10/records/track_10min_16mb/Jtss-ux_Recursive_30_Layer/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/cb60c7bd6da5f077723c8cd36dfef1f86561ac10/records/track_10min_16mb/Jtss-ux_Recursive_30_Layer",
+        "pr": "https://github.com/openai/parameter-golf/pull/1269",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_10min_16mb-2026-03-20_ContextRepair_SmearGate_BigramHash_SP1024_9x512_MLP3_int6zstd",
       "source": "pull_request",
       "status": "open",
@@ -54663,7 +54740,7 @@
       },
       "pr": {
         "number": 1138,
-        "title": "Non-record: Real optional megakernel path with ownership-clean reverse bring-up",
+        "title": "Non-record: ownership-clean optional megakernel path on WSL2/RTX 4090",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -54671,7 +54748,7 @@
         "authorLogin": "greqone",
         "authorName": null,
         "createdAt": "2026-03-30T16:44:28Z",
-        "updatedAt": "2026-04-05T02:22:55Z",
+        "updatedAt": "2026-04-05T21:26:50Z",
         "headSha": "a57d6b8f5a6695b32cabe54b472c524290b4e4ee",
         "headRepo": "greqone/parameter-golf"
       },
@@ -68143,7 +68220,7 @@
       },
       "pr": {
         "number": 874,
-        "title": "Non-record: Random Linear Maps + Learned Adapters (val_bpb=1.93, 2.4MB artifact)",
+        "title": "Non-record: Random Linear Maps + Learned Adapters (val_bpb=1.93 (1.607 outside 10mins), 2.4MB artifact (1.9mb outside 10mins)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -68151,7 +68228,7 @@
         "authorLogin": "fielding",
         "authorName": null,
         "createdAt": "2026-03-26T17:23:09Z",
-        "updatedAt": "2026-03-30T20:00:14Z",
+        "updatedAt": "2026-04-05T21:03:01Z",
         "headSha": "6b211a8bc44fbe80fec1c146b1e060286d4f4246",
         "headRepo": "fielding/agora-parameter-golf"
       },

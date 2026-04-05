@@ -1,43 +1,43 @@
 {
-  "generatedAt": "2026-04-05T21:00:19.723Z",
+  "generatedAt": "2026-04-05T21:30:14.614Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1269,
     "title": "30-Layer Recursive GPT (10 Physical x 3 Recursive) + VRL + Parallel Muon",
     "state": "open",
-    "updatedAt": "2026-04-05T20:38:46Z",
-    "headSha": "31b40945d9123d3ca3990bce995dc294478d27e9",
+    "updatedAt": "2026-04-05T21:27:12Z",
+    "headSha": "cb60c7bd6da5f077723c8cd36dfef1f86561ac10",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1269",
     "authorLogin": "Jtss-ux"
   },
   "inputs": {
     "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
     "readmePaths": [
-      "records/track_10min_16mb/Jtss-ux_Submission_1.1301/README.md"
+      "records/track_10min_16mb/Jtss-ux_Recursive_30_Layer/README.md"
     ],
     "submissionCount": 1
   },
   "output": {
-    "summary": "Three-level recursive stacking of a 10-layer GPT complements VRL/MTP, Parameter Banking+Parallel Muon, and LeakyReLU² while running legal score-first TTT on validation chunks.",
+    "summary": "Combines 10-layer recursion repeated 3× with VRL+MTP, Bigram/Trigram hashing, and Parallel Muon tuning for H100 plus int8+LZMA compression.",
     "tags": [
-      "val-only",
       "architecture",
       "optimizer",
-      "training-schedule"
+      "quantization",
+      "compression"
     ],
-    "usesValOnly": true,
-    "valOnlyReasoning": "Legal score-first TTT runs SGD adaptation on validation chunks right after stateless scoring, so training occurs on val data.",
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
     "techniques": [
-      "Recursive GPT depth with VRL+MTP",
-      "LeakyReLU(0.5)² plus Parameter Banking/Parallel Muon optimizer",
-      "Score-first TTT on validation chunks"
+      "Recursive 10-layer stack applied thrice to simulate 30-layer depth with VRL-stabilized gating",
+      "Parallel Muon optimizer with Parameter Banking and activation checkpointing on H100",
+      "Int8 GPTQ calibration plus LZMA compression for sub-16MB deployment"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": true,
-    "finalUsesValOnly": true,
-    "valOnlyMatchesCollector": false
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
   }
 }
