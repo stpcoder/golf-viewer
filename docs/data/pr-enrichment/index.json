@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-04-05T10:26:51.924Z",
+  "generatedAt": "2026-04-05T10:57:17.812Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1378,
+      "title": "Non Record: GPTQ int7 XSA BigramHash — val_bpb 1.1711",
+      "status": "open",
+      "updatedAt": "2026-04-05T10:48:26Z",
+      "headSha": "435ccea45556d45b06fac8cd85aa50bee3065d3b",
+      "generatedAt": "2026-04-05T10:57:17.609Z",
+      "summary": "Combines 11-layer 3×MLP with XSA, BigramHash, SmearGate, EMA, and full Hessian GPTQ int7 quantization plus LZMA for a sub-16MB record.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "attention",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1378.json"
+    },
     {
       "prNumber": 1376,
       "title": "Record: SLOT-24 + Pre-quant TTT — val_bpb 0.7094 (3-seed mean)",
