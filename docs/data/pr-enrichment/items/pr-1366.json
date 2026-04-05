@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-05T00:24:20.320Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1366,
+    "title": "Non-record: EMA+SWA Tight Averaging with Fused TTT LoRA + Sliding Window (1.1371 BPB)",
+    "state": "open",
+    "updatedAt": "2026-04-05T00:21:52Z",
+    "headSha": "d7f61f0aad38b34fdfa0be795ab0e780b70bc0f1",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1366",
+    "authorLogin": "yunoshev"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-04-05_EMA_SWA_TTT_LoRA_Fused_Sliding/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "EMA+SWA averaging feeds fused TTT LoRA sliding-window eval with Muon momentum and full GPTQ Hessians on 11L D512.",
+    "tags": [
+      "sliding-window-eval",
+      "optimizer",
+      "architecture",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "EMA-fed SWA without qgrid",
+      "Fused TTT LoRA per sliding-window chunk",
+      "Muon 0.99 momentum with full GPTQ Hessians"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

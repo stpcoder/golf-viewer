@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-04-05T00:24:39.710Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1354,
+    "title": "Record: varlen+fused mlp+ttt (bpb=1.1092)",
+    "state": "open",
+    "updatedAt": "2026-04-05T00:18:54Z",
+    "headSha": "8315ff3cab5f5664aab71168353dc36a96532a5c",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1354",
+    "authorLogin": "samacqua"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-04_VarLenAttn_FusedMLP_TTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Uses Flash Attention varlen doc packing, a fused Triton MLP kernel, and lean LoRA test-time training to speed training and boost long-context eval.",
+    "tags": [
+      "attention",
+      "architecture",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "FlashAttention varlen doc packing to avoid cross-doc attend and save FLOPs",
+      "Custom Triton fused up-projection + activation kernel for faster MLP",
+      "LoRA-based test-time training with small chunks and RMSProp-like updates"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

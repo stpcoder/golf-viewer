@@ -1,36 +1,34 @@
 {
-  "generatedAt": "2026-03-27T00:13:28.587Z",
+  "generatedAt": "2026-04-05T00:24:52.487Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 912,
     "title": "10L + PPM Full-Rescore Order-12 N-gram (0.3461 BPB)",
-    "state": "open",
-    "updatedAt": "2026-03-27T00:11:44Z",
+    "state": "closed",
+    "updatedAt": "2026-03-27T01:20:29Z",
     "headSha": "eb92389ec34a408ed071a0d04b56cf29fc3f2f4c",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/912",
     "authorLogin": "Bortlesboat"
   },
   "inputs": {
-    "hash": "c4f8d017d13e812b0ad5a78b677f8350df1124736cd3f84c8d4e37f273206c70",
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
     "readmePaths": [
-      "records/track_10min_16mb/2026-03-26_10L_TwoPass_Order11_Ngram/README.md",
-      "records/track_10min_16mb/2026-03-25_10L_NgramBackoff_EntropyAlpha/README.md",
-      "records/track_10min_16mb/2026-03-20_Int5MLP_BigramHash_SWA_NeuralCache_TTT/README.md"
+      "records/track_10min_16mb/2026-03-25_10L_NgramBackoff_EntropyAlpha/README.md"
     ],
-    "submissionCount": 3
+    "submissionCount": 1
   },
   "output": {
-    "summary": "Two-pass eval builds a full n-gram cache, then PPM-blends orders 2-12 with leave-one-out counts to complement the 10L GQA model.",
+    "summary": "10-layer GQA model rescored via PPM-style all-order blend of n-gram counts with leave-one-out cache correction.",
     "tags": [
-      "evaluation"
+      "evaluation",
+      "architecture"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "PPM-style escape-weighted blend across n-gram orders",
-      "Leave-one-out cache subtraction per token",
-      "Sliding-window pass plus cache build before rescore"
+      "PPM-style escape-weighted n-gram blending",
+      "Leave-one-out subtraction from cache counts"
     ]
   },
   "compatibility": {

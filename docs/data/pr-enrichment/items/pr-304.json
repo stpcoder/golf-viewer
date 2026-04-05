@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-21T03:27:38.974Z",
+  "generatedAt": "2026-04-05T00:24:56.479Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Stacks QAT, neural cache, and entropy-gated per-document LoRA TTT atop the Int5-MLP+BigramHash+SWA recipe for eval-time robustness.",
+    "summary": "Stacks int5/int6 QAT, sliding-window neural cache scoring, and entropy-gated per-document LoRA test-time training atop the Int5-MLP BigramHash SWA recipe.",
     "tags": [
       "quantization",
       "evaluation"
@@ -27,9 +27,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "STE fake-quant QAT tuned for int5/int6 export",
-      "Neural cache logaddexp interpolation using hidden-state similarity",
-      "Entropy-gated per-document LoRA TTT on lm_head/Q/V during eval"
+      "STE fake quantization mirroring int5/int6 export",
+      "Neural cache logaddexp interpolation over cached hidden states",
+      "Per-document entropy-gated LoRA test-time updates"
     ]
   },
   "compatibility": {

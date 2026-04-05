@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-04-05T00:24:34.274Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1365,
+    "title": "Non-record: HybridMamba-11 — First SSM with Parallel Associative Scan",
+    "state": "open",
+    "updatedAt": "2026-04-04T23:58:01Z",
+    "headSha": "5452b445b5801fed212326e6f861041819ec7249",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1365",
+    "authorLogin": "PersusUS"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-04-05_HybridMamba11_SSM_ParallelAssociativeScan/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Hybrid Mamba SSM + Transformer U-Net pairs with a Hillis-Steele parallel associative scan so torch.compile(fullgraph=True) can trace the entire model.",
+    "tags": [
+      "architecture",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Hybrid Mamba SSM layers interleaved with Transformer decoder blocks",
+      "U-Net skip connections between SSM and Transformer stages",
+      "Hillis-Steele parallel associative scan compatible with torch.compile(fullgraph=True)"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

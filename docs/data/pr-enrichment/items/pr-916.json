@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-27T01:44:03.095Z",
+  "generatedAt": "2026-04-05T00:24:47.776Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 916,
     "title": "10L + PPM Full-Rescore Order-12 N-gram (0.3461 BPB)",
-    "state": "open",
-    "updatedAt": "2026-03-27T01:25:40Z",
+    "state": "closed",
+    "updatedAt": "2026-04-04T23:26:13Z",
     "headSha": "1b4cc135825e66322b119b4e7adec4e91b3ebe62",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/916",
     "authorLogin": "Bortlesboat"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Two-pass eval stores per-token stats then PPM-inspired blend of orders 2-12 with leave-one-out full-cache rescoring to mix neural and n-gram signals.",
+    "summary": "PPM-inspired blend of all matching n-gram orders plus a leave-one-out full-cache rescore neutralizes self-bias in the evaluation pass.",
     "tags": [
-      "evaluation",
       "compression",
-      "architecture"
+      "evaluation",
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "PPM-inspired all-order n-gram blend",
-      "Leave-one-out full-cache rescore",
-      "Two-pass eval with precomputed token stats"
+      "PPM escape-weighted n-gram blending",
+      "Leave-one-out token exclusion in cache rescore",
+      "Two-pass full-cache evaluation pipeline"
     ]
   },
   "compatibility": {

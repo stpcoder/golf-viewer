@@ -1,8 +1,54 @@
 {
-  "generatedAt": "2026-04-04T23:24:06.551Z",
+  "generatedAt": "2026-04-05T00:24:56.523Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1366,
+      "title": "Non-record: EMA+SWA Tight Averaging with Fused TTT LoRA + Sliding Window (1.1371 BPB)",
+      "status": "open",
+      "updatedAt": "2026-04-05T00:21:52Z",
+      "headSha": "d7f61f0aad38b34fdfa0be795ab0e780b70bc0f1",
+      "generatedAt": "2026-04-05T00:24:20.320Z",
+      "summary": "EMA+SWA averaging feeds fused TTT LoRA sliding-window eval with Muon momentum and full GPTQ Hessians on 11L D512.",
+      "tags": [
+        "sliding-window-eval",
+        "optimizer",
+        "architecture",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1366.json"
+    },
+    {
+      "prNumber": 1365,
+      "title": "Non-record: HybridMamba-11 — First SSM with Parallel Associative Scan",
+      "status": "open",
+      "updatedAt": "2026-04-04T23:58:01Z",
+      "headSha": "5452b445b5801fed212326e6f861041819ec7249",
+      "generatedAt": "2026-04-05T00:24:34.274Z",
+      "summary": "Hybrid Mamba SSM + Transformer U-Net pairs with a Hillis-Steele parallel associative scan so torch.compile(fullgraph=True) can trace the entire model.",
+      "tags": [
+        "architecture",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1365.json"
+    },
     {
       "prNumber": 1364,
       "title": "Record: Pre-quant AdamW TTT + QK-Gain 4.0 — val_bpb 1.1025 (3-seed mean)",
@@ -185,6 +231,29 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-1355.json"
+    },
+    {
+      "prNumber": 1354,
+      "title": "Record: varlen+fused mlp+ttt (bpb=1.1092)",
+      "status": "open",
+      "updatedAt": "2026-04-05T00:18:54Z",
+      "headSha": "8315ff3cab5f5664aab71168353dc36a96532a5c",
+      "generatedAt": "2026-04-05T00:24:39.710Z",
+      "summary": "Uses Flash Attention varlen doc packing, a fused Triton MLP kernel, and lean LoRA test-time training to speed training and boost long-context eval.",
+      "tags": [
+        "attention",
+        "architecture",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1354.json"
     },
     {
       "prNumber": 1353,
@@ -7629,15 +7698,15 @@
     {
       "prNumber": 916,
       "title": "10L + PPM Full-Rescore Order-12 N-gram (0.3461 BPB)",
-      "status": "open",
-      "updatedAt": "2026-03-27T01:25:40Z",
+      "status": "closed",
+      "updatedAt": "2026-04-04T23:26:13Z",
       "headSha": "1b4cc135825e66322b119b4e7adec4e91b3ebe62",
-      "generatedAt": "2026-03-27T01:44:03.095Z",
-      "summary": "Two-pass eval stores per-token stats then PPM-inspired blend of orders 2-12 with leave-one-out full-cache rescoring to mix neural and n-gram signals.",
+      "generatedAt": "2026-04-05T00:24:47.776Z",
+      "summary": "PPM-inspired blend of all matching n-gram orders plus a leave-one-out full-cache rescore neutralizes self-bias in the evaluation pass.",
       "tags": [
-        "evaluation",
         "compression",
-        "architecture"
+        "evaluation",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -7715,6 +7784,28 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-913.json"
+    },
+    {
+      "prNumber": 912,
+      "title": "10L + PPM Full-Rescore Order-12 N-gram (0.3461 BPB)",
+      "status": "closed",
+      "updatedAt": "2026-03-27T01:20:29Z",
+      "headSha": "eb92389ec34a408ed071a0d04b56cf29fc3f2f4c",
+      "generatedAt": "2026-04-05T00:24:52.487Z",
+      "summary": "10-layer GQA model rescored via PPM-style all-order blend of n-gram counts with leave-one-out cache correction.",
+      "tags": [
+        "evaluation",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-912.json"
     },
     {
       "prNumber": 911,
@@ -8156,29 +8247,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-877.json"
-    },
-    {
-      "prNumber": 876,
-      "title": "10L + Two-Pass Order-11 N-gram Backoff (0.5863 BPB)",
-      "status": "open",
-      "updatedAt": "2026-03-26T17:47:45Z",
-      "headSha": "7a81a23a5ad782a2eaeee36d2fefea894cb9ca9b",
-      "generatedAt": "2026-03-27T01:44:11.815Z",
-      "summary": "10-layer GQA transformer uses two-pass score-first sliding-window eval with hashed high-order n-gram cache and entropy-driven backoff plus int5/int6 quantization.",
-      "tags": [
-        "evaluation",
-        "quantization",
-        "architecture"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-876.json"
     },
     {
       "prNumber": 875,
@@ -17135,6 +17203,28 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-305.json"
+    },
+    {
+      "prNumber": 304,
+      "title": "Non-record: QAT + Neural Cache + LoRA TTT",
+      "status": "open",
+      "updatedAt": "2026-03-21T03:10:47Z",
+      "headSha": "0667a5b342c5415abd8827632f31c891a6d24c83",
+      "generatedAt": "2026-04-05T00:24:56.479Z",
+      "summary": "Stacks int5/int6 QAT, sliding-window neural cache scoring, and entropy-gated per-document LoRA test-time training atop the Int5-MLP BigramHash SWA recipe.",
+      "tags": [
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-304.json"
     },
     {
       "prNumber": 303,
