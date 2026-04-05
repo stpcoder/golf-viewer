@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-05T03:55:18.413Z",
+  "generatedAt": "2026-04-05T04:25:25.525Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -397,13 +397,13 @@
       "prNumber": 1350,
       "title": "Record: L-BFGS Causal SLOT — val_bpb 1.0046 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-05T03:26:34Z",
+      "updatedAt": "2026-04-05T04:00:11Z",
       "headSha": "4ede046aac47273388f3b4d02de228292faa8a50",
-      "generatedAt": "2026-04-05T03:55:09.676Z",
-      "summary": "Causal L-BFGS logit-space SLOT over past tokens plus pre-quant AdamW TTT and tuned GPTQ/config loader tweaks for compliant eval.",
+      "generatedAt": "2026-04-05T04:25:18.006Z",
+      "summary": "Causal L-BFGS logit-space SLOT after pre-quant AdamW TTT and coprime loader keeps delta optimization restricted to already-scored context tokens.",
       "tags": [
-        "quantization",
         "optimizer",
+        "quantization",
         "evaluation"
       ],
       "flags": {
@@ -4915,15 +4915,15 @@
       "prNumber": 1085,
       "title": "Non-record:11L GQA + MLP 3 + Partial RoPE + Int6 Attn/MLP + QAT40 ",
       "status": "open",
-      "updatedAt": "2026-04-04T17:51:06Z",
-      "headSha": "fde255129576a9328f58dbf84268765e9afb91bf",
-      "generatedAt": "2026-04-04T17:51:41.250Z",
-      "summary": "11-layer GPT leverages GQA, partial RoPE/XSA, Muon+AdamW with LR warmdown, late QAT40, and Int6 quantized weights to fit the 16MB limit.",
+      "updatedAt": "2026-04-05T04:13:25Z",
+      "headSha": "ad47b30826ceb8f8daf04e1686ff445ccfe7f8db",
+      "generatedAt": "2026-04-05T04:25:25.371Z",
+      "summary": "11-layer GQA GPT with Partial RoPE, XSA, and 3×MLP trains with Muon+AdamW, LR warmdown, and late 40% QAT-int6 to keep the compact model performant.",
       "tags": [
         "quantization",
         "optimizer",
-        "positional-encoding",
-        "sliding-window-eval"
+        "attention",
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,

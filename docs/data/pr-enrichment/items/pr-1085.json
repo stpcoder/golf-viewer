@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-04T17:51:41.250Z",
+  "generatedAt": "2026-04-05T04:25:25.371Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1085,
     "title": "Non-record:11L GQA + MLP 3 + Partial RoPE + Int6 Attn/MLP + QAT40 ",
     "state": "open",
-    "updatedAt": "2026-04-04T17:51:06Z",
-    "headSha": "fde255129576a9328f58dbf84268765e9afb91bf",
+    "updatedAt": "2026-04-05T04:13:25Z",
+    "headSha": "ad47b30826ceb8f8daf04e1686ff445ccfe7f8db",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1085",
     "authorLogin": "adityasasidhar"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer GPT leverages GQA, partial RoPE/XSA, Muon+AdamW with LR warmdown, late QAT40, and Int6 quantized weights to fit the 16MB limit.",
+    "summary": "11-layer GQA GPT with Partial RoPE, XSA, and 3×MLP trains with Muon+AdamW, LR warmdown, and late 40% QAT-int6 to keep the compact model performant.",
     "tags": [
       "quantization",
       "optimizer",
-      "positional-encoding",
-      "sliding-window-eval"
+      "attention",
+      "architecture"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "n/a",
+    "valOnlyReasoning": "",
     "techniques": [
-      "Grouped Query Attention with partial RoPE and XSA",
-      "Muon+AdamW schedule featuring warmdown and late QAT40",
-      "Mixed Int6/Int8 quantization tailored for compressed eval"
+      "GQA + Partial RoPE heads with XSA",
+      "Late-stage QAT40 for Int6/Int8 weights",
+      "Muon+AdamW training with LR warmdown"
     ]
   },
   "compatibility": {

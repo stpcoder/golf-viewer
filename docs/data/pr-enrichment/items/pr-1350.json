@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-05T03:55:09.676Z",
+  "generatedAt": "2026-04-05T04:25:18.006Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1350,
     "title": "Record: L-BFGS Causal SLOT — val_bpb 1.0046 (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-04-05T03:26:34Z",
+    "updatedAt": "2026-04-05T04:00:11Z",
     "headSha": "4ede046aac47273388f3b4d02de228292faa8a50",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1350",
     "authorLogin": "resouer"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Causal L-BFGS logit-space SLOT over past tokens plus pre-quant AdamW TTT and tuned GPTQ/config loader tweaks for compliant eval.",
+    "summary": "Causal L-BFGS logit-space SLOT after pre-quant AdamW TTT and coprime loader keeps delta optimization restricted to already-scored context tokens.",
     "tags": [
-      "quantization",
       "optimizer",
+      "quantization",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Causal L-BFGS logit-space SLOT masking future positions",
-      "Pre-quant AdamW TTT on EMA weights before GPTQ",
-      "Coprime-stride loader plus tuned QK_GAIN/WARMDOWN/GPTQ damp"
+      "Causal L-BFGS logit delta optimized using only previously scored context positions",
+      "Pre-quant AdamW TTT on EMA weights before GPTQ int6 with tuned damp/QK_GAIN",
+      "Weighted coprime-stride shard sampling complementing GPTQ/config tweaks"
     ]
   },
   "compatibility": {
