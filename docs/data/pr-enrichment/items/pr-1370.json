@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-06T08:34:37.093Z",
+  "generatedAt": "2026-04-06T18:05:12.610Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1370,
     "title": "Non-record: 10L Gated DeltaNet (PureGDN) — val_bpb 1.003028 (3-seed mean, legal TTT)",
-    "state": "open",
-    "updatedAt": "2026-04-05T22:29:19Z",
+    "state": "closed",
+    "updatedAt": "2026-04-06T18:03:58Z",
     "headSha": "e3fe29966dbe7a2440aad4efde2a6ebc280b0fb9",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1370",
     "authorLogin": "Christopher-Lee-McClendon"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "10-layer model swaps softmax for Gated DeltaNet linear attention with BigramHash+trigram features and score-first TTT training.",
+    "summary": "10-layer Gated DeltaNet stack swaps softmax for delta-rule linear attention, adds trigram BigramHash, and pairs legal score-first TTT with quantization.",
     "tags": [
       "attention",
-      "architecture",
+      "tokenization",
       "training-schedule",
-      "quantization"
+      "compression"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "valOnlyReasoning": "Not a val-only training regime.",
     "techniques": [
-      "Gated DeltaNet linear attention replacing softmax",
-      "BigramHash embeddings with trigram extension",
-      "Score-first TTT with SGD momentum and frozen initial blocks"
+      "GDN linear attention blocks replacing softmax",
+      "BigramHash with trigram extension",
+      "Score-first TTT plus EMA/SWA/quantization"
     ]
   },
   "compatibility": {

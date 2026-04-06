@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-04-06T17:35:31.694Z",
+  "generatedAt": "2026-04-06T18:05:25.120Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1423,
+      "title": "Record: SP8192 + Pre-Quant TTT + QK-Gain 5.0 + Depth Recurrence + MuonEq-R — val_bpb 1.0791 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-04-06T17:51:39Z",
+      "headSha": "eebe7b221d9bfb70719a4c8cf39dd80dec24d786",
+      "generatedAt": "2026-04-06T18:05:02.669Z",
+      "summary": "Enhances the SP8192 base with MuonEq-R depth recurrence, pre-quant TTT adaptation, and QK-Gain 5.0 ahead of GPTQ/SDClip quantization.",
+      "tags": [
+        "architecture",
+        "muon",
+        "quantization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1423.json"
+    },
     {
       "prNumber": 1422,
       "title": "Non-record: Depth Recurrence + GPTQ + SGD TTT (1.1172, 1xH100)",
@@ -54,14 +78,13 @@
       "prNumber": 1420,
       "title": "Record: Triple Loop + Fused Kernels + Parallel Residuals + N-gram Tilt; val_bpb 1.08014 (5-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-06T17:13:17Z",
-      "headSha": "d5817955938e370f88e293187b3b530ae8d1b81d",
-      "generatedAt": "2026-04-06T17:35:09.510Z",
-      "summary": "Adds a third loop pass for extra virtual layers, fuses MLP activation/backward kernels, leverages GPT-J parallel residuals, and tilts eval logits with a causal n-gram hint.",
+      "updatedAt": "2026-04-06T17:56:12Z",
+      "headSha": "d0b01cbe37e18ce6dd1d3ba3ddb2ea058de5348d",
+      "generatedAt": "2026-04-06T18:05:07.432Z",
+      "summary": "Triple-loop recurrence with fused MLP kernels, GPT-J parallel residuals, and causal eval-time n-gram tilt to squeeze more depth and throughput before scoring.",
       "tags": [
         "architecture",
         "training-schedule",
-        "quantization",
         "evaluation"
       ],
       "flags": {
@@ -987,16 +1010,16 @@
     {
       "prNumber": 1370,
       "title": "Non-record: 10L Gated DeltaNet (PureGDN) — val_bpb 1.003028 (3-seed mean, legal TTT)",
-      "status": "open",
-      "updatedAt": "2026-04-05T22:29:19Z",
+      "status": "closed",
+      "updatedAt": "2026-04-06T18:03:58Z",
       "headSha": "e3fe29966dbe7a2440aad4efde2a6ebc280b0fb9",
-      "generatedAt": "2026-04-06T08:34:37.093Z",
-      "summary": "10-layer model swaps softmax for Gated DeltaNet linear attention with BigramHash+trigram features and score-first TTT training.",
+      "generatedAt": "2026-04-06T18:05:12.610Z",
+      "summary": "10-layer Gated DeltaNet stack swaps softmax for delta-rule linear attention, adds trigram BigramHash, and pairs legal score-first TTT with quantization.",
       "tags": [
         "attention",
-        "architecture",
+        "tokenization",
         "training-schedule",
-        "quantization"
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
@@ -5660,16 +5683,16 @@
     {
       "prNumber": 1099,
       "title": "Record: Coprime-Stride Loader + Full GPTQ + XSA-all — val_bpb 1.1133 (3-seed mean)",
-      "status": "open",
-      "updatedAt": "2026-03-29T22:45:35Z",
+      "status": "closed",
+      "updatedAt": "2026-04-06T17:40:44Z",
       "headSha": "7eb6f2410602a4ea5a9f9166104e12dfe8361fd4",
-      "generatedAt": "2026-03-29T23:02:03.988Z",
-      "summary": "Combines coprime-stride loading with full Hessian GPTQ, XSA on all layers, GPTQ reserve tuning, EMA, and FA3/FA2 fallback for compact BPB runs.",
+      "generatedAt": "2026-04-06T18:05:19.429Z",
+      "summary": "Combines coprime-stride loader, full Hessian GPTQ with reduced reserve, and XSA on all layers plus a FlashAttention-3 fallback to squeeze extra steps.",
       "tags": [
+        "architecture",
         "quantization",
         "attention",
-        "training-schedule",
-        "architecture"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -12280,14 +12303,13 @@
       "prNumber": 675,
       "title": "Record: Hypergradient SLOT-24 — val_bpb 0.7625 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-06T17:06:01Z",
-      "headSha": "6cf19d180acd8fc7d9df35aa74db2e141744284b",
-      "generatedAt": "2026-04-06T17:35:31.596Z",
-      "summary": "Hypergradient SLOT swaps SLOT’s fixed cosine LR for stepwise hypergradient descent that adjusts each sample’s stepsize via gradient alignment.",
+      "updatedAt": "2026-04-06T17:42:08Z",
+      "headSha": "0dd4ddca393280f862e8c3c778918d97645a9faf",
+      "generatedAt": "2026-04-06T18:05:25.023Z",
+      "summary": "Replaces SLOT-24’s fixed cosine LR with hypergradient descent so each eval step adapts its learning rate based on current and previous gradient alignment.",
       "tags": [
-        "optimizer",
         "training-schedule",
-        "evaluation",
+        "optimizer",
         "non-record"
       ],
       "flags": {
@@ -18205,28 +18227,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-305.json"
-    },
-    {
-      "prNumber": 304,
-      "title": "Non-record: QAT + Neural Cache + LoRA TTT",
-      "status": "open",
-      "updatedAt": "2026-03-21T03:10:47Z",
-      "headSha": "0667a5b342c5415abd8827632f31c891a6d24c83",
-      "generatedAt": "2026-04-05T00:24:56.479Z",
-      "summary": "Stacks int5/int6 QAT, sliding-window neural cache scoring, and entropy-gated per-document LoRA test-time training atop the Int5-MLP BigramHash SWA recipe.",
-      "tags": [
-        "quantization",
-        "evaluation"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-304.json"
     },
     {
       "prNumber": 303,
