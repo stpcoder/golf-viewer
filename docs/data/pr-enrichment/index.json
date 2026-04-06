@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-06T23:06:37.945Z",
+  "generatedAt": "2026-04-06T23:36:34.758Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -12375,10 +12375,10 @@
       "prNumber": 675,
       "title": "Record: L-BFGS SLOT — val_bpb 0.5793 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-06T22:10:20Z",
-      "headSha": "7c66905889cc8228038ddb8b135d4da38f233d28",
-      "generatedAt": "2026-04-06T22:36:03.252Z",
-      "summary": "SLOT swaps AdamW for L-BFGS with 8 outer steps and strong-Wolfe line search to exploit curvature in the 1,536-param per-sample optimization.",
+      "updatedAt": "2026-04-06T23:18:28Z",
+      "headSha": "09b06361be75fcfae79fe2ec8dbca283e05b6be5",
+      "generatedAt": "2026-04-06T23:36:34.667Z",
+      "summary": "SLOT's tiny per-sample optimizer now runs L-BFGS with strong Wolfe line search over 8 outer steps instead of first-order AdamW.",
       "tags": [
         "optimizer",
         "non-record"

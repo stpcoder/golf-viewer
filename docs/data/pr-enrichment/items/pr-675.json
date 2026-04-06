@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-06T22:36:03.252Z",
+  "generatedAt": "2026-04-06T23:36:34.667Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 675,
     "title": "Record: L-BFGS SLOT — val_bpb 0.5793 (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-04-06T22:10:20Z",
-    "headSha": "7c66905889cc8228038ddb8b135d4da38f233d28",
+    "updatedAt": "2026-04-06T23:18:28Z",
+    "headSha": "09b06361be75fcfae79fe2ec8dbca283e05b6be5",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/675",
     "authorLogin": "ChideraIbe123"
   },
@@ -21,16 +21,16 @@
     "submissionCount": 3
   },
   "output": {
-    "summary": "SLOT swaps AdamW for L-BFGS with 8 outer steps and strong-Wolfe line search to exploit curvature in the 1,536-param per-sample optimization.",
+    "summary": "SLOT's tiny per-sample optimizer now runs L-BFGS with strong Wolfe line search over 8 outer steps instead of first-order AdamW.",
     "tags": [
       "optimizer",
       "non-record"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "Training is standard SLOT optimization; validation shards are used strictly for evaluation.",
+    "valOnlyReasoning": "",
     "techniques": [
-      "Second-order L-BFGS for the compact 1,536-parameter SLOT problem",
-      "Strong-Wolfe line search + history_size=10 Hessian approx",
+      "Second-order L-BFGS for SLOT delta and logit_bias",
+      "Strong Wolfe line search with history_size=10",
       "8 outer steps replace 48-step AdamW schedule"
     ]
   },
